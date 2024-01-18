@@ -1,0 +1,231 @@
+<HTML>
+<HEAD>
+<TITLE>DOMAINFOR</TITLE>
+<META content="text/html; charset=iso-8859-1" http-equiv=Content-Type>
+<LINK HREF="../IBEHTMLDoc.css" type=text/css rel=STYLESHEET>
+ 
+<xml>
+<IBEHelp:Attr Name="ItemOrder" Value="36800"/>
+</xml>
+ 
+</HEAD>
+<BODY>
+<DIV ID="nsbanner">
+  <DIV ID="bannerrow1">
+    <TABLE CLASS="bannerparthead" CELLSPACING=0>
+      <TR ID="hdr" VALIGN="middle">
+        <TD CLASS="runninghead">"bromo2.usask.ca:s:/data/firebird/stratdb2015v25.fdb". Tables</TD>
+        <TD ALIGN="left" WIDTH="54px" NOWRAP>
+          <A HREF="DOMAINDEPOSITS.html"><IMG ALT="Previous topic" SRC="../Images/GoPrev.gif" BORDER="0"></A>
+          <A HREF="../Index.html"><IMG ALT="Chapter index" SRC="../Images/GoIndex.gif" BORDER="0"></A>
+          <A HREF="DOMAINIGNEOUS.html"><IMG ALT="Next topic" SRC="../Images/GoNext.gif" BORDER="0"></A>
+        </TD>
+      </TR>
+    </TABLE>
+  </DIV>
+  <DIV ID="TitleRow">
+    <P CLASS="dtH1">DOMAINFOR</P>
+  </DIV>
+ </DIV>
+<P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Description</P>
+<P CLASS="Base"><I>(There is no description for table DOMAINFOR)</I></P>
+<P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Fields</P>
+<TABLE CLASS="dtArg" CELLSPACING="0">
+  <TH WIDTH="1%" ALIGN="middle"><P CLASS="Base2"><B>PK</B></P>
+  <TH WIDTH="1%" ALIGN="middle"><P CLASS="Base2"><B>FK</B></P>
+  <TH WIDTH="1%"><P CLASS="Base2"><B>Field</B></P>
+  <TH WIDTH="1%"><P CLASS="Base2"><B>Domain</B></P>
+  <TH WIDTH="20%"><P CLASS="Base2"><B>Type</B></P>
+  <TH WIDTH="1%" ALIGN="middle"><P CLASS="Base2"><B>NN</B></P>
+  <TH WIDTH="1%"><P CLASS="Base2"><B>Default</B></P>
+  <TH WIDTH="40%"><P CLASS="Base2"><B>Description</B></P>
+  <TR>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/PK1.gif" BORDER="0"></P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/FK.gif" BORDER="0"></P></TD>
+    <TD><A NAME="DOMAINFOR.DOMAINID"><P CLASS="Base2">DOMAINID</P></A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Domains/DOMAINID.html">DOMAINID</A></P></TD>
+    <TD><P CLASS="Base2">INTEGER</P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/Yes.gif" BORDER="0"></P></TD>
+    <TD><P CLASS="Base2">1</P></TD>
+    <TD><P CLASS="Base2">&nbsp;</P></TD>
+  </TR>
+  <TR>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/PK2.gif" BORDER="0"></P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/FK.gif" BORDER="0"></P></TD>
+    <TD><A NAME="DOMAINFOR.WHOFORID"><P CLASS="Base2">WHOFORID</P></A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Domains/WHOFORID.html">WHOFORID</A></P></TD>
+    <TD><P CLASS="Base2">VARCHAR(5)</P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/Yes.gif" BORDER="0"></P></TD>
+    <TD><P CLASS="Base2">'PUBL'</P></TD>
+    <TD><P CLASS="Base2">&nbsp;</P></TD>
+  </TR>
+  <TR>
+    <TD ALIGN="middle"><P CLASS="Base2">&nbsp;</P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/FK.gif" BORDER="0"></P></TD>
+    <TD><A NAME="DOMAINFOR.NEEDSCHANGE"><P CLASS="Base2">NEEDSCHANGE</P></A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Domains/T_YESNO.html">T_YESNO</A></P></TD>
+    <TD><P CLASS="Base2">CHAR(1)</P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/Yes.gif" BORDER="0"></P></TD>
+    <TD><P CLASS="Base2">'Y'</P></TD>
+    <TD><P CLASS="Base2">&nbsp;</P></TD>
+  </TR>
+</TABLE>
+<P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Triggers</P>
+<TABLE CLASS="dtArg" CELLSPACING="0">
+  <TH WIDTH="1%"><P CLASS="Base2"><B>Trigger</B></P>
+  <TH WIDTH="1%"><P CLASS="Base2"><B>Type</B></P>
+  <TH WIDTH="1%"><P CLASS="Base2"><B>Activity</B></P>
+  <TH WIDTH="1%"><P CLASS="Base2"><B>Order</B></P>
+  <TH WIDTH="50%"><P CLASS="Base2"><B>Description</B></P>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Triggers/RPL$LPRE_DOMAINFOR_D.html">RPL$LPRE_DOMAINFOR_D</A></TD>
+    <TD><P CLASS="Base2">AFTER&nbsp;DELETE</TD>
+    <TD><P CLASS="Base2">Yes</TD>
+    <TD ALIGN="right"><P CLASS="Base2">32766</TD>
+    <TD><P CLASS="Base2">&nbsp</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Triggers/RPL$LPRE_DOMAINFOR_I.html">RPL$LPRE_DOMAINFOR_I</A></TD>
+    <TD><P CLASS="Base2">AFTER&nbsp;INSERT</TD>
+    <TD><P CLASS="Base2">Yes</TD>
+    <TD ALIGN="right"><P CLASS="Base2">32766</TD>
+    <TD><P CLASS="Base2">&nbsp</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Triggers/RPL$LPRE_DOMAINFOR_U.html">RPL$LPRE_DOMAINFOR_U</A></TD>
+    <TD><P CLASS="Base2">AFTER&nbsp;UPDATE</TD>
+    <TD><P CLASS="Base2">Yes</TD>
+    <TD ALIGN="right"><P CLASS="Base2">32766</TD>
+    <TD><P CLASS="Base2">&nbsp</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Triggers/RPL$STRATEG_DOMAINFOR_D.html">RPL$STRATEG_DOMAINFOR_D</A></TD>
+    <TD><P CLASS="Base2">AFTER&nbsp;DELETE</TD>
+    <TD><P CLASS="Base2">Yes</TD>
+    <TD ALIGN="right"><P CLASS="Base2">32766</TD>
+    <TD><P CLASS="Base2">&nbsp</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Triggers/RPL$STRATEG_DOMAINFOR_I.html">RPL$STRATEG_DOMAINFOR_I</A></TD>
+    <TD><P CLASS="Base2">AFTER&nbsp;INSERT</TD>
+    <TD><P CLASS="Base2">Yes</TD>
+    <TD ALIGN="right"><P CLASS="Base2">32766</TD>
+    <TD><P CLASS="Base2">&nbsp</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Triggers/RPL$STRATEG_DOMAINFOR_U.html">RPL$STRATEG_DOMAINFOR_U</A></TD>
+    <TD><P CLASS="Base2">AFTER&nbsp;UPDATE</TD>
+    <TD><P CLASS="Base2">Yes</TD>
+    <TD ALIGN="right"><P CLASS="Base2">32766</TD>
+    <TD><P CLASS="Base2">&nbsp</TD>
+  </TR>
+</TABLE>
+<P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Indices</P>
+<TABLE CLASS="dtArg" CELLSPACING="0">
+  <TH><P CLASS="Base2"><B>Index</B></P>
+  <TH><P CLASS="Base2"><B>Fields</B></P>
+  <TH ALIGN="middle"><P CLASS="Base2"><B>Active</B></P>
+  <TH ALIGN="middle"><P CLASS="Base2"><B>Unique</B></P>
+  <TH ALIGN="middle"><P CLASS="Base2"><B>Order</B></P>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Indices/FK_DOMAINFOR_CHNG.html">FK_DOMAINFOR_CHNG</A></TD>
+    <TD><P CLASS="Base2">NEEDSCHANGE</TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/Yes.gif" BORDER="0"></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/No.gif" BORDER="0"></TD>
+    <TD ALIGN="middle"><P CLASS="Base2">ASC</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Indices/FK_DOMAINFOR_DOM.html">FK_DOMAINFOR_DOM</A></TD>
+    <TD><P CLASS="Base2">DOMAINID</TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/Yes.gif" BORDER="0"></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/No.gif" BORDER="0"></TD>
+    <TD ALIGN="middle"><P CLASS="Base2">ASC</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Indices/FK_DOMAINFOR_FOR.html">FK_DOMAINFOR_FOR</A></TD>
+    <TD><P CLASS="Base2">WHOFORID</TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/Yes.gif" BORDER="0"></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/No.gif" BORDER="0"></TD>
+    <TD ALIGN="middle"><P CLASS="Base2">ASC</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Indices/PK_DOMAINFOR.html">PK_DOMAINFOR</A></TD>
+    <TD><P CLASS="Base2">DOMAINID, WHOFORID</TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/Yes.gif" BORDER="0"></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/Yes.gif" BORDER="0"></TD>
+    <TD ALIGN="middle"><P CLASS="Base2">ASC</TD>
+  </TR>
+</TABLE>
+<P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">References</P>
+<TABLE CLASS="dtArg" CELLSPACING="0">
+  <TH><P CLASS="Base2"><B>Table</B></P>
+  <TH><P CLASS="Base2"><B>Foreign Key</B></P>
+  <TH><P CLASS="Base2"><B>Fields</B></P>
+  <TH><P CLASS="Base2"><B>FK Field</B></P>
+  <TH><P CLASS="Base2"><B>Delete Rule</B></P>
+  <TH><P CLASS="Base2"><B>Update Rule</B></P>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Tables/YESNO.html">YESNO</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Foreign Keys/FK_DOMAINFOR_CHNG.html">FK_DOMAINFOR_CHNG</A></TD>
+    <TD><P CLASS="Base2">NEEDSCHANGE</TD>
+    <TD><P CLASS="Base2">YESNOID</TD>
+    <TD><P CLASS="Base2">NO ACTION</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Tables/DOMAINS.html">DOMAINS</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Foreign Keys/FK_DOMAINFOR_DOM.html">FK_DOMAINFOR_DOM</A></TD>
+    <TD><P CLASS="Base2">DOMAINID</TD>
+    <TD><P CLASS="Base2">DOMAINID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Tables/FORLIST.html">FORLIST</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Foreign Keys/FK_DOMAINFOR_FOR.html">FK_DOMAINFOR_FOR</A></TD>
+    <TD><P CLASS="Base2">WHOFORID</TD>
+    <TD><P CLASS="Base2">WHOFORID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+</TABLE>
+<P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Referenced By</P>
+<P CLASS="Base"><I>(There are no tables referenced by table DOMAINFOR)</I></P>
+<P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Definition</P>
+<P CLASS="Base"><span class="DDLCode">
+<code><pre>
+<b>CREATE</b><b> </b><b>TABLE</b><b> </b><font color="# 080 0"><u>DOMAINFOR</u></font><b> </b><b>(</b>
+<b>    </b><font color="# 080 0"><u>DOMAINID</u></font><b>     </b><font color="# 080 0"><u>DOMAINID</u></font><b> </b><b>DEFAULT</b><b> </b>1<b> </b><b>NOT</b><b> </b><b>NULL</b><b>,</b>
+<b>    </b><font color="# 080 0"><u>WHOFORID</u></font><b>     </b><font color="# 080 0"><u>WHOFORID</u></font><b> </b><b>DEFAULT</b><b> </b>'PUBL'<b> </b><b>NOT</b><b> </b><b>NULL</b><b>,</b>
+<b>    </b>NEEDSCHANGE<b>  </b><font color="# 080 0"><u>T_YESNO</u></font><b> </b><b>DEFAULT</b><b> </b>'Y'<b> </b><b>NOT</b><b> </b><b>NULL</b>
+<b>)</b><b>;</b>
+
+
+<b>ALTER</b><b> </b><b>TABLE</b><b> </b><font color="# 080 0"><u>DOMAINFOR</u></font><b> </b><b>ADD</b><b> </b><b>CONSTRAINT</b><b> </b>PK_DOMAINFOR<b> </b><b>PRIMARY</b><b> </b><b>KEY</b><b> </b><b>(</b><font color="# 080 0"><u>DOMAINID</u></font><b>,</b><b> </b><font color="# 080 0"><u>WHOFORID</u></font><b>)</b><b>;</b>
+<b>ALTER</b><b> </b><b>TABLE</b><b> </b><font color="# 080 0"><u>DOMAINFOR</u></font><b> </b><b>ADD</b><b> </b><b>CONSTRAINT</b><b> </b>FK_DOMAINFOR_CHNG<b> </b><b>FOREIGN</b><b> </b><b>KEY</b><b> </b><b>(</b>NEEDSCHANGE<b>)</b><b> </b><b>REFERENCES</b><b> </b><font color="# 080 0"><u>YESNO</u></font><b> </b><b>(</b>YESNOID<b>)</b><b> </b><b>ON</b><b> </b><b>UPDATE</b><b> </b><b>CASCADE</b><b>;</b>
+<b>ALTER</b><b> </b><b>TABLE</b><b> </b><font color="# 080 0"><u>DOMAINFOR</u></font><b> </b><b>ADD</b><b> </b><b>CONSTRAINT</b><b> </b>FK_DOMAINFOR_DOM<b> </b><b>FOREIGN</b><b> </b><b>KEY</b><b> </b><b>(</b><font color="# 080 0"><u>DOMAINID</u></font><b>)</b><b> </b><b>REFERENCES</b><b> </b><font color="# 080 0"><u>DOMAINS</u></font><b> </b><b>(</b><font color="# 080 0"><u>DOMAINID</u></font><b>)</b><b> </b><b>ON</b><b> </b><b>DELETE</b><b> </b><b>CASCADE</b><b> </b><b>ON</b><b> </b><b>UPDATE</b><b> </b><b>CASCADE</b><b>;</b>
+<b>ALTER</b><b> </b><b>TABLE</b><b> </b><font color="# 080 0"><u>DOMAINFOR</u></font><b> </b><b>ADD</b><b> </b><b>CONSTRAINT</b><b> </b>FK_DOMAINFOR_FOR<b> </b><b>FOREIGN</b><b> </b><b>KEY</b><b> </b><b>(</b><font color="# 080 0"><u>WHOFORID</u></font><b>)</b><b> </b><b>REFERENCES</b><b> </b><font color="# 080 0"><u>FORLIST</u></font><b> </b><b>(</b><font color="# 080 0"><u>WHOFORID</u></font><b>)</b><b> </b><b>ON</b><b> </b><b>DELETE</b><b> </b><b>CASCADE</b><b> </b><b>ON</b><b> </b><b>UPDATE</b><b> </b><b>CASCADE</b><b>;</b>
+
+</pre></code>
+</span></P>
+<P CLASS="Base">&nbsp;</P>
+<DIV CLASS="footer"><BR><HR></DIV>
+  <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH=100%>
+    <TR VALIGN="middle">
+      <TD>&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+      <TD ALIGN="left" WIDTH="54px" NOWRAP>
+        <A HREF="DOMAINDEPOSITS.html"><IMG ALT="Previous topic" SRC="../Images/GoPrev.gif" BORDER="0"></A>
+        <A HREF="../Index.html"><IMG ALT="Chapter index" SRC="../Images/GoIndex.gif" BORDER="0"></A>
+        <A HREF="DOMAINIGNEOUS.html"><IMG ALT="Next topic" SRC="../Images/GoNext.gif" BORDER="0"></A>
+      </TD>
+    </TR>
+  </TABLE>
+<P CLASS="Base">&nbsp;</P>
+</BODY></HTML>

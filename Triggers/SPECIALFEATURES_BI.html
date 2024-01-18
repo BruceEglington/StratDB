@@ -1,0 +1,60 @@
+<HTML>
+<HEAD>
+<TITLE>SPECIALFEATURES_BI</TITLE>
+<META content="text/html; charset=iso-8859-1" http-equiv=Content-Type>
+<LINK HREF="../IBEHTMLDoc.css" type=text/css rel=STYLESHEET>
+ 
+<xml>
+<IBEHelp:Attr Name="ItemOrder" Value="658800"/>
+</xml>
+ 
+</HEAD>
+<BODY>
+<DIV ID="nsbanner">
+  <DIV ID="bannerrow1">
+    <TABLE CLASS="bannerparthead" CELLSPACING=0>
+      <TR ID="hdr" VALIGN="middle">
+        <TD CLASS="runninghead">"bromo2.usask.ca:s:/data/firebird/stratdb2015v25.fdb". Triggers</TD>
+        <TD ALIGN="left" WIDTH="54px" NOWRAP>
+          <A HREF="SOURCELIST_DATE.html"><IMG ALT="Previous topic" SRC="../Images/GoPrev.gif" BORDER="0"></A>
+          <A HREF="../Index.html"><IMG ALT="Chapter index" SRC="../Images/GoIndex.gif" BORDER="0"></A>
+          <A HREF="TR_RPL$LOG.html"><IMG ALT="Next topic" SRC="../Images/GoNext.gif" BORDER="0"></A>
+        </TD>
+      </TR>
+    </TABLE>
+  </DIV>
+  <DIV ID="TitleRow">
+    <P CLASS="dtH1">SPECIALFEATURES_BI</P>
+  </DIV>
+ </DIV>
+<P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Description</P>
+<P CLASS="Base"><I>(There is no description for trigger SPECIALFEATURES_BI)</I></P>
+<P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Definition</P>
+<P CLASS="Base"><span class="DDLCode">
+<code><pre>
+<b>CREATE</b><b> </b><b>TRIGGER</b><b> </b><font color="# 080 0"><u>SPECIALFEATURES_BI</u></font><b> </b><b>FOR</b><b> </b><font color="# 080 0"><u>SPECIALFEATURES</u></font>
+<b>INACTIVE</b><b> </b><b>BEFORE</b><b> </b><b>INSERT</b><b> </b><b>POSITION</b><b> </b>0
+<b>AS</b>
+<b>BEGIN</b>
+<b>  </b><b>IF</b><b> </b><b>(</b><b>NEW</b><b>.</b><font color="# 080 0"><u>SPECIALFEATUREID</u></font><b> </b><b>IS</b><b> </b><b>NULL</b><b>)</b><b> </b><b>THEN</b>
+<b>    </b><b>NEW</b><b>.</b><font color="# 080 0"><u>SPECIALFEATUREID</u></font><b> </b><b>=</b><b> </b><b>GEN_ID</b><b>(</b><font color="# 080 0"><u>GEN_SPECIALFEATURES_ID</u></font><b>,</b>1<b>)</b><b>;</b>
+<b>END</b>
+
+</pre></code>
+</span></P>
+<P CLASS="Base">&nbsp;</P>
+<DIV CLASS="footer"><BR><HR></DIV>
+  <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH=100%>
+    <TR VALIGN="middle">
+      <TD>&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+      <TD ALIGN="left" WIDTH="54px" NOWRAP>
+        <A HREF="SOURCELIST_DATE.html"><IMG ALT="Previous topic" SRC="../Images/GoPrev.gif" BORDER="0"></A>
+        <A HREF="../Index.html"><IMG ALT="Chapter index" SRC="../Images/GoIndex.gif" BORDER="0"></A>
+        <A HREF="TR_RPL$LOG.html"><IMG ALT="Next topic" SRC="../Images/GoNext.gif" BORDER="0"></A>
+      </TD>
+    </TR>
+  </TABLE>
+<P CLASS="Base">&nbsp;</P>
+</BODY></HTML>

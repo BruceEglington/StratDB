@@ -1,0 +1,115 @@
+<HTML>
+<HEAD>
+<TITLE>RPL$GENERATE_LOG</TITLE>
+<META content="text/html; charset=iso-8859-1" http-equiv=Content-Type>
+<LINK HREF="../IBEHTMLDoc.css" type=text/css rel=STYLESHEET>
+ 
+<xml>
+<IBEHelp:Attr Name="ItemOrder" Value="2800"/>
+</xml>
+ 
+</HEAD>
+<BODY>
+<DIV ID="nsbanner">
+  <DIV ID="bannerrow1">
+    <TABLE CLASS="bannerparthead" CELLSPACING=0>
+      <TR ID="hdr" VALIGN="middle">
+        <TD CLASS="runninghead">"bromo2.usask.ca:s:/data/firebird/stratdb2015v25.fdb". Procedures</TD>
+        <TD ALIGN="left" WIDTH="54px" NOWRAP>
+          <A HREF="RPL$FORCE_REPL.html"><IMG ALT="Previous topic" SRC="../Images/GoPrev.gif" BORDER="0"></A>
+          <A HREF="../Index.html"><IMG ALT="Chapter index" SRC="../Images/GoIndex.gif" BORDER="0"></A>
+          <A HREF="RPL$QUOTE_STR.html"><IMG ALT="Next topic" SRC="../Images/GoNext.gif" BORDER="0"></A>
+        </TD>
+      </TR>
+    </TABLE>
+  </DIV>
+  <DIV ID="TitleRow">
+    <P CLASS="dtH1">RPL$GENERATE_LOG</P>
+  </DIV>
+ </DIV>
+<P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Input Parameters</P>
+<TABLE CLASS="dtArg" CELLSPACING="0">
+  <TH WIDTH="1%"><P CLASS="Base2"><B>Parameter</B></P>
+  <TH WIDTH="20%"><P CLASS="Base2"><B>Type</B></P>
+  <TH WIDTH="50%"><P CLASS="Base2"><B>Description</B></P>
+  <TR>
+    <TD><P CLASS="Base2">TABLE_NAME</TD>
+    <TD><P CLASS="Base2">VARCHAR(100)</TD>
+    <TD><P CLASS="Base2">&nbsp;</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2">PRIMARY_KEY_VALUES</TD>
+    <TD><P CLASS="Base2">VARCHAR(500)</TD>
+    <TD><P CLASS="Base2">&nbsp;</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2">REF_VALUE</TD>
+    <TD><P CLASS="Base2">VARCHAR(50)</TD>
+    <TD><P CLASS="Base2">&nbsp;</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2">PROCEDURE_STATEMENT</TD>
+    <TD><P CLASS="Base2">VARCHAR(200)</TD>
+    <TD><P CLASS="Base2">&nbsp;</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2">USER_LOGIN</TD>
+    <TD><P CLASS="Base2">VARCHAR(50)</TD>
+    <TD><P CLASS="Base2">&nbsp;</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2">PRIMARY_KEY_SYNC</TD>
+    <TD><P CLASS="Base2">VARCHAR(5000)</TD>
+    <TD><P CLASS="Base2">&nbsp;</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2">UNIQUE_KEY_SYNC</TD>
+    <TD><P CLASS="Base2">VARCHAR(5000)</TD>
+    <TD><P CLASS="Base2">&nbsp;</TD>
+  </TR>
+</TABLE>
+<P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Output Parameters</P>
+<P CLASS="Base"><I>(There are no output parameters)</I></P>
+<P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Description</P>
+<P CLASS="Base"><I>(There is no description for procedure RPL$GENERATE_LOG)</I></P>
+<P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Definition</P>
+<P CLASS="Base"><span class="DDLCode">
+<code><pre>
+<b>CREATE</b><b> </b><b>PROCEDURE</b><b> </b><font color="# 080 0"><u>RPL$GENERATE_LOG</u></font><b>(</b>
+<b>    </b>TABLE_NAME<b> </b><b>VARCHAR</b><b>(</b>100<b>)</b><b>,</b>
+<b>    </b>PRIMARY_KEY_VALUES<b> </b><b>VARCHAR</b><b>(</b>500<b>)</b><b>,</b>
+<b>    </b>REF_VALUE<b> </b><b>VARCHAR</b><b>(</b>50<b>)</b><b>,</b>
+<b>    </b>PROCEDURE_STATEMENT<b> </b><b>VARCHAR</b><b>(</b>200<b>)</b><b>,</b>
+<b>    </b>USER_LOGIN<b> </b><b>VARCHAR</b><b>(</b>50<b>)</b><b>,</b>
+<b>    </b>PRIMARY_KEY_SYNC<b> </b><b>VARCHAR</b><b>(</b>5000<b>)</b><b>,</b>
+<b>    </b>UNIQUE_KEY_SYNC<b> </b><b>VARCHAR</b><b>(</b>5000<b>)</b><b>)</b>
+<b>AS</b>
+<b>declare</b><b> </b><b>variable</b><b> </b>replicating_node<b> </b><b>varchar</b><b>(</b>50<b>)</b><b>;</b>
+<b>begin</b>
+<b>  </b>replicating_node<b> </b><b>=</b><b> </b><font color="# 080 0"><u>rdb$get_context</u></font><b>(</b>'USER_SESSION'<b>,</b><b> </b>'REPLICATING_NODE'<b>)</b><b>;</b>
+<b>  </b><b>insert</b><b> </b><b>into</b><b> </b><font color="# 080 0"><u>RPL$log</u></font><b> </b><b>(</b>code<b>,</b><b> </b>login<b>,</b><b> </b>operation_date<b>,</b><b> </b>table_name<b>,</b><b> </b>sent_from<b>,</b>
+<b>    </b>primary_key_values<b>,</b><b> </b>ref_value<b>,</b><b> </b>procedure_statement<b>,</b><b> </b>PRIMARY_KEY_SYNC<b>,</b><b> </b>UNIQUE_KEY_SYNC<b>)</b>
+<b>  </b><b>values</b><b> </b><b>(</b><b>gen_id</b><b>(</b><font color="# 080 0"><u>GEN_RPL$LOG</u></font><b>,</b><b> </b>1<b>)</b><b>,</b><b> </b>:user_login<b>,</b><b> </b>'now'<b>,</b><b> </b>:table_name<b>,</b><b> </b>:replicating_node<b>,</b>
+<b>    </b>:primary_key_values<b>,</b><b> </b>:ref_value<b>,</b><b> </b>:procedure_statement<b>,</b><b> </b>:PRIMARY_KEY_SYNC<b>,</b><b> </b>:UNIQUE_KEY_SYNC<b>)</b><b>;</b>
+<b>end</b>
+
+</pre></code>
+</span></P>
+<P CLASS="Base">&nbsp;</P>
+<DIV CLASS="footer"><BR><HR></DIV>
+  <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH=100%>
+    <TR VALIGN="middle">
+      <TD>&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+      <TD ALIGN="left" WIDTH="54px" NOWRAP>
+        <A HREF="RPL$FORCE_REPL.html"><IMG ALT="Previous topic" SRC="../Images/GoPrev.gif" BORDER="0"></A>
+        <A HREF="../Index.html"><IMG ALT="Chapter index" SRC="../Images/GoIndex.gif" BORDER="0"></A>
+        <A HREF="RPL$QUOTE_STR.html"><IMG ALT="Next topic" SRC="../Images/GoNext.gif" BORDER="0"></A>
+      </TD>
+    </TR>
+  </TABLE>
+<P CLASS="Base">&nbsp;</P>
+</BODY></HTML>

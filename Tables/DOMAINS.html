@@ -1,0 +1,468 @@
+<HTML>
+<HEAD>
+<TITLE>DOMAINS</TITLE>
+<META content="text/html; charset=iso-8859-1" http-equiv=Content-Type>
+<LINK HREF="../IBEHTMLDoc.css" type=text/css rel=STYLESHEET>
+ 
+<xml>
+<IBEHelp:Attr Name="ItemOrder" Value="39800"/>
+</xml>
+ 
+</HEAD>
+<BODY>
+<DIV ID="nsbanner">
+  <DIV ID="bannerrow1">
+    <TABLE CLASS="bannerparthead" CELLSPACING=0>
+      <TR ID="hdr" VALIGN="middle">
+        <TD CLASS="runninghead">"bromo2.usask.ca:s:/data/firebird/stratdb2015v25.fdb". Tables</TD>
+        <TD ALIGN="left" WIDTH="54px" NOWRAP>
+          <A HREF="DOMAINREFS.html"><IMG ALT="Previous topic" SRC="../Images/GoPrev.gif" BORDER="0"></A>
+          <A HREF="../Index.html"><IMG ALT="Chapter index" SRC="../Images/GoIndex.gif" BORDER="0"></A>
+          <A HREF="DOMAINTYPES.html"><IMG ALT="Next topic" SRC="../Images/GoNext.gif" BORDER="0"></A>
+        </TD>
+      </TR>
+    </TABLE>
+  </DIV>
+  <DIV ID="TitleRow">
+    <P CLASS="dtH1">DOMAINS</P>
+  </DIV>
+ </DIV>
+<P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Description</P>
+<P CLASS="Base"><I>(There is no description for table DOMAINS)</I></P>
+<P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Fields</P>
+<TABLE CLASS="dtArg" CELLSPACING="0">
+  <TH WIDTH="1%" ALIGN="middle"><P CLASS="Base2"><B>PK</B></P>
+  <TH WIDTH="1%" ALIGN="middle"><P CLASS="Base2"><B>FK</B></P>
+  <TH WIDTH="1%"><P CLASS="Base2"><B>Field</B></P>
+  <TH WIDTH="1%"><P CLASS="Base2"><B>Domain</B></P>
+  <TH WIDTH="20%"><P CLASS="Base2"><B>Type</B></P>
+  <TH WIDTH="1%" ALIGN="middle"><P CLASS="Base2"><B>NN</B></P>
+  <TH WIDTH="1%"><P CLASS="Base2"><B>Default</B></P>
+  <TH WIDTH="40%"><P CLASS="Base2"><B>Description</B></P>
+  <TR>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/PK1.gif" BORDER="0"></P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2">&nbsp;</P></TD>
+    <TD><A NAME="DOMAINS.DOMAINID"><P CLASS="Base2">DOMAINID</P></A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Domains/DOMAINID.html">DOMAINID</A></P></TD>
+    <TD><P CLASS="Base2">INTEGER</P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/Yes.gif" BORDER="0"></P></TD>
+    <TD><P CLASS="Base2">&nbsp;</P></TD>
+    <TD><P CLASS="Base2">&nbsp;</P></TD>
+  </TR>
+  <TR>
+    <TD ALIGN="middle"><P CLASS="Base2">&nbsp;</P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/FK.gif" BORDER="0"></P></TD>
+    <TD><A NAME="DOMAINS.CONTINENTID"><P CLASS="Base2">CONTINENTID</P></A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Domains/CONTINENTID.html">CONTINENTID</A></P></TD>
+    <TD><P CLASS="Base2">VARCHAR(3)</P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/Yes.gif" BORDER="0"></P></TD>
+    <TD><P CLASS="Base2">'UND'</P></TD>
+    <TD><P CLASS="Base2">&nbsp;</P></TD>
+  </TR>
+  <TR>
+    <TD ALIGN="middle"><P CLASS="Base2">&nbsp;</P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2">&nbsp;</P></TD>
+    <TD><A NAME="DOMAINS.DOMAINNAME"><P CLASS="Base2">DOMAINNAME</P></A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Domains/DOMAINNAME.html">DOMAINNAME</A></P></TD>
+    <TD><P CLASS="Base2">VARCHAR(65)</P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/Yes.gif" BORDER="0"></P></TD>
+    <TD><P CLASS="Base2">'not defined'</P></TD>
+    <TD><P CLASS="Base2">&nbsp;</P></TD>
+  </TR>
+  <TR>
+    <TD ALIGN="middle"><P CLASS="Base2">&nbsp;</P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2">&nbsp;</P></TD>
+    <TD><A NAME="DOMAINS.SPOTLATITUDE"><P CLASS="Base2">SPOTLATITUDE</P></A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Domains/LATITUDES.html">LATITUDES</A></P></TD>
+    <TD><P CLASS="Base2">DOUBLE PRECISION</P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/Yes.gif" BORDER="0"></P></TD>
+    <TD><P CLASS="Base2">90.0</P></TD>
+    <TD><P CLASS="Base2">&nbsp;</P></TD>
+  </TR>
+  <TR>
+    <TD ALIGN="middle"><P CLASS="Base2">&nbsp;</P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2">&nbsp;</P></TD>
+    <TD><A NAME="DOMAINS.SPOTLONGITUDE"><P CLASS="Base2">SPOTLONGITUDE</P></A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Domains/LONGITUDES.html">LONGITUDES</A></P></TD>
+    <TD><P CLASS="Base2">DOUBLE PRECISION</P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/Yes.gif" BORDER="0"></P></TD>
+    <TD><P CLASS="Base2">0.0</P></TD>
+    <TD><P CLASS="Base2">&nbsp;</P></TD>
+  </TR>
+  <TR>
+    <TD ALIGN="middle"><P CLASS="Base2">&nbsp;</P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2">&nbsp;</P></TD>
+    <TD><A NAME="DOMAINS.DOMAINPARENTID"><P CLASS="Base2">DOMAINPARENTID</P></A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Domains/DOMAINID.html">DOMAINID</A></P></TD>
+    <TD><P CLASS="Base2">INTEGER</P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/Yes.gif" BORDER="0"></P></TD>
+    <TD><P CLASS="Base2">0</P></TD>
+    <TD><P CLASS="Base2">&nbsp;</P></TD>
+  </TR>
+  <TR>
+    <TD ALIGN="middle"><P CLASS="Base2">&nbsp;</P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/FK.gif" BORDER="0"></P></TD>
+    <TD><A NAME="DOMAINS.DOMAINTYPEID"><P CLASS="Base2">DOMAINTYPEID</P></A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Domains/DOMAINTYPEID.html">DOMAINTYPEID</A></P></TD>
+    <TD><P CLASS="Base2">VARCHAR(5)</P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/Yes.gif" BORDER="0"></P></TD>
+    <TD><P CLASS="Base2">'nd'</P></TD>
+    <TD><P CLASS="Base2">&nbsp;</P></TD>
+  </TR>
+  <TR>
+    <TD ALIGN="middle"><P CLASS="Base2">&nbsp;</P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2">&nbsp;</P></TD>
+    <TD><A NAME="DOMAINS.MAXAGE"><P CLASS="Base2">MAXAGE</P></A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Domains/AGEMAX.html">AGEMAX</A></P></TD>
+    <TD><P CLASS="Base2">DOUBLE PRECISION</P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/Yes.gif" BORDER="0"></P></TD>
+    <TD><P CLASS="Base2">4570.0</P></TD>
+    <TD><P CLASS="Base2">&nbsp;</P></TD>
+  </TR>
+  <TR>
+    <TD ALIGN="middle"><P CLASS="Base2">&nbsp;</P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2">&nbsp;</P></TD>
+    <TD><A NAME="DOMAINS.MINPLOTAGE"><P CLASS="Base2">MINPLOTAGE</P></A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Domains/AGEMIN.html">AGEMIN</A></P></TD>
+    <TD><P CLASS="Base2">DOUBLE PRECISION</P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/Yes.gif" BORDER="0"></P></TD>
+    <TD><P CLASS="Base2">0</P></TD>
+    <TD><P CLASS="Base2">&nbsp;</P></TD>
+  </TR>
+  <TR>
+    <TD ALIGN="middle"><P CLASS="Base2">&nbsp;</P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2">&nbsp;</P></TD>
+    <TD><A NAME="DOMAINS.MAXPLOTAGE"><P CLASS="Base2">MAXPLOTAGE</P></A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Domains/AGEMAX.html">AGEMAX</A></P></TD>
+    <TD><P CLASS="Base2">DOUBLE PRECISION</P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/Yes.gif" BORDER="0"></P></TD>
+    <TD><P CLASS="Base2">4570.0</P></TD>
+    <TD><P CLASS="Base2">&nbsp;</P></TD>
+  </TR>
+  <TR>
+    <TD ALIGN="middle"><P CLASS="Base2">&nbsp;</P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/FK.gif" BORDER="0"></P></TD>
+    <TD><A NAME="DOMAINS.NEEDSCHANGE"><P CLASS="Base2">NEEDSCHANGE</P></A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Domains/T_YESNO.html">T_YESNO</A></P></TD>
+    <TD><P CLASS="Base2">CHAR(1)</P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/Yes.gif" BORDER="0"></P></TD>
+    <TD><P CLASS="Base2">'Y'</P></TD>
+    <TD><P CLASS="Base2">&nbsp;</P></TD>
+  </TR>
+</TABLE>
+<P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Triggers</P>
+<TABLE CLASS="dtArg" CELLSPACING="0">
+  <TH WIDTH="1%"><P CLASS="Base2"><B>Trigger</B></P>
+  <TH WIDTH="1%"><P CLASS="Base2"><B>Type</B></P>
+  <TH WIDTH="1%"><P CLASS="Base2"><B>Activity</B></P>
+  <TH WIDTH="1%"><P CLASS="Base2"><B>Order</B></P>
+  <TH WIDTH="50%"><P CLASS="Base2"><B>Description</B></P>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Triggers/DOMAINS_BI.html">DOMAINS_BI</A></TD>
+    <TD><P CLASS="Base2">BEFORE&nbsp;INSERT</TD>
+    <TD><P CLASS="Base2">&nbsp;</TD>
+    <TD ALIGN="right"><P CLASS="Base2">0</TD>
+    <TD><P CLASS="Base2">&nbsp</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Triggers/RPL$DVBROMO_DOMAINS_D.html">RPL$DVBROMO_DOMAINS_D</A></TD>
+    <TD><P CLASS="Base2">AFTER&nbsp;DELETE</TD>
+    <TD><P CLASS="Base2">Yes</TD>
+    <TD ALIGN="right"><P CLASS="Base2">32766</TD>
+    <TD><P CLASS="Base2">&nbsp</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Triggers/RPL$DVBROMO_DOMAINS_I.html">RPL$DVBROMO_DOMAINS_I</A></TD>
+    <TD><P CLASS="Base2">AFTER&nbsp;INSERT</TD>
+    <TD><P CLASS="Base2">Yes</TD>
+    <TD ALIGN="right"><P CLASS="Base2">32766</TD>
+    <TD><P CLASS="Base2">&nbsp</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Triggers/RPL$DVBROMO_DOMAINS_U.html">RPL$DVBROMO_DOMAINS_U</A></TD>
+    <TD><P CLASS="Base2">AFTER&nbsp;UPDATE</TD>
+    <TD><P CLASS="Base2">Yes</TD>
+    <TD ALIGN="right"><P CLASS="Base2">32766</TD>
+    <TD><P CLASS="Base2">&nbsp</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Triggers/RPL$LPRE_DOMAINS_D.html">RPL$LPRE_DOMAINS_D</A></TD>
+    <TD><P CLASS="Base2">AFTER&nbsp;DELETE</TD>
+    <TD><P CLASS="Base2">Yes</TD>
+    <TD ALIGN="right"><P CLASS="Base2">32766</TD>
+    <TD><P CLASS="Base2">&nbsp</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Triggers/RPL$LPRE_DOMAINS_I.html">RPL$LPRE_DOMAINS_I</A></TD>
+    <TD><P CLASS="Base2">AFTER&nbsp;INSERT</TD>
+    <TD><P CLASS="Base2">Yes</TD>
+    <TD ALIGN="right"><P CLASS="Base2">32766</TD>
+    <TD><P CLASS="Base2">&nbsp</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Triggers/RPL$LPRE_DOMAINS_U.html">RPL$LPRE_DOMAINS_U</A></TD>
+    <TD><P CLASS="Base2">AFTER&nbsp;UPDATE</TD>
+    <TD><P CLASS="Base2">Yes</TD>
+    <TD ALIGN="right"><P CLASS="Base2">32766</TD>
+    <TD><P CLASS="Base2">&nbsp</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Triggers/RPL$STRATEG_DOMAINS_D.html">RPL$STRATEG_DOMAINS_D</A></TD>
+    <TD><P CLASS="Base2">AFTER&nbsp;DELETE</TD>
+    <TD><P CLASS="Base2">Yes</TD>
+    <TD ALIGN="right"><P CLASS="Base2">32766</TD>
+    <TD><P CLASS="Base2">&nbsp</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Triggers/RPL$STRATEG_DOMAINS_I.html">RPL$STRATEG_DOMAINS_I</A></TD>
+    <TD><P CLASS="Base2">AFTER&nbsp;INSERT</TD>
+    <TD><P CLASS="Base2">Yes</TD>
+    <TD ALIGN="right"><P CLASS="Base2">32766</TD>
+    <TD><P CLASS="Base2">&nbsp</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Triggers/RPL$STRATEG_DOMAINS_U.html">RPL$STRATEG_DOMAINS_U</A></TD>
+    <TD><P CLASS="Base2">AFTER&nbsp;UPDATE</TD>
+    <TD><P CLASS="Base2">Yes</TD>
+    <TD ALIGN="right"><P CLASS="Base2">32766</TD>
+    <TD><P CLASS="Base2">&nbsp</TD>
+  </TR>
+</TABLE>
+<P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Indices</P>
+<TABLE CLASS="dtArg" CELLSPACING="0">
+  <TH><P CLASS="Base2"><B>Index</B></P>
+  <TH><P CLASS="Base2"><B>Fields</B></P>
+  <TH ALIGN="middle"><P CLASS="Base2"><B>Active</B></P>
+  <TH ALIGN="middle"><P CLASS="Base2"><B>Unique</B></P>
+  <TH ALIGN="middle"><P CLASS="Base2"><B>Order</B></P>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Indices/DOMAINS_IDX1.html">DOMAINS_IDX1</A></TD>
+    <TD><P CLASS="Base2">DOMAINNAME</TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/Yes.gif" BORDER="0"></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/Yes.gif" BORDER="0"></TD>
+    <TD ALIGN="middle"><P CLASS="Base2">ASC</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Indices/DOMAINS_IDX2.html">DOMAINS_IDX2</A></TD>
+    <TD><P CLASS="Base2">DOMAINPARENTID</TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/Yes.gif" BORDER="0"></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/No.gif" BORDER="0"></TD>
+    <TD ALIGN="middle"><P CLASS="Base2">ASC</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Indices/FK_DOMAINS_CHNG.html">FK_DOMAINS_CHNG</A></TD>
+    <TD><P CLASS="Base2">NEEDSCHANGE</TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/Yes.gif" BORDER="0"></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/No.gif" BORDER="0"></TD>
+    <TD ALIGN="middle"><P CLASS="Base2">ASC</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Indices/FK_DOMAINS_CONT.html">FK_DOMAINS_CONT</A></TD>
+    <TD><P CLASS="Base2">CONTINENTID</TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/Yes.gif" BORDER="0"></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/No.gif" BORDER="0"></TD>
+    <TD ALIGN="middle"><P CLASS="Base2">ASC</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Indices/FK_DOMAINS_DOMAINTYPE.html">FK_DOMAINS_DOMAINTYPE</A></TD>
+    <TD><P CLASS="Base2">DOMAINTYPEID</TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/Yes.gif" BORDER="0"></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/No.gif" BORDER="0"></TD>
+    <TD ALIGN="middle"><P CLASS="Base2">ASC</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Indices/PK_DOMAINS.html">PK_DOMAINS</A></TD>
+    <TD><P CLASS="Base2">DOMAINID</TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/Yes.gif" BORDER="0"></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/Yes.gif" BORDER="0"></TD>
+    <TD ALIGN="middle"><P CLASS="Base2">ASC</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Indices/UNQ1_DOMAINSNAME.html">UNQ1_DOMAINSNAME</A></TD>
+    <TD><P CLASS="Base2">DOMAINNAME</TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/Yes.gif" BORDER="0"></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/Yes.gif" BORDER="0"></TD>
+    <TD ALIGN="middle"><P CLASS="Base2">ASC</TD>
+  </TR>
+</TABLE>
+<P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">References</P>
+<TABLE CLASS="dtArg" CELLSPACING="0">
+  <TH><P CLASS="Base2"><B>Table</B></P>
+  <TH><P CLASS="Base2"><B>Foreign Key</B></P>
+  <TH><P CLASS="Base2"><B>Fields</B></P>
+  <TH><P CLASS="Base2"><B>FK Field</B></P>
+  <TH><P CLASS="Base2"><B>Delete Rule</B></P>
+  <TH><P CLASS="Base2"><B>Update Rule</B></P>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Tables/YESNO.html">YESNO</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Foreign Keys/FK_DOMAINS_CHNG.html">FK_DOMAINS_CHNG</A></TD>
+    <TD><P CLASS="Base2">NEEDSCHANGE</TD>
+    <TD><P CLASS="Base2">YESNOID</TD>
+    <TD><P CLASS="Base2">NO ACTION</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Tables/CONTINENTS.html">CONTINENTS</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Foreign Keys/FK_DOMAINS_CONTINENTID.html">FK_DOMAINS_CONTINENTID</A></TD>
+    <TD><P CLASS="Base2">CONTINENTID</TD>
+    <TD><P CLASS="Base2">CONTINENTID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Tables/DOMAINTYPES.html">DOMAINTYPES</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Foreign Keys/FK_DOMAINS_DOMAINTYPEID.html">FK_DOMAINS_DOMAINTYPEID</A></TD>
+    <TD><P CLASS="Base2">DOMAINTYPEID</TD>
+    <TD><P CLASS="Base2">DOMAINTYPEID</TD>
+    <TD><P CLASS="Base2">NO ACTION</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+</TABLE>
+<P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Referenced By</P>
+<TABLE CLASS="dtArg" CELLSPACING="0">
+  <TH><P CLASS="Base2"><B>Table</B></P>
+  <TH><P CLASS="Base2"><B>Foreign Key</B></P>
+  <TH><P CLASS="Base2"><B>Fields</B></P>
+  <TH><P CLASS="Base2"><B>FK Field</B></P>
+  <TH><P CLASS="Base2"><B>Delete Rule</B></P>
+  <TH><P CLASS="Base2"><B>Update Rule</B></P>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Tables/CHARTDOMAIN.html">CHARTDOMAIN</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Foreign Keys/FK_CHARTDOMAIN_DOMAIN.html">FK_CHARTDOMAIN_DOMAIN</A></TD>
+    <TD><P CLASS="Base2">DOMAINID</TD>
+    <TD><P CLASS="Base2">DOMAINID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Tables/CHARTUNIT.html">CHARTUNIT</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Foreign Keys/FK_CHARTUNIT_3.html">FK_CHARTUNIT_3</A></TD>
+    <TD><P CLASS="Base2">DOMAINID</TD>
+    <TD><P CLASS="Base2">DOMAINID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Tables/DOMAINDEFORMATION.html">DOMAINDEFORMATION</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Foreign Keys/FK_DOMAINDEFORMATION_DOMID.html">FK_DOMAINDEFORMATION_DOMID</A></TD>
+    <TD><P CLASS="Base2">DOMAINID</TD>
+    <TD><P CLASS="Base2">DOMAINID</TD>
+    <TD><P CLASS="Base2">NO ACTION</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Tables/DOMAINDEPOSITS.html">DOMAINDEPOSITS</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Foreign Keys/FK_DOMAINDEPOSITS_DOM.html">FK_DOMAINDEPOSITS_DOM</A></TD>
+    <TD><P CLASS="Base2">DOMAINID</TD>
+    <TD><P CLASS="Base2">DOMAINID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Tables/DOMAINFOR.html">DOMAINFOR</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Foreign Keys/FK_DOMAINFOR_DOM.html">FK_DOMAINFOR_DOM</A></TD>
+    <TD><P CLASS="Base2">DOMAINID</TD>
+    <TD><P CLASS="Base2">DOMAINID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Tables/DOMAINIGNEOUS.html">DOMAINIGNEOUS</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Foreign Keys/FK_DOMAINIGNEOUS_DOM.html">FK_DOMAINIGNEOUS_DOM</A></TD>
+    <TD><P CLASS="Base2">DOMAINID</TD>
+    <TD><P CLASS="Base2">DOMAINID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Tables/DOMAINREFS.html">DOMAINREFS</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Foreign Keys/FK_DOMAINREFS_1.html">FK_DOMAINREFS_1</A></TD>
+    <TD><P CLASS="Base2">DOMAINID</TD>
+    <TD><P CLASS="Base2">DOMAINID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Tables/DOMAINVALID.html">DOMAINVALID</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Foreign Keys/FK_DOMAINVALID_1.html">FK_DOMAINVALID_1</A></TD>
+    <TD><P CLASS="Base2">DOMAINID</TD>
+    <TD><P CLASS="Base2">DOMAINID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Tables/DOMANMETAMORPHISM.html">DOMANMETAMORPHISM</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Foreign Keys/FK_DOMANMETAMORPHISM_DOM.html">FK_DOMANMETAMORPHISM_DOM</A></TD>
+    <TD><P CLASS="Base2">DOMAINID</TD>
+    <TD><P CLASS="Base2">DOMAINID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Tables/LIPDOMAIN.html">LIPDOMAIN</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Foreign Keys/FK_LIPDOMAIN_DOMAIN.html">FK_LIPDOMAIN_DOMAIN</A></TD>
+    <TD><P CLASS="Base2">DOMAINID</TD>
+    <TD><P CLASS="Base2">DOMAINID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Tables/STRATDOMAIN.html">STRATDOMAIN</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Foreign Keys/FK_STRATDOMAIN_2.html">FK_STRATDOMAIN_2</A></TD>
+    <TD><P CLASS="Base2">DOMAINID</TD>
+    <TD><P CLASS="Base2">DOMAINID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+</TABLE>
+<P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Definition</P>
+<P CLASS="Base"><span class="DDLCode">
+<code><pre>
+<b>CREATE</b><b> </b><b>TABLE</b><b> </b><font color="# 080 0"><u>DOMAINS</u></font><b> </b><b>(</b>
+<b>    </b><font color="# 080 0"><u>DOMAINID</u></font><b>        </b><font color="# 080 0"><u>DOMAINID</u></font><b> </b><b>NOT</b><b> </b><b>NULL</b><b>,</b>
+<b>    </b><font color="# 080 0"><u>CONTINENTID</u></font><b>     </b><font color="# 080 0"><u>CONTINENTID</u></font><b> </b><b>DEFAULT</b><b> </b>'UND'<b> </b><b>NOT</b><b> </b><b>NULL</b><b>,</b>
+<b>    </b><font color="# 080 0"><u>DOMAINNAME</u></font><b>      </b><font color="# 080 0"><u>DOMAINNAME</u></font><b> </b><b>DEFAULT</b><b> </b>'not defined'<b> </b><b>NOT</b><b> </b><b>NULL</b><b>,</b>
+<b>    </b>SPOTLATITUDE<b>    </b><font color="# 080 0"><u>LATITUDES</u></font><b> </b><b>DEFAULT</b><b> </b>90<b>.</b>0<b> </b><b>NOT</b><b> </b><b>NULL</b><b>,</b>
+<b>    </b>SPOTLONGITUDE<b>   </b><font color="# 080 0"><u>LONGITUDES</u></font><b> </b><b>DEFAULT</b><b> </b>0<b>.</b>0<b> </b><b>NOT</b><b> </b><b>NULL</b><b>,</b>
+<b>    </b>DOMAINPARENTID<b>  </b><font color="# 080 0"><u>DOMAINID</u></font><b> </b><b>DEFAULT</b><b> </b>0<b> </b><b>NOT</b><b> </b><b>NULL</b><b>,</b>
+<b>    </b><font color="# 080 0"><u>DOMAINTYPEID</u></font><b>    </b><font color="# 080 0"><u>DOMAINTYPEID</u></font><b> </b><b>DEFAULT</b><b> </b>'nd'<b> </b><b>NOT</b><b> </b><b>NULL</b><b>,</b>
+<b>    </b>MAXAGE<b>          </b><font color="# 080 0"><u>AGEMAX</u></font><b> </b><b>DEFAULT</b><b> </b>4570<b>.</b>0<b> </b><b>NOT</b><b> </b><b>NULL</b><b>,</b>
+<b>    </b>MINPLOTAGE<b>      </b><font color="# 080 0"><u>AGEMIN</u></font><b> </b><b>DEFAULT</b><b> </b>0<b> </b><b>NOT</b><b> </b><b>NULL</b><b>,</b>
+<b>    </b>MAXPLOTAGE<b>      </b><font color="# 080 0"><u>AGEMAX</u></font><b> </b><b>DEFAULT</b><b> </b>4570<b>.</b>0<b> </b><b>NOT</b><b> </b><b>NULL</b><b>,</b>
+<b>    </b>NEEDSCHANGE<b>     </b><font color="# 080 0"><u>T_YESNO</u></font><b> </b><b>DEFAULT</b><b> </b>'Y'<b> </b><b>NOT</b><b> </b><b>NULL</b>
+<b>)</b><b>;</b>
+
+
+<b>ALTER</b><b> </b><b>TABLE</b><b> </b><font color="# 080 0"><u>DOMAINS</u></font><b> </b><b>ADD</b><b> </b><b>CONSTRAINT</b><b> </b>UNQ1_DOMAINSNAME<b> </b><b>UNIQUE</b><b> </b><b>(</b><font color="# 080 0"><u>DOMAINNAME</u></font><b>)</b><b>;</b>
+<b>ALTER</b><b> </b><b>TABLE</b><b> </b><font color="# 080 0"><u>DOMAINS</u></font><b> </b><b>ADD</b><b> </b><b>CONSTRAINT</b><b> </b>PK_DOMAINS<b> </b><b>PRIMARY</b><b> </b><b>KEY</b><b> </b><b>(</b><font color="# 080 0"><u>DOMAINID</u></font><b>)</b><b>;</b>
+<b>ALTER</b><b> </b><b>TABLE</b><b> </b><font color="# 080 0"><u>DOMAINS</u></font><b> </b><b>ADD</b><b> </b><b>CONSTRAINT</b><b> </b>FK_DOMAINS_CHNG<b> </b><b>FOREIGN</b><b> </b><b>KEY</b><b> </b><b>(</b>NEEDSCHANGE<b>)</b><b> </b><b>REFERENCES</b><b> </b><font color="# 080 0"><u>YESNO</u></font><b> </b><b>(</b>YESNOID<b>)</b><b> </b><b>ON</b><b> </b><b>UPDATE</b><b> </b><b>CASCADE</b><b>;</b>
+<b>ALTER</b><b> </b><b>TABLE</b><b> </b><font color="# 080 0"><u>DOMAINS</u></font><b> </b><b>ADD</b><b> </b><b>CONSTRAINT</b><b> </b>FK_DOMAINS_CONTINENTID<b> </b><b>FOREIGN</b><b> </b><b>KEY</b><b> </b><b>(</b><font color="# 080 0"><u>CONTINENTID</u></font><b>)</b><b> </b><b>REFERENCES</b><b> </b><font color="# 080 0"><u>CONTINENTS</u></font><b> </b><b>(</b><font color="# 080 0"><u>CONTINENTID</u></font><b>)</b><b> </b><b>ON</b><b> </b><b>DELETE</b><b> </b><b>CASCADE</b><b> </b><b>ON</b><b> </b><b>UPDATE</b><b> </b><b>CASCADE</b>
+<b>  </b><b>USING</b><b> </b><b>INDEX</b><b> </b>FK_DOMAINS_CONT<b>;</b>
+<b>ALTER</b><b> </b><b>TABLE</b><b> </b><font color="# 080 0"><u>DOMAINS</u></font><b> </b><b>ADD</b><b> </b><b>CONSTRAINT</b><b> </b>FK_DOMAINS_DOMAINTYPEID<b> </b><b>FOREIGN</b><b> </b><b>KEY</b><b> </b><b>(</b><font color="# 080 0"><u>DOMAINTYPEID</u></font><b>)</b><b> </b><b>REFERENCES</b><b> </b><font color="# 080 0"><u>DOMAINTYPES</u></font><b> </b><b>(</b><font color="# 080 0"><u>DOMAINTYPEID</u></font><b>)</b><b> </b><b>ON</b><b> </b><b>UPDATE</b><b> </b><b>CASCADE</b>
+<b>  </b><b>USING</b><b> </b><b>INDEX</b><b> </b>FK_DOMAINS_DOMAINTYPE<b>;</b>
+<b>CREATE</b><b> </b><b>UNIQUE</b><b> </b><b>INDEX</b><b> </b>DOMAINS_IDX1<b> </b><b>ON</b><b> </b><font color="# 080 0"><u>DOMAINS</u></font><b> </b><b>(</b><font color="# 080 0"><u>DOMAINNAME</u></font><b>)</b><b>;</b>
+<b>CREATE</b><b> </b><b>INDEX</b><b> </b>DOMAINS_IDX2<b> </b><b>ON</b><b> </b><font color="# 080 0"><u>DOMAINS</u></font><b> </b><b>(</b>DOMAINPARENTID<b>)</b><b>;</b>
+
+</pre></code>
+</span></P>
+<P CLASS="Base">&nbsp;</P>
+<DIV CLASS="footer"><BR><HR></DIV>
+  <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH=100%>
+    <TR VALIGN="middle">
+      <TD>&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+      <TD ALIGN="left" WIDTH="54px" NOWRAP>
+        <A HREF="DOMAINREFS.html"><IMG ALT="Previous topic" SRC="../Images/GoPrev.gif" BORDER="0"></A>
+        <A HREF="../Index.html"><IMG ALT="Chapter index" SRC="../Images/GoIndex.gif" BORDER="0"></A>
+        <A HREF="DOMAINTYPES.html"><IMG ALT="Next topic" SRC="../Images/GoNext.gif" BORDER="0"></A>
+      </TD>
+    </TR>
+  </TABLE>
+<P CLASS="Base">&nbsp;</P>
+</BODY></HTML>

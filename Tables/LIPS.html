@@ -1,0 +1,575 @@
+<HTML>
+<HEAD>
+<TITLE>LIPS</TITLE>
+<META content="text/html; charset=iso-8859-1" http-equiv=Content-Type>
+<LINK HREF="../IBEHTMLDoc.css" type=text/css rel=STYLESHEET>
+ 
+<xml>
+<IBEHelp:Attr Name="ItemOrder" Value="68800"/>
+</xml>
+ 
+</HEAD>
+<BODY>
+<DIV ID="nsbanner">
+  <DIV ID="bannerrow1">
+    <TABLE CLASS="bannerparthead" CELLSPACING=0>
+      <TR ID="hdr" VALIGN="middle">
+        <TD CLASS="runninghead">"bromo2.usask.ca:s:/data/firebird/stratdb2015v25.fdb". Tables</TD>
+        <TD ALIGN="left" WIDTH="54px" NOWRAP>
+          <A HREF="LIPREFS.html"><IMG ALT="Previous topic" SRC="../Images/GoPrev.gif" BORDER="0"></A>
+          <A HREF="../Index.html"><IMG ALT="Chapter index" SRC="../Images/GoIndex.gif" BORDER="0"></A>
+          <A HREF="LIPSIZES.html"><IMG ALT="Next topic" SRC="../Images/GoNext.gif" BORDER="0"></A>
+        </TD>
+      </TR>
+    </TABLE>
+  </DIV>
+  <DIV ID="TitleRow">
+    <P CLASS="dtH1">LIPS</P>
+  </DIV>
+ </DIV>
+<P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Description</P>
+<P CLASS="Base"><I>(There is no description for table LIPS)</I></P>
+<P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Fields</P>
+<TABLE CLASS="dtArg" CELLSPACING="0">
+  <TH WIDTH="1%" ALIGN="middle"><P CLASS="Base2"><B>PK</B></P>
+  <TH WIDTH="1%" ALIGN="middle"><P CLASS="Base2"><B>FK</B></P>
+  <TH WIDTH="1%"><P CLASS="Base2"><B>Field</B></P>
+  <TH WIDTH="1%"><P CLASS="Base2"><B>Domain</B></P>
+  <TH WIDTH="20%"><P CLASS="Base2"><B>Type</B></P>
+  <TH WIDTH="1%" ALIGN="middle"><P CLASS="Base2"><B>NN</B></P>
+  <TH WIDTH="1%"><P CLASS="Base2"><B>Default</B></P>
+  <TH WIDTH="40%"><P CLASS="Base2"><B>Description</B></P>
+  <TR>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/PK1.gif" BORDER="0"></P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2">&nbsp;</P></TD>
+    <TD><A NAME="LIPS.LIPID"><P CLASS="Base2">LIPID</P></A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Domains/LIPID.html">LIPID</A></P></TD>
+    <TD><P CLASS="Base2">INTEGER</P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/Yes.gif" BORDER="0"></P></TD>
+    <TD><P CLASS="Base2">&nbsp;</P></TD>
+    <TD><P CLASS="Base2">&nbsp;</P></TD>
+  </TR>
+  <TR>
+    <TD ALIGN="middle"><P CLASS="Base2">&nbsp;</P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/FK.gif" BORDER="0"></P></TD>
+    <TD><A NAME="LIPS.CONTINENTID"><P CLASS="Base2">CONTINENTID</P></A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Domains/CONTINENTID.html">CONTINENTID</A></P></TD>
+    <TD><P CLASS="Base2">VARCHAR(3)</P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/Yes.gif" BORDER="0"></P></TD>
+    <TD><P CLASS="Base2">'UND'</P></TD>
+    <TD><P CLASS="Base2">&nbsp;</P></TD>
+  </TR>
+  <TR>
+    <TD ALIGN="middle"><P CLASS="Base2">&nbsp;</P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/FK.gif" BORDER="0"></P></TD>
+    <TD><A NAME="LIPS.CONTOCEANID"><P CLASS="Base2">CONTOCEANID</P></A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Domains/CONTOCEANID.html">CONTOCEANID</A></P></TD>
+    <TD><P CLASS="Base2">CHAR(1)</P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/Yes.gif" BORDER="0"></P></TD>
+    <TD><P CLASS="Base2">'n'</P></TD>
+    <TD><P CLASS="Base2">&nbsp;</P></TD>
+  </TR>
+  <TR>
+    <TD ALIGN="middle"><P CLASS="Base2">&nbsp;</P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2">&nbsp;</P></TD>
+    <TD><A NAME="LIPS.LIPNAME"><P CLASS="Base2">LIPNAME</P></A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Domains/LIPNAME.html">LIPNAME</A></P></TD>
+    <TD><P CLASS="Base2">VARCHAR(50)</P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/Yes.gif" BORDER="0"></P></TD>
+    <TD><P CLASS="Base2">'Not defined'</P></TD>
+    <TD><P CLASS="Base2">&nbsp;</P></TD>
+  </TR>
+  <TR>
+    <TD ALIGN="middle"><P CLASS="Base2">&nbsp;</P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2">&nbsp;</P></TD>
+    <TD><A NAME="LIPS.LIPPARENTID"><P CLASS="Base2">LIPPARENTID</P></A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Domains/LIPID.html">LIPID</A></P></TD>
+    <TD><P CLASS="Base2">INTEGER</P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/Yes.gif" BORDER="0"></P></TD>
+    <TD><P CLASS="Base2">0</P></TD>
+    <TD><P CLASS="Base2">&nbsp;</P></TD>
+  </TR>
+  <TR>
+    <TD ALIGN="middle"><P CLASS="Base2">&nbsp;</P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/FK.gif" BORDER="0"></P></TD>
+    <TD><A NAME="LIPS.LIPSIZEID"><P CLASS="Base2">LIPSIZEID</P></A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Domains/LIPSIZEID.html">LIPSIZEID</A></P></TD>
+    <TD><P CLASS="Base2">INTEGER</P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/Yes.gif" BORDER="0"></P></TD>
+    <TD><P CLASS="Base2">0</P></TD>
+    <TD><P CLASS="Base2">&nbsp;</P></TD>
+  </TR>
+  <TR>
+    <TD ALIGN="middle"><P CLASS="Base2">&nbsp;</P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/FK.gif" BORDER="0"></P></TD>
+    <TD><A NAME="LIPS.LIPRATINGID"><P CLASS="Base2">LIPRATINGID</P></A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Domains/LIPRATINGID.html">LIPRATINGID</A></P></TD>
+    <TD><P CLASS="Base2">CHAR(1)</P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/Yes.gif" BORDER="0"></P></TD>
+    <TD><P CLASS="Base2">'Z'</P></TD>
+    <TD><P CLASS="Base2">&nbsp;</P></TD>
+  </TR>
+  <TR>
+    <TD ALIGN="middle"><P CLASS="Base2">&nbsp;</P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2">&nbsp;</P></TD>
+    <TD><A NAME="LIPS.BARCODEAGE"><P CLASS="Base2">BARCODEAGE</P></A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Domains/AGES.html">AGES</A></P></TD>
+    <TD><P CLASS="Base2">DOUBLE PRECISION</P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/Yes.gif" BORDER="0"></P></TD>
+    <TD><P CLASS="Base2">5000.0</P></TD>
+    <TD><P CLASS="Base2">&nbsp;</P></TD>
+  </TR>
+  <TR>
+    <TD ALIGN="middle"><P CLASS="Base2">&nbsp;</P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2">&nbsp;</P></TD>
+    <TD><A NAME="LIPS.PLOTBARCODE"><P CLASS="Base2">PLOTBARCODE</P></A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Domains/T_YESNO.html">T_YESNO</A></P></TD>
+    <TD><P CLASS="Base2">CHAR(1)</P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/Yes.gif" BORDER="0"></P></TD>
+    <TD><P CLASS="Base2">'Y'</P></TD>
+    <TD><P CLASS="Base2">&nbsp;</P></TD>
+  </TR>
+  <TR>
+    <TD ALIGN="middle"><P CLASS="Base2">&nbsp;</P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2">&nbsp;</P></TD>
+    <TD><A NAME="LIPS.MINPLOTAGE"><P CLASS="Base2">MINPLOTAGE</P></A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Domains/AGEMIN.html">AGEMIN</A></P></TD>
+    <TD><P CLASS="Base2">DOUBLE PRECISION</P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/Yes.gif" BORDER="0"></P></TD>
+    <TD><P CLASS="Base2">0</P></TD>
+    <TD><P CLASS="Base2">&nbsp;</P></TD>
+  </TR>
+  <TR>
+    <TD ALIGN="middle"><P CLASS="Base2">&nbsp;</P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2">&nbsp;</P></TD>
+    <TD><A NAME="LIPS.MAXPLOTAGE"><P CLASS="Base2">MAXPLOTAGE</P></A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Domains/AGEMAX.html">AGEMAX</A></P></TD>
+    <TD><P CLASS="Base2">DOUBLE PRECISION</P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/Yes.gif" BORDER="0"></P></TD>
+    <TD><P CLASS="Base2">4570</P></TD>
+    <TD><P CLASS="Base2">&nbsp;</P></TD>
+  </TR>
+  <TR>
+    <TD ALIGN="middle"><P CLASS="Base2">&nbsp;</P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/FK.gif" BORDER="0"></P></TD>
+    <TD><A NAME="LIPS.CONSTRAINTLEVELID"><P CLASS="Base2">CONSTRAINTLEVELID</P></A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Domains/AGECONSTRAINTLEVELID.html">AGECONSTRAINTLEVELID</A></P></TD>
+    <TD><P CLASS="Base2">SMALLINT</P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/Yes.gif" BORDER="0"></P></TD>
+    <TD><P CLASS="Base2">0</P></TD>
+    <TD><P CLASS="Base2">&nbsp;</P></TD>
+  </TR>
+  <TR>
+    <TD ALIGN="middle"><P CLASS="Base2">&nbsp;</P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2">&nbsp;</P></TD>
+    <TD><A NAME="LIPS.AREALEXTENT"><P CLASS="Base2">AREALEXTENT</P></A></TD>
+    <TD><P CLASS="Base2">&nbsp;</P></TD>
+    <TD><P CLASS="Base2">DOUBLE PRECISION</P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/No.gif" BORDER="0"></P></TD>
+    <TD><P CLASS="Base2">0.0</P></TD>
+    <TD><P CLASS="Base2">&nbsp;</P></TD>
+  </TR>
+  <TR>
+    <TD ALIGN="middle"><P CLASS="Base2">&nbsp;</P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2">&nbsp;</P></TD>
+    <TD><A NAME="LIPS.VOLUMEESTIMATE"><P CLASS="Base2">VOLUMEESTIMATE</P></A></TD>
+    <TD><P CLASS="Base2">&nbsp;</P></TD>
+    <TD><P CLASS="Base2">DOUBLE PRECISION</P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/No.gif" BORDER="0"></P></TD>
+    <TD><P CLASS="Base2">0.0</P></TD>
+    <TD><P CLASS="Base2">&nbsp;</P></TD>
+  </TR>
+  <TR>
+    <TD ALIGN="middle"><P CLASS="Base2">&nbsp;</P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2">&nbsp;</P></TD>
+    <TD><A NAME="LIPS.SPOTLATITUDE"><P CLASS="Base2">SPOTLATITUDE</P></A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Domains/LATITUDES.html">LATITUDES</A></P></TD>
+    <TD><P CLASS="Base2">DOUBLE PRECISION</P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/Yes.gif" BORDER="0"></P></TD>
+    <TD><P CLASS="Base2">90.0</P></TD>
+    <TD><P CLASS="Base2">&nbsp;</P></TD>
+  </TR>
+  <TR>
+    <TD ALIGN="middle"><P CLASS="Base2">&nbsp;</P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2">&nbsp;</P></TD>
+    <TD><A NAME="LIPS.SPOTLONGITUDE"><P CLASS="Base2">SPOTLONGITUDE</P></A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Domains/LONGITUDES.html">LONGITUDES</A></P></TD>
+    <TD><P CLASS="Base2">DOUBLE PRECISION</P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/Yes.gif" BORDER="0"></P></TD>
+    <TD><P CLASS="Base2">0</P></TD>
+    <TD><P CLASS="Base2">&nbsp;</P></TD>
+  </TR>
+  <TR>
+    <TD ALIGN="middle"><P CLASS="Base2">&nbsp;</P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2">&nbsp;</P></TD>
+    <TD><A NAME="LIPS.LIPHEADING"><P CLASS="Base2">LIPHEADING</P></A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Domains/LIPHEADING.html">LIPHEADING</A></P></TD>
+    <TD><P CLASS="Base2">VARCHAR(25)</P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/No.gif" BORDER="0"></P></TD>
+    <TD><P CLASS="Base2">&nbsp;</P></TD>
+    <TD><P CLASS="Base2">&nbsp;</P></TD>
+  </TR>
+  <TR>
+    <TD ALIGN="middle"><P CLASS="Base2">&nbsp;</P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/FK.gif" BORDER="0"></P></TD>
+    <TD><A NAME="LIPS.NEEDSCHANGE"><P CLASS="Base2">NEEDSCHANGE</P></A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Domains/T_YESNO.html">T_YESNO</A></P></TD>
+    <TD><P CLASS="Base2">CHAR(1)</P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/Yes.gif" BORDER="0"></P></TD>
+    <TD><P CLASS="Base2">'Y'</P></TD>
+    <TD><P CLASS="Base2">&nbsp;</P></TD>
+  </TR>
+</TABLE>
+<P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Triggers</P>
+<TABLE CLASS="dtArg" CELLSPACING="0">
+  <TH WIDTH="1%"><P CLASS="Base2"><B>Trigger</B></P>
+  <TH WIDTH="1%"><P CLASS="Base2"><B>Type</B></P>
+  <TH WIDTH="1%"><P CLASS="Base2"><B>Activity</B></P>
+  <TH WIDTH="1%"><P CLASS="Base2"><B>Order</B></P>
+  <TH WIDTH="50%"><P CLASS="Base2"><B>Description</B></P>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Triggers/LIPS_BI.html">LIPS_BI</A></TD>
+    <TD><P CLASS="Base2">BEFORE&nbsp;INSERT</TD>
+    <TD><P CLASS="Base2">&nbsp;</TD>
+    <TD ALIGN="right"><P CLASS="Base2">0</TD>
+    <TD><P CLASS="Base2">&nbsp</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Triggers/RPL$DVBROMO_LIPS_D.html">RPL$DVBROMO_LIPS_D</A></TD>
+    <TD><P CLASS="Base2">AFTER&nbsp;DELETE</TD>
+    <TD><P CLASS="Base2">Yes</TD>
+    <TD ALIGN="right"><P CLASS="Base2">32766</TD>
+    <TD><P CLASS="Base2">&nbsp</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Triggers/RPL$DVBROMO_LIPS_I.html">RPL$DVBROMO_LIPS_I</A></TD>
+    <TD><P CLASS="Base2">AFTER&nbsp;INSERT</TD>
+    <TD><P CLASS="Base2">Yes</TD>
+    <TD ALIGN="right"><P CLASS="Base2">32766</TD>
+    <TD><P CLASS="Base2">&nbsp</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Triggers/RPL$DVBROMO_LIPS_U.html">RPL$DVBROMO_LIPS_U</A></TD>
+    <TD><P CLASS="Base2">AFTER&nbsp;UPDATE</TD>
+    <TD><P CLASS="Base2">Yes</TD>
+    <TD ALIGN="right"><P CLASS="Base2">32766</TD>
+    <TD><P CLASS="Base2">&nbsp</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Triggers/RPL$LPRE_LIPS_D.html">RPL$LPRE_LIPS_D</A></TD>
+    <TD><P CLASS="Base2">AFTER&nbsp;DELETE</TD>
+    <TD><P CLASS="Base2">Yes</TD>
+    <TD ALIGN="right"><P CLASS="Base2">32766</TD>
+    <TD><P CLASS="Base2">&nbsp</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Triggers/RPL$LPRE_LIPS_I.html">RPL$LPRE_LIPS_I</A></TD>
+    <TD><P CLASS="Base2">AFTER&nbsp;INSERT</TD>
+    <TD><P CLASS="Base2">Yes</TD>
+    <TD ALIGN="right"><P CLASS="Base2">32766</TD>
+    <TD><P CLASS="Base2">&nbsp</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Triggers/RPL$LPRE_LIPS_U.html">RPL$LPRE_LIPS_U</A></TD>
+    <TD><P CLASS="Base2">AFTER&nbsp;UPDATE</TD>
+    <TD><P CLASS="Base2">Yes</TD>
+    <TD ALIGN="right"><P CLASS="Base2">32766</TD>
+    <TD><P CLASS="Base2">&nbsp</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Triggers/RPL$STRATEG_LIPS_D.html">RPL$STRATEG_LIPS_D</A></TD>
+    <TD><P CLASS="Base2">AFTER&nbsp;DELETE</TD>
+    <TD><P CLASS="Base2">Yes</TD>
+    <TD ALIGN="right"><P CLASS="Base2">32766</TD>
+    <TD><P CLASS="Base2">&nbsp</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Triggers/RPL$STRATEG_LIPS_I.html">RPL$STRATEG_LIPS_I</A></TD>
+    <TD><P CLASS="Base2">AFTER&nbsp;INSERT</TD>
+    <TD><P CLASS="Base2">Yes</TD>
+    <TD ALIGN="right"><P CLASS="Base2">32766</TD>
+    <TD><P CLASS="Base2">&nbsp</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Triggers/RPL$STRATEG_LIPS_U.html">RPL$STRATEG_LIPS_U</A></TD>
+    <TD><P CLASS="Base2">AFTER&nbsp;UPDATE</TD>
+    <TD><P CLASS="Base2">Yes</TD>
+    <TD ALIGN="right"><P CLASS="Base2">32766</TD>
+    <TD><P CLASS="Base2">&nbsp</TD>
+  </TR>
+</TABLE>
+<P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Indices</P>
+<TABLE CLASS="dtArg" CELLSPACING="0">
+  <TH><P CLASS="Base2"><B>Index</B></P>
+  <TH><P CLASS="Base2"><B>Fields</B></P>
+  <TH ALIGN="middle"><P CLASS="Base2"><B>Active</B></P>
+  <TH ALIGN="middle"><P CLASS="Base2"><B>Unique</B></P>
+  <TH ALIGN="middle"><P CLASS="Base2"><B>Order</B></P>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Indices/FK_LIPS_CHNG.html">FK_LIPS_CHNG</A></TD>
+    <TD><P CLASS="Base2">NEEDSCHANGE</TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/Yes.gif" BORDER="0"></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/No.gif" BORDER="0"></TD>
+    <TD ALIGN="middle"><P CLASS="Base2">ASC</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Indices/FK_LIPS_CONSTLEV.html">FK_LIPS_CONSTLEV</A></TD>
+    <TD><P CLASS="Base2">CONSTRAINTLEVELID</TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/Yes.gif" BORDER="0"></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/No.gif" BORDER="0"></TD>
+    <TD ALIGN="middle"><P CLASS="Base2">ASC</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Indices/FK_LIPS_CONTINENT.html">FK_LIPS_CONTINENT</A></TD>
+    <TD><P CLASS="Base2">CONTINENTID</TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/Yes.gif" BORDER="0"></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/No.gif" BORDER="0"></TD>
+    <TD ALIGN="middle"><P CLASS="Base2">ASC</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Indices/FK_LIPS_CONTOCEAN.html">FK_LIPS_CONTOCEAN</A></TD>
+    <TD><P CLASS="Base2">CONTOCEANID</TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/Yes.gif" BORDER="0"></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/No.gif" BORDER="0"></TD>
+    <TD ALIGN="middle"><P CLASS="Base2">ASC</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Indices/FK_LIPS_RATING.html">FK_LIPS_RATING</A></TD>
+    <TD><P CLASS="Base2">LIPRATINGID</TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/Yes.gif" BORDER="0"></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/No.gif" BORDER="0"></TD>
+    <TD ALIGN="middle"><P CLASS="Base2">ASC</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Indices/FK_LIPS_SIZE.html">FK_LIPS_SIZE</A></TD>
+    <TD><P CLASS="Base2">LIPSIZEID</TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/Yes.gif" BORDER="0"></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/No.gif" BORDER="0"></TD>
+    <TD ALIGN="middle"><P CLASS="Base2">ASC</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Indices/PK_LIPS.html">PK_LIPS</A></TD>
+    <TD><P CLASS="Base2">LIPID</TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/Yes.gif" BORDER="0"></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/Yes.gif" BORDER="0"></TD>
+    <TD ALIGN="middle"><P CLASS="Base2">ASC</TD>
+  </TR>
+</TABLE>
+<P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">References</P>
+<TABLE CLASS="dtArg" CELLSPACING="0">
+  <TH><P CLASS="Base2"><B>Table</B></P>
+  <TH><P CLASS="Base2"><B>Foreign Key</B></P>
+  <TH><P CLASS="Base2"><B>Fields</B></P>
+  <TH><P CLASS="Base2"><B>FK Field</B></P>
+  <TH><P CLASS="Base2"><B>Delete Rule</B></P>
+  <TH><P CLASS="Base2"><B>Update Rule</B></P>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Tables/YESNO.html">YESNO</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Foreign Keys/FK_LIPS_CHNG.html">FK_LIPS_CHNG</A></TD>
+    <TD><P CLASS="Base2">NEEDSCHANGE</TD>
+    <TD><P CLASS="Base2">YESNOID</TD>
+    <TD><P CLASS="Base2">NO ACTION</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Tables/CONSTRAINTS.html">CONSTRAINTS</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Foreign Keys/FK_LIPS_CONSTLEV.html">FK_LIPS_CONSTLEV</A></TD>
+    <TD><P CLASS="Base2">CONSTRAINTLEVELID</TD>
+    <TD><P CLASS="Base2">AGECONSTRAINTLEVELID</TD>
+    <TD><P CLASS="Base2">NO ACTION</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Tables/CONTINENTS.html">CONTINENTS</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Foreign Keys/FK_LIPS_CONTINENT.html">FK_LIPS_CONTINENT</A></TD>
+    <TD><P CLASS="Base2">CONTINENTID</TD>
+    <TD><P CLASS="Base2">CONTINENTID</TD>
+    <TD><P CLASS="Base2">NO ACTION</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Tables/CONTOCEANS.html">CONTOCEANS</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Foreign Keys/FK_LIPS_CONTOCEAN.html">FK_LIPS_CONTOCEAN</A></TD>
+    <TD><P CLASS="Base2">CONTOCEANID</TD>
+    <TD><P CLASS="Base2">CONTOCEANID</TD>
+    <TD><P CLASS="Base2">NO ACTION</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Tables/LIPRATINGS.html">LIPRATINGS</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Foreign Keys/FK_LIPS_RATING.html">FK_LIPS_RATING</A></TD>
+    <TD><P CLASS="Base2">LIPRATINGID</TD>
+    <TD><P CLASS="Base2">LIPRATINGID</TD>
+    <TD><P CLASS="Base2">NO ACTION</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Tables/LIPSIZES.html">LIPSIZES</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Foreign Keys/FK_LIPS_SIZE.html">FK_LIPS_SIZE</A></TD>
+    <TD><P CLASS="Base2">LIPSIZEID</TD>
+    <TD><P CLASS="Base2">LIPSIZEID</TD>
+    <TD><P CLASS="Base2">NO ACTION</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+</TABLE>
+<P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Referenced By</P>
+<TABLE CLASS="dtArg" CELLSPACING="0">
+  <TH><P CLASS="Base2"><B>Table</B></P>
+  <TH><P CLASS="Base2"><B>Foreign Key</B></P>
+  <TH><P CLASS="Base2"><B>Fields</B></P>
+  <TH><P CLASS="Base2"><B>FK Field</B></P>
+  <TH><P CLASS="Base2"><B>Delete Rule</B></P>
+  <TH><P CLASS="Base2"><B>Update Rule</B></P>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Tables/LIPCOMPOSITIONS.html">LIPCOMPOSITIONS</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Foreign Keys/FK_LIPCOMPOSITIONS_LIP.html">FK_LIPCOMPOSITIONS_LIP</A></TD>
+    <TD><P CLASS="Base2">LIPID</TD>
+    <TD><P CLASS="Base2">LIPID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Tables/LIPCORRELATIVES.html">LIPCORRELATIVES</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Foreign Keys/FK_LIPCORRELATIVES_CORREL.html">FK_LIPCORRELATIVES_CORREL</A></TD>
+    <TD><P CLASS="Base2">CORRELATIVEID</TD>
+    <TD><P CLASS="Base2">LIPID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Tables/LIPCORRELATIVES.html">LIPCORRELATIVES</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Foreign Keys/FK_LIPCORRELATIVES_LIP.html">FK_LIPCORRELATIVES_LIP</A></TD>
+    <TD><P CLASS="Base2">LIPID</TD>
+    <TD><P CLASS="Base2">LIPID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Tables/LIPDESCRIPTION.html">LIPDESCRIPTION</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Foreign Keys/FK_LIPDESCRIPTION_LIP.html">FK_LIPDESCRIPTION_LIP</A></TD>
+    <TD><P CLASS="Base2">LIPID</TD>
+    <TD><P CLASS="Base2">LIPID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Tables/LIPDOMAIN.html">LIPDOMAIN</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Foreign Keys/FK_LIPDOMAIN_LIP.html">FK_LIPDOMAIN_LIP</A></TD>
+    <TD><P CLASS="Base2">LIPID</TD>
+    <TD><P CLASS="Base2">LIPID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Tables/LIPFOR.html">LIPFOR</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Foreign Keys/FK_LIPFOR_LIP.html">FK_LIPFOR_LIP</A></TD>
+    <TD><P CLASS="Base2">LIPID</TD>
+    <TD><P CLASS="Base2">LIPID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Tables/LIPFORM.html">LIPFORM</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Foreign Keys/FK_LIPFORM_LIP.html">FK_LIPFORM_LIP</A></TD>
+    <TD><P CLASS="Base2">LIPID</TD>
+    <TD><P CLASS="Base2">LIPID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Tables/LIPMAPS2.html">LIPMAPS2</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Foreign Keys/FK_LIPMAPS2_LIP.html">FK_LIPMAPS2_LIP</A></TD>
+    <TD><P CLASS="Base2">LIPID</TD>
+    <TD><P CLASS="Base2">LIPID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Tables/LIPREFS.html">LIPREFS</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Foreign Keys/FK_LIPREFS_1.html">FK_LIPREFS_1</A></TD>
+    <TD><P CLASS="Base2">LIPID</TD>
+    <TD><P CLASS="Base2">LIPID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Tables/LIPVALID.html">LIPVALID</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Foreign Keys/FK_LIPVALID_1.html">FK_LIPVALID_1</A></TD>
+    <TD><P CLASS="Base2">LIPID</TD>
+    <TD><P CLASS="Base2">LIPID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Tables/STRATLIP.html">STRATLIP</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Foreign Keys/FK_STRATLIP_LIP.html">FK_STRATLIP_LIP</A></TD>
+    <TD><P CLASS="Base2">LIPID</TD>
+    <TD><P CLASS="Base2">LIPID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Tables/USERLIPNUMDATES.html">USERLIPNUMDATES</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Foreign Keys/FK_USERLIPNUMDATES_LIP.html">FK_USERLIPNUMDATES_LIP</A></TD>
+    <TD><P CLASS="Base2">LIPID</TD>
+    <TD><P CLASS="Base2">LIPID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+</TABLE>
+<P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Definition</P>
+<P CLASS="Base"><span class="DDLCode">
+<code><pre>
+<b>CREATE</b><b> </b><b>TABLE</b><b> </b><font color="# 080 0"><u>LIPS</u></font><b> </b><b>(</b>
+<b>    </b><font color="# 080 0"><u>LIPID</u></font><b>              </b><font color="# 080 0"><u>LIPID</u></font><b> </b><b>NOT</b><b> </b><b>NULL</b><b>,</b>
+<b>    </b><font color="# 080 0"><u>CONTINENTID</u></font><b>        </b><font color="# 080 0"><u>CONTINENTID</u></font><b> </b><b>DEFAULT</b><b> </b>'UND'<b> </b><b>NOT</b><b> </b><b>NULL</b><b>,</b>
+<b>    </b><font color="# 080 0"><u>CONTOCEANID</u></font><b>        </b><font color="# 080 0"><u>CONTOCEANID</u></font><b> </b><b>DEFAULT</b><b> </b>'n'<b> </b><b>NOT</b><b> </b><b>NULL</b><b>,</b>
+<b>    </b><font color="# 080 0"><u>LIPNAME</u></font><b>            </b><font color="# 080 0"><u>LIPNAME</u></font><b> </b><b>DEFAULT</b><b> </b>'Not defined'<b> </b><b>NOT</b><b> </b><b>NULL</b><b>,</b>
+<b>    </b>LIPPARENTID<b>        </b><font color="# 080 0"><u>LIPID</u></font><b> </b><b>DEFAULT</b><b> </b>0<b>,</b>
+<b>    </b><font color="# 080 0"><u>LIPSIZEID</u></font><b>          </b><font color="# 080 0"><u>LIPSIZEID</u></font><b> </b><b>DEFAULT</b><b> </b>0<b>,</b>
+<b>    </b><font color="# 080 0"><u>LIPRATINGID</u></font><b>        </b><font color="# 080 0"><u>LIPRATINGID</u></font><b> </b><b>DEFAULT</b><b> </b>'Z'<b> </b><b>NOT</b><b> </b><b>NULL</b><b>,</b>
+<b>    </b>BARCODEAGE<b>         </b><font color="# 080 0"><u>AGES</u></font><b> </b><b>DEFAULT</b><b> </b>5000<b>.</b>0<b> </b><b>NOT</b><b> </b><b>NULL</b><b>,</b>
+<b>    </b>PLOTBARCODE<b>        </b><font color="# 080 0"><u>T_YESNO</u></font><b> </b><b>DEFAULT</b><b> </b>'Y'<b> </b><b>NOT</b><b> </b><b>NULL</b><b>,</b>
+<b>    </b>MINPLOTAGE<b>         </b><font color="# 080 0"><u>AGEMIN</u></font><b> </b><b>DEFAULT</b><b> </b>0<b>,</b>
+<b>    </b>MAXPLOTAGE<b>         </b><font color="# 080 0"><u>AGEMAX</u></font><b> </b><b>DEFAULT</b><b> </b>4570<b>,</b>
+<b>    </b>CONSTRAINTLEVELID<b>  </b><font color="# 080 0"><u>AGECONSTRAINTLEVELID</u></font><b> </b><b>DEFAULT</b><b> </b>0<b>,</b>
+<b>    </b>AREALEXTENT<b>        </b><b>DOUBLE</b><b> </b><b>PRECISION</b><b> </b><b>DEFAULT</b><b> </b>0<b>.</b>0<b>,</b>
+<b>    </b>VOLUMEESTIMATE<b>     </b><b>DOUBLE</b><b> </b><b>PRECISION</b><b> </b><b>DEFAULT</b><b> </b>0<b>.</b>0<b>,</b>
+<b>    </b>SPOTLATITUDE<b>       </b><font color="# 080 0"><u>LATITUDES</u></font><b> </b><b>DEFAULT</b><b> </b>90<b>.</b>0<b>,</b>
+<b>    </b>SPOTLONGITUDE<b>      </b><font color="# 080 0"><u>LONGITUDES</u></font><b> </b><b>DEFAULT</b><b> </b>0<b>,</b>
+<b>    </b><font color="# 080 0"><u>LIPHEADING</u></font><b>         </b><font color="# 080 0"><u>LIPHEADING</u></font><b>,</b>
+<b>    </b>NEEDSCHANGE<b>        </b><font color="# 080 0"><u>T_YESNO</u></font><b> </b><b>DEFAULT</b><b> </b>'Y'<b> </b><b>NOT</b><b> </b><b>NULL</b>
+<b>)</b><b>;</b>
+
+
+<b>ALTER</b><b> </b><b>TABLE</b><b> </b><font color="# 080 0"><u>LIPS</u></font><b> </b><b>ADD</b><b> </b><b>CONSTRAINT</b><b> </b>PK_LIPS<b> </b><b>PRIMARY</b><b> </b><b>KEY</b><b> </b><b>(</b><font color="# 080 0"><u>LIPID</u></font><b>)</b><b>;</b>
+<b>ALTER</b><b> </b><b>TABLE</b><b> </b><font color="# 080 0"><u>LIPS</u></font><b> </b><b>ADD</b><b> </b><b>CONSTRAINT</b><b> </b>FK_LIPS_CHNG<b> </b><b>FOREIGN</b><b> </b><b>KEY</b><b> </b><b>(</b>NEEDSCHANGE<b>)</b><b> </b><b>REFERENCES</b><b> </b><font color="# 080 0"><u>YESNO</u></font><b> </b><b>(</b>YESNOID<b>)</b><b> </b><b>ON</b><b> </b><b>UPDATE</b><b> </b><b>CASCADE</b><b>;</b>
+<b>ALTER</b><b> </b><b>TABLE</b><b> </b><font color="# 080 0"><u>LIPS</u></font><b> </b><b>ADD</b><b> </b><b>CONSTRAINT</b><b> </b>FK_LIPS_CONSTLEV<b> </b><b>FOREIGN</b><b> </b><b>KEY</b><b> </b><b>(</b>CONSTRAINTLEVELID<b>)</b><b> </b><b>REFERENCES</b><b> </b><font color="# 080 0"><u>CONSTRAINTS</u></font><b> </b><b>(</b><font color="# 080 0"><u>AGECONSTRAINTLEVELID</u></font><b>)</b><b> </b><b>ON</b><b> </b><b>UPDATE</b><b> </b><b>CASCADE</b><b>;</b>
+<b>ALTER</b><b> </b><b>TABLE</b><b> </b><font color="# 080 0"><u>LIPS</u></font><b> </b><b>ADD</b><b> </b><b>CONSTRAINT</b><b> </b>FK_LIPS_CONTINENT<b> </b><b>FOREIGN</b><b> </b><b>KEY</b><b> </b><b>(</b><font color="# 080 0"><u>CONTINENTID</u></font><b>)</b><b> </b><b>REFERENCES</b><b> </b><font color="# 080 0"><u>CONTINENTS</u></font><b> </b><b>(</b><font color="# 080 0"><u>CONTINENTID</u></font><b>)</b><b> </b><b>ON</b><b> </b><b>UPDATE</b><b> </b><b>CASCADE</b><b>;</b>
+<b>ALTER</b><b> </b><b>TABLE</b><b> </b><font color="# 080 0"><u>LIPS</u></font><b> </b><b>ADD</b><b> </b><b>CONSTRAINT</b><b> </b>FK_LIPS_CONTOCEAN<b> </b><b>FOREIGN</b><b> </b><b>KEY</b><b> </b><b>(</b><font color="# 080 0"><u>CONTOCEANID</u></font><b>)</b><b> </b><b>REFERENCES</b><b> </b><font color="# 080 0"><u>CONTOCEANS</u></font><b> </b><b>(</b><font color="# 080 0"><u>CONTOCEANID</u></font><b>)</b><b> </b><b>ON</b><b> </b><b>UPDATE</b><b> </b><b>CASCADE</b><b>;</b>
+<b>ALTER</b><b> </b><b>TABLE</b><b> </b><font color="# 080 0"><u>LIPS</u></font><b> </b><b>ADD</b><b> </b><b>CONSTRAINT</b><b> </b>FK_LIPS_RATING<b> </b><b>FOREIGN</b><b> </b><b>KEY</b><b> </b><b>(</b><font color="# 080 0"><u>LIPRATINGID</u></font><b>)</b><b> </b><b>REFERENCES</b><b> </b><font color="# 080 0"><u>LIPRATINGS</u></font><b> </b><b>(</b><font color="# 080 0"><u>LIPRATINGID</u></font><b>)</b><b> </b><b>ON</b><b> </b><b>UPDATE</b><b> </b><b>CASCADE</b><b>;</b>
+<b>ALTER</b><b> </b><b>TABLE</b><b> </b><font color="# 080 0"><u>LIPS</u></font><b> </b><b>ADD</b><b> </b><b>CONSTRAINT</b><b> </b>FK_LIPS_SIZE<b> </b><b>FOREIGN</b><b> </b><b>KEY</b><b> </b><b>(</b><font color="# 080 0"><u>LIPSIZEID</u></font><b>)</b><b> </b><b>REFERENCES</b><b> </b><font color="# 080 0"><u>LIPSIZES</u></font><b> </b><b>(</b><font color="# 080 0"><u>LIPSIZEID</u></font><b>)</b><b> </b><b>ON</b><b> </b><b>UPDATE</b><b> </b><b>CASCADE</b><b>;</b>
+
+</pre></code>
+</span></P>
+<P CLASS="Base">&nbsp;</P>
+<DIV CLASS="footer"><BR><HR></DIV>
+  <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH=100%>
+    <TR VALIGN="middle">
+      <TD>&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+      <TD ALIGN="left" WIDTH="54px" NOWRAP>
+        <A HREF="LIPREFS.html"><IMG ALT="Previous topic" SRC="../Images/GoPrev.gif" BORDER="0"></A>
+        <A HREF="../Index.html"><IMG ALT="Chapter index" SRC="../Images/GoIndex.gif" BORDER="0"></A>
+        <A HREF="LIPSIZES.html"><IMG ALT="Next topic" SRC="../Images/GoNext.gif" BORDER="0"></A>
+      </TD>
+    </TR>
+  </TABLE>
+<P CLASS="Base">&nbsp;</P>
+</BODY></HTML>

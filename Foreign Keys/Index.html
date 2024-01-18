@@ -1,0 +1,1600 @@
+<HTML>
+<HEAD>
+<TITLE>Foreign Keys</TITLE>
+<META content="text/html; charset=iso-8859-1" http-equiv=Content-Type>
+<LINK HREF="../IBEHTMLDoc.css" type=text/css rel=STYLESHEET>
+ 
+<xml>
+<IBEHelp:Attr Name="ItemOrder" Value="10800"/>
+</xml>
+ 
+</HEAD>
+<BODY>
+<DIV ID="nsbanner">
+  <DIV ID="bannerrow1">
+    <TABLE CLASS="bannerparthead" CELLSPACING=0>
+      <TR ID="hdr" VALIGN="middle">
+        <TD CLASS="runninghead">"bromo2.usask.ca:s:/data/firebird/stratdb2015v25.fdb"</TD>
+        <TD ALIGN="left" WIDTH="54px" NOWRAP>
+          <A HREF="../Index.html"><IMG ALT="Previous topic" SRC="../Images/GoPrev.gif" BORDER="0"></A>
+          <A HREF="../Index.html"><IMG ALT="Chapter index" SRC="../Images/GoIndex.gif" BORDER="0"></A>
+          <A HREF="FK_APPLICLINK_APPLIC.html"><IMG ALT="Next topic" SRC="../Images/GoNext.gif" BORDER="0"></A>
+        </TD>
+      </TR>
+    </TABLE>
+  </DIV>
+  <DIV ID="TitleRow">
+    <P CLASS="dtH1">Foreign Keys</P>
+  </DIV>
+ </DIV>
+<P CLASS="Base">&nbsp;</P>
+<TABLE CLASS="dtArg" CELLSPACING="0">
+  <TH WIDTH="1%"><P CLASS="Base2"><B>Foreign Key</B></P>
+  <TH WIDTH="1%"><P CLASS="Base2"><B>Table</B></P>
+  <TH WIDTH="1%"><P CLASS="Base2"><B>Fields</B></P>
+  <TH WIDTH="1%"><P CLASS="Base2"><B>FK Table</B></P>
+  <TH WIDTH="1%"><P CLASS="Base2"><B>FK Field</B></P>
+  <TH WIDTH="1%"><P CLASS="Base2"><B>Delete Rule</B></P>
+  <TH WIDTH="1%"><P CLASS="Base2"><B>Update Rule</B></P>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_APPLICLINK_APPLIC.html">FK_APPLICLINK_APPLIC</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/APPLICLINK.html">APPLICLINK</A></TD>
+    <TD><P CLASS="Base2">APPLICATIONID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/APPLICATIONS.html">APPLICATIONS</A></TD>
+    <TD><P CLASS="Base2">APPLICATIONID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_APPLICLINK_UNIT.html">FK_APPLICLINK_UNIT</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/APPLICLINK.html">APPLICLINK</A></TD>
+    <TD><P CLASS="Base2">UNITID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/STRATUNITS.html">STRATUNITS</A></TD>
+    <TD><P CLASS="Base2">UNITID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_APPROVALSTATUS_INC4MAP.html">FK_APPROVALSTATUS_INC4MAP</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/APPROVALSTATUS.html">APPROVALSTATUS</A></TD>
+    <TD><P CLASS="Base2">INC4MAP</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/YESNO.html">YESNO</A></TD>
+    <TD><P CLASS="Base2">YESNOID</TD>
+    <TD><P CLASS="Base2">NO ACTION</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_CHARTDOMAIN_CHART.html">FK_CHARTDOMAIN_CHART</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/CHARTDOMAIN.html">CHARTDOMAIN</A></TD>
+    <TD><P CLASS="Base2">CHARTID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/CHARTS2.html">CHARTS2</A></TD>
+    <TD><P CLASS="Base2">CHARTID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_CHARTDOMAIN_DOMAIN.html">FK_CHARTDOMAIN_DOMAIN</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/CHARTDOMAIN.html">CHARTDOMAIN</A></TD>
+    <TD><P CLASS="Base2">DOMAINID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/DOMAINS.html">DOMAINS</A></TD>
+    <TD><P CLASS="Base2">DOMAINID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_CHARTS2_OWNER.html">FK_CHARTS2_OWNER</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/CHARTS2.html">CHARTS2</A></TD>
+    <TD><P CLASS="Base2">OWNERID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/USERS.html">USERS</A></TD>
+    <TD><P CLASS="Base2">USERID</TD>
+    <TD><P CLASS="Base2">NO ACTION</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_CHARTUNIT_1.html">FK_CHARTUNIT_1</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/CHARTUNIT.html">CHARTUNIT</A></TD>
+    <TD><P CLASS="Base2">CHARTID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/CHARTS2.html">CHARTS2</A></TD>
+    <TD><P CLASS="Base2">CHARTID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_CHARTUNIT_2.html">FK_CHARTUNIT_2</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/CHARTUNIT.html">CHARTUNIT</A></TD>
+    <TD><P CLASS="Base2">UNITID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/STRATUNITS.html">STRATUNITS</A></TD>
+    <TD><P CLASS="Base2">UNITID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_CHARTUNIT_3.html">FK_CHARTUNIT_3</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/CHARTUNIT.html">CHARTUNIT</A></TD>
+    <TD><P CLASS="Base2">DOMAINID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/DOMAINS.html">DOMAINS</A></TD>
+    <TD><P CLASS="Base2">DOMAINID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_CHARTUNITWIDTH_1.html">FK_CHARTUNITWIDTH_1</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/CHARTUNITWIDTH.html">CHARTUNITWIDTH</A></TD>
+    <TD><P CLASS="Base2">CHARTID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/CHARTS2.html">CHARTS2</A></TD>
+    <TD><P CLASS="Base2">CHARTID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_CHARTUNITWIDTH_2.html">FK_CHARTUNITWIDTH_2</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/CHARTUNITWIDTH.html">CHARTUNITWIDTH</A></TD>
+    <TD><P CLASS="Base2">UNITID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/STRATUNITS.html">STRATUNITS</A></TD>
+    <TD><P CLASS="Base2">UNITID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_CHARTUSER_CHART.html">FK_CHARTUSER_CHART</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/CHARTUSER.html">CHARTUSER</A></TD>
+    <TD><P CLASS="Base2">CHARTID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/CHARTS2.html">CHARTS2</A></TD>
+    <TD><P CLASS="Base2">CHARTID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_CHARTUSER_USER.html">FK_CHARTUSER_USER</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/CHARTUSER.html">CHARTUSER</A></TD>
+    <TD><P CLASS="Base2">USERID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/USERS.html">USERS</A></TD>
+    <TD><P CLASS="Base2">USERID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_COMMODITYVARIABLEORDER_COMAS.html">FK_COMMODITYVARIABLEORDER_COMAS</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/COMMODITYVARIABLEORDER.html">COMMODITYVARIABLEORDER</A></TD>
+    <TD><P CLASS="Base2">COMMODITYASSOCIATIONID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/COMMODITYASSOCIATION.html">COMMODITYASSOCIATION</A></TD>
+    <TD><P CLASS="Base2">COMMODITYASSOCID</TD>
+    <TD><P CLASS="Base2">NO ACTION</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_COMMODITYVARIABLEORDER_COMM.html">FK_COMMODITYVARIABLEORDER_COMM</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/COMMODITYVARIABLEORDER.html">COMMODITYVARIABLEORDER</A></TD>
+    <TD><P CLASS="Base2">COMMODITYID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/COMMODITIES.html">COMMODITIES</A></TD>
+    <TD><P CLASS="Base2">COMMODITYID</TD>
+    <TD><P CLASS="Base2">NO ACTION</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_CONTINENTS_1.html">FK_CONTINENTS_1</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/CONTINENTS.html">CONTINENTS</A></TD>
+    <TD><P CLASS="Base2">LANGUAGEID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/LANGUAGES.html">LANGUAGES</A></TD>
+    <TD><P CLASS="Base2">LANGUAGEID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_CONTINENTS_2.html">FK_CONTINENTS_2</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/CONTINENTS.html">CONTINENTS</A></TD>
+    <TD><P CLASS="Base2">HASDATA</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/YESNO.html">YESNO</A></TD>
+    <TD><P CLASS="Base2">YESNOID</TD>
+    <TD><P CLASS="Base2">NO ACTION</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_CORRELATIVES_1.html">FK_CORRELATIVES_1</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/CORRELATIVES.html">CORRELATIVES</A></TD>
+    <TD><P CLASS="Base2">UNITID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/STRATUNITS.html">STRATUNITS</A></TD>
+    <TD><P CLASS="Base2">UNITID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_CORRELATIVES_2.html">FK_CORRELATIVES_2</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/CORRELATIVES.html">CORRELATIVES</A></TD>
+    <TD><P CLASS="Base2">CORRELATIVEID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/STRATUNITS.html">STRATUNITS</A></TD>
+    <TD><P CLASS="Base2">UNITID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_COUNTRIES_1.html">FK_COUNTRIES_1</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/COUNTRIES.html">COUNTRIES</A></TD>
+    <TD><P CLASS="Base2">COUNTRYHASRECORDS</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/YESNO.html">YESNO</A></TD>
+    <TD><P CLASS="Base2">YESNOID</TD>
+    <TD><P CLASS="Base2">NO ACTION</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_COUNTRIES_2.html">FK_COUNTRIES_2</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/COUNTRIES.html">COUNTRIES</A></TD>
+    <TD><P CLASS="Base2">DEFAULTMAPID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/MAPS2.html">MAPS2</A></TD>
+    <TD><P CLASS="Base2">MAPID2</TD>
+    <TD><P CLASS="Base2">NO ACTION</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_COUNTRIES_CONT.html">FK_COUNTRIES_CONT</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/COUNTRIES.html">COUNTRIES</A></TD>
+    <TD><P CLASS="Base2">CONTINENTID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/CONTINENTS.html">CONTINENTS</A></TD>
+    <TD><P CLASS="Base2">CONTINENTID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_COUNTRIES_LANG.html">FK_COUNTRIES_LANG</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/COUNTRIES.html">COUNTRIES</A></TD>
+    <TD><P CLASS="Base2">LANGUAGEID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/LANGUAGES.html">LANGUAGES</A></TD>
+    <TD><P CLASS="Base2">LANGUAGEID</TD>
+    <TD><P CLASS="Base2">NO ACTION</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_DEPISOTOPECOUNT_DEP.html">FK_DEPISOTOPECOUNT_DEP</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/DEPISOTOPECOUNT.html">DEPISOTOPECOUNT</A></TD>
+    <TD><P CLASS="Base2">SDBDEPOSITID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/DEPOSITS.html">DEPOSITS</A></TD>
+    <TD><P CLASS="Base2">SDBDEPOSITID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_DEPOSITCLANS_COMASSOC.html">FK_DEPOSITCLANS_COMASSOC</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/DEPOSITCLANS.html">DEPOSITCLANS</A></TD>
+    <TD><P CLASS="Base2">COMMODITYASSOCIATIONID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/COMMODITYASSOCIATION.html">COMMODITYASSOCIATION</A></TD>
+    <TD><P CLASS="Base2">COMMODITYASSOCID</TD>
+    <TD><P CLASS="Base2">NO ACTION</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_DEPOSITCOMMENT_1.html">FK_DEPOSITCOMMENT_1</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/DEPOSITCOMMENT.html">DEPOSITCOMMENT</A></TD>
+    <TD><P CLASS="Base2">SDBDEPOSITID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/DEPOSITS.html">DEPOSITS</A></TD>
+    <TD><P CLASS="Base2">SDBDEPOSITID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_DEPOSITCOMMODITIES_COMMOD.html">FK_DEPOSITCOMMODITIES_COMMOD</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/DEPOSITCOMMODITIES.html">DEPOSITCOMMODITIES</A></TD>
+    <TD><P CLASS="Base2">COMMODITYID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/COMMODITIES.html">COMMODITIES</A></TD>
+    <TD><P CLASS="Base2">COMMODITYID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_DEPOSITCOMMODITIES_DEP.html">FK_DEPOSITCOMMODITIES_DEP</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/DEPOSITCOMMODITIES.html">DEPOSITCOMMODITIES</A></TD>
+    <TD><P CLASS="Base2">SBDEPOSITID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/DEPOSITS.html">DEPOSITS</A></TD>
+    <TD><P CLASS="Base2">SDBDEPOSITID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_DEPOSITCOMMODITIES_GRADE.html">FK_DEPOSITCOMMODITIES_GRADE</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/DEPOSITCOMMODITIES.html">DEPOSITCOMMODITIES</A></TD>
+    <TD><P CLASS="Base2">GRADEUNITID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/GRADEUNITS.html">GRADEUNITS</A></TD>
+    <TD><P CLASS="Base2">GRADEID</TD>
+    <TD><P CLASS="Base2">NO ACTION</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_DEPOSITFOR_CHNG.html">FK_DEPOSITFOR_CHNG</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/DEPOSITFOR.html">DEPOSITFOR</A></TD>
+    <TD><P CLASS="Base2">NEEDSCHANGE</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/YESNO.html">YESNO</A></TD>
+    <TD><P CLASS="Base2">YESNOID</TD>
+    <TD><P CLASS="Base2">NO ACTION</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_DEPOSITFOR_DEPID.html">FK_DEPOSITFOR_DEPID</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/DEPOSITFOR.html">DEPOSITFOR</A></TD>
+    <TD><P CLASS="Base2">SDBDEPOSITID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/DEPOSITS.html">DEPOSITS</A></TD>
+    <TD><P CLASS="Base2">SDBDEPOSITID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_DEPOSITFOR_WHOFOR.html">FK_DEPOSITFOR_WHOFOR</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/DEPOSITFOR.html">DEPOSITFOR</A></TD>
+    <TD><P CLASS="Base2">WHOFORID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/FORLIST.html">FORLIST</A></TD>
+    <TD><P CLASS="Base2">WHOFORID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_DEPOSITFOR_YN.html">FK_DEPOSITFOR_YN</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/DEPOSITFOR.html">DEPOSITFOR</A></TD>
+    <TD><P CLASS="Base2">INC4CHTYN</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/YESNO.html">YESNO</A></TD>
+    <TD><P CLASS="Base2">YESNOID</TD>
+    <TD><P CLASS="Base2">NO ACTION</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_DEPOSITREFS_DEP.html">FK_DEPOSITREFS_DEP</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/DEPOSITREFS.html">DEPOSITREFS</A></TD>
+    <TD><P CLASS="Base2">SDBDEPOSITID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/DEPOSITS.html">DEPOSITS</A></TD>
+    <TD><P CLASS="Base2">SDBDEPOSITID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_DEPOSITREFS_REF.html">FK_DEPOSITREFS_REF</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/DEPOSITREFS.html">DEPOSITREFS</A></TD>
+    <TD><P CLASS="Base2">SOURCENUM</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/SOURCELIST.html">SOURCELIST</A></TD>
+    <TD><P CLASS="Base2">SOURCENUM</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_DEPOSITS_CHNG.html">FK_DEPOSITS_CHNG</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/DEPOSITS.html">DEPOSITS</A></TD>
+    <TD><P CLASS="Base2">NEEDSCHANGE</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/YESNO.html">YESNO</A></TD>
+    <TD><P CLASS="Base2">YESNOID</TD>
+    <TD><P CLASS="Base2">NO ACTION</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_DEPOSITS_CLAN.html">FK_DEPOSITS_CLAN</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/DEPOSITS.html">DEPOSITS</A></TD>
+    <TD><P CLASS="Base2">DEPOSITCLANID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/DEPOSITCLANS.html">DEPOSITCLANS</A></TD>
+    <TD><P CLASS="Base2">DEPOSITCLANID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_DEPOSITS_COUNTRY.html">FK_DEPOSITS_COUNTRY</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/DEPOSITS.html">DEPOSITS</A></TD>
+    <TD><P CLASS="Base2">COUNTRYID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/COUNTRIES.html">COUNTRIES</A></TD>
+    <TD><P CLASS="Base2">COUNTRYID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_DEPOSITS_DATING.html">FK_DEPOSITS_DATING</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/DEPOSITS.html">DEPOSITS</A></TD>
+    <TD><P CLASS="Base2">DATINGTYPEID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/DATINGTYPES.html">DATINGTYPES</A></TD>
+    <TD><P CLASS="Base2">DATINGTYPEID</TD>
+    <TD><P CLASS="Base2">NO ACTION</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_DEPOSITS_DBID.html">FK_DEPOSITS_DBID</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/DEPOSITS.html">DEPOSITS</A></TD>
+    <TD><P CLASS="Base2">DATABASEID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/OTHERDATABASES.html">OTHERDATABASES</A></TD>
+    <TD><P CLASS="Base2">DATBASEID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_DEPOSITS_GEODYN.html">FK_DEPOSITS_GEODYN</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/DEPOSITS.html">DEPOSITS</A></TD>
+    <TD><P CLASS="Base2">GEODYNAMICID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/GEODYNAMICSETTINGS.html">GEODYNAMICSETTINGS</A></TD>
+    <TD><P CLASS="Base2">GEODYNAMICID</TD>
+    <TD><P CLASS="Base2">NO ACTION</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_DEPOSITS_PARENT.html">FK_DEPOSITS_PARENT</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/DEPOSITS.html">DEPOSITS</A></TD>
+    <TD><P CLASS="Base2">DEPOSITPARENTID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/DEPOSITS.html">DEPOSITS</A></TD>
+    <TD><P CLASS="Base2">SDBDEPOSITID</TD>
+    <TD><P CLASS="Base2">NO ACTION</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_DEPOSITS_STATUS.html">FK_DEPOSITS_STATUS</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/DEPOSITS.html">DEPOSITS</A></TD>
+    <TD><P CLASS="Base2">DEPOSITSTATUSID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/DEPOSITSTATI.html">DEPOSITSTATI</A></TD>
+    <TD><P CLASS="Base2">DEPOSITSTATUSID</TD>
+    <TD><P CLASS="Base2">NO ACTION</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_DEPOSITS_UNIT.html">FK_DEPOSITS_UNIT</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/DEPOSITS.html">DEPOSITS</A></TD>
+    <TD><P CLASS="Base2">HOSTUNITID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/STRATUNITS.html">STRATUNITS</A></TD>
+    <TD><P CLASS="Base2">UNITID</TD>
+    <TD><P CLASS="Base2">NO ACTION</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_DEPOSITVALID_DEP.html">FK_DEPOSITVALID_DEP</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/DEPOSITVALID.html">DEPOSITVALID</A></TD>
+    <TD><P CLASS="Base2">SDBDEPOSITID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/DEPOSITS.html">DEPOSITS</A></TD>
+    <TD><P CLASS="Base2">SDBDEPOSITID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_DEPOSITVALID_USER.html">FK_DEPOSITVALID_USER</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/DEPOSITVALID.html">DEPOSITVALID</A></TD>
+    <TD><P CLASS="Base2">DONEBY</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/USERS.html">USERS</A></TD>
+    <TD><P CLASS="Base2">USERID</TD>
+    <TD><P CLASS="Base2">NO ACTION</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_DEPOSITVALID_VALID.html">FK_DEPOSITVALID_VALID</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/DEPOSITVALID.html">DEPOSITVALID</A></TD>
+    <TD><P CLASS="Base2">VALIDSTATUSID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/VALIDATIONSTATUS.html">VALIDATIONSTATUS</A></TD>
+    <TD><P CLASS="Base2">VALIDSTATUSID</TD>
+    <TD><P CLASS="Base2">NO ACTION</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_DOMAINDEFORMATION_CONSTRLVL.html">FK_DOMAINDEFORMATION_CONSTRLVL</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/DOMAINDEFORMATION.html">DOMAINDEFORMATION</A></TD>
+    <TD><P CLASS="Base2">CONSTRAINTLEVELID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/CONSTRAINTS.html">CONSTRAINTS</A></TD>
+    <TD><P CLASS="Base2">AGECONSTRAINTLEVELID</TD>
+    <TD><P CLASS="Base2">NO ACTION</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_DOMAINDEFORMATION_DEFTYP.html">FK_DOMAINDEFORMATION_DEFTYP</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/DOMAINDEFORMATION.html">DOMAINDEFORMATION</A></TD>
+    <TD><P CLASS="Base2">DEFORMATIONTYPEID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/DEFORMATIONTYPES.html">DEFORMATIONTYPES</A></TD>
+    <TD><P CLASS="Base2">DEFORMATIONTYPEID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_DOMAINDEFORMATION_DOMID.html">FK_DOMAINDEFORMATION_DOMID</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/DOMAINDEFORMATION.html">DOMAINDEFORMATION</A></TD>
+    <TD><P CLASS="Base2">DOMAINID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/DOMAINS.html">DOMAINS</A></TD>
+    <TD><P CLASS="Base2">DOMAINID</TD>
+    <TD><P CLASS="Base2">NO ACTION</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_DOMAINDEFORMATION_DUCT.html">FK_DOMAINDEFORMATION_DUCT</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/DOMAINDEFORMATION.html">DOMAINDEFORMATION</A></TD>
+    <TD><P CLASS="Base2">DUCTILITYTYPEID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/DUCTILITIES.html">DUCTILITIES</A></TD>
+    <TD><P CLASS="Base2">DUCTILITYTYPEID</TD>
+    <TD><P CLASS="Base2">NO ACTION</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_DOMAINDEFORMATION_OROG.html">FK_DOMAINDEFORMATION_OROG</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/DOMAINDEFORMATION.html">DOMAINDEFORMATION</A></TD>
+    <TD><P CLASS="Base2">OROGENYID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/OROGENIES.html">OROGENIES</A></TD>
+    <TD><P CLASS="Base2">OROGENYID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_DOMAINDEFORMATION_VERG.html">FK_DOMAINDEFORMATION_VERG</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/DOMAINDEFORMATION.html">DOMAINDEFORMATION</A></TD>
+    <TD><P CLASS="Base2">VERGENCEANGLE</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/DIRECTIONS.html">DIRECTIONS</A></TD>
+    <TD><P CLASS="Base2">DIRECTIONANGLE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_DOMAINDEPOSITS_DEP.html">FK_DOMAINDEPOSITS_DEP</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/DOMAINDEPOSITS.html">DOMAINDEPOSITS</A></TD>
+    <TD><P CLASS="Base2">SBDEPOSITID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/DEPOSITS.html">DEPOSITS</A></TD>
+    <TD><P CLASS="Base2">SDBDEPOSITID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_DOMAINDEPOSITS_DOM.html">FK_DOMAINDEPOSITS_DOM</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/DOMAINDEPOSITS.html">DOMAINDEPOSITS</A></TD>
+    <TD><P CLASS="Base2">DOMAINID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/DOMAINS.html">DOMAINS</A></TD>
+    <TD><P CLASS="Base2">DOMAINID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_DOMAINFOR_CHNG.html">FK_DOMAINFOR_CHNG</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/DOMAINFOR.html">DOMAINFOR</A></TD>
+    <TD><P CLASS="Base2">NEEDSCHANGE</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/YESNO.html">YESNO</A></TD>
+    <TD><P CLASS="Base2">YESNOID</TD>
+    <TD><P CLASS="Base2">NO ACTION</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_DOMAINFOR_DOM.html">FK_DOMAINFOR_DOM</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/DOMAINFOR.html">DOMAINFOR</A></TD>
+    <TD><P CLASS="Base2">DOMAINID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/DOMAINS.html">DOMAINS</A></TD>
+    <TD><P CLASS="Base2">DOMAINID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_DOMAINFOR_FOR.html">FK_DOMAINFOR_FOR</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/DOMAINFOR.html">DOMAINFOR</A></TD>
+    <TD><P CLASS="Base2">WHOFORID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/FORLIST.html">FORLIST</A></TD>
+    <TD><P CLASS="Base2">WHOFORID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_DOMAINIGNEOUS_AGECONSTR.html">FK_DOMAINIGNEOUS_AGECONSTR</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/DOMAINIGNEOUS.html">DOMAINIGNEOUS</A></TD>
+    <TD><P CLASS="Base2">CONSTRAINTLEVELID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/CONSTRAINTS.html">CONSTRAINTS</A></TD>
+    <TD><P CLASS="Base2">AGECONSTRAINTLEVELID</TD>
+    <TD><P CLASS="Base2">NO ACTION</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_DOMAINIGNEOUS_CHEMGEODYN.html">FK_DOMAINIGNEOUS_CHEMGEODYN</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/DOMAINIGNEOUS.html">DOMAINIGNEOUS</A></TD>
+    <TD><P CLASS="Base2">CHEMGEODYNAMICID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/CHEMGEODYNAMICS.html">CHEMGEODYNAMICS</A></TD>
+    <TD><P CLASS="Base2">CHEMGEODYNAMICID</TD>
+    <TD><P CLASS="Base2">NO ACTION</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_DOMAINIGNEOUS_DOM.html">FK_DOMAINIGNEOUS_DOM</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/DOMAINIGNEOUS.html">DOMAINIGNEOUS</A></TD>
+    <TD><P CLASS="Base2">DOMAINID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/DOMAINS.html">DOMAINS</A></TD>
+    <TD><P CLASS="Base2">DOMAINID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_DOMAINIGNEOUS_OROG.html">FK_DOMAINIGNEOUS_OROG</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/DOMAINIGNEOUS.html">DOMAINIGNEOUS</A></TD>
+    <TD><P CLASS="Base2">OROGENYID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/OROGENIES.html">OROGENIES</A></TD>
+    <TD><P CLASS="Base2">OROGENYID</TD>
+    <TD><P CLASS="Base2">NO ACTION</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_DOMAINREFS_1.html">FK_DOMAINREFS_1</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/DOMAINREFS.html">DOMAINREFS</A></TD>
+    <TD><P CLASS="Base2">DOMAINID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/DOMAINS.html">DOMAINS</A></TD>
+    <TD><P CLASS="Base2">DOMAINID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_DOMAINREFS_2.html">FK_DOMAINREFS_2</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/DOMAINREFS.html">DOMAINREFS</A></TD>
+    <TD><P CLASS="Base2">SOURCENUM</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/SOURCELIST.html">SOURCELIST</A></TD>
+    <TD><P CLASS="Base2">SOURCENUM</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_DOMAINS_CHNG.html">FK_DOMAINS_CHNG</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/DOMAINS.html">DOMAINS</A></TD>
+    <TD><P CLASS="Base2">NEEDSCHANGE</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/YESNO.html">YESNO</A></TD>
+    <TD><P CLASS="Base2">YESNOID</TD>
+    <TD><P CLASS="Base2">NO ACTION</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_DOMAINS_CONTINENTID.html">FK_DOMAINS_CONTINENTID</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/DOMAINS.html">DOMAINS</A></TD>
+    <TD><P CLASS="Base2">CONTINENTID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/CONTINENTS.html">CONTINENTS</A></TD>
+    <TD><P CLASS="Base2">CONTINENTID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_DOMAINS_DOMAINTYPEID.html">FK_DOMAINS_DOMAINTYPEID</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/DOMAINS.html">DOMAINS</A></TD>
+    <TD><P CLASS="Base2">DOMAINTYPEID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/DOMAINTYPES.html">DOMAINTYPES</A></TD>
+    <TD><P CLASS="Base2">DOMAINTYPEID</TD>
+    <TD><P CLASS="Base2">NO ACTION</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_DOMAINVALID_1.html">FK_DOMAINVALID_1</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/DOMAINVALID.html">DOMAINVALID</A></TD>
+    <TD><P CLASS="Base2">DOMAINID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/DOMAINS.html">DOMAINS</A></TD>
+    <TD><P CLASS="Base2">DOMAINID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_DOMAINVALID_2.html">FK_DOMAINVALID_2</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/DOMAINVALID.html">DOMAINVALID</A></TD>
+    <TD><P CLASS="Base2">VALIDSTATUSID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/VALIDATIONSTATUS.html">VALIDATIONSTATUS</A></TD>
+    <TD><P CLASS="Base2">VALIDSTATUSID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_DOMAINVALID_3.html">FK_DOMAINVALID_3</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/DOMAINVALID.html">DOMAINVALID</A></TD>
+    <TD><P CLASS="Base2">DONEBY</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/USERS.html">USERS</A></TD>
+    <TD><P CLASS="Base2">USERID</TD>
+    <TD><P CLASS="Base2">NO ACTION</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_DOMANMETAMORPHISM_CNSTRLEVL.html">FK_DOMANMETAMORPHISM_CNSTRLEVL</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/DOMANMETAMORPHISM.html">DOMANMETAMORPHISM</A></TD>
+    <TD><P CLASS="Base2">CONSTRAINTLEVELID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/CONSTRAINTS.html">CONSTRAINTS</A></TD>
+    <TD><P CLASS="Base2">AGECONSTRAINTLEVELID</TD>
+    <TD><P CLASS="Base2">NO ACTION</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_DOMANMETAMORPHISM_DOM.html">FK_DOMANMETAMORPHISM_DOM</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/DOMANMETAMORPHISM.html">DOMANMETAMORPHISM</A></TD>
+    <TD><P CLASS="Base2">DOMAINID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/DOMAINS.html">DOMAINS</A></TD>
+    <TD><P CLASS="Base2">DOMAINID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_DOMANMETAMORPHISM_GRADE.html">FK_DOMANMETAMORPHISM_GRADE</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/DOMANMETAMORPHISM.html">DOMANMETAMORPHISM</A></TD>
+    <TD><P CLASS="Base2">GRADEID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/METAMORPHICGRADE.html">METAMORPHICGRADE</A></TD>
+    <TD><P CLASS="Base2">GRADEID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_DOMANMETAMORPHISM_OROG.html">FK_DOMANMETAMORPHISM_OROG</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/DOMANMETAMORPHISM.html">DOMANMETAMORPHISM</A></TD>
+    <TD><P CLASS="Base2">OROGENYID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/OROGENIES.html">OROGENIES</A></TD>
+    <TD><P CLASS="Base2">OROGENYID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_FORLIST_1.html">FK_FORLIST_1</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/FORLIST.html">FORLIST</A></TD>
+    <TD><P CLASS="Base2">OWNER</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/USERS.html">USERS</A></TD>
+    <TD><P CLASS="Base2">USERID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_GISLINKS_1.html">FK_GISLINKS_1</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/GISLINKS.html">GISLINKS</A></TD>
+    <TD><P CLASS="Base2">UNITID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/STRATUNITS.html">STRATUNITS</A></TD>
+    <TD><P CLASS="Base2">UNITID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_LIPCOMPOSITIONS_COMPOS.html">FK_LIPCOMPOSITIONS_COMPOS</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/LIPCOMPOSITIONS.html">LIPCOMPOSITIONS</A></TD>
+    <TD><P CLASS="Base2">COMPOSITIONID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/DOMINANTCOMPOSITION.html">DOMINANTCOMPOSITION</A></TD>
+    <TD><P CLASS="Base2">COMPOSITIONID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_LIPCOMPOSITIONS_LIP.html">FK_LIPCOMPOSITIONS_LIP</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/LIPCOMPOSITIONS.html">LIPCOMPOSITIONS</A></TD>
+    <TD><P CLASS="Base2">LIPID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/LIPS.html">LIPS</A></TD>
+    <TD><P CLASS="Base2">LIPID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_LIPCORRELATIVES_CORREL.html">FK_LIPCORRELATIVES_CORREL</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/LIPCORRELATIVES.html">LIPCORRELATIVES</A></TD>
+    <TD><P CLASS="Base2">CORRELATIVEID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/LIPS.html">LIPS</A></TD>
+    <TD><P CLASS="Base2">LIPID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_LIPCORRELATIVES_LIP.html">FK_LIPCORRELATIVES_LIP</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/LIPCORRELATIVES.html">LIPCORRELATIVES</A></TD>
+    <TD><P CLASS="Base2">LIPID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/LIPS.html">LIPS</A></TD>
+    <TD><P CLASS="Base2">LIPID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_LIPDESCRIPTION_LIP.html">FK_LIPDESCRIPTION_LIP</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/LIPDESCRIPTION.html">LIPDESCRIPTION</A></TD>
+    <TD><P CLASS="Base2">LIPID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/LIPS.html">LIPS</A></TD>
+    <TD><P CLASS="Base2">LIPID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_LIPDOMAIN_DOMAIN.html">FK_LIPDOMAIN_DOMAIN</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/LIPDOMAIN.html">LIPDOMAIN</A></TD>
+    <TD><P CLASS="Base2">DOMAINID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/DOMAINS.html">DOMAINS</A></TD>
+    <TD><P CLASS="Base2">DOMAINID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_LIPDOMAIN_LIP.html">FK_LIPDOMAIN_LIP</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/LIPDOMAIN.html">LIPDOMAIN</A></TD>
+    <TD><P CLASS="Base2">LIPID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/LIPS.html">LIPS</A></TD>
+    <TD><P CLASS="Base2">LIPID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_LIPDOMAIN_YN.html">FK_LIPDOMAIN_YN</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/LIPDOMAIN.html">LIPDOMAIN</A></TD>
+    <TD><P CLASS="Base2">INC4CHTYN</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/YESNO.html">YESNO</A></TD>
+    <TD><P CLASS="Base2">YESNOID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_LIPFOR_CHNG.html">FK_LIPFOR_CHNG</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/LIPFOR.html">LIPFOR</A></TD>
+    <TD><P CLASS="Base2">NEEDSCHANGE</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/YESNO.html">YESNO</A></TD>
+    <TD><P CLASS="Base2">YESNOID</TD>
+    <TD><P CLASS="Base2">NO ACTION</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_LIPFOR_LIP.html">FK_LIPFOR_LIP</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/LIPFOR.html">LIPFOR</A></TD>
+    <TD><P CLASS="Base2">LIPID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/LIPS.html">LIPS</A></TD>
+    <TD><P CLASS="Base2">LIPID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_LIPFOR_WHOFOR.html">FK_LIPFOR_WHOFOR</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/LIPFOR.html">LIPFOR</A></TD>
+    <TD><P CLASS="Base2">WHOFORID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/FORLIST.html">FORLIST</A></TD>
+    <TD><P CLASS="Base2">WHOFORID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_LIPFORM_LIP.html">FK_LIPFORM_LIP</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/LIPFORM.html">LIPFORM</A></TD>
+    <TD><P CLASS="Base2">LIPID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/LIPS.html">LIPS</A></TD>
+    <TD><P CLASS="Base2">LIPID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_LIPFORM_MORPH.html">FK_LIPFORM_MORPH</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/LIPFORM.html">LIPFORM</A></TD>
+    <TD><P CLASS="Base2">LIPFORMID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/LIPFORMS.html">LIPFORMS</A></TD>
+    <TD><P CLASS="Base2">LIPFORMID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_LIPMAPS2_LIP.html">FK_LIPMAPS2_LIP</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/LIPMAPS2.html">LIPMAPS2</A></TD>
+    <TD><P CLASS="Base2">LIPID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/LIPS.html">LIPS</A></TD>
+    <TD><P CLASS="Base2">LIPID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_LIPMAPS2_MAP.html">FK_LIPMAPS2_MAP</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/LIPMAPS2.html">LIPMAPS2</A></TD>
+    <TD><P CLASS="Base2">MAPID2</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/MAPS2.html">MAPS2</A></TD>
+    <TD><P CLASS="Base2">MAPID2</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_LIPMAPS2_YN.html">FK_LIPMAPS2_YN</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/LIPMAPS2.html">LIPMAPS2</A></TD>
+    <TD><P CLASS="Base2">INCL4MAP</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/YESNO.html">YESNO</A></TD>
+    <TD><P CLASS="Base2">YESNOID</TD>
+    <TD><P CLASS="Base2">NO ACTION</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_LIPREFS_1.html">FK_LIPREFS_1</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/LIPREFS.html">LIPREFS</A></TD>
+    <TD><P CLASS="Base2">LIPID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/LIPS.html">LIPS</A></TD>
+    <TD><P CLASS="Base2">LIPID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_LIPREFS_2.html">FK_LIPREFS_2</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/LIPREFS.html">LIPREFS</A></TD>
+    <TD><P CLASS="Base2">SOURCENUM</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/SOURCELIST.html">SOURCELIST</A></TD>
+    <TD><P CLASS="Base2">SOURCENUM</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_LIPS_CHNG.html">FK_LIPS_CHNG</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/LIPS.html">LIPS</A></TD>
+    <TD><P CLASS="Base2">NEEDSCHANGE</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/YESNO.html">YESNO</A></TD>
+    <TD><P CLASS="Base2">YESNOID</TD>
+    <TD><P CLASS="Base2">NO ACTION</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_LIPS_CONSTLEV.html">FK_LIPS_CONSTLEV</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/LIPS.html">LIPS</A></TD>
+    <TD><P CLASS="Base2">CONSTRAINTLEVELID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/CONSTRAINTS.html">CONSTRAINTS</A></TD>
+    <TD><P CLASS="Base2">AGECONSTRAINTLEVELID</TD>
+    <TD><P CLASS="Base2">NO ACTION</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_LIPS_CONTINENT.html">FK_LIPS_CONTINENT</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/LIPS.html">LIPS</A></TD>
+    <TD><P CLASS="Base2">CONTINENTID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/CONTINENTS.html">CONTINENTS</A></TD>
+    <TD><P CLASS="Base2">CONTINENTID</TD>
+    <TD><P CLASS="Base2">NO ACTION</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_LIPS_CONTOCEAN.html">FK_LIPS_CONTOCEAN</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/LIPS.html">LIPS</A></TD>
+    <TD><P CLASS="Base2">CONTOCEANID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/CONTOCEANS.html">CONTOCEANS</A></TD>
+    <TD><P CLASS="Base2">CONTOCEANID</TD>
+    <TD><P CLASS="Base2">NO ACTION</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_LIPS_RATING.html">FK_LIPS_RATING</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/LIPS.html">LIPS</A></TD>
+    <TD><P CLASS="Base2">LIPRATINGID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/LIPRATINGS.html">LIPRATINGS</A></TD>
+    <TD><P CLASS="Base2">LIPRATINGID</TD>
+    <TD><P CLASS="Base2">NO ACTION</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_LIPS_SIZE.html">FK_LIPS_SIZE</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/LIPS.html">LIPS</A></TD>
+    <TD><P CLASS="Base2">LIPSIZEID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/LIPSIZES.html">LIPSIZES</A></TD>
+    <TD><P CLASS="Base2">LIPSIZEID</TD>
+    <TD><P CLASS="Base2">NO ACTION</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_LIPVALID_1.html">FK_LIPVALID_1</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/LIPVALID.html">LIPVALID</A></TD>
+    <TD><P CLASS="Base2">LIPID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/LIPS.html">LIPS</A></TD>
+    <TD><P CLASS="Base2">LIPID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_LIPVALID_2.html">FK_LIPVALID_2</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/LIPVALID.html">LIPVALID</A></TD>
+    <TD><P CLASS="Base2">VALIDSTATUSID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/VALIDATIONSTATUS.html">VALIDATIONSTATUS</A></TD>
+    <TD><P CLASS="Base2">VALIDSTATUSID</TD>
+    <TD><P CLASS="Base2">NO ACTION</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_LIPVALID_3.html">FK_LIPVALID_3</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/LIPVALID.html">LIPVALID</A></TD>
+    <TD><P CLASS="Base2">DONEBY</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/USERS.html">USERS</A></TD>
+    <TD><P CLASS="Base2">USERID</TD>
+    <TD><P CLASS="Base2">NO ACTION</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_MAPS2_GISJOIN.html">FK_MAPS2_GISJOIN</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/MAPS2.html">MAPS2</A></TD>
+    <TD><P CLASS="Base2">GISJOINFIELDTYPEID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/GISJOINFIELDTYPES.html">GISJOINFIELDTYPES</A></TD>
+    <TD><P CLASS="Base2">GISJOINFIELDTYPEID</TD>
+    <TD><P CLASS="Base2">NO ACTION</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_OROGENIES_CHNG.html">FK_OROGENIES_CHNG</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/OROGENIES.html">OROGENIES</A></TD>
+    <TD><P CLASS="Base2">NEEDSCHANGE</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/YESNO.html">YESNO</A></TD>
+    <TD><P CLASS="Base2">YESNOID</TD>
+    <TD><P CLASS="Base2">NO ACTION</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_OROGENIES_CONT.html">FK_OROGENIES_CONT</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/OROGENIES.html">OROGENIES</A></TD>
+    <TD><P CLASS="Base2">CONTINENTID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/CONTINENTS.html">CONTINENTS</A></TD>
+    <TD><P CLASS="Base2">CONTINENTID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_OROGENIES_TYPE.html">FK_OROGENIES_TYPE</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/OROGENIES.html">OROGENIES</A></TD>
+    <TD><P CLASS="Base2">OROGENYTYPEID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/OROGENTYPES.html">OROGENTYPES</A></TD>
+    <TD><P CLASS="Base2">OROGENYTYPEID</TD>
+    <TD><P CLASS="Base2">NO ACTION</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_OROGENSPAN_OROG.html">FK_OROGENSPAN_OROG</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/OROGENSPAN.html">OROGENSPAN</A></TD>
+    <TD><P CLASS="Base2">OROGENYID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/OROGENIES.html">OROGENIES</A></TD>
+    <TD><P CLASS="Base2">OROGENYID</TD>
+    <TD><P CLASS="Base2">NO ACTION</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_OROGENSPAN_TYPE.html">FK_OROGENSPAN_TYPE</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/OROGENSPAN.html">OROGENSPAN</A></TD>
+    <TD><P CLASS="Base2">OROGENYTYPEID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/OROGENTYPES.html">OROGENTYPES</A></TD>
+    <TD><P CLASS="Base2">OROGENYTYPEID</TD>
+    <TD><P CLASS="Base2">NO ACTION</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_PERIODS_1.html">FK_PERIODS_1</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/PERIODS.html">PERIODS</A></TD>
+    <TD><P CLASS="Base2">PERIODRANKID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/PERIODRANKS.html">PERIODRANKS</A></TD>
+    <TD><P CLASS="Base2">PERIODRANKID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_PRECEDING_1.html">FK_PRECEDING_1</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/PRECEDING.html">PRECEDING</A></TD>
+    <TD><P CLASS="Base2">UNITID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/STRATUNITS.html">STRATUNITS</A></TD>
+    <TD><P CLASS="Base2">UNITID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_PRECEDING_2.html">FK_PRECEDING_2</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/PRECEDING.html">PRECEDING</A></TD>
+    <TD><P CLASS="Base2">PRECEDEDBY</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/STRATUNITS.html">STRATUNITS</A></TD>
+    <TD><P CLASS="Base2">UNITID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_PRECEDING_3.html">FK_PRECEDING_3</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/PRECEDING.html">PRECEDING</A></TD>
+    <TD><P CLASS="Base2">PREREL</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/STRATREL.html">STRATREL</A></TD>
+    <TD><P CLASS="Base2">RELATIONSHIPID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_SOURCELIST_CONT.html">FK_SOURCELIST_CONT</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/SOURCELIST.html">SOURCELIST</A></TD>
+    <TD><P CLASS="Base2">CONTINENTID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/CONTINENTS.html">CONTINENTS</A></TD>
+    <TD><P CLASS="Base2">CONTINENTID</TD>
+    <TD><P CLASS="Base2">NO ACTION</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_SOURCELIST_FOR.html">FK_SOURCELIST_FOR</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/SOURCELIST.html">SOURCELIST</A></TD>
+    <TD><P CLASS="Base2">WHOFORID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/FORLIST.html">FORLIST</A></TD>
+    <TD><P CLASS="Base2">WHOFORID</TD>
+    <TD><P CLASS="Base2">NO ACTION</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_STRATCURRENT_ANGLE.html">FK_STRATCURRENT_ANGLE</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/STRATCURRENT.html">STRATCURRENT</A></TD>
+    <TD><P CLASS="Base2">CURRENTDIRECTION</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/DIRECTIONS.html">DIRECTIONS</A></TD>
+    <TD><P CLASS="Base2">DIRECTIONANGLE</TD>
+    <TD><P CLASS="Base2">NO ACTION</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_STRATCURRENT_UNIT.html">FK_STRATCURRENT_UNIT</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/STRATCURRENT.html">STRATCURRENT</A></TD>
+    <TD><P CLASS="Base2">UNITID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/STRATUNITS.html">STRATUNITS</A></TD>
+    <TD><P CLASS="Base2">UNITID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_STRATCURRENTSPOT_ANGLE.html">FK_STRATCURRENTSPOT_ANGLE</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/STRATCURRENTSPOT.html">STRATCURRENTSPOT</A></TD>
+    <TD><P CLASS="Base2">CURRENTDIRECTION</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/DIRECTIONS.html">DIRECTIONS</A></TD>
+    <TD><P CLASS="Base2">DIRECTIONANGLE</TD>
+    <TD><P CLASS="Base2">NO ACTION</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_STRATCURRENTSPOT_UNITID.html">FK_STRATCURRENTSPOT_UNITID</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/STRATCURRENTSPOT.html">STRATCURRENTSPOT</A></TD>
+    <TD><P CLASS="Base2">UNITID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/STRATUNITS.html">STRATUNITS</A></TD>
+    <TD><P CLASS="Base2">UNITID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_STRATDOMAIN_1.html">FK_STRATDOMAIN_1</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/STRATDOMAIN.html">STRATDOMAIN</A></TD>
+    <TD><P CLASS="Base2">UNITID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/STRATUNITS.html">STRATUNITS</A></TD>
+    <TD><P CLASS="Base2">UNITID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_STRATDOMAIN_2.html">FK_STRATDOMAIN_2</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/STRATDOMAIN.html">STRATDOMAIN</A></TD>
+    <TD><P CLASS="Base2">DOMAINID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/DOMAINS.html">DOMAINS</A></TD>
+    <TD><P CLASS="Base2">DOMAINID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_STRATLIP_LIP.html">FK_STRATLIP_LIP</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/STRATLIP.html">STRATLIP</A></TD>
+    <TD><P CLASS="Base2">LIPID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/LIPS.html">LIPS</A></TD>
+    <TD><P CLASS="Base2">LIPID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_STRATLIP_UNIT.html">FK_STRATLIP_UNIT</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/STRATLIP.html">STRATLIP</A></TD>
+    <TD><P CLASS="Base2">UNITID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/STRATUNITS.html">STRATUNITS</A></TD>
+    <TD><P CLASS="Base2">UNITID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_STRATMAPS2_INC4MAP.html">FK_STRATMAPS2_INC4MAP</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/STRATMAPS2.html">STRATMAPS2</A></TD>
+    <TD><P CLASS="Base2">INCL4MAP</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/YESNO.html">YESNO</A></TD>
+    <TD><P CLASS="Base2">YESNOID</TD>
+    <TD><P CLASS="Base2">NO ACTION</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_STRATMAPS2_MAP.html">FK_STRATMAPS2_MAP</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/STRATMAPS2.html">STRATMAPS2</A></TD>
+    <TD><P CLASS="Base2">MAPID2</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/MAPS2.html">MAPS2</A></TD>
+    <TD><P CLASS="Base2">MAPID2</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_STRATMAPS2_UNIT.html">FK_STRATMAPS2_UNIT</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/STRATMAPS2.html">STRATMAPS2</A></TD>
+    <TD><P CLASS="Base2">UNITID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/STRATUNITS.html">STRATUNITS</A></TD>
+    <TD><P CLASS="Base2">UNITID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_STRATREL_RELPOS.html">FK_STRATREL_RELPOS</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/STRATREL.html">STRATREL</A></TD>
+    <TD><P CLASS="Base2">RELPOSID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/RELATIVEPOSITIONS.html">RELATIVEPOSITIONS</A></TD>
+    <TD><P CLASS="Base2">RELPOSID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_STRATSEDENVIRONMENT_1.html">FK_STRATSEDENVIRONMENT_1</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/STRATSEDENVIRONMENT.html">STRATSEDENVIRONMENT</A></TD>
+    <TD><P CLASS="Base2">UNITID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/STRATUNITS.html">STRATUNITS</A></TD>
+    <TD><P CLASS="Base2">UNITID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_STRATSEDENVIRONMENT_2.html">FK_STRATSEDENVIRONMENT_2</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/STRATSEDENVIRONMENT.html">STRATSEDENVIRONMENT</A></TD>
+    <TD><P CLASS="Base2">DEPOSITIONENVIRONMENTID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/DEPOSITIONNVIRONMENT.html">DEPOSITIONNVIRONMENT</A></TD>
+    <TD><P CLASS="Base2">DEPOSITIONENVIRONMENTID</TD>
+    <TD><P CLASS="Base2">NO ACTION</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_STRATUNITS_AGEUNITS.html">FK_STRATUNITS_AGEUNITS</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/STRATUNITS.html">STRATUNITS</A></TD>
+    <TD><P CLASS="Base2">AGEUNITS</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/AGEUNITS.html">AGEUNITS</A></TD>
+    <TD><P CLASS="Base2">AGEUNITS</TD>
+    <TD><P CLASS="Base2">NO ACTION</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_STRATUNITS_APPROVAL.html">FK_STRATUNITS_APPROVAL</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/STRATUNITS.html">STRATUNITS</A></TD>
+    <TD><P CLASS="Base2">APPROVALID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/APPROVALSTATUS.html">APPROVALSTATUS</A></TD>
+    <TD><P CLASS="Base2">APPROVALID</TD>
+    <TD><P CLASS="Base2">NO ACTION</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_STRATUNITS_CHNG.html">FK_STRATUNITS_CHNG</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/STRATUNITS.html">STRATUNITS</A></TD>
+    <TD><P CLASS="Base2">NEEDSCHANGE</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/YESNO.html">YESNO</A></TD>
+    <TD><P CLASS="Base2">YESNOID</TD>
+    <TD><P CLASS="Base2">NO ACTION</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_STRATUNITS_CONSTRAINTLEVEL.html">FK_STRATUNITS_CONSTRAINTLEVEL</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/STRATUNITS.html">STRATUNITS</A></TD>
+    <TD><P CLASS="Base2">CONSTRAINTLEVELID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/CONSTRAINTS.html">CONSTRAINTS</A></TD>
+    <TD><P CLASS="Base2">AGECONSTRAINTLEVELID</TD>
+    <TD><P CLASS="Base2">NO ACTION</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_STRATUNITS_COUNTRY.html">FK_STRATUNITS_COUNTRY</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/STRATUNITS.html">STRATUNITS</A></TD>
+    <TD><P CLASS="Base2">COUNTRYID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/COUNTRIES.html">COUNTRIES</A></TD>
+    <TD><P CLASS="Base2">COUNTRYID</TD>
+    <TD><P CLASS="Base2">NO ACTION</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_STRATUNITS_PARENT.html">FK_STRATUNITS_PARENT</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/STRATUNITS.html">STRATUNITS</A></TD>
+    <TD><P CLASS="Base2">PARENTID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/STRATUNITS.html">STRATUNITS</A></TD>
+    <TD><P CLASS="Base2">UNITID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_STRATUNITS_RANK.html">FK_STRATUNITS_RANK</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/STRATUNITS.html">STRATUNITS</A></TD>
+    <TD><P CLASS="Base2">RANKID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/RANKS.html">RANKS</A></TD>
+    <TD><P CLASS="Base2">RANKID</TD>
+    <TD><P CLASS="Base2">NO ACTION</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_STRATVALID_DONEBY.html">FK_STRATVALID_DONEBY</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/STRATVALID.html">STRATVALID</A></TD>
+    <TD><P CLASS="Base2">DONEBY</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/USERS.html">USERS</A></TD>
+    <TD><P CLASS="Base2">USERID</TD>
+    <TD><P CLASS="Base2">NO ACTION</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_STRATVALID_STATUS.html">FK_STRATVALID_STATUS</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/STRATVALID.html">STRATVALID</A></TD>
+    <TD><P CLASS="Base2">VALIDSTATUSID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/VALIDATIONSTATUS.html">VALIDATIONSTATUS</A></TD>
+    <TD><P CLASS="Base2">VALIDSTATUSID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_STRATVALID_UNIT.html">FK_STRATVALID_UNIT</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/STRATVALID.html">STRATVALID</A></TD>
+    <TD><P CLASS="Base2">UNITID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/STRATUNITS.html">STRATUNITS</A></TD>
+    <TD><P CLASS="Base2">UNITID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_SUCCEEDING_SUCBY.html">FK_SUCCEEDING_SUCBY</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/SUCCEEDING.html">SUCCEEDING</A></TD>
+    <TD><P CLASS="Base2">SUCCEEDEDBY</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/STRATUNITS.html">STRATUNITS</A></TD>
+    <TD><P CLASS="Base2">UNITID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_SUCCEEDING_SUCREL.html">FK_SUCCEEDING_SUCREL</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/SUCCEEDING.html">SUCCEEDING</A></TD>
+    <TD><P CLASS="Base2">SUCREL</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/STRATREL.html">STRATREL</A></TD>
+    <TD><P CLASS="Base2">RELATIONSHIPID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_SUCCEEDING_UNIT.html">FK_SUCCEEDING_UNIT</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/SUCCEEDING.html">SUCCEEDING</A></TD>
+    <TD><P CLASS="Base2">UNITID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/STRATUNITS.html">STRATUNITS</A></TD>
+    <TD><P CLASS="Base2">UNITID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_SYNONYMS_1.html">FK_SYNONYMS_1</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/SYNONYMS.html">SYNONYMS</A></TD>
+    <TD><P CLASS="Base2">UNITID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/STRATUNITS.html">STRATUNITS</A></TD>
+    <TD><P CLASS="Base2">UNITID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_SYNONYMS_2.html">FK_SYNONYMS_2</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/SYNONYMS.html">SYNONYMS</A></TD>
+    <TD><P CLASS="Base2">SYNONYMID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/STRATUNITS.html">STRATUNITS</A></TD>
+    <TD><P CLASS="Base2">UNITID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_UNITDEPOSITS_1.html">FK_UNITDEPOSITS_1</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/UNITDEPOSITS.html">UNITDEPOSITS</A></TD>
+    <TD><P CLASS="Base2">UNITID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/STRATUNITS.html">STRATUNITS</A></TD>
+    <TD><P CLASS="Base2">UNITID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_UNITDEPOSITS_2.html">FK_UNITDEPOSITS_2</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/UNITDEPOSITS.html">UNITDEPOSITS</A></TD>
+    <TD><P CLASS="Base2">DEPOSITID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/DEPOSITS.html">DEPOSITS</A></TD>
+    <TD><P CLASS="Base2">SDBDEPOSITID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_UNITFEATURES_1.html">FK_UNITFEATURES_1</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/UNITFEATURES.html">UNITFEATURES</A></TD>
+    <TD><P CLASS="Base2">UNITID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/STRATUNITS.html">STRATUNITS</A></TD>
+    <TD><P CLASS="Base2">UNITID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_UNITFEATURES_2.html">FK_UNITFEATURES_2</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/UNITFEATURES.html">UNITFEATURES</A></TD>
+    <TD><P CLASS="Base2">SPECIALFEATUREID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/SPECIALFEATURES.html">SPECIALFEATURES</A></TD>
+    <TD><P CLASS="Base2">SPECIALFEATUREID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_UNITFOR_CHNG.html">FK_UNITFOR_CHNG</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/UNITFOR.html">UNITFOR</A></TD>
+    <TD><P CLASS="Base2">NEEDSCHANGE</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/YESNO.html">YESNO</A></TD>
+    <TD><P CLASS="Base2">YESNOID</TD>
+    <TD><P CLASS="Base2">NO ACTION</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_UNITFOR_UNIT.html">FK_UNITFOR_UNIT</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/UNITFOR.html">UNITFOR</A></TD>
+    <TD><P CLASS="Base2">UNITID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/STRATUNITS.html">STRATUNITS</A></TD>
+    <TD><P CLASS="Base2">UNITID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_UNITFOR_WHOFOR.html">FK_UNITFOR_WHOFOR</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/UNITFOR.html">UNITFOR</A></TD>
+    <TD><P CLASS="Base2">WHOFORID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/FORLIST.html">FORLIST</A></TD>
+    <TD><P CLASS="Base2">WHOFORID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_UNITPERIODS_1.html">FK_UNITPERIODS_1</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/UNITPERIODS.html">UNITPERIODS</A></TD>
+    <TD><P CLASS="Base2">UNITID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/STRATUNITS.html">STRATUNITS</A></TD>
+    <TD><P CLASS="Base2">UNITID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_UNITPERIODS_2.html">FK_UNITPERIODS_2</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/UNITPERIODS.html">UNITPERIODS</A></TD>
+    <TD><P CLASS="Base2">PERIODID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/PERIODS.html">PERIODS</A></TD>
+    <TD><P CLASS="Base2">PERIODID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_UNITRECORDS_1.html">FK_UNITRECORDS_1</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/UNITRECORDS.html">UNITRECORDS</A></TD>
+    <TD><P CLASS="Base2">UNITID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/STRATUNITS.html">STRATUNITS</A></TD>
+    <TD><P CLASS="Base2">UNITID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_UNITREFS_1.html">FK_UNITREFS_1</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/UNITREFS.html">UNITREFS</A></TD>
+    <TD><P CLASS="Base2">UNITID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/STRATUNITS.html">STRATUNITS</A></TD>
+    <TD><P CLASS="Base2">UNITID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_UNITREFS_REF.html">FK_UNITREFS_REF</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/UNITREFS.html">UNITREFS</A></TD>
+    <TD><P CLASS="Base2">SOURCENUM</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/SOURCELIST.html">SOURCELIST</A></TD>
+    <TD><P CLASS="Base2">SOURCENUM</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_UNITROCKCLASS_1.html">FK_UNITROCKCLASS_1</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/UNITROCKCLASS.html">UNITROCKCLASS</A></TD>
+    <TD><P CLASS="Base2">UNITID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/STRATUNITS.html">STRATUNITS</A></TD>
+    <TD><P CLASS="Base2">UNITID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_UNITROCKCLASS_2.html">FK_UNITROCKCLASS_2</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/UNITROCKCLASS.html">UNITROCKCLASS</A></TD>
+    <TD><P CLASS="Base2">ROCKCLASSID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/ROCKCLASSES.html">ROCKCLASSES</A></TD>
+    <TD><P CLASS="Base2">ROCKCLASSID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_UNITSETTING_1.html">FK_UNITSETTING_1</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/UNITSETTING.html">UNITSETTING</A></TD>
+    <TD><P CLASS="Base2">UNITID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/STRATUNITS.html">STRATUNITS</A></TD>
+    <TD><P CLASS="Base2">UNITID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_UNITSETTING_2.html">FK_UNITSETTING_2</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/UNITSETTING.html">UNITSETTING</A></TD>
+    <TD><P CLASS="Base2">SETTINGID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/SETTINGS.html">SETTINGS</A></TD>
+    <TD><P CLASS="Base2">SETTINGID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_USERDVPDF_USER.html">FK_USERDVPDF_USER</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/USERDVPDF.html">USERDVPDF</A></TD>
+    <TD><P CLASS="Base2">USERID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/USERS.html">USERS</A></TD>
+    <TD><P CLASS="Base2">USERID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_USERLIPNUMDATES_LIP.html">FK_USERLIPNUMDATES_LIP</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/USERLIPNUMDATES.html">USERLIPNUMDATES</A></TD>
+    <TD><P CLASS="Base2">LIPID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/LIPS.html">LIPS</A></TD>
+    <TD><P CLASS="Base2">LIPID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_USERLIPNUMDATES_USER.html">FK_USERLIPNUMDATES_USER</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/USERLIPNUMDATES.html">USERLIPNUMDATES</A></TD>
+    <TD><P CLASS="Base2">USERID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/USERS.html">USERS</A></TD>
+    <TD><P CLASS="Base2">USERID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_USEROPTS_1.html">FK_USEROPTS_1</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/USEROPTS.html">USEROPTS</A></TD>
+    <TD><P CLASS="Base2">USERID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/USERS.html">USERS</A></TD>
+    <TD><P CLASS="Base2">USERID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_USEROPTS_2.html">FK_USEROPTS_2</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/USEROPTS.html">USEROPTS</A></TD>
+    <TD><P CLASS="Base2">LINKTODATEVIEW</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/YESNO.html">YESNO</A></TD>
+    <TD><P CLASS="Base2">YESNOID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_USEROPTS_3.html">FK_USEROPTS_3</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/USEROPTS.html">USEROPTS</A></TD>
+    <TD><P CLASS="Base2">INCLUDESEAMS</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/YESNO.html">YESNO</A></TD>
+    <TD><P CLASS="Base2">YESNOID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_USERPROJECTS_USR.html">FK_USERPROJECTS_USR</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/USERPROJECTS.html">USERPROJECTS</A></TD>
+    <TD><P CLASS="Base2">USERID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/USERS.html">USERS</A></TD>
+    <TD><P CLASS="Base2">USERID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_USERSWHOFOR_FOR.html">FK_USERSWHOFOR_FOR</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/USERSWHOFOR.html">USERSWHOFOR</A></TD>
+    <TD><P CLASS="Base2">WHOFORID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/FORLIST.html">FORLIST</A></TD>
+    <TD><P CLASS="Base2">WHOFORID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_USERSWHOFOR_USER.html">FK_USERSWHOFOR_USER</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/USERSWHOFOR.html">USERSWHOFOR</A></TD>
+    <TD><P CLASS="Base2">USERID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/USERS.html">USERS</A></TD>
+    <TD><P CLASS="Base2">USERID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_USERUNITS_COUNTRY.html">FK_USERUNITS_COUNTRY</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/USERUNITS.html">USERUNITS</A></TD>
+    <TD><P CLASS="Base2">COUNTRYID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/COUNTRIES.html">COUNTRIES</A></TD>
+    <TD><P CLASS="Base2">COUNTRYID</TD>
+    <TD><P CLASS="Base2">NO ACTION</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_USERUNITS_UNITID.html">FK_USERUNITS_UNITID</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/USERUNITS.html">USERUNITS</A></TD>
+    <TD><P CLASS="Base2">UNITID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/STRATUNITS.html">STRATUNITS</A></TD>
+    <TD><P CLASS="Base2">UNITID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="FK_USERUNITS_USER.html">FK_USERUNITS_USER</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/USERUNITS.html">USERUNITS</A></TD>
+    <TD><P CLASS="Base2">USERID</TD>
+    <TD><P CLASS="Base2"><A HREF="../Tables/USERS.html">USERS</A></TD>
+    <TD><P CLASS="Base2">USERID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+</TABLE>
+<DIV CLASS="footer"><BR><HR></DIV>
+  <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH=100%>
+    <TR VALIGN="middle">
+      <TD>&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+      <TD ALIGN="left" WIDTH="54px" NOWRAP>
+        <A HREF="../Index.html"><IMG ALT="Previous topic" SRC="../Images/GoPrev.gif" BORDER="0"></A>
+        <A HREF="../Index.html"><IMG ALT="Chapter index" SRC="../Images/GoIndex.gif" BORDER="0"></A>
+        <A HREF="FK_APPLICLINK_APPLIC.html"><IMG ALT="Next topic" SRC="../Images/GoNext.gif" BORDER="0"></A>
+      </TD>
+    </TR>
+  </TABLE>
+<P CLASS="Base">&nbsp;</P>
+</BODY></HTML>

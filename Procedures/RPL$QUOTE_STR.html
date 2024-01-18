@@ -1,0 +1,105 @@
+<HTML>
+<HEAD>
+<TITLE>RPL$QUOTE_STR</TITLE>
+<META content="text/html; charset=iso-8859-1" http-equiv=Content-Type>
+<LINK HREF="../IBEHTMLDoc.css" type=text/css rel=STYLESHEET>
+ 
+<xml>
+<IBEHelp:Attr Name="ItemOrder" Value="3800"/>
+</xml>
+ 
+</HEAD>
+<BODY>
+<DIV ID="nsbanner">
+  <DIV ID="bannerrow1">
+    <TABLE CLASS="bannerparthead" CELLSPACING=0>
+      <TR ID="hdr" VALIGN="middle">
+        <TD CLASS="runninghead">"bromo2.usask.ca:s:/data/firebird/stratdb2015v25.fdb". Procedures</TD>
+        <TD ALIGN="left" WIDTH="54px" NOWRAP>
+          <A HREF="RPL$GENERATE_LOG.html"><IMG ALT="Previous topic" SRC="../Images/GoPrev.gif" BORDER="0"></A>
+          <A HREF="../Index.html"><IMG ALT="Chapter index" SRC="../Images/GoIndex.gif" BORDER="0"></A>
+          <A HREF="../Triggers/Index.html"><IMG ALT="Next topic" SRC="../Images/GoNext.gif" BORDER="0"></A>
+        </TD>
+      </TR>
+    </TABLE>
+  </DIV>
+  <DIV ID="TitleRow">
+    <P CLASS="dtH1">RPL$QUOTE_STR</P>
+  </DIV>
+ </DIV>
+<P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Input Parameters</P>
+<TABLE CLASS="dtArg" CELLSPACING="0">
+  <TH WIDTH="1%"><P CLASS="Base2"><B>Parameter</B></P>
+  <TH WIDTH="20%"><P CLASS="Base2"><B>Type</B></P>
+  <TH WIDTH="50%"><P CLASS="Base2"><B>Description</B></P>
+  <TR>
+    <TD><P CLASS="Base2">CSTR</TD>
+    <TD><P CLASS="Base2">VARCHAR(1000)</TD>
+    <TD><P CLASS="Base2">&nbsp;</TD>
+  </TR>
+</TABLE>
+<P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Output Parameters</P>
+<TABLE CLASS="dtArg" CELLSPACING="0">
+  <TH WIDTH="1%"><P CLASS="Base2"><B>Parameter</B></P>
+  <TH WIDTH="20%"><P CLASS="Base2"><B>Type</B></P>
+  <TH WIDTH="50%"><P CLASS="Base2"><B>Description</B></P>
+  <TR>
+    <TD><P CLASS="Base2">QUOTED_STR</TD>
+    <TD><P CLASS="Base2">VARCHAR(1000)</TD>
+    <TD><P CLASS="Base2">&nbsp;</TD>
+  </TR>
+</TABLE>
+<P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Description</P>
+<P CLASS="Base"><I>(There is no description for procedure RPL$QUOTE_STR)</I></P>
+<P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Definition</P>
+<P CLASS="Base"><span class="DDLCode">
+<code><pre>
+<b>CREATE</b><b> </b><b>PROCEDURE</b><b> </b><font color="# 080 0"><u>RPL$QUOTE_STR</u></font><b>(</b>
+<b>    </b>CSTR<b> </b><b>VARCHAR</b><b>(</b>1000<b>)</b><b>)</b>
+<b>RETURNS</b><b> </b><b>(</b>
+<b>    </b>QUOTED_STR<b> </b><b>VARCHAR</b><b>(</b>1000<b>)</b><b>)</b>
+<b>AS</b>
+<b>declare</b><b> </b><b>variable</b><b> </b>nStringLength<b> </b><b>integer</b><b>;</b>
+<b>declare</b><b> </b><b>variable</b><b> </b>i<b> </b><b>integer</b><b>;</b>
+<b>declare</b><b> </b><b>variable</b><b> </b>c<b> </b><b>varchar</b><b>(</b>2<b>)</b><b>;</b>
+<b>declare</b><b> </b><b>variable</b><b> </b>c2<b> </b><b>varchar</b><b>(</b>3<b>)</b><b>;</b>
+<b>begin</b>
+<b>  </b><b>if</b><b> </b><b>(</b>cStr<b> </b><b>is</b><b> </b><b>null</b><b>)</b><b> </b><b>then</b>
+<b>    </b>quoted_str<b> </b><b>=</b><b> </b><b>null</b><b>;</b>
+<b>  </b><b>else</b><b> </b><b>begin</b>
+<b>    </b>quoted_str<b> </b><b>=</b><b> </b>''<b>;</b>
+<b>    </b>i<b> </b><b>=</b><b> </b>1<b>;</b>
+<b>    </b>nStringLength<b> </b><b>=</b><b> </b><b>char_length</b><b>(</b>cStr<b>)</b><b>;</b>
+<b>    </b><b>while</b><b> </b><b>(</b>i<b> </b><b>&lt;</b><b>=</b><b> </b>nStringLength<b>)</b><b> </b><b>do</b>
+<b>    </b><b>begin</b>
+<b>      </b>c<b> </b><b>=</b><b> </b><b>substring</b><b>(</b>cStr<b> </b><b>from</b><b> </b>i<b> </b><b>for</b><b> </b>1<b>)</b><b>;</b>
+<b>        </b><b>if</b><b> </b><b>(</b>c<b> </b><b>=</b><b> </b>''''<b>)</b><b> </b><b>then</b>
+<b>          </b>c<b> </b><b>=</b><b> </b>''''''<b>;</b>
+<b>      </b>quoted_str<b> </b><b>=</b><b> </b>quoted_str<b> </b><b>|</b><b>|</b><b> </b>c<b>;</b>
+<b>      </b>i<b> </b><b>=</b><b> </b>i<b> </b><b>+</b><b> </b>1<b>;</b>
+<b>    </b><b>end</b>
+<b>    </b>quoted_str<b> </b><b>=</b><b> </b>''''<b> </b><b>|</b><b>|</b><b> </b>quoted_str<b> </b><b>|</b><b>|</b><b> </b>''''<b>;</b>
+<b>  </b><b>end</b>
+<b>  </b><b>suspend</b><b>;</b>
+<b>end</b>
+
+</pre></code>
+</span></P>
+<P CLASS="Base">&nbsp;</P>
+<DIV CLASS="footer"><BR><HR></DIV>
+  <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH=100%>
+    <TR VALIGN="middle">
+      <TD>&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+      <TD ALIGN="left" WIDTH="54px" NOWRAP>
+        <A HREF="RPL$GENERATE_LOG.html"><IMG ALT="Previous topic" SRC="../Images/GoPrev.gif" BORDER="0"></A>
+        <A HREF="../Index.html"><IMG ALT="Chapter index" SRC="../Images/GoIndex.gif" BORDER="0"></A>
+        <A HREF="../Triggers/Index.html"><IMG ALT="Next topic" SRC="../Images/GoNext.gif" BORDER="0"></A>
+      </TD>
+    </TR>
+  </TABLE>
+<P CLASS="Base">&nbsp;</P>
+</BODY></HTML>

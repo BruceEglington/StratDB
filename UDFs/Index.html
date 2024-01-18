@@ -1,0 +1,83 @@
+<HTML>
+<HEAD>
+<TITLE>User Defined Functions</TITLE>
+<META content="text/html; charset=iso-8859-1" http-equiv=Content-Type>
+<LINK HREF="../IBEHTMLDoc.css" type=text/css rel=STYLESHEET>
+ 
+<xml>
+<IBEHelp:Attr Name="ItemOrder" Value="8800"/>
+</xml>
+ 
+</HEAD>
+<BODY>
+<DIV ID="nsbanner">
+  <DIV ID="bannerrow1">
+    <TABLE CLASS="bannerparthead" CELLSPACING=0>
+      <TR ID="hdr" VALIGN="middle">
+        <TD CLASS="runninghead">"bromo2.usask.ca:s:/data/firebird/stratdb2015v25.fdb"</TD>
+        <TD ALIGN="left" WIDTH="54px" NOWRAP>
+          <A HREF="../Index.html"><IMG ALT="Previous topic" SRC="../Images/GoPrev.gif" BORDER="0"></A>
+          <A HREF="../Index.html"><IMG ALT="Chapter index" SRC="../Images/GoIndex.gif" BORDER="0"></A>
+          <A HREF="RDB$GET_CONTEXT.html"><IMG ALT="Next topic" SRC="../Images/GoNext.gif" BORDER="0"></A>
+        </TD>
+      </TR>
+    </TABLE>
+  </DIV>
+  <DIV ID="TitleRow">
+    <P CLASS="dtH1">User Defined Functions</P>
+  </DIV>
+ </DIV>
+<P CLASS="Base">&nbsp;</P>
+<TABLE CLASS="dtArg" CELLSPACING="0">
+  <TH WIDTH="1%"><P CLASS="Base2"><B>UDF</B></P>
+  <TH WIDTH="1%"><P CLASS="Base2"><B>Entry Point</B></P>
+  <TH WIDTH="1%"><P CLASS="Base2"><B>Library Name</B></P>
+  <TH WIDTH="1%"><P CLASS="Base2"><B>Input Parameters</B></P>
+  <TH WIDTH="1%"><P CLASS="Base2"><B>Returns</B></P>
+  <TH><P CLASS="Base2"><B>Description</B></P>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="RDB$GET_CONTEXT.html">RDB$GET_CONTEXT</A></TD>
+    <TD><P CLASS="Base2">get_context</TD>
+    <TD><P CLASS="Base2">system_module</TD>
+    <TD><P CLASS="Base2">VARCHAR(80)&nbsp;CHARACTER&nbsp;SET&nbsp;NONE,<br>VARCHAR(80)&nbsp;CHARACTER&nbsp;SET&nbsp;NONE</TD>
+    <TD><P CLASS="Base2">VARCHAR(255) CHARACTER SET NONE FREE_IT</TD>
+    <TD><P CLASS="Base2">&nbsp</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="RDB$SET_CONTEXT.html">RDB$SET_CONTEXT</A></TD>
+    <TD><P CLASS="Base2">set_context</TD>
+    <TD><P CLASS="Base2">system_module</TD>
+    <TD><P CLASS="Base2">VARCHAR(80)&nbsp;CHARACTER&nbsp;SET&nbsp;NONE,<br>VARCHAR(80)&nbsp;CHARACTER&nbsp;SET&nbsp;NONE,<br>VARCHAR(255)&nbsp;CHARACTER&nbsp;SET&nbsp;NONE</TD>
+    <TD><P CLASS="Base2">INTEGER CHARACTER SET NONE BY VALUE</TD>
+    <TD><P CLASS="Base2">&nbsp</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="STRLEN.html">STRLEN</A></TD>
+    <TD><P CLASS="Base2">IB_UDF_strlen</TD>
+    <TD><P CLASS="Base2">ib_udf</TD>
+    <TD><P CLASS="Base2">CSTRING(32767)</TD>
+    <TD><P CLASS="Base2">INTEGER BY VALUE</TD>
+    <TD><P CLASS="Base2">&nbsp</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="SUBSTR.html">SUBSTR</A></TD>
+    <TD><P CLASS="Base2">IB_UDF_substr</TD>
+    <TD><P CLASS="Base2">ib_udf</TD>
+    <TD><P CLASS="Base2">CSTRING(1000),<br>SMALLINT,<br>SMALLINT</TD>
+    <TD><P CLASS="Base2">CSTRING(1000) FREE_IT</TD>
+    <TD><P CLASS="Base2">&nbsp</TD>
+  </TR>
+</TABLE>
+<DIV CLASS="footer"><BR><HR></DIV>
+  <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH=100%>
+    <TR VALIGN="middle">
+      <TD>&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+      <TD ALIGN="left" WIDTH="54px" NOWRAP>
+        <A HREF="../Index.html"><IMG ALT="Previous topic" SRC="../Images/GoPrev.gif" BORDER="0"></A>
+        <A HREF="../Index.html"><IMG ALT="Chapter index" SRC="../Images/GoIndex.gif" BORDER="0"></A>
+        <A HREF="RDB$GET_CONTEXT.html"><IMG ALT="Next topic" SRC="../Images/GoNext.gif" BORDER="0"></A>
+      </TD>
+    </TR>
+  </TABLE>
+<P CLASS="Base">&nbsp;</P>
+</BODY></HTML>

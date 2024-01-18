@@ -1,0 +1,183 @@
+<HTML>
+<HEAD>
+<TITLE>COMMODITYVARIABLEORDER</TITLE>
+<META content="text/html; charset=iso-8859-1" http-equiv=Content-Type>
+<LINK HREF="../IBEHTMLDoc.css" type=text/css rel=STYLESHEET>
+ 
+<xml>
+<IBEHelp:Attr Name="ItemOrder" Value="15800"/>
+</xml>
+ 
+</HEAD>
+<BODY>
+<DIV ID="nsbanner">
+  <DIV ID="bannerrow1">
+    <TABLE CLASS="bannerparthead" CELLSPACING=0>
+      <TR ID="hdr" VALIGN="middle">
+        <TD CLASS="runninghead">"bromo2.usask.ca:s:/data/firebird/stratdb2015v25.fdb". Tables</TD>
+        <TD ALIGN="left" WIDTH="54px" NOWRAP>
+          <A HREF="COMMODITYASSOCIATION.html"><IMG ALT="Previous topic" SRC="../Images/GoPrev.gif" BORDER="0"></A>
+          <A HREF="../Index.html"><IMG ALT="Chapter index" SRC="../Images/GoIndex.gif" BORDER="0"></A>
+          <A HREF="CONSTRAINTS.html"><IMG ALT="Next topic" SRC="../Images/GoNext.gif" BORDER="0"></A>
+        </TD>
+      </TR>
+    </TABLE>
+  </DIV>
+  <DIV ID="TitleRow">
+    <P CLASS="dtH1">COMMODITYVARIABLEORDER</P>
+  </DIV>
+ </DIV>
+<P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Description</P>
+<P CLASS="Base"><I>(There is no description for table COMMODITYVARIABLEORDER)</I></P>
+<P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Fields</P>
+<TABLE CLASS="dtArg" CELLSPACING="0">
+  <TH WIDTH="1%" ALIGN="middle"><P CLASS="Base2"><B>PK</B></P>
+  <TH WIDTH="1%" ALIGN="middle"><P CLASS="Base2"><B>FK</B></P>
+  <TH WIDTH="1%"><P CLASS="Base2"><B>Field</B></P>
+  <TH WIDTH="1%"><P CLASS="Base2"><B>Domain</B></P>
+  <TH WIDTH="20%"><P CLASS="Base2"><B>Type</B></P>
+  <TH WIDTH="1%" ALIGN="middle"><P CLASS="Base2"><B>NN</B></P>
+  <TH WIDTH="1%"><P CLASS="Base2"><B>Default</B></P>
+  <TH WIDTH="40%"><P CLASS="Base2"><B>Description</B></P>
+  <TR>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/PK1.gif" BORDER="0"></P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/FK.gif" BORDER="0"></P></TD>
+    <TD><A NAME="COMMODITYVARIABLEORDER.COMMODITYASSOCIATIONID"><P CLASS="Base2">COMMODITYASSOCIATIONID</P></A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Domains/COMMODITYASSOCID.html">COMMODITYASSOCID</A></P></TD>
+    <TD><P CLASS="Base2">INTEGER</P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/Yes.gif" BORDER="0"></P></TD>
+    <TD><P CLASS="Base2">0</P></TD>
+    <TD><P CLASS="Base2">&nbsp;</P></TD>
+  </TR>
+  <TR>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/PK2.gif" BORDER="0"></P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/FK.gif" BORDER="0"></P></TD>
+    <TD><A NAME="COMMODITYVARIABLEORDER.COMMODITYID"><P CLASS="Base2">COMMODITYID</P></A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Domains/COMMODITYID.html">COMMODITYID</A></P></TD>
+    <TD><P CLASS="Base2">VARCHAR(3)</P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/Yes.gif" BORDER="0"></P></TD>
+    <TD><P CLASS="Base2">'nd'</P></TD>
+    <TD><P CLASS="Base2">&nbsp;</P></TD>
+  </TR>
+  <TR>
+    <TD ALIGN="middle"><P CLASS="Base2">&nbsp;</P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2">&nbsp;</P></TD>
+    <TD><A NAME="COMMODITYVARIABLEORDER.COMMODITYORDER"><P CLASS="Base2">COMMODITYORDER</P></A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Domains/ORDERINTEGER.html">ORDERINTEGER</A></P></TD>
+    <TD><P CLASS="Base2">INTEGER</P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/Yes.gif" BORDER="0"></P></TD>
+    <TD><P CLASS="Base2">999</P></TD>
+    <TD><P CLASS="Base2">&nbsp;</P></TD>
+  </TR>
+</TABLE>
+<P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Triggers</P>
+<P CLASS="Base"><I>(There are no triggers for table COMMODITYVARIABLEORDER)</I></P>
+<P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Indices</P>
+<TABLE CLASS="dtArg" CELLSPACING="0">
+  <TH><P CLASS="Base2"><B>Index</B></P>
+  <TH><P CLASS="Base2"><B>Fields</B></P>
+  <TH ALIGN="middle"><P CLASS="Base2"><B>Active</B></P>
+  <TH ALIGN="middle"><P CLASS="Base2"><B>Unique</B></P>
+  <TH ALIGN="middle"><P CLASS="Base2"><B>Order</B></P>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Indices/COMMODITYVARIABLEORDER_IDXASSOC.html">COMMODITYVARIABLEORDER_IDXASSOC</A></TD>
+    <TD><P CLASS="Base2">COMMODITYASSOCIATIONID, COMMODITYORDER</TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/Yes.gif" BORDER="0"></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/No.gif" BORDER="0"></TD>
+    <TD ALIGN="middle"><P CLASS="Base2">ASC</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Indices/FK_COMMODITYVARIABLEORDER_COMAS.html">FK_COMMODITYVARIABLEORDER_COMAS</A></TD>
+    <TD><P CLASS="Base2">COMMODITYASSOCIATIONID</TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/Yes.gif" BORDER="0"></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/No.gif" BORDER="0"></TD>
+    <TD ALIGN="middle"><P CLASS="Base2">ASC</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Indices/FK_COMMODITYVARIABLEORDER_COMM.html">FK_COMMODITYVARIABLEORDER_COMM</A></TD>
+    <TD><P CLASS="Base2">COMMODITYID</TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/Yes.gif" BORDER="0"></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/No.gif" BORDER="0"></TD>
+    <TD ALIGN="middle"><P CLASS="Base2">ASC</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Indices/PK_COMMODITYVARIABLEORDER.html">PK_COMMODITYVARIABLEORDER</A></TD>
+    <TD><P CLASS="Base2">COMMODITYASSOCIATIONID, COMMODITYID</TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/Yes.gif" BORDER="0"></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/Yes.gif" BORDER="0"></TD>
+    <TD ALIGN="middle"><P CLASS="Base2">ASC</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Indices/UNQ1_COMMODITYVARIABLEORDER.html">UNQ1_COMMODITYVARIABLEORDER</A></TD>
+    <TD><P CLASS="Base2">COMMODITYASSOCIATIONID, COMMODITYORDER</TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/Yes.gif" BORDER="0"></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/Yes.gif" BORDER="0"></TD>
+    <TD ALIGN="middle"><P CLASS="Base2">ASC</TD>
+  </TR>
+</TABLE>
+<P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">References</P>
+<TABLE CLASS="dtArg" CELLSPACING="0">
+  <TH><P CLASS="Base2"><B>Table</B></P>
+  <TH><P CLASS="Base2"><B>Foreign Key</B></P>
+  <TH><P CLASS="Base2"><B>Fields</B></P>
+  <TH><P CLASS="Base2"><B>FK Field</B></P>
+  <TH><P CLASS="Base2"><B>Delete Rule</B></P>
+  <TH><P CLASS="Base2"><B>Update Rule</B></P>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Tables/COMMODITYASSOCIATION.html">COMMODITYASSOCIATION</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Foreign Keys/FK_COMMODITYVARIABLEORDER_COMAS.html">FK_COMMODITYVARIABLEORDER_COMAS</A></TD>
+    <TD><P CLASS="Base2">COMMODITYASSOCIATIONID</TD>
+    <TD><P CLASS="Base2">COMMODITYASSOCID</TD>
+    <TD><P CLASS="Base2">NO ACTION</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Tables/COMMODITIES.html">COMMODITIES</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Foreign Keys/FK_COMMODITYVARIABLEORDER_COMM.html">FK_COMMODITYVARIABLEORDER_COMM</A></TD>
+    <TD><P CLASS="Base2">COMMODITYID</TD>
+    <TD><P CLASS="Base2">COMMODITYID</TD>
+    <TD><P CLASS="Base2">NO ACTION</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+</TABLE>
+<P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Referenced By</P>
+<P CLASS="Base"><I>(There are no tables referenced by table COMMODITYVARIABLEORDER)</I></P>
+<P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Definition</P>
+<P CLASS="Base"><span class="DDLCode">
+<code><pre>
+<b>CREATE</b><b> </b><b>TABLE</b><b> </b><font color="# 080 0"><u>COMMODITYVARIABLEORDER</u></font><b> </b><b>(</b>
+<b>    </b>COMMODITYASSOCIATIONID<b>  </b><font color="# 080 0"><u>COMMODITYASSOCID</u></font><b> </b><b>DEFAULT</b><b> </b>0<b> </b><b>NOT</b><b> </b><b>NULL</b><b>,</b>
+<b>    </b><font color="# 080 0"><u>COMMODITYID</u></font><b>             </b><font color="# 080 0"><u>COMMODITYID</u></font><b> </b><b>DEFAULT</b><b> </b>'nd'<b> </b><b>NOT</b><b> </b><b>NULL</b><b>,</b>
+<b>    </b><font color="# 080 0"><u>COMMODITYORDER</u></font><b>          </b><font color="# 080 0"><u>ORDERINTEGER</u></font><b> </b><b>DEFAULT</b><b> </b>999<b> </b><b>NOT</b><b> </b><b>NULL</b>
+<b>)</b><b>;</b>
+
+
+<b>ALTER</b><b> </b><b>TABLE</b><b> </b><font color="# 080 0"><u>COMMODITYVARIABLEORDER</u></font><b> </b><b>ADD</b><b> </b><b>CONSTRAINT</b><b> </b>UNQ1_COMMODITYVARIABLEORDER<b> </b><b>UNIQUE</b><b> </b><b>(</b>COMMODITYASSOCIATIONID<b>,</b><b> </b><font color="# 080 0"><u>COMMODITYORDER</u></font><b>)</b><b>;</b>
+<b>ALTER</b><b> </b><b>TABLE</b><b> </b><font color="# 080 0"><u>COMMODITYVARIABLEORDER</u></font><b> </b><b>ADD</b><b> </b><b>CONSTRAINT</b><b> </b>PK_COMMODITYVARIABLEORDER<b> </b><b>PRIMARY</b><b> </b><b>KEY</b><b> </b><b>(</b>COMMODITYASSOCIATIONID<b>,</b><b> </b><font color="# 080 0"><u>COMMODITYID</u></font><b>)</b><b>;</b>
+<b>ALTER</b><b> </b><b>TABLE</b><b> </b><font color="# 080 0"><u>COMMODITYVARIABLEORDER</u></font><b> </b><b>ADD</b><b> </b><b>CONSTRAINT</b><b> </b>FK_COMMODITYVARIABLEORDER_COMAS<b> </b><b>FOREIGN</b><b> </b><b>KEY</b><b> </b><b>(</b>COMMODITYASSOCIATIONID<b>)</b><b> </b><b>REFERENCES</b><b> </b><font color="# 080 0"><u>COMMODITYASSOCIATION</u></font><b> </b><b>(</b><font color="# 080 0"><u>COMMODITYASSOCID</u></font><b>)</b><b> </b><b>ON</b><b> </b><b>UPDATE</b><b> </b><b>CASCADE</b><b>;</b>
+<b>ALTER</b><b> </b><b>TABLE</b><b> </b><font color="# 080 0"><u>COMMODITYVARIABLEORDER</u></font><b> </b><b>ADD</b><b> </b><b>CONSTRAINT</b><b> </b>FK_COMMODITYVARIABLEORDER_COMM<b> </b><b>FOREIGN</b><b> </b><b>KEY</b><b> </b><b>(</b><font color="# 080 0"><u>COMMODITYID</u></font><b>)</b><b> </b><b>REFERENCES</b><b> </b><font color="# 080 0"><u>COMMODITIES</u></font><b> </b><b>(</b><font color="# 080 0"><u>COMMODITYID</u></font><b>)</b><b> </b><b>ON</b><b> </b><b>UPDATE</b><b> </b><b>CASCADE</b><b>;</b>
+<b>CREATE</b><b> </b><b>INDEX</b><b> </b>COMMODITYVARIABLEORDER_IDXASSOC<b> </b><b>ON</b><b> </b><font color="# 080 0"><u>COMMODITYVARIABLEORDER</u></font><b> </b><b>(</b>COMMODITYASSOCIATIONID<b>,</b><b> </b><font color="# 080 0"><u>COMMODITYORDER</u></font><b>)</b><b>;</b>
+
+</pre></code>
+</span></P>
+<P CLASS="Base">&nbsp;</P>
+<DIV CLASS="footer"><BR><HR></DIV>
+  <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH=100%>
+    <TR VALIGN="middle">
+      <TD>&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+      <TD ALIGN="left" WIDTH="54px" NOWRAP>
+        <A HREF="COMMODITYASSOCIATION.html"><IMG ALT="Previous topic" SRC="../Images/GoPrev.gif" BORDER="0"></A>
+        <A HREF="../Index.html"><IMG ALT="Chapter index" SRC="../Images/GoIndex.gif" BORDER="0"></A>
+        <A HREF="CONSTRAINTS.html"><IMG ALT="Next topic" SRC="../Images/GoNext.gif" BORDER="0"></A>
+      </TD>
+    </TR>
+  </TABLE>
+<P CLASS="Base">&nbsp;</P>
+</BODY></HTML>

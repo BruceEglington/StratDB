@@ -1,0 +1,259 @@
+<HTML>
+<HEAD>
+<TITLE>USERPROJECTS</TITLE>
+<META content="text/html; charset=iso-8859-1" http-equiv=Content-Type>
+<LINK HREF="../IBEHTMLDoc.css" type=text/css rel=STYLESHEET>
+ 
+<xml>
+<IBEHelp:Attr Name="ItemOrder" Value="126800"/>
+</xml>
+ 
+</HEAD>
+<BODY>
+<DIV ID="nsbanner">
+  <DIV ID="bannerrow1">
+    <TABLE CLASS="bannerparthead" CELLSPACING=0>
+      <TR ID="hdr" VALIGN="middle">
+        <TD CLASS="runninghead">"bromo2.usask.ca:s:/data/firebird/stratdb2015v25.fdb". Tables</TD>
+        <TD ALIGN="left" WIDTH="54px" NOWRAP>
+          <A HREF="USEROPTS.html"><IMG ALT="Previous topic" SRC="../Images/GoPrev.gif" BORDER="0"></A>
+          <A HREF="../Index.html"><IMG ALT="Chapter index" SRC="../Images/GoIndex.gif" BORDER="0"></A>
+          <A HREF="USERS.html"><IMG ALT="Next topic" SRC="../Images/GoNext.gif" BORDER="0"></A>
+        </TD>
+      </TR>
+    </TABLE>
+  </DIV>
+  <DIV ID="TitleRow">
+    <P CLASS="dtH1">USERPROJECTS</P>
+  </DIV>
+ </DIV>
+<P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Description</P>
+<P CLASS="Base"><I>(There is no description for table USERPROJECTS)</I></P>
+<P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Fields</P>
+<TABLE CLASS="dtArg" CELLSPACING="0">
+  <TH WIDTH="1%" ALIGN="middle"><P CLASS="Base2"><B>PK</B></P>
+  <TH WIDTH="1%" ALIGN="middle"><P CLASS="Base2"><B>FK</B></P>
+  <TH WIDTH="1%"><P CLASS="Base2"><B>Field</B></P>
+  <TH WIDTH="1%"><P CLASS="Base2"><B>Domain</B></P>
+  <TH WIDTH="20%"><P CLASS="Base2"><B>Type</B></P>
+  <TH WIDTH="1%" ALIGN="middle"><P CLASS="Base2"><B>NN</B></P>
+  <TH WIDTH="1%"><P CLASS="Base2"><B>Default</B></P>
+  <TH WIDTH="40%"><P CLASS="Base2"><B>Description</B></P>
+  <TR>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/PK1.gif" BORDER="0"></P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2">&nbsp;</P></TD>
+    <TD><A NAME="USERPROJECTS.USERPROJECTID"><P CLASS="Base2">USERPROJECTID</P></A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Domains/USERPROJECTID.html">USERPROJECTID</A></P></TD>
+    <TD><P CLASS="Base2">INTEGER</P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/Yes.gif" BORDER="0"></P></TD>
+    <TD><P CLASS="Base2">&nbsp;</P></TD>
+    <TD><P CLASS="Base2">&nbsp;</P></TD>
+  </TR>
+  <TR>
+    <TD ALIGN="middle"><P CLASS="Base2">&nbsp;</P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/FK.gif" BORDER="0"></P></TD>
+    <TD><A NAME="USERPROJECTS.USERID"><P CLASS="Base2">USERID</P></A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Domains/USERNAMEID.html">USERNAMEID</A></P></TD>
+    <TD><P CLASS="Base2">VARCHAR(20)</P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/Yes.gif" BORDER="0"></P></TD>
+    <TD><P CLASS="Base2">'NotDefined'</P></TD>
+    <TD><P CLASS="Base2">&nbsp;</P></TD>
+  </TR>
+  <TR>
+    <TD ALIGN="middle"><P CLASS="Base2">&nbsp;</P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2">&nbsp;</P></TD>
+    <TD><A NAME="USERPROJECTS.USERPROJECTNAME"><P CLASS="Base2">USERPROJECTNAME</P></A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Domains/USERPROJECTNAME.html">USERPROJECTNAME</A></P></TD>
+    <TD><P CLASS="Base2">VARCHAR(50)</P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/Yes.gif" BORDER="0"></P></TD>
+    <TD><P CLASS="Base2">'Not provided'</P></TD>
+    <TD><P CLASS="Base2">&nbsp;</P></TD>
+  </TR>
+  <TR>
+    <TD ALIGN="middle"><P CLASS="Base2">&nbsp;</P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2">&nbsp;</P></TD>
+    <TD><A NAME="USERPROJECTS.DATELASTUSED"><P CLASS="Base2">DATELASTUSED</P></A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Domains/DATES.html">DATES</A></P></TD>
+    <TD><P CLASS="Base2">TIMESTAMP</P></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/No.gif" BORDER="0"></P></TD>
+    <TD><P CLASS="Base2">&nbsp;</P></TD>
+    <TD><P CLASS="Base2">&nbsp;</P></TD>
+  </TR>
+</TABLE>
+<P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Triggers</P>
+<TABLE CLASS="dtArg" CELLSPACING="0">
+  <TH WIDTH="1%"><P CLASS="Base2"><B>Trigger</B></P>
+  <TH WIDTH="1%"><P CLASS="Base2"><B>Type</B></P>
+  <TH WIDTH="1%"><P CLASS="Base2"><B>Activity</B></P>
+  <TH WIDTH="1%"><P CLASS="Base2"><B>Order</B></P>
+  <TH WIDTH="50%"><P CLASS="Base2"><B>Description</B></P>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Triggers/RPL$DVBROMO_USERPROJECTS_D.html">RPL$DVBROMO_USERPROJECTS_D</A></TD>
+    <TD><P CLASS="Base2">AFTER&nbsp;DELETE</TD>
+    <TD><P CLASS="Base2">Yes</TD>
+    <TD ALIGN="right"><P CLASS="Base2">32766</TD>
+    <TD><P CLASS="Base2">&nbsp</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Triggers/RPL$DVBROMO_USERPROJECTS_I.html">RPL$DVBROMO_USERPROJECTS_I</A></TD>
+    <TD><P CLASS="Base2">AFTER&nbsp;INSERT</TD>
+    <TD><P CLASS="Base2">Yes</TD>
+    <TD ALIGN="right"><P CLASS="Base2">32766</TD>
+    <TD><P CLASS="Base2">&nbsp</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Triggers/RPL$DVBROMO_USERPROJECTS_U.html">RPL$DVBROMO_USERPROJECTS_U</A></TD>
+    <TD><P CLASS="Base2">AFTER&nbsp;UPDATE</TD>
+    <TD><P CLASS="Base2">Yes</TD>
+    <TD ALIGN="right"><P CLASS="Base2">32766</TD>
+    <TD><P CLASS="Base2">&nbsp</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Triggers/RPL$LPRE_USERPROJECTS_D.html">RPL$LPRE_USERPROJECTS_D</A></TD>
+    <TD><P CLASS="Base2">AFTER&nbsp;DELETE</TD>
+    <TD><P CLASS="Base2">Yes</TD>
+    <TD ALIGN="right"><P CLASS="Base2">32766</TD>
+    <TD><P CLASS="Base2">&nbsp</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Triggers/RPL$LPRE_USERPROJECTS_I.html">RPL$LPRE_USERPROJECTS_I</A></TD>
+    <TD><P CLASS="Base2">AFTER&nbsp;INSERT</TD>
+    <TD><P CLASS="Base2">Yes</TD>
+    <TD ALIGN="right"><P CLASS="Base2">32766</TD>
+    <TD><P CLASS="Base2">&nbsp</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Triggers/RPL$LPRE_USERPROJECTS_U.html">RPL$LPRE_USERPROJECTS_U</A></TD>
+    <TD><P CLASS="Base2">AFTER&nbsp;UPDATE</TD>
+    <TD><P CLASS="Base2">Yes</TD>
+    <TD ALIGN="right"><P CLASS="Base2">32766</TD>
+    <TD><P CLASS="Base2">&nbsp</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Triggers/RPL$STRATEG_USERPROJECTS_D.html">RPL$STRATEG_USERPROJECTS_D</A></TD>
+    <TD><P CLASS="Base2">AFTER&nbsp;DELETE</TD>
+    <TD><P CLASS="Base2">Yes</TD>
+    <TD ALIGN="right"><P CLASS="Base2">32766</TD>
+    <TD><P CLASS="Base2">&nbsp</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Triggers/RPL$STRATEG_USERPROJECTS_I.html">RPL$STRATEG_USERPROJECTS_I</A></TD>
+    <TD><P CLASS="Base2">AFTER&nbsp;INSERT</TD>
+    <TD><P CLASS="Base2">Yes</TD>
+    <TD ALIGN="right"><P CLASS="Base2">32766</TD>
+    <TD><P CLASS="Base2">&nbsp</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Triggers/RPL$STRATEG_USERPROJECTS_U.html">RPL$STRATEG_USERPROJECTS_U</A></TD>
+    <TD><P CLASS="Base2">AFTER&nbsp;UPDATE</TD>
+    <TD><P CLASS="Base2">Yes</TD>
+    <TD ALIGN="right"><P CLASS="Base2">32766</TD>
+    <TD><P CLASS="Base2">&nbsp</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Triggers/RPL$USERPROJECTS_D.html">RPL$USERPROJECTS_D</A></TD>
+    <TD><P CLASS="Base2">AFTER&nbsp;DELETE</TD>
+    <TD><P CLASS="Base2">Yes</TD>
+    <TD ALIGN="right"><P CLASS="Base2">32767</TD>
+    <TD><P CLASS="Base2">&nbsp</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Triggers/RPL$USERPROJECTS_I.html">RPL$USERPROJECTS_I</A></TD>
+    <TD><P CLASS="Base2">AFTER&nbsp;INSERT</TD>
+    <TD><P CLASS="Base2">Yes</TD>
+    <TD ALIGN="right"><P CLASS="Base2">32767</TD>
+    <TD><P CLASS="Base2">&nbsp</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Triggers/RPL$USERPROJECTS_U.html">RPL$USERPROJECTS_U</A></TD>
+    <TD><P CLASS="Base2">AFTER&nbsp;UPDATE</TD>
+    <TD><P CLASS="Base2">Yes</TD>
+    <TD ALIGN="right"><P CLASS="Base2">32767</TD>
+    <TD><P CLASS="Base2">&nbsp</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Triggers/USERPROJECTS_BI.html">USERPROJECTS_BI</A></TD>
+    <TD><P CLASS="Base2">BEFORE&nbsp;INSERT&nbsp;OR&nbsp;UPDATE</TD>
+    <TD><P CLASS="Base2">Yes</TD>
+    <TD ALIGN="right"><P CLASS="Base2">0</TD>
+    <TD><P CLASS="Base2">&nbsp</TD>
+  </TR>
+</TABLE>
+<P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Indices</P>
+<TABLE CLASS="dtArg" CELLSPACING="0">
+  <TH><P CLASS="Base2"><B>Index</B></P>
+  <TH><P CLASS="Base2"><B>Fields</B></P>
+  <TH ALIGN="middle"><P CLASS="Base2"><B>Active</B></P>
+  <TH ALIGN="middle"><P CLASS="Base2"><B>Unique</B></P>
+  <TH ALIGN="middle"><P CLASS="Base2"><B>Order</B></P>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Indices/FK_USERPROJECTS_USR.html">FK_USERPROJECTS_USR</A></TD>
+    <TD><P CLASS="Base2">USERID</TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/Yes.gif" BORDER="0"></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/No.gif" BORDER="0"></TD>
+    <TD ALIGN="middle"><P CLASS="Base2">ASC</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Indices/PK_USERPROJECTS_PROJID.html">PK_USERPROJECTS_PROJID</A></TD>
+    <TD><P CLASS="Base2">USERPROJECTID</TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/Yes.gif" BORDER="0"></TD>
+    <TD ALIGN="middle"><P CLASS="Base2"><IMG SRC="../Images/Yes.gif" BORDER="0"></TD>
+    <TD ALIGN="middle"><P CLASS="Base2">ASC</TD>
+  </TR>
+</TABLE>
+<P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">References</P>
+<TABLE CLASS="dtArg" CELLSPACING="0">
+  <TH><P CLASS="Base2"><B>Table</B></P>
+  <TH><P CLASS="Base2"><B>Foreign Key</B></P>
+  <TH><P CLASS="Base2"><B>Fields</B></P>
+  <TH><P CLASS="Base2"><B>FK Field</B></P>
+  <TH><P CLASS="Base2"><B>Delete Rule</B></P>
+  <TH><P CLASS="Base2"><B>Update Rule</B></P>
+  <TR>
+    <TD><P CLASS="Base2"><A HREF="../Tables/USERS.html">USERS</A></TD>
+    <TD><P CLASS="Base2"><A HREF="../Foreign Keys/FK_USERPROJECTS_USR.html">FK_USERPROJECTS_USR</A></TD>
+    <TD><P CLASS="Base2">USERID</TD>
+    <TD><P CLASS="Base2">USERID</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+    <TD><P CLASS="Base2">CASCADE</TD>
+  </TR>
+</TABLE>
+<P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Referenced By</P>
+<P CLASS="Base"><I>(There are no tables referenced by table USERPROJECTS)</I></P>
+<P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Definition</P>
+<P CLASS="Base"><span class="DDLCode">
+<code><pre>
+<b>CREATE</b><b> </b><b>TABLE</b><b> </b><font color="# 080 0"><u>USERPROJECTS</u></font><b> </b><b>(</b>
+<b>    </b><font color="# 080 0"><u>USERPROJECTID</u></font><b>    </b><font color="# 080 0"><u>USERPROJECTID</u></font><b> </b><b>NOT</b><b> </b><b>NULL</b><b>,</b>
+<b>    </b><font color="# 080 0"><u>USERID</u></font><b>           </b><font color="# 080 0"><u>USERNAMEID</u></font><b> </b><b>DEFAULT</b><b> </b>'NotDefined'<b> </b><b>NOT</b><b> </b><b>NULL</b><b>,</b>
+<b>    </b><font color="# 080 0"><u>USERPROJECTNAME</u></font><b>  </b><font color="# 080 0"><u>USERPROJECTNAME</u></font><b> </b><b>DEFAULT</b><b> </b>'Not provided'<b> </b><b>NOT</b><b> </b><b>NULL</b><b>,</b>
+<b>    </b>DATELASTUSED<b>     </b><font color="# 080 0"><u>DATES</u></font>
+<b>)</b><b>;</b>
+
+
+<b>ALTER</b><b> </b><b>TABLE</b><b> </b><font color="# 080 0"><u>USERPROJECTS</u></font><b> </b><b>ADD</b><b> </b><b>CONSTRAINT</b><b> </b>PK_USERPROJECTS_PROJID<b> </b><b>PRIMARY</b><b> </b><b>KEY</b><b> </b><b>(</b><font color="# 080 0"><u>USERPROJECTID</u></font><b>)</b><b>;</b>
+<b>ALTER</b><b> </b><b>TABLE</b><b> </b><font color="# 080 0"><u>USERPROJECTS</u></font><b> </b><b>ADD</b><b> </b><b>CONSTRAINT</b><b> </b>FK_USERPROJECTS_USR<b> </b><b>FOREIGN</b><b> </b><b>KEY</b><b> </b><b>(</b><font color="# 080 0"><u>USERID</u></font><b>)</b><b> </b><b>REFERENCES</b><b> </b><font color="# 080 0"><u>USERS</u></font><b> </b><b>(</b><font color="# 080 0"><u>USERID</u></font><b>)</b><b> </b><b>ON</b><b> </b><b>DELETE</b><b> </b><b>CASCADE</b><b> </b><b>ON</b><b> </b><b>UPDATE</b><b> </b><b>CASCADE</b><b>;</b>
+
+</pre></code>
+</span></P>
+<P CLASS="Base">&nbsp;</P>
+<DIV CLASS="footer"><BR><HR></DIV>
+  <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH=100%>
+    <TR VALIGN="middle">
+      <TD>&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+      <TD ALIGN="left" WIDTH="54px" NOWRAP>
+        <A HREF="USEROPTS.html"><IMG ALT="Previous topic" SRC="../Images/GoPrev.gif" BORDER="0"></A>
+        <A HREF="../Index.html"><IMG ALT="Chapter index" SRC="../Images/GoIndex.gif" BORDER="0"></A>
+        <A HREF="USERS.html"><IMG ALT="Next topic" SRC="../Images/GoNext.gif" BORDER="0"></A>
+      </TD>
+    </TR>
+  </TABLE>
+<P CLASS="Base">&nbsp;</P>
+</BODY></HTML>

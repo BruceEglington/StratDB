@@ -1,0 +1,92 @@
+<HTML>
+<HEAD>
+<TITLE>RPL$STRATEG_DEPOSITREFS_D</TITLE>
+<META content="text/html; charset=iso-8859-1" http-equiv=Content-Type>
+<LINK HREF="../IBEHTMLDoc.css" type=text/css rel=STYLESHEET>
+ 
+<xml>
+<IBEHelp:Attr Name="ItemOrder" Value="419800"/>
+</xml>
+ 
+</HEAD>
+<BODY>
+<DIV ID="nsbanner">
+  <DIV ID="bannerrow1">
+    <TABLE CLASS="bannerparthead" CELLSPACING=0>
+      <TR ID="hdr" VALIGN="middle">
+        <TD CLASS="runninghead">"bromo2.usask.ca:s:/data/firebird/stratdb2015v25.fdb". Triggers</TD>
+        <TD ALIGN="left" WIDTH="54px" NOWRAP>
+          <A HREF="RPL$STRATEG_DEPOSITIONNVIRONM_U.html"><IMG ALT="Previous topic" SRC="../Images/GoPrev.gif" BORDER="0"></A>
+          <A HREF="../Index.html"><IMG ALT="Chapter index" SRC="../Images/GoIndex.gif" BORDER="0"></A>
+          <A HREF="RPL$STRATEG_DEPOSITREFS_I.html"><IMG ALT="Next topic" SRC="../Images/GoNext.gif" BORDER="0"></A>
+        </TD>
+      </TR>
+    </TABLE>
+  </DIV>
+  <DIV ID="TitleRow">
+    <P CLASS="dtH1">RPL$STRATEG_DEPOSITREFS_D</P>
+  </DIV>
+ </DIV>
+<P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Description</P>
+<P CLASS="Base"><I>(There is no description for trigger RPL$STRATEG_DEPOSITREFS_D)</I></P>
+<P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Definition</P>
+<P CLASS="Base"><span class="DDLCode">
+<code><pre>
+<b>CREATE</b><b> </b><b>TRIGGER</b><b> </b><font color="# 080 0"><u>RPL$STRATEG_DEPOSITREFS_D</u></font><b> </b><b>FOR</b><b> </b><font color="# 080 0"><u>DEPOSITREFS</u></font>
+<b>ACTIVE</b><b> </b><b>AFTER</b><b> </b><b>DELETE</b><b> </b><b>POSITION</b><b> </b>32766
+<b>AS</b>
+<b>declare</b><b> </b><b>variable</b><b> </b>primary_key_values<b> </b><b>varchar</b><b>(</b>500<b>)</b><b>;</b>
+<b>declare</b><b> </b><b>variable</b><b> </b>QuotedValue<b> </b><b>varchar</b><b>(</b>200<b>)</b><b>;</b>
+<b>declare</b><b> </b><b>variable</b><b> </b>user_login<b> </b><b>varchar</b><b>(</b>50<b>)</b><b>;</b>
+<b>declare</b><b> </b><b>variable</b><b> </b>repl_operation<b> </b><b>char</b><b>(</b>1<b>)</b><b>;</b>
+<b>declare</b><b> </b><b>variable</b><b> </b>replicating_node<b> </b><b>varchar</b><b>(</b>50<b>)</b><b>;</b>
+<b>declare</b><b> </b><b>variable</b><b> </b>primary_key_sync<b> </b><b>varchar</b><b>(</b>5000<b>)</b><b>;</b>
+<b>declare</b><b> </b><b>variable</b><b> </b>unique_key_sync<b> </b><b>varchar</b><b>(</b>5000<b>)</b><b>;</b>
+<b>declare</b><b> </b><b>variable</b><b> </b>operation_type<b> </b><b>char</b><b>(</b>1<b>)</b><b>;</b>
+<b>begin</b>
+<b>  </b>replicating_node<b> </b><b>=</b><b> </b><font color="# 080 0"><u>rdb$get_context</u></font><b>(</b>'USER_SESSION'<b>,</b><b> </b>'REPLICATING_NODE'<b>)</b><b>;</b>
+<b>  </b>primary_key_values<b> </b><b>=</b><b> </b>''<b>;</b>
+<b>  </b>primary_key_values<b> </b><b>=</b><b> </b>''<b>;</b>
+<b>  </b><b>if</b><b> </b><b>(</b><b>old</b><b>.</b><font color="# 080 0"><u>&quot;SDBDEPOSITID&quot;</u></font><b> </b><b>is</b><b> </b><b>null</b><b>)</b><b> </b><b>then</b><b> </b>QuotedValue<b> </b><b>=</b><b> </b>'&quot;'<b>;</b>
+<b>  </b><b>else</b><b> </b><b>select</b><b> </b>quoted_str<b> </b><b>from</b><b> </b><font color="# 080 0"><u>RPL$quote_str</u></font><b>(</b><b>old</b><b>.</b><font color="# 080 0"><u>&quot;SDBDEPOSITID&quot;</u></font><b>)</b><b> </b><b>into</b><b> </b>:QuotedValue<b>;</b>
+<b>  </b>primary_key_values<b> </b><b>=</b><b> </b>primary_key_values<b> </b><b>|</b><b>|</b><b> </b>QuotedValue<b> </b><b>|</b><b>|</b><b> </b>';'<b>;</b>
+<b>  </b><b>if</b><b> </b><b>(</b><b>old</b><b>.</b><font color="# 080 0"><u>&quot;SOURCENUM&quot;</u></font><b> </b><b>is</b><b> </b><b>null</b><b>)</b><b> </b><b>then</b><b> </b>QuotedValue<b> </b><b>=</b><b> </b>'&quot;'<b>;</b>
+<b>  </b><b>else</b><b> </b><b>select</b><b> </b>quoted_str<b> </b><b>from</b><b> </b><font color="# 080 0"><u>RPL$quote_str</u></font><b>(</b><b>old</b><b>.</b><font color="# 080 0"><u>&quot;SOURCENUM&quot;</u></font><b>)</b><b> </b><b>into</b><b> </b>:QuotedValue<b>;</b>
+<b>  </b>primary_key_values<b> </b><b>=</b><b> </b>primary_key_values<b> </b><b>|</b><b>|</b><b> </b>QuotedValue<b> </b><b>|</b><b>|</b><b> </b>';'<b>;</b>
+
+<b>if</b><b> </b><b>(</b><b>inserting</b><b>)</b><b> </b><b>then</b><b> </b>operation_type<b> </b><b>=</b><b> </b>'I'<b>;</b>
+<b>else</b><b> </b><b>if</b><b> </b><b>(</b><b>updating</b><b>)</b><b> </b><b>then</b><b> </b>operation_type<b> </b><b>=</b><b> </b>'U'<b>;</b>
+<b>else</b><b> </b>operation_type<b> </b><b>=</b><b> </b>'D'<b>;</b>
+<b>  </b><b>for</b><b> </b><b>select</b><b> </b>u<b>.</b>login<b>,</b><b> </b>t<b>.</b>repl_deletes
+<b>    </b><b>from</b><b> </b><font color="# 080 0"><u>RPL$users</u></font><b> </b>u
+<b>    </b><b>join</b><b> </b><font color="# 080 0"><u>rpl$tables_config</u></font><b> </b>t<b> </b><b>on</b><b> </b>t<b>.</b>table_name<b> </b><b>=</b><b> </b>'DEPOSITREFS'<b> </b><b>and</b><b> </b>t<b>.</b>config_name<b> </b><b>=</b><b> </b>'STRATEG'
+<b>    </b><b>where</b><b> </b><b>(</b>u<b>.</b>login<b> </b><b>&lt;</b><b>&gt;</b><b> </b>:replicating_node<b> </b><b>or</b><b> </b>:replicating_node<b> </b><b>is</b><b> </b><b>null</b><b>)</b>
+<b>    </b><b>and</b><b> </b><b>(</b>u<b>.</b>config_name<b> </b><b>is</b><b> </b><b>null</b><b> </b><b>or</b><b> </b>u<b>.</b>config_name<b> </b><b>=</b><b> </b>'STRATEG'<b>)</b>
+<b>    </b><b>into</b><b> </b>:user_login<b>,</b><b> </b>:repl_operation<b> </b><b>do</b>
+<b>  </b><b>begin</b>
+<b>    </b><b>if</b><b> </b><b>(</b>repl_operation<b> </b><b>=</b><b> </b>'Y'<b>)</b><b> </b><b>then</b>
+<b>      </b><b>insert</b><b> </b><b>into</b><b> </b><font color="# 080 0"><u>RPL$log</u></font><b> </b><b>(</b>code<b>,</b><b> </b>login<b>,</b><b> </b>operation_date<b>,</b><b> </b>table_name<b>,</b><b> </b>sent_from<b>,</b>
+<b>        </b>primary_key_values<b>,</b><b> </b>procedure_statement<b>,</b><b> </b>PRIMARY_KEY_SYNC<b>,</b><b> </b>UNIQUE_KEY_SYNC<b>,</b><b> </b>OPERATION_TYPE<b>)</b>
+<b>      </b><b>values</b><b> </b><b>(</b><b>gen_id</b><b>(</b><font color="# 080 0"><u>gen_rpl$log</u></font><b>,</b><b> </b>1<b>)</b><b>,</b><b> </b>:user_login<b>,</b><b> </b><b>current_timestamp</b><b>,</b><b> </b>'DEPOSITREFS'<b>,</b><b> </b>:replicating_node<b>,</b>
+<b>        </b>:primary_key_values<b>,</b><b> </b><b>null</b><b>,</b><b> </b>:PRIMARY_KEY_SYNC<b>,</b><b> </b>:UNIQUE_KEY_SYNC<b>,</b><b> </b>:OPERATION_TYPE<b>)</b><b>;</b>
+<b>  </b><b>end</b>
+<b>end</b>
+
+</pre></code>
+</span></P>
+<P CLASS="Base">&nbsp;</P>
+<DIV CLASS="footer"><BR><HR></DIV>
+  <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH=100%>
+    <TR VALIGN="middle">
+      <TD>&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+      <TD ALIGN="left" WIDTH="54px" NOWRAP>
+        <A HREF="RPL$STRATEG_DEPOSITIONNVIRONM_U.html"><IMG ALT="Previous topic" SRC="../Images/GoPrev.gif" BORDER="0"></A>
+        <A HREF="../Index.html"><IMG ALT="Chapter index" SRC="../Images/GoIndex.gif" BORDER="0"></A>
+        <A HREF="RPL$STRATEG_DEPOSITREFS_I.html"><IMG ALT="Next topic" SRC="../Images/GoNext.gif" BORDER="0"></A>
+      </TD>
+    </TR>
+  </TABLE>
+<P CLASS="Base">&nbsp;</P>
+</BODY></HTML>

@@ -1,0 +1,54 @@
+<HTML>
+<HEAD>
+<TITLE>FK_CHARTDOMAIN_CHART</TITLE>
+<META content="text/html; charset=iso-8859-1" http-equiv=Content-Type>
+<LINK HREF="../IBEHTMLDoc.css" type=text/css rel=STYLESHEET>
+ 
+<xml>
+<IBEHelp:Attr Name="ItemOrder" Value="4800"/>
+</xml>
+ 
+</HEAD>
+<BODY>
+<DIV ID="nsbanner">
+  <DIV ID="bannerrow1">
+    <TABLE CLASS="bannerparthead" CELLSPACING=0>
+      <TR ID="hdr" VALIGN="middle">
+        <TD CLASS="runninghead">"bromo2.usask.ca:s:/data/firebird/stratdb2015v25.fdb". Foreign Keys</TD>
+        <TD ALIGN="left" WIDTH="54px" NOWRAP>
+          <A HREF="FK_APPROVALSTATUS_INC4MAP.html"><IMG ALT="Previous topic" SRC="../Images/GoPrev.gif" BORDER="0"></A>
+          <A HREF="../Index.html"><IMG ALT="Chapter index" SRC="../Images/GoIndex.gif" BORDER="0"></A>
+          <A HREF="FK_CHARTDOMAIN_DOMAIN.html"><IMG ALT="Next topic" SRC="../Images/GoNext.gif" BORDER="0"></A>
+        </TD>
+      </TR>
+    </TABLE>
+  </DIV>
+  <DIV ID="TitleRow">
+    <P CLASS="dtH1">FK_CHARTDOMAIN_CHART</P>
+  </DIV>
+ </DIV>
+<P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Definition</P>
+<P CLASS="Base"><span class="DDLCode">
+<code><pre>
+<b>ALTER</b><b> </b><b>TABLE</b><b> </b><font color="# 080 0"><u>CHARTDOMAIN</u></font><b> </b><b>ADD</b><b> </b><b>CONSTRAINT</b><b> </b>FK_CHARTDOMAIN_CHART
+<b>FOREIGN</b><b> </b><b>KEY</b><b> </b><b>(</b><font color="# 080 0"><u>CHARTID</u></font><b>)</b>
+<b>REFERENCES</b><b> </b><font color="# 080 0"><u>CHARTS2</u></font><b> </b><b>(</b><font color="# 080 0"><u>CHARTID</u></font><b>)</b>
+<b>ON</b><b> </b><b>UPDATE</b><b> </b><b>CASCADE</b>
+<b>ON</b><b> </b><b>DELETE</b><b> </b><b>CASCADE</b>
+
+</pre></code>
+</span></P>
+<DIV CLASS="footer"><BR><HR></DIV>
+  <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH=100%>
+    <TR VALIGN="middle">
+      <TD>&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+      <TD ALIGN="left" WIDTH="54px" NOWRAP>
+        <A HREF="FK_APPROVALSTATUS_INC4MAP.html"><IMG ALT="Previous topic" SRC="../Images/GoPrev.gif" BORDER="0"></A>
+        <A HREF="../Index.html"><IMG ALT="Chapter index" SRC="../Images/GoIndex.gif" BORDER="0"></A>
+        <A HREF="FK_CHARTDOMAIN_DOMAIN.html"><IMG ALT="Next topic" SRC="../Images/GoNext.gif" BORDER="0"></A>
+      </TD>
+    </TR>
+  </TABLE>
+<P CLASS="Base">&nbsp;</P>
+</BODY></HTML>

@@ -1,0 +1,113 @@
+<HTML>
+<HEAD>
+<TITLE>RPL$FORCE_REPL</TITLE>
+<META content="text/html; charset=iso-8859-1" http-equiv=Content-Type>
+<LINK HREF="../IBEHTMLDoc.css" type=text/css rel=STYLESHEET>
+ 
+<xml>
+<IBEHelp:Attr Name="ItemOrder" Value="1800"/>
+</xml>
+ 
+</HEAD>
+<BODY>
+<DIV ID="nsbanner">
+  <DIV ID="bannerrow1">
+    <TABLE CLASS="bannerparthead" CELLSPACING=0>
+      <TR ID="hdr" VALIGN="middle">
+        <TD CLASS="runninghead">"bromo2.usask.ca:s:/data/firebird/stratdb2015v25.fdb". Procedures</TD>
+        <TD ALIGN="left" WIDTH="54px" NOWRAP>
+          <A HREF="Index.html"><IMG ALT="Previous topic" SRC="../Images/GoPrev.gif" BORDER="0"></A>
+          <A HREF="../Index.html"><IMG ALT="Chapter index" SRC="../Images/GoIndex.gif" BORDER="0"></A>
+          <A HREF="RPL$GENERATE_LOG.html"><IMG ALT="Next topic" SRC="../Images/GoNext.gif" BORDER="0"></A>
+        </TD>
+      </TR>
+    </TABLE>
+  </DIV>
+  <DIV ID="TitleRow">
+    <P CLASS="dtH1">RPL$FORCE_REPL</P>
+  </DIV>
+ </DIV>
+<P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Input Parameters</P>
+<TABLE CLASS="dtArg" CELLSPACING="0">
+  <TH WIDTH="1%"><P CLASS="Base2"><B>Parameter</B></P>
+  <TH WIDTH="20%"><P CLASS="Base2"><B>Type</B></P>
+  <TH WIDTH="50%"><P CLASS="Base2"><B>Description</B></P>
+  <TR>
+    <TD><P CLASS="Base2">CONFIG_NAME</TD>
+    <TD><P CLASS="Base2">VARCHAR(100)</TD>
+    <TD><P CLASS="Base2">&nbsp;</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2">TABLE_NAME</TD>
+    <TD><P CLASS="Base2">VARCHAR(50)</TD>
+    <TD><P CLASS="Base2">&nbsp;</TD>
+  </TR>
+  <TR>
+    <TD><P CLASS="Base2">SQL_CONDITION</TD>
+    <TD><P CLASS="Base2">BLOB SUB_TYPE 1 SEGMENT SIZE 80</TD>
+    <TD><P CLASS="Base2">&nbsp;</TD>
+  </TR>
+</TABLE>
+<P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Output Parameters</P>
+<TABLE CLASS="dtArg" CELLSPACING="0">
+  <TH WIDTH="1%"><P CLASS="Base2"><B>Parameter</B></P>
+  <TH WIDTH="20%"><P CLASS="Base2"><B>Type</B></P>
+  <TH WIDTH="50%"><P CLASS="Base2"><B>Description</B></P>
+  <TR>
+    <TD><P CLASS="Base2">ROWS_AFFECTED</TD>
+    <TD><P CLASS="Base2">INTEGER</TD>
+    <TD><P CLASS="Base2">&nbsp;</TD>
+  </TR>
+</TABLE>
+<P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Description</P>
+<P CLASS="Base"><I>(There is no description for procedure RPL$FORCE_REPL)</I></P>
+<P CLASS="Base">&nbsp;</P>
+<P CLASS="Header1">Definition</P>
+<P CLASS="Base"><span class="DDLCode">
+<code><pre>
+<b>CREATE</b><b> </b><b>PROCEDURE</b><b> </b><font color="# 080 0"><u>RPL$FORCE_REPL</u></font><b>(</b>
+<b>    </b>CONFIG_NAME<b> </b><b>VARCHAR</b><b>(</b>100<b>)</b><b>,</b>
+<b>    </b>TABLE_NAME<b> </b><b>VARCHAR</b><b>(</b>50<b>)</b><b>,</b>
+<b>    </b>SQL_CONDITION<b> </b><b>BLOB</b><b> </b><b>SUB_TYPE</b><b> </b>1<b> </b><b>SEGMENT</b><b> </b><b>SIZE</b><b> </b>80<b>)</b>
+<b>RETURNS</b><b> </b><b>(</b>
+<b>    </b>&quot;ROWS_AFFECTED&quot;<b> </b><b>INTEGER</b><b>)</b>
+<b>AS</b>
+<b>declare</b><b> </b><b>variable</b><b> </b>field_name<b> </b><b>varchar</b><b>(</b>50<b>)</b><b>;</b>
+<b>declare</b><b> </b><b>variable</b><b> </b>sql<b> </b><b>blob</b><b> </b><b>sub_type</b><b> </b>1<b>;</b>
+<b>begin</b>
+<b>  </b><b>select</b><b> </b><b>first</b><b> </b>1<b> </b>rf<b>.</b>rdb$field_name
+<b>  </b><b>from</b><b> </b>rdb$relation_fields<b> </b>rf
+<b>  </b><b>join</b><b> </b>rdb$fields<b> </b>f<b> </b><b>on</b><b> </b>f<b>.</b>rdb$field_name<b> </b><b>=</b><b> </b>rf<b>.</b>rdb$field_source
+<b>  </b><b>where</b><b> </b>f<b>.</b>rdb$field_type<b> </b><b>&lt;</b><b>&gt;</b><b> </b>261
+<b>  </b><b>and</b><b> </b>rf<b>.</b>rdb$relation_name<b> </b><b>=</b><b> </b>:table_name
+<b>  </b><b>order</b><b> </b><b>by</b><b> </b>rf<b>.</b>rdb$field_position<b> </b><b>into</b><b> </b>:field_name<b>;</b>
+<b>  </b>
+<b>  </b><font color="# 080 0"><u>rdb$set_context</u></font><b>(</b>'USER_TRANSACTION'<b>,</b><b> </b>'FORCE_REPLICATION'<b>,</b><b> </b>'TRUE'<b>)</b><b>;</b>
+<b>  </b>
+<b>  </b>sql<b> </b><b>=</b><b> </b>'update '<b> </b><b>|</b><b>|</b><b> </b>table_name<b> </b><b>|</b><b>|</b><b> </b>' set '<b> </b><b>|</b><b>|</b><b> </b>field_name<b> </b><b>|</b><b>|</b><b> </b>' = '<b> </b><b>|</b><b>|</b><b> </b>field_name<b> </b><b>|</b><b>|</b><b> </b>' where '<b> </b><b>|</b><b>|</b><b> </b>sql_condition<b>;</b>
+<b>  </b><b>execute</b><b> </b><b>statement</b><b> </b>sql<b>;</b>
+<b>  </b><b>rows_affected</b><b> </b><b>=</b><b> </b><b>row_count</b><b>;</b>
+<b>  </b>
+<b>  </b><font color="# 080 0"><u>rdb$set_context</u></font><b>(</b>'USER_TRANSACTION'<b>,</b><b> </b>'FORCE_REPLICATION'<b>,</b><b> </b>''<b>)</b><b>;</b>
+<b>  </b><b>suspend</b><b>;</b>
+<b>end</b>
+
+</pre></code>
+</span></P>
+<P CLASS="Base">&nbsp;</P>
+<DIV CLASS="footer"><BR><HR></DIV>
+  <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH=100%>
+    <TR VALIGN="middle">
+      <TD>&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+      <TD ALIGN="left" WIDTH="54px" NOWRAP>
+        <A HREF="Index.html"><IMG ALT="Previous topic" SRC="../Images/GoPrev.gif" BORDER="0"></A>
+        <A HREF="../Index.html"><IMG ALT="Chapter index" SRC="../Images/GoIndex.gif" BORDER="0"></A>
+        <A HREF="RPL$GENERATE_LOG.html"><IMG ALT="Next topic" SRC="../Images/GoNext.gif" BORDER="0"></A>
+      </TD>
+    </TR>
+  </TABLE>
+<P CLASS="Base">&nbsp;</P>
+</BODY></HTML>
