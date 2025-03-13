@@ -1,15 +1,16 @@
 program StratDB;
 
 uses
+<<<<<<< Updated upstream
   //madExcept,
   //madLinkDisAsm,
   //madListHardware,
   //madListProcesses,
   //madListModules,
+=======
+>>>>>>> Stashed changes
   IWStart,
   Forms,
-  ServerController in 'ServerController.pas' {IWServerController: TIWServerControllerBase},
-  IWRtlFix in '..\IntraWeb\IWRtlFix.pas',
   IWStrat_uMain in 'IWStrat_uMain.pas' {Form1},
   IWStrat_addcommoditylink in 'IWStrat_addcommoditylink.pas' {ISFAddCommodityLink: TIWAppForm},
   IWStrat_addcorrelativelink in 'IWStrat_addcorrelativelink.pas' {ISFAddCorrelativeLink: TIWAppForm},
@@ -114,7 +115,8 @@ uses
   ErrCodes in '..\Eglington Delphi common code items\ErrCodes.pas',
   Mathproc in '..\Eglington Delphi common code items\Mathproc.pas',
   NumRecipes in '..\Eglington Delphi common code items\NumRecipes.pas',
-  NumRecipes_varb in '..\Eglington Delphi common code items\NumRecipes_varb.pas';
+  NumRecipes_varb in '..\Eglington Delphi common code items\NumRecipes_varb.pas',
+  ServerController in 'ServerController.pas' {IWServerController: TIWServerControllerBase};
 
 {$R *.res}
 
