@@ -1,11 +1,11 @@
 program StratDB;
 
 uses
-  madExcept,
-  madLinkDisAsm,
-  madListHardware,
-  madListProcesses,
-  madListModules,
+  //madExcept,
+  //madLinkDisAsm,
+  //madListHardware,
+  //madListProcesses,
+  //madListModules,
   IWStart,
   Forms,
   ServerController in 'ServerController.pas' {IWServerController: TIWServerControllerBase},
