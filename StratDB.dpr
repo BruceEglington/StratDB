@@ -1,16 +1,8 @@
 program StratDB;
 
 uses
-<<<<<<< Updated upstream
-  //madExcept,
-  //madLinkDisAsm,
-  //madListHardware,
-  //madListProcesses,
-  //madListModules,
-=======
->>>>>>> Stashed changes
   IWStart,
-  Forms,
+  //Forms,
   IWStrat_uMain in 'IWStrat_uMain.pas' {Form1},
   IWStrat_addcommoditylink in 'IWStrat_addcommoditylink.pas' {ISFAddCommodityLink: TIWAppForm},
   IWStrat_addcorrelativelink in 'IWStrat_addcorrelativelink.pas' {ISFAddCorrelativeLink: TIWAppForm},

@@ -1,5 +1,4 @@
 object dmOpt: TdmOpt
-  OldCreateOrder = False
   Height = 621
   Width = 702
   object dsOpt: TDataSource
@@ -23,18 +22,18 @@ object dmOpt: TdmOpt
     SQLConnection = sqlcStrat
     Left = 206
     Top = 126
-    object qOptUSERID: TStringField
+    object qOptUSERID: TWideStringField
       FieldName = 'USERID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object qOptLINKTODATEVIEW: TStringField
+    object qOptLINKTODATEVIEW: TWideStringField
       FieldName = 'LINKTODATEVIEW'
       Required = True
       FixedChar = True
       Size = 1
     end
-    object qOptINCLUDESEAMS: TStringField
+    object qOptINCLUDESEAMS: TWideStringField
       FieldName = 'INCLUDESEAMS'
       Required = True
       FixedChar = True
@@ -47,18 +46,18 @@ object dmOpt: TdmOpt
     ProviderName = 'dspOpt'
     Left = 286
     Top = 124
-    object cdsOptUSERID: TStringField
+    object cdsOptUSERID: TWideStringField
       FieldName = 'USERID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsOptLINKTODATEVIEW: TStringField
+    object cdsOptLINKTODATEVIEW: TWideStringField
       FieldName = 'LINKTODATEVIEW'
       Required = True
       FixedChar = True
       Size = 1
     end
-    object cdsOptINCLUDESEAMS: TStringField
+    object cdsOptINCLUDESEAMS: TWideStringField
       FieldName = 'INCLUDESEAMS'
       Required = True
       FixedChar = True
@@ -86,18 +85,18 @@ object dmOpt: TdmOpt
     SQLConnection = sqlcStrat
     Left = 34
     Top = 102
-    object qOptAllUSERID: TStringField
+    object qOptAllUSERID: TWideStringField
       FieldName = 'USERID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object qOptAllLINKTODATEVIEW: TStringField
+    object qOptAllLINKTODATEVIEW: TWideStringField
       FieldName = 'LINKTODATEVIEW'
       Required = True
       FixedChar = True
       Size = 1
     end
-    object qOptAllINCLUDESEAMS: TStringField
+    object qOptAllINCLUDESEAMS: TWideStringField
       FieldName = 'INCLUDESEAMS'
       Required = True
       FixedChar = True
@@ -121,20 +120,20 @@ object dmOpt: TdmOpt
     ProviderName = 'dspOptAll'
     Left = 114
     Top = 100
-    object cdsOptAllUSERID: TStringField
+    object cdsOptAllUSERID: TWideStringField
       DisplayLabel = 'User ID'
       FieldName = 'USERID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsOptAllLINKTODATEVIEW: TStringField
+    object cdsOptAllLINKTODATEVIEW: TWideStringField
       DisplayLabel = 'Link to DateView'
       FieldName = 'LINKTODATEVIEW'
       Required = True
       FixedChar = True
       Size = 1
     end
-    object cdsOptAllINCLUDESEAMS: TStringField
+    object cdsOptAllINCLUDESEAMS: TWideStringField
       DisplayLabel = 'Incl. Seams and Reefs'
       FieldName = 'INCLUDESEAMS'
       Required = True
@@ -148,30 +147,23 @@ object dmOpt: TdmOpt
     Top = 102
   end
   object sqlcStrat: TSQLConnection
-    ConnectionName = 'StratDB_bromo2'
     DriverName = 'DevartFirebird'
     LoginPrompt = False
     Params.Strings = (
       'VendorLibOsx=libfbclient.dylib'
       'GetDriverFunc=getSQLDriverFirebird'
       'LibraryName=dbexpida41.dll'
-      'VendorLib=fbclient.dll'
-      'DataBase=bromo2.usask.ca:s:\data\firebird\stratdb2021v30.fdb'
+      'VendorLib=c:\exe32\fbclient.dll'
+      'DataBase=c:\data\firebird\stratdb2025v50_UTF8.fdb'
       'User_Name=SYSDBA'
       'Password=V0lcano3^'
       'SQLDialect=3'
-      'BlobSize=-1'
-      'ErrorResourceFile='
       'LocaleCode=0000'
       'DevartFirebird TransIsolation=ReadCommitted'
       'ProductName=DevartFirebird'
-      
-        'DriverPackageLoader=TDBXDynalinkDriverLoader,DBXCommonDriver260.' +
-        'bpl'
-      
-        'MetaDataPackageLoader=TDBXDevartInterBaseMetaDataCommandFactory,' +
-        'DbxDevartInterBaseDriver260.bpl'
-      'DriverUnit=DbxDevartInterBase')
+      'DriverUnit=DbxDevartInterBase'
+      'UseUnicode=true'
+      'Charset=UTF8')
     Left = 24
     Top = 20
   end
@@ -193,18 +185,18 @@ object dmOpt: TdmOpt
     SQLConnection = sqlcStrat
     Left = 8
     Top = 214
-    object qUserForWHOFORID: TStringField
+    object qUserForWHOFORID: TWideStringField
       FieldName = 'WHOFORID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
       Size = 5
     end
-    object qUserForUSERID: TStringField
+    object qUserForUSERID: TWideStringField
       FieldName = 'USERID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object qUserForWHOFOR: TStringField
+    object qUserForWHOFOR: TWideStringField
       FieldName = 'WHOFOR'
       ProviderFlags = []
       ReadOnly = True
@@ -223,18 +215,18 @@ object dmOpt: TdmOpt
     ProviderName = 'dspUserFor'
     Left = 64
     Top = 214
-    object cdsUserForWHOFORID: TStringField
+    object cdsUserForWHOFORID: TWideStringField
       FieldName = 'WHOFORID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
       Size = 5
     end
-    object cdsUserForUSERID: TStringField
+    object cdsUserForUSERID: TWideStringField
       FieldName = 'USERID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsUserForWHOFOR: TStringField
+    object cdsUserForWHOFOR: TWideStringField
       FieldName = 'WHOFOR'
       ProviderFlags = []
       ReadOnly = True
@@ -285,18 +277,18 @@ object dmOpt: TdmOpt
     ProviderName = 'dspForList'
     Left = 64
     Top = 262
-    object cdsForListWHOFORID: TStringField
+    object cdsForListWHOFORID: TWideStringField
       FieldName = 'WHOFORID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
       Size = 5
     end
-    object cdsForListWHOFOR: TStringField
+    object cdsForListWHOFOR: TWideStringField
       FieldName = 'WHOFOR'
       Required = True
       Size = 50
     end
-    object cdsForListOWNER: TStringField
+    object cdsForListOWNER: TWideStringField
       FieldName = 'OWNER'
       Required = True
     end

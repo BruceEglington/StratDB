@@ -9,6 +9,12 @@ uses
   IWApplication, IWAppForm, IW.Browser.Browser,
   IW.HTTP.Request, IW.HTTP.Reply,
   IWGlobal,
+  //IW.Browser.Browser,
+  IW.Browser.Other, IW.Browser.Firefox, IW.Browser.FirefoxMobile,
+  IW.Browser.InternetExplorer, IW.Browser.Webkit, IW.Browser.SafariMobile,
+  IW.Browser.Safari, IW.Browser.Chrome, IW.Browser.Android, IW.Browser.ChromeMobile,
+  IW.Browser.OperaNext,IW.Browser.Opera,IW.Browser.OperaMobile,
+  IW.Browser.SearchEngine,
   IniFiles,
   IW.Common.AppInfo,
   midaslib,
@@ -20,6 +26,8 @@ type
   TIWServerController = class(TIWServerControllerBase)
     procedure IWServerControllerBaseGetMainForm(var vMainForm: TIWBaseForm);
     procedure IWServerControllerBaseNewSession(aSession: TIWApplication);
+    procedure IWServerControllerBaseBrowserCheck(aSession: TIWApplication;
+      var rBrowser: TBrowser);
 
   private
     { Private declarations }
@@ -53,10 +61,10 @@ type
     LoggedIn : boolean; // User logged in or not
     LastVisitedForm : TIWAppFormClass; // This is interesting for the Login form only
 
-    UserID, UserPassword, UserDisplayName : string;
+    UserID, UserPassword, UserDisplayName : widestring;
 
-    ThisProgram : string;
-    ThisProgramName : string;
+    ThisProgram : widestring;
+    ThisProgramName : widestring;
     ProgTitle : string;
     CanView : boolean;
     CanModify : boolean;
@@ -203,15 +211,12 @@ type
 
 // Procs
   function UserSession: TUserSession;
-  //function UserSession: TIWUserSession;
   function IWServerController: TIWServerController;
 
 implementation
 {$R *.dfm}
 
 uses
-  //IWInit, usr_uLogin, usr_uregister, XMLDoc, XMLIntf, IWStrat_umain,
-  //usr_uDBInterface, usr_uDonate, IWStrat_constvalues, NumRecipes_varb;
   System.IOUtils,
   IWInit,
   usr_uLogin, usr_uregister, XMLDoc, XMLIntf, IWStrat_umain,
@@ -226,6 +231,80 @@ end;
 function UserSession: TUserSession;
 begin
   Result := TUserSession(WebApplication.Data);
+end;
+
+procedure TIWServerController.IWServerControllerBaseBrowserCheck(
+  aSession: TIWApplication; var rBrowser: TBrowser);
+  {
+  //use the following in the uses interface to be able to use code in this procedure
+  //IW.Browser.Browser,
+  IW.Browser.Other, IW.Browser.Firefox, IW.Browser.FirefoxMobile,
+  IW.Browser.InternetExplorer, IW.Browser.Webkit, IW.Browser.SafariMobile,
+  IW.Browser.Safari, IW.Browser.Chrome, IW.Browser.Android, IW.Browser.ChromeMobile,
+  IW.Browser.OperaNext,IW.Browser.Opera,IW.Browser.OperaMobile,
+  IW.Browser.SearchEngine,
+  }
+var
+  uas : string;
+begin
+  //uas := Lowercase(ASession.Request.UserAgent); //convert user-agent string to lowercase for comparison
+  {
+  if (rBrowser is TSearchEngine) then //Use IW's built-in detection
+  begin
+    ASession.Terminate('403 Forbidden. Indexing of this resource by search engines is not allowed!');
+    rBrowser.destroy;
+    rBrowser := TInternetExplorer.Create(9);
+    //Log this session including the uas so you know that the server defended itself
+  end
+  else if (Pos('baidu',uas) > 0) //Screen deeperinto user-agent string. These conditions can be moved to a function or class. They are exposed here for simplicity.
+    or (Pos('yandex',uas) > 0)
+    or (Pos('naverbot',uas) > 0)
+    or (Pos('yeti',uas) > 0)
+    or (Pos('seznambot',uas) > 0)
+    or (Pos('slurp',uas) > 0)
+    or (Pos('teoma',uas) > 0)
+    or (Pos('moget',uas) > 0)
+    or (Pos('ichiro',uas) > 0)
+    or (Pos('sogu',uas) > 0)
+    or (Pos('bot',uas) > 0)
+    or (Pos('spider',uas) > 0) then
+  begin
+    ASession.Terminate('403 Forbidden. Crawling this site is not allowed!');
+    rBrowser.destroy;
+    rBrowser := TInternetExplorer.Create(9);
+    //Log this session including the uas so you have a record of it
+  end;
+  // unknown browser
+  if (rBrowser is TOther) then begin
+    rBrowser.Free;
+    // accept the unknown browser as Firefox (probably the best idea)
+    rBrowser := TFireFox.Create(TFireFox.MIN_VERSION);
+  end
+  // if is Safari, but older or unsupported version
+  else if (rBrowser is TSafari) and (not rBrowser.IsSupported) then begin
+    rBrowser.Free;
+    // we will create it as the minimum supported version. Please note that we are using TSafari.MIN_VERSION class property
+    rBrowser := TSafari.Create(TSafari.MIN_VERSION);
+  end
+  // if is Chrome, but older or unsupported version
+  else if (rBrowser is TChrome) and (not rBrowser.IsSupported) then begin
+    rBrowser.Free;
+    // we will create it as the minimum supported version. Please note that we are using TChrome.MIN_VERSION class property
+    rBrowser := TChrome.Create(TChrome.MIN_VERSION);
+  end
+  // if is Firefox, but older or unsupported version
+  else if (rBrowser is TFirefox) and (not rBrowser.IsSupported) then begin
+    rBrowser.Free;
+    // we will create it as the minimum supported version. Please note that we are using TFirefox.MIN_VERSION class property
+    rBrowser := TFirefox.Create(TFirefox.MIN_VERSION);
+  end
+  // if is IE, but older or unsupported version
+  else if (rBrowser is TInternetExplorer) and (not rBrowser.IsSupported) then begin
+    rBrowser.Free;
+    // we will create it as the minimum supported version. Please note that we are using TInternetExplorer.MIN_VERSION class property
+    rBrowser := TInternetExplorer.Create(TInternetExplorer.MIN_VERSION);
+  end;
+  }
 end;
 
 procedure TIWServerController.IWServerControllerBaseGetMainForm(
@@ -265,21 +344,28 @@ var
   DataPath   : string;
   PublicPath : string;
 begin
+  dmUser.sqlcWebUser.Connected := false;
+  dmStrat.sqlcStrat.Connected := false;
+  dmDV.sqlcDateView.Connected := false;
+  dmOpt.sqlcStrat.Connected := false;
+  dmLIP.sqlcLIP.Connected := false;
+  dmStratC.sqlcStrat.Connected := false;
+  dmStratD.sqlcStrat.Connected := false;
   URLBase := '/';
   DBMonitor := 'active';
-  UserSession.ShowDebugButtons := false;
-  UserSession.DelayConnections := false;
-  UserControlPath := 'bromo2.usask.ca:s:\Data\Firebird\UserControl2021v30.fdb';
-  StratDBPath := 'bromo2.usask.ca:s:\Data\Firebird\StratDB2021v30.fdb';
-  DateViewPath := 'bromo2.usask.ca:s:\Data\Firebird\DateView2021v30.fdb';
+  UserSession.ShowDebugButtons := true;    //bme - normally false
+  UserSession.DelayConnections := true;    //bme - normally false
+  UserControlPath := 'c:\Data\Firebird\UserControl2025v50_utf8.fdb';
+  StratDBPath := 'c:\Data\Firebird\StratDB2025v50_utf8.fdb';
+  DateViewPath := 'c:\Data\Firebird\DateView2025v50_utf8.fdb';
   DriverName := 'DevartFirebird';
-  LibraryName := 'dbexpida41.dll';
-  VendorLib := 'fbclient.dll';
+  LibraryName := 'c:\exe32\dbexpida41.dll';
+  VendorLib := 'c:\exe32\fbclient.dll';
   GetDriverFunc := 'getSQLDriverFirebird';
   DBUserName := 'SYSDBA';
-  DBPassword := 'masterkey';
+  DBPassword := 'V0lcano3^';
   DBSQLDialectStr := '3';
-  DBCharSet := 'ASCII';
+  DBCharSet := 'UTF8';
   PublicPath := TPath.GetPublicPath;
   CommonFilePath := IncludeTrailingPathDelimiter(PublicPath) + 'EggSoft\';
   IniFilePath := CommonFilePath;
@@ -289,31 +375,23 @@ begin
   try
     URLBase := AppIni.ReadString('URLBase','URLBase','/stratdb');
     if (URLBase = '/') then URLBase := '';
-    UserControlPath := AppIni.ReadString('Paths','UserControl path','C:\Data\Firebird\UserControl2021v30.fdb');
-    StratDBPath := AppIni.ReadString('Paths','StratDB path','C:\Data\Firebird\StratDB2021v30.fdb');
-    DateViewPath := AppIni.ReadString('Paths','DateView path','C:\Data\Firebird\DateView2021v30.fdb');
+    UserControlPath := AppIni.ReadString('Paths','UserControl path','c:\Data\Firebird\UserControl2025v50_utf8.fdb');
+    StratDBPath := AppIni.ReadString('Paths','StratDB path','c:\Data\Firebird\StratDB2025v50_utf8.fdb');
+    DateViewPath := AppIni.ReadString('Paths','DateView path','c:\Data\Firebird\DateView2025v50_utf8.fdb');
     DriverName := AppIni.ReadString('Parameters','DriverName','DevartFirebird');
-    LibraryName := AppIni.ReadString('Parameters','LibraryName','dbexpida41.dll');
-    VendorLib := AppIni.ReadString('Parameters','VendorLib','fbclient.dll');
+    LibraryName := AppIni.ReadString('Parameters','LibraryName','c:\exe32\dbexpida41.dll');
+    VendorLib := AppIni.ReadString('Parameters','VendorLib','c:\exe32\fbclient.dll');
     GetDriverFunc := AppIni.ReadString('Parameters','GetDriverFunc','getSQLDriverFirebird');
     DBUserName := AppIni.ReadString('Parameters','User_Name','SYSDBA');
     DBPassword := AppIni.ReadString('Parameters','Password','V0lcano3^');
     DBSQLDialectStr := AppIni.ReadString('Parameters','SQLDialect','3');
-    DBCharSet := AppIni.ReadString('Parameters','Charset','ASCII');
-    DBMonitor := AppIni.ReadString('Monitor','DBMonitor','Inactive');
+    DBCharSet := AppIni.ReadString('Parameters','Charset','UTF8');
+    DBMonitor := AppIni.ReadString('Monitor','DBMonitor','active');
     DebugButtons := AppIni.ReadString('Debug','Buttons','Active');
-    DebugDelayConnections := AppIni.ReadString('Debug','DelayConnections','true');
-    EnableBCD := AppIni.ReadString('Parameters','EnableBCD','false');
+    //DebugDelayConnections := AppIni.ReadString('Debug','DelayConnections','true');
+    //EnableBCD := AppIni.ReadString('Parameters','EnableBCD','false');
     if (DebugButtons = 'Active') then UserSession.ShowDebugButtons := true;
     if (DebugDelayConnections = 'true') then UserSession.DelayConnections := true;
-    {
-    FromEmailAddress : string = 'bre255@usask.ca';
-    FromName :string = 'EggSoft developer and database administrator';
-    HostName :string = 'smtp.office365.com';
-    EmailUserID :string = 'bre255@usask.ca';
-    EmailPassword :string = 'Zbxc456~';
-    URLonTerminate : string = Http://sil.usask.ca';
-  }
     FromEmailAddress := AppIni.ReadString('Email','FromEmailAddress','aht820@usask.ca');
     FromName := AppIni.ReadString('Email','FromName','EggSoft developer and database administrator');
     HostName := AppIni.ReadString('Email','HostName','smtp.office365.com');
@@ -328,246 +406,158 @@ begin
     EmailUserID := Trim(EmailUserID);
     EmailPassword := Trim(EmailPassword);
     URLonTerminate := Trim(URLonTerminate);
-
-    {
-    DriverName=DevartInterBase
-    DataBase=bromo:f:/data/firebird/usercontrol2011v25.fdb
-    RoleName=
-    User_Name=SYSDBA
-    Password=masterkey
-    SQLDialect=3
-    BlobSize=-1
-    ErrorResourceFile=
-    LocaleCode=0000
-    DevartInterBase TransIsolation=ReadCommitted
-    WaitOnLocks=True
-    Charset=ASCII
-    CharLength=1
-    EnableBCD=True
-    OptimizedNumerics=True
-    LongStrings=True
-    UseQuoteChar=False
-    FetchAll=False
-    UseUnicode=False
-  }
-  //define connection parameters for UserControl connection
-  dmUser.sqlcWebUser.Connected := false;
-  dmUser.sqlcWebUser.Params.Clear;
-  //dmUser.sqlcWebUser.LibraryName := LibraryName;
-  //dmUser.sqlcWebUser.VendorLib := VendorLib;
-  //dmUser.sqlcWebUser.GetDriverFunc := GetDriverFunc;
-  //dmUser.sqlcWebUser.DriverName := DriverName;
-  dmUser.sqlcWebUser.Params.Append('DriverName='+DriverName);
-  dmUser.sqlcWebUser.Params.Append('LibraryName='+LibraryName);
-  dmUser.sqlcWebUser.Params.Append('VendorLib='+VendorLib);
-  dmUser.sqlcWebUser.Params.Append('GetDriverFunc='+GetDriverFunc);
-  dmUser.sqlcWebUser.Params.Append('Database='+UserControlPath);
-  dmUser.sqlcWebUser.Params.Append('User_Name='+DBUserName);
-  dmUser.sqlcWebUser.Params.Append('Password='+DBPassword);
-  dmUser.sqlcWebUser.Params.Append('SQLDialect='+DBSQLDialectStr);
-  dmUser.sqlcWebUser.Params.Append('Charset='+DBCharSet);
-  dmUser.sqlcWebUser.Params.Append('LocaleCode=0000');
-  dmUser.sqlcWebUser.Params.Append('DevartFirebird TransIsolation=ReadCommitted');
-  dmUser.sqlcWebUser.Params.Append('WaitOnLocks=True');
-  dmUser.sqlcWebUser.Params.Append('CharLength=1');
-  dmUser.sqlcWebUser.Params.Append('EnableBCD=false'); //previously always true
-  dmUser.sqlcWebUser.Params.Append('OptimizedNumerics=False');
-  dmUser.sqlcWebUser.Params.Append('LongStrings=True');
-  dmUser.sqlcWebUser.Params.Append('UseQuoteChar=False');
-  dmUser.sqlcWebUser.Params.Append('FetchAll=False');
-  dmUser.sqlcWebUser.Params.Append('UseUnicode=False');
-  //define connection parameters for StratDB connection
-  dmStrat.sqlcStrat.Connected := false;
-  dmStrat.sqlcStrat.Params.Clear;
-  //dmStrat.sqlcStrat.LibraryName := LibraryName;
-  //dmStrat.sqlcStrat.VendorLib := VendorLib;
-  //dmStrat.sqlcStrat.GetDriverFunc := GetDriverFunc;
-  dmStrat.sqlcStrat.Params.Append('LibraryName='+LibraryName);
-  dmStrat.sqlcStrat.Params.Append('VendorLib='+VendorLib);
-  dmStrat.sqlcStrat.Params.Append('GetDriverFunc='+GetDriverFunc);
-  dmStrat.sqlcStrat.Params.Append('DriverName='+DriverName);
-  dmStrat.sqlcStrat.Params.Append('Database='+StratDBPath);
-  dmStrat.sqlcStrat.Params.Append('User_Name='+DBUserName);
-  dmStrat.sqlcStrat.Params.Append('Password='+DBPassword);
-  dmStrat.sqlcStrat.Params.Append('SQLDialect='+DBSQLDialectStr);
-  dmStrat.sqlcStrat.Params.Append('Charset='+DBCharSet);
-  dmStrat.sqlcStrat.Params.Append('LocaleCode=0000');
-  dmStrat.sqlcStrat.Params.Append('DevartFirebird TransIsolation=ReadCommitted');
-  dmStrat.sqlcStrat.Params.Append('WaitOnLocks=True');
-  dmStrat.sqlcStrat.Params.Append('CharLength=1');
-  dmStrat.sqlcStrat.Params.Append('EnableBCD=false');
-  dmStrat.sqlcStrat.Params.Append('OptimizedNumerics=False');
-  dmStrat.sqlcStrat.Params.Append('LongStrings=True');
-  dmStrat.sqlcStrat.Params.Append('UseQuoteChar=False');
-  dmStrat.sqlcStrat.Params.Append('FetchAll=False');
-  dmStrat.sqlcStrat.Params.Append('UseUnicode=False');
-  //define connection parameters for StratDB charts connection
-  dmStratC.sqlcStrat.Connected := false;
-  dmStratC.sqlcStrat.Params.Clear;
-  //dmStratC.sqlcStrat.LibraryName := LibraryName;
-  //dmStratC.sqlcStrat.VendorLib := VendorLib;
-  //dmStratC.sqlcStrat.GetDriverFunc := GetDriverFunc;
-  dmStratC.sqlcStrat.Params.Append('LibraryName='+LibraryName);
-  dmStratC.sqlcStrat.Params.Append('VendorLib='+VendorLib);
-  dmStratC.sqlcStrat.Params.Append('GetDriverFunc='+GetDriverFunc);
-  dmStratC.sqlcStrat.Params.Append('DriverName='+DriverName);
-  dmStratC.sqlcStrat.Params.Append('Database='+StratDBPath);
-  dmStratC.sqlcStrat.Params.Append('User_Name='+DBUserName);
-  dmStratC.sqlcStrat.Params.Append('Password='+DBPassword);
-  dmStratC.sqlcStrat.Params.Append('SQLDialect='+DBSQLDialectStr);
-  dmStratC.sqlcStrat.Params.Append('Charset='+DBCharSet);
-  dmStratC.sqlcStrat.Params.Append('LocaleCode=0000');
-  dmStratC.sqlcStrat.Params.Append('DevartFirebird TransIsolation=ReadCommitted');
-  dmStratC.sqlcStrat.Params.Append('WaitOnLocks=True');
-  dmStratC.sqlcStrat.Params.Append('CharLength=1');
-  dmStratC.sqlcStrat.Params.Append('EnableBCD=false');
-  dmStratC.sqlcStrat.Params.Append('OptimizedNumerics=False');
-  dmStratC.sqlcStrat.Params.Append('LongStrings=True');
-  dmStratC.sqlcStrat.Params.Append('UseQuoteChar=False');
-  dmStratC.sqlcStrat.Params.Append('FetchAll=False');
-  dmStratC.sqlcStrat.Params.Append('UseUnicode=False');
-  //define connection parameters for StratDB data connection
-  dmStratD.sqlcStrat.Connected := false;
-  dmStratD.sqlcStrat.Params.Clear;
-  //dmStratD.sqlcStrat.LibraryName := LibraryName;
-  //dmStratD.sqlcStrat.VendorLib := VendorLib;
-  //dmStratD.sqlcStrat.GetDriverFunc := GetDriverFunc;
-  dmStratD.sqlcStrat.Params.Append('LibraryName='+LibraryName);
-  dmStratD.sqlcStrat.Params.Append('VendorLib='+VendorLib);
-  dmStratD.sqlcStrat.Params.Append('GetDriverFunc='+GetDriverFunc);
-  dmStratD.sqlcStrat.Params.Append('DriverName='+DriverName);
-  dmStratD.sqlcStrat.Params.Append('Database='+StratDBPath);
-  dmStratD.sqlcStrat.Params.Append('User_Name='+DBUserName);
-  dmStratD.sqlcStrat.Params.Append('Password='+DBPassword);
-  dmStratD.sqlcStrat.Params.Append('SQLDialect='+DBSQLDialectStr);
-  dmStratD.sqlcStrat.Params.Append('Charset='+DBCharSet);
-  dmStratD.sqlcStrat.Params.Append('LocaleCode=0000');
-  dmStratD.sqlcStrat.Params.Append('DevartFirebird TransIsolation=ReadCommitted');
-  dmStratD.sqlcStrat.Params.Append('WaitOnLocks=True');
-  dmStratD.sqlcStrat.Params.Append('CharLength=1');
-  dmStratD.sqlcStrat.Params.Append('EnableBCD=false');
-  dmStratD.sqlcStrat.Params.Append('OptimizedNumerics=False');
-  dmStratD.sqlcStrat.Params.Append('LongStrings=True');
-  dmStratD.sqlcStrat.Params.Append('UseQuoteChar=False');
-  dmStratD.sqlcStrat.Params.Append('FetchAll=False');
-  dmStratD.sqlcStrat.Params.Append('UseUnicode=False');
-  //define connection parameters for DateView connection
-  dmDV.sqlcDateView.Connected := false;
-  dmDV.sqlcDateView.Params.Clear;
-  //dmDV.sqlcDateView.LibraryName := LibraryName;
-  //dmDV.sqlcDateView.VendorLib := VendorLib;
-  //dmDV.sqlcDateView.GetDriverFunc := GetDriverFunc;
-  dmDV.sqlcDateView.Params.Append('LibraryName='+LibraryName);
-  dmDV.sqlcDateView.Params.Append('VendorLib='+VendorLib);
-  dmDV.sqlcDateView.Params.Append('GetDriverFunc='+GetDriverFunc);
-  dmDV.sqlcDateView.Params.Append('DriverName='+DriverName);
-  dmDV.sqlcDateView.Params.Append('Database='+DateViewPath);
-  dmDV.sqlcDateView.Params.Append('User_Name='+DBUserName);
-  dmDV.sqlcDateView.Params.Append('Password='+DBPassword);
-  dmDV.sqlcDateView.Params.Append('SQLDialect='+DBSQLDialectStr);
-  dmDV.sqlcDateView.Params.Append('Charset='+DBCharSet);
-  dmDV.sqlcDateView.Params.Append('LocaleCode=0000');
-  dmDV.sqlcDateView.Params.Append('DevartFirebird TransIsolation=ReadCommitted');
-  dmDV.sqlcDateView.Params.Append('WaitOnLocks=True');
-  dmDV.sqlcDateView.Params.Append('CharLength=1');
-  dmDV.sqlcDateView.Params.Append('EnableBCD=false');
-  dmDV.sqlcDateView.Params.Append('OptimizedNumerics=False');
-  dmDV.sqlcDateView.Params.Append('LongStrings=True');
-  dmDV.sqlcDateView.Params.Append('UseQuoteChar=False');
-  dmDV.sqlcDateView.Params.Append('FetchAll=False');
-  dmDV.sqlcDateView.Params.Append('UseUnicode=False');
-  //define connection parameters for LIP connection
-  dmLIP.sqlcLIP.Connected := false;
-  dmLIP.sqlcLIP.Params.Clear;
-  //dmLIP.sqlcLIP.LibraryName := LibraryName;
-  //dmLIP.sqlcLIP.VendorLib := VendorLib;
-  //dmLIP.sqlcLIP.GetDriverFunc := GetDriverFunc;
-  dmLIP.sqlcLIP.Params.Append('LibraryName='+LibraryName);
-  dmLIP.sqlcLIP.Params.Append('VendorLib='+VendorLib);
-  dmLIP.sqlcLIP.Params.Append('GetDriverFunc='+GetDriverFunc);
-  dmLIP.sqlcLIP.Params.Append('DriverName='+DriverName);
-  dmLIP.sqlcLIP.Params.Append('Database='+StratDBPath);
-  dmLIP.sqlcLIP.Params.Append('User_Name='+DBUserName);
-  dmLIP.sqlcLIP.Params.Append('Password='+DBPassword);
-  dmLIP.sqlcLIP.Params.Append('SQLDialect='+DBSQLDialectStr);
-  dmLIP.sqlcLIP.Params.Append('Charset='+DBCharSet);
-  dmLIP.sqlcLIP.Params.Append('LocaleCode=0000');
-  dmLIP.sqlcLIP.Params.Append('DevartFirebird TransIsolation=ReadCommitted');
-  dmLIP.sqlcLIP.Params.Append('WaitOnLocks=True');
-  dmLIP.sqlcLIP.Params.Append('CharLength=1');
-  dmLIP.sqlcLIP.Params.Append('EnableBCD=false');
-  dmLIP.sqlcLIP.Params.Append('OptimizedNumerics=False');
-  dmLIP.sqlcLIP.Params.Append('LongStrings=True');
-  dmLIP.sqlcLIP.Params.Append('UseQuoteChar=False');
-  dmLIP.sqlcLIP.Params.Append('FetchAll=False');
-  dmLIP.sqlcLIP.Params.Append('UseUnicode=False');
-  //define connection parameters for Options connection
-  dmOpt.sqlcStrat.Connected := false;
-  dmOpt.sqlcStrat.Params.Clear;
-  //dmOpt.sqlcStrat.LibraryName := LibraryName;
-  //dmOpt.sqlcStrat.VendorLib := VendorLib;
-  //dmOpt.sqlcStrat.GetDriverFunc := GetDriverFunc;
-  dmOpt.sqlcStrat.Params.Append('LibraryName='+LibraryName);
-  dmOpt.sqlcStrat.Params.Append('VendorLib='+VendorLib);
-  dmOpt.sqlcStrat.Params.Append('GetDriverFunc='+GetDriverFunc);
-  dmOpt.sqlcStrat.Params.Append('DriverName='+DriverName);
-  dmOpt.sqlcStrat.Params.Append('Database='+StratDBPath);
-  dmOpt.sqlcStrat.Params.Append('User_Name='+DBUserName);
-  dmOpt.sqlcStrat.Params.Append('Password='+DBPassword);
-  dmOpt.sqlcStrat.Params.Append('SQLDialect='+DBSQLDialectStr);
-  dmOpt.sqlcStrat.Params.Append('Charset='+DBCharSet);
-  dmOpt.sqlcStrat.Params.Append('LocaleCode=0000');
-  dmOpt.sqlcStrat.Params.Append('DevartFirebird TransIsolation=ReadCommitted');
-  dmOpt.sqlcStrat.Params.Append('WaitOnLocks=True');
-  dmOpt.sqlcStrat.Params.Append('CharLength=1');
-  dmOpt.sqlcStrat.Params.Append('EnableBCD=false');
-  dmOpt.sqlcStrat.Params.Append('OptimizedNumerics=False');
-  dmOpt.sqlcStrat.Params.Append('LongStrings=True');
-  dmOpt.sqlcStrat.Params.Append('UseQuoteChar=False');
-  dmOpt.sqlcStrat.Params.Append('FetchAll=False');
-  dmOpt.sqlcStrat.Params.Append('UseUnicode=False');
-  //define connection parameters for Replication connection
-  {
-  dmReplicate.sqlcStrat.Connected := false;
-  dmReplicate.sqlcStrat.Params.Clear;
-  dmReplicate.sqlcStrat.Params.Append('DriverName='+DriverName);
-  dmReplicate.sqlcStrat.Params.Append('Database='+StratDBPath);
-  dmReplicate.sqlcStrat.Params.Append('User_Name='+DBUserName);
-  dmReplicate.sqlcStrat.Params.Append('Password='+DBPassword);
-  dmReplicate.sqlcStrat.Params.Append('SQLDialect='+DBSQLDialectStr);
-  dmReplicate.sqlcStrat.Params.Append('Charset='+DBCharSet);
-  dmReplicate.sqlcStrat.Params.Append('LocaleCode=0000');
-  dmReplicate.sqlcStrat.Params.Append('DevartInterBase TransIsolation=ReadCommitted');
-  dmReplicate.sqlcStrat.Params.Append('WaitOnLocks=True');
-  dmReplicate.sqlcStrat.Params.Append('CharLength=1');
-  dmReplicate.sqlcStrat.Params.Append('EnableBCD=True');
-  dmReplicate.sqlcStrat.Params.Append('OptimizedNumerics=True');
-  dmReplicate.sqlcStrat.Params.Append('LongStrings=True');
-  dmReplicate.sqlcStrat.Params.Append('UseQuoteChar=False');
-  dmReplicate.sqlcStrat.Params.Append('FetchAll=False');
-  dmReplicate.sqlcStrat.Params.Append('UseUnicode=False');
-  }
-  if (DBMonitor = 'Active') then
-  begin
-    dmUser.SQLMonitor1.Active := true;
-    dmStrat.SQLMonitor1.Active := true;
-    dmStratC.SQLMonitor1.Active := true;
-    dmStratD.SQLMonitor1.Active := true;
-    dmDV.SQLMonitor1.Active := true;
-    dmLIP.SQLMonitor1.Active := true;
-    dmOpt.SQLMonitor1.Active := true;
-    //dmReplicate.SQLMonitor1.Active := true;
-  end else
-  begin
-    dmUser.SQLMonitor1.Active := false;
-    dmStrat.SQLMonitor1.Active := false;
-    dmStratC.SQLMonitor1.Active := false;
-    dmStratD.SQLMonitor1.Active := false;
-    dmDV.SQLMonitor1.Active := false;
-    dmLIP.SQLMonitor1.Active := false;
-    dmOpt.SQLMonitor1.Active := false;
-    //dmReplicate.SQLMonitor1.Active := false;
-  end;
+    //define connection parameters for UserControl connection
+    try
+      dmUser.sqlcWebUser.Connected := false;
+      dmUser.sqlcWebUser.Params.Clear;
+      dmUser.sqlcWebUser.Params.Append('DriverName='+DriverName);
+      dmUser.sqlcWebUser.Params.Append('LibraryName='+LibraryName);
+      dmUser.sqlcWebUser.Params.Append('VendorLib='+VendorLib);
+      dmUser.sqlcWebUser.Params.Append('GetDriverFunc='+GetDriverFunc);
+      dmUser.sqlcWebUser.Params.Append('Database='+UserControlPath);
+      dmUser.sqlcWebUser.Params.Append('User_Name='+DBUserName);
+      dmUser.sqlcWebUser.Params.Append('Password='+DBPassword);
+      dmUser.sqlcWebUser.Params.Append('SQLDialect='+DBSQLDialectStr);
+      dmUser.sqlcWebUser.Params.Append('Charset='+DBCharSet);
+      //dmUser.sqlcWebUser.Params.Append('LocaleCode=0000');
+      dmUser.sqlcWebUser.Params.Append('DevartFirebird TransIsolation=ReadCommitted');
+      dmUser.sqlcWebUser.Params.Append('UseUnicode=true');
+    except
+      WebApplication.ShowMessage('Problem defining dmUser.sqlcWebUser');
+    end;
+    //define connection parameters for StratDB connection
+    try
+      dmStrat.sqlcStrat.Connected := false;
+      dmStrat.sqlcStrat.Params.Clear;
+      dmStrat.sqlcStrat.Params.Append('LibraryName='+LibraryName);
+      dmStrat.sqlcStrat.Params.Append('VendorLib='+VendorLib);
+      dmStrat.sqlcStrat.Params.Append('GetDriverFunc='+GetDriverFunc);
+      dmStrat.sqlcStrat.Params.Append('DriverName='+DriverName);
+      dmStrat.sqlcStrat.Params.Append('Database='+StratDBPath);
+      dmStrat.sqlcStrat.Params.Append('User_Name='+DBUserName);
+      dmStrat.sqlcStrat.Params.Append('Password='+DBPassword);
+      dmStrat.sqlcStrat.Params.Append('SQLDialect='+DBSQLDialectStr);
+      dmStrat.sqlcStrat.Params.Append('Charset='+DBCharSet);
+      //dmStrat.sqlcStrat.Params.Append('LocaleCode=0000');
+      dmStrat.sqlcStrat.Params.Append('DevartFirebird TransIsolation=ReadCommitted');
+      dmStrat.sqlcStrat.Params.Append('UseUnicode=true');
+    except
+      WebApplication.ShowMessage('Problem defining dmStrat.sqlcStrat');
+    end;
+    //define connection parameters for StratDB charts connection
+    try
+      dmStratC.sqlcStrat.Connected := false;
+      dmStratC.sqlcStrat.Params.Clear;
+      dmStratC.sqlcStrat.Params.Append('LibraryName='+LibraryName);
+      dmStratC.sqlcStrat.Params.Append('VendorLib='+VendorLib);
+      dmStratC.sqlcStrat.Params.Append('GetDriverFunc='+GetDriverFunc);
+      dmStratC.sqlcStrat.Params.Append('DriverName='+DriverName);
+      dmStratC.sqlcStrat.Params.Append('Database='+StratDBPath);
+      dmStratC.sqlcStrat.Params.Append('User_Name='+DBUserName);
+      dmStratC.sqlcStrat.Params.Append('Password='+DBPassword);
+      dmStratC.sqlcStrat.Params.Append('SQLDialect='+DBSQLDialectStr);
+      dmStratC.sqlcStrat.Params.Append('Charset='+DBCharSet);
+      //dmStratC.sqlcStrat.Params.Append('LocaleCode=0000');
+      dmStratC.sqlcStrat.Params.Append('DevartFirebird TransIsolation=ReadCommitted');
+      dmStratC.sqlcStrat.Params.Append('UseUnicode=true');
+    except
+      WebApplication.ShowMessage('Problem defining dmStratC.sqlcStrat');
+    end;
+    //define connection parameters for StratDB data connection
+    try
+      dmStratD.sqlcStrat.Connected := false;
+      dmStratD.sqlcStrat.Params.Clear;
+      dmStratD.sqlcStrat.Params.Append('LibraryName='+LibraryName);
+      dmStratD.sqlcStrat.Params.Append('VendorLib='+VendorLib);
+      dmStratD.sqlcStrat.Params.Append('GetDriverFunc='+GetDriverFunc);
+      dmStratD.sqlcStrat.Params.Append('DriverName='+DriverName);
+      dmStratD.sqlcStrat.Params.Append('Database='+StratDBPath);
+      dmStratD.sqlcStrat.Params.Append('User_Name='+DBUserName);
+      dmStratD.sqlcStrat.Params.Append('Password='+DBPassword);
+      dmStratD.sqlcStrat.Params.Append('SQLDialect='+DBSQLDialectStr);
+      dmStratD.sqlcStrat.Params.Append('Charset='+DBCharSet);
+      //dmStratD.sqlcStrat.Params.Append('LocaleCode=0000');
+      dmStratD.sqlcStrat.Params.Append('DevartFirebird TransIsolation=ReadCommitted');
+      dmStratD.sqlcStrat.Params.Append('UseUnicode=true');
+    except
+      WebApplication.ShowMessage('Problem defining dmStratD.sqlcStrat');
+    end;
+    //define connection parameters for DateView connection
+    try
+      dmDV.sqlcDateView.Connected := false;
+      dmDV.sqlcDateView.Params.Clear;
+      dmDV.sqlcDateView.Params.Append('LibraryName='+LibraryName);
+      dmDV.sqlcDateView.Params.Append('VendorLib='+VendorLib);
+      dmDV.sqlcDateView.Params.Append('GetDriverFunc='+GetDriverFunc);
+      dmDV.sqlcDateView.Params.Append('DriverName='+DriverName);
+      dmDV.sqlcDateView.Params.Append('Database='+DateViewPath);
+      dmDV.sqlcDateView.Params.Append('User_Name='+DBUserName);
+      dmDV.sqlcDateView.Params.Append('Password='+DBPassword);
+      dmDV.sqlcDateView.Params.Append('SQLDialect='+DBSQLDialectStr);
+      dmDV.sqlcDateView.Params.Append('Charset='+DBCharSet);
+      //dmDV.sqlcDateView.Params.Append('LocaleCode=0000');
+      dmDV.sqlcDateView.Params.Append('DevartFirebird TransIsolation=ReadCommitted');
+      dmDV.sqlcDateView.Params.Append('UseUnicode=true');
+    except
+      WebApplication.ShowMessage('Problem defining dmDV.sqlcDateView');
+    end;
+    //define connection parameters for LIP connection
+    try
+      dmLIP.sqlcLIP.Connected := false;
+      dmLIP.sqlcLIP.Params.Clear;
+      dmLIP.sqlcLIP.Params.Append('LibraryName='+LibraryName);
+      dmLIP.sqlcLIP.Params.Append('VendorLib='+VendorLib);
+      dmLIP.sqlcLIP.Params.Append('GetDriverFunc='+GetDriverFunc);
+      dmLIP.sqlcLIP.Params.Append('DriverName='+DriverName);
+      dmLIP.sqlcLIP.Params.Append('Database='+StratDBPath);
+      dmLIP.sqlcLIP.Params.Append('User_Name='+DBUserName);
+      dmLIP.sqlcLIP.Params.Append('Password='+DBPassword);
+      dmLIP.sqlcLIP.Params.Append('SQLDialect='+DBSQLDialectStr);
+      dmLIP.sqlcLIP.Params.Append('Charset='+DBCharSet);
+      //dmLIP.sqlcLIP.Params.Append('LocaleCode=0000');
+      dmLIP.sqlcLIP.Params.Append('DevartFirebird TransIsolation=ReadCommitted');
+      dmLIP.sqlcLIP.Params.Append('UseUnicode=true');
+    except
+      WebApplication.ShowMessage('Problem defining dmLIP.sqlcLIP');
+    end;
+    //define connection parameters for Options connection
+    try
+      dmOpt.sqlcStrat.Connected := false;
+      dmOpt.sqlcStrat.Params.Clear;
+      dmOpt.sqlcStrat.Params.Append('LibraryName='+LibraryName);
+      dmOpt.sqlcStrat.Params.Append('VendorLib='+VendorLib);
+      dmOpt.sqlcStrat.Params.Append('GetDriverFunc='+GetDriverFunc);
+      dmOpt.sqlcStrat.Params.Append('DriverName='+DriverName);
+      dmOpt.sqlcStrat.Params.Append('Database='+StratDBPath);
+      dmOpt.sqlcStrat.Params.Append('User_Name='+DBUserName);
+      dmOpt.sqlcStrat.Params.Append('Password='+DBPassword);
+      dmOpt.sqlcStrat.Params.Append('SQLDialect='+DBSQLDialectStr);
+      dmOpt.sqlcStrat.Params.Append('Charset='+DBCharSet);
+      //dmOpt.sqlcStrat.Params.Append('LocaleCode=0000');
+      dmOpt.sqlcStrat.Params.Append('DevartFirebird TransIsolation=ReadCommitted');
+      dmOpt.sqlcStrat.Params.Append('UseUnicode=true');
+    except
+      WebApplication.ShowMessage('Problem defining dmOpt.sqlcStrat');
+    end;
+    if (DBMonitor = 'Active') then
+    begin
+      dmUser.SQLMonitor1.Active := true;
+      dmStrat.SQLMonitor1.Active := true;
+      dmStratC.SQLMonitor1.Active := true;
+      dmStratD.SQLMonitor1.Active := true;
+      dmDV.SQLMonitor1.Active := true;
+      dmLIP.SQLMonitor1.Active := true;
+      dmOpt.SQLMonitor1.Active := true;
+    end else
+    begin
+      dmUser.SQLMonitor1.Active := false;
+      dmStrat.SQLMonitor1.Active := false;
+      dmStratC.SQLMonitor1.Active := false;
+      dmStratD.SQLMonitor1.Active := false;
+      dmDV.SQLMonitor1.Active := false;
+      dmLIP.SQLMonitor1.Active := false;
+      dmOpt.SQLMonitor1.Active := false;
+    end;
   finally
     AppIni.Free;
   end;
@@ -576,9 +566,6 @@ end;
 
 constructor TUserSession.Create(AOwner: TComponent);
 begin
-//next 2 line belong in BaseNewSession
-  //aSession.Data := TUserSession.Create(nil,aSession);
-  //GetIniFile;
   inherited Create(AOwner);
   // This name should be unique per server / session
   // We use the memory address of the UserSession object as a UserSessionID.
@@ -591,7 +578,6 @@ begin
   dmStratC := TdmStratC.Create(Self);
   dmLIP := TdmLIP.Create(Self);
   dmStratD := TdmStratD.Create(Self);
-  //dmReplicate := TdmReplicate.Create(Self);
   dmUser.sqlcWebUser.Connected := false;
   dmStrat.sqlcStrat.Connected := false;
   dmDV.sqlcDateView.Connected := false;
@@ -599,9 +585,6 @@ begin
   dmLIP.sqlcLIP.Connected := false;
   dmStratC.sqlcStrat.Connected := false;
   dmStratD.sqlcStrat.Connected := false;
-  //dmReplicate.sqlcStrat.Connected := false;
-  //dmReplicate.sqlcLIP.Connected := false;
-
   ContinentValues := TStringList.Create;
   AreaValues := TStringList.Create;
   UnitValues := TStringList.Create;
@@ -656,7 +639,6 @@ begin
   FreeAndNil(DepositStatusValues);
   FreeAndNil(SampleZoneValues);
   FreeAndNil(UserProjectValues);
-  //dmReplicate.sqlcStrat.Connected := false;
   dmStrat.sqlcStrat.Connected := false;
   dmOpt.sqlcStrat.Connected := false;
   dmDV.sqlcDateView.Connected := false;
@@ -669,8 +651,6 @@ end;
 
 procedure TUserSession.AfterLogin;
 begin
-  //UserSession.DoMemCheck := false;  //bme
-  //if UserSession.DoMemCheck then MemChk;
   UserSession.IsFirstShow := true;
   UserSession.WhereAmI := 'AfterLogin';
   UserSession.ThisProgram := 'StratDB';
@@ -681,20 +661,20 @@ begin
   UserSession.CanModify := false;
   UserSession.CanInsert := false;
   UserSession.CanDelete := false;
-  UserSession.IsDeveloper := false;        //bme  - should be false here
+  UserSession.IsDeveloper := true;        //bme  - should be false here
   UserSession.CanValidate := false;
   UserSession.CanExport := false;
   UserSession.CanViewPlus := false;
   UserSession.CanModifyPlus := false;
-  //dmUser.SetDeveloperData(UserSession.ThisProgram+'  '+UserSession.WhereAmI);
-  //dmUser.SetDeveloperData('before IncrementNumUses');
+  dmUser.SetDeveloperData(UserSession.ThisProgram+'  '+UserSession.WhereAmI);
+  dmUser.SetDeveloperData('before IncrementNumUses');
   CheckRights(UserSession.ThisProgram,UserSession.UserID,UserSession.UserPassword,
               ValueForCanView,
               ValueForCanModify,ValueForCanInsert,ValueForCanDelete,
               ValueForCanValidate,ValueForCanExport,ValueForCanViewPlus,
               ValueForCanModifyPlus,ValueForIsDeveloper);
-  //dmUser.SetDeveloperData('after CheckRights');
-  //dmUser.SetDeveloperData('UserSession.UserID = '+UserSession.UserID);
+  dmUser.SetDeveloperData('after CheckRights');
+  dmUser.SetDeveloperData('UserSession.UserID = '+UserSession.UserID);
   //try
   //  dmStrat.cdsUsers.Close;
   //except
@@ -702,9 +682,9 @@ begin
   dmStrat.qUsers.Close;
   dmStrat.qUsers.ParamByName('USERID').AsString := UserSession.UserID;
   dmStrat.cdsUsers.Close;
-  //dmUser.SetDeveloperData('before cdsUsers.Open 1');
+  dmUser.SetDeveloperData('before cdsUsers.Open 1');
   dmStrat.cdsUsers.Open;
-  //dmUser.SetDeveloperData('after cdsUsers.Open 1  RecordCount = '+IntToStr(dmStrat.cdsUsers.RecordCount));
+  dmUser.SetDeveloperData('after cdsUsers.Open 1  RecordCount = '+IntToStr(dmStrat.cdsUsers.RecordCount));
   if (dmStrat.cdsUsers.RecordCount < 1) then
   begin
     try

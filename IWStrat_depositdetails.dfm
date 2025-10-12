@@ -17,8 +17,9 @@ object ISFDepositDetails: TISFDepositDetails
   LockOnSubmit = True
   ShowHint = True
   DesignLeft = 2
-  DesignTop = -271
+  DesignTop = 2
   object IWLabel17: TIWLabel
+    AlignWithMargins = False
     Left = 12
     Top = 249
     Width = 79
@@ -27,11 +28,13 @@ object ISFDepositDetails: TISFDepositDetails
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = []
+    Font.PxSize = 12
     HasTabOrder = False
     FriendlyName = 'IWLabel11'
     Caption = 'Deposit Clan'
   end
   object IWDBLookupComboBox2: TIWDBLookupComboBox
+    AlignWithMargins = False
     Left = 108
     Top = 244
     Width = 461
@@ -41,6 +44,7 @@ object ISFDepositDetails: TISFDepositDetails
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     Editable = False
     NonEditableAsLabel = True
     TabOrder = 38
@@ -64,6 +68,7 @@ object ISFDepositDetails: TISFDepositDetails
     BorderOptions.NumericWidth = 0
     BorderOptions.Style = cbsNone
     object rectLeft: TIWRectangle
+      AlignWithMargins = False
       Left = 0
       Top = 0
       Width = 83
@@ -73,6 +78,7 @@ object ISFDepositDetails: TISFDepositDetails
       Font.Color = clWebBLACK
       Font.Size = 10
       Font.Style = []
+      Font.PxSize = 13
       BorderOptions.Width = 0
       FriendlyName = 'rectLeft'
       Color = clWebLAVENDER
@@ -100,57 +106,49 @@ object ISFDepositDetails: TISFDepositDetails
       BorderOptions.NumericWidth = 0
       BorderOptions.Style = cbsNone
       object iwbDetailsEdit: TIWButton
+        AlignWithMargins = False
         Left = 223
         Top = 19
         Width = 180
         Height = 25
         Caption = 'Edit this record'
         Color = clWebLEMONCHIFFON
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         FriendlyName = 'iwbDetailsEdit'
         TabOrder = 11
         OnClick = iwbDetailsEditClick
       end
       object iwbReturn: TIWButton
+        AlignWithMargins = False
         Left = 16
         Top = 19
         Width = 180
         Height = 25
         Caption = 'Return to results list'
         Color = clWebLIGHTGREEN
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         FriendlyName = 'iwbReturn'
         TabOrder = 9
         OnClick = iwbReturnClick
       end
       object iwbApplyUpdates: TIWButton
+        AlignWithMargins = False
         Left = 430
         Top = 19
         Width = 180
         Height = 25
         Caption = 'Apply updates'
         Color = clWebPEACHPUFF
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         FriendlyName = 'iwbDetailsEdit'
         TabOrder = 13
         OnClick = iwbApplyUpdatesClick
       end
       object iwbCancelUpdates: TIWButton
+        AlignWithMargins = False
         Left = 637
         Top = 19
         Width = 180
         Height = 25
         Caption = 'Cancel updates'
         Color = clWebLIGHTSALMON
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         FriendlyName = 'iwbDetailsEdit'
         TabOrder = 19
         OnClick = iwbCancelUpdatesClick
@@ -168,6 +166,7 @@ object ISFDepositDetails: TISFDepositDetails
       BorderOptions.Style = cbsNone
       Color = clWebHONEYDEW
       object IWLabel5: TIWLabel
+        AlignWithMargins = False
         Left = 16
         Top = 9
         Width = 45
@@ -176,11 +175,13 @@ object ISFDepositDetails: TISFDepositDetails
         Font.FontName = 'Arial'
         Font.Size = 12
         Font.Style = [fsBold, fsUnderline]
+        Font.PxSize = 16
         HasTabOrder = False
         FriendlyName = 'IWLabel1'
         Caption = 'Unit :'
       end
       object IWLabel3: TIWLabel
+        AlignWithMargins = False
         Left = 12
         Top = 44
         Width = 47
@@ -189,12 +190,14 @@ object ISFDepositDetails: TISFDepositDetails
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel3'
         Caption = 'Deposit'
       end
       object IWDBEdit3: TIWDBEdit
+        AlignWithMargins = False
         Left = 108
         Top = 41
         Width = 357
@@ -207,6 +210,7 @@ object ISFDepositDetails: TISFDepositDetails
         Font.FontName = 'Arial'
         Font.Size = 13
         Font.Style = [fsBold]
+        Font.PxSize = 17
         FriendlyName = 'IWDBEdit1'
         SubmitOnAsyncEvent = True
         AutoEditable = True
@@ -215,6 +219,7 @@ object ISFDepositDetails: TISFDepositDetails
         PasswordPrompt = False
       end
       object IWLabel2: TIWLabel
+        AlignWithMargins = False
         Left = 12
         Top = 98
         Width = 27
@@ -223,12 +228,14 @@ object ISFDepositDetails: TISFDepositDetails
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel2'
         Caption = 'Area'
       end
       object IWLabel11: TIWLabel
+        AlignWithMargins = False
         Left = 12
         Top = 128
         Width = 107
@@ -237,12 +244,14 @@ object ISFDepositDetails: TISFDepositDetails
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel11'
         Caption = 'Appr. Miner. age ='
       end
       object IWDBEdit11: TIWDBEdit
+        AlignWithMargins = False
         Left = 124
         Top = 125
         Width = 62
@@ -255,6 +264,7 @@ object ISFDepositDetails: TISFDepositDetails
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = [fsBold]
+        Font.PxSize = 12
         FriendlyName = 'IWDBEdit1'
         SubmitOnAsyncEvent = True
         TabOrder = 3
@@ -264,6 +274,7 @@ object ISFDepositDetails: TISFDepositDetails
         PasswordPrompt = False
       end
       object IWLabel6: TIWLabel
+        AlignWithMargins = False
         Left = 192
         Top = 128
         Width = 15
@@ -272,12 +283,14 @@ object ISFDepositDetails: TISFDepositDetails
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel11'
         Caption = '+/-'
       end
       object IWDBEdit5: TIWDBEdit
+        AlignWithMargins = False
         Left = 213
         Top = 125
         Width = 53
@@ -290,6 +303,7 @@ object ISFDepositDetails: TISFDepositDetails
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = [fsBold]
+        Font.PxSize = 12
         FriendlyName = 'IWDBEdit1'
         SubmitOnAsyncEvent = True
         TabOrder = 4
@@ -299,6 +313,7 @@ object ISFDepositDetails: TISFDepositDetails
         PasswordPrompt = False
       end
       object IWLabel1: TIWLabel
+        AlignWithMargins = False
         Left = 12
         Top = 71
         Width = 13
@@ -307,12 +322,14 @@ object ISFDepositDetails: TISFDepositDetails
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel1'
         Caption = 'ID'
       end
       object IWDBEdit1: TIWDBEdit
+        AlignWithMargins = False
         Left = 108
         Top = 68
         Width = 121
@@ -324,6 +341,7 @@ object ISFDepositDetails: TISFDepositDetails
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = [fsBold]
+        Font.PxSize = 12
         FriendlyName = 'IWDBEdit1'
         SubmitOnAsyncEvent = True
         TabOrder = 1
@@ -333,6 +351,7 @@ object ISFDepositDetails: TISFDepositDetails
         PasswordPrompt = False
       end
       object IWLabel26: TIWLabel
+        AlignWithMargins = False
         Left = 12
         Top = 249
         Width = 79
@@ -341,12 +360,14 @@ object ISFDepositDetails: TISFDepositDetails
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel11'
         Caption = 'Deposit Clan'
       end
       object iwDBlcbClan: TIWDBLookupComboBox
+        AlignWithMargins = False
         Left = 108
         Top = 244
         Width = 461
@@ -356,6 +377,7 @@ object ISFDepositDetails: TISFDepositDetails
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = [fsBold]
+        Font.PxSize = 12
         Editable = False
         NonEditableAsLabel = True
         TabOrder = 16
@@ -370,6 +392,7 @@ object ISFDepositDetails: TISFDepositDetails
         NoSelectionText = '-- No Selection --'
       end
       object IWLabel28: TIWLabel
+        AlignWithMargins = False
         Left = 12
         Top = 313
         Width = 94
@@ -378,12 +401,14 @@ object ISFDepositDetails: TISFDepositDetails
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel11'
         Caption = 'From Database'
       end
       object iwDBlcbOtherDatabase: TIWDBLookupComboBox
+        AlignWithMargins = False
         Left = 108
         Top = 310
         Width = 461
@@ -393,6 +418,7 @@ object ISFDepositDetails: TISFDepositDetails
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = [fsBold]
+        Font.PxSize = 12
         Editable = False
         NonEditableAsLabel = True
         TabOrder = 20
@@ -407,6 +433,7 @@ object ISFDepositDetails: TISFDepositDetails
         NoSelectionText = '-- No Selection --'
       end
       object iwlDatesAvailable: TIWLabel
+        AlignWithMargins = False
         Left = 568
         Top = 157
         Width = 249
@@ -417,12 +444,14 @@ object ISFDepositDetails: TISFDepositDetails
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = [fsBold]
+        Font.PxSize = 12
         HasTabOrder = False
         AutoSize = False
         FriendlyName = 'iwlDatesAvailable'
         Caption = '  Geochronology Available'
       end
       object IWLabel30: TIWLabel
+        AlignWithMargins = False
         Left = 12
         Top = 189
         Width = 114
@@ -432,12 +461,14 @@ object ISFDepositDetails: TISFDepositDetails
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel11'
         Caption = 'Minimum DV age ='
       end
       object iwDBeMinDVAge: TIWDBEdit
+        AlignWithMargins = False
         Left = 128
         Top = 186
         Width = 62
@@ -451,6 +482,7 @@ object ISFDepositDetails: TISFDepositDetails
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = [fsBold]
+        Font.PxSize = 12
         FriendlyName = 'iwDBeMinDVAge'
         SubmitOnAsyncEvent = True
         TabOrder = 21
@@ -460,6 +492,7 @@ object ISFDepositDetails: TISFDepositDetails
         PasswordPrompt = False
       end
       object IWLabel31: TIWLabel
+        AlignWithMargins = False
         Left = 272
         Top = 128
         Width = 126
@@ -468,12 +501,14 @@ object ISFDepositDetails: TISFDepositDetails
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel11'
         Caption = 'Ma (95% confidence)'
       end
       object iwDBeMaxDVAge: TIWDBEdit
+        AlignWithMargins = False
         Left = 388
         Top = 186
         Width = 62
@@ -487,6 +522,7 @@ object ISFDepositDetails: TISFDepositDetails
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = [fsBold]
+        Font.PxSize = 12
         FriendlyName = 'iwDBeMaxDVAge'
         SubmitOnAsyncEvent = True
         TabOrder = 22
@@ -496,6 +532,7 @@ object ISFDepositDetails: TISFDepositDetails
         PasswordPrompt = False
       end
       object IWLabel32: TIWLabel
+        AlignWithMargins = False
         Left = 456
         Top = 189
         Width = 17
@@ -505,11 +542,13 @@ object ISFDepositDetails: TISFDepositDetails
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         HasTabOrder = False
         FriendlyName = 'IWLabel11'
         Caption = 'Ma'
       end
       object IWLabel4: TIWLabel
+        AlignWithMargins = False
         Left = 276
         Top = 189
         Width = 116
@@ -519,12 +558,14 @@ object ISFDepositDetails: TISFDepositDetails
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel11'
         Caption = 'Maximum DV age ='
       end
       object iwDBlcbCountry: TIWDBLookupComboBox
+        AlignWithMargins = False
         Left = 108
         Top = 95
         Width = 265
@@ -534,6 +575,7 @@ object ISFDepositDetails: TISFDepositDetails
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = [fsBold]
+        Font.PxSize = 12
         Editable = False
         NonEditableAsLabel = True
         TabOrder = 26
@@ -548,6 +590,7 @@ object ISFDepositDetails: TISFDepositDetails
         NoSelectionText = '-- No Selection --'
       end
       object IWLabel7: TIWLabel
+        AlignWithMargins = False
         Left = 12
         Top = 220
         Width = 71
@@ -556,12 +599,14 @@ object ISFDepositDetails: TISFDepositDetails
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel11'
         Caption = 'Longitude ='
       end
       object IWDBEdit2: TIWDBEdit
+        AlignWithMargins = False
         Left = 112
         Top = 217
         Width = 69
@@ -574,6 +619,7 @@ object ISFDepositDetails: TISFDepositDetails
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = [fsBold]
+        Font.PxSize = 12
         FriendlyName = 'IWDBEdit1'
         SubmitOnAsyncEvent = True
         TabOrder = 27
@@ -583,6 +629,7 @@ object ISFDepositDetails: TISFDepositDetails
         PasswordPrompt = False
       end
       object IWLabel8: TIWLabel
+        AlignWithMargins = False
         Left = 276
         Top = 220
         Width = 59
@@ -591,12 +638,14 @@ object ISFDepositDetails: TISFDepositDetails
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel11'
         Caption = 'Latitude ='
       end
       object IWDBEdit4: TIWDBEdit
+        AlignWithMargins = False
         Left = 381
         Top = 217
         Width = 69
@@ -609,6 +658,7 @@ object ISFDepositDetails: TISFDepositDetails
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = [fsBold]
+        Font.PxSize = 12
         FriendlyName = 'IWDBEdit1'
         SubmitOnAsyncEvent = True
         TabOrder = 28
@@ -618,6 +668,7 @@ object ISFDepositDetails: TISFDepositDetails
         PasswordPrompt = False
       end
       object IWLabel9: TIWLabel
+        AlignWithMargins = False
         Left = 12
         Top = 348
         Width = 119
@@ -626,12 +677,14 @@ object ISFDepositDetails: TISFDepositDetails
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel11'
         Caption = 'ID in Database (int.)'
       end
       object IWDBEdit6: TIWDBEdit
+        AlignWithMargins = False
         Left = 135
         Top = 345
         Width = 76
@@ -644,6 +697,7 @@ object ISFDepositDetails: TISFDepositDetails
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = [fsBold]
+        Font.PxSize = 12
         FriendlyName = 'IWDBEdit1'
         SubmitOnAsyncEvent = True
         TabOrder = 29
@@ -653,6 +707,7 @@ object ISFDepositDetails: TISFDepositDetails
         PasswordPrompt = False
       end
       object IWLabel10: TIWLabel
+        AlignWithMargins = False
         Left = 234
         Top = 348
         Width = 42
@@ -661,12 +716,14 @@ object ISFDepositDetails: TISFDepositDetails
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel11'
         Caption = '(string)'
       end
       object IWDBEdit7: TIWDBEdit
+        AlignWithMargins = False
         Left = 282
         Top = 345
         Width = 89
@@ -679,6 +736,7 @@ object ISFDepositDetails: TISFDepositDetails
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = [fsBold]
+        Font.PxSize = 12
         FriendlyName = 'IWDBEdit1'
         SubmitOnAsyncEvent = True
         TabOrder = 30
@@ -688,6 +746,7 @@ object ISFDepositDetails: TISFDepositDetails
         PasswordPrompt = False
       end
       object IWLabel12: TIWLabel
+        AlignWithMargins = False
         Left = 488
         Top = 98
         Width = 53
@@ -696,12 +755,14 @@ object ISFDepositDetails: TISFDepositDetails
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel2'
         Caption = 'Host unit'
       end
       object iwDBlcbHostUnit: TIWDBLookupComboBox
+        AlignWithMargins = False
         Left = 568
         Top = 95
         Width = 357
@@ -711,6 +772,7 @@ object ISFDepositDetails: TISFDepositDetails
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = [fsBold]
+        Font.PxSize = 12
         Editable = False
         NonEditableAsLabel = True
         TabOrder = 31
@@ -725,6 +787,7 @@ object ISFDepositDetails: TISFDepositDetails
         NoSelectionText = '-- No Selection --'
       end
       object IWLabel13: TIWLabel
+        AlignWithMargins = False
         Left = 488
         Top = 128
         Width = 66
@@ -733,12 +796,14 @@ object ISFDepositDetails: TISFDepositDetails
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel11'
         Caption = 'Host age ='
       end
       object IWDBEdit8: TIWDBEdit
+        AlignWithMargins = False
         Left = 568
         Top = 125
         Width = 57
@@ -751,6 +816,7 @@ object ISFDepositDetails: TISFDepositDetails
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = [fsBold]
+        Font.PxSize = 12
         FriendlyName = 'IWDBEdit1'
         SubmitOnAsyncEvent = True
         TabOrder = 32
@@ -760,6 +826,7 @@ object ISFDepositDetails: TISFDepositDetails
         PasswordPrompt = False
       end
       object IWLabel14: TIWLabel
+        AlignWithMargins = False
         Left = 644
         Top = 128
         Width = 11
@@ -768,12 +835,14 @@ object ISFDepositDetails: TISFDepositDetails
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel11'
         Caption = 'to'
       end
       object IWDBEdit9: TIWDBEdit
+        AlignWithMargins = False
         Left = 673
         Top = 125
         Width = 64
@@ -786,6 +855,7 @@ object ISFDepositDetails: TISFDepositDetails
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = [fsBold]
+        Font.PxSize = 12
         FriendlyName = 'IWDBEdit1'
         SubmitOnAsyncEvent = True
         TabOrder = 33
@@ -795,6 +865,7 @@ object ISFDepositDetails: TISFDepositDetails
         PasswordPrompt = False
       end
       object IWLabel15: TIWLabel
+        AlignWithMargins = False
         Left = 743
         Top = 128
         Width = 17
@@ -803,12 +874,14 @@ object ISFDepositDetails: TISFDepositDetails
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel11'
         Caption = 'Ma'
       end
       object IWLabel16: TIWLabel
+        AlignWithMargins = False
         Left = 12
         Top = 157
         Width = 58
@@ -817,12 +890,14 @@ object ISFDepositDetails: TISFDepositDetails
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel11'
         Caption = 'Based on'
       end
       object iwDBlcbDatingType: TIWDBLookupComboBox
+        AlignWithMargins = False
         Left = 108
         Top = 152
         Width = 342
@@ -832,6 +907,7 @@ object ISFDepositDetails: TISFDepositDetails
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = [fsBold]
+        Font.PxSize = 12
         Editable = False
         NonEditableAsLabel = True
         TabOrder = 37
@@ -846,6 +922,7 @@ object ISFDepositDetails: TISFDepositDetails
         NoSelectionText = '-- No Selection --'
       end
       object IWLabel18: TIWLabel
+        AlignWithMargins = False
         Left = 12
         Top = 281
         Width = 94
@@ -854,12 +931,14 @@ object ISFDepositDetails: TISFDepositDetails
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel11'
         Caption = 'Geodyn. Setting'
       end
       object iwDBlcbGeodynamicSetting: TIWDBLookupComboBox
+        AlignWithMargins = False
         Left = 108
         Top = 276
         Width = 461
@@ -869,6 +948,7 @@ object ISFDepositDetails: TISFDepositDetails
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = [fsBold]
+        Font.PxSize = 12
         Editable = False
         NonEditableAsLabel = True
         TabOrder = 39
@@ -883,6 +963,7 @@ object ISFDepositDetails: TISFDepositDetails
         NoSelectionText = '-- No Selection --'
       end
       object IWLabel20: TIWLabel
+        AlignWithMargins = False
         Left = 403
         Top = 348
         Width = 56
@@ -891,12 +972,14 @@ object ISFDepositDetails: TISFDepositDetails
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel11'
         Caption = 'Parent ID'
       end
       object IWDBEdit10: TIWDBEdit
+        AlignWithMargins = False
         Left = 465
         Top = 345
         Width = 89
@@ -909,6 +992,7 @@ object ISFDepositDetails: TISFDepositDetails
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = [fsBold]
+        Font.PxSize = 12
         FriendlyName = 'IWDBEdit1'
         SubmitOnAsyncEvent = True
         TabOrder = 40
@@ -918,6 +1002,7 @@ object ISFDepositDetails: TISFDepositDetails
         PasswordPrompt = False
       end
       object IWLabel27: TIWLabel
+        AlignWithMargins = False
         Left = 488
         Top = 44
         Width = 38
@@ -926,12 +1011,14 @@ object ISFDepositDetails: TISFDepositDetails
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel2'
         Caption = 'Status'
       end
       object iwDBlcbDepositStatus: TIWDBLookupComboBox
+        AlignWithMargins = False
         Left = 571
         Top = 43
         Width = 357
@@ -941,6 +1028,7 @@ object ISFDepositDetails: TISFDepositDetails
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = [fsBold]
+        Font.PxSize = 12
         Editable = False
         NonEditableAsLabel = True
         TabOrder = 46
@@ -955,6 +1043,7 @@ object ISFDepositDetails: TISFDepositDetails
         NoSelectionText = '-- No Selection --'
       end
       object IWLabel29: TIWLabel
+        AlignWithMargins = False
         Left = 12
         Top = 385
         Width = 68
@@ -963,30 +1052,32 @@ object ISFDepositDetails: TISFDepositDetails
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel11'
         Caption = 'Comments'
       end
       object iwDBmComments: TIWDBMemo
-        Left = 106
+        AlignWithMargins = False
+        Left = 112
         Top = 385
-        Width = 713
-        Height = 136
+        Width = 709
+        Height = 166
         StyleRenderOptions.RenderBorder = False
         BGColor = clWebHONEYDEW
-        Editable = False
+        Editable = True
         Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 8
         Font.Style = []
+        Font.PxSize = 10
         InvisibleBorder = False
         HorizScrollBar = False
         VertScrollBar = True
         Required = False
-        TabOrder = 47
         SubmitOnAsyncEvent = True
-        AutoEditable = True
+        AutoEditable = False
         DataField = 'DEPOSITCOMMENT'
         DataSource = dmStratD.dsDepositComment
         FriendlyName = 'iwDBmComments'
@@ -1004,6 +1095,7 @@ object ISFDepositDetails: TISFDepositDetails
       BorderOptions.Style = cbsNone
       Color = clWebBEIGE
       object IWLabel19: TIWLabel
+        AlignWithMargins = False
         Left = 12
         Top = 6
         Width = 111
@@ -1012,12 +1104,14 @@ object ISFDepositDetails: TISFDepositDetails
         Font.FontName = 'Arial'
         Font.Size = 12
         Font.Style = [fsBold, fsUnderline]
+        Font.PxSize = 16
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel18'
         Caption = 'Commodities'
       end
       object iwDBgCommodities: TIWDBGrid
+        AlignWithMargins = False
         Left = 108
         Top = 36
         Width = 713
@@ -1034,10 +1128,13 @@ object ISFDepositDetails: TISFDepositDetails
         Font.FontName = 'Arial'
         Font.Size = 8
         Font.Style = []
+        Font.PxSize = 10
         FrameBuffer = 40
         Lines = tlAll
         UseFrame = True
         UseSize = True
+        ShowEmptyCells = True
+        ShowInvisibleRows = True
         ScrollToCurrentRow = False
         Columns = <
           item
@@ -1048,6 +1145,7 @@ object ISFDepositDetails: TISFDepositDetails
             Font.FontName = 'Arial'
             Font.Size = 8
             Font.Style = []
+            Font.PxSize = 10
             Header = False
             Height = '0'
             ShowHint = True
@@ -1068,6 +1166,7 @@ object ISFDepositDetails: TISFDepositDetails
             Title.Font.FontName = 'Arial'
             Title.Font.Size = 8
             Title.Font.Style = [fsBold]
+            Title.Font.PxSize = 10
             Title.Header = False
             Title.Height = '0'
             Title.ShowHint = True
@@ -1086,6 +1185,7 @@ object ISFDepositDetails: TISFDepositDetails
             Font.FontName = 'Arial'
             Font.Size = 8
             Font.Style = []
+            Font.PxSize = 10
             Header = False
             Height = '0'
             ShowHint = True
@@ -1106,6 +1206,7 @@ object ISFDepositDetails: TISFDepositDetails
             Title.Font.FontName = 'Arial'
             Title.Font.Size = 8
             Title.Font.Style = [fsBold]
+            Title.Font.PxSize = 10
             Title.Header = False
             Title.Height = '0'
             Title.ShowHint = True
@@ -1124,6 +1225,7 @@ object ISFDepositDetails: TISFDepositDetails
             Font.FontName = 'Arial'
             Font.Size = 8
             Font.Style = []
+            Font.PxSize = 10
             Header = False
             Height = '0'
             ShowHint = True
@@ -1144,6 +1246,7 @@ object ISFDepositDetails: TISFDepositDetails
             Title.Font.FontName = 'Arial'
             Title.Font.Size = 8
             Title.Font.Style = [fsBold]
+            Title.Font.PxSize = 10
             Title.Header = False
             Title.Height = '0'
             Title.ShowHint = True
@@ -1171,6 +1274,7 @@ object ISFDepositDetails: TISFDepositDetails
         RowCurrentColor = clWebYELLOW
       end
       object iwDBnCommodities: TIWDBNavigator
+        AlignWithMargins = False
         Left = 344
         Top = 4
         Width = 150
@@ -1187,6 +1291,7 @@ object ISFDepositDetails: TISFDepositDetails
         OnEdit = iwDBnCommoditiesEdit
       end
       object iwlCommoditiesSortedBy: TIWLabel
+        AlignWithMargins = False
         Left = 837
         Top = 8
         Width = 94
@@ -1195,12 +1300,14 @@ object ISFDepositDetails: TISFDepositDetails
         Font.FontName = 'Arial'
         Font.Size = 8
         Font.Style = [fsItalic]
+        Font.PxSize = 10
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'iwlCommoditiesSortedBy'
         Caption = 'Default sort order'
       end
       object iwbAddCommodityLink: TIWButton
+        AlignWithMargins = False
         Left = 151
         Top = 5
         Width = 91
@@ -1210,11 +1317,13 @@ object ISFDepositDetails: TISFDepositDetails
         Font.Color = clNone
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         FriendlyName = 'iwbAddCommodityLink'
         TabOrder = 23
         OnClick = iwbAddCommodityLinkClick
       end
       object iwbDeleteCommodityLink: TIWButton
+        AlignWithMargins = False
         Left = 664
         Top = 6
         Width = 157
@@ -1222,9 +1331,6 @@ object ISFDepositDetails: TISFDepositDetails
         Caption = 'Delete current link'
         Confirmation = 'Are you sure you want to delete this link?'
         Color = clWebLIGHTCORAL
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         FriendlyName = 'iwbDeleteCommodityLink'
         TabOrder = 25
         OnClick = iwbDeleteCommodityLinkClick
@@ -1240,34 +1346,31 @@ object ISFDepositDetails: TISFDepositDetails
       BorderOptions.NumericWidth = 0
       BorderOptions.Style = cbsNone
       object iwbDetailsEdit2: TIWButton
+        AlignWithMargins = False
         Left = 426
         Top = 27
         Width = 129
         Height = 25
         Caption = 'Edit this record'
         Color = clWebLEMONCHIFFON
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         FriendlyName = 'iwbDetailsEdit2'
         TabOrder = 5
         OnClick = iwbDetailsEditClick
       end
       object iwbReturn2: TIWButton
+        AlignWithMargins = False
         Left = 228
         Top = 27
         Width = 141
         Height = 25
         Caption = 'Return to results list'
         Color = clWebLIGHTGREEN
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         FriendlyName = 'iwbReturn2'
         TabOrder = 6
         OnClick = iwbReturnClick
       end
       object IWLabel66: TIWLabel
+        AlignWithMargins = False
         Left = 3
         Top = 24
         Width = 140
@@ -1276,12 +1379,14 @@ object ISFDepositDetails: TISFDepositDetails
         Font.FontName = 'Arial'
         Font.Size = 10
         Font.Style = []
+        Font.PxSize = 13
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel1'
         Caption = 'Ore Deposit Database'
       end
       object IWLabel67: TIWLabel
+        AlignWithMargins = False
         Left = 3
         Top = 42
         Width = 159
@@ -1290,6 +1395,7 @@ object ISFDepositDetails: TISFDepositDetails
         Font.FontName = 'Arial'
         Font.Size = 8
         Font.Style = [fsItalic]
+        Font.PxSize = 10
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel2'
@@ -1308,6 +1414,7 @@ object ISFDepositDetails: TISFDepositDetails
       BorderOptions.Style = cbsNone
       Color = clWebBEIGE
       object IWLabel25: TIWLabel
+        AlignWithMargins = False
         Left = 12
         Top = 6
         Width = 74
@@ -1316,12 +1423,14 @@ object ISFDepositDetails: TISFDepositDetails
         Font.FontName = 'Arial'
         Font.Size = 12
         Font.Style = [fsBold, fsUnderline]
+        Font.PxSize = 16
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel18'
         Caption = 'Domains'
       end
       object iwDBgDomain: TIWDBGrid
+        AlignWithMargins = False
         Left = 108
         Top = 36
         Width = 713
@@ -1338,10 +1447,13 @@ object ISFDepositDetails: TISFDepositDetails
         Font.FontName = 'Arial'
         Font.Size = 8
         Font.Style = []
+        Font.PxSize = 10
         FrameBuffer = 40
         Lines = tlAll
         UseFrame = True
         UseSize = True
+        ShowEmptyCells = True
+        ShowInvisibleRows = True
         ScrollToCurrentRow = False
         Columns = <
           item
@@ -1352,6 +1464,7 @@ object ISFDepositDetails: TISFDepositDetails
             Font.FontName = 'Arial'
             Font.Size = 8
             Font.Style = []
+            Font.PxSize = 10
             Header = False
             Height = '0'
             ShowHint = True
@@ -1374,6 +1487,7 @@ object ISFDepositDetails: TISFDepositDetails
             Title.Font.FontName = 'Arial'
             Title.Font.Size = 8
             Title.Font.Style = [fsBold]
+            Title.Font.PxSize = 10
             Title.Header = False
             Title.Height = '0'
             Title.ShowHint = True
@@ -1392,6 +1506,7 @@ object ISFDepositDetails: TISFDepositDetails
             Font.FontName = 'Arial'
             Font.Size = 8
             Font.Style = []
+            Font.PxSize = 10
             Header = False
             Height = '0'
             ShowHint = True
@@ -1412,6 +1527,7 @@ object ISFDepositDetails: TISFDepositDetails
             Title.Font.FontName = 'Arial'
             Title.Font.Size = 8
             Title.Font.Style = [fsBold]
+            Title.Font.PxSize = 10
             Title.Header = False
             Title.Height = '0'
             Title.ShowHint = True
@@ -1430,6 +1546,7 @@ object ISFDepositDetails: TISFDepositDetails
             Font.FontName = 'Arial'
             Font.Size = 8
             Font.Style = []
+            Font.PxSize = 10
             Header = False
             Height = '0'
             ShowHint = True
@@ -1450,6 +1567,7 @@ object ISFDepositDetails: TISFDepositDetails
             Title.Font.FontName = 'Arial'
             Title.Font.Size = 8
             Title.Font.Style = [fsBold]
+            Title.Font.PxSize = 10
             Title.Header = False
             Title.Height = '0'
             Title.ShowHint = True
@@ -1477,6 +1595,7 @@ object ISFDepositDetails: TISFDepositDetails
         RowCurrentColor = clWebYELLOW
       end
       object iwDBnDomains: TIWDBNavigator
+        AlignWithMargins = False
         Left = 344
         Top = 3
         Width = 150
@@ -1493,6 +1612,7 @@ object ISFDepositDetails: TISFDepositDetails
         OnEdit = iwDBnDomainsEdit
       end
       object iwlDomainsSortedBy: TIWLabel
+        AlignWithMargins = False
         Left = 837
         Top = 8
         Width = 94
@@ -1501,12 +1621,14 @@ object ISFDepositDetails: TISFDepositDetails
         Font.FontName = 'Arial'
         Font.Size = 8
         Font.Style = [fsItalic]
+        Font.PxSize = 10
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'iwlDomainsSortedBy'
         Caption = 'Default sort order'
       end
       object iwbDeleteDomainLink: TIWButton
+        AlignWithMargins = False
         Left = 664
         Top = 6
         Width = 157
@@ -1514,14 +1636,12 @@ object ISFDepositDetails: TISFDepositDetails
         Caption = 'Delete current link'
         Confirmation = 'Are you sure you want to delete this link?'
         Color = clWebLIGHTCORAL
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         FriendlyName = 'iwbDeleteDomainLink'
         TabOrder = 14
         OnClick = iwbDeleteDomainLinkClick
       end
       object iwbAddDomainLink: TIWButton
+        AlignWithMargins = False
         Left = 151
         Top = 7
         Width = 91
@@ -1531,6 +1651,7 @@ object ISFDepositDetails: TISFDepositDetails
         Font.Color = clNone
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         FriendlyName = 'iwbAddDomainLink'
         TabOrder = 24
         OnClick = iwbAddDomainLinkClick
@@ -1548,6 +1669,7 @@ object ISFDepositDetails: TISFDepositDetails
       BorderOptions.Style = cbsNone
       Color = clWebBEIGE
       object IWLabel37: TIWLabel
+        AlignWithMargins = False
         Left = 12
         Top = 6
         Width = 71
@@ -1556,12 +1678,14 @@ object ISFDepositDetails: TISFDepositDetails
         Font.FontName = 'Arial'
         Font.Size = 12
         Font.Style = [fsBold, fsUnderline]
+        Font.PxSize = 16
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel18'
         Caption = 'Who For'
       end
       object iwDBgLinkToWhoFor: TIWDBGrid
+        AlignWithMargins = False
         Left = 108
         Top = 36
         Width = 713
@@ -1578,10 +1702,13 @@ object ISFDepositDetails: TISFDepositDetails
         Font.FontName = 'Arial'
         Font.Size = 8
         Font.Style = []
+        Font.PxSize = 10
         FrameBuffer = 40
         Lines = tlAll
         UseFrame = True
         UseSize = True
+        ShowEmptyCells = True
+        ShowInvisibleRows = True
         ScrollToCurrentRow = False
         Columns = <
           item
@@ -1592,6 +1719,7 @@ object ISFDepositDetails: TISFDepositDetails
             Font.FontName = 'Arial'
             Font.Size = 8
             Font.Style = []
+            Font.PxSize = 10
             Header = False
             Height = '0'
             ShowHint = True
@@ -1612,6 +1740,7 @@ object ISFDepositDetails: TISFDepositDetails
             Title.Font.FontName = 'Arial'
             Title.Font.Size = 8
             Title.Font.Style = [fsBold]
+            Title.Font.PxSize = 10
             Title.Header = False
             Title.Height = '0'
             Title.ShowHint = True
@@ -1630,6 +1759,7 @@ object ISFDepositDetails: TISFDepositDetails
             Font.FontName = 'Arial'
             Font.Size = 8
             Font.Style = []
+            Font.PxSize = 10
             Header = False
             Height = '0'
             ShowHint = True
@@ -1649,6 +1779,7 @@ object ISFDepositDetails: TISFDepositDetails
             Title.Font.FontName = 'Arial'
             Title.Font.Size = 8
             Title.Font.Style = [fsBold]
+            Title.Font.PxSize = 10
             Title.Header = False
             Title.Height = '0'
             Title.ShowHint = True
@@ -1676,6 +1807,7 @@ object ISFDepositDetails: TISFDepositDetails
         RowCurrentColor = clWebYELLOW
       end
       object iwDBnLinkToWhoFor: TIWDBNavigator
+        AlignWithMargins = False
         Left = 344
         Top = 4
         Width = 120
@@ -1691,6 +1823,7 @@ object ISFDepositDetails: TISFDepositDetails
         Orientation = orHorizontal
       end
       object iwbDeleteLinkToWhoFor: TIWButton
+        AlignWithMargins = False
         Left = 664
         Top = 8
         Width = 157
@@ -1698,14 +1831,12 @@ object ISFDepositDetails: TISFDepositDetails
         Caption = 'Delete current link'
         Confirmation = 'Are you sure you want to delete this link?'
         Color = clWebLIGHTCORAL
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         FriendlyName = 'iwbDeleteLinkToWhoFor'
         TabOrder = 34
         OnClick = iwbDeleteLinkToWhoForClick
       end
       object iwbAddWhoFor: TIWButton
+        AlignWithMargins = False
         Left = 200
         Top = 5
         Width = 89
@@ -1713,14 +1844,12 @@ object ISFDepositDetails: TISFDepositDetails
         Caption = 'Add Link'
         DoSubmitValidation = False
         Color = clBtnFace
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         FriendlyName = 'iwbAddWhoFor'
         TabOrder = 35
         OnClick = iwbAddWhoForClick
       end
       object iwbPublish: TIWButton
+        AlignWithMargins = False
         Left = 837
         Top = 36
         Width = 72
@@ -1728,9 +1857,6 @@ object ISFDepositDetails: TISFDepositDetails
         Caption = 'Publish'
         DoSubmitValidation = False
         Color = clWebPLUM
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         FriendlyName = 'iwbPublish'
         TabOrder = 36
         OnClick = iwbPublishClick
@@ -1748,6 +1874,7 @@ object ISFDepositDetails: TISFDepositDetails
       BorderOptions.Style = cbsNone
       Color = clWebLINEN
       object IWLabel21: TIWLabel
+        AlignWithMargins = False
         Left = 12
         Top = 6
         Width = 112
@@ -1756,12 +1883,14 @@ object ISFDepositDetails: TISFDepositDetails
         Font.FontName = 'Arial'
         Font.Size = 12
         Font.Style = [fsBold, fsUnderline]
+        Font.PxSize = 16
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel18'
         Caption = 'Sub-deposits'
       end
       object IWDBGrid1: TIWDBGrid
+        AlignWithMargins = False
         Left = 108
         Top = 36
         Width = 713
@@ -1778,10 +1907,13 @@ object ISFDepositDetails: TISFDepositDetails
         Font.FontName = 'Arial'
         Font.Size = 8
         Font.Style = []
+        Font.PxSize = 10
         FrameBuffer = 40
         Lines = tlAll
         UseFrame = True
         UseSize = True
+        ShowEmptyCells = True
+        ShowInvisibleRows = True
         ScrollToCurrentRow = False
         Columns = <
           item
@@ -1792,6 +1924,7 @@ object ISFDepositDetails: TISFDepositDetails
             Font.FontName = 'Arial'
             Font.Size = 8
             Font.Style = []
+            Font.PxSize = 10
             Header = False
             Height = '0'
             ShowHint = True
@@ -1811,6 +1944,7 @@ object ISFDepositDetails: TISFDepositDetails
             Title.Font.FontName = 'Arial'
             Title.Font.Size = 8
             Title.Font.Style = [fsBold]
+            Title.Font.PxSize = 10
             Title.Header = False
             Title.Height = '0'
             Title.ShowHint = True
@@ -1829,6 +1963,7 @@ object ISFDepositDetails: TISFDepositDetails
             Font.FontName = 'Arial'
             Font.Size = 8
             Font.Style = []
+            Font.PxSize = 10
             Header = False
             Height = '0'
             ShowHint = True
@@ -1848,6 +1983,7 @@ object ISFDepositDetails: TISFDepositDetails
             Title.Font.FontName = 'Arial'
             Title.Font.Size = 8
             Title.Font.Style = [fsBold]
+            Title.Font.PxSize = 10
             Title.Header = False
             Title.Height = '0'
             Title.ShowHint = True
@@ -1866,6 +2002,7 @@ object ISFDepositDetails: TISFDepositDetails
             Font.FontName = 'Arial'
             Font.Size = 8
             Font.Style = []
+            Font.PxSize = 10
             Header = False
             Height = '0'
             ShowHint = True
@@ -1885,6 +2022,7 @@ object ISFDepositDetails: TISFDepositDetails
             Title.Font.FontName = 'Arial'
             Title.Font.Size = 8
             Title.Font.Style = [fsBold]
+            Title.Font.PxSize = 10
             Title.Header = False
             Title.Height = '0'
             Title.ShowHint = True
@@ -1903,6 +2041,7 @@ object ISFDepositDetails: TISFDepositDetails
             Font.FontName = 'Arial'
             Font.Size = 8
             Font.Style = []
+            Font.PxSize = 10
             Header = False
             Height = '0'
             ShowHint = True
@@ -1922,6 +2061,7 @@ object ISFDepositDetails: TISFDepositDetails
             Title.Font.FontName = 'Arial'
             Title.Font.Size = 8
             Title.Font.Style = [fsBold]
+            Title.Font.PxSize = 10
             Title.Header = False
             Title.Height = '0'
             Title.ShowHint = True
@@ -1940,6 +2080,7 @@ object ISFDepositDetails: TISFDepositDetails
             Font.FontName = 'Arial'
             Font.Size = 8
             Font.Style = []
+            Font.PxSize = 10
             Header = False
             Height = '0'
             ShowHint = True
@@ -1959,6 +2100,7 @@ object ISFDepositDetails: TISFDepositDetails
             Title.Font.FontName = 'Arial'
             Title.Font.Size = 8
             Title.Font.Style = [fsBold]
+            Title.Font.PxSize = 10
             Title.Header = False
             Title.Height = '0'
             Title.ShowHint = True
@@ -1986,6 +2128,7 @@ object ISFDepositDetails: TISFDepositDetails
         RowCurrentColor = clWebYELLOW
       end
       object IWDBNavigator1: TIWDBNavigator
+        AlignWithMargins = False
         Left = 344
         Top = 4
         Width = 150
@@ -2002,6 +2145,7 @@ object ISFDepositDetails: TISFDepositDetails
         OnEdit = iwDBnCommoditiesEdit
       end
       object IWLabel22: TIWLabel
+        AlignWithMargins = False
         Left = 837
         Top = 8
         Width = 94
@@ -2010,12 +2154,14 @@ object ISFDepositDetails: TISFDepositDetails
         Font.FontName = 'Arial'
         Font.Size = 8
         Font.Style = [fsItalic]
+        Font.PxSize = 10
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'iwlCommoditiesSortedBy'
         Caption = 'Default sort order'
       end
       object iwbAddSubDeposit: TIWButton
+        AlignWithMargins = False
         Left = 151
         Top = 5
         Width = 91
@@ -2025,10 +2171,12 @@ object ISFDepositDetails: TISFDepositDetails
         Font.Color = clNone
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         FriendlyName = 'iwbAddSubDeposit'
         TabOrder = 41
       end
       object iwbDeleteSubDeposit: TIWButton
+        AlignWithMargins = False
         Left = 664
         Top = 6
         Width = 157
@@ -2036,9 +2184,6 @@ object ISFDepositDetails: TISFDepositDetails
         Caption = 'Delete current link'
         Confirmation = 'Are you sure you want to delete this link?'
         Color = clWebLIGHTCORAL
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         FriendlyName = 'iwbDeleteSubDeposit'
         TabOrder = 42
       end
@@ -2055,6 +2200,7 @@ object ISFDepositDetails: TISFDepositDetails
       BorderOptions.Style = cbsNone
       Color = clWebLIGHTBLUE
       object IWLabel23: TIWLabel
+        AlignWithMargins = False
         Left = 8
         Top = 18
         Width = 393
@@ -2063,12 +2209,14 @@ object ISFDepositDetails: TISFDepositDetails
         Font.FontName = 'Arial'
         Font.Size = 12
         Font.Style = [fsBold, fsUnderline]
+        Font.PxSize = 16
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel1'
         Caption = 'Dates from DateView Geochronology Database'
       end
       object iwDBgDateView: TIWDBGrid
+        AlignWithMargins = False
         Left = 34
         Top = 48
         Width = 787
@@ -2085,10 +2233,13 @@ object ISFDepositDetails: TISFDepositDetails
         Font.FontName = 'Arial'
         Font.Size = 8
         Font.Style = []
+        Font.PxSize = 10
         FrameBuffer = 40
         Lines = tlAll
         UseFrame = True
         UseSize = True
+        ShowEmptyCells = True
+        ShowInvisibleRows = True
         ScrollToCurrentRow = False
         Columns = <
           item
@@ -2099,6 +2250,7 @@ object ISFDepositDetails: TISFDepositDetails
             Font.FontName = 'Arial'
             Font.Size = 8
             Font.Style = []
+            Font.PxSize = 10
             Header = False
             Height = '0'
             ShowHint = True
@@ -2118,6 +2270,7 @@ object ISFDepositDetails: TISFDepositDetails
             Title.Font.FontName = 'Arial'
             Title.Font.Size = 8
             Title.Font.Style = [fsBold]
+            Title.Font.PxSize = 10
             Title.Header = False
             Title.Height = '0'
             Title.ShowHint = True
@@ -2136,6 +2289,7 @@ object ISFDepositDetails: TISFDepositDetails
             Font.FontName = 'Arial'
             Font.Size = 8
             Font.Style = []
+            Font.PxSize = 10
             Header = False
             Height = '0'
             ShowHint = True
@@ -2155,6 +2309,7 @@ object ISFDepositDetails: TISFDepositDetails
             Title.Font.FontName = 'Arial'
             Title.Font.Size = 8
             Title.Font.Style = [fsBold]
+            Title.Font.PxSize = 10
             Title.Header = False
             Title.Height = '0'
             Title.ShowHint = True
@@ -2173,6 +2328,7 @@ object ISFDepositDetails: TISFDepositDetails
             Font.FontName = 'Arial'
             Font.Size = 8
             Font.Style = []
+            Font.PxSize = 10
             Header = False
             Height = '0'
             ShowHint = True
@@ -2192,6 +2348,7 @@ object ISFDepositDetails: TISFDepositDetails
             Title.Font.FontName = 'Arial'
             Title.Font.Size = 8
             Title.Font.Style = [fsBold]
+            Title.Font.PxSize = 10
             Title.Header = False
             Title.Height = '0'
             Title.ShowHint = True
@@ -2210,6 +2367,7 @@ object ISFDepositDetails: TISFDepositDetails
             Font.FontName = 'Arial'
             Font.Size = 8
             Font.Style = []
+            Font.PxSize = 10
             Header = False
             Height = '0'
             ShowHint = True
@@ -2229,6 +2387,7 @@ object ISFDepositDetails: TISFDepositDetails
             Title.Font.FontName = 'Arial'
             Title.Font.Size = 8
             Title.Font.Style = [fsBold]
+            Title.Font.PxSize = 10
             Title.Header = False
             Title.Height = '0'
             Title.ShowHint = True
@@ -2247,6 +2406,7 @@ object ISFDepositDetails: TISFDepositDetails
             Font.FontName = 'Arial'
             Font.Size = 8
             Font.Style = []
+            Font.PxSize = 10
             Header = False
             Height = '0'
             ShowHint = True
@@ -2266,6 +2426,7 @@ object ISFDepositDetails: TISFDepositDetails
             Title.Font.FontName = 'Arial'
             Title.Font.Size = 8
             Title.Font.Style = [fsBold]
+            Title.Font.PxSize = 10
             Title.Header = False
             Title.Height = '0'
             Title.ShowHint = True
@@ -2284,6 +2445,7 @@ object ISFDepositDetails: TISFDepositDetails
             Font.FontName = 'Arial'
             Font.Size = 8
             Font.Style = []
+            Font.PxSize = 10
             Header = False
             Height = '0'
             ShowHint = True
@@ -2303,6 +2465,7 @@ object ISFDepositDetails: TISFDepositDetails
             Title.Font.FontName = 'Arial'
             Title.Font.Size = 8
             Title.Font.Style = [fsBold]
+            Title.Font.PxSize = 10
             Title.Header = False
             Title.Height = '0'
             Title.ShowHint = True
@@ -2321,6 +2484,7 @@ object ISFDepositDetails: TISFDepositDetails
             Font.FontName = 'Arial'
             Font.Size = 8
             Font.Style = []
+            Font.PxSize = 10
             Header = False
             Height = '0'
             ShowHint = True
@@ -2340,6 +2504,7 @@ object ISFDepositDetails: TISFDepositDetails
             Title.Font.FontName = 'Arial'
             Title.Font.Size = 8
             Title.Font.Style = [fsBold]
+            Title.Font.PxSize = 10
             Title.Header = False
             Title.Height = '0'
             Title.ShowHint = True
@@ -2358,6 +2523,7 @@ object ISFDepositDetails: TISFDepositDetails
             Font.FontName = 'Arial'
             Font.Size = 8
             Font.Style = []
+            Font.PxSize = 10
             Header = False
             Height = '0'
             ShowHint = True
@@ -2377,6 +2543,7 @@ object ISFDepositDetails: TISFDepositDetails
             Title.Font.FontName = 'Arial'
             Title.Font.Size = 8
             Title.Font.Style = [fsBold]
+            Title.Font.PxSize = 10
             Title.Header = False
             Title.Height = '0'
             Title.ShowHint = True
@@ -2395,6 +2562,7 @@ object ISFDepositDetails: TISFDepositDetails
             Font.FontName = 'Arial'
             Font.Size = 8
             Font.Style = []
+            Font.PxSize = 10
             Header = False
             Height = '0'
             ShowHint = True
@@ -2414,6 +2582,7 @@ object ISFDepositDetails: TISFDepositDetails
             Title.Font.FontName = 'Arial'
             Title.Font.Size = 8
             Title.Font.Style = [fsBold]
+            Title.Font.PxSize = 10
             Title.Header = False
             Title.Height = '0'
             Title.ShowHint = True
@@ -2432,6 +2601,7 @@ object ISFDepositDetails: TISFDepositDetails
             Font.FontName = 'Arial'
             Font.Size = 8
             Font.Style = []
+            Font.PxSize = 10
             Header = False
             Height = '0'
             ShowHint = True
@@ -2451,6 +2621,7 @@ object ISFDepositDetails: TISFDepositDetails
             Title.Font.FontName = 'Arial'
             Title.Font.Size = 8
             Title.Font.Style = [fsBold]
+            Title.Font.PxSize = 10
             Title.Header = False
             Title.Height = '0'
             Title.ShowHint = True
@@ -2469,6 +2640,7 @@ object ISFDepositDetails: TISFDepositDetails
             Font.FontName = 'Arial'
             Font.Size = 8
             Font.Style = []
+            Font.PxSize = 10
             Header = False
             Height = '0'
             ShowHint = True
@@ -2488,6 +2660,7 @@ object ISFDepositDetails: TISFDepositDetails
             Title.Font.FontName = 'Arial'
             Title.Font.Size = 8
             Title.Font.Style = [fsBold]
+            Title.Font.PxSize = 10
             Title.Header = False
             Title.Height = '0'
             Title.ShowHint = True
@@ -2506,6 +2679,7 @@ object ISFDepositDetails: TISFDepositDetails
             Font.FontName = 'Arial'
             Font.Size = 8
             Font.Style = []
+            Font.PxSize = 10
             Header = False
             Height = '0'
             ShowHint = True
@@ -2525,6 +2699,7 @@ object ISFDepositDetails: TISFDepositDetails
             Title.Font.FontName = 'Arial'
             Title.Font.Size = 8
             Title.Font.Style = [fsBold]
+            Title.Font.PxSize = 10
             Title.Header = False
             Title.Height = '0'
             Title.ShowHint = True
@@ -2552,6 +2727,7 @@ object ISFDepositDetails: TISFDepositDetails
         RowCurrentColor = clWebYELLOW
       end
       object iwlDVSortedBy: TIWLabel
+        AlignWithMargins = False
         Left = 845
         Top = 32
         Width = 94
@@ -2560,6 +2736,7 @@ object ISFDepositDetails: TISFDepositDetails
         Font.FontName = 'Arial'
         Font.Size = 8
         Font.Style = [fsItalic]
+        Font.PxSize = 10
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'iwlDVSortedBy'
@@ -2578,6 +2755,7 @@ object ISFDepositDetails: TISFDepositDetails
       BorderOptions.Style = cbsNone
       Color = clWebLEMONCHIFFON
       object IWLabel24: TIWLabel
+        AlignWithMargins = False
         Left = 16
         Top = 9
         Width = 139
@@ -2586,12 +2764,14 @@ object ISFDepositDetails: TISFDepositDetails
         Font.FontName = 'Arial'
         Font.Size = 12
         Font.Style = [fsBold, fsUnderline]
+        Font.PxSize = 16
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel24'
         Caption = 'Validation status'
       end
       object iwDBgValidation: TIWDBGrid
+        AlignWithMargins = False
         Left = 172
         Top = 6
         Width = 649
@@ -2608,10 +2788,13 @@ object ISFDepositDetails: TISFDepositDetails
         Font.FontName = 'Arial'
         Font.Size = 8
         Font.Style = []
+        Font.PxSize = 10
         FrameBuffer = 40
         Lines = tlAll
         UseFrame = True
         UseSize = True
+        ShowEmptyCells = True
+        ShowInvisibleRows = True
         ScrollToCurrentRow = False
         Columns = <
           item
@@ -2622,6 +2805,7 @@ object ISFDepositDetails: TISFDepositDetails
             Font.FontName = 'Arial'
             Font.Size = 8
             Font.Style = []
+            Font.PxSize = 10
             Header = False
             Height = '0'
             ShowHint = True
@@ -2641,6 +2825,7 @@ object ISFDepositDetails: TISFDepositDetails
             Title.Font.FontName = 'Arial'
             Title.Font.Size = 8
             Title.Font.Style = [fsBold]
+            Title.Font.PxSize = 10
             Title.Header = False
             Title.Height = '0'
             Title.ShowHint = True
@@ -2659,6 +2844,7 @@ object ISFDepositDetails: TISFDepositDetails
             Font.FontName = 'Arial'
             Font.Size = 8
             Font.Style = []
+            Font.PxSize = 10
             Header = False
             Height = '0'
             ShowHint = True
@@ -2678,6 +2864,7 @@ object ISFDepositDetails: TISFDepositDetails
             Title.Font.FontName = 'Arial'
             Title.Font.Size = 8
             Title.Font.Style = [fsBold]
+            Title.Font.PxSize = 10
             Title.Header = False
             Title.Height = '0'
             Title.ShowHint = True
@@ -2696,6 +2883,7 @@ object ISFDepositDetails: TISFDepositDetails
             Font.FontName = 'Arial'
             Font.Size = 8
             Font.Style = []
+            Font.PxSize = 10
             Header = False
             Height = '0'
             ShowHint = True
@@ -2715,6 +2903,7 @@ object ISFDepositDetails: TISFDepositDetails
             Title.Font.FontName = 'Arial'
             Title.Font.Size = 8
             Title.Font.Style = [fsBold]
+            Title.Font.PxSize = 10
             Title.Header = False
             Title.Height = '0'
             Title.ShowHint = True
@@ -2742,20 +2931,19 @@ object ISFDepositDetails: TISFDepositDetails
         RowCurrentColor = clWebYELLOW
       end
       object iwbObjection: TIWButton
+        AlignWithMargins = False
         Left = 286
         Top = 184
         Width = 263
         Height = 25
         Caption = 'Submit an objection to the current record'
         Color = clWebNAVAJOWHITE
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         FriendlyName = 'iwbObjection'
         TabOrder = 43
         OnClick = iwbObjectionClick
       end
       object iwbValidate: TIWButton
+        AlignWithMargins = False
         Left = 10
         Top = 184
         Width = 91
@@ -2765,11 +2953,13 @@ object ISFDepositDetails: TISFDepositDetails
         Font.Color = clNone
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         FriendlyName = 'iwbValidate'
         TabOrder = 44
         OnClick = iwbValidateClick
       end
       object iwbClearObjection: TIWButton
+        AlignWithMargins = False
         Left = 712
         Top = 184
         Width = 109
@@ -2779,6 +2969,7 @@ object ISFDepositDetails: TISFDepositDetails
         Font.Color = clNone
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         FriendlyName = 'iwbClearObjection'
         TabOrder = 45
         OnClick = iwbClearObjectionClick
@@ -2796,6 +2987,7 @@ object ISFDepositDetails: TISFDepositDetails
       BorderOptions.Style = cbsNone
       Color = clWebWHITESMOKE
       object IWLabel33: TIWLabel
+        AlignWithMargins = False
         Left = 12
         Top = 6
         Width = 95
@@ -2804,12 +2996,14 @@ object ISFDepositDetails: TISFDepositDetails
         Font.FontName = 'Arial'
         Font.Size = 12
         Font.Style = [fsBold, fsUnderline]
+        Font.PxSize = 16
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel18'
         Caption = 'References'
       end
       object iwDBgReference: TIWDBGrid
+        AlignWithMargins = False
         Left = 108
         Top = 36
         Width = 713
@@ -2826,10 +3020,13 @@ object ISFDepositDetails: TISFDepositDetails
         Font.FontName = 'Arial'
         Font.Size = 8
         Font.Style = []
+        Font.PxSize = 10
         FrameBuffer = 40
         Lines = tlAll
         UseFrame = True
         UseSize = True
+        ShowEmptyCells = True
+        ShowInvisibleRows = True
         ScrollToCurrentRow = False
         Columns = <
           item
@@ -2840,6 +3037,7 @@ object ISFDepositDetails: TISFDepositDetails
             Font.FontName = 'Arial'
             Font.Size = 8
             Font.Style = []
+            Font.PxSize = 10
             Header = False
             Height = '0'
             ShowHint = True
@@ -2860,6 +3058,7 @@ object ISFDepositDetails: TISFDepositDetails
             Title.Font.FontName = 'Arial'
             Title.Font.Size = 8
             Title.Font.Style = [fsBold]
+            Title.Font.PxSize = 10
             Title.Header = False
             Title.Height = '0'
             Title.ShowHint = True
@@ -2878,6 +3077,7 @@ object ISFDepositDetails: TISFDepositDetails
             Font.FontName = 'Arial'
             Font.Size = 8
             Font.Style = []
+            Font.PxSize = 10
             Header = False
             Height = '0'
             ShowHint = True
@@ -2897,6 +3097,7 @@ object ISFDepositDetails: TISFDepositDetails
             Title.Font.FontName = 'Arial'
             Title.Font.Size = 8
             Title.Font.Style = [fsBold]
+            Title.Font.PxSize = 10
             Title.Header = False
             Title.Height = '0'
             Title.ShowHint = True
@@ -2915,6 +3116,7 @@ object ISFDepositDetails: TISFDepositDetails
             Font.FontName = 'Arial'
             Font.Size = 8
             Font.Style = []
+            Font.PxSize = 10
             Header = False
             Height = '0'
             ShowHint = True
@@ -2934,6 +3136,7 @@ object ISFDepositDetails: TISFDepositDetails
             Title.Font.FontName = 'Arial'
             Title.Font.Size = 8
             Title.Font.Style = [fsBold]
+            Title.Font.PxSize = 10
             Title.Header = False
             Title.Height = '0'
             Title.ShowHint = True
@@ -2961,6 +3164,7 @@ object ISFDepositDetails: TISFDepositDetails
         RowCurrentColor = clWebYELLOW
       end
       object iwDBnReferences: TIWDBNavigator
+        AlignWithMargins = False
         Left = 344
         Top = 3
         Width = 150
@@ -2977,6 +3181,7 @@ object ISFDepositDetails: TISFDepositDetails
         OnEdit = iwDBnReferencesEdit
       end
       object iwbDeleteRefLink: TIWButton
+        AlignWithMargins = False
         Left = 664
         Top = 7
         Width = 157
@@ -2984,25 +3189,20 @@ object ISFDepositDetails: TISFDepositDetails
         Caption = 'Delete current link'
         Confirmation = 'Are you sure you want to delete this link?'
         Color = clWebLIGHTCORAL
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         FriendlyName = 'iwbDeleteRefLink'
-        TabOrder = 48
+        TabOrder = 47
         OnClick = iwbDeleteRefLinkClick
       end
       object iwbAddRefLink: TIWButton
+        AlignWithMargins = False
         Left = 151
         Top = 7
         Width = 91
         Height = 25
         Caption = 'Add link'
         Color = clBtnFace
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         FriendlyName = 'iwbAddRefLink'
-        TabOrder = 49
+        TabOrder = 48
         OnClick = iwbAddRefLinkClick
       end
     end
@@ -3031,7 +3231,7 @@ object ISFDepositDetails: TISFDepositDetails
     ExplicitWidth = 1050
     inherited IWFrameRegion: TIWRegion
       Width = 1050
-      TabOrder = 50
+      TabOrder = 49
       ExplicitWidth = 1050
       inherited iwrHeader: TIWRegion
         Width = 1050

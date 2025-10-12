@@ -1,5 +1,4 @@
 object dmStratD: TdmStratD
-  OldCreateOrder = False
   Height = 821
   Width = 1001
   object qDeposits: TSQLQuery
@@ -33,12 +32,12 @@ object dmStratD: TdmStratD
       FieldName = 'DEPOSITCLANID'
       Required = True
     end
-    object cdsDepositsCOUNTRYID: TStringField
+    object cdsDepositsCOUNTRYID: TWideStringField
       FieldName = 'COUNTRYID'
       Required = True
       Size = 3
     end
-    object cdsDepositsDEPOSITNAME: TStringField
+    object cdsDepositsDEPOSITNAME: TWideStringField
       FieldName = 'DEPOSITNAME'
       Required = True
       Size = 150
@@ -91,13 +90,13 @@ object dmStratD: TdmStratD
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object qDepositDomainsDOMAINNAME: TStringField
+    object qDepositDomainsDOMAINNAME: TWideStringField
       FieldName = 'DOMAINNAME'
       ProviderFlags = []
       ReadOnly = True
       Size = 150
     end
-    object qDepositDomainsCONTINENTID: TStringField
+    object qDepositDomainsCONTINENTID: TWideStringField
       FieldName = 'CONTINENTID'
       ProviderFlags = []
       ReadOnly = True
@@ -143,12 +142,12 @@ object dmStratD: TdmStratD
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsDomainsCONTINENTID: TStringField
+    object cdsDomainsCONTINENTID: TWideStringField
       FieldName = 'CONTINENTID'
       Required = True
       Size = 3
     end
-    object cdsDomainsDOMAINNAME: TStringField
+    object cdsDomainsDOMAINNAME: TWideStringField
       FieldName = 'DOMAINNAME'
       Required = True
       Size = 150
@@ -167,7 +166,7 @@ object dmStratD: TdmStratD
       FieldName = 'DOMAINPARENTID'
       Required = True
     end
-    object cdsDomainsDOMAINTYPEID: TStringField
+    object cdsDomainsDOMAINTYPEID: TWideStringField
       FieldName = 'DOMAINTYPEID'
       Required = True
       Size = 5
@@ -232,7 +231,7 @@ object dmStratD: TdmStratD
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsClansDEPOSITCLAN: TStringField
+    object cdsClansDEPOSITCLAN: TWideStringField
       FieldName = 'DEPOSITCLAN'
       Required = True
       Size = 150
@@ -299,17 +298,17 @@ object dmStratD: TdmStratD
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsDRep1COUNTRYID: TStringField
+    object cdsDRep1COUNTRYID: TWideStringField
       FieldName = 'COUNTRYID'
       Required = True
       Size = 3
     end
-    object cdsDRep1DEPOSITNAME: TStringField
+    object cdsDRep1DEPOSITNAME: TWideStringField
       FieldName = 'DEPOSITNAME'
       Required = True
       Size = 50
     end
-    object cdsDRep1DEPOSITCLAN: TStringField
+    object cdsDRep1DEPOSITCLAN: TWideStringField
       FieldName = 'DEPOSITCLAN'
       Required = True
       Size = 75
@@ -332,7 +331,7 @@ object dmStratD: TdmStratD
       FieldName = 'APPROXAGEUNCERTAINTY'
       DisplayFormat = '###0.00'
     end
-    object cdsDRep1DATABASENAME: TStringField
+    object cdsDRep1DATABASENAME: TWideStringField
       FieldName = 'DATABASENAME'
       Required = True
       Size = 50
@@ -340,11 +339,11 @@ object dmStratD: TdmStratD
     object cdsDRep1qDRep2: TDataSetField
       FieldName = 'qDRep2'
     end
-    object cdsDRep1DATINGTYPE: TStringField
+    object cdsDRep1DATINGTYPE: TWideStringField
       FieldName = 'DATINGTYPE'
       Size = 50
     end
-    object cdsDRep1GEODYNAMICSETTING: TStringField
+    object cdsDRep1GEODYNAMICSETTING: TWideStringField
       FieldName = 'GEODYNAMICSETTING'
       Size = 50
     end
@@ -352,7 +351,7 @@ object dmStratD: TdmStratD
       FieldName = 'DEPOSITPARENTID'
       Required = True
     end
-    object cdsDRep1DEPOSITSTATUS: TStringField
+    object cdsDRep1DEPOSITSTATUS: TWideStringField
       FieldName = 'DEPOSITSTATUS'
       Size = 30
     end
@@ -390,14 +389,13 @@ object dmStratD: TdmStratD
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsOtherDatabasesDATABASENAME: TStringField
+    object cdsOtherDatabasesDATABASENAME: TWideStringField
       FieldName = 'DATABASENAME'
       Required = True
       Size = 50
     end
-    object cdsOtherDatabasesDESCRIPTION: TMemoField
+    object cdsOtherDatabasesDESCRIPTION: TBlobField
       FieldName = 'DESCRIPTION'
-      BlobType = ftMemo
     end
   end
   object dsOtherDatabases: TDataSource
@@ -415,13 +413,13 @@ object dmStratD: TdmStratD
     SQLConnection = sqlcStrat
     Left = 30
     Top = 362
-    object qContinentsCONTINENTID: TStringField
+    object qContinentsCONTINENTID: TWideStringField
       FieldName = 'CONTINENTID'
       Required = True
       FixedChar = True
       Size = 3
     end
-    object qContinentsCONTINENT: TStringField
+    object qContinentsCONTINENT: TWideStringField
       FieldName = 'CONTINENT'
     end
     object qContinentsDEFAULTDOMAINID: TIntegerField
@@ -441,14 +439,14 @@ object dmStratD: TdmStratD
     ProviderName = 'dspContinents'
     Left = 86
     Top = 362
-    object cdsContinentsCONTINENTID: TStringField
+    object cdsContinentsCONTINENTID: TWideStringField
       FieldName = 'CONTINENTID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
       FixedChar = True
       Size = 3
     end
-    object cdsContinentsCONTINENT: TStringField
+    object cdsContinentsCONTINENT: TWideStringField
       FieldName = 'CONTINENT'
     end
     object cdsContinentsDEFAULTDOMAINID: TIntegerField
@@ -489,12 +487,12 @@ object dmStratD: TdmStratD
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsDomainsAllCONTINENTID: TStringField
+    object cdsDomainsAllCONTINENTID: TWideStringField
       FieldName = 'CONTINENTID'
       Required = True
       Size = 3
     end
-    object cdsDomainsAllDOMAINNAME: TStringField
+    object cdsDomainsAllDOMAINNAME: TWideStringField
       FieldName = 'DOMAINNAME'
       Required = True
       Size = 150
@@ -503,7 +501,7 @@ object dmStratD: TdmStratD
       FieldName = 'DOMAINPARENTID'
       Required = True
     end
-    object cdsDomainsAllDOMAINTYPEID: TStringField
+    object cdsDomainsAllDOMAINTYPEID: TWideStringField
       FieldName = 'DOMAINTYPEID'
       Required = True
       Size = 5
@@ -544,14 +542,14 @@ object dmStratD: TdmStratD
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object qDepositCommoditiesCOMMODITYID: TStringField
+    object qDepositCommoditiesCOMMODITYID: TWideStringField
       FieldName = 'COMMODITYID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       ReadOnly = True
       Required = True
       Size = 3
     end
-    object qDepositCommoditiesCOMMODITY: TStringField
+    object qDepositCommoditiesCOMMODITY: TWideStringField
       FieldName = 'COMMODITY'
       ProviderFlags = []
       ReadOnly = True
@@ -560,13 +558,13 @@ object dmStratD: TdmStratD
     object qDepositCommoditiesCOMMODITYGRADE: TFloatField
       FieldName = 'COMMODITYGRADE'
     end
-    object qDepositCommoditiesGRADEUNITID: TStringField
+    object qDepositCommoditiesGRADEUNITID: TWideStringField
       FieldName = 'GRADEUNITID'
       Required = True
       FixedChar = True
       Size = 1
     end
-    object qDepositCommoditiesGRADEUNIT: TStringField
+    object qDepositCommoditiesGRADEUNIT: TWideStringField
       FieldName = 'GRADEUNIT'
       ProviderFlags = []
       ReadOnly = True
@@ -620,17 +618,17 @@ object dmStratD: TdmStratD
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsDepositQueryCOUNTRYID: TStringField
+    object cdsDepositQueryCOUNTRYID: TWideStringField
       FieldName = 'COUNTRYID'
       Required = True
       Size = 3
     end
-    object cdsDepositQueryDEPOSITNAME: TStringField
+    object cdsDepositQueryDEPOSITNAME: TWideStringField
       FieldName = 'DEPOSITNAME'
       Required = True
       Size = 150
     end
-    object cdsDepositQueryDEPOSITCLAN: TStringField
+    object cdsDepositQueryDEPOSITCLAN: TWideStringField
       FieldName = 'DEPOSITCLAN'
       ProviderFlags = []
       ReadOnly = True
@@ -654,7 +652,7 @@ object dmStratD: TdmStratD
       FieldName = 'APPROXAGEUNCERTAINTY'
       DisplayFormat = '###0.00'
     end
-    object cdsDepositQueryDATABASENAME: TStringField
+    object cdsDepositQueryDATABASENAME: TWideStringField
       FieldName = 'DATABASENAME'
       ProviderFlags = []
       ReadOnly = True
@@ -664,15 +662,15 @@ object dmStratD: TdmStratD
       FieldName = 'DEPOSITPARENTID'
       Required = True
     end
-    object cdsDepositQueryDATINGTYPE: TStringField
+    object cdsDepositQueryDATINGTYPE: TWideStringField
       FieldName = 'DATINGTYPE'
       Size = 50
     end
-    object cdsDepositQueryGEODYNAMICSETTING: TStringField
+    object cdsDepositQueryGEODYNAMICSETTING: TWideStringField
       FieldName = 'GEODYNAMICSETTING'
       Size = 50
     end
-    object cdsDepositQueryDEPOSITSTATUS: TStringField
+    object cdsDepositQueryDEPOSITSTATUS: TWideStringField
       FieldName = 'DEPOSITSTATUS'
       Size = 30
     end
@@ -691,18 +689,18 @@ object dmStratD: TdmStratD
     SQLConnection = sqlcStrat
     Left = 30
     Top = 318
-    object qCountryContinentsCOUNTRYID: TStringField
+    object qCountryContinentsCOUNTRYID: TWideStringField
       FieldName = 'COUNTRYID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
       Size = 3
     end
-    object qCountryContinentsCOUNTRY: TStringField
+    object qCountryContinentsCOUNTRY: TWideStringField
       FieldName = 'COUNTRY'
       Required = True
       Size = 30
     end
-    object qCountryContinentsCONTINENTID: TStringField
+    object qCountryContinentsCONTINENTID: TWideStringField
       FieldName = 'CONTINENTID'
       Required = True
       Size = 3
@@ -720,18 +718,18 @@ object dmStratD: TdmStratD
     ProviderName = 'dspCountryContinents'
     Left = 86
     Top = 318
-    object cdsCountryContinentsCOUNTRYID: TStringField
+    object cdsCountryContinentsCOUNTRYID: TWideStringField
       FieldName = 'COUNTRYID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
       Size = 3
     end
-    object cdsCountryContinentsCOUNTRY: TStringField
+    object cdsCountryContinentsCOUNTRY: TWideStringField
       FieldName = 'COUNTRY'
       Required = True
       Size = 30
     end
-    object cdsCountryContinentsCONTINENTID: TStringField
+    object cdsCountryContinentsCONTINENTID: TWideStringField
       FieldName = 'CONTINENTID'
       Required = True
       Size = 3
@@ -793,12 +791,12 @@ object dmStratD: TdmStratD
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object qUnitCountryUNITNAME: TStringField
+    object qUnitCountryUNITNAME: TWideStringField
       FieldName = 'UNITNAME'
       Required = True
       Size = 50
     end
-    object qUnitCountryCOUNTRYID: TStringField
+    object qUnitCountryCOUNTRYID: TWideStringField
       FieldName = 'COUNTRYID'
       Required = True
       Size = 3
@@ -821,13 +819,13 @@ object dmStratD: TdmStratD
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsUnitCountryUNITNAME: TStringField
+    object cdsUnitCountryUNITNAME: TWideStringField
       DisplayLabel = 'Stratigraphic Unit'
       FieldName = 'UNITNAME'
       Required = True
       Size = 50
     end
-    object cdsUnitCountryCOUNTRYID: TStringField
+    object cdsUnitCountryCOUNTRYID: TWideStringField
       FieldName = 'COUNTRYID'
       Required = True
       Size = 3
@@ -927,12 +925,12 @@ object dmStratD: TdmStratD
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsDefaultDomainsCONTINENTID: TStringField
+    object cdsDefaultDomainsCONTINENTID: TWideStringField
       FieldName = 'CONTINENTID'
       Required = True
       Size = 3
     end
-    object cdsDefaultDomainsDOMAINNAME: TStringField
+    object cdsDefaultDomainsDOMAINNAME: TWideStringField
       FieldName = 'DOMAINNAME'
       Required = True
       Size = 150
@@ -945,32 +943,24 @@ object dmStratD: TdmStratD
     Top = 502
   end
   object sqlcStrat: TSQLConnection
-    ConnectionName = 'StratDB_bromo2'
     DriverName = 'DevartFirebird'
     LoginPrompt = False
     Params.Strings = (
       'VendorLibOsx=libfbclient.dylib'
       'GetDriverFunc=getSQLDriverFirebird'
       'LibraryName=dbexpida41.dll'
-      'VendorLib=fbclient.dll'
-      'DataBase=bromo2.usask.ca:s:\data\firebird\stratdb2021v30.fdb'
+      'VendorLib=c:\exe32\fbclient.dll'
+      'DataBase=c:\data\firebird\stratdb2025v50_UTF8.fdb'
       'User_Name=SYSDBA'
       'Password=V0lcano3^'
       'SQLDialect=3'
-      'BlobSize=-1'
-      'ErrorResourceFile='
-      'LocaleCode=0000'
       'DevartFirebird TransIsolation=ReadCommitted'
       'ProductName=DevartFirebird'
-      
-        'DriverPackageLoader=TDBXDynalinkDriverLoader,DBXCommonDriver260.' +
-        'bpl'
-      
-        'MetaDataPackageLoader=TDBXDevartInterBaseMetaDataCommandFactory,' +
-        'DbxDevartInterBaseDriver260.bpl'
-      'DriverUnit=DbxDevartInterBase')
-    Left = 56
-    Top = 20
+      'DriverUnit=DbxDevartInterBase'
+      'UseUnicode=true'
+      'Charset=UTF8')
+    Left = 48
+    Top = 4
   end
   object qDepositFor: TSQLQuery
     DataSource = dsqDeposit
@@ -997,19 +987,19 @@ object dmStratD: TdmStratD
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object qDepositForWHOFORID: TStringField
+    object qDepositForWHOFORID: TWideStringField
       FieldName = 'WHOFORID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
       Size = 5
     end
-    object qDepositForINC4CHTYN: TStringField
+    object qDepositForINC4CHTYN: TWideStringField
       FieldName = 'INC4CHTYN'
       Required = True
       FixedChar = True
       Size = 1
     end
-    object qDepositForWHOFOR: TStringField
+    object qDepositForWHOFOR: TWideStringField
       FieldName = 'WHOFOR'
       ProviderFlags = []
       ReadOnly = True
@@ -1044,14 +1034,14 @@ object dmStratD: TdmStratD
     ProviderName = 'dspGradeUnits'
     Left = 86
     Top = 550
-    object cdsGradeUnitsGRADEID: TStringField
+    object cdsGradeUnitsGRADEID: TWideStringField
       FieldName = 'GRADEID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
       FixedChar = True
       Size = 1
     end
-    object cdsGradeUnitsGRADEUNIT: TStringField
+    object cdsGradeUnitsGRADEUNIT: TWideStringField
       FieldName = 'GRADEUNIT'
       Required = True
       Size = 60
@@ -1102,7 +1092,7 @@ object dmStratD: TdmStratD
       FieldName = 'DATABASEID'
       Required = True
     end
-    object StringField1: TStringField
+    object StringField1: TWideStringField
       FieldName = 'DEPOSITNAME'
       Required = True
       Size = 50
@@ -1121,12 +1111,12 @@ object dmStratD: TdmStratD
     object FloatField4: TFloatField
       FieldName = 'APPROXAGEUNCERTAINTY'
     end
-    object StringField2: TStringField
+    object StringField2: TWideStringField
       FieldName = 'COUNTRYID'
       Required = True
       Size = 3
     end
-    object StringField3: TStringField
+    object StringField3: TWideStringField
       FieldName = 'CONTINENTID'
       ProviderFlags = []
       ReadOnly = True
@@ -1140,7 +1130,7 @@ object dmStratD: TdmStratD
       FieldName = 'DEPOSITIDINT'
       Required = True
     end
-    object StringField4: TStringField
+    object StringField4: TWideStringField
       FieldName = 'DEPOSITIDSTR'
       Required = True
       Size = 10
@@ -1191,7 +1181,7 @@ object dmStratD: TdmStratD
       FieldName = 'DATABASEID'
       Required = True
     end
-    object cdsDepositDEPOSITNAME: TStringField
+    object cdsDepositDEPOSITNAME: TWideStringField
       FieldName = 'DEPOSITNAME'
       Required = True
       Size = 50
@@ -1214,12 +1204,12 @@ object dmStratD: TdmStratD
       FieldName = 'APPROXAGEUNCERTAINTY'
       DisplayFormat = '###0.000'
     end
-    object cdsDepositCOUNTRYID: TStringField
+    object cdsDepositCOUNTRYID: TWideStringField
       FieldName = 'COUNTRYID'
       Required = True
       Size = 3
     end
-    object cdsDepositCONTINENTID: TStringField
+    object cdsDepositCONTINENTID: TWideStringField
       FieldName = 'CONTINENTID'
       ProviderFlags = []
       ReadOnly = True
@@ -1233,7 +1223,7 @@ object dmStratD: TdmStratD
       FieldName = 'DEPOSITIDINT'
       Required = True
     end
-    object cdsDepositDEPOSITIDSTR: TStringField
+    object cdsDepositDEPOSITIDSTR: TWideStringField
       FieldName = 'DEPOSITIDSTR'
       Required = True
       Size = 10
@@ -1333,13 +1323,13 @@ object dmStratD: TdmStratD
     ProviderName = 'dspCommodities'
     Left = 96
     Top = 208
-    object cdsCommoditiesCOMMODITYID: TStringField
+    object cdsCommoditiesCOMMODITYID: TWideStringField
       FieldName = 'COMMODITYID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
       Size = 3
     end
-    object cdsCommoditiesCOMMODITY: TStringField
+    object cdsCommoditiesCOMMODITY: TWideStringField
       FieldName = 'COMMODITY'
       Required = True
       Size = 30
@@ -1374,13 +1364,13 @@ object dmStratD: TdmStratD
     ProviderName = 'dspTest'
     Left = 632
     Top = 400
-    object cdsTestCOMMODITYID: TStringField
+    object cdsTestCOMMODITYID: TWideStringField
       FieldName = 'COMMODITYID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
       Size = 3
     end
-    object cdsTestCOMMODITY: TStringField
+    object cdsTestCOMMODITY: TWideStringField
       FieldName = 'COMMODITY'
       Required = True
       Size = 30
@@ -1407,13 +1397,13 @@ object dmStratD: TdmStratD
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsDepositDomainsDOMAINNAME: TStringField
+    object cdsDepositDomainsDOMAINNAME: TWideStringField
       FieldName = 'DOMAINNAME'
       ProviderFlags = []
       ReadOnly = True
       Size = 150
     end
-    object cdsDepositDomainsCONTINENTID: TStringField
+    object cdsDepositDomainsCONTINENTID: TWideStringField
       FieldName = 'CONTINENTID'
       ProviderFlags = []
       ReadOnly = True
@@ -1431,13 +1421,13 @@ object dmStratD: TdmStratD
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsDepositCommoditiesCOMMODITYID: TStringField
+    object cdsDepositCommoditiesCOMMODITYID: TWideStringField
       FieldName = 'COMMODITYID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
       Size = 3
     end
-    object cdsDepositCommoditiesCOMMODITY: TStringField
+    object cdsDepositCommoditiesCOMMODITY: TWideStringField
       FieldName = 'COMMODITY'
       ProviderFlags = []
       ReadOnly = True
@@ -1447,13 +1437,13 @@ object dmStratD: TdmStratD
       FieldName = 'COMMODITYGRADE'
       DisplayFormat = '####0.000'
     end
-    object cdsDepositCommoditiesGRADEUNITID: TStringField
+    object cdsDepositCommoditiesGRADEUNITID: TWideStringField
       FieldName = 'GRADEUNITID'
       Required = True
       FixedChar = True
       Size = 1
     end
-    object cdsDepositCommoditiesGRADEUNIT: TStringField
+    object cdsDepositCommoditiesGRADEUNIT: TWideStringField
       FieldName = 'GRADEUNIT'
       ProviderFlags = []
       ReadOnly = True
@@ -1490,19 +1480,19 @@ object dmStratD: TdmStratD
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsDepositForWHOFORID: TStringField
+    object cdsDepositForWHOFORID: TWideStringField
       FieldName = 'WHOFORID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
       Size = 5
     end
-    object cdsDepositForINC4CHTYN: TStringField
+    object cdsDepositForINC4CHTYN: TWideStringField
       FieldName = 'INC4CHTYN'
       Required = True
       FixedChar = True
       Size = 1
     end
-    object cdsDepositForWHOFOR: TStringField
+    object cdsDepositForWHOFOR: TWideStringField
       FieldName = 'WHOFOR'
       ProviderFlags = []
       ReadOnly = True
@@ -1538,13 +1528,13 @@ object dmStratD: TdmStratD
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object qDepositCommoditiesOnlyCOMMODITYID: TStringField
+    object qDepositCommoditiesOnlyCOMMODITYID: TWideStringField
       FieldName = 'COMMODITYID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
       Size = 3
     end
-    object qDepositCommoditiesOnlyCOMMODITY: TStringField
+    object qDepositCommoditiesOnlyCOMMODITY: TWideStringField
       FieldName = 'COMMODITY'
       ProviderFlags = []
       ReadOnly = True
@@ -1553,19 +1543,19 @@ object dmStratD: TdmStratD
     object qDepositCommoditiesOnlyCOMMODITYGRADE: TFloatField
       FieldName = 'COMMODITYGRADE'
     end
-    object qDepositCommoditiesOnlyGRADEUNITID: TStringField
+    object qDepositCommoditiesOnlyGRADEUNITID: TWideStringField
       FieldName = 'GRADEUNITID'
       Required = True
       FixedChar = True
       Size = 1
     end
-    object qDepositCommoditiesOnlyGRADEUNIT: TStringField
+    object qDepositCommoditiesOnlyGRADEUNIT: TWideStringField
       FieldName = 'GRADEUNIT'
       ProviderFlags = []
       ReadOnly = True
       Size = 15
     end
-    object qDepositCommoditiesOnlyDEPOSITNAME: TStringField
+    object qDepositCommoditiesOnlyDEPOSITNAME: TWideStringField
       FieldName = 'DEPOSITNAME'
       ProviderFlags = []
       ReadOnly = True
@@ -1590,13 +1580,13 @@ object dmStratD: TdmStratD
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsDepositCommoditiesOnlyCOMMODITYID: TStringField
+    object cdsDepositCommoditiesOnlyCOMMODITYID: TWideStringField
       FieldName = 'COMMODITYID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
       Size = 3
     end
-    object cdsDepositCommoditiesOnlyCOMMODITY: TStringField
+    object cdsDepositCommoditiesOnlyCOMMODITY: TWideStringField
       FieldName = 'COMMODITY'
       ProviderFlags = []
       ReadOnly = True
@@ -1606,19 +1596,19 @@ object dmStratD: TdmStratD
       FieldName = 'COMMODITYGRADE'
       DisplayFormat = '####0.000'
     end
-    object cdsDepositCommoditiesOnlyGRADEUNITID: TStringField
+    object cdsDepositCommoditiesOnlyGRADEUNITID: TWideStringField
       FieldName = 'GRADEUNITID'
       Required = True
       FixedChar = True
       Size = 1
     end
-    object cdsDepositCommoditiesOnlyGRADEUNIT: TStringField
+    object cdsDepositCommoditiesOnlyGRADEUNIT: TWideStringField
       FieldName = 'GRADEUNIT'
       ProviderFlags = []
       ReadOnly = True
       Size = 15
     end
-    object cdsDepositCommoditiesOnlyDEPOSITNAME: TStringField
+    object cdsDepositCommoditiesOnlyDEPOSITNAME: TWideStringField
       FieldName = 'DEPOSITNAME'
       ProviderFlags = []
       ReadOnly = True
@@ -1667,7 +1657,7 @@ object dmStratD: TdmStratD
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsGeodynamicSettingsGEODYNAMICSETTING: TStringField
+    object cdsGeodynamicSettingsGEODYNAMICSETTING: TWideStringField
       FieldName = 'GEODYNAMICSETTING'
       Size = 50
     end
@@ -1695,7 +1685,7 @@ object dmStratD: TdmStratD
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsDatingTypesDATINGTYPE: TStringField
+    object cdsDatingTypesDATINGTYPE: TWideStringField
       FieldName = 'DATINGTYPE'
       Size = 50
     end
@@ -1733,7 +1723,7 @@ object dmStratD: TdmStratD
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object qSubDepositsDEPOSITNAME: TStringField
+    object qSubDepositsDEPOSITNAME: TWideStringField
       FieldName = 'DEPOSITNAME'
       Required = True
       Size = 50
@@ -1760,7 +1750,7 @@ object dmStratD: TdmStratD
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsSubDepositsDEPOSITNAME: TStringField
+    object cdsSubDepositsDEPOSITNAME: TWideStringField
       FieldName = 'DEPOSITNAME'
       Required = True
       Size = 50
@@ -1839,17 +1829,17 @@ object dmStratD: TdmStratD
       FieldName = 'SDBDEPOSITID'
       Required = True
     end
-    object cdsDRep2COUNTRYID: TStringField
+    object cdsDRep2COUNTRYID: TWideStringField
       FieldName = 'COUNTRYID'
       Required = True
       Size = 3
     end
-    object cdsDRep2DEPOSITNAME: TStringField
+    object cdsDRep2DEPOSITNAME: TWideStringField
       FieldName = 'DEPOSITNAME'
       Required = True
       Size = 50
     end
-    object cdsDRep2DEPOSITCLAN: TStringField
+    object cdsDRep2DEPOSITCLAN: TWideStringField
       FieldName = 'DEPOSITCLAN'
       Required = True
       Size = 75
@@ -1868,16 +1858,16 @@ object dmStratD: TdmStratD
     object cdsDRep2APPROXAGEUNCERTAINTY: TFloatField
       FieldName = 'APPROXAGEUNCERTAINTY'
     end
-    object cdsDRep2DATABASENAME: TStringField
+    object cdsDRep2DATABASENAME: TWideStringField
       FieldName = 'DATABASENAME'
       Required = True
       Size = 50
     end
-    object cdsDRep2DATINGTYPE: TStringField
+    object cdsDRep2DATINGTYPE: TWideStringField
       FieldName = 'DATINGTYPE'
       Size = 50
     end
-    object cdsDRep2GEODYNAMICSETTING: TStringField
+    object cdsDRep2GEODYNAMICSETTING: TWideStringField
       FieldName = 'GEODYNAMICSETTING'
       Size = 50
     end
@@ -1885,7 +1875,7 @@ object dmStratD: TdmStratD
       FieldName = 'DEPOSITPARENTID'
       Required = True
     end
-    object cdsDRep2DEPOSITSTATUS: TStringField
+    object cdsDRep2DEPOSITSTATUS: TWideStringField
       FieldName = 'DEPOSITSTATUS'
       Size = 30
     end
@@ -1922,7 +1912,7 @@ object dmStratD: TdmStratD
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsDepositStatusDEPOSITSTATUS: TStringField
+    object cdsDepositStatusDEPOSITSTATUS: TWideStringField
       FieldName = 'DEPOSITSTATUS'
       Size = 30
     end
@@ -1969,7 +1959,7 @@ object dmStratD: TdmStratD
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsValidFullVALIDSTATUSID: TStringField
+    object cdsValidFullVALIDSTATUSID: TWideStringField
       FieldName = 'VALIDSTATUSID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
@@ -1979,13 +1969,12 @@ object dmStratD: TdmStratD
       FieldName = 'DATEDONE'
       Required = True
     end
-    object cdsValidFullDONEBY: TStringField
+    object cdsValidFullDONEBY: TWideStringField
       FieldName = 'DONEBY'
       Required = True
     end
-    object cdsValidFullCOMMENTS: TMemoField
+    object cdsValidFullCOMMENTS: TBlobField
       FieldName = 'COMMENTS'
-      BlobType = ftMemo
     end
   end
   object dsValidFull: TDataSource
@@ -2013,15 +2002,15 @@ object dmStratD: TdmStratD
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object qDepositCommentDEPOSITCOMMENT: TMemoField
+    object qDepositCommentDEPOSITCOMMENT: TBlobField
       FieldName = 'DEPOSITCOMMENT'
-      BlobType = ftMemo
       Size = -1
     end
   end
   object cdsDepositComment: TClientDataSet
     Aggregates = <>
     DataSetField = cdsDepositqDepositComment
+    FetchOnDemand = False
     Params = <>
     Left = 304
     Top = 544
@@ -2030,13 +2019,11 @@ object dmStratD: TdmStratD
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsDepositCommentDEPOSITCOMMENT: TMemoField
+    object cdsDepositCommentDEPOSITCOMMENT: TBlobField
       FieldName = 'DEPOSITCOMMENT'
-      BlobType = ftMemo
     end
   end
   object dsDepositComment: TDataSource
-    AutoEdit = False
     DataSet = cdsDepositComment
     Left = 334
     Top = 542
@@ -2066,7 +2053,7 @@ object dmStratD: TdmStratD
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object qValidVALIDSTATUSID: TStringField
+    object qValidVALIDSTATUSID: TWideStringField
       FieldName = 'VALIDSTATUSID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
@@ -2076,11 +2063,11 @@ object dmStratD: TdmStratD
       FieldName = 'DATEDONE'
       Required = True
     end
-    object qValidDONEBY: TStringField
+    object qValidDONEBY: TWideStringField
       FieldName = 'DONEBY'
       Required = True
     end
-    object qValidVALIDATIONSTATUS: TStringField
+    object qValidVALIDATIONSTATUS: TWideStringField
       FieldName = 'VALIDATIONSTATUS'
       ProviderFlags = []
       ReadOnly = True
@@ -2098,7 +2085,7 @@ object dmStratD: TdmStratD
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsValidVALIDSTATUSID: TStringField
+    object cdsValidVALIDSTATUSID: TWideStringField
       FieldName = 'VALIDSTATUSID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
@@ -2108,11 +2095,11 @@ object dmStratD: TdmStratD
       FieldName = 'DATEDONE'
       Required = True
     end
-    object cdsValidDONEBY: TStringField
+    object cdsValidDONEBY: TWideStringField
       FieldName = 'DONEBY'
       Required = True
     end
-    object cdsValidVALIDATIONSTATUS: TStringField
+    object cdsValidVALIDATIONSTATUS: TWideStringField
       FieldName = 'VALIDATIONSTATUS'
       ProviderFlags = []
       ReadOnly = True
@@ -2154,7 +2141,7 @@ object dmStratD: TdmStratD
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object qRefsSOURCESHORT: TStringField
+    object qRefsSOURCESHORT: TWideStringField
       FieldName = 'SOURCESHORT'
       ProviderFlags = []
       ReadOnly = True
@@ -2165,7 +2152,7 @@ object dmStratD: TdmStratD
       ProviderFlags = []
       ReadOnly = True
     end
-    object qRefsCONTINENTID: TStringField
+    object qRefsCONTINENTID: TWideStringField
       FieldName = 'CONTINENTID'
       ProviderFlags = []
       ReadOnly = True
@@ -2188,7 +2175,7 @@ object dmStratD: TdmStratD
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsRefsSOURCESHORT: TStringField
+    object cdsRefsSOURCESHORT: TWideStringField
       FieldName = 'SOURCESHORT'
       ProviderFlags = []
       ReadOnly = True
@@ -2199,7 +2186,7 @@ object dmStratD: TdmStratD
       ProviderFlags = []
       ReadOnly = True
     end
-    object cdsRefsCONTINENTID: TStringField
+    object cdsRefsCONTINENTID: TWideStringField
       FieldName = 'CONTINENTID'
       ProviderFlags = []
       ReadOnly = True
@@ -2315,7 +2302,7 @@ object dmStratD: TdmStratD
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsDepCommoditiesDEPOSITNAME: TStringField
+    object cdsDepCommoditiesDEPOSITNAME: TWideStringField
       FieldName = 'DEPOSITNAME'
       Required = True
       Size = 50
@@ -2350,7 +2337,7 @@ object dmStratD: TdmStratD
       FieldName = 'DATABASEID'
       Required = True
     end
-    object cdsDepCommoditiesCOUNTRYID: TStringField
+    object cdsDepCommoditiesCOUNTRYID: TWideStringField
       FieldName = 'COUNTRYID'
       Required = True
       Size = 3
@@ -2403,12 +2390,12 @@ object dmStratD: TdmStratD
     object cdsDepCommoditiesqCom1: TDataSetField
       FieldName = 'qCom1'
     end
-    object cdsDepCommoditiesDEPOSITCLAN: TStringField
+    object cdsDepCommoditiesDEPOSITCLAN: TWideStringField
       FieldName = 'DEPOSITCLAN'
       Required = True
       Size = 75
     end
-    object cdsDepCommoditiesDEPOSITSTATUS: TStringField
+    object cdsDepCommoditiesDEPOSITSTATUS: TWideStringField
       FieldName = 'DEPOSITSTATUS'
       Size = 30
     end
@@ -2473,7 +2460,7 @@ object dmStratD: TdmStratD
       FieldName = 'SBDEPOSITID'
       Required = True
     end
-    object cdsCom0COMMODITYID: TStringField
+    object cdsCom0COMMODITYID: TWideStringField
       FieldName = 'COMMODITYID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
@@ -2482,23 +2469,23 @@ object dmStratD: TdmStratD
     object cdsCom0COMMODITYGRADE: TFloatField
       FieldName = 'COMMODITYGRADE'
     end
-    object cdsCom0GRADEUNITID: TStringField
+    object cdsCom0GRADEUNITID: TWideStringField
       FieldName = 'GRADEUNITID'
       Required = True
       FixedChar = True
       Size = 1
     end
-    object cdsCom0GRADEUNIT: TStringField
+    object cdsCom0GRADEUNIT: TWideStringField
       FieldName = 'GRADEUNIT'
       Required = True
       Size = 15
     end
-    object cdsCom0COMMODITY: TStringField
+    object cdsCom0COMMODITY: TWideStringField
       FieldName = 'COMMODITY'
       Required = True
       Size = 30
     end
-    object cdsCom0COMMODITYASSOCIATION: TStringField
+    object cdsCom0COMMODITYASSOCIATION: TWideStringField
       FieldName = 'COMMODITYASSOCIATION'
       Required = True
       Size = 50
@@ -2576,7 +2563,7 @@ object dmStratD: TdmStratD
       FieldName = 'COMMODITYORDER'
       Required = True
     end
-    object cdsCom1COMMODITYID: TStringField
+    object cdsCom1COMMODITYID: TWideStringField
       FieldName = 'COMMODITYID'
       Required = True
       Size = 3
@@ -2584,23 +2571,23 @@ object dmStratD: TdmStratD
     object cdsCom1COMMODITYGRADE: TFloatField
       FieldName = 'COMMODITYGRADE'
     end
-    object cdsCom1GRADEUNITID: TStringField
+    object cdsCom1GRADEUNITID: TWideStringField
       FieldName = 'GRADEUNITID'
       Required = True
       FixedChar = True
       Size = 1
     end
-    object cdsCom1GRADEUNIT: TStringField
+    object cdsCom1GRADEUNIT: TWideStringField
       FieldName = 'GRADEUNIT'
       Required = True
       Size = 15
     end
-    object cdsCom1COMMODITY: TStringField
+    object cdsCom1COMMODITY: TWideStringField
       FieldName = 'COMMODITY'
       Required = True
       Size = 30
     end
-    object cdsCom1COMMODITYASSOCIATION: TStringField
+    object cdsCom1COMMODITYASSOCIATION: TWideStringField
       FieldName = 'COMMODITYASSOCIATION'
       Required = True
       Size = 50
@@ -2674,7 +2661,7 @@ object dmStratD: TdmStratD
       FieldName = 'COMMODITYORDER'
       Required = True
     end
-    object cdsCom2COMMODITYID: TStringField
+    object cdsCom2COMMODITYID: TWideStringField
       FieldName = 'COMMODITYID'
       Required = True
       Size = 3
@@ -2682,23 +2669,23 @@ object dmStratD: TdmStratD
     object cdsCom2COMMODITYGRADE: TFloatField
       FieldName = 'COMMODITYGRADE'
     end
-    object cdsCom2GRADEUNITID: TStringField
+    object cdsCom2GRADEUNITID: TWideStringField
       FieldName = 'GRADEUNITID'
       Required = True
       FixedChar = True
       Size = 1
     end
-    object cdsCom2GRADEUNIT: TStringField
+    object cdsCom2GRADEUNIT: TWideStringField
       FieldName = 'GRADEUNIT'
       Required = True
       Size = 15
     end
-    object cdsCom2COMMODITY: TStringField
+    object cdsCom2COMMODITY: TWideStringField
       FieldName = 'COMMODITY'
       Required = True
       Size = 30
     end
-    object cdsCom2COMMODITYASSOCIATION: TStringField
+    object cdsCom2COMMODITYASSOCIATION: TWideStringField
       FieldName = 'COMMODITYASSOCIATION'
       Required = True
       Size = 50
@@ -2772,7 +2759,7 @@ object dmStratD: TdmStratD
       FieldName = 'COMMODITYORDER'
       Required = True
     end
-    object cdsCom3COMMODITYID: TStringField
+    object cdsCom3COMMODITYID: TWideStringField
       FieldName = 'COMMODITYID'
       Required = True
       Size = 3
@@ -2780,23 +2767,23 @@ object dmStratD: TdmStratD
     object cdsCom3COMMODITYGRADE: TFloatField
       FieldName = 'COMMODITYGRADE'
     end
-    object cdsCom3GRADEUNITID: TStringField
+    object cdsCom3GRADEUNITID: TWideStringField
       FieldName = 'GRADEUNITID'
       Required = True
       FixedChar = True
       Size = 1
     end
-    object cdsCom3GRADEUNIT: TStringField
+    object cdsCom3GRADEUNIT: TWideStringField
       FieldName = 'GRADEUNIT'
       Required = True
       Size = 15
     end
-    object cdsCom3COMMODITY: TStringField
+    object cdsCom3COMMODITY: TWideStringField
       FieldName = 'COMMODITY'
       Required = True
       Size = 30
     end
-    object cdsCom3COMMODITYASSOCIATION: TStringField
+    object cdsCom3COMMODITYASSOCIATION: TWideStringField
       FieldName = 'COMMODITYASSOCIATION'
       Required = True
       Size = 50
@@ -2870,7 +2857,7 @@ object dmStratD: TdmStratD
       FieldName = 'COMMODITYORDER'
       Required = True
     end
-    object cdsCom4COMMODITYID: TStringField
+    object cdsCom4COMMODITYID: TWideStringField
       FieldName = 'COMMODITYID'
       Required = True
       Size = 3
@@ -2878,23 +2865,23 @@ object dmStratD: TdmStratD
     object cdsCom4COMMODITYGRADE: TFloatField
       FieldName = 'COMMODITYGRADE'
     end
-    object cdsCom4GRADEUNITID: TStringField
+    object cdsCom4GRADEUNITID: TWideStringField
       FieldName = 'GRADEUNITID'
       Required = True
       FixedChar = True
       Size = 1
     end
-    object cdsCom4GRADEUNIT: TStringField
+    object cdsCom4GRADEUNIT: TWideStringField
       FieldName = 'GRADEUNIT'
       Required = True
       Size = 15
     end
-    object cdsCom4COMMODITY: TStringField
+    object cdsCom4COMMODITY: TWideStringField
       FieldName = 'COMMODITY'
       Required = True
       Size = 30
     end
-    object cdsCom4COMMODITYASSOCIATION: TStringField
+    object cdsCom4COMMODITYASSOCIATION: TWideStringField
       FieldName = 'COMMODITYASSOCIATION'
       Required = True
       Size = 50
@@ -2964,7 +2951,7 @@ object dmStratD: TdmStratD
       FieldName = 'SBDEPOSITID'
       Required = True
     end
-    object cdsCom5COMMODITYASSOCIATION: TStringField
+    object cdsCom5COMMODITYASSOCIATION: TWideStringField
       FieldName = 'COMMODITYASSOCIATION'
       Required = True
       Size = 50
@@ -2977,12 +2964,12 @@ object dmStratD: TdmStratD
       FieldName = 'COMMODITYORDER'
       Required = True
     end
-    object cdsCom5COMMODITYID: TStringField
+    object cdsCom5COMMODITYID: TWideStringField
       FieldName = 'COMMODITYID'
       Required = True
       Size = 3
     end
-    object cdsCom5COMMODITY: TStringField
+    object cdsCom5COMMODITY: TWideStringField
       FieldName = 'COMMODITY'
       Required = True
       Size = 30
@@ -2990,13 +2977,13 @@ object dmStratD: TdmStratD
     object cdsCom5COMMODITYGRADE: TFloatField
       FieldName = 'COMMODITYGRADE'
     end
-    object cdsCom5GRADEUNITID: TStringField
+    object cdsCom5GRADEUNITID: TWideStringField
       FieldName = 'GRADEUNITID'
       Required = True
       FixedChar = True
       Size = 1
     end
-    object cdsCom5GRADEUNIT: TStringField
+    object cdsCom5GRADEUNIT: TWideStringField
       FieldName = 'GRADEUNIT'
       Required = True
       Size = 15
@@ -3066,7 +3053,7 @@ object dmStratD: TdmStratD
       FieldName = 'COMMODITYORDER'
       Required = True
     end
-    object cdsCom6COMMODITYID: TStringField
+    object cdsCom6COMMODITYID: TWideStringField
       FieldName = 'COMMODITYID'
       Required = True
       Size = 3
@@ -3074,23 +3061,23 @@ object dmStratD: TdmStratD
     object cdsCom6COMMODITYGRADE: TFloatField
       FieldName = 'COMMODITYGRADE'
     end
-    object cdsCom6GRADEUNITID: TStringField
+    object cdsCom6GRADEUNITID: TWideStringField
       FieldName = 'GRADEUNITID'
       Required = True
       FixedChar = True
       Size = 1
     end
-    object cdsCom6GRADEUNIT: TStringField
+    object cdsCom6GRADEUNIT: TWideStringField
       FieldName = 'GRADEUNIT'
       Required = True
       Size = 15
     end
-    object cdsCom6COMMODITY: TStringField
+    object cdsCom6COMMODITY: TWideStringField
       FieldName = 'COMMODITY'
       Required = True
       Size = 30
     end
-    object cdsCom6COMMODITYASSOCIATION: TStringField
+    object cdsCom6COMMODITYASSOCIATION: TWideStringField
       FieldName = 'COMMODITYASSOCIATION'
       Required = True
       Size = 50
@@ -3164,7 +3151,7 @@ object dmStratD: TdmStratD
       FieldName = 'COMMODITYORDER'
       Required = True
     end
-    object cdsCom7COMMODITYID: TStringField
+    object cdsCom7COMMODITYID: TWideStringField
       FieldName = 'COMMODITYID'
       Required = True
       Size = 3
@@ -3172,23 +3159,23 @@ object dmStratD: TdmStratD
     object cdsCom7COMMODITYGRADE: TFloatField
       FieldName = 'COMMODITYGRADE'
     end
-    object cdsCom7GRADEUNITID: TStringField
+    object cdsCom7GRADEUNITID: TWideStringField
       FieldName = 'GRADEUNITID'
       Required = True
       FixedChar = True
       Size = 1
     end
-    object cdsCom7GRADEUNIT: TStringField
+    object cdsCom7GRADEUNIT: TWideStringField
       FieldName = 'GRADEUNIT'
       Required = True
       Size = 15
     end
-    object cdsCom7COMMODITY: TStringField
+    object cdsCom7COMMODITY: TWideStringField
       FieldName = 'COMMODITY'
       Required = True
       Size = 30
     end
-    object cdsCom7COMMODITYASSOCIATION: TStringField
+    object cdsCom7COMMODITYASSOCIATION: TWideStringField
       FieldName = 'COMMODITYASSOCIATION'
       Required = True
       Size = 50
@@ -3258,7 +3245,7 @@ object dmStratD: TdmStratD
       FieldName = 'SBDEPOSITID'
       Required = True
     end
-    object cdsCom8COMMODITYASSOCIATION: TStringField
+    object cdsCom8COMMODITYASSOCIATION: TWideStringField
       FieldName = 'COMMODITYASSOCIATION'
       Required = True
       Size = 50
@@ -3271,12 +3258,12 @@ object dmStratD: TdmStratD
       FieldName = 'COMMODITYORDER'
       Required = True
     end
-    object cdsCom8COMMODITYID: TStringField
+    object cdsCom8COMMODITYID: TWideStringField
       FieldName = 'COMMODITYID'
       Required = True
       Size = 3
     end
-    object cdsCom8COMMODITY: TStringField
+    object cdsCom8COMMODITY: TWideStringField
       FieldName = 'COMMODITY'
       Required = True
       Size = 30
@@ -3284,13 +3271,13 @@ object dmStratD: TdmStratD
     object cdsCom8COMMODITYGRADE: TFloatField
       FieldName = 'COMMODITYGRADE'
     end
-    object cdsCom8GRADEUNITID: TStringField
+    object cdsCom8GRADEUNITID: TWideStringField
       FieldName = 'GRADEUNITID'
       Required = True
       FixedChar = True
       Size = 1
     end
-    object cdsCom8GRADEUNIT: TStringField
+    object cdsCom8GRADEUNIT: TWideStringField
       FieldName = 'GRADEUNIT'
       Required = True
       Size = 15
@@ -3360,7 +3347,7 @@ object dmStratD: TdmStratD
       FieldName = 'COMMODITYORDER'
       Required = True
     end
-    object cdsCom9COMMODITYID: TStringField
+    object cdsCom9COMMODITYID: TWideStringField
       FieldName = 'COMMODITYID'
       Required = True
       Size = 3
@@ -3368,23 +3355,23 @@ object dmStratD: TdmStratD
     object cdsCom9COMMODITYGRADE: TFloatField
       FieldName = 'COMMODITYGRADE'
     end
-    object cdsCom9GRADEUNITID: TStringField
+    object cdsCom9GRADEUNITID: TWideStringField
       FieldName = 'GRADEUNITID'
       Required = True
       FixedChar = True
       Size = 1
     end
-    object cdsCom9GRADEUNIT: TStringField
+    object cdsCom9GRADEUNIT: TWideStringField
       FieldName = 'GRADEUNIT'
       Required = True
       Size = 15
     end
-    object cdsCom9COMMODITY: TStringField
+    object cdsCom9COMMODITY: TWideStringField
       FieldName = 'COMMODITY'
       Required = True
       Size = 30
     end
-    object cdsCom9COMMODITYASSOCIATION: TStringField
+    object cdsCom9COMMODITYASSOCIATION: TWideStringField
       FieldName = 'COMMODITYASSOCIATION'
       Required = True
       Size = 50
@@ -3468,7 +3455,7 @@ object dmStratD: TdmStratD
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsCommodityAssociationsCOMMODITYASSOCIATION: TStringField
+    object cdsCommodityAssociationsCOMMODITYASSOCIATION: TWideStringField
       FieldName = 'COMMODITYASSOCIATION'
       Required = True
       Size = 50

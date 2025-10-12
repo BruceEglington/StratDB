@@ -1,0 +1,48 @@
+------------------------------------------------------------------------------------------------------------------------
+Exception message  : The following exception occured
+  IWDBMemo1: Dataset not in edit or insert mode.  Set dsDepositComment.AutoEdit property to TRUE, or manually set cdsDepositComment to Edit or Insert mode before updating records.
+
+Depending on the error condition, it might be possible to restart the application.
+Exception class    : EIWException
+Exception address  : 00B2B1B8
+Exception Time     : 2025-04-23 11:17:46.270
+------------------------------------------------------------------------------------------------------------------------
+Application Name   : StratDB.exe
+Application Version: 
+Started at         : 2025-04-23 11:16:29.215
+Running for        :  1 minute 17 seconds
+Computer Name      : EGLINGTON2
+Compiler Version   : 360
+------------------------------------------------------------------------------------------------------------------------
+IntraWeb Version   : 15.6.1
+Multi-session      : False
+Content Path       : C:\DevD12\StratDB\Win32\Release\wwwroot\
+Session count      : 1
+Current Thread ID  : 13428
+Application Path   : C:\DevD12\StratDB\Win32\Release\
+Active Form        : ISFDepositDetails (TISFDepositDetails)
+Active Form list   : [1] ISFDepositDetails (TISFDepositDetails)
+Form list          : [1] dmUser (TdmUser)
+                     [2] dmStrat (TdmStrat)
+                     [3] dmDV (TdmDV)
+                     [4] dmOpt (TdmOpt)
+                     [5] dmStratC (TdmStratC)
+                     [6] dmLIP (TdmLIP)
+                     [7] dmStratD (TdmStratD)
+                     [8] ISFMain (TISFMain)
+                     [9] ISFDepositDetails (TISFDepositDetails)
+Browser Name       : Firefox
+Browser UserAgent  : Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0
+Session ID         : onD~bCNw6w9M60zeUH0eADiTrPm
+Last Access        : 2025-04-23 11:17:45.315
+Callback           : False
+Runtime parameters : 
+------------------------------------------------------------------------------------------------------------------------
+Client IP address  : 127.0.0.1
+Request PathInfo   : /
+Request Method     : POST
+Request User Agent : Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0
+Cookies Count      : 2
+------------------------------------------------------------------------------------------------------------------------
+[Stack trace is empty]
+------------------------------------------------------------------------------------------------------------------------

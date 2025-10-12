@@ -28,7 +28,7 @@ object dmStratC: TdmStratC
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object qChartsCHART: TStringField
+    object qChartsCHART: TWideStringField
       FieldName = 'CHART'
       Required = True
       Size = 50
@@ -41,7 +41,7 @@ object dmStratC: TdmStratC
       FieldName = 'DEFAULTDOMAINOFFSET'
       Required = True
     end
-    object qChartsOWNERID: TStringField
+    object qChartsOWNERID: TWideStringField
       FieldName = 'OWNERID'
       Required = True
     end
@@ -69,7 +69,7 @@ object dmStratC: TdmStratC
       FieldName = 'DEFAULTMAXAGE'
       Required = True
     end
-    object qChartsUSERID: TStringField
+    object qChartsUSERID: TWideStringField
       FieldName = 'USERID'
       ProviderFlags = []
       ReadOnly = True
@@ -91,7 +91,7 @@ object dmStratC: TdmStratC
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsChartsCHART: TStringField
+    object cdsChartsCHART: TWideStringField
       FieldName = 'CHART'
       Required = True
       Size = 50
@@ -104,7 +104,7 @@ object dmStratC: TdmStratC
       FieldName = 'DEFAULTDOMAINOFFSET'
       Required = True
     end
-    object cdsChartsUSERID: TStringField
+    object cdsChartsUSERID: TWideStringField
       FieldName = 'USERID'
       ProviderFlags = []
       ReadOnly = True
@@ -135,7 +135,7 @@ object dmStratC: TdmStratC
       Required = True
       DisplayFormat = '####0.00'
     end
-    object cdsChartsOWNERID: TStringField
+    object cdsChartsOWNERID: TWideStringField
       FieldName = 'OWNERID'
       Required = True
     end
@@ -159,14 +159,13 @@ object dmStratC: TdmStratC
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object qRefDetailSOURCEID: TStringField
+    object qRefDetailSOURCEID: TWideStringField
       FieldName = 'SOURCEID'
       Required = True
       Size = 100
     end
-    object qRefDetailSOURCEDES: TMemoField
+    object qRefDetailSOURCEDES: TBlobField
       FieldName = 'SOURCEDES'
-      BlobType = ftMemo
     end
   end
   object dspRefDetail: TDataSetProvider
@@ -186,18 +185,17 @@ object dmStratC: TdmStratC
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsRefDetailSOURCEID: TStringField
+    object cdsRefDetailSOURCEID: TWideStringField
       DisplayLabel = 'Reference ID'
       DisplayWidth = 90
       FieldName = 'SOURCEID'
       Required = True
       Size = 100
     end
-    object cdsRefDetailSOURCEDES: TMemoField
+    object cdsRefDetailSOURCEDES: TBlobField
       DisplayLabel = 'Reference details'
       DisplayWidth = 90
       FieldName = 'SOURCEDES'
-      BlobType = ftMemo
       Size = 1
     end
   end
@@ -217,19 +215,18 @@ object dmStratC: TdmStratC
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsRefFullSOURCEID: TStringField
+    object cdsRefFullSOURCEID: TWideStringField
       DisplayLabel = 'Reference ID'
       FieldName = 'SOURCEID'
       Required = True
       Size = 100
     end
-    object cdsRefFullSOURCEDES: TMemoField
+    object cdsRefFullSOURCEDES: TBlobField
       DisplayLabel = 'Reference'
       FieldName = 'SOURCEDES'
-      BlobType = ftMemo
       Size = 1
     end
-    object cdsRefFullCONTINENTID: TStringField
+    object cdsRefFullCONTINENTID: TWideStringField
       DisplayLabel = 'Continent ID'
       FieldName = 'CONTINENTID'
       Required = True
@@ -259,13 +256,13 @@ object dmStratC: TdmStratC
       'select * from YesNo')
     Left = 742
     Top = 8
-    object qYesNoYESNOID: TStringField
+    object qYesNoYESNOID: TWideStringField
       FieldName = 'YESNOID'
       Required = True
       FixedChar = True
       Size = 1
     end
-    object qYesNoYESNO: TStringField
+    object qYesNoYESNO: TWideStringField
       FieldName = 'YESNO'
       Required = True
       Size = 3
@@ -282,7 +279,7 @@ object dmStratC: TdmStratC
     ProviderName = 'dspYesNo'
     Left = 798
     Top = 8
-    object cdsYesNoYESNOID: TStringField
+    object cdsYesNoYESNOID: TWideStringField
       DisplayLabel = 'Y / N'
       FieldName = 'YESNOID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
@@ -290,7 +287,7 @@ object dmStratC: TdmStratC
       FixedChar = True
       Size = 1
     end
-    object cdsYesNoYESNO: TStringField
+    object cdsYesNoYESNO: TWideStringField
       DisplayLabel = 'Yes / No'
       FieldName = 'YESNO'
       Required = True
@@ -370,7 +367,7 @@ object dmStratC: TdmStratC
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsValidFullVALIDSTATUSID: TStringField
+    object cdsValidFullVALIDSTATUSID: TWideStringField
       DisplayLabel = 'Valid. Status ID'
       FieldName = 'VALIDSTATUSID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
@@ -382,15 +379,14 @@ object dmStratC: TdmStratC
       FieldName = 'DATEDONE'
       Required = True
     end
-    object cdsValidFullDONEBY: TStringField
+    object cdsValidFullDONEBY: TWideStringField
       DisplayLabel = 'Done By'
       FieldName = 'DONEBY'
       Required = True
     end
-    object cdsValidFullCOMMENTS: TMemoField
+    object cdsValidFullCOMMENTS: TBlobField
       DisplayLabel = 'Comments'
       FieldName = 'COMMENTS'
-      BlobType = ftMemo
     end
   end
   object dsValidFull: TDataSource
@@ -486,12 +482,12 @@ object dmStratC: TdmStratC
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object qChartCHART: TStringField
+    object qChartCHART: TWideStringField
       FieldName = 'CHART'
       Required = True
       Size = 50
     end
-    object qChartOWNERID: TStringField
+    object qChartOWNERID: TWideStringField
       FieldName = 'OWNERID'
       Required = True
     end
@@ -527,9 +523,8 @@ object dmStratC: TdmStratC
       FieldName = 'DEFAULTMAXAGE'
       Required = True
     end
-    object qChartDESCRIPTION: TMemoField
+    object qChartDESCRIPTION: TBlobField
       FieldName = 'DESCRIPTION'
-      BlobType = ftMemo
     end
   end
   object dspChart: TDataSetProvider
@@ -549,12 +544,12 @@ object dmStratC: TdmStratC
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsChartCHART: TStringField
+    object cdsChartCHART: TWideStringField
       FieldName = 'CHART'
       Required = True
       Size = 50
     end
-    object cdsChartOWNERID: TStringField
+    object cdsChartOWNERID: TWideStringField
       FieldName = 'OWNERID'
       Required = True
     end
@@ -590,9 +585,8 @@ object dmStratC: TdmStratC
       FieldName = 'DEFAULTMAXAGE'
       Required = True
     end
-    object cdsChartDESCRIPTION: TMemoField
+    object cdsChartDESCRIPTION: TBlobField
       FieldName = 'DESCRIPTION'
-      BlobType = ftMemo
     end
     object cdsChartqChartUsers: TDataSetField
       FieldName = 'qChartUsers'
@@ -654,13 +648,13 @@ object dmStratC: TdmStratC
       FieldName = 'DOMAINID'
       Required = True
     end
-    object qChartDomainsDOMAINNAME: TStringField
+    object qChartDomainsDOMAINNAME: TWideStringField
       FieldName = 'DOMAINNAME'
       ProviderFlags = []
       ReadOnly = True
       Size = 150
     end
-    object qChartDomainsCONTINENTID: TStringField
+    object qChartDomainsCONTINENTID: TWideStringField
       FieldName = 'CONTINENTID'
       ProviderFlags = []
       ReadOnly = True
@@ -686,7 +680,7 @@ object dmStratC: TdmStratC
       FieldName = 'DOMAINXMAX'
       Required = True
     end
-    object qChartDomainsDOMAINHEADING: TStringField
+    object qChartDomainsDOMAINHEADING: TWideStringField
       FieldName = 'DOMAINHEADING'
       Size = 90
     end
@@ -715,13 +709,13 @@ object dmStratC: TdmStratC
       FieldName = 'DOMAINID'
       Required = True
     end
-    object cdsChartDomainCONTINENTID: TStringField
+    object cdsChartDomainCONTINENTID: TWideStringField
       FieldName = 'CONTINENTID'
       ProviderFlags = []
       ReadOnly = True
       Size = 3
     end
-    object cdsChartDomainDOMAINNAME: TStringField
+    object cdsChartDomainDOMAINNAME: TWideStringField
       FieldName = 'DOMAINNAME'
       ProviderFlags = []
       ReadOnly = True
@@ -745,7 +739,7 @@ object dmStratC: TdmStratC
       FieldName = 'DOMAINXMAX'
       Required = True
     end
-    object cdsChartDomainDOMAINHEADING: TStringField
+    object cdsChartDomainDOMAINHEADING: TWideStringField
       FieldName = 'DOMAINHEADING'
       Size = 90
     end
@@ -789,12 +783,12 @@ object dmStratC: TdmStratC
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object qDomainsCONTINENTID: TStringField
+    object qDomainsCONTINENTID: TWideStringField
       FieldName = 'CONTINENTID'
       Required = True
       Size = 3
     end
-    object qDomainsDOMAINNAME: TStringField
+    object qDomainsDOMAINNAME: TWideStringField
       FieldName = 'DOMAINNAME'
       Required = True
       Size = 65
@@ -811,7 +805,7 @@ object dmStratC: TdmStratC
       FieldName = 'DOMAINPARENTID'
       Required = True
     end
-    object qDomainsDOMAINTYPEID: TStringField
+    object qDomainsDOMAINTYPEID: TWideStringField
       FieldName = 'DOMAINTYPEID'
       Required = True
       Size = 5
@@ -841,12 +835,12 @@ object dmStratC: TdmStratC
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsDomainsCONTINENTID: TStringField
+    object cdsDomainsCONTINENTID: TWideStringField
       FieldName = 'CONTINENTID'
       Required = True
       Size = 3
     end
-    object cdsDomainsDOMAINNAME: TStringField
+    object cdsDomainsDOMAINNAME: TWideStringField
       FieldName = 'DOMAINNAME'
       Required = True
       Size = 150
@@ -865,7 +859,7 @@ object dmStratC: TdmStratC
       FieldName = 'DOMAINPARENTID'
       Required = True
     end
-    object cdsDomainsDOMAINTYPEID: TStringField
+    object cdsDomainsDOMAINTYPEID: TWideStringField
       FieldName = 'DOMAINTYPEID'
       Required = True
       Size = 5
@@ -969,12 +963,12 @@ object dmStratC: TdmStratC
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsOrogeniesOROGENY: TStringField
+    object cdsOrogeniesOROGENY: TWideStringField
       FieldName = 'OROGENY'
       Required = True
       Size = 50
     end
-    object cdsOrogeniesCONTINENTID: TStringField
+    object cdsOrogeniesCONTINENTID: TWideStringField
       FieldName = 'CONTINENTID'
       Required = True
       Size = 3
@@ -1028,12 +1022,12 @@ object dmStratC: TdmStratC
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsDomainDOMAINNAME: TStringField
+    object cdsDomainDOMAINNAME: TWideStringField
       FieldName = 'DOMAINNAME'
       Required = True
       Size = 150
     end
-    object cdsDomainCONTINENTID: TStringField
+    object cdsDomainCONTINENTID: TWideStringField
       FieldName = 'CONTINENTID'
       Required = True
       Size = 3
@@ -1158,14 +1152,14 @@ object dmStratC: TdmStratC
     ProviderName = 'dspMetamorphicGrade'
     Left = 86
     Top = 206
-    object cdsMetamorphicGradeGRADEID: TStringField
+    object cdsMetamorphicGradeGRADEID: TWideStringField
       FieldName = 'GRADEID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
       FixedChar = True
       Size = 1
     end
-    object cdsMetamorphicGradeGRADE: TStringField
+    object cdsMetamorphicGradeGRADE: TWideStringField
       FieldName = 'GRADE'
       Required = True
       Size = 30
@@ -1336,37 +1330,37 @@ object dmStratC: TdmStratC
       Required = True
       DisplayFormat = '########0'
     end
-    object cdsTimeSpaceUNITNAME: TStringField
+    object cdsTimeSpaceUNITNAME: TWideStringField
       FieldName = 'UNITNAME'
       Required = True
       Size = 50
     end
-    object cdsTimeSpaceUNITRANK: TStringField
+    object cdsTimeSpaceUNITRANK: TWideStringField
       FieldName = 'UNITRANK'
       Required = True
     end
-    object cdsTimeSpaceDOMAINNAME: TStringField
+    object cdsTimeSpaceDOMAINNAME: TWideStringField
       FieldName = 'DOMAINNAME'
       Required = True
       Size = 150
     end
-    object cdsTimeSpaceROCKCLASS: TStringField
+    object cdsTimeSpaceROCKCLASS: TWideStringField
       FieldName = 'ROCKCLASS'
       Required = True
       Size = 50
     end
-    object cdsTimeSpaceSETTING: TStringField
+    object cdsTimeSpaceSETTING: TWideStringField
       FieldName = 'SETTING'
       Required = True
       Size = 50
     end
-    object cdsTimeSpaceSETTINGID: TStringField
+    object cdsTimeSpaceSETTINGID: TWideStringField
       FieldName = 'SETTINGID'
       Required = True
       FixedChar = True
       Size = 2
     end
-    object cdsTimeSpaceROCKCLASSID: TStringField
+    object cdsTimeSpaceROCKCLASSID: TWideStringField
       FieldName = 'ROCKCLASSID'
       Required = True
       FixedChar = True
@@ -1380,18 +1374,18 @@ object dmStratC: TdmStratC
       FieldName = 'DOMAINXMAX'
       Required = True
     end
-    object cdsTimeSpaceINC4CHTYN: TStringField
+    object cdsTimeSpaceINC4CHTYN: TWideStringField
       FieldName = 'INC4CHTYN'
       Required = True
       FixedChar = True
       Size = 1
     end
-    object cdsTimeSpaceROCKCLASSID2: TStringField
+    object cdsTimeSpaceROCKCLASSID2: TWideStringField
       FieldName = 'ROCKCLASSID2'
       Required = True
       Size = 2
     end
-    object cdsTimeSpaceSETTINGIDCOMBINED: TStringField
+    object cdsTimeSpaceSETTINGIDCOMBINED: TWideStringField
       FieldName = 'SETTINGIDCOMBINED'
       Required = True
       FixedChar = True
@@ -1401,21 +1395,21 @@ object dmStratC: TdmStratC
       FieldName = 'CONSTRAINTLEVELID'
       Required = True
     end
-    object cdsTimeSpaceAGECONSTRAINTLEVEL: TStringField
+    object cdsTimeSpaceAGECONSTRAINTLEVEL: TWideStringField
       FieldName = 'AGECONSTRAINTLEVEL'
       Required = True
       Size = 105
     end
-    object cdsTimeSpaceDEPOSITIONENVIRONMENTID: TStringField
+    object cdsTimeSpaceDEPOSITIONENVIRONMENTID: TWideStringField
       FieldName = 'DEPOSITIONENVIRONMENTID'
       Required = True
       Size = 1
     end
-    object cdsTimeSpaceDEPOSITIONENVIRONMENT: TStringField
+    object cdsTimeSpaceDEPOSITIONENVIRONMENT: TWideStringField
       FieldName = 'DEPOSITIONENVIRONMENT'
       Size = 15
     end
-    object cdsTimeSpaceROCKCLASSFUNDAMENTAL: TStringField
+    object cdsTimeSpaceROCKCLASSFUNDAMENTAL: TWideStringField
       FieldName = 'ROCKCLASSFUNDAMENTAL'
       Required = True
       Size = 2
@@ -1448,13 +1442,13 @@ object dmStratC: TdmStratC
     ProviderName = 'dspDomainTypes'
     Left = 86
     Top = 258
-    object cdsDomainTypesDOMAINTYPEID: TStringField
+    object cdsDomainTypesDOMAINTYPEID: TWideStringField
       FieldName = 'DOMAINTYPEID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
       Size = 5
     end
-    object cdsDomainTypesDOMAINTYPE: TStringField
+    object cdsDomainTypesDOMAINTYPE: TWideStringField
       FieldName = 'DOMAINTYPE'
       Required = True
       Size = 30
@@ -1496,12 +1490,12 @@ object dmStratC: TdmStratC
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object StringField1: TStringField
+    object StringField1: TWideStringField
       FieldName = 'OROGENY'
       Required = True
       Size = 50
     end
-    object StringField2: TStringField
+    object StringField2: TWideStringField
       FieldName = 'CONTINENTID'
       Required = True
       Size = 3
@@ -1522,13 +1516,13 @@ object dmStratC: TdmStratC
     SQLConnection = sqlcStrat
     Left = 30
     Top = 362
-    object qContinentsCONTINENTID: TStringField
+    object qContinentsCONTINENTID: TWideStringField
       FieldName = 'CONTINENTID'
       Required = True
       FixedChar = True
       Size = 3
     end
-    object qContinentsCONTINENT: TStringField
+    object qContinentsCONTINENT: TWideStringField
       FieldName = 'CONTINENT'
     end
     object qContinentsDEFAULTDOMAINID: TIntegerField
@@ -1548,14 +1542,14 @@ object dmStratC: TdmStratC
     ProviderName = 'dspContinents'
     Left = 86
     Top = 362
-    object cdsContinentsCONTINENTID: TStringField
+    object cdsContinentsCONTINENTID: TWideStringField
       FieldName = 'CONTINENTID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
       FixedChar = True
       Size = 3
     end
-    object cdsContinentsCONTINENT: TStringField
+    object cdsContinentsCONTINENT: TWideStringField
       FieldName = 'CONTINENT'
     end
     object cdsContinentsDEFAULTDOMAINID: TIntegerField
@@ -1608,12 +1602,12 @@ object dmStratC: TdmStratC
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsDomainsAllCONTINENTID: TStringField
+    object cdsDomainsAllCONTINENTID: TWideStringField
       FieldName = 'CONTINENTID'
       Required = True
       Size = 3
     end
-    object cdsDomainsAllDOMAINNAME: TStringField
+    object cdsDomainsAllDOMAINNAME: TWideStringField
       FieldName = 'DOMAINNAME'
       Required = True
       Size = 150
@@ -1622,12 +1616,12 @@ object dmStratC: TdmStratC
       FieldName = 'DOMAINPARENTID'
       Required = True
     end
-    object cdsDomainsAllDOMAINTYPEID: TStringField
+    object cdsDomainsAllDOMAINTYPEID: TWideStringField
       FieldName = 'DOMAINTYPEID'
       Required = True
       Size = 5
     end
-    object cdsDomainsAllDOMAINCONTINENTID: TStringField
+    object cdsDomainsAllDOMAINCONTINENTID: TWideStringField
       FieldName = 'DOMAINCONTINENTID'
       ReadOnly = True
       Required = True
@@ -1781,26 +1775,26 @@ object dmStratC: TdmStratC
       Required = True
       DisplayFormat = '###0.00'
     end
-    object cdsTimeSpaceMetamorphismDOMAINNAME: TStringField
+    object cdsTimeSpaceMetamorphismDOMAINNAME: TWideStringField
       FieldName = 'DOMAINNAME'
       ReadOnly = True
       Required = True
       Size = 150
     end
-    object cdsTimeSpaceMetamorphismOROGENY: TStringField
+    object cdsTimeSpaceMetamorphismOROGENY: TWideStringField
       FieldName = 'OROGENY'
       ReadOnly = True
       Required = True
       Size = 50
     end
-    object cdsTimeSpaceMetamorphismGRADEID: TStringField
+    object cdsTimeSpaceMetamorphismGRADEID: TWideStringField
       FieldName = 'GRADEID'
       ReadOnly = True
       Required = True
       FixedChar = True
       Size = 1
     end
-    object cdsTimeSpaceMetamorphismGRADE: TStringField
+    object cdsTimeSpaceMetamorphismGRADE: TWideStringField
       FieldName = 'GRADE'
       ReadOnly = True
       Required = True
@@ -1811,7 +1805,7 @@ object dmStratC: TdmStratC
       ReadOnly = True
       Required = True
     end
-    object cdsTimeSpaceMetamorphismAGECONSTRAINTLEVEL: TStringField
+    object cdsTimeSpaceMetamorphismAGECONSTRAINTLEVEL: TWideStringField
       FieldName = 'AGECONSTRAINTLEVEL'
       ReadOnly = True
       Required = True
@@ -1841,7 +1835,7 @@ object dmStratC: TdmStratC
       Required = True
       DisplayFormat = '###0.00'
     end
-    object cdsTimeSpaceMetamorphismDOMAINTYPE: TStringField
+    object cdsTimeSpaceMetamorphismDOMAINTYPE: TWideStringField
       FieldName = 'DOMAINTYPE'
       ReadOnly = True
       Required = True
@@ -1986,17 +1980,17 @@ object dmStratC: TdmStratC
       FieldName = 'AGEMAX'
       Required = True
     end
-    object cdsTimeSpaceDeformationDOMAINNAME: TStringField
+    object cdsTimeSpaceDeformationDOMAINNAME: TWideStringField
       FieldName = 'DOMAINNAME'
       Required = True
       Size = 150
     end
-    object cdsTimeSpaceDeformationDOMAINTYPE: TStringField
+    object cdsTimeSpaceDeformationDOMAINTYPE: TWideStringField
       FieldName = 'DOMAINTYPE'
       Required = True
       Size = 30
     end
-    object cdsTimeSpaceDeformationOROGENY: TStringField
+    object cdsTimeSpaceDeformationOROGENY: TWideStringField
       FieldName = 'OROGENY'
       Required = True
       Size = 50
@@ -2015,18 +2009,18 @@ object dmStratC: TdmStratC
       FieldName = 'CONSTRAINTLEVELID'
       Required = True
     end
-    object cdsTimeSpaceDeformationAGECONSTRAINTLEVEL: TStringField
+    object cdsTimeSpaceDeformationAGECONSTRAINTLEVEL: TWideStringField
       FieldName = 'AGECONSTRAINTLEVEL'
       Required = True
       Size = 105
     end
-    object cdsTimeSpaceDeformationDUCTILITYTYPEID: TStringField
+    object cdsTimeSpaceDeformationDUCTILITYTYPEID: TWideStringField
       FieldName = 'DUCTILITYTYPEID'
       Required = True
       FixedChar = True
       Size = 1
     end
-    object cdsTimeSpaceDeformationDUCTILITYTYPE: TStringField
+    object cdsTimeSpaceDeformationDUCTILITYTYPE: TWideStringField
       FieldName = 'DUCTILITYTYPE'
       Size = 60
     end
@@ -2034,7 +2028,7 @@ object dmStratC: TdmStratC
       FieldName = 'DEFORMATIONTYPEID'
       Required = True
     end
-    object cdsTimeSpaceDeformationDEFORMATIONTYPE: TStringField
+    object cdsTimeSpaceDeformationDEFORMATIONTYPE: TWideStringField
       FieldName = 'DEFORMATIONTYPE'
       Required = True
       Size = 150
@@ -2043,7 +2037,7 @@ object dmStratC: TdmStratC
       FieldName = 'VERGENCEANGLE'
       Required = True
     end
-    object cdsTimeSpaceDeformationDIRECTIONNAME: TStringField
+    object cdsTimeSpaceDeformationDIRECTIONNAME: TWideStringField
       FieldName = 'DIRECTIONNAME'
       Required = True
     end
@@ -2187,7 +2181,7 @@ object dmStratC: TdmStratC
     ProviderName = 'dspMapUnitsGIS'
     Left = 106
     Top = 466
-    object cdsMapUnitsGISMAPID2: TStringField
+    object cdsMapUnitsGISMAPID2: TWideStringField
       FieldName = 'MAPID2'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
@@ -2197,7 +2191,7 @@ object dmStratC: TdmStratC
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsMapUnitsGISMAPNAME: TStringField
+    object cdsMapUnitsGISMAPNAME: TWideStringField
       FieldName = 'MAPNAME'
       Required = True
       Size = 150
@@ -2206,7 +2200,7 @@ object dmStratC: TdmStratC
       FieldName = 'GISINT'
       Required = True
     end
-    object cdsMapUnitsGISGISSTR: TStringField
+    object cdsMapUnitsGISGISSTR: TWideStringField
       FieldName = 'GISSTR'
       Required = True
     end
@@ -2279,28 +2273,28 @@ object dmStratC: TdmStratC
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsDomainUnitsINC4CHTYN: TStringField
+    object cdsDomainUnitsINC4CHTYN: TWideStringField
       FieldName = 'INC4CHTYN'
       Required = True
       FixedChar = True
       Size = 1
     end
-    object cdsDomainUnitsDOMAINNAME: TStringField
+    object cdsDomainUnitsDOMAINNAME: TWideStringField
       FieldName = 'DOMAINNAME'
       Required = True
       Size = 150
     end
-    object cdsDomainUnitsCOUNTRYID: TStringField
+    object cdsDomainUnitsCOUNTRYID: TWideStringField
       FieldName = 'COUNTRYID'
       Required = True
       Size = 3
     end
-    object cdsDomainUnitsUNITNAME: TStringField
+    object cdsDomainUnitsUNITNAME: TWideStringField
       FieldName = 'UNITNAME'
       Required = True
       Size = 50
     end
-    object cdsDomainUnitsRANKID: TStringField
+    object cdsDomainUnitsRANKID: TWideStringField
       FieldName = 'RANKID'
       Required = True
       Size = 5
@@ -2318,7 +2312,7 @@ object dmStratC: TdmStratC
       FieldName = 'MAXAGE'
       Required = True
     end
-    object cdsDomainUnitsUNITRANK: TStringField
+    object cdsDomainUnitsUNITRANK: TWideStringField
       FieldName = 'UNITRANK'
       Required = True
     end
@@ -2450,28 +2444,28 @@ object dmStratC: TdmStratC
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object StringField3: TStringField
+    object StringField3: TWideStringField
       FieldName = 'INC4CHTYN'
       Required = True
       FixedChar = True
       Size = 1
     end
-    object StringField4: TStringField
+    object StringField4: TWideStringField
       FieldName = 'DOMAINNAME'
       Required = True
       Size = 65
     end
-    object StringField5: TStringField
+    object StringField5: TWideStringField
       FieldName = 'COUNTRYID'
       Required = True
       Size = 3
     end
-    object StringField6: TStringField
+    object StringField6: TWideStringField
       FieldName = 'UNITNAME'
       Required = True
       Size = 50
     end
-    object StringField7: TStringField
+    object StringField7: TWideStringField
       FieldName = 'RANKID'
       Required = True
       Size = 5
@@ -2484,7 +2478,7 @@ object dmStratC: TdmStratC
       FieldName = 'MAXAGE'
       Required = True
     end
-    object StringField8: TStringField
+    object StringField8: TWideStringField
       FieldName = 'UNITRANK'
       Required = True
     end
@@ -2492,7 +2486,7 @@ object dmStratC: TdmStratC
       FieldName = 'CONSTRAINTLEVELID'
       Required = True
     end
-    object cdsChartDomainUnitsAGECONSTRAINTLEVEL: TStringField
+    object cdsChartDomainUnitsAGECONSTRAINTLEVEL: TWideStringField
       FieldName = 'AGECONSTRAINTLEVEL'
       Required = True
       Size = 35
@@ -2500,49 +2494,49 @@ object dmStratC: TdmStratC
     object cdsChartDomainUnitsRANKWIDTH: TSmallintField
       FieldName = 'RANKWIDTH'
     end
-    object cdsChartDomainUnitsROCKCLASS: TStringField
+    object cdsChartDomainUnitsROCKCLASS: TWideStringField
       FieldName = 'ROCKCLASS'
       Required = True
       Size = 50
     end
-    object cdsChartDomainUnitsROCKCLASSID2: TStringField
+    object cdsChartDomainUnitsROCKCLASSID2: TWideStringField
       FieldName = 'ROCKCLASSID2'
       Required = True
       Size = 2
     end
-    object cdsChartDomainUnitsROCKCLASSFUNDAMENTAL: TStringField
+    object cdsChartDomainUnitsROCKCLASSFUNDAMENTAL: TWideStringField
       FieldName = 'ROCKCLASSFUNDAMENTAL'
       Required = True
       Size = 2
     end
-    object cdsChartDomainUnitsSETTING: TStringField
+    object cdsChartDomainUnitsSETTING: TWideStringField
       FieldName = 'SETTING'
       Required = True
       Size = 50
     end
-    object cdsChartDomainUnitsSETTINGIDCOMBINED: TStringField
+    object cdsChartDomainUnitsSETTINGIDCOMBINED: TWideStringField
       FieldName = 'SETTINGIDCOMBINED'
       Required = True
       FixedChar = True
       Size = 2
     end
-    object cdsChartDomainUnitsSETTINGID: TStringField
+    object cdsChartDomainUnitsSETTINGID: TWideStringField
       FieldName = 'SETTINGID'
       Required = True
       FixedChar = True
       Size = 2
     end
-    object cdsChartDomainUnitsROCKCLASSID: TStringField
+    object cdsChartDomainUnitsROCKCLASSID: TWideStringField
       FieldName = 'ROCKCLASSID'
       Required = True
       Size = 2
     end
-    object cdsChartDomainUnitsDEPOSITIONENVIRONMENTID: TStringField
+    object cdsChartDomainUnitsDEPOSITIONENVIRONMENTID: TWideStringField
       FieldName = 'DEPOSITIONENVIRONMENTID'
       Required = True
       Size = 1
     end
-    object cdsChartDomainUnitsDEPOSITIONENVIRONMENT: TStringField
+    object cdsChartDomainUnitsDEPOSITIONENVIRONMENT: TWideStringField
       FieldName = 'DEPOSITIONENVIRONMENT'
     end
     object cdsChartDomainUnitsAGEYEARS: TFloatField
@@ -2654,7 +2648,7 @@ object dmStratC: TdmStratC
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsTimeSpaceFeatureINC4CHTYN: TStringField
+    object cdsTimeSpaceFeatureINC4CHTYN: TWideStringField
       FieldName = 'INC4CHTYN'
       Required = True
       FixedChar = True
@@ -2701,21 +2695,21 @@ object dmStratC: TdmStratC
     object cdsTimeSpaceFeatureRANKWIDTH: TSmallintField
       FieldName = 'RANKWIDTH'
     end
-    object cdsTimeSpaceFeatureUNITNAME: TStringField
+    object cdsTimeSpaceFeatureUNITNAME: TWideStringField
       FieldName = 'UNITNAME'
       Required = True
       Size = 50
     end
-    object cdsTimeSpaceFeatureUNITRANK: TStringField
+    object cdsTimeSpaceFeatureUNITRANK: TWideStringField
       FieldName = 'UNITRANK'
       Required = True
     end
-    object cdsTimeSpaceFeatureDOMAINNAME: TStringField
+    object cdsTimeSpaceFeatureDOMAINNAME: TWideStringField
       FieldName = 'DOMAINNAME'
       Required = True
       Size = 150
     end
-    object cdsTimeSpaceFeatureSPECIALFEATURE: TStringField
+    object cdsTimeSpaceFeatureSPECIALFEATURE: TWideStringField
       FieldName = 'SPECIALFEATURE'
       Required = True
       Size = 150
@@ -2829,12 +2823,12 @@ object dmStratC: TdmStratC
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsTimeSpaceDepositCOMMODITYID: TStringField
+    object cdsTimeSpaceDepositCOMMODITYID: TWideStringField
       FieldName = 'COMMODITYID'
       Required = True
       Size = 3
     end
-    object cdsTimeSpaceDepositDEPOSITNAME: TStringField
+    object cdsTimeSpaceDepositDEPOSITNAME: TWideStringField
       FieldName = 'DEPOSITNAME'
       Required = True
       Size = 150
@@ -2871,12 +2865,12 @@ object dmStratC: TdmStratC
       FieldName = 'APPROXAGEUNCERTAINTY'
       DisplayFormat = '###0'
     end
-    object cdsTimeSpaceDepositDOMAINNAME: TStringField
+    object cdsTimeSpaceDepositDOMAINNAME: TWideStringField
       FieldName = 'DOMAINNAME'
       Required = True
       Size = 150
     end
-    object cdsTimeSpaceDepositCOMMODITY: TStringField
+    object cdsTimeSpaceDepositCOMMODITY: TWideStringField
       FieldName = 'COMMODITY'
       Required = True
       Size = 30
@@ -2885,7 +2879,7 @@ object dmStratC: TdmStratC
       FieldName = 'HOSTUNITID'
       Required = True
     end
-    object cdsTimeSpaceDepositUNITNAME: TStringField
+    object cdsTimeSpaceDepositUNITNAME: TWideStringField
       FieldName = 'UNITNAME'
       Required = True
       Size = 50
@@ -2904,7 +2898,7 @@ object dmStratC: TdmStratC
       FieldName = 'DEPOSITCLANID'
       Required = True
     end
-    object cdsTimeSpaceDepositDEPOSITCLAN: TStringField
+    object cdsTimeSpaceDepositDEPOSITCLAN: TWideStringField
       FieldName = 'DEPOSITCLAN'
       Required = True
       Size = 150
@@ -2995,12 +2989,12 @@ object dmStratC: TdmStratC
       Required = True
       DisplayFormat = '#####0'
     end
-    object cdsTimeSpaceDomainHeadingsDOMAINNAME: TStringField
+    object cdsTimeSpaceDomainHeadingsDOMAINNAME: TWideStringField
       FieldName = 'DOMAINNAME'
       Required = True
       Size = 150
     end
-    object cdsTimeSpaceDomainHeadingsDOMAINTYPE: TStringField
+    object cdsTimeSpaceDomainHeadingsDOMAINTYPE: TWideStringField
       FieldName = 'DOMAINTYPE'
       Required = True
       Size = 30
@@ -3015,7 +3009,7 @@ object dmStratC: TdmStratC
       Required = True
       DisplayFormat = '###0'
     end
-    object cdsTimeSpaceDomainHeadingsDOMAINHEADING: TStringField
+    object cdsTimeSpaceDomainHeadingsDOMAINHEADING: TWideStringField
       FieldName = 'DOMAINHEADING'
       Required = True
       Size = 150
@@ -3181,7 +3175,7 @@ object dmStratC: TdmStratC
       FieldName = 'DOMAINID'
       Required = True
     end
-    object cdsChartDomainDomainsDOMAINNAME: TStringField
+    object cdsChartDomainDomainsDOMAINNAME: TWideStringField
       FieldName = 'DOMAINNAME'
       Required = True
       Size = 65
@@ -3197,30 +3191,23 @@ object dmStratC: TdmStratC
     Top = 510
   end
   object sqlcStrat: TSQLConnection
-    ConnectionName = 'StratDB_bromo2'
     DriverName = 'DevartFirebird'
     LoginPrompt = False
     Params.Strings = (
       'VendorLibOsx=libfbclient.dylib'
       'GetDriverFunc=getSQLDriverFirebird'
       'LibraryName=dbexpida41.dll'
-      'VendorLib=fbclient.dll'
-      'DataBase=bromo2.usask.ca:s:\data\firebird\stratdb2015v25.fdb'
+      'VendorLib=c:\exe32\fbclient.dll'
+      'DataBase=c:\data\firebird\stratdb2025v50_UTF8.fdb'
       'User_Name=SYSDBA'
-      'Password=masterkey'
+      'Password=V0lcano3^'
       'SQLDialect=3'
-      'BlobSize=-1'
-      'ErrorResourceFile='
       'LocaleCode=0000'
       'DevartFirebird TransIsolation=ReadCommitted'
       'ProductName=DevartFirebird'
-      
-        'DriverPackageLoader=TDBXDynalinkDriverLoader,DBXCommonDriver260.' +
-        'bpl'
-      
-        'MetaDataPackageLoader=TDBXDevartInterBaseMetaDataCommandFactory,' +
-        'DbxDevartInterBaseDriver260.bpl'
-      'DriverUnit=DbxDevartInterBase')
+      'DriverUnit=DbxDevartInterBase'
+      'UseUnicode=true'
+      'Charset=UTF8')
     Left = 36
     Top = 8
   end
@@ -3313,7 +3300,7 @@ object dmStratC: TdmStratC
       FieldName = 'LIPID'
       Required = True
     end
-    object qTimeSpaceLIPINC4CHTYN: TStringField
+    object qTimeSpaceLIPINC4CHTYN: TWideStringField
       FieldName = 'INC4CHTYN'
       Required = True
       FixedChar = True
@@ -3347,7 +3334,7 @@ object dmStratC: TdmStratC
       FieldName = 'CONSTRAINTLEVELID'
       Required = True
     end
-    object qTimeSpaceLIPAGECONSTRAINTLEVEL: TStringField
+    object qTimeSpaceLIPAGECONSTRAINTLEVEL: TWideStringField
       FieldName = 'AGECONSTRAINTLEVEL'
       Required = True
       Size = 105
@@ -3360,12 +3347,12 @@ object dmStratC: TdmStratC
       FieldName = 'MAXPLOTAGE'
       Required = True
     end
-    object qTimeSpaceLIPLIPNAME: TStringField
+    object qTimeSpaceLIPLIPNAME: TWideStringField
       FieldName = 'LIPNAME'
       Required = True
       Size = 150
     end
-    object qTimeSpaceLIPDOMAINNAME: TStringField
+    object qTimeSpaceLIPDOMAINNAME: TWideStringField
       FieldName = 'DOMAINNAME'
       Required = True
       Size = 150
@@ -3374,7 +3361,7 @@ object dmStratC: TdmStratC
       FieldName = 'BARCODEAGE'
       Required = True
     end
-    object qTimeSpaceLIPLIPHEADING: TStringField
+    object qTimeSpaceLIPLIPHEADING: TWideStringField
       FieldName = 'LIPHEADING'
       Size = 60
     end
@@ -3382,7 +3369,7 @@ object dmStratC: TdmStratC
       FieldName = 'LIPPARENTID'
       Required = True
     end
-    object qTimeSpaceLIPPLOTBARCODE: TStringField
+    object qTimeSpaceLIPPLOTBARCODE: TWideStringField
       FieldName = 'PLOTBARCODE'
       Required = True
       FixedChar = True
@@ -3392,7 +3379,7 @@ object dmStratC: TdmStratC
       FieldName = 'COMPOSITIONID'
       Required = True
     end
-    object qTimeSpaceLIPDOMINANTCOMPOSITION: TStringField
+    object qTimeSpaceLIPDOMINANTCOMPOSITION: TWideStringField
       FieldName = 'DOMINANTCOMPOSITION'
       Required = True
       Size = 50
@@ -3401,18 +3388,18 @@ object dmStratC: TdmStratC
       FieldName = 'LIPSIZEID'
       Required = True
     end
-    object qTimeSpaceLIPLIPSIZEDESCRIPTION: TStringField
+    object qTimeSpaceLIPLIPSIZEDESCRIPTION: TWideStringField
       FieldName = 'LIPSIZEDESCRIPTION'
       Required = True
       Size = 50
     end
-    object qTimeSpaceLIPLIPRATINGID: TStringField
+    object qTimeSpaceLIPLIPRATINGID: TWideStringField
       FieldName = 'LIPRATINGID'
       Required = True
       FixedChar = True
       Size = 1
     end
-    object qTimeSpaceLIPLIPRATINGDESCRIPTION: TStringField
+    object qTimeSpaceLIPLIPRATINGDESCRIPTION: TWideStringField
       FieldName = 'LIPRATINGDESCRIPTION'
       Required = True
       Size = 30
@@ -3447,7 +3434,7 @@ object dmStratC: TdmStratC
       FieldName = 'LIPID'
       Required = True
     end
-    object cdsTimeSpaceLIPINC4CHTYN: TStringField
+    object cdsTimeSpaceLIPINC4CHTYN: TWideStringField
       FieldName = 'INC4CHTYN'
       Required = True
       FixedChar = True
@@ -3481,7 +3468,7 @@ object dmStratC: TdmStratC
       FieldName = 'CONSTRAINTLEVELID'
       Required = True
     end
-    object cdsTimeSpaceLIPAGECONSTRAINTLEVEL: TStringField
+    object cdsTimeSpaceLIPAGECONSTRAINTLEVEL: TWideStringField
       FieldName = 'AGECONSTRAINTLEVEL'
       Required = True
       Size = 105
@@ -3494,12 +3481,12 @@ object dmStratC: TdmStratC
       FieldName = 'MAXPLOTAGE'
       Required = True
     end
-    object cdsTimeSpaceLIPLIPNAME: TStringField
+    object cdsTimeSpaceLIPLIPNAME: TWideStringField
       FieldName = 'LIPNAME'
       Required = True
       Size = 150
     end
-    object cdsTimeSpaceLIPDOMAINNAME: TStringField
+    object cdsTimeSpaceLIPDOMAINNAME: TWideStringField
       FieldName = 'DOMAINNAME'
       Required = True
       Size = 150
@@ -3508,7 +3495,7 @@ object dmStratC: TdmStratC
       FieldName = 'BARCODEAGE'
       Required = True
     end
-    object cdsTimeSpaceLIPLIPHEADING: TStringField
+    object cdsTimeSpaceLIPLIPHEADING: TWideStringField
       FieldName = 'LIPHEADING'
       Size = 60
     end
@@ -3516,7 +3503,7 @@ object dmStratC: TdmStratC
       FieldName = 'LIPPARENTID'
       Required = True
     end
-    object cdsTimeSpaceLIPPLOTBARCODE: TStringField
+    object cdsTimeSpaceLIPPLOTBARCODE: TWideStringField
       FieldName = 'PLOTBARCODE'
       Required = True
       FixedChar = True
@@ -3526,7 +3513,7 @@ object dmStratC: TdmStratC
       FieldName = 'COMPOSITIONID'
       Required = True
     end
-    object cdsTimeSpaceLIPDOMINANTCOMPOSITION: TStringField
+    object cdsTimeSpaceLIPDOMINANTCOMPOSITION: TWideStringField
       FieldName = 'DOMINANTCOMPOSITION'
       Required = True
       Size = 50
@@ -3535,18 +3522,18 @@ object dmStratC: TdmStratC
       FieldName = 'LIPSIZEID'
       Required = True
     end
-    object cdsTimeSpaceLIPLIPSIZEDESCRIPTION: TStringField
+    object cdsTimeSpaceLIPLIPSIZEDESCRIPTION: TWideStringField
       FieldName = 'LIPSIZEDESCRIPTION'
       Required = True
       Size = 50
     end
-    object cdsTimeSpaceLIPLIPRATINGID: TStringField
+    object cdsTimeSpaceLIPLIPRATINGID: TWideStringField
       FieldName = 'LIPRATINGID'
       Required = True
       FixedChar = True
       Size = 1
     end
-    object cdsTimeSpaceLIPLIPRATINGDESCRIPTION: TStringField
+    object cdsTimeSpaceLIPLIPRATINGDESCRIPTION: TWideStringField
       FieldName = 'LIPRATINGDESCRIPTION'
       Required = True
       Size = 30
@@ -3659,7 +3646,7 @@ object dmStratC: TdmStratC
       Required = True
       DisplayFormat = '####0.00'
     end
-    object cdsTimeSpaceDomainBoxesDOMAINNAME: TStringField
+    object cdsTimeSpaceDomainBoxesDOMAINNAME: TWideStringField
       FieldName = 'DOMAINNAME'
       Required = True
       Size = 150
@@ -3724,7 +3711,7 @@ object dmStratC: TdmStratC
       FieldName = 'LIPID'
       Required = True
     end
-    object cdsUserChartDomainLIPINC4CHTYN: TStringField
+    object cdsUserChartDomainLIPINC4CHTYN: TWideStringField
       FieldName = 'INC4CHTYN'
       Required = True
       FixedChar = True
@@ -3916,7 +3903,7 @@ object dmStratC: TdmStratC
       FieldName = 'DOMAINXMAX'
       Required = True
     end
-    object cdsTimeSpaceDomainCurvesDOMAINNAME: TStringField
+    object cdsTimeSpaceDomainCurvesDOMAINNAME: TWideStringField
       FieldName = 'DOMAINNAME'
       Required = True
       Size = 150
@@ -3980,7 +3967,7 @@ object dmStratC: TdmStratC
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object qChartUsersUSERID: TStringField
+    object qChartUsersUSERID: TWideStringField
       FieldName = 'USERID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
@@ -3997,7 +3984,7 @@ object dmStratC: TdmStratC
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsChartUsersUSERID: TStringField
+    object cdsChartUsersUSERID: TWideStringField
       FieldName = 'USERID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
@@ -4126,12 +4113,12 @@ object dmStratC: TdmStratC
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsNewDomainNameCONTINENTID: TStringField
+    object cdsNewDomainNameCONTINENTID: TWideStringField
       FieldName = 'CONTINENTID'
       Required = True
       Size = 3
     end
-    object cdsNewDomainNameDOMAINNAME: TStringField
+    object cdsNewDomainNameDOMAINNAME: TWideStringField
       FieldName = 'DOMAINNAME'
       Required = True
       Size = 65
@@ -4180,7 +4167,7 @@ object dmStratC: TdmStratC
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsChartsListCHART: TStringField
+    object cdsChartsListCHART: TWideStringField
       FieldName = 'CHART'
       Required = True
       Size = 50
@@ -4193,7 +4180,7 @@ object dmStratC: TdmStratC
       FieldName = 'DEFAULTDOMAINOFFSET'
       Required = True
     end
-    object cdsChartsListOWNERID: TStringField
+    object cdsChartsListOWNERID: TWideStringField
       FieldName = 'OWNERID'
       Required = True
     end
@@ -4293,7 +4280,7 @@ object dmStratC: TdmStratC
       FieldName = 'UNITID'
       Required = True
     end
-    object cdsUserChartDomainUnitINC4CHTYN: TStringField
+    object cdsUserChartDomainUnitINC4CHTYN: TWideStringField
       FieldName = 'INC4CHTYN'
       Required = True
       FixedChar = True
@@ -4359,7 +4346,7 @@ object dmStratC: TdmStratC
       FieldName = 'DOMAINID'
       Required = True
     end
-    object cdsChartDomainDomainsLIPDOMAINNAME: TStringField
+    object cdsChartDomainDomainsLIPDOMAINNAME: TWideStringField
       FieldName = 'DOMAINNAME'
       Required = True
       Size = 65
@@ -4478,28 +4465,28 @@ object dmStratC: TdmStratC
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsChartDomainLIPsINC4CHTYN: TStringField
+    object cdsChartDomainLIPsINC4CHTYN: TWideStringField
       FieldName = 'INC4CHTYN'
       Required = True
       FixedChar = True
       Size = 1
     end
-    object cdsChartDomainLIPsDOMAINNAME: TStringField
+    object cdsChartDomainLIPsDOMAINNAME: TWideStringField
       FieldName = 'DOMAINNAME'
       Required = True
       Size = 65
     end
-    object cdsChartDomainLIPsCONTINENTID: TStringField
+    object cdsChartDomainLIPsCONTINENTID: TWideStringField
       FieldName = 'CONTINENTID'
       Required = True
       Size = 3
     end
-    object cdsChartDomainLIPsLIPNAME: TStringField
+    object cdsChartDomainLIPsLIPNAME: TWideStringField
       FieldName = 'LIPNAME'
       Required = True
       Size = 50
     end
-    object cdsChartDomainLIPsLIPHEADING: TStringField
+    object cdsChartDomainLIPsLIPHEADING: TWideStringField
       FieldName = 'LIPHEADING'
       Size = 25
     end
@@ -4507,7 +4494,7 @@ object dmStratC: TdmStratC
       FieldName = 'LIPPARENTID'
       Required = True
     end
-    object cdsChartDomainLIPsCONTOCEANID: TStringField
+    object cdsChartDomainLIPsCONTOCEANID: TWideStringField
       FieldName = 'CONTOCEANID'
       Required = True
       FixedChar = True
@@ -4529,12 +4516,12 @@ object dmStratC: TdmStratC
       FieldName = 'BARCODEAGE'
       Required = True
     end
-    object cdsChartDomainLIPsLIPSIZEDESCRIPTION: TStringField
+    object cdsChartDomainLIPsLIPSIZEDESCRIPTION: TWideStringField
       FieldName = 'LIPSIZEDESCRIPTION'
       Required = True
       Size = 50
     end
-    object cdsChartDomainLIPsPLOTBARCODE: TStringField
+    object cdsChartDomainLIPsPLOTBARCODE: TWideStringField
       FieldName = 'PLOTBARCODE'
       Required = True
       FixedChar = True
@@ -4544,12 +4531,12 @@ object dmStratC: TdmStratC
       FieldName = 'CONSTRAINTLEVELID'
       Required = True
     end
-    object cdsChartDomainLIPsAGECONSTRAINTLEVEL: TStringField
+    object cdsChartDomainLIPsAGECONSTRAINTLEVEL: TWideStringField
       FieldName = 'AGECONSTRAINTLEVEL'
       Required = True
       Size = 35
     end
-    object cdsChartDomainLIPsLIPRATINGID: TStringField
+    object cdsChartDomainLIPsLIPRATINGID: TWideStringField
       FieldName = 'LIPRATINGID'
       Required = True
       FixedChar = True
@@ -4561,7 +4548,7 @@ object dmStratC: TdmStratC
     object cdsChartDomainLIPsVOLUMEESTIMATE: TFloatField
       FieldName = 'VOLUMEESTIMATE'
     end
-    object cdsChartDomainLIPsLIPRATINGDESCRIPTION: TStringField
+    object cdsChartDomainLIPsLIPRATINGDESCRIPTION: TWideStringField
       FieldName = 'LIPRATINGDESCRIPTION'
       Required = True
       Size = 30
@@ -4570,7 +4557,7 @@ object dmStratC: TdmStratC
       FieldName = 'COMPOSITIONID'
       Required = True
     end
-    object cdsChartDomainLIPsDOMINANTCOMPOSITION: TStringField
+    object cdsChartDomainLIPsDOMINANTCOMPOSITION: TWideStringField
       FieldName = 'DOMINANTCOMPOSITION'
       Required = True
       Size = 50
@@ -4816,7 +4803,7 @@ object dmStratC: TdmStratC
       FieldName = 'DOMAINID'
       Required = True
     end
-    object cdsChartDomainDomainsLIPUnitsDOMAINNAME: TStringField
+    object cdsChartDomainDomainsLIPUnitsDOMAINNAME: TWideStringField
       FieldName = 'DOMAINNAME'
       Required = True
       Size = 65
@@ -4850,28 +4837,28 @@ object dmStratC: TdmStratC
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsChartDomainLIPsUnitsINC4CHTYN: TStringField
+    object cdsChartDomainLIPsUnitsINC4CHTYN: TWideStringField
       FieldName = 'INC4CHTYN'
       Required = True
       FixedChar = True
       Size = 1
     end
-    object cdsChartDomainLIPsUnitsDOMAINNAME: TStringField
+    object cdsChartDomainLIPsUnitsDOMAINNAME: TWideStringField
       FieldName = 'DOMAINNAME'
       Required = True
       Size = 65
     end
-    object cdsChartDomainLIPsUnitsCONTINENTID: TStringField
+    object cdsChartDomainLIPsUnitsCONTINENTID: TWideStringField
       FieldName = 'CONTINENTID'
       Required = True
       Size = 3
     end
-    object cdsChartDomainLIPsUnitsLIPNAME: TStringField
+    object cdsChartDomainLIPsUnitsLIPNAME: TWideStringField
       FieldName = 'LIPNAME'
       Required = True
       Size = 50
     end
-    object cdsChartDomainLIPsUnitsLIPHEADING: TStringField
+    object cdsChartDomainLIPsUnitsLIPHEADING: TWideStringField
       FieldName = 'LIPHEADING'
       Size = 25
     end
@@ -4879,7 +4866,7 @@ object dmStratC: TdmStratC
       FieldName = 'LIPPARENTID'
       Required = True
     end
-    object cdsChartDomainLIPsUnitsCONTOCEANID: TStringField
+    object cdsChartDomainLIPsUnitsCONTOCEANID: TWideStringField
       FieldName = 'CONTOCEANID'
       Required = True
       FixedChar = True
@@ -4901,12 +4888,12 @@ object dmStratC: TdmStratC
       FieldName = 'BARCODEAGE'
       Required = True
     end
-    object cdsChartDomainLIPsUnitsLIPSIZEDESCRIPTION: TStringField
+    object cdsChartDomainLIPsUnitsLIPSIZEDESCRIPTION: TWideStringField
       FieldName = 'LIPSIZEDESCRIPTION'
       Required = True
       Size = 50
     end
-    object cdsChartDomainLIPsUnitsPLOTBARCODE: TStringField
+    object cdsChartDomainLIPsUnitsPLOTBARCODE: TWideStringField
       FieldName = 'PLOTBARCODE'
       Required = True
       FixedChar = True
@@ -4916,12 +4903,12 @@ object dmStratC: TdmStratC
       FieldName = 'CONSTRAINTLEVELID'
       Required = True
     end
-    object cdsChartDomainLIPsUnitsAGECONSTRAINTLEVEL: TStringField
+    object cdsChartDomainLIPsUnitsAGECONSTRAINTLEVEL: TWideStringField
       FieldName = 'AGECONSTRAINTLEVEL'
       Required = True
       Size = 35
     end
-    object cdsChartDomainLIPsUnitsLIPRATINGID: TStringField
+    object cdsChartDomainLIPsUnitsLIPRATINGID: TWideStringField
       FieldName = 'LIPRATINGID'
       Required = True
       FixedChar = True
@@ -4933,7 +4920,7 @@ object dmStratC: TdmStratC
     object cdsChartDomainLIPsUnitsVOLUMEESTIMATE: TFloatField
       FieldName = 'VOLUMEESTIMATE'
     end
-    object cdsChartDomainLIPsUnitsLIPRATINGDESCRIPTION: TStringField
+    object cdsChartDomainLIPsUnitsLIPRATINGDESCRIPTION: TWideStringField
       FieldName = 'LIPRATINGDESCRIPTION'
       Required = True
       Size = 30
@@ -4942,7 +4929,7 @@ object dmStratC: TdmStratC
       FieldName = 'COMPOSITIONID'
       Required = True
     end
-    object cdsChartDomainLIPsUnitsDOMINANTCOMPOSITION: TStringField
+    object cdsChartDomainLIPsUnitsDOMINANTCOMPOSITION: TWideStringField
       FieldName = 'DOMINANTCOMPOSITION'
       Required = True
       Size = 50
@@ -4976,7 +4963,7 @@ object dmStratC: TdmStratC
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsChartLIPUnitsINC4CHTYN: TStringField
+    object cdsChartLIPUnitsINC4CHTYN: TWideStringField
       FieldName = 'INC4CHTYN'
       Required = True
       FixedChar = True
@@ -4987,17 +4974,17 @@ object dmStratC: TdmStratC
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsChartLIPUnitsCOUNTRYID: TStringField
+    object cdsChartLIPUnitsCOUNTRYID: TWideStringField
       FieldName = 'COUNTRYID'
       Required = True
       Size = 3
     end
-    object cdsChartLIPUnitsUNITNAME: TStringField
+    object cdsChartLIPUnitsUNITNAME: TWideStringField
       FieldName = 'UNITNAME'
       Required = True
       Size = 50
     end
-    object cdsChartLIPUnitsRANKID: TStringField
+    object cdsChartLIPUnitsRANKID: TWideStringField
       FieldName = 'RANKID'
       Required = True
       Size = 5
@@ -5014,7 +5001,7 @@ object dmStratC: TdmStratC
       FieldName = 'MAXAGE'
       Required = True
     end
-    object cdsChartLIPUnitsUNITRANK: TStringField
+    object cdsChartLIPUnitsUNITRANK: TWideStringField
       FieldName = 'UNITRANK'
       Required = True
     end
@@ -5022,7 +5009,7 @@ object dmStratC: TdmStratC
       FieldName = 'CONSTRAINTLEVELID'
       Required = True
     end
-    object cdsChartLIPUnitsAGECONSTRAINTLEVEL: TStringField
+    object cdsChartLIPUnitsAGECONSTRAINTLEVEL: TWideStringField
       FieldName = 'AGECONSTRAINTLEVEL'
       Required = True
       Size = 35
@@ -5155,7 +5142,7 @@ object dmStratC: TdmStratC
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsChartMapUnitsMAPID2: TStringField
+    object cdsChartMapUnitsMAPID2: TWideStringField
       FieldName = 'MAPID2'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
@@ -5164,32 +5151,32 @@ object dmStratC: TdmStratC
       FieldName = 'GISINT'
       Required = True
     end
-    object cdsChartMapUnitsGISSTR: TStringField
+    object cdsChartMapUnitsGISSTR: TWideStringField
       FieldName = 'GISSTR'
       Required = True
     end
-    object cdsChartMapUnitsINCL4MAP: TStringField
+    object cdsChartMapUnitsINCL4MAP: TWideStringField
       FieldName = 'INCL4MAP'
       Required = True
       FixedChar = True
       Size = 1
     end
-    object cdsChartMapUnitsMAPNAME: TStringField
+    object cdsChartMapUnitsMAPNAME: TWideStringField
       FieldName = 'MAPNAME'
       Required = True
       Size = 50
     end
-    object cdsChartMapUnitsCOUNTRYID: TStringField
+    object cdsChartMapUnitsCOUNTRYID: TWideStringField
       FieldName = 'COUNTRYID'
       Required = True
       Size = 3
     end
-    object cdsChartMapUnitsUNITNAME: TStringField
+    object cdsChartMapUnitsUNITNAME: TWideStringField
       FieldName = 'UNITNAME'
       Required = True
       Size = 50
     end
-    object cdsChartMapUnitsRANKID: TStringField
+    object cdsChartMapUnitsRANKID: TWideStringField
       FieldName = 'RANKID'
       Required = True
       Size = 5
@@ -5206,7 +5193,7 @@ object dmStratC: TdmStratC
       FieldName = 'MAXAGE'
       Required = True
     end
-    object cdsChartMapUnitsUNITRANK: TStringField
+    object cdsChartMapUnitsUNITRANK: TWideStringField
       FieldName = 'UNITRANK'
       Required = True
     end
@@ -5214,7 +5201,7 @@ object dmStratC: TdmStratC
       FieldName = 'CONSTRAINTLEVELID'
       Required = True
     end
-    object cdsChartMapUnitsAGECONSTRAINTLEVEL: TStringField
+    object cdsChartMapUnitsAGECONSTRAINTLEVEL: TWideStringField
       FieldName = 'AGECONSTRAINTLEVEL'
       Required = True
       Size = 35
@@ -5222,49 +5209,49 @@ object dmStratC: TdmStratC
     object cdsChartMapUnitsRANKWIDTH: TSmallintField
       FieldName = 'RANKWIDTH'
     end
-    object cdsChartMapUnitsROCKCLASS: TStringField
+    object cdsChartMapUnitsROCKCLASS: TWideStringField
       FieldName = 'ROCKCLASS'
       Required = True
       Size = 50
     end
-    object cdsChartMapUnitsROCKCLASSID2: TStringField
+    object cdsChartMapUnitsROCKCLASSID2: TWideStringField
       FieldName = 'ROCKCLASSID2'
       Required = True
       Size = 2
     end
-    object cdsChartMapUnitsROCKCLASSFUNDAMENTAL: TStringField
+    object cdsChartMapUnitsROCKCLASSFUNDAMENTAL: TWideStringField
       FieldName = 'ROCKCLASSFUNDAMENTAL'
       Required = True
       Size = 2
     end
-    object cdsChartMapUnitsSETTING: TStringField
+    object cdsChartMapUnitsSETTING: TWideStringField
       FieldName = 'SETTING'
       Required = True
       Size = 50
     end
-    object cdsChartMapUnitsSETTINGIDCOMBINED: TStringField
+    object cdsChartMapUnitsSETTINGIDCOMBINED: TWideStringField
       FieldName = 'SETTINGIDCOMBINED'
       Required = True
       FixedChar = True
       Size = 2
     end
-    object cdsChartMapUnitsSETTINGID: TStringField
+    object cdsChartMapUnitsSETTINGID: TWideStringField
       FieldName = 'SETTINGID'
       Required = True
       FixedChar = True
       Size = 2
     end
-    object cdsChartMapUnitsROCKCLASSID: TStringField
+    object cdsChartMapUnitsROCKCLASSID: TWideStringField
       FieldName = 'ROCKCLASSID'
       Required = True
       Size = 2
     end
-    object cdsChartMapUnitsDEPOSITIONENVIRONMENTID: TStringField
+    object cdsChartMapUnitsDEPOSITIONENVIRONMENTID: TWideStringField
       FieldName = 'DEPOSITIONENVIRONMENTID'
       Required = True
       Size = 1
     end
-    object cdsChartMapUnitsDEPOSITIONENVIRONMENT: TStringField
+    object cdsChartMapUnitsDEPOSITIONENVIRONMENT: TWideStringField
       FieldName = 'DEPOSITIONENVIRONMENT'
     end
     object cdsChartMapUnitsPARENTID: TIntegerField
@@ -5388,7 +5375,7 @@ object dmStratC: TdmStratC
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsUnconformitiesINC4CHTYN: TStringField
+    object cdsUnconformitiesINC4CHTYN: TWideStringField
       FieldName = 'INC4CHTYN'
       Required = True
       FixedChar = True
@@ -5418,22 +5405,22 @@ object dmStratC: TdmStratC
       FieldName = 'UNITOFFSET_MM'
       Required = True
     end
-    object cdsUnconformitiesDOMAINNAME: TStringField
+    object cdsUnconformitiesDOMAINNAME: TWideStringField
       FieldName = 'DOMAINNAME'
       Required = True
       Size = 65
     end
-    object cdsUnconformitiesCOUNTRYID: TStringField
+    object cdsUnconformitiesCOUNTRYID: TWideStringField
       FieldName = 'COUNTRYID'
       Required = True
       Size = 3
     end
-    object cdsUnconformitiesUNITNAME: TStringField
+    object cdsUnconformitiesUNITNAME: TWideStringField
       FieldName = 'UNITNAME'
       Required = True
       Size = 50
     end
-    object cdsUnconformitiesRANKID: TStringField
+    object cdsUnconformitiesRANKID: TWideStringField
       FieldName = 'RANKID'
       Required = True
       Size = 5
@@ -5446,7 +5433,7 @@ object dmStratC: TdmStratC
       FieldName = 'MAXAGE'
       Required = True
     end
-    object cdsUnconformitiesUNITRANK: TStringField
+    object cdsUnconformitiesUNITRANK: TWideStringField
       FieldName = 'UNITRANK'
       Required = True
     end
@@ -5454,7 +5441,7 @@ object dmStratC: TdmStratC
       FieldName = 'CONSTRAINTLEVELID'
       Required = True
     end
-    object cdsUnconformitiesAGECONSTRAINTLEVEL: TStringField
+    object cdsUnconformitiesAGECONSTRAINTLEVEL: TWideStringField
       FieldName = 'AGECONSTRAINTLEVEL'
       Required = True
       Size = 35
@@ -5462,7 +5449,7 @@ object dmStratC: TdmStratC
     object cdsUnconformitiesRANKWIDTH: TSmallintField
       FieldName = 'RANKWIDTH'
     end
-    object cdsUnconformitiesPREREL: TStringField
+    object cdsUnconformitiesPREREL: TWideStringField
       FieldName = 'PREREL'
       Required = True
       Size = 5
@@ -5471,7 +5458,7 @@ object dmStratC: TdmStratC
       FieldName = 'PRECEDEDBY'
       Required = True
     end
-    object cdsUnconformitiesRELATIONSHIP: TStringField
+    object cdsUnconformitiesRELATIONSHIP: TWideStringField
       FieldName = 'RELATIONSHIP'
       Required = True
       Size = 30
@@ -5580,12 +5567,12 @@ object dmStratC: TdmStratC
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsChartMapLIPsLIPNAME: TStringField
+    object cdsChartMapLIPsLIPNAME: TWideStringField
       FieldName = 'LIPNAME'
       Required = True
       Size = 50
     end
-    object cdsChartMapLIPsMAPID2: TStringField
+    object cdsChartMapLIPsMAPID2: TWideStringField
       FieldName = 'MAPID2'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
@@ -5595,18 +5582,18 @@ object dmStratC: TdmStratC
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsChartMapLIPsGISSTR: TStringField
+    object cdsChartMapLIPsGISSTR: TWideStringField
       FieldName = 'GISSTR'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsChartMapLIPsINCL4MAP: TStringField
+    object cdsChartMapLIPsINCL4MAP: TWideStringField
       FieldName = 'INCL4MAP'
       Required = True
       FixedChar = True
       Size = 1
     end
-    object cdsChartMapLIPsMAPNAME: TStringField
+    object cdsChartMapLIPsMAPNAME: TWideStringField
       FieldName = 'MAPNAME'
       Required = True
       Size = 50
@@ -5615,7 +5602,7 @@ object dmStratC: TdmStratC
       FieldName = 'CONSTRAINTLEVELID'
       Required = True
     end
-    object cdsChartMapLIPsAGECONSTRAINTLEVEL: TStringField
+    object cdsChartMapLIPsAGECONSTRAINTLEVEL: TWideStringField
       FieldName = 'AGECONSTRAINTLEVEL'
       Required = True
       Size = 35
@@ -5632,13 +5619,13 @@ object dmStratC: TdmStratC
       FieldName = 'BARCODEAGE'
       Required = True
     end
-    object cdsChartMapLIPsPLOTBARCODE: TStringField
+    object cdsChartMapLIPsPLOTBARCODE: TWideStringField
       FieldName = 'PLOTBARCODE'
       Required = True
       FixedChar = True
       Size = 1
     end
-    object cdsChartMapLIPsLIPHEADING: TStringField
+    object cdsChartMapLIPsLIPHEADING: TWideStringField
       FieldName = 'LIPHEADING'
       Size = 25
     end
@@ -5650,18 +5637,18 @@ object dmStratC: TdmStratC
       FieldName = 'LIPSIZEID'
       Required = True
     end
-    object cdsChartMapLIPsLIPSIZEDESCRIPTION: TStringField
+    object cdsChartMapLIPsLIPSIZEDESCRIPTION: TWideStringField
       FieldName = 'LIPSIZEDESCRIPTION'
       Required = True
       Size = 50
     end
-    object cdsChartMapLIPsLIPRATINGID: TStringField
+    object cdsChartMapLIPsLIPRATINGID: TWideStringField
       FieldName = 'LIPRATINGID'
       Required = True
       FixedChar = True
       Size = 1
     end
-    object cdsChartMapLIPsLIPRATINGDESCRIPTION: TStringField
+    object cdsChartMapLIPsLIPRATINGDESCRIPTION: TWideStringField
       FieldName = 'LIPRATINGDESCRIPTION'
       Required = True
       Size = 30
@@ -5670,12 +5657,12 @@ object dmStratC: TdmStratC
       FieldName = 'COMPOSITIONID'
       Required = True
     end
-    object cdsChartMapLIPsDOMINANTCOMPOSITION: TStringField
+    object cdsChartMapLIPsDOMINANTCOMPOSITION: TWideStringField
       FieldName = 'DOMINANTCOMPOSITION'
       Required = True
       Size = 50
     end
-    object cdsChartMapLIPsCONTINENTID: TStringField
+    object cdsChartMapLIPsCONTINENTID: TWideStringField
       FieldName = 'CONTINENTID'
       Required = True
       Size = 3

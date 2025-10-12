@@ -427,12 +427,12 @@ object dmStratRB: TdmStratRB
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object Query1COUNTRYID: TStringField
+    object Query1COUNTRYID: TWideStringField
       FieldName = 'COUNTRYID'
       Required = True
       Size = 3
     end
-    object Query1UNITNAME: TStringField
+    object Query1UNITNAME: TWideStringField
       FieldName = 'UNITNAME'
       Required = True
       Size = 50
@@ -441,7 +441,7 @@ object dmStratRB: TdmStratRB
       FieldName = 'PARENTID'
       Required = True
     end
-    object Query1RANKID: TStringField
+    object Query1RANKID: TWideStringField
       FieldName = 'RANKID'
       Required = True
       Size = 5
@@ -458,27 +458,27 @@ object dmStratRB: TdmStratRB
       FieldName = 'MAXAGE'
       Required = True
     end
-    object Query1AGEUNITS: TStringField
+    object Query1AGEUNITS: TWideStringField
       FieldName = 'AGEUNITS'
       Required = True
       Size = 6
     end
-    object Query1UNITRANK: TStringField
+    object Query1UNITRANK: TWideStringField
       FieldName = 'UNITRANK'
       Required = True
     end
-    object Query1COUNTRY: TStringField
+    object Query1COUNTRY: TWideStringField
       FieldName = 'COUNTRY'
       Required = True
       Size = 30
     end
-    object Query1APPROVALID: TStringField
+    object Query1APPROVALID: TWideStringField
       FieldName = 'APPROVALID'
       Required = True
       FixedChar = True
       Size = 2
     end
-    object Query1APPROVALSTATUS: TStringField
+    object Query1APPROVALSTATUS: TWideStringField
       FieldName = 'APPROVALSTATUS'
       Required = True
       Size = 50
@@ -503,17 +503,17 @@ object dmStratRB: TdmStratRB
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsQuery1COUNTRYID: TStringField
+    object cdsQuery1COUNTRYID: TWideStringField
       FieldName = 'COUNTRYID'
       Required = True
       Size = 3
     end
-    object cdsQuery1UNITNAME: TStringField
+    object cdsQuery1UNITNAME: TWideStringField
       FieldName = 'UNITNAME'
       Required = True
       Size = 50
     end
-    object cdsQuery1RANKID: TStringField
+    object cdsQuery1RANKID: TWideStringField
       FieldName = 'RANKID'
       Required = True
       Size = 5
@@ -532,18 +532,18 @@ object dmStratRB: TdmStratRB
       Required = True
       DisplayFormat = '###0.00'
     end
-    object cdsQuery1AGEUNITS: TStringField
+    object cdsQuery1AGEUNITS: TWideStringField
       DisplayLabel = 'Age Units'
       FieldName = 'AGEUNITS'
       Required = True
       Size = 6
     end
-    object cdsQuery1COUNTRY: TStringField
+    object cdsQuery1COUNTRY: TWideStringField
       FieldName = 'COUNTRY'
       Required = True
       Size = 30
     end
-    object cdsQuery1UNITRANK: TStringField
+    object cdsQuery1UNITRANK: TWideStringField
       FieldName = 'UNITRANK'
       Required = True
     end
@@ -552,7 +552,7 @@ object dmStratRB: TdmStratRB
       Required = True
       DisplayFormat = '#########0'
     end
-    object cdsQuery1APPROVALSTATUS: TStringField
+    object cdsQuery1APPROVALSTATUS: TWideStringField
       DisplayLabel = 'Approval Status'
       FieldName = 'APPROVALSTATUS'
       Required = True
@@ -601,12 +601,12 @@ object dmStratRB: TdmStratRB
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object qList1UNITNAME: TStringField
+    object qList1UNITNAME: TWideStringField
       FieldName = 'UNITNAME'
       Required = True
       Size = 50
     end
-    object qList1RANKID: TStringField
+    object qList1RANKID: TWideStringField
       FieldName = 'RANKID'
       Required = True
       Size = 5
@@ -615,22 +615,22 @@ object dmStratRB: TdmStratRB
       FieldName = 'PARENTID'
       Required = True
     end
-    object qList1APPROVALID: TStringField
+    object qList1APPROVALID: TWideStringField
       FieldName = 'APPROVALID'
       Required = True
       FixedChar = True
       Size = 2
     end
-    object qList1UNITRANK: TStringField
+    object qList1UNITRANK: TWideStringField
       FieldName = 'UNITRANK'
       Required = True
     end
-    object qList1APPROVALSTATUS: TStringField
+    object qList1APPROVALSTATUS: TWideStringField
       FieldName = 'APPROVALSTATUS'
       Required = True
       Size = 50
     end
-    object qList1UNAME: TStringField
+    object qList1UNAME: TWideStringField
       FieldName = 'UNAME'
       Required = True
       Size = 50
@@ -889,12 +889,12 @@ object dmStratRB: TdmStratRB
       FieldName = 'UNITID'
       Required = True
     end
-    object qList2UNITNAME: TStringField
+    object qList2UNITNAME: TWideStringField
       FieldName = 'UNITNAME'
       Required = True
       Size = 50
     end
-    object qList2RANKID: TStringField
+    object qList2RANKID: TWideStringField
       FieldName = 'RANKID'
       Required = True
       Size = 5
@@ -903,22 +903,22 @@ object dmStratRB: TdmStratRB
       FieldName = 'PARENTID'
       Required = True
     end
-    object qList2APPROVALID: TStringField
+    object qList2APPROVALID: TWideStringField
       FieldName = 'APPROVALID'
       Required = True
       FixedChar = True
       Size = 2
     end
-    object qList2UNITRANK: TStringField
+    object qList2UNITRANK: TWideStringField
       FieldName = 'UNITRANK'
       Required = True
     end
-    object qList2APPROVALSTATUS: TStringField
+    object qList2APPROVALSTATUS: TWideStringField
       FieldName = 'APPROVALSTATUS'
       Required = True
       Size = 50
     end
-    object qList2UNAME: TStringField
+    object qList2UNAME: TWideStringField
       FieldName = 'UNAME'
       Required = True
       Size = 50
@@ -964,12 +964,12 @@ object dmStratRB: TdmStratRB
       FieldName = 'UNITID'
       Required = True
     end
-    object qList3UNITNAME: TStringField
+    object qList3UNITNAME: TWideStringField
       FieldName = 'UNITNAME'
       Required = True
       Size = 50
     end
-    object qList3RANKID: TStringField
+    object qList3RANKID: TWideStringField
       FieldName = 'RANKID'
       Required = True
       Size = 5
@@ -978,22 +978,22 @@ object dmStratRB: TdmStratRB
       FieldName = 'PARENTID'
       Required = True
     end
-    object qList3APPROVALID: TStringField
+    object qList3APPROVALID: TWideStringField
       FieldName = 'APPROVALID'
       Required = True
       FixedChar = True
       Size = 2
     end
-    object qList3UNITRANK: TStringField
+    object qList3UNITRANK: TWideStringField
       FieldName = 'UNITRANK'
       Required = True
     end
-    object qList3APPROVALSTATUS: TStringField
+    object qList3APPROVALSTATUS: TWideStringField
       FieldName = 'APPROVALSTATUS'
       Required = True
       Size = 50
     end
-    object qList3UNAME: TStringField
+    object qList3UNAME: TWideStringField
       FieldName = 'UNAME'
       Required = True
       Size = 50

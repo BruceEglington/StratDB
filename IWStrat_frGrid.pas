@@ -242,6 +242,7 @@ begin
   dmStrat.cdsRep1.Close;
   dmStrat.cdsRep1.Open;
   dmStrat.cdsRep1.First;
+
   //dmUser.SetDeveloperData(dmStrat.qRep1.SQL.Text);
   frTemplateStr := WebApplication.ApplicationPath+'wwwroot\Files\Flexcell\FlxStratUnits.xlsx';
   frFileNameStr := 'Strat_Units.xlsx';

@@ -1,0 +1,88 @@
+
+EGLINGTON2	Wed Feb 17 14:06:39 2021
+	ib_util init failed, UDFs can't be used - looks like firebird misconfigured
+	
+	c:\exe64\ib_util.dll library has not been found
+	c:\exe64\ib_util.dll library has not been found
+	ib_util.dll library has not been found
+
+
+EGLINGTON2	Wed Feb 17 14:07:49 2021
+	ib_util init failed, UDFs can't be used - looks like firebird misconfigured
+	
+	c:\exe64\ib_util.dll library has not been found
+	c:\exe64\ib_util.dll library has not been found
+	ib_util.dll library has not been found
+
+
+EGLINGTON2	Sat Nov 25 19:31:38 2023
+	INET/inet_error: read errno = 10054, server host = bromo2.usask.ca, address = 10.65.121.99/3050
+
+
+EGLINGTON2	Sat Dec 02 02:05:04 2023
+	INET/INET_connect: getaddrinfo(bromo2.usask.ca,3050) failed: No such host is known. 
+
+
+EGLINGTON2	Sat Dec 02 02:05:04 2023
+	INET/INET_connect: getaddrinfo(bromo2.usask.ca,3050) failed: No such host is known. 
+
+
+EGLINGTON2	Sat Dec 02 02:05:08 2023
+	INET/INET_connect: getaddrinfo(bromo2.usask.ca,3050) failed: No such host is known. 
+
+
+EGLINGTON2	Sat Dec 02 02:08:21 2023
+	INET/INET_connect: getaddrinfo(bromo2.usask.ca,3050) failed: No such host is known. 
+
+
+EGLINGTON2	Sat Dec 02 02:08:21 2023
+	INET/INET_connect: getaddrinfo(bromo2.usask.ca,3050) failed: No such host is known. 
+
+
+EGLINGTON2	Thu Dec 07 20:57:29 2023
+	INET/inet_error: read errno = 10054, server host = bromo2.usask.ca, address = 10.65.121.99/3050
+
+
+EGLINGTON2	Thu Dec 07 20:57:29 2023
+	REMOTE INTERFACE/gds__detach: Unsuccesful detach from database.
+	Uncommitted work may have been lost.
+	Error reading data from the connection.
+
+
+EGLINGTON2	Fri Feb 09 17:25:22 2024
+	INET/INET_connect: getaddrinfo(bromo2.usask.ca,3050) failed: No such host is known. 
+
+
+EGLINGTON2	Fri Feb 09 22:26:31 2024
+	INET/inet_error: send errno = 10054, server host = bromo2.usask.ca, address = 10.65.121.99/3050
+
+
+EGLINGTON2	Fri Feb 09 22:26:31 2024
+	REMOTE INTERFACE/gds__detach: Unsuccesful detach from database.
+	Uncommitted work may have been lost.
+	Error writing data to the connection.
+
+
+EGLINGTON2	Sat Feb 10 10:50:10 2024
+	INET/inet_error: send errno = 10054, server host = bromo2.usask.ca, address = 10.65.121.99/3050
+
+
+EGLINGTON2	Sat Feb 10 10:50:10 2024
+	REMOTE INTERFACE/gds__detach: Unsuccesful detach from database.
+	Uncommitted work may have been lost.
+	Error writing data to the connection.
+
+
+EGLINGTON2	Sat Feb 10 17:28:15 2024
+	INET/inet_error: read errno = 10054, server host = bromo2.usask.ca, address = 10.65.121.99/3050
+
+
+EGLINGTON2	Sat Feb 10 17:28:15 2024
+	REMOTE INTERFACE/gds__detach: Unsuccesful detach from database.
+	Uncommitted work may have been lost.
+	Error reading data from the connection.
+
+
+EGLINGTON2	Tue Feb 13 18:10:01 2024
+	INET/INET_connect: getaddrinfo(bromo2.usask.ca,3050) failed: No such host is known. 
+

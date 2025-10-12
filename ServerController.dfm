@@ -1,5 +1,4 @@
 object IWServerController: TIWServerController
-  OldCreateOrder = False
   AppName = 'StratDB'
   ComInitialization = ciMultiThreaded
   Compression.Enabled = False
@@ -8,11 +7,12 @@ object IWServerController: TIWServerController
   DisplayName = 'StratDB Database'
   Port = 8091
   SSLOptions.SSLVersion = SSLv3
-  Version = '15.2.23'
+  Version = '16.0.11'
   ExceptionLogger.Enabled = True
   SessionOptions.SessionTimeout = 30
   OnNewSession = IWServerControllerBaseNewSession
   OnGetMainForm = IWServerControllerBaseGetMainForm
+  OnBrowserCheck = IWServerControllerBaseBrowserCheck
   Height = 310
   Width = 342
 end

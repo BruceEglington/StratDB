@@ -1,0 +1,44 @@
+------------------------------------------------------------------------------------------------------------------------
+Exception message  : Unsuccessful execution caused by a system error that precludes successful execution of subsequent statements.Your user name and password are not defined. Ask your database administrator to set up a Firebird login.
+Depending on the error condition, it might be possible to restart the application.
+Exception class    : TDBXError
+Exception address  : 009AC716
+Exception Time     : 2025-04-07 14:34:55.559
+------------------------------------------------------------------------------------------------------------------------
+Application Name   : StratDB.exe
+Application Version: 
+Started at         : 2025-04-07 14:34:49.430
+Running for        :  6 seconds
+Computer Name      : EGLINGTON2
+Compiler Version   : 360
+------------------------------------------------------------------------------------------------------------------------
+IntraWeb Version   : 15.6.1
+Multi-session      : False
+Content Path       : C:\DevD12\StratDB\Win32\Release\wwwroot\
+Session count      : 1
+Current Thread ID  : 23716
+Application Path   : C:\DevD12\StratDB\Win32\Release\
+Active Form        : [unassigned]
+Active Form list   :
+Form list          : [1] dmUser (TdmUser)
+                     [2] dmStrat (TdmStrat)
+                     [3] dmDV (TdmDV)
+                     [4] dmOpt (TdmOpt)
+                     [5] dmStratC (TdmStratC)
+                     [6] dmLIP (TdmLIP)
+                     [7] dmStratD (TdmStratD)
+Browser Name       : Firefox
+Browser UserAgent  : Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:136.0) Gecko/20100101 Firefox/136.0
+Session ID         : psxXnvLKAJ0sfzrbRhgX5y6UNse
+Last Access        : 2025-04-07 14:34:53.170
+Callback           : False
+Runtime parameters : 
+------------------------------------------------------------------------------------------------------------------------
+Client IP address  : 127.0.0.1
+Request PathInfo   : /
+Request Method     : POST
+Request User Agent : Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:136.0) Gecko/20100101 Firefox/136.0
+Cookies Count      : 1
+------------------------------------------------------------------------------------------------------------------------
+[Stack trace is empty]
+------------------------------------------------------------------------------------------------------------------------

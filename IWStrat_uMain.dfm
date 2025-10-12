@@ -48,6 +48,7 @@ object ISFMain: TISFMain
         631
         65)
       object iwlDeveloperName: TIWLabel
+        AlignWithMargins = False
         Left = 22
         Top = 9
         Width = 113
@@ -57,12 +58,14 @@ object ISFMain: TISFMain
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'iwlDeveloperName'
         Caption = 'Dr Bruce Eglington'
       end
       object iwlDeveloperEmail: TIWLabel
+        AlignWithMargins = False
         Left = 22
         Top = 46
         Width = 141
@@ -72,12 +75,14 @@ object ISFMain: TISFMain
         Font.FontName = 'Arial'
         Font.Size = 8
         Font.Style = []
+        Font.PxSize = 10
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'iwlDeveloperEmail'
         Caption = 'bruce.eglington@usask.ca'
       end
       object iwlNumUses: TIWLabel
+        AlignWithMargins = False
         Left = 491
         Top = 54
         Width = 155
@@ -87,27 +92,27 @@ object ISFMain: TISFMain
         Font.FontName = 'Arial'
         Font.Size = 8
         Font.Style = []
+        Font.PxSize = 10
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'iwlNumUses'
         Caption = 'This program has been used '
       end
       object iwbPermissions: TIWButton
-        Left = 264
-        Top = 13
+        AlignWithMargins = False
+        Left = 195
+        Top = 9
         Width = 117
         Height = 25
         Visible = False
         Caption = 'Permissions'
         Color = clBtnFace
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         FriendlyName = 'iwbPermissions'
         TabOrder = 2
         OnClick = iwbPermissionsClick
       end
       object iwbCheckIniFile: TIWButton
+        AlignWithMargins = False
         Left = 264
         Top = 40
         Width = 117
@@ -115,14 +120,12 @@ object ISFMain: TISFMain
         Visible = False
         Caption = 'Check IniFile'
         Color = clBtnFace
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         FriendlyName = 'iwbCheckIniFile'
         TabOrder = 3
         OnClick = iwbCheckIniFileClick
       end
       object IWButton1: TIWButton
+        AlignWithMargins = False
         Left = 456
         Top = 18
         Width = 120
@@ -130,14 +133,12 @@ object ISFMain: TISFMain
         Visible = False
         Caption = 'IWButton1'
         Color = clBtnFace
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         FriendlyName = 'IWButton1'
         TabOrder = 4
         OnClick = IWButton1Click
       end
       object iwdbgDevInfo: TIWDBGrid
+        AlignWithMargins = False
         Left = 600
         Top = 16
         Width = 400
@@ -151,13 +152,12 @@ object ISFMain: TISFMain
         BorderStyle = tfDefault
         CellPadding = 0
         CellSpacing = 0
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         FrameBuffer = 40
         Lines = tlAll
         UseFrame = True
         UseSize = False
+        ShowEmptyCells = True
+        ShowInvisibleRows = True
         ScrollToCurrentRow = False
         Columns = <
           item
@@ -167,6 +167,7 @@ object ISFMain: TISFMain
             Font.Color = clNone
             Font.Size = 10
             Font.Style = []
+            Font.PxSize = 13
             Header = False
             Height = '0'
             ShowHint = True
@@ -175,7 +176,6 @@ object ISFMain: TISFMain
             Width = '0'
             Wrap = False
             RawText = False
-            Css = ''
             BlobCharLimit = 0
             CompareHighlight = hcNone
             DataField = 'DEVINFOORDER'
@@ -186,6 +186,7 @@ object ISFMain: TISFMain
             Title.Font.Color = clNone
             Title.Font.Size = 10
             Title.Font.Style = []
+            Title.Font.PxSize = 13
             Title.Header = False
             Title.Height = '0'
             Title.ShowHint = True
@@ -203,6 +204,7 @@ object ISFMain: TISFMain
             Font.Color = clNone
             Font.Size = 10
             Font.Style = []
+            Font.PxSize = 13
             Header = False
             Height = '0'
             ShowHint = True
@@ -211,7 +213,6 @@ object ISFMain: TISFMain
             Width = '0'
             Wrap = False
             RawText = False
-            Css = ''
             BlobCharLimit = 0
             CompareHighlight = hcNone
             DataField = 'DATESAVED'
@@ -222,6 +223,7 @@ object ISFMain: TISFMain
             Title.Font.Color = clNone
             Title.Font.Size = 10
             Title.Font.Style = []
+            Title.Font.PxSize = 13
             Title.Header = False
             Title.Height = '0'
             Title.ShowHint = True
@@ -239,6 +241,7 @@ object ISFMain: TISFMain
             Font.Color = clNone
             Font.Size = 10
             Font.Style = []
+            Font.PxSize = 13
             Header = False
             Height = '0'
             ShowHint = True
@@ -247,7 +250,6 @@ object ISFMain: TISFMain
             Width = '0'
             Wrap = False
             RawText = False
-            Css = ''
             BlobCharLimit = 0
             CompareHighlight = hcNone
             DataField = 'QUERYCHECK'
@@ -258,6 +260,7 @@ object ISFMain: TISFMain
             Title.Font.Color = clNone
             Title.Font.Size = 10
             Title.Font.Style = []
+            Title.Font.PxSize = 13
             Title.Header = False
             Title.Height = '0'
             Title.ShowHint = True
@@ -285,21 +288,20 @@ object ISFMain: TISFMain
         RowCurrentColor = clNone
       end
       object IWButton2: TIWButton
-        Left = 330
+        AlignWithMargins = False
+        Left = 318
         Top = 6
         Width = 120
         Height = 30
         Visible = False
         Caption = 'IWButton2'
         Color = clBtnFace
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         FriendlyName = 'IWButton2'
         TabOrder = 6
         OnClick = IWButton2Click
       end
       object iwlProgressDate: TIWLabel
+        AlignWithMargins = False
         Left = 22
         Top = 30
         Width = 150
@@ -309,6 +311,7 @@ object ISFMain: TISFMain
         Font.FontName = 'Arial'
         Font.Size = 8
         Font.Style = []
+        Font.PxSize = 10
         NoWrap = True
         HasTabOrder = False
         AutoSize = False
@@ -338,6 +341,7 @@ object ISFMain: TISFMain
         BorderOptions.NumericWidth = 0
         BorderOptions.Style = cbsNone
         object lblWelcome: TIWLabel
+          AlignWithMargins = False
           Left = 10
           Top = 18
           Width = 338
@@ -347,6 +351,7 @@ object ISFMain: TISFMain
           Font.FontName = 'Arial'
           Font.Size = 14
           Font.Style = [fsBold]
+          Font.PxSize = 18
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'lblWelcome'
@@ -365,6 +370,7 @@ object ISFMain: TISFMain
         BorderOptions.Style = cbsNone
         ClipRegion = False
         object IWDBMemo1: TIWDBMemo
+          AlignWithMargins = False
           Left = 13
           Top = 0
           Width = 596
@@ -377,6 +383,7 @@ object ISFMain: TISFMain
           Font.FontName = 'Arial'
           Font.Size = 9
           Font.Style = []
+          Font.PxSize = 12
           InvisibleBorder = True
           HorizScrollBar = False
           VertScrollBar = True
@@ -513,6 +520,9 @@ object ISFMain: TISFMain
           ExplicitWidth = 831
           inherited iwlSignOut: TIWLink
             TabOrder = -1
+          end
+          inherited lnkSignIn: TIWLink
+            OnClick = TopBarlnkSignInClick
           end
         end
       end

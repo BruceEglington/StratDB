@@ -68,17 +68,17 @@ object dmStrat: TdmStrat
       FieldName = 'UNITID'
       Required = True
     end
-    object cdsQuery1COUNTRYID: TStringField
+    object cdsQuery1COUNTRYID: TWideStringField
       FieldName = 'COUNTRYID'
       Required = True
       Size = 3
     end
-    object cdsQuery1UNITNAME: TStringField
+    object cdsQuery1UNITNAME: TWideStringField
       FieldName = 'UNITNAME'
       Required = True
       Size = 50
     end
-    object cdsQuery1RANKID: TStringField
+    object cdsQuery1RANKID: TWideStringField
       FieldName = 'RANKID'
       Required = True
       Size = 5
@@ -102,22 +102,22 @@ object dmStrat: TdmStrat
       Required = True
       DisplayFormat = '###0.00'
     end
-    object cdsQuery1AGEUNITS: TStringField
+    object cdsQuery1AGEUNITS: TWideStringField
       DisplayLabel = 'Age Units'
       FieldName = 'AGEUNITS'
       Required = True
       Size = 6
     end
-    object cdsQuery1COUNTRY: TStringField
+    object cdsQuery1COUNTRY: TWideStringField
       FieldName = 'COUNTRY'
       Required = True
       Size = 30
     end
-    object cdsQuery1UNITRANK: TStringField
+    object cdsQuery1UNITRANK: TWideStringField
       FieldName = 'UNITRANK'
       Required = True
     end
-    object cdsQuery1APPROVALSTATUS: TStringField
+    object cdsQuery1APPROVALSTATUS: TWideStringField
       DisplayLabel = 'Approval Status'
       FieldName = 'APPROVALSTATUS'
       Required = True
@@ -140,13 +140,13 @@ object dmStrat: TdmStrat
     SQLConnection = sqlcStrat
     Left = 30
     Top = 58
-    object qContinentsCONTINENTID: TStringField
+    object qContinentsCONTINENTID: TWideStringField
       FieldName = 'CONTINENTID'
       Required = True
       FixedChar = True
       Size = 3
     end
-    object qContinentsCONTINENT: TStringField
+    object qContinentsCONTINENT: TWideStringField
       FieldName = 'CONTINENT'
     end
     object qContinentsDEFAULTDOMAINID: TIntegerField
@@ -166,7 +166,7 @@ object dmStrat: TdmStrat
     ProviderName = 'dspContinents'
     Left = 86
     Top = 58
-    object cdsContinentsCONTINENTID: TStringField
+    object cdsContinentsCONTINENTID: TWideStringField
       DisplayLabel = 'Continent ID'
       FieldName = 'CONTINENTID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
@@ -174,7 +174,7 @@ object dmStrat: TdmStrat
       FixedChar = True
       Size = 3
     end
-    object cdsContinentsCONTINENT: TStringField
+    object cdsContinentsCONTINENT: TWideStringField
       DisplayLabel = 'Continent'
       FieldName = 'CONTINENT'
     end
@@ -210,27 +210,27 @@ object dmStrat: TdmStrat
     ProviderName = 'dspCountries'
     Left = 84
     Top = 104
-    object cdsCountriesCOUNTRYID: TStringField
+    object cdsCountriesCOUNTRYID: TWideStringField
       FieldName = 'COUNTRYID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
       Size = 3
     end
-    object cdsCountriesCOUNTRY: TStringField
+    object cdsCountriesCOUNTRY: TWideStringField
       FieldName = 'COUNTRY'
       Required = True
       Size = 30
     end
-    object cdsCountriesCONTINENTID: TStringField
+    object cdsCountriesCONTINENTID: TWideStringField
       FieldName = 'CONTINENTID'
       Required = True
       Size = 3
     end
-    object cdsCountriesCONTINENT: TStringField
+    object cdsCountriesCONTINENT: TWideStringField
       FieldName = 'CONTINENT'
       Required = True
     end
-    object cdsCountriesCOUNTRYHASRECORDS: TStringField
+    object cdsCountriesCOUNTRYHASRECORDS: TWideStringField
       FieldName = 'COUNTRYHASRECORDS'
       Required = True
       FixedChar = True
@@ -239,7 +239,7 @@ object dmStrat: TdmStrat
     object cdsCountriesSTARTINGVALUE: TIntegerField
       FieldName = 'STARTINGVALUE'
     end
-    object cdsCountriesDEFAULTMAPID: TStringField
+    object cdsCountriesDEFAULTMAPID: TWideStringField
       FieldName = 'DEFAULTMAPID'
       Required = True
     end
@@ -289,16 +289,16 @@ object dmStrat: TdmStrat
       FieldName = 'UNITID'
       Required = True
     end
-    object cdsUnitsUNITNAME: TStringField
+    object cdsUnitsUNITNAME: TWideStringField
       FieldName = 'UNITNAME'
       Required = True
       Size = 50
     end
-    object cdsUnitsUNITNAMEUNITID: TStringField
+    object cdsUnitsUNITNAMEUNITID: TWideStringField
       FieldName = 'UNITNAMEUNITID'
       Size = 68
     end
-    object cdsUnitsCOUNTRYID: TStringField
+    object cdsUnitsCOUNTRYID: TWideStringField
       FieldName = 'COUNTRYID'
       Required = True
       Size = 3
@@ -307,7 +307,7 @@ object dmStrat: TdmStrat
       FieldName = 'PARENTID'
       Required = True
     end
-    object cdsUnitsRANKID: TStringField
+    object cdsUnitsRANKID: TWideStringField
       FieldName = 'RANKID'
       Required = True
       Size = 5
@@ -348,17 +348,17 @@ object dmStrat: TdmStrat
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object qReferencesSOURCESHORT: TStringField
+    object qReferencesSOURCESHORT: TWideStringField
       FieldName = 'SOURCESHORT'
       Required = True
       Size = 255
     end
-    object qReferencesCONTINENTID: TStringField
+    object qReferencesCONTINENTID: TWideStringField
       FieldName = 'CONTINENTID'
       Required = True
       Size = 3
     end
-    object qReferencesCONTINENT: TStringField
+    object qReferencesCONTINENT: TWideStringField
       FieldName = 'CONTINENT'
       ProviderFlags = []
       ReadOnly = True
@@ -385,17 +385,17 @@ object dmStrat: TdmStrat
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsReferencesSOURCESHORT: TStringField
+    object cdsReferencesSOURCESHORT: TWideStringField
       FieldName = 'SOURCESHORT'
       Required = True
       Size = 255
     end
-    object cdsReferencesCONTINENTID: TStringField
+    object cdsReferencesCONTINENTID: TWideStringField
       FieldName = 'CONTINENTID'
       Required = True
       Size = 3
     end
-    object cdsReferencesCONTINENT: TStringField
+    object cdsReferencesCONTINENT: TWideStringField
       FieldName = 'CONTINENT'
       ProviderFlags = []
       ReadOnly = True
@@ -413,12 +413,12 @@ object dmStrat: TdmStrat
     SQLConnection = sqlcStrat
     Left = 20
     Top = 238
-    object qValidationStatusVALIDSTATUSID: TStringField
+    object qValidationStatusVALIDSTATUSID: TWideStringField
       FieldName = 'VALIDSTATUSID'
       Required = True
       Size = 5
     end
-    object qValidationStatusVALIDATIONSTATUS: TStringField
+    object qValidationStatusVALIDATIONSTATUS: TWideStringField
       FieldName = 'VALIDATIONSTATUS'
       Required = True
       Size = 30
@@ -436,14 +436,14 @@ object dmStrat: TdmStrat
     ProviderName = 'dspValidationStatus'
     Left = 74
     Top = 238
-    object cdsValidationStatusVALIDSTATUSID: TStringField
+    object cdsValidationStatusVALIDSTATUSID: TWideStringField
       DisplayLabel = 'Validation Status ID'
       FieldName = 'VALIDSTATUSID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
       Size = 5
     end
-    object cdsValidationStatusVALIDATIONSTATUS: TStringField
+    object cdsValidationStatusVALIDATIONSTATUS: TWideStringField
       DisplayLabel = 'Validation Status'
       FieldName = 'VALIDATIONSTATUS'
       Required = True
@@ -469,7 +469,7 @@ object dmStrat: TdmStrat
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object qRefDetailSOURCESHORT: TStringField
+    object qRefDetailSOURCESHORT: TWideStringField
       FieldName = 'SOURCESHORT'
       Required = True
       Size = 255
@@ -478,16 +478,18 @@ object dmStrat: TdmStrat
       FieldName = 'SOURCEYEAR'
       Required = True
     end
-    object qRefDetailSOURCEDESCRIPTION: TMemoField
+    object qRefDetailSOURCEDESCRIPTION: TBlobField
+      DisplayWidth = 200
       FieldName = 'SOURCEDESCRIPTION'
-      BlobType = ftMemo
+      Size = -1
+      DisplayValue = dvFullText
     end
-    object qRefDetailCONTINENTID: TStringField
+    object qRefDetailCONTINENTID: TWideStringField
       FieldName = 'CONTINENTID'
       Required = True
       Size = 3
     end
-    object qRefDetailDOI: TStringField
+    object qRefDetailDOI: TWideStringField
       FieldName = 'DOI'
       Size = 100
     end
@@ -509,19 +511,19 @@ object dmStrat: TdmStrat
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsRefDetailSOURCEID: TStringField
+    object cdsRefDetailSOURCEID: TWideStringField
       DisplayLabel = 'Reference ID'
       DisplayWidth = 90
       FieldName = 'SOURCEID'
       Required = True
       Size = 100
     end
-    object cdsRefDetailSOURCEDES: TMemoField
+    object cdsRefDetailSOURCEDES: TBlobField
       DisplayLabel = 'Reference details'
-      DisplayWidth = 90
+      DisplayWidth = 200
       FieldName = 'SOURCEDES'
-      BlobType = ftMemo
       Size = 1
+      DisplayValue = dvFullText
     end
   end
   object dspRefFull: TDataSetProvider
@@ -532,42 +534,54 @@ object dmStrat: TdmStrat
   end
   object cdsRefFull: TClientDataSet
     Aggregates = <>
+    AutoCalcFields = False
+    FieldOptions.BlobDisplayValue = dvFullText
     Params = <>
     ProviderName = 'dspRefFull'
     Left = 832
     Top = 210
     object cdsRefFullSOURCENUM: TIntegerField
       FieldName = 'SOURCENUM'
-      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsRefFullSOURCESHORT: TStringField
+    object cdsRefFullSOURCESHORT: TWideStringField
       FieldName = 'SOURCESHORT'
       Required = True
-      Size = 255
-    end
-    object cdsRefFullSOURCEYEAR: TSmallintField
-      FieldName = 'SOURCEYEAR'
-      Required = True
-      DisplayFormat = '0000'
-    end
-    object cdsRefFullSOURCEDESCRIPTION: TMemoField
-      FieldName = 'SOURCEDESCRIPTION'
-      BlobType = ftMemo
-    end
-    object cdsRefFullCONTINENTID: TStringField
-      FieldName = 'CONTINENTID'
-      Required = True
-      Size = 3
-    end
-    object cdsRefFullDOI: TStringField
-      FieldName = 'DOI'
+      FixedChar = True
       Size = 100
     end
-    object cdsRefFullWHOFORID: TStringField
+    object cdsRefFullSOURCEYEAR: TIntegerField
+      FieldName = 'SOURCEYEAR'
+      Required = True
+    end
+    object cdsRefFullCONTINENTID: TWideStringField
+      FieldName = 'CONTINENTID'
+      Required = True
+      FixedChar = True
+      Size = 3
+    end
+    object cdsRefFullWHOFORID: TWideStringField
       FieldName = 'WHOFORID'
       Required = True
+      FixedChar = True
       Size = 5
+    end
+    object cdsRefFullSOURCEDESCRIPTION: TBlobField
+      FieldName = 'SOURCEDESCRIPTION'
+    end
+    object cdsRefFullDOI: TWideStringField
+      FieldName = 'DOI'
+      FixedChar = True
+      Size = 100
+    end
+    object cdsRefFullDATECAPTURED: TSQLTimeStampField
+      FieldName = 'DATECAPTURED'
+    end
+    object cdsRefFullISPROBLEM: TWideStringField
+      FieldName = 'ISPROBLEM'
+      Required = True
+      FixedChar = True
+      Size = 1
     end
   end
   object dsContinents: TDataSource
@@ -623,12 +637,12 @@ object dmStrat: TdmStrat
     SQLConnection = sqlcStrat
     Left = 32
     Top = 191
-    object qUnitCountryUNITNAME: TStringField
+    object qUnitCountryUNITNAME: TWideStringField
       FieldName = 'UNITNAME'
       Required = True
       Size = 50
     end
-    object qUnitCountryCOUNTRYID: TStringField
+    object qUnitCountryCOUNTRYID: TWideStringField
       FieldName = 'COUNTRYID'
       Required = True
       Size = 3
@@ -645,14 +659,14 @@ object dmStrat: TdmStrat
     ProviderName = 'dspUnitCountry'
     Left = 90
     Top = 192
-    object cdsUnitCountryUNITNAME: TStringField
+    object cdsUnitCountryUNITNAME: TWideStringField
       DisplayLabel = 'Stratigraphic Unit'
       FieldName = 'UNITNAME'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
       Size = 50
     end
-    object cdsUnitCountryCOUNTRYID: TStringField
+    object cdsUnitCountryCOUNTRYID: TWideStringField
       FieldName = 'COUNTRYID'
       Required = True
       Size = 3
@@ -683,14 +697,14 @@ object dmStrat: TdmStrat
     ProviderName = 'dspYesNo'
     Left = 798
     Top = 8
-    object cdsYesNoYESNOID: TStringField
+    object cdsYesNoYESNOID: TWideStringField
       FieldName = 'YESNOID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
       FixedChar = True
       Size = 1
     end
-    object cdsYesNoYESNO: TStringField
+    object cdsYesNoYESNO: TWideStringField
       FieldName = 'YESNO'
       Required = True
       Size = 11
@@ -715,7 +729,7 @@ object dmStrat: TdmStrat
     SQLConnection = sqlcStrat
     Left = 30
     Top = 340
-    object qUsersUSERID: TStringField
+    object qUsersUSERID: TWideStringField
       FieldName = 'USERID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
@@ -735,7 +749,7 @@ object dmStrat: TdmStrat
     ProviderName = 'dspUsers'
     Left = 86
     Top = 340
-    object cdsUsersUSERID: TStringField
+    object cdsUsersUSERID: TWideStringField
       FieldName = 'USERID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
@@ -791,12 +805,12 @@ object dmStrat: TdmStrat
       FieldName = 'PARENTID'
       Required = True
     end
-    object qUnitQUNITNAME: TStringField
+    object qUnitQUNITNAME: TWideStringField
       FieldName = 'UNITNAME'
       Required = True
       Size = 50
     end
-    object qUnitQRANKID: TStringField
+    object qUnitQRANKID: TWideStringField
       FieldName = 'RANKID'
       Required = True
       Size = 5
@@ -809,12 +823,12 @@ object dmStrat: TdmStrat
       FieldName = 'MAXAGE'
       Required = True
     end
-    object qUnitQAGEUNITS: TStringField
+    object qUnitQAGEUNITS: TWideStringField
       FieldName = 'AGEUNITS'
       Required = True
       Size = 2
     end
-    object qUnitQAPPROVALID: TStringField
+    object qUnitQAPPROVALID: TWideStringField
       FieldName = 'APPROVALID'
       Required = True
       Size = 2
@@ -823,17 +837,16 @@ object dmStrat: TdmStrat
       FieldName = 'CONSTRAINTLEVELID'
       Required = True
     end
-    object qUnitQDESCRIPTION: TMemoField
+    object qUnitQDESCRIPTION: TBlobField
       FieldName = 'DESCRIPTION'
-      BlobType = ftMemo
       Size = -1
     end
-    object qUnitQCOUNTRYID: TStringField
+    object qUnitQCOUNTRYID: TWideStringField
       FieldName = 'COUNTRYID'
       Required = True
       Size = 3
     end
-    object qUnitQCOUNTRY: TStringField
+    object qUnitQCOUNTRY: TWideStringField
       FieldName = 'COUNTRY'
       ProviderFlags = []
       ReadOnly = True
@@ -857,7 +870,7 @@ object dmStrat: TdmStrat
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsUnitQUNITNAME: TStringField
+    object cdsUnitQUNITNAME: TWideStringField
       FieldName = 'UNITNAME'
       Required = True
       Size = 50
@@ -866,7 +879,7 @@ object dmStrat: TdmStrat
       FieldName = 'PARENTID'
       Required = True
     end
-    object cdsUnitQAPPROVALID: TStringField
+    object cdsUnitQAPPROVALID: TWideStringField
       FieldName = 'APPROVALID'
       Required = True
       Size = 2
@@ -886,7 +899,7 @@ object dmStrat: TdmStrat
       Required = True
       DisplayFormat = '###0.00'
     end
-    object cdsUnitQAGEUNITS: TStringField
+    object cdsUnitQAGEUNITS: TWideStringField
       DisplayLabel = 'Age Units'
       FieldName = 'AGEUNITS'
       Required = True
@@ -896,25 +909,24 @@ object dmStrat: TdmStrat
       FieldName = 'CONSTRAINTLEVELID'
       Required = True
     end
-    object cdsUnitQCOUNTRYID: TStringField
+    object cdsUnitQCOUNTRYID: TWideStringField
       FieldName = 'COUNTRYID'
       Required = True
       Size = 3
     end
-    object cdsUnitQRANKID: TStringField
+    object cdsUnitQRANKID: TWideStringField
       FieldName = 'RANKID'
       Required = True
       Size = 5
     end
-    object cdsUnitQCOUNTRY: TStringField
+    object cdsUnitQCOUNTRY: TWideStringField
       FieldName = 'COUNTRY'
       ProviderFlags = []
       ReadOnly = True
       Size = 30
     end
-    object cdsUnitQDESCRIPTION: TMemoField
+    object cdsUnitQDESCRIPTION: TBlobField
       FieldName = 'DESCRIPTION'
-      BlobType = ftMemo
       Size = 8
     end
     object cdsUnitQqSubUnits: TDataSetField
@@ -1030,19 +1042,19 @@ object dmStrat: TdmStrat
       ProviderFlags = [pfInKey]
       ReadOnly = True
     end
-    object qParentUNITNAME: TStringField
+    object qParentUNITNAME: TWideStringField
       FieldName = 'UNITNAME'
       ProviderFlags = []
       ReadOnly = True
       Size = 50
     end
-    object qParentRANKID: TStringField
+    object qParentRANKID: TWideStringField
       FieldName = 'RANKID'
       ProviderFlags = []
       ReadOnly = True
       Size = 5
     end
-    object qParentUNITRANK: TStringField
+    object qParentUNITRANK: TWideStringField
       FieldName = 'UNITRANK'
       ProviderFlags = []
       ReadOnly = True
@@ -1085,7 +1097,7 @@ object dmStrat: TdmStrat
       FieldName = 'UNITID'
       ProviderFlags = [pfInKey]
     end
-    object qSubUnitsUNITNAME: TStringField
+    object qSubUnitsUNITNAME: TWideStringField
       FieldName = 'UNITNAME'
       ProviderFlags = []
       Size = 50
@@ -1094,7 +1106,7 @@ object dmStrat: TdmStrat
       FieldName = 'PARENTID'
       ProviderFlags = []
     end
-    object qSubUnitsRANKID: TStringField
+    object qSubUnitsRANKID: TWideStringField
       FieldName = 'RANKID'
       ProviderFlags = []
       Size = 5
@@ -1107,7 +1119,7 @@ object dmStrat: TdmStrat
       FieldName = 'MAXAGE'
       ProviderFlags = []
     end
-    object qSubUnitsUNITRANK: TStringField
+    object qSubUnitsUNITRANK: TWideStringField
       FieldName = 'UNITRANK'
       ProviderFlags = []
       ReadOnly = True
@@ -1129,19 +1141,19 @@ object dmStrat: TdmStrat
       ProviderFlags = [pfInKey]
       ReadOnly = True
     end
-    object cdsParentUNITNAME: TStringField
+    object cdsParentUNITNAME: TWideStringField
       FieldName = 'UNITNAME'
       ProviderFlags = []
       ReadOnly = True
       Size = 50
     end
-    object cdsParentRANKID: TStringField
+    object cdsParentRANKID: TWideStringField
       FieldName = 'RANKID'
       ProviderFlags = []
       ReadOnly = True
       Size = 5
     end
-    object cdsParentUNITRANK: TStringField
+    object cdsParentUNITRANK: TWideStringField
       FieldName = 'UNITRANK'
       ProviderFlags = []
       ReadOnly = True
@@ -1159,7 +1171,7 @@ object dmStrat: TdmStrat
       ProviderFlags = [pfInKey]
       Required = True
     end
-    object cdsSubUnitsUNITNAME: TStringField
+    object cdsSubUnitsUNITNAME: TWideStringField
       FieldName = 'UNITNAME'
       ProviderFlags = []
       Size = 50
@@ -1173,7 +1185,7 @@ object dmStrat: TdmStrat
       Required = True
       DisplayFormat = '########0'
     end
-    object cdsSubUnitsRANKID: TStringField
+    object cdsSubUnitsRANKID: TWideStringField
       FieldName = 'RANKID'
       ProviderFlags = []
       Size = 5
@@ -1188,7 +1200,7 @@ object dmStrat: TdmStrat
       ProviderFlags = []
       DisplayFormat = '###0.00'
     end
-    object cdsSubUnitsUNITRANK: TStringField
+    object cdsSubUnitsUNITRANK: TWideStringField
       FieldName = 'UNITRANK'
       ProviderFlags = []
       ReadOnly = True
@@ -1251,24 +1263,24 @@ object dmStrat: TdmStrat
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object qSucceedingSUCREL: TStringField
+    object qSucceedingSUCREL: TWideStringField
       FieldName = 'SUCREL'
       Required = True
       Size = 5
     end
-    object qSucceedingUNITNAME: TStringField
+    object qSucceedingUNITNAME: TWideStringField
       FieldName = 'UNITNAME'
       ProviderFlags = []
       ReadOnly = True
       Size = 50
     end
-    object qSucceedingRELATIONSHIP: TStringField
+    object qSucceedingRELATIONSHIP: TWideStringField
       FieldName = 'RELATIONSHIP'
       ProviderFlags = []
       ReadOnly = True
       Size = 90
     end
-    object qSucceedingRELATIONSHIPREVID: TStringField
+    object qSucceedingRELATIONSHIPREVID: TWideStringField
       FieldName = 'RELATIONSHIPREVID'
       ProviderFlags = []
       ReadOnly = True
@@ -1286,7 +1298,7 @@ object dmStrat: TdmStrat
       ReadOnly = True
       DisplayFormat = '###0.00'
     end
-    object qSucceedingUNITRANK: TStringField
+    object qSucceedingUNITRANK: TWideStringField
       FieldName = 'UNITRANK'
       ProviderFlags = []
       ReadOnly = True
@@ -1309,24 +1321,24 @@ object dmStrat: TdmStrat
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsSucceedingSUCREL: TStringField
+    object cdsSucceedingSUCREL: TWideStringField
       FieldName = 'SUCREL'
       Required = True
       Size = 5
     end
-    object cdsSucceedingUNITNAME: TStringField
+    object cdsSucceedingUNITNAME: TWideStringField
       FieldName = 'UNITNAME'
       ProviderFlags = []
       ReadOnly = True
       Size = 50
     end
-    object cdsSucceedingRELATIONSHIP: TStringField
+    object cdsSucceedingRELATIONSHIP: TWideStringField
       FieldName = 'RELATIONSHIP'
       ProviderFlags = []
       ReadOnly = True
       Size = 90
     end
-    object cdsSucceedingRELATIONSHIPREVID: TStringField
+    object cdsSucceedingRELATIONSHIPREVID: TWideStringField
       FieldName = 'RELATIONSHIPREVID'
       ProviderFlags = []
       ReadOnly = True
@@ -1344,7 +1356,7 @@ object dmStrat: TdmStrat
       ReadOnly = True
       DisplayFormat = '###0.00'
     end
-    object cdsSucceedingUNITRANK: TStringField
+    object cdsSucceedingUNITRANK: TWideStringField
       FieldName = 'UNITRANK'
       ProviderFlags = []
       ReadOnly = True
@@ -1402,24 +1414,24 @@ object dmStrat: TdmStrat
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object qPreceedingPREREL: TStringField
+    object qPreceedingPREREL: TWideStringField
       FieldName = 'PREREL'
       Required = True
       Size = 5
     end
-    object qPreceedingUNITNAME: TStringField
+    object qPreceedingUNITNAME: TWideStringField
       FieldName = 'UNITNAME'
       ProviderFlags = []
       ReadOnly = True
       Size = 50
     end
-    object qPreceedingRELATIONSHIP: TStringField
+    object qPreceedingRELATIONSHIP: TWideStringField
       FieldName = 'RELATIONSHIP'
       ProviderFlags = []
       ReadOnly = True
       Size = 30
     end
-    object qPreceedingRELATIONSHIPREVID: TStringField
+    object qPreceedingRELATIONSHIPREVID: TWideStringField
       FieldName = 'RELATIONSHIPREVID'
       ProviderFlags = []
       ReadOnly = True
@@ -1435,7 +1447,7 @@ object dmStrat: TdmStrat
       ProviderFlags = []
       ReadOnly = True
     end
-    object qPreceedingUNITRANK: TStringField
+    object qPreceedingUNITRANK: TWideStringField
       FieldName = 'UNITRANK'
       ProviderFlags = []
       ReadOnly = True
@@ -1457,24 +1469,24 @@ object dmStrat: TdmStrat
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsPreceedingPREREL: TStringField
+    object cdsPreceedingPREREL: TWideStringField
       FieldName = 'PREREL'
       Required = True
       Size = 5
     end
-    object cdsPreceedingUNITNAME: TStringField
+    object cdsPreceedingUNITNAME: TWideStringField
       FieldName = 'UNITNAME'
       ProviderFlags = []
       ReadOnly = True
       Size = 50
     end
-    object cdsPreceedingRELATIONSHIP: TStringField
+    object cdsPreceedingRELATIONSHIP: TWideStringField
       FieldName = 'RELATIONSHIP'
       ProviderFlags = []
       ReadOnly = True
       Size = 30
     end
-    object cdsPreceedingRELATIONSHIPREVID: TStringField
+    object cdsPreceedingRELATIONSHIPREVID: TWideStringField
       FieldName = 'RELATIONSHIPREVID'
       ProviderFlags = []
       ReadOnly = True
@@ -1492,7 +1504,7 @@ object dmStrat: TdmStrat
       ReadOnly = True
       DisplayFormat = '###0.00'
     end
-    object cdsPreceedingUNITRANK: TStringField
+    object cdsPreceedingUNITRANK: TWideStringField
       FieldName = 'UNITRANK'
       ProviderFlags = []
       ReadOnly = True
@@ -1525,7 +1537,7 @@ object dmStrat: TdmStrat
       ProviderFlags = []
       ReadOnly = True
     end
-    object cdsRefsSOURCESHORT: TStringField
+    object cdsRefsSOURCESHORT: TWideStringField
       FieldName = 'SOURCESHORT'
       ProviderFlags = []
       ReadOnly = True
@@ -1569,7 +1581,7 @@ object dmStrat: TdmStrat
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object qValidVALIDSTATUSID: TStringField
+    object qValidVALIDSTATUSID: TWideStringField
       FieldName = 'VALIDSTATUSID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
@@ -1579,17 +1591,17 @@ object dmStrat: TdmStrat
       FieldName = 'DATEDONE'
       Required = True
     end
-    object qValidDONEBY: TStringField
+    object qValidDONEBY: TWideStringField
       FieldName = 'DONEBY'
       Required = True
     end
-    object qValidVALIDSTATUSID_1: TStringField
+    object qValidVALIDSTATUSID_1: TWideStringField
       FieldName = 'VALIDSTATUSID_1'
       ProviderFlags = []
       ReadOnly = True
       Size = 5
     end
-    object qValidVALIDATIONSTATUS: TStringField
+    object qValidVALIDATIONSTATUS: TWideStringField
       FieldName = 'VALIDATIONSTATUS'
       ProviderFlags = []
       ReadOnly = True
@@ -1608,7 +1620,7 @@ object dmStrat: TdmStrat
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsValidVALIDSTATUSID: TStringField
+    object cdsValidVALIDSTATUSID: TWideStringField
       FieldName = 'VALIDSTATUSID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
@@ -1619,17 +1631,17 @@ object dmStrat: TdmStrat
       Required = True
       DisplayFormat = 'ddddd'
     end
-    object cdsValidDONEBY: TStringField
+    object cdsValidDONEBY: TWideStringField
       FieldName = 'DONEBY'
       Required = True
     end
-    object cdsValidVALIDSTATUSID_1: TStringField
+    object cdsValidVALIDSTATUSID_1: TWideStringField
       FieldName = 'VALIDSTATUSID_1'
       ProviderFlags = []
       ReadOnly = True
       Size = 5
     end
-    object cdsValidVALIDATIONSTATUS: TStringField
+    object cdsValidVALIDATIONSTATUS: TWideStringField
       FieldName = 'VALIDATIONSTATUS'
       ProviderFlags = []
       ReadOnly = True
@@ -1678,7 +1690,7 @@ object dmStrat: TdmStrat
       ProviderFlags = []
       ReadOnly = True
     end
-    object qRefsSOURCESHORT: TStringField
+    object qRefsSOURCESHORT: TWideStringField
       FieldName = 'SOURCESHORT'
       ProviderFlags = []
       ReadOnly = True
@@ -1786,36 +1798,35 @@ object dmStrat: TdmStrat
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object qSynonymsCOMMENTS: TMemoField
+    object qSynonymsCOMMENTS: TBlobField
       FieldName = 'COMMENTS'
-      BlobType = ftMemo
       Size = -1
     end
-    object qSynonymsUNITNAME: TStringField
+    object qSynonymsUNITNAME: TWideStringField
       FieldName = 'UNITNAME'
       ProviderFlags = []
       ReadOnly = True
       Size = 50
     end
-    object qSynonymsRANKID: TStringField
+    object qSynonymsRANKID: TWideStringField
       FieldName = 'RANKID'
       ProviderFlags = []
       ReadOnly = True
       Size = 5
     end
-    object qSynonymsUNITRANK: TStringField
+    object qSynonymsUNITRANK: TWideStringField
       FieldName = 'UNITRANK'
       ProviderFlags = []
       ReadOnly = True
     end
-    object qSynonymsAPPROVALID: TStringField
+    object qSynonymsAPPROVALID: TWideStringField
       FieldName = 'APPROVALID'
       ProviderFlags = []
       ReadOnly = True
       FixedChar = True
       Size = 2
     end
-    object qSynonymsAPPROVALSTATUS: TStringField
+    object qSynonymsAPPROVALSTATUS: TWideStringField
       FieldName = 'APPROVALSTATUS'
       ProviderFlags = []
       ReadOnly = True
@@ -1866,36 +1877,35 @@ object dmStrat: TdmStrat
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object qCorrelativesCOMMENTS: TMemoField
+    object qCorrelativesCOMMENTS: TBlobField
       FieldName = 'COMMENTS'
-      BlobType = ftMemo
       Size = -1
     end
-    object qCorrelativesUNITNAME: TStringField
+    object qCorrelativesUNITNAME: TWideStringField
       FieldName = 'UNITNAME'
       ProviderFlags = []
       ReadOnly = True
       Size = 50
     end
-    object qCorrelativesRANKID: TStringField
+    object qCorrelativesRANKID: TWideStringField
       FieldName = 'RANKID'
       ProviderFlags = []
       ReadOnly = True
       Size = 5
     end
-    object qCorrelativesCOUNTRYID: TStringField
+    object qCorrelativesCOUNTRYID: TWideStringField
       FieldName = 'COUNTRYID'
       ProviderFlags = []
       ReadOnly = True
       Size = 3
     end
-    object qCorrelativesCOUNTRY: TStringField
+    object qCorrelativesCOUNTRY: TWideStringField
       FieldName = 'COUNTRY'
       ProviderFlags = []
       ReadOnly = True
       Size = 30
     end
-    object qCorrelativesUNITRANK: TStringField
+    object qCorrelativesUNITRANK: TWideStringField
       FieldName = 'UNITRANK'
       ProviderFlags = []
       ReadOnly = True
@@ -1953,21 +1963,20 @@ object dmStrat: TdmStrat
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsSynonymsCOMMENTS: TMemoField
+    object cdsSynonymsCOMMENTS: TBlobField
       FieldName = 'COMMENTS'
-      BlobType = ftMemo
       Size = 8
     end
-    object cdsSynonymsUNITNAME: TStringField
+    object cdsSynonymsUNITNAME: TWideStringField
       FieldName = 'UNITNAME'
       ProviderFlags = []
       Size = 50
     end
-    object cdsSynonymsUNITRANK: TStringField
+    object cdsSynonymsUNITRANK: TWideStringField
       FieldName = 'UNITRANK'
       ProviderFlags = []
     end
-    object cdsSynonymsAPPROVALSTATUS: TStringField
+    object cdsSynonymsAPPROVALSTATUS: TWideStringField
       FieldName = 'APPROVALSTATUS'
       ProviderFlags = []
       Size = 50
@@ -1990,23 +1999,22 @@ object dmStrat: TdmStrat
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsCorrelativesCOMMENTS: TMemoField
+    object cdsCorrelativesCOMMENTS: TBlobField
       FieldName = 'COMMENTS'
-      BlobType = ftMemo
       Size = 8
     end
-    object cdsCorrelativesUNITNAME: TStringField
+    object cdsCorrelativesUNITNAME: TWideStringField
       FieldName = 'UNITNAME'
       ProviderFlags = []
       ReadOnly = True
       Size = 50
     end
-    object cdsCorrelativesUNITRANK: TStringField
+    object cdsCorrelativesUNITRANK: TWideStringField
       FieldName = 'UNITRANK'
       ProviderFlags = []
       ReadOnly = True
     end
-    object cdsCorrelativesCOUNTRY: TStringField
+    object cdsCorrelativesCOUNTRY: TWideStringField
       FieldName = 'COUNTRY'
       ProviderFlags = []
       ReadOnly = True
@@ -2094,7 +2102,7 @@ object dmStrat: TdmStrat
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsValidFullVALIDSTATUSID: TStringField
+    object cdsValidFullVALIDSTATUSID: TWideStringField
       DisplayLabel = 'Valid. Status ID'
       FieldName = 'VALIDSTATUSID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
@@ -2106,15 +2114,14 @@ object dmStrat: TdmStrat
       FieldName = 'DATEDONE'
       Required = True
     end
-    object cdsValidFullDONEBY: TStringField
+    object cdsValidFullDONEBY: TWideStringField
       DisplayLabel = 'Done By'
       FieldName = 'DONEBY'
       Required = True
     end
-    object cdsValidFullCOMMENTS: TMemoField
+    object cdsValidFullCOMMENTS: TBlobField
       DisplayLabel = 'Comments'
       FieldName = 'COMMENTS'
-      BlobType = ftMemo
     end
   end
   object dsValidFull: TDataSource
@@ -2144,18 +2151,18 @@ object dmStrat: TdmStrat
     ProviderName = 'dspMaps'
     Left = 82
     Top = 388
-    object cdsMapsMAPID2: TStringField
+    object cdsMapsMAPID2: TWideStringField
       FieldName = 'MAPID2'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsMapsMAPNAME: TStringField
+    object cdsMapsMAPNAME: TWideStringField
       DisplayLabel = 'Compilation Name'
       FieldName = 'MAPNAME'
       Required = True
       Size = 150
     end
-    object cdsMapsSHAPEFILENAME: TStringField
+    object cdsMapsSHAPEFILENAME: TWideStringField
       DisplayLabel = 'ArcView Shapefile'
       FieldName = 'SHAPEFILENAME'
       Required = True
@@ -2195,7 +2202,7 @@ object dmStrat: TdmStrat
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object qStratMapsMAPID2: TStringField
+    object qStratMapsMAPID2: TWideStringField
       FieldName = 'MAPID2'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
@@ -2209,22 +2216,22 @@ object dmStrat: TdmStrat
       FieldName = 'GISINT'
       Required = True
     end
-    object qStratMapsGISSTR: TStringField
+    object qStratMapsGISSTR: TWideStringField
       FieldName = 'GISSTR'
       Required = True
     end
-    object qStratMapsMAPID2_1: TStringField
+    object qStratMapsMAPID2_1: TWideStringField
       FieldName = 'MAPID2_1'
       ProviderFlags = []
       ReadOnly = True
     end
-    object qStratMapsMAPNAME: TStringField
+    object qStratMapsMAPNAME: TWideStringField
       FieldName = 'MAPNAME'
       ProviderFlags = []
       ReadOnly = True
       Size = 150
     end
-    object qStratMapsINCL4MAP: TStringField
+    object qStratMapsINCL4MAP: TWideStringField
       FieldName = 'INCL4MAP'
       Required = True
       FixedChar = True
@@ -2243,7 +2250,7 @@ object dmStrat: TdmStrat
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsStratMapsMAPID2: TStringField
+    object cdsStratMapsMAPID2: TWideStringField
       FieldName = 'MAPID2'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
@@ -2257,22 +2264,22 @@ object dmStrat: TdmStrat
       FieldName = 'GISINT'
       Required = True
     end
-    object cdsStratMapsGISSTR: TStringField
+    object cdsStratMapsGISSTR: TWideStringField
       FieldName = 'GISSTR'
       Required = True
     end
-    object cdsStratMapsMAPID2_1: TStringField
+    object cdsStratMapsMAPID2_1: TWideStringField
       FieldName = 'MAPID2_1'
       ProviderFlags = []
       ReadOnly = True
     end
-    object cdsStratMapsMAPNAME: TStringField
+    object cdsStratMapsMAPNAME: TWideStringField
       FieldName = 'MAPNAME'
       ProviderFlags = []
       ReadOnly = True
       Size = 150
     end
-    object cdsStratMapsINCL4MAP: TStringField
+    object cdsStratMapsINCL4MAP: TWideStringField
       FieldName = 'INCL4MAP'
       Required = True
       FixedChar = True
@@ -2323,30 +2330,30 @@ object dmStrat: TdmStrat
       ProviderFlags = []
       ReadOnly = True
     end
-    object qStratDomainDOMAINNAME: TStringField
+    object qStratDomainDOMAINNAME: TWideStringField
       FieldName = 'DOMAINNAME'
       ProviderFlags = []
       ReadOnly = True
       Size = 150
     end
-    object qStratDomainCONTINENTID: TStringField
+    object qStratDomainCONTINENTID: TWideStringField
       FieldName = 'CONTINENTID'
       ProviderFlags = []
       ReadOnly = True
       Size = 3
     end
-    object qStratDomainCONTINENTID_1: TStringField
+    object qStratDomainCONTINENTID_1: TWideStringField
       FieldName = 'CONTINENTID_1'
       ProviderFlags = []
       ReadOnly = True
       Size = 3
     end
-    object qStratDomainCONTINENT: TStringField
+    object qStratDomainCONTINENT: TWideStringField
       FieldName = 'CONTINENT'
       ProviderFlags = []
       ReadOnly = True
     end
-    object qStratDomainINC4CHTYN: TStringField
+    object qStratDomainINC4CHTYN: TWideStringField
       FieldName = 'INC4CHTYN'
       Required = True
       FixedChar = True
@@ -2375,30 +2382,30 @@ object dmStrat: TdmStrat
       ProviderFlags = []
       ReadOnly = True
     end
-    object cdsStratDomainDOMAINNAME: TStringField
+    object cdsStratDomainDOMAINNAME: TWideStringField
       FieldName = 'DOMAINNAME'
       ProviderFlags = []
       ReadOnly = True
       Size = 150
     end
-    object cdsStratDomainCONTINENTID: TStringField
+    object cdsStratDomainCONTINENTID: TWideStringField
       FieldName = 'CONTINENTID'
       ProviderFlags = []
       ReadOnly = True
       Size = 3
     end
-    object cdsStratDomainCONTINENTID_1: TStringField
+    object cdsStratDomainCONTINENTID_1: TWideStringField
       FieldName = 'CONTINENTID_1'
       ProviderFlags = []
       ReadOnly = True
       Size = 3
     end
-    object cdsStratDomainCONTINENT: TStringField
+    object cdsStratDomainCONTINENT: TWideStringField
       FieldName = 'CONTINENT'
       ProviderFlags = []
       ReadOnly = True
     end
-    object cdsStratDomainINC4CHTYN: TStringField
+    object cdsStratDomainINC4CHTYN: TWideStringField
       FieldName = 'INC4CHTYN'
       Required = True
       FixedChar = True
@@ -2427,13 +2434,13 @@ object dmStrat: TdmStrat
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsDomainsDOMAINNAME: TStringField
+    object cdsDomainsDOMAINNAME: TWideStringField
       DisplayLabel = 'Domain Name'
       FieldName = 'DOMAINNAME'
       Required = True
       Size = 65
     end
-    object cdsDomainsCONTINENTID: TStringField
+    object cdsDomainsCONTINENTID: TWideStringField
       FieldName = 'CONTINENTID'
       Required = True
       Size = 3
@@ -2456,7 +2463,7 @@ object dmStrat: TdmStrat
       FieldName = 'DOMAINPARENTID'
       Required = True
     end
-    object cdsDomainsDOMAINTYPEID: TStringField
+    object cdsDomainsDOMAINTYPEID: TWideStringField
       FieldName = 'DOMAINTYPEID'
       Required = True
       Size = 5
@@ -2555,7 +2562,7 @@ object dmStrat: TdmStrat
       ProviderFlags = []
       ReadOnly = True
     end
-    object qLinkedApplicationsAPPLICATION: TStringField
+    object qLinkedApplicationsAPPLICATION: TWideStringField
       FieldName = 'APPLICATION'
       ProviderFlags = []
       ReadOnly = True
@@ -2584,7 +2591,7 @@ object dmStrat: TdmStrat
       ProviderFlags = []
       ReadOnly = True
     end
-    object cdsLinkedApplicationsAPPLICATION: TStringField
+    object cdsLinkedApplicationsAPPLICATION: TWideStringField
       FieldName = 'APPLICATION'
       ProviderFlags = []
       ReadOnly = True
@@ -2609,7 +2616,7 @@ object dmStrat: TdmStrat
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object qApplicationsAPPLICATION: TStringField
+    object qApplicationsAPPLICATION: TWideStringField
       FieldName = 'APPLICATION'
       Required = True
       Size = 50
@@ -2632,7 +2639,7 @@ object dmStrat: TdmStrat
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsApplicationsAPPLICATION: TStringField
+    object cdsApplicationsAPPLICATION: TWideStringField
       DisplayLabel = 'Application'
       FieldName = 'APPLICATION'
       Required = True
@@ -2724,12 +2731,12 @@ object dmStrat: TdmStrat
       FieldName = 'UNITID'
       Required = True
     end
-    object qRep1COUNTRYID: TStringField
+    object qRep1COUNTRYID: TWideStringField
       FieldName = 'COUNTRYID'
       Required = True
       Size = 3
     end
-    object qRep1UNITNAME: TStringField
+    object qRep1UNITNAME: TWideStringField
       FieldName = 'UNITNAME'
       Required = True
       Size = 50
@@ -2738,7 +2745,7 @@ object dmStrat: TdmStrat
       FieldName = 'PARENTID'
       Required = True
     end
-    object qRep1RANKID: TStringField
+    object qRep1RANKID: TWideStringField
       FieldName = 'RANKID'
       Required = True
       Size = 5
@@ -2751,27 +2758,27 @@ object dmStrat: TdmStrat
       FieldName = 'MAXAGE'
       Required = True
     end
-    object qRep1AGEUNITS: TStringField
+    object qRep1AGEUNITS: TWideStringField
       FieldName = 'AGEUNITS'
       Required = True
       Size = 2
     end
-    object qRep1UNITRANK: TStringField
+    object qRep1UNITRANK: TWideStringField
       FieldName = 'UNITRANK'
       Required = True
     end
-    object qRep1COUNTRY: TStringField
+    object qRep1COUNTRY: TWideStringField
       FieldName = 'COUNTRY'
       Required = True
       Size = 30
     end
-    object qRep1APPROVALID: TStringField
+    object qRep1APPROVALID: TWideStringField
       FieldName = 'APPROVALID'
       Required = True
       FixedChar = True
       Size = 2
     end
-    object qRep1APPROVALSTATUS: TStringField
+    object qRep1APPROVALSTATUS: TWideStringField
       FieldName = 'APPROVALSTATUS'
       Required = True
       Size = 50
@@ -2780,21 +2787,21 @@ object dmStrat: TdmStrat
       FieldName = 'APPLICATIONID'
       Required = True
     end
-    object qRep1ROCKCLASS: TStringField
+    object qRep1ROCKCLASS: TWideStringField
       FieldName = 'ROCKCLASS'
       Required = True
       Size = 50
     end
-    object qRep1SETTING: TStringField
+    object qRep1SETTING: TWideStringField
       FieldName = 'SETTING'
       Required = True
       Size = 50
     end
-    object qRep1SOURCEFROMNAME: TStringField
+    object qRep1SOURCEFROMNAME: TWideStringField
       FieldName = 'SOURCEFROMNAME'
       Required = True
     end
-    object qRep1DEPOSITIONENVIRONMENT: TStringField
+    object qRep1DEPOSITIONENVIRONMENT: TWideStringField
       FieldName = 'DEPOSITIONENVIRONMENT'
     end
     object qRep1AGEYEARS: TFloatField
@@ -2861,7 +2868,7 @@ object dmStrat: TdmStrat
       FieldName = 'UNITID'
       Required = True
     end
-    object qRep2UNITNAME: TStringField
+    object qRep2UNITNAME: TWideStringField
       FieldName = 'UNITNAME'
       Required = True
       Size = 50
@@ -2870,7 +2877,7 @@ object dmStrat: TdmStrat
       FieldName = 'PARENTID'
       Required = True
     end
-    object qRep2RANKID: TStringField
+    object qRep2RANKID: TWideStringField
       FieldName = 'RANKID'
       Required = True
       Size = 5
@@ -2883,41 +2890,41 @@ object dmStrat: TdmStrat
       FieldName = 'MAXAGE'
       Required = True
     end
-    object qRep2UNITRANK: TStringField
+    object qRep2UNITRANK: TWideStringField
       FieldName = 'UNITRANK'
       Required = True
     end
-    object qRep2AGEUNITS: TStringField
+    object qRep2AGEUNITS: TWideStringField
       FieldName = 'AGEUNITS'
       Required = True
       Size = 2
     end
-    object qRep2APPROVALID: TStringField
+    object qRep2APPROVALID: TWideStringField
       FieldName = 'APPROVALID'
       Required = True
       FixedChar = True
       Size = 2
     end
-    object qRep2APPROVALSTATUS: TStringField
+    object qRep2APPROVALSTATUS: TWideStringField
       FieldName = 'APPROVALSTATUS'
       Required = True
       Size = 50
     end
-    object qRep2ROCKCLASS: TStringField
+    object qRep2ROCKCLASS: TWideStringField
       FieldName = 'ROCKCLASS'
       Required = True
       Size = 50
     end
-    object qRep2SETTING: TStringField
+    object qRep2SETTING: TWideStringField
       FieldName = 'SETTING'
       Required = True
       Size = 50
     end
-    object qRep2SOURCEFROMNAME: TStringField
+    object qRep2SOURCEFROMNAME: TWideStringField
       FieldName = 'SOURCEFROMNAME'
       Required = True
     end
-    object qRep2DEPOSITIONENVIRONMENT: TStringField
+    object qRep2DEPOSITIONENVIRONMENT: TWideStringField
       FieldName = 'DEPOSITIONENVIRONMENT'
     end
     object qRep2AGEYEARS: TFloatField
@@ -2984,7 +2991,7 @@ object dmStrat: TdmStrat
       FieldName = 'UNITID'
       Required = True
     end
-    object qRep3UNITNAME: TStringField
+    object qRep3UNITNAME: TWideStringField
       FieldName = 'UNITNAME'
       Required = True
       Size = 50
@@ -2993,7 +3000,7 @@ object dmStrat: TdmStrat
       FieldName = 'PARENTID'
       Required = True
     end
-    object qRep3RANKID: TStringField
+    object qRep3RANKID: TWideStringField
       FieldName = 'RANKID'
       Required = True
       Size = 5
@@ -3006,41 +3013,41 @@ object dmStrat: TdmStrat
       FieldName = 'MAXAGE'
       Required = True
     end
-    object qRep3UNITRANK: TStringField
+    object qRep3UNITRANK: TWideStringField
       FieldName = 'UNITRANK'
       Required = True
     end
-    object qRep3AGEUNITS: TStringField
+    object qRep3AGEUNITS: TWideStringField
       FieldName = 'AGEUNITS'
       Required = True
       Size = 2
     end
-    object qRep3APPROVALID: TStringField
+    object qRep3APPROVALID: TWideStringField
       FieldName = 'APPROVALID'
       Required = True
       FixedChar = True
       Size = 2
     end
-    object qRep3APPROVALSTATUS: TStringField
+    object qRep3APPROVALSTATUS: TWideStringField
       FieldName = 'APPROVALSTATUS'
       Required = True
       Size = 50
     end
-    object qRep3ROCKCLASS: TStringField
+    object qRep3ROCKCLASS: TWideStringField
       FieldName = 'ROCKCLASS'
       Required = True
       Size = 50
     end
-    object qRep3SETTING: TStringField
+    object qRep3SETTING: TWideStringField
       FieldName = 'SETTING'
       Required = True
       Size = 50
     end
-    object qRep3SOURCEFROMNAME: TStringField
+    object qRep3SOURCEFROMNAME: TWideStringField
       FieldName = 'SOURCEFROMNAME'
       Required = True
     end
-    object qRep3DEPOSITIONENVIRONMENT: TStringField
+    object qRep3DEPOSITIONENVIRONMENT: TWideStringField
       FieldName = 'DEPOSITIONENVIRONMENT'
     end
     object qRep3AGEYEARS: TFloatField
@@ -3107,7 +3114,7 @@ object dmStrat: TdmStrat
       FieldName = 'UNITID'
       Required = True
     end
-    object qRep4UNITNAME: TStringField
+    object qRep4UNITNAME: TWideStringField
       FieldName = 'UNITNAME'
       Required = True
       Size = 50
@@ -3116,7 +3123,7 @@ object dmStrat: TdmStrat
       FieldName = 'PARENTID'
       Required = True
     end
-    object qRep4RANKID: TStringField
+    object qRep4RANKID: TWideStringField
       FieldName = 'RANKID'
       Required = True
       Size = 5
@@ -3129,41 +3136,41 @@ object dmStrat: TdmStrat
       FieldName = 'MAXAGE'
       Required = True
     end
-    object qRep4UNITRANK: TStringField
+    object qRep4UNITRANK: TWideStringField
       FieldName = 'UNITRANK'
       Required = True
     end
-    object qRep4AGEUNITS: TStringField
+    object qRep4AGEUNITS: TWideStringField
       FieldName = 'AGEUNITS'
       Required = True
       Size = 2
     end
-    object qRep4APPROVALID: TStringField
+    object qRep4APPROVALID: TWideStringField
       FieldName = 'APPROVALID'
       Required = True
       FixedChar = True
       Size = 2
     end
-    object qRep4APPROVALSTATUS: TStringField
+    object qRep4APPROVALSTATUS: TWideStringField
       FieldName = 'APPROVALSTATUS'
       Required = True
       Size = 50
     end
-    object qRep4ROCKCLASS: TStringField
+    object qRep4ROCKCLASS: TWideStringField
       FieldName = 'ROCKCLASS'
       Required = True
       Size = 50
     end
-    object qRep4SETTING: TStringField
+    object qRep4SETTING: TWideStringField
       FieldName = 'SETTING'
       Required = True
       Size = 50
     end
-    object qRep4SOURCEFROMNAME: TStringField
+    object qRep4SOURCEFROMNAME: TWideStringField
       FieldName = 'SOURCEFROMNAME'
       Required = True
     end
-    object qRep4DEPOSITIONENVIRONMENT: TStringField
+    object qRep4DEPOSITIONENVIRONMENT: TWideStringField
       FieldName = 'DEPOSITIONENVIRONMENT'
     end
     object qRep4AGEYEARS: TFloatField
@@ -3206,12 +3213,12 @@ object dmStrat: TdmStrat
       FieldName = 'UNITID'
       Required = True
     end
-    object cdsRep1COUNTRYID: TStringField
+    object cdsRep1COUNTRYID: TWideStringField
       FieldName = 'COUNTRYID'
       Required = True
       Size = 3
     end
-    object cdsRep1UNITNAME: TStringField
+    object cdsRep1UNITNAME: TWideStringField
       FieldName = 'UNITNAME'
       Required = True
       Size = 50
@@ -3220,7 +3227,7 @@ object dmStrat: TdmStrat
       FieldName = 'PARENTID'
       Required = True
     end
-    object cdsRep1RANKID: TStringField
+    object cdsRep1RANKID: TWideStringField
       FieldName = 'RANKID'
       Required = True
       Size = 5
@@ -3233,27 +3240,27 @@ object dmStrat: TdmStrat
       FieldName = 'MAXAGE'
       Required = True
     end
-    object cdsRep1AGEUNITS: TStringField
+    object cdsRep1AGEUNITS: TWideStringField
       FieldName = 'AGEUNITS'
       Required = True
       Size = 2
     end
-    object cdsRep1UNITRANK: TStringField
+    object cdsRep1UNITRANK: TWideStringField
       FieldName = 'UNITRANK'
       Required = True
     end
-    object cdsRep1COUNTRY: TStringField
+    object cdsRep1COUNTRY: TWideStringField
       FieldName = 'COUNTRY'
       Required = True
       Size = 30
     end
-    object cdsRep1APPROVALID: TStringField
+    object cdsRep1APPROVALID: TWideStringField
       FieldName = 'APPROVALID'
       Required = True
       FixedChar = True
       Size = 2
     end
-    object cdsRep1APPROVALSTATUS: TStringField
+    object cdsRep1APPROVALSTATUS: TWideStringField
       FieldName = 'APPROVALSTATUS'
       Required = True
       Size = 50
@@ -3265,21 +3272,21 @@ object dmStrat: TdmStrat
     object cdsRep1qRep2: TDataSetField
       FieldName = 'qRep2'
     end
-    object cdsRep1ROCKCLASS: TStringField
+    object cdsRep1ROCKCLASS: TWideStringField
       FieldName = 'ROCKCLASS'
       Required = True
       Size = 50
     end
-    object cdsRep1SETTING: TStringField
+    object cdsRep1SETTING: TWideStringField
       FieldName = 'SETTING'
       Required = True
       Size = 50
     end
-    object cdsRep1SOURCEFROMNAME: TStringField
+    object cdsRep1SOURCEFROMNAME: TWideStringField
       FieldName = 'SOURCEFROMNAME'
       Required = True
     end
-    object cdsRep1DEPOSITIONENVIRONMENT: TStringField
+    object cdsRep1DEPOSITIONENVIRONMENT: TWideStringField
       FieldName = 'DEPOSITIONENVIRONMENT'
     end
     object cdsRep1AGEYEARS: TFloatField
@@ -3297,7 +3304,7 @@ object dmStrat: TdmStrat
       FieldName = 'UNITID'
       Required = True
     end
-    object cdsRep2UNITNAME: TStringField
+    object cdsRep2UNITNAME: TWideStringField
       FieldName = 'UNITNAME'
       Required = True
       Size = 50
@@ -3306,7 +3313,7 @@ object dmStrat: TdmStrat
       FieldName = 'PARENTID'
       Required = True
     end
-    object cdsRep2RANKID: TStringField
+    object cdsRep2RANKID: TWideStringField
       FieldName = 'RANKID'
       Required = True
       Size = 5
@@ -3319,44 +3326,44 @@ object dmStrat: TdmStrat
       FieldName = 'MAXAGE'
       Required = True
     end
-    object cdsRep2UNITRANK: TStringField
+    object cdsRep2UNITRANK: TWideStringField
       FieldName = 'UNITRANK'
       Required = True
     end
     object cdsRep2qRep3: TDataSetField
       FieldName = 'qRep3'
     end
-    object cdsRep2AGEUNITS: TStringField
+    object cdsRep2AGEUNITS: TWideStringField
       FieldName = 'AGEUNITS'
       Required = True
       Size = 2
     end
-    object cdsRep2APPROVALID: TStringField
+    object cdsRep2APPROVALID: TWideStringField
       FieldName = 'APPROVALID'
       Required = True
       FixedChar = True
       Size = 2
     end
-    object cdsRep2APPROVALSTATUS: TStringField
+    object cdsRep2APPROVALSTATUS: TWideStringField
       FieldName = 'APPROVALSTATUS'
       Required = True
       Size = 50
     end
-    object cdsRep2ROCKCLASS: TStringField
+    object cdsRep2ROCKCLASS: TWideStringField
       FieldName = 'ROCKCLASS'
       Required = True
       Size = 50
     end
-    object cdsRep2SETTING: TStringField
+    object cdsRep2SETTING: TWideStringField
       FieldName = 'SETTING'
       Required = True
       Size = 50
     end
-    object cdsRep2SOURCEFROMNAME: TStringField
+    object cdsRep2SOURCEFROMNAME: TWideStringField
       FieldName = 'SOURCEFROMNAME'
       Required = True
     end
-    object cdsRep2DEPOSITIONENVIRONMENT: TStringField
+    object cdsRep2DEPOSITIONENVIRONMENT: TWideStringField
       FieldName = 'DEPOSITIONENVIRONMENT'
     end
     object cdsRep2AGEYEARS: TFloatField
@@ -3374,7 +3381,7 @@ object dmStrat: TdmStrat
       FieldName = 'UNITID'
       Required = True
     end
-    object cdsRep3UNITNAME: TStringField
+    object cdsRep3UNITNAME: TWideStringField
       FieldName = 'UNITNAME'
       Required = True
       Size = 50
@@ -3383,7 +3390,7 @@ object dmStrat: TdmStrat
       FieldName = 'PARENTID'
       Required = True
     end
-    object cdsRep3RANKID: TStringField
+    object cdsRep3RANKID: TWideStringField
       FieldName = 'RANKID'
       Required = True
       Size = 5
@@ -3396,44 +3403,44 @@ object dmStrat: TdmStrat
       FieldName = 'MAXAGE'
       Required = True
     end
-    object cdsRep3UNITRANK: TStringField
+    object cdsRep3UNITRANK: TWideStringField
       FieldName = 'UNITRANK'
       Required = True
     end
     object cdsRep3qRep4: TDataSetField
       FieldName = 'qRep4'
     end
-    object cdsRep3AGEUNITS: TStringField
+    object cdsRep3AGEUNITS: TWideStringField
       FieldName = 'AGEUNITS'
       Required = True
       Size = 2
     end
-    object cdsRep3APPROVALID: TStringField
+    object cdsRep3APPROVALID: TWideStringField
       FieldName = 'APPROVALID'
       Required = True
       FixedChar = True
       Size = 2
     end
-    object cdsRep3APPROVALSTATUS: TStringField
+    object cdsRep3APPROVALSTATUS: TWideStringField
       FieldName = 'APPROVALSTATUS'
       Required = True
       Size = 50
     end
-    object cdsRep3ROCKCLASS: TStringField
+    object cdsRep3ROCKCLASS: TWideStringField
       FieldName = 'ROCKCLASS'
       Required = True
       Size = 50
     end
-    object cdsRep3SETTING: TStringField
+    object cdsRep3SETTING: TWideStringField
       FieldName = 'SETTING'
       Required = True
       Size = 50
     end
-    object cdsRep3SOURCEFROMNAME: TStringField
+    object cdsRep3SOURCEFROMNAME: TWideStringField
       FieldName = 'SOURCEFROMNAME'
       Required = True
     end
-    object cdsRep3DEPOSITIONENVIRONMENT: TStringField
+    object cdsRep3DEPOSITIONENVIRONMENT: TWideStringField
       FieldName = 'DEPOSITIONENVIRONMENT'
     end
     object cdsRep3AGEYEARS: TFloatField
@@ -3451,7 +3458,7 @@ object dmStrat: TdmStrat
       FieldName = 'UNITID'
       Required = True
     end
-    object cdsRep4UNITNAME: TStringField
+    object cdsRep4UNITNAME: TWideStringField
       FieldName = 'UNITNAME'
       Required = True
       Size = 50
@@ -3460,7 +3467,7 @@ object dmStrat: TdmStrat
       FieldName = 'PARENTID'
       Required = True
     end
-    object cdsRep4RANKID: TStringField
+    object cdsRep4RANKID: TWideStringField
       FieldName = 'RANKID'
       Required = True
       Size = 5
@@ -3473,41 +3480,41 @@ object dmStrat: TdmStrat
       FieldName = 'MAXAGE'
       Required = True
     end
-    object cdsRep4UNITRANK: TStringField
+    object cdsRep4UNITRANK: TWideStringField
       FieldName = 'UNITRANK'
       Required = True
     end
-    object cdsRep4AGEUNITS: TStringField
+    object cdsRep4AGEUNITS: TWideStringField
       FieldName = 'AGEUNITS'
       Required = True
       Size = 2
     end
-    object cdsRep4APPROVALID: TStringField
+    object cdsRep4APPROVALID: TWideStringField
       FieldName = 'APPROVALID'
       Required = True
       FixedChar = True
       Size = 2
     end
-    object cdsRep4APPROVALSTATUS: TStringField
+    object cdsRep4APPROVALSTATUS: TWideStringField
       FieldName = 'APPROVALSTATUS'
       Required = True
       Size = 50
     end
-    object cdsRep4ROCKCLASS: TStringField
+    object cdsRep4ROCKCLASS: TWideStringField
       FieldName = 'ROCKCLASS'
       Required = True
       Size = 50
     end
-    object cdsRep4SETTING: TStringField
+    object cdsRep4SETTING: TWideStringField
       FieldName = 'SETTING'
       Required = True
       Size = 50
     end
-    object cdsRep4SOURCEFROMNAME: TStringField
+    object cdsRep4SOURCEFROMNAME: TWideStringField
       FieldName = 'SOURCEFROMNAME'
       Required = True
     end
-    object cdsRep4DEPOSITIONENVIRONMENT: TStringField
+    object cdsRep4DEPOSITIONENVIRONMENT: TWideStringField
       FieldName = 'DEPOSITIONENVIRONMENT'
     end
     object cdsRep4AGEYEARS: TFloatField
@@ -3562,12 +3569,12 @@ object dmStrat: TdmStrat
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object qDomainsDOMAINNAME: TStringField
+    object qDomainsDOMAINNAME: TWideStringField
       FieldName = 'DOMAINNAME'
       Required = True
       Size = 65
     end
-    object qDomainsCONTINENTID: TStringField
+    object qDomainsCONTINENTID: TWideStringField
       FieldName = 'CONTINENTID'
       Required = True
       Size = 3
@@ -3588,7 +3595,7 @@ object dmStrat: TdmStrat
       FieldName = 'DOMAINPARENTID'
       Required = True
     end
-    object qDomainsDOMAINTYPEID: TStringField
+    object qDomainsDOMAINTYPEID: TWideStringField
       FieldName = 'DOMAINTYPEID'
       Required = True
       Size = 5
@@ -3624,13 +3631,13 @@ object dmStrat: TdmStrat
     ProviderName = 'dspRockClasses'
     Left = 82
     Top = 484
-    object cdsRockClassesROCKCLASSID: TStringField
+    object cdsRockClassesROCKCLASSID: TWideStringField
       FieldName = 'ROCKCLASSID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
       Size = 2
     end
-    object cdsRockClassesROCKCLASS: TStringField
+    object cdsRockClassesROCKCLASS: TWideStringField
       FieldName = 'ROCKCLASS'
       Required = True
       Size = 50
@@ -3639,12 +3646,12 @@ object dmStrat: TdmStrat
       FieldName = 'LEGENDORDER'
       Required = True
     end
-    object cdsRockClassesROCKCLASSID2: TStringField
+    object cdsRockClassesROCKCLASSID2: TWideStringField
       FieldName = 'ROCKCLASSID2'
       Required = True
       Size = 2
     end
-    object cdsRockClassesROCKCLASSFUNDAMENTAL: TStringField
+    object cdsRockClassesROCKCLASSFUNDAMENTAL: TWideStringField
       FieldName = 'ROCKCLASSFUNDAMENTAL'
       Required = True
       Size = 2
@@ -3677,14 +3684,14 @@ object dmStrat: TdmStrat
     ProviderName = 'dspSettings'
     Left = 82
     Top = 532
-    object cdsSettingsSETTINGID: TStringField
+    object cdsSettingsSETTINGID: TWideStringField
       FieldName = 'SETTINGID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
       FixedChar = True
       Size = 2
     end
-    object cdsSettingsSETTING: TStringField
+    object cdsSettingsSETTING: TWideStringField
       FieldName = 'SETTING'
       Required = True
       Size = 50
@@ -3721,7 +3728,7 @@ object dmStrat: TdmStrat
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object qUnitRockClassROCKCLASSID: TStringField
+    object qUnitRockClassROCKCLASSID: TWideStringField
       DisplayWidth = 2
       FieldName = 'ROCKCLASSID'
       Required = True
@@ -3741,7 +3748,7 @@ object dmStrat: TdmStrat
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsUnitRockClassROCKCLASSID: TStringField
+    object cdsUnitRockClassROCKCLASSID: TWideStringField
       DisplayWidth = 2
       FieldName = 'ROCKCLASSID'
       Required = True
@@ -3776,7 +3783,7 @@ object dmStrat: TdmStrat
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object qUnitSettingSETTINGID: TStringField
+    object qUnitSettingSETTINGID: TWideStringField
       FieldName = 'SETTINGID'
       Required = True
       FixedChar = True
@@ -3795,7 +3802,7 @@ object dmStrat: TdmStrat
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsUnitSettingSETTINGID: TStringField
+    object cdsUnitSettingSETTINGID: TWideStringField
       FieldName = 'SETTINGID'
       Required = True
       FixedChar = True
@@ -3847,12 +3854,12 @@ object dmStrat: TdmStrat
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object qDomainQDOMAINNAME: TStringField
+    object qDomainQDOMAINNAME: TWideStringField
       FieldName = 'DOMAINNAME'
       Required = True
       Size = 65
     end
-    object qDomainQCONTINENTID: TStringField
+    object qDomainQCONTINENTID: TWideStringField
       FieldName = 'CONTINENTID'
       Required = True
       Size = 3
@@ -3861,7 +3868,7 @@ object dmStrat: TdmStrat
       FieldName = 'DOMAINPARENTID'
       Required = True
     end
-    object qDomainQDOMAINTYPEID: TStringField
+    object qDomainQDOMAINTYPEID: TWideStringField
       FieldName = 'DOMAINTYPEID'
       Required = True
       Size = 5
@@ -3874,25 +3881,25 @@ object dmStrat: TdmStrat
       FieldName = 'SPOTLONGITUDE'
       Required = True
     end
-    object qDomainQDOMAINTYPEID_1: TStringField
+    object qDomainQDOMAINTYPEID_1: TWideStringField
       FieldName = 'DOMAINTYPEID_1'
       ProviderFlags = []
       ReadOnly = True
       Size = 5
     end
-    object qDomainQDOMAINTYPE: TStringField
+    object qDomainQDOMAINTYPE: TWideStringField
       FieldName = 'DOMAINTYPE'
       ProviderFlags = []
       ReadOnly = True
       Size = 30
     end
-    object qDomainQCONTINENTID_1: TStringField
+    object qDomainQCONTINENTID_1: TWideStringField
       FieldName = 'CONTINENTID_1'
       ProviderFlags = []
       ReadOnly = True
       Size = 3
     end
-    object qDomainQCONTINENT: TStringField
+    object qDomainQCONTINENT: TWideStringField
       FieldName = 'CONTINENT'
       ProviderFlags = []
       ReadOnly = True
@@ -3937,12 +3944,12 @@ object dmStrat: TdmStrat
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsDomainQDOMAINNAME: TStringField
+    object cdsDomainQDOMAINNAME: TWideStringField
       FieldName = 'DOMAINNAME'
       Required = True
       Size = 65
     end
-    object cdsDomainQCONTINENTID: TStringField
+    object cdsDomainQCONTINENTID: TWideStringField
       FieldName = 'CONTINENTID'
       Required = True
       Size = 3
@@ -3951,7 +3958,7 @@ object dmStrat: TdmStrat
       FieldName = 'DOMAINPARENTID'
       Required = True
     end
-    object cdsDomainQDOMAINTYPEID: TStringField
+    object cdsDomainQDOMAINTYPEID: TWideStringField
       FieldName = 'DOMAINTYPEID'
       Required = True
       Size = 5
@@ -4008,7 +4015,7 @@ object dmStrat: TdmStrat
       DisplayFormat = '###0.00'
       MaxValue = 4570.000000000000000000
     end
-    object cdsDomainQCONTINENT: TStringField
+    object cdsDomainQCONTINENT: TWideStringField
       FieldName = 'CONTINENT'
       ProviderFlags = []
       ReadOnly = True
@@ -4061,7 +4068,7 @@ object dmStrat: TdmStrat
       ProviderFlags = []
       ReadOnly = True
     end
-    object qDomainParentDOMAINNAME: TStringField
+    object qDomainParentDOMAINNAME: TWideStringField
       FieldName = 'DOMAINNAME'
       ProviderFlags = []
       ReadOnly = True
@@ -4072,13 +4079,13 @@ object dmStrat: TdmStrat
       ProviderFlags = []
       ReadOnly = True
     end
-    object qDomainParentDOMAINTYPEID: TStringField
+    object qDomainParentDOMAINTYPEID: TWideStringField
       FieldName = 'DOMAINTYPEID'
       ProviderFlags = []
       ReadOnly = True
       Size = 5
     end
-    object qDomainParentDOMAINTYPE: TStringField
+    object qDomainParentDOMAINTYPE: TWideStringField
       FieldName = 'DOMAINTYPE'
       ProviderFlags = []
       ReadOnly = True
@@ -4096,7 +4103,7 @@ object dmStrat: TdmStrat
       ProviderFlags = []
       ReadOnly = True
     end
-    object cdsDomainParentDOMAINNAME: TStringField
+    object cdsDomainParentDOMAINNAME: TWideStringField
       FieldName = 'DOMAINNAME'
       ProviderFlags = []
       ReadOnly = True
@@ -4107,13 +4114,13 @@ object dmStrat: TdmStrat
       ProviderFlags = []
       ReadOnly = True
     end
-    object cdsDomainParentDOMAINTYPEID: TStringField
+    object cdsDomainParentDOMAINTYPEID: TWideStringField
       FieldName = 'DOMAINTYPEID'
       ProviderFlags = []
       ReadOnly = True
       Size = 5
     end
-    object cdsDomainParentDOMAINTYPE: TStringField
+    object cdsDomainParentDOMAINTYPE: TWideStringField
       FieldName = 'DOMAINTYPE'
       ProviderFlags = []
       ReadOnly = True
@@ -4165,7 +4172,7 @@ object dmStrat: TdmStrat
       ProviderFlags = [pfInKey]
       ReadOnly = True
     end
-    object cdsSubDomainsDOMAINNAME: TStringField
+    object cdsSubDomainsDOMAINNAME: TWideStringField
       FieldName = 'DOMAINNAME'
       ProviderFlags = [pfInKey]
       ReadOnly = True
@@ -4176,13 +4183,13 @@ object dmStrat: TdmStrat
       ProviderFlags = [pfInKey]
       ReadOnly = True
     end
-    object cdsSubDomainsDOMAINTYPEID: TStringField
+    object cdsSubDomainsDOMAINTYPEID: TWideStringField
       FieldName = 'DOMAINTYPEID'
       ProviderFlags = [pfInKey]
       ReadOnly = True
       Size = 5
     end
-    object cdsSubDomainsDOMAINTYPE: TStringField
+    object cdsSubDomainsDOMAINTYPE: TWideStringField
       FieldName = 'DOMAINTYPE'
       ProviderFlags = [pfInKey]
       ReadOnly = True
@@ -4236,12 +4243,12 @@ object dmStrat: TdmStrat
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsDomainQueryCONTINENTID: TStringField
+    object cdsDomainQueryCONTINENTID: TWideStringField
       FieldName = 'CONTINENTID'
       Required = True
       Size = 3
     end
-    object cdsDomainQueryDOMAINNAME: TStringField
+    object cdsDomainQueryDOMAINNAME: TWideStringField
       FieldName = 'DOMAINNAME'
       Required = True
       Size = 150
@@ -4250,7 +4257,7 @@ object dmStrat: TdmStrat
       FieldName = 'DOMAINPARENTID'
       Required = True
     end
-    object cdsDomainQueryDOMAINTYPEID: TStringField
+    object cdsDomainQueryDOMAINTYPEID: TWideStringField
       FieldName = 'DOMAINTYPEID'
       Required = True
       Size = 5
@@ -4265,12 +4272,12 @@ object dmStrat: TdmStrat
       Required = True
       DisplayFormat = '###0.00000'
     end
-    object cdsDomainQueryDOMAINTYPE: TStringField
+    object cdsDomainQueryDOMAINTYPE: TWideStringField
       FieldName = 'DOMAINTYPE'
       Required = True
       Size = 30
     end
-    object cdsDomainQueryCONTINENT: TStringField
+    object cdsDomainQueryCONTINENT: TWideStringField
       FieldName = 'CONTINENT'
       Required = True
     end
@@ -4335,7 +4342,7 @@ object dmStrat: TdmStrat
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object qDomainMetamorphismGRADEID: TStringField
+    object qDomainMetamorphismGRADEID: TWideStringField
       FieldName = 'GRADEID'
       Required = True
       FixedChar = True
@@ -4373,19 +4380,19 @@ object dmStrat: TdmStrat
       FieldName = 'CONSTRAINTLEVELID'
       Required = True
     end
-    object qDomainMetamorphismGRADE: TStringField
+    object qDomainMetamorphismGRADE: TWideStringField
       FieldName = 'GRADE'
       ProviderFlags = []
       ReadOnly = True
       Size = 30
     end
-    object qDomainMetamorphismAGECONSTRAINTLEVEL: TStringField
+    object qDomainMetamorphismAGECONSTRAINTLEVEL: TWideStringField
       FieldName = 'AGECONSTRAINTLEVEL'
       ProviderFlags = []
       ReadOnly = True
       Size = 105
     end
-    object qDomainMetamorphismOROGENY: TStringField
+    object qDomainMetamorphismOROGENY: TWideStringField
       FieldName = 'OROGENY'
       ProviderFlags = []
       ReadOnly = True
@@ -4412,7 +4419,7 @@ object dmStrat: TdmStrat
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsDomainMetamorphismGRADEID: TStringField
+    object cdsDomainMetamorphismGRADEID: TWideStringField
       FieldName = 'GRADEID'
       Required = True
       FixedChar = True
@@ -4433,13 +4440,13 @@ object dmStrat: TdmStrat
       Required = True
       DisplayFormat = '###0.00'
     end
-    object cdsDomainMetamorphismGRADE: TStringField
+    object cdsDomainMetamorphismGRADE: TWideStringField
       FieldName = 'GRADE'
       ProviderFlags = []
       ReadOnly = True
       Size = 30
     end
-    object cdsDomainMetamorphismOROGENY: TStringField
+    object cdsDomainMetamorphismOROGENY: TWideStringField
       FieldName = 'OROGENY'
       ProviderFlags = []
       ReadOnly = True
@@ -4469,7 +4476,7 @@ object dmStrat: TdmStrat
       FieldName = 'CONSTRAINTLEVELID'
       Required = True
     end
-    object cdsDomainMetamorphismAGECONSTRAINTLEVEL: TStringField
+    object cdsDomainMetamorphismAGECONSTRAINTLEVEL: TWideStringField
       FieldName = 'AGECONSTRAINTLEVEL'
       ProviderFlags = []
       ReadOnly = True
@@ -4542,19 +4549,19 @@ object dmStrat: TdmStrat
       FieldName = 'CONSTRAINTLEVELID'
       Required = True
     end
-    object qDomainDeformationAGECONSTRAINTLEVEL: TStringField
+    object qDomainDeformationAGECONSTRAINTLEVEL: TWideStringField
       FieldName = 'AGECONSTRAINTLEVEL'
       ProviderFlags = []
       ReadOnly = True
       Size = 105
     end
-    object qDomainDeformationOROGENY: TStringField
+    object qDomainDeformationOROGENY: TWideStringField
       FieldName = 'OROGENY'
       ProviderFlags = []
       ReadOnly = True
       Size = 50
     end
-    object qDomainDeformationDUCTILITYTYPEID: TStringField
+    object qDomainDeformationDUCTILITYTYPEID: TWideStringField
       FieldName = 'DUCTILITYTYPEID'
       Required = True
       FixedChar = True
@@ -4599,7 +4606,7 @@ object dmStrat: TdmStrat
       FieldName = 'OROGENYID'
       Required = True
     end
-    object cdsDomainDeformationOROGENY: TStringField
+    object cdsDomainDeformationOROGENY: TWideStringField
       FieldName = 'OROGENY'
       ProviderFlags = []
       ReadOnly = True
@@ -4609,13 +4616,13 @@ object dmStrat: TdmStrat
       FieldName = 'CONSTRAINTLEVELID'
       Required = True
     end
-    object cdsDomainDeformationAGECONSTRAINTLEVEL: TStringField
+    object cdsDomainDeformationAGECONSTRAINTLEVEL: TWideStringField
       FieldName = 'AGECONSTRAINTLEVEL'
       ProviderFlags = []
       ReadOnly = True
       Size = 105
     end
-    object cdsDomainDeformationDUCTILITYTYPEID: TStringField
+    object cdsDomainDeformationDUCTILITYTYPEID: TWideStringField
       FieldName = 'DUCTILITYTYPEID'
       Required = True
       FixedChar = True
@@ -4701,7 +4708,7 @@ object dmStrat: TdmStrat
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object qDomainValidVALIDSTATUSID: TStringField
+    object qDomainValidVALIDSTATUSID: TWideStringField
       FieldName = 'VALIDSTATUSID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
@@ -4711,17 +4718,17 @@ object dmStrat: TdmStrat
       FieldName = 'DATEDONE'
       Required = True
     end
-    object qDomainValidDONEBY: TStringField
+    object qDomainValidDONEBY: TWideStringField
       FieldName = 'DONEBY'
       Required = True
     end
-    object qDomainValidVALIDSTATUSID_1: TStringField
+    object qDomainValidVALIDSTATUSID_1: TWideStringField
       FieldName = 'VALIDSTATUSID_1'
       ProviderFlags = []
       ReadOnly = True
       Size = 5
     end
-    object qDomainValidVALIDATIONSTATUS: TStringField
+    object qDomainValidVALIDATIONSTATUS: TWideStringField
       FieldName = 'VALIDATIONSTATUS'
       ProviderFlags = []
       ReadOnly = True
@@ -4739,7 +4746,7 @@ object dmStrat: TdmStrat
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsDomainValidVALIDSTATUSID: TStringField
+    object cdsDomainValidVALIDSTATUSID: TWideStringField
       FieldName = 'VALIDSTATUSID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
@@ -4750,17 +4757,17 @@ object dmStrat: TdmStrat
       Required = True
       DisplayFormat = 'ddddd'
     end
-    object cdsDomainValidDONEBY: TStringField
+    object cdsDomainValidDONEBY: TWideStringField
       FieldName = 'DONEBY'
       Required = True
     end
-    object cdsDomainValidVALIDSTATUSID_1: TStringField
+    object cdsDomainValidVALIDSTATUSID_1: TWideStringField
       FieldName = 'VALIDSTATUSID_1'
       ProviderFlags = []
       ReadOnly = True
       Size = 5
     end
-    object cdsDomainValidVALIDATIONSTATUS: TStringField
+    object cdsDomainValidVALIDATIONSTATUS: TWideStringField
       FieldName = 'VALIDATIONSTATUS'
       ProviderFlags = []
       ReadOnly = True
@@ -4807,7 +4814,7 @@ object dmStrat: TdmStrat
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsDomainValidFullVALIDSTATUSID: TStringField
+    object cdsDomainValidFullVALIDSTATUSID: TWideStringField
       FieldName = 'VALIDSTATUSID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
@@ -4818,13 +4825,12 @@ object dmStrat: TdmStrat
       Required = True
       DisplayFormat = 'ddddd'
     end
-    object cdsDomainValidFullDONEBY: TStringField
+    object cdsDomainValidFullDONEBY: TWideStringField
       FieldName = 'DONEBY'
       Required = True
     end
-    object cdsDomainValidFullCOMMENTS: TMemoField
+    object cdsDomainValidFullCOMMENTS: TBlobField
       FieldName = 'COMMENTS'
-      BlobType = ftMemo
     end
   end
   object dsDomainValidFull: TDataSource
@@ -4860,12 +4866,12 @@ object dmStrat: TdmStrat
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object qDRep1CONTINENTID: TStringField
+    object qDRep1CONTINENTID: TWideStringField
       FieldName = 'CONTINENTID'
       Required = True
       Size = 3
     end
-    object qDRep1DOMAINNAME: TStringField
+    object qDRep1DOMAINNAME: TWideStringField
       FieldName = 'DOMAINNAME'
       Required = True
       Size = 150
@@ -4874,17 +4880,17 @@ object dmStrat: TdmStrat
       FieldName = 'DOMAINPARENTID'
       Required = True
     end
-    object qDRep1DOMAINTYPEID: TStringField
+    object qDRep1DOMAINTYPEID: TWideStringField
       FieldName = 'DOMAINTYPEID'
       Required = True
       Size = 5
     end
-    object qDRep1DOMAINTYPE: TStringField
+    object qDRep1DOMAINTYPE: TWideStringField
       FieldName = 'DOMAINTYPE'
       Required = True
       Size = 30
     end
-    object qDRep1CONTINENT: TStringField
+    object qDRep1CONTINENT: TWideStringField
       FieldName = 'CONTINENT'
       Required = True
     end
@@ -4910,12 +4916,12 @@ object dmStrat: TdmStrat
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsDRep1CONTINENTID: TStringField
+    object cdsDRep1CONTINENTID: TWideStringField
       FieldName = 'CONTINENTID'
       Required = True
       Size = 3
     end
-    object cdsDRep1DOMAINNAME: TStringField
+    object cdsDRep1DOMAINNAME: TWideStringField
       FieldName = 'DOMAINNAME'
       Required = True
       Size = 150
@@ -4924,17 +4930,17 @@ object dmStrat: TdmStrat
       FieldName = 'DOMAINPARENTID'
       Required = True
     end
-    object cdsDRep1DOMAINTYPEID: TStringField
+    object cdsDRep1DOMAINTYPEID: TWideStringField
       FieldName = 'DOMAINTYPEID'
       Required = True
       Size = 5
     end
-    object cdsDRep1DOMAINTYPE: TStringField
+    object cdsDRep1DOMAINTYPE: TWideStringField
       FieldName = 'DOMAINTYPE'
       Required = True
       Size = 30
     end
-    object cdsDRep1CONTINENT: TStringField
+    object cdsDRep1CONTINENT: TWideStringField
       FieldName = 'CONTINENT'
       Required = True
     end
@@ -4983,12 +4989,12 @@ object dmStrat: TdmStrat
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object qDRep2CONTINENTID: TStringField
+    object qDRep2CONTINENTID: TWideStringField
       FieldName = 'CONTINENTID'
       Required = True
       Size = 3
     end
-    object qDRep2DOMAINNAME: TStringField
+    object qDRep2DOMAINNAME: TWideStringField
       FieldName = 'DOMAINNAME'
       Required = True
       Size = 150
@@ -4997,17 +5003,17 @@ object dmStrat: TdmStrat
       FieldName = 'DOMAINPARENTID'
       Required = True
     end
-    object qDRep2DOMAINTYPEID: TStringField
+    object qDRep2DOMAINTYPEID: TWideStringField
       FieldName = 'DOMAINTYPEID'
       Required = True
       Size = 5
     end
-    object qDRep2DOMAINTYPE: TStringField
+    object qDRep2DOMAINTYPE: TWideStringField
       FieldName = 'DOMAINTYPE'
       Required = True
       Size = 30
     end
-    object qDRep2CONTINENT: TStringField
+    object qDRep2CONTINENT: TWideStringField
       FieldName = 'CONTINENT'
       Required = True
     end
@@ -5028,12 +5034,12 @@ object dmStrat: TdmStrat
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsDRep2CONTINENTID: TStringField
+    object cdsDRep2CONTINENTID: TWideStringField
       FieldName = 'CONTINENTID'
       Required = True
       Size = 3
     end
-    object cdsDRep2DOMAINNAME: TStringField
+    object cdsDRep2DOMAINNAME: TWideStringField
       FieldName = 'DOMAINNAME'
       Required = True
       Size = 150
@@ -5042,17 +5048,17 @@ object dmStrat: TdmStrat
       FieldName = 'DOMAINPARENTID'
       Required = True
     end
-    object cdsDRep2DOMAINTYPEID: TStringField
+    object cdsDRep2DOMAINTYPEID: TWideStringField
       FieldName = 'DOMAINTYPEID'
       Required = True
       Size = 5
     end
-    object cdsDRep2DOMAINTYPE: TStringField
+    object cdsDRep2DOMAINTYPE: TWideStringField
       FieldName = 'DOMAINTYPE'
       Required = True
       Size = 30
     end
-    object cdsDRep2CONTINENT: TStringField
+    object cdsDRep2CONTINENT: TWideStringField
       FieldName = 'CONTINENT'
       Required = True
     end
@@ -5101,12 +5107,12 @@ object dmStrat: TdmStrat
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object qDRep3CONTINENTID: TStringField
+    object qDRep3CONTINENTID: TWideStringField
       FieldName = 'CONTINENTID'
       Required = True
       Size = 3
     end
-    object qDRep3DOMAINNAME: TStringField
+    object qDRep3DOMAINNAME: TWideStringField
       FieldName = 'DOMAINNAME'
       Required = True
       Size = 150
@@ -5115,17 +5121,17 @@ object dmStrat: TdmStrat
       FieldName = 'DOMAINPARENTID'
       Required = True
     end
-    object qDRep3DOMAINTYPEID: TStringField
+    object qDRep3DOMAINTYPEID: TWideStringField
       FieldName = 'DOMAINTYPEID'
       Required = True
       Size = 5
     end
-    object qDRep3DOMAINTYPE: TStringField
+    object qDRep3DOMAINTYPE: TWideStringField
       FieldName = 'DOMAINTYPE'
       Required = True
       Size = 30
     end
-    object qDRep3CONTINENT: TStringField
+    object qDRep3CONTINENT: TWideStringField
       FieldName = 'CONTINENT'
       Required = True
     end
@@ -5146,12 +5152,12 @@ object dmStrat: TdmStrat
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsDRep3CONTINENTID: TStringField
+    object cdsDRep3CONTINENTID: TWideStringField
       FieldName = 'CONTINENTID'
       Required = True
       Size = 3
     end
-    object cdsDRep3DOMAINNAME: TStringField
+    object cdsDRep3DOMAINNAME: TWideStringField
       FieldName = 'DOMAINNAME'
       Required = True
       Size = 150
@@ -5160,17 +5166,17 @@ object dmStrat: TdmStrat
       FieldName = 'DOMAINPARENTID'
       Required = True
     end
-    object cdsDRep3DOMAINTYPEID: TStringField
+    object cdsDRep3DOMAINTYPEID: TWideStringField
       FieldName = 'DOMAINTYPEID'
       Required = True
       Size = 5
     end
-    object cdsDRep3DOMAINTYPE: TStringField
+    object cdsDRep3DOMAINTYPE: TWideStringField
       FieldName = 'DOMAINTYPE'
       Required = True
       Size = 30
     end
-    object cdsDRep3CONTINENT: TStringField
+    object cdsDRep3CONTINENT: TWideStringField
       FieldName = 'CONTINENT'
       Required = True
     end
@@ -5219,12 +5225,12 @@ object dmStrat: TdmStrat
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object qDRep4CONTINENTID: TStringField
+    object qDRep4CONTINENTID: TWideStringField
       FieldName = 'CONTINENTID'
       Required = True
       Size = 3
     end
-    object qDRep4DOMAINNAME: TStringField
+    object qDRep4DOMAINNAME: TWideStringField
       FieldName = 'DOMAINNAME'
       Required = True
       Size = 150
@@ -5233,17 +5239,17 @@ object dmStrat: TdmStrat
       FieldName = 'DOMAINPARENTID'
       Required = True
     end
-    object qDRep4DOMAINTYPEID: TStringField
+    object qDRep4DOMAINTYPEID: TWideStringField
       FieldName = 'DOMAINTYPEID'
       Required = True
       Size = 5
     end
-    object qDRep4DOMAINTYPE: TStringField
+    object qDRep4DOMAINTYPE: TWideStringField
       FieldName = 'DOMAINTYPE'
       Required = True
       Size = 30
     end
-    object qDRep4CONTINENT: TStringField
+    object qDRep4CONTINENT: TWideStringField
       FieldName = 'CONTINENT'
       Required = True
     end
@@ -5264,12 +5270,12 @@ object dmStrat: TdmStrat
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsDRep4CONTINENTID: TStringField
+    object cdsDRep4CONTINENTID: TWideStringField
       FieldName = 'CONTINENTID'
       Required = True
       Size = 3
     end
-    object cdsDRep4DOMAINNAME: TStringField
+    object cdsDRep4DOMAINNAME: TWideStringField
       FieldName = 'DOMAINNAME'
       Required = True
       Size = 150
@@ -5278,17 +5284,17 @@ object dmStrat: TdmStrat
       FieldName = 'DOMAINPARENTID'
       Required = True
     end
-    object cdsDRep4DOMAINTYPEID: TStringField
+    object cdsDRep4DOMAINTYPEID: TWideStringField
       FieldName = 'DOMAINTYPEID'
       Required = True
       Size = 5
     end
-    object cdsDRep4DOMAINTYPE: TStringField
+    object cdsDRep4DOMAINTYPE: TWideStringField
       FieldName = 'DOMAINTYPE'
       Required = True
       Size = 30
     end
-    object cdsDRep4CONTINENT: TStringField
+    object cdsDRep4CONTINENT: TWideStringField
       FieldName = 'CONTINENT'
       Required = True
     end
@@ -5333,12 +5339,12 @@ object dmStrat: TdmStrat
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object qDRep5CONTINENTID: TStringField
+    object qDRep5CONTINENTID: TWideStringField
       FieldName = 'CONTINENTID'
       Required = True
       Size = 3
     end
-    object qDRep5DOMAINNAME: TStringField
+    object qDRep5DOMAINNAME: TWideStringField
       FieldName = 'DOMAINNAME'
       Required = True
       Size = 150
@@ -5347,17 +5353,17 @@ object dmStrat: TdmStrat
       FieldName = 'DOMAINPARENTID'
       Required = True
     end
-    object qDRep5DOMAINTYPEID: TStringField
+    object qDRep5DOMAINTYPEID: TWideStringField
       FieldName = 'DOMAINTYPEID'
       Required = True
       Size = 5
     end
-    object qDRep5DOMAINTYPE: TStringField
+    object qDRep5DOMAINTYPE: TWideStringField
       FieldName = 'DOMAINTYPE'
       Required = True
       Size = 30
     end
-    object qDRep5CONTINENT: TStringField
+    object qDRep5CONTINENT: TWideStringField
       FieldName = 'CONTINENT'
       Required = True
     end
@@ -5377,12 +5383,12 @@ object dmStrat: TdmStrat
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsDRep5CONTINENTID: TStringField
+    object cdsDRep5CONTINENTID: TWideStringField
       FieldName = 'CONTINENTID'
       Required = True
       Size = 3
     end
-    object cdsDRep5DOMAINNAME: TStringField
+    object cdsDRep5DOMAINNAME: TWideStringField
       FieldName = 'DOMAINNAME'
       Required = True
       Size = 150
@@ -5391,17 +5397,17 @@ object dmStrat: TdmStrat
       FieldName = 'DOMAINPARENTID'
       Required = True
     end
-    object cdsDRep5DOMAINTYPEID: TStringField
+    object cdsDRep5DOMAINTYPEID: TWideStringField
       FieldName = 'DOMAINTYPEID'
       Required = True
       Size = 5
     end
-    object cdsDRep5DOMAINTYPE: TStringField
+    object cdsDRep5DOMAINTYPE: TWideStringField
       FieldName = 'DOMAINTYPE'
       Required = True
       Size = 30
     end
-    object cdsDRep5CONTINENT: TStringField
+    object cdsDRep5CONTINENT: TWideStringField
       FieldName = 'CONTINENT'
       Required = True
     end
@@ -5450,30 +5456,30 @@ object dmStrat: TdmStrat
       FieldName = 'UNITID'
       Required = True
     end
-    object qDomainUnitsCOUNTRYID: TStringField
+    object qDomainUnitsCOUNTRYID: TWideStringField
       FieldName = 'COUNTRYID'
       ProviderFlags = []
       ReadOnly = True
       Size = 3
     end
-    object qDomainUnitsUNITNAME: TStringField
+    object qDomainUnitsUNITNAME: TWideStringField
       FieldName = 'UNITNAME'
       ProviderFlags = []
       ReadOnly = True
       Size = 50
     end
-    object qDomainUnitsRANKID: TStringField
+    object qDomainUnitsRANKID: TWideStringField
       FieldName = 'RANKID'
       ProviderFlags = []
       ReadOnly = True
       Size = 5
     end
-    object qDomainUnitsUNITRANK: TStringField
+    object qDomainUnitsUNITRANK: TWideStringField
       FieldName = 'UNITRANK'
       ProviderFlags = []
       ReadOnly = True
     end
-    object qDomainUnitsINC4CHTYN: TStringField
+    object qDomainUnitsINC4CHTYN: TWideStringField
       FieldName = 'INC4CHTYN'
       Required = True
       FixedChar = True
@@ -5498,19 +5504,19 @@ object dmStrat: TdmStrat
       FieldName = 'DOMAINID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
     end
-    object cdsDomainUnitsINC4CHTYN: TStringField
+    object cdsDomainUnitsINC4CHTYN: TWideStringField
       FieldName = 'INC4CHTYN'
       Required = True
       FixedChar = True
       Size = 1
     end
-    object cdsDomainUnitsCOUNTRYID: TStringField
+    object cdsDomainUnitsCOUNTRYID: TWideStringField
       FieldName = 'COUNTRYID'
       ProviderFlags = []
       ReadOnly = True
       Size = 3
     end
-    object cdsDomainUnitsUNITNAME: TStringField
+    object cdsDomainUnitsUNITNAME: TWideStringField
       FieldName = 'UNITNAME'
       ProviderFlags = []
       ReadOnly = True
@@ -5521,13 +5527,13 @@ object dmStrat: TdmStrat
       Required = True
       DisplayFormat = '########0'
     end
-    object cdsDomainUnitsRANKID: TStringField
+    object cdsDomainUnitsRANKID: TWideStringField
       FieldName = 'RANKID'
       ProviderFlags = []
       ReadOnly = True
       Size = 5
     end
-    object cdsDomainUnitsUNITRANK: TStringField
+    object cdsDomainUnitsUNITRANK: TWideStringField
       FieldName = 'UNITRANK'
       ProviderFlags = []
       ReadOnly = True
@@ -5588,12 +5594,12 @@ object dmStrat: TdmStrat
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsPeriodsPERIODNAME: TStringField
+    object cdsPeriodsPERIODNAME: TWideStringField
       FieldName = 'PERIODNAME'
       Required = True
       Size = 30
     end
-    object cdsPeriodsPERIODRANKID: TStringField
+    object cdsPeriodsPERIODRANKID: TWideStringField
       FieldName = 'PERIODRANKID'
       Required = True
       Size = 4
@@ -5610,7 +5616,7 @@ object dmStrat: TdmStrat
       FieldName = 'MAXAGE'
       Required = True
     end
-    object cdsPeriodsPERIODRANK: TStringField
+    object cdsPeriodsPERIODRANK: TWideStringField
       FieldName = 'PERIODRANK'
       Required = True
     end
@@ -5643,7 +5649,7 @@ object dmStrat: TdmStrat
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object qPRep1PERIODNAME: TStringField
+    object qPRep1PERIODNAME: TWideStringField
       FieldName = 'PERIODNAME'
       Required = True
       Size = 30
@@ -5652,7 +5658,7 @@ object dmStrat: TdmStrat
       FieldName = 'CPARENTID'
       Required = True
     end
-    object qPRep1PERIODRANKID: TStringField
+    object qPRep1PERIODRANKID: TWideStringField
       FieldName = 'PERIODRANKID'
       Required = True
       Size = 4
@@ -5665,7 +5671,7 @@ object dmStrat: TdmStrat
       FieldName = 'MAXAGE'
       Required = True
     end
-    object qPRep1PERIODRANK: TStringField
+    object qPRep1PERIODRANK: TWideStringField
       FieldName = 'PERIODRANK'
       Required = True
     end
@@ -5699,7 +5705,7 @@ object dmStrat: TdmStrat
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsPRep1PERIODNAME: TStringField
+    object cdsPRep1PERIODNAME: TWideStringField
       FieldName = 'PERIODNAME'
       Required = True
       Size = 30
@@ -5708,7 +5714,7 @@ object dmStrat: TdmStrat
       FieldName = 'CPARENTID'
       Required = True
     end
-    object cdsPRep1PERIODRANKID: TStringField
+    object cdsPRep1PERIODRANKID: TWideStringField
       FieldName = 'PERIODRANKID'
       Required = True
       Size = 4
@@ -5721,7 +5727,7 @@ object dmStrat: TdmStrat
       FieldName = 'MAXAGE'
       Required = True
     end
-    object cdsPRep1PERIODRANK: TStringField
+    object cdsPRep1PERIODRANK: TWideStringField
       FieldName = 'PERIODRANK'
       Required = True
     end
@@ -5770,7 +5776,7 @@ object dmStrat: TdmStrat
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object qPRep2PERIODNAME: TStringField
+    object qPRep2PERIODNAME: TWideStringField
       FieldName = 'PERIODNAME'
       Required = True
       Size = 30
@@ -5779,7 +5785,7 @@ object dmStrat: TdmStrat
       FieldName = 'CPARENTID'
       Required = True
     end
-    object qPRep2PERIODRANKID: TStringField
+    object qPRep2PERIODRANKID: TWideStringField
       FieldName = 'PERIODRANKID'
       Required = True
       Size = 4
@@ -5792,7 +5798,7 @@ object dmStrat: TdmStrat
       FieldName = 'MAXAGE'
       Required = True
     end
-    object qPRep2PERIODRANK: TStringField
+    object qPRep2PERIODRANK: TWideStringField
       FieldName = 'PERIODRANK'
       Required = True
     end
@@ -5821,7 +5827,7 @@ object dmStrat: TdmStrat
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsPRep2PERIODNAME: TStringField
+    object cdsPRep2PERIODNAME: TWideStringField
       FieldName = 'PERIODNAME'
       Required = True
       Size = 30
@@ -5830,7 +5836,7 @@ object dmStrat: TdmStrat
       FieldName = 'CPARENTID'
       Required = True
     end
-    object cdsPRep2PERIODRANKID: TStringField
+    object cdsPRep2PERIODRANKID: TWideStringField
       FieldName = 'PERIODRANKID'
       Required = True
       Size = 4
@@ -5843,7 +5849,7 @@ object dmStrat: TdmStrat
       FieldName = 'MAXAGE'
       Required = True
     end
-    object cdsPRep2PERIODRANK: TStringField
+    object cdsPRep2PERIODRANK: TWideStringField
       FieldName = 'PERIODRANK'
       Required = True
     end
@@ -5892,7 +5898,7 @@ object dmStrat: TdmStrat
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object qPRep3PERIODNAME: TStringField
+    object qPRep3PERIODNAME: TWideStringField
       FieldName = 'PERIODNAME'
       Required = True
       Size = 30
@@ -5901,7 +5907,7 @@ object dmStrat: TdmStrat
       FieldName = 'CPARENTID'
       Required = True
     end
-    object qPRep3PERIODRANKID: TStringField
+    object qPRep3PERIODRANKID: TWideStringField
       FieldName = 'PERIODRANKID'
       Required = True
       Size = 4
@@ -5914,7 +5920,7 @@ object dmStrat: TdmStrat
       FieldName = 'MAXAGE'
       Required = True
     end
-    object qPRep3PERIODRANK: TStringField
+    object qPRep3PERIODRANK: TWideStringField
       FieldName = 'PERIODRANK'
       Required = True
     end
@@ -5943,7 +5949,7 @@ object dmStrat: TdmStrat
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsPRep3PERIODNAME: TStringField
+    object cdsPRep3PERIODNAME: TWideStringField
       FieldName = 'PERIODNAME'
       Required = True
       Size = 30
@@ -5952,7 +5958,7 @@ object dmStrat: TdmStrat
       FieldName = 'CPARENTID'
       Required = True
     end
-    object cdsPRep3PERIODRANKID: TStringField
+    object cdsPRep3PERIODRANKID: TWideStringField
       FieldName = 'PERIODRANKID'
       Required = True
       Size = 4
@@ -5965,7 +5971,7 @@ object dmStrat: TdmStrat
       FieldName = 'MAXAGE'
       Required = True
     end
-    object cdsPRep3PERIODRANK: TStringField
+    object cdsPRep3PERIODRANK: TWideStringField
       FieldName = 'PERIODRANK'
       Required = True
     end
@@ -6014,7 +6020,7 @@ object dmStrat: TdmStrat
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object qPRep4PERIODNAME: TStringField
+    object qPRep4PERIODNAME: TWideStringField
       FieldName = 'PERIODNAME'
       Required = True
       Size = 30
@@ -6023,7 +6029,7 @@ object dmStrat: TdmStrat
       FieldName = 'CPARENTID'
       Required = True
     end
-    object qPRep4PERIODRANKID: TStringField
+    object qPRep4PERIODRANKID: TWideStringField
       FieldName = 'PERIODRANKID'
       Required = True
       Size = 4
@@ -6036,7 +6042,7 @@ object dmStrat: TdmStrat
       FieldName = 'MAXAGE'
       Required = True
     end
-    object qPRep4PERIODRANK: TStringField
+    object qPRep4PERIODRANK: TWideStringField
       FieldName = 'PERIODRANK'
       Required = True
     end
@@ -6065,7 +6071,7 @@ object dmStrat: TdmStrat
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsPRep4PERIODNAME: TStringField
+    object cdsPRep4PERIODNAME: TWideStringField
       FieldName = 'PERIODNAME'
       Required = True
       Size = 30
@@ -6074,7 +6080,7 @@ object dmStrat: TdmStrat
       FieldName = 'CPARENTID'
       Required = True
     end
-    object cdsPRep4PERIODRANKID: TStringField
+    object cdsPRep4PERIODRANKID: TWideStringField
       FieldName = 'PERIODRANKID'
       Required = True
       Size = 4
@@ -6087,7 +6093,7 @@ object dmStrat: TdmStrat
       FieldName = 'MAXAGE'
       Required = True
     end
-    object cdsPRep4PERIODRANK: TStringField
+    object cdsPRep4PERIODRANK: TWideStringField
       FieldName = 'PERIODRANK'
       Required = True
     end
@@ -6127,13 +6133,13 @@ object dmStrat: TdmStrat
     ProviderName = 'dspRanks'
     Left = 616
     Top = 4
-    object cdsRanksRANKID: TStringField
+    object cdsRanksRANKID: TWideStringField
       FieldName = 'RANKID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
       Size = 5
     end
-    object cdsRanksUNITRANK: TStringField
+    object cdsRanksUNITRANK: TWideStringField
       FieldName = 'UNITRANK'
       Required = True
     end
@@ -6171,7 +6177,7 @@ object dmStrat: TdmStrat
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsAgeConstraintsAGECONSTRAINTLEVEL: TStringField
+    object cdsAgeConstraintsAGECONSTRAINTLEVEL: TWideStringField
       FieldName = 'AGECONSTRAINTLEVEL'
       Required = True
       Size = 105
@@ -6203,14 +6209,14 @@ object dmStrat: TdmStrat
     ProviderName = 'dspStatus'
     Left = 620
     Top = 92
-    object cdsStatusAPPROVALID: TStringField
+    object cdsStatusAPPROVALID: TWideStringField
       FieldName = 'APPROVALID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
       FixedChar = True
       Size = 2
     end
-    object cdsStatusAPPROVALSTATUS: TStringField
+    object cdsStatusAPPROVALSTATUS: TWideStringField
       FieldName = 'APPROVALSTATUS'
       Required = True
       Size = 50
@@ -6252,7 +6258,7 @@ object dmStrat: TdmStrat
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object qUnitFeatureSPECIALFEATURE: TStringField
+    object qUnitFeatureSPECIALFEATURE: TWideStringField
       FieldName = 'SPECIALFEATURE'
       ProviderFlags = []
       ReadOnly = True
@@ -6276,7 +6282,7 @@ object dmStrat: TdmStrat
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsUnitFeatureSPECIALFEATURE: TStringField
+    object cdsUnitFeatureSPECIALFEATURE: TWideStringField
       FieldName = 'SPECIALFEATURE'
       ProviderFlags = []
       ReadOnly = True
@@ -6339,13 +6345,13 @@ object dmStrat: TdmStrat
       ProviderFlags = []
       ReadOnly = True
     end
-    object qDomainDepositsDEPOSITNAME: TStringField
+    object qDomainDepositsDEPOSITNAME: TWideStringField
       FieldName = 'DEPOSITNAME'
       ProviderFlags = []
       ReadOnly = True
       Size = 150
     end
-    object qDomainDepositsDEPOSITCLAN: TStringField
+    object qDomainDepositsDEPOSITCLAN: TWideStringField
       FieldName = 'DEPOSITCLAN'
       ProviderFlags = []
       ReadOnly = True
@@ -6383,13 +6389,13 @@ object dmStrat: TdmStrat
       ProviderFlags = []
       DisplayFormat = '###0.00'
     end
-    object cdsDomainDepositsDEPOSITNAME: TStringField
+    object cdsDomainDepositsDEPOSITNAME: TWideStringField
       FieldName = 'DEPOSITNAME'
       ProviderFlags = []
       Required = True
       Size = 150
     end
-    object cdsDomainDepositsDEPOSITCLAN: TStringField
+    object cdsDomainDepositsDEPOSITCLAN: TWideStringField
       FieldName = 'DEPOSITCLAN'
       ProviderFlags = []
       ReadOnly = True
@@ -6422,13 +6428,13 @@ object dmStrat: TdmStrat
     ProviderName = 'dspDomainTypes'
     Left = 198
     Top = 280
-    object cdsDomainTypesDOMAINTYPEID: TStringField
+    object cdsDomainTypesDOMAINTYPEID: TWideStringField
       FieldName = 'DOMAINTYPEID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
       Size = 5
     end
-    object cdsDomainTypesDOMAINTYPE: TStringField
+    object cdsDomainTypesDOMAINTYPE: TWideStringField
       FieldName = 'DOMAINTYPE'
       Required = True
       Size = 30
@@ -6626,7 +6632,7 @@ object dmStrat: TdmStrat
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsSpecialFeaturesSPECIALFEATURE: TStringField
+    object cdsSpecialFeaturesSPECIALFEATURE: TWideStringField
       FieldName = 'SPECIALFEATURE'
       Required = True
       Size = 50
@@ -6672,18 +6678,18 @@ object dmStrat: TdmStrat
     ProviderName = 'dspWhoFor'
     Left = 358
     Top = 499
-    object cdsWhoForWHOFORID: TStringField
+    object cdsWhoForWHOFORID: TWideStringField
       FieldName = 'WHOFORID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
       Size = 5
     end
-    object cdsWhoForWHOFOR: TStringField
+    object cdsWhoForWHOFOR: TWideStringField
       FieldName = 'WHOFOR'
       Required = True
       Size = 50
     end
-    object cdsWhoForOWNER: TStringField
+    object cdsWhoForOWNER: TWideStringField
       FieldName = 'OWNER'
       Required = True
     end
@@ -6711,23 +6717,23 @@ object dmStrat: TdmStrat
     SQLConnection = sqlcStrat
     Left = 300
     Top = 546
-    object qUsersWhoForUSERID: TStringField
+    object qUsersWhoForUSERID: TWideStringField
       FieldName = 'USERID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object qUsersWhoForWHOFORID: TStringField
+    object qUsersWhoForWHOFORID: TWideStringField
       FieldName = 'WHOFORID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
       Size = 5
     end
-    object qUsersWhoForWHOFOR: TStringField
+    object qUsersWhoForWHOFOR: TWideStringField
       FieldName = 'WHOFOR'
       ProviderFlags = []
       Size = 50
     end
-    object qUsersWhoForOWNER: TStringField
+    object qUsersWhoForOWNER: TWideStringField
       FieldName = 'OWNER'
       ProviderFlags = []
     end
@@ -6744,22 +6750,22 @@ object dmStrat: TdmStrat
     ProviderName = 'dspUsersWhoFor'
     Left = 356
     Top = 546
-    object cdsUsersWhoForUSERID: TStringField
+    object cdsUsersWhoForUSERID: TWideStringField
       FieldName = 'USERID'
       Required = True
     end
-    object cdsUsersWhoForWHOFORID: TStringField
+    object cdsUsersWhoForWHOFORID: TWideStringField
       FieldName = 'WHOFORID'
       Required = True
       Size = 5
     end
-    object cdsUsersWhoForWHOFOR: TStringField
+    object cdsUsersWhoForWHOFOR: TWideStringField
       FieldName = 'WHOFOR'
       ProviderFlags = []
       ReadOnly = True
       Size = 50
     end
-    object cdsUsersWhoForOWNER: TStringField
+    object cdsUsersWhoForOWNER: TWideStringField
       FieldName = 'OWNER'
       ProviderFlags = []
       ReadOnly = True
@@ -6859,13 +6865,13 @@ object dmStrat: TdmStrat
     object cdsCountryDefaultSTARTINGVALUE: TIntegerField
       FieldName = 'STARTINGVALUE'
     end
-    object cdsCountryDefaultCOUNTRYHASRECORDS: TStringField
+    object cdsCountryDefaultCOUNTRYHASRECORDS: TWideStringField
       FieldName = 'COUNTRYHASRECORDS'
       Required = True
       FixedChar = True
       Size = 1
     end
-    object cdsCountryDefaultCOUNTRYID: TStringField
+    object cdsCountryDefaultCOUNTRYID: TWideStringField
       FieldName = 'COUNTRYID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
@@ -6899,13 +6905,13 @@ object dmStrat: TdmStrat
     ProviderName = 'dspDepsoitTypes'
     Left = 214
     Top = 488
-    object cdsDepositTypesDEPOSITTYPEID: TStringField
+    object cdsDepositTypesDEPOSITTYPEID: TWideStringField
       FieldName = 'DEPOSITTYPEID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
       Size = 5
     end
-    object cdsDepositTypesDEPOSITTYPE: TStringField
+    object cdsDepositTypesDEPOSITTYPE: TWideStringField
       FieldName = 'DEPOSITTYPE'
       Required = True
       Size = 90
@@ -6938,14 +6944,14 @@ object dmStrat: TdmStrat
     ProviderName = 'dspMetamorphicGrades'
     Left = 526
     Top = 548
-    object cdsMetamorphicGradesGRADEID: TStringField
+    object cdsMetamorphicGradesGRADEID: TWideStringField
       FieldName = 'GRADEID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
       FixedChar = True
       Size = 1
     end
-    object cdsMetamorphicGradesGRADE: TStringField
+    object cdsMetamorphicGradesGRADE: TWideStringField
       FieldName = 'GRADE'
       Required = True
       Size = 30
@@ -6983,12 +6989,12 @@ object dmStrat: TdmStrat
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsOrogeniesOROGENY: TStringField
+    object cdsOrogeniesOROGENY: TWideStringField
       FieldName = 'OROGENY'
       Required = True
       Size = 50
     end
-    object cdsOrogeniesCONTINENTID: TStringField
+    object cdsOrogeniesCONTINENTID: TWideStringField
       FieldName = 'CONTINENTID'
       Required = True
       Size = 3
@@ -7020,14 +7026,14 @@ object dmStrat: TdmStrat
     ProviderName = 'dspDuctilities'
     Left = 198
     Top = 240
-    object cdsDuctilitiesDUCTILITYTYPEID: TStringField
+    object cdsDuctilitiesDUCTILITYTYPEID: TWideStringField
       FieldName = 'DUCTILITYTYPEID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
       FixedChar = True
       Size = 1
     end
-    object cdsDuctilitiesDUCTILITYTYPE: TStringField
+    object cdsDuctilitiesDUCTILITYTYPE: TWideStringField
       FieldName = 'DUCTILITYTYPE'
       Size = 60
     end
@@ -7064,7 +7070,7 @@ object dmStrat: TdmStrat
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsOrogenyTypesDEFORMATIONTYPE: TStringField
+    object cdsOrogenyTypesDEFORMATIONTYPE: TWideStringField
       FieldName = 'DEFORMATIONTYPE'
       Required = True
       Size = 150
@@ -7118,17 +7124,17 @@ object dmStrat: TdmStrat
       FieldName = 'DEPOSITIDINT'
       Required = True
     end
-    object cdsDepositsDEPOSITIDSTR: TStringField
+    object cdsDepositsDEPOSITIDSTR: TWideStringField
       FieldName = 'DEPOSITIDSTR'
       Required = True
       Size = 30
     end
-    object cdsDepositsDEPOSITNAME: TStringField
+    object cdsDepositsDEPOSITNAME: TWideStringField
       FieldName = 'DEPOSITNAME'
       Required = True
       Size = 150
     end
-    object cdsDepositsCOUNTRYID: TStringField
+    object cdsDepositsCOUNTRYID: TWideStringField
       FieldName = 'COUNTRYID'
       Required = True
       Size = 3
@@ -7171,11 +7177,11 @@ object dmStrat: TdmStrat
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsDirectionsDIRECTIONNAME: TStringField
+    object cdsDirectionsDIRECTIONNAME: TWideStringField
       FieldName = 'DIRECTIONNAME'
       Required = True
     end
-    object cdsDirectionsSOURCEFROMNAME: TStringField
+    object cdsDirectionsSOURCEFROMNAME: TWideStringField
       FieldName = 'SOURCEFROMNAME'
       Required = True
     end
@@ -7212,24 +7218,24 @@ object dmStrat: TdmStrat
     ProviderName = 'dspStratRel'
     Left = 794
     Top = 548
-    object cdsStratRelRELATIONSHIPID: TStringField
+    object cdsStratRelRELATIONSHIPID: TWideStringField
       FieldName = 'RELATIONSHIPID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
       Size = 5
     end
-    object cdsStratRelRELPOSID: TStringField
+    object cdsStratRelRELPOSID: TWideStringField
       FieldName = 'RELPOSID'
       Required = True
       FixedChar = True
       Size = 1
     end
-    object cdsStratRelRELATIONSHIP: TStringField
+    object cdsStratRelRELATIONSHIP: TWideStringField
       FieldName = 'RELATIONSHIP'
       Required = True
       Size = 90
     end
-    object cdsStratRelRELATIONSHIPREVID: TStringField
+    object cdsStratRelRELATIONSHIPREVID: TWideStringField
       FieldName = 'RELATIONSHIPREVID'
       Required = True
       Size = 5
@@ -7311,7 +7317,7 @@ object dmStrat: TdmStrat
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object qUnitSedEnvDEPOSITIONENVIRONMENTID: TStringField
+    object qUnitSedEnvDEPOSITIONENVIRONMENTID: TWideStringField
       FieldName = 'DEPOSITIONENVIRONMENTID'
       Required = True
       Size = 1
@@ -7329,7 +7335,7 @@ object dmStrat: TdmStrat
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsUnitSedEnvDEPOSITIONENVIRONMENTID: TStringField
+    object cdsUnitSedEnvDEPOSITIONENVIRONMENTID: TWideStringField
       FieldName = 'DEPOSITIONENVIRONMENTID'
       Required = True
       Size = 1
@@ -7362,13 +7368,13 @@ object dmStrat: TdmStrat
     ProviderName = 'dspSedEnvironments'
     Left = 942
     Top = 548
-    object cdsSedEnvironmentsDEPOSITIONENVIRONMENTID: TStringField
+    object cdsSedEnvironmentsDEPOSITIONENVIRONMENTID: TWideStringField
       FieldName = 'DEPOSITIONENVIRONMENTID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
       Size = 1
     end
-    object cdsSedEnvironmentsDEPOSITIONENVIRONMENT: TStringField
+    object cdsSedEnvironmentsDEPOSITIONENVIRONMENT: TWideStringField
       FieldName = 'DEPOSITIONENVIRONMENT'
     end
   end
@@ -7378,7 +7384,6 @@ object dmStrat: TdmStrat
     Top = 548
   end
   object sqlcStrat: TSQLConnection
-    ConnectionName = 'StratDB_bromo2'
     DriverName = 'DevartFirebird'
     LoginPrompt = False
     Params.Strings = (
@@ -7386,24 +7391,16 @@ object dmStrat: TdmStrat
       'GetDriverFunc=getSQLDriverFirebird'
       'LibraryName=dbexpida41.dll'
       'VendorLib=c:\exe32\fbclient.dll'
-      'DataBase=bromo2.usask.ca:s:\data\firebird\stratdb2021v30.fdb'
+      'DataBase=c:\data\firebird\stratdb2025v50_UTF8.fdb'
       'User_Name=SYSDBA'
       'Password=V0lcano3^'
       'SQLDialect=3'
-      'BlobSize=-1'
-      'ErrorResourceFile='
       'LocaleCode=0000'
       'DevartFirebird TransIsolation=ReadCommitted'
       'ProductName=DevartFirebird'
-      
-        'DriverPackageLoader=TDBXDynalinkDriverLoader,DBXCommonDriver260.' +
-        'bpl'
-      
-        'MetaDataPackageLoader=TDBXDevartInterBaseMetaDataCommandFactory,' +
-        'DbxDevartInterBaseDriver260.bpl'
       'DriverUnit=DbxDevartInterBase'
-      'OptimizedNumerics=false'
-      'CharLength=0')
+      'UseUnicode=true'
+      'Charset=UTF8')
     Left = 24
     Top = 8
   end
@@ -7421,40 +7418,6 @@ object dmStrat: TdmStrat
     SQLConnection = sqlcStrat
     Left = 776
     Top = 212
-    object IntegerField1: TIntegerField
-      FieldName = 'SOURCENUM'
-      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
-      Required = True
-    end
-    object StringField1: TStringField
-      FieldName = 'SOURCESHORT'
-      Required = True
-      Size = 100
-    end
-    object IntegerField2: TSmallintField
-      FieldName = 'SOURCEYEAR'
-      Required = True
-      EditFormat = '####'
-    end
-    object MemoField1: TMemoField
-      FieldName = 'SOURCEDESCRIPTION'
-      BlobType = ftMemo
-      Size = -1
-    end
-    object StringField2: TStringField
-      FieldName = 'CONTINENTID'
-      Required = True
-      Size = 3
-    end
-    object StringField3: TStringField
-      FieldName = 'DOI'
-      Size = 100
-    end
-    object qRefFullWHOFORID: TStringField
-      FieldName = 'WHOFORID'
-      Required = True
-      Size = 5
-    end
   end
   object qRefNew: TSQLQuery
     MaxBlobSize = -1
@@ -7465,12 +7428,12 @@ object dmStrat: TdmStrat
     SQLConnection = sqlcStrat
     Left = 920
     Top = 291
-    object qRefNewSOURCEID: TStringField
+    object qRefNewSOURCEID: TWideStringField
       FieldName = 'SOURCEID'
       Required = True
       Size = 100
     end
-    object qRefNewCONTINENTID: TStringField
+    object qRefNewCONTINENTID: TWideStringField
       FieldName = 'CONTINENTID'
       Required = True
       Size = 3
@@ -7498,13 +7461,13 @@ object dmStrat: TdmStrat
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object qUnitForWHOFORID: TStringField
+    object qUnitForWHOFORID: TWideStringField
       FieldName = 'WHOFORID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
       Size = 5
     end
-    object qUnitForWHOFOR: TStringField
+    object qUnitForWHOFOR: TWideStringField
       FieldName = 'WHOFOR'
       ProviderFlags = []
       ReadOnly = True
@@ -7523,13 +7486,13 @@ object dmStrat: TdmStrat
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsUnitForWHOFORID: TStringField
+    object cdsUnitForWHOFORID: TWideStringField
       FieldName = 'WHOFORID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
       Size = 5
     end
-    object cdsUnitForWHOFOR: TStringField
+    object cdsUnitForWHOFOR: TWideStringField
       FieldName = 'WHOFOR'
       ProviderFlags = []
       ReadOnly = True
@@ -7609,13 +7572,13 @@ object dmStrat: TdmStrat
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object qDomainForWHOFORID: TStringField
+    object qDomainForWHOFORID: TWideStringField
       FieldName = 'WHOFORID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
       Size = 5
     end
-    object qDomainForWHOFOR: TStringField
+    object qDomainForWHOFOR: TWideStringField
       FieldName = 'WHOFOR'
       ProviderFlags = []
       ReadOnly = True
@@ -7634,13 +7597,13 @@ object dmStrat: TdmStrat
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsDomainForWHOFORID: TStringField
+    object cdsDomainForWHOFORID: TWideStringField
       FieldName = 'WHOFORID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
       Size = 5
     end
-    object cdsDomainForWHOFOR: TStringField
+    object cdsDomainForWHOFOR: TWideStringField
       FieldName = 'WHOFOR'
       ProviderFlags = []
       ReadOnly = True
@@ -7687,7 +7650,7 @@ object dmStrat: TdmStrat
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object qDomainLIPCONTINENTID: TStringField
+    object qDomainLIPCONTINENTID: TWideStringField
       FieldName = 'CONTINENTID'
       Required = True
       Size = 3
@@ -7700,12 +7663,12 @@ object dmStrat: TdmStrat
       FieldName = 'MAXPLOTAGE'
       Required = True
     end
-    object qDomainLIPLIPNAME: TStringField
+    object qDomainLIPLIPNAME: TWideStringField
       FieldName = 'LIPNAME'
       Required = True
       Size = 50
     end
-    object qDomainLIPCONTOCEANID: TStringField
+    object qDomainLIPCONTOCEANID: TWideStringField
       FieldName = 'CONTOCEANID'
       Required = True
       FixedChar = True
@@ -7715,7 +7678,7 @@ object dmStrat: TdmStrat
       FieldName = 'LIPSIZEID'
       Required = True
     end
-    object qDomainLIPLIPRATINGID: TStringField
+    object qDomainLIPLIPRATINGID: TWideStringField
       FieldName = 'LIPRATINGID'
       Required = True
       FixedChar = True
@@ -7752,7 +7715,7 @@ object dmStrat: TdmStrat
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsDomainLIPCONTINENTID: TStringField
+    object cdsDomainLIPCONTINENTID: TWideStringField
       FieldName = 'CONTINENTID'
       Required = True
       Size = 3
@@ -7767,12 +7730,12 @@ object dmStrat: TdmStrat
       Required = True
       DisplayFormat = '###0.00'
     end
-    object cdsDomainLIPLIPNAME: TStringField
+    object cdsDomainLIPLIPNAME: TWideStringField
       FieldName = 'LIPNAME'
       Required = True
       Size = 50
     end
-    object cdsDomainLIPCONTOCEANID: TStringField
+    object cdsDomainLIPCONTOCEANID: TWideStringField
       FieldName = 'CONTOCEANID'
       Required = True
       FixedChar = True
@@ -7782,7 +7745,7 @@ object dmStrat: TdmStrat
       FieldName = 'LIPSIZEID'
       Required = True
     end
-    object cdsDomainLIPLIPRATINGID: TStringField
+    object cdsDomainLIPLIPRATINGID: TWideStringField
       FieldName = 'LIPRATINGID'
       Required = True
       FixedChar = True
@@ -7935,7 +7898,7 @@ object dmStrat: TdmStrat
     SQLConnection = sqlcStrat
     Left = 584
     Top = 600
-    object qUserUnitsUSERID: TStringField
+    object qUserUnitsUSERID: TWideStringField
       FieldName = 'USERID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
@@ -7949,7 +7912,7 @@ object dmStrat: TdmStrat
       FieldName = 'UNITAGE'
       Required = True
     end
-    object qUserUnitsCOUNTRYID: TStringField
+    object qUserUnitsCOUNTRYID: TWideStringField
       FieldName = 'COUNTRYID'
       Required = True
       Size = 3
@@ -7958,12 +7921,12 @@ object dmStrat: TdmStrat
       FieldName = 'DVUNITID'
       Required = True
     end
-    object qUserUnitsSTRATDBUNITNAME: TStringField
+    object qUserUnitsSTRATDBUNITNAME: TWideStringField
       FieldName = 'STRATDBUNITNAME'
       Required = True
       Size = 50
     end
-    object qUserUnitsSTRATDBUNITRANK: TStringField
+    object qUserUnitsSTRATDBUNITRANK: TWideStringField
       FieldName = 'STRATDBUNITRANK'
       Required = True
     end
@@ -8005,7 +7968,7 @@ object dmStrat: TdmStrat
     ProviderName = 'dspUserUnits'
     Left = 648
     Top = 600
-    object cdsUserUnitsUSERID: TStringField
+    object cdsUserUnitsUSERID: TWideStringField
       FieldName = 'USERID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
@@ -8020,7 +7983,7 @@ object dmStrat: TdmStrat
       Required = True
       DisplayFormat = '###0.000'
     end
-    object cdsUserUnitsCOUNTRYID: TStringField
+    object cdsUserUnitsCOUNTRYID: TWideStringField
       FieldName = 'COUNTRYID'
       Required = True
       Size = 3
@@ -8029,12 +7992,12 @@ object dmStrat: TdmStrat
       FieldName = 'DVUNITID'
       Required = True
     end
-    object cdsUserUnitsSTRATDBUNITNAME: TStringField
+    object cdsUserUnitsSTRATDBUNITNAME: TWideStringField
       FieldName = 'STRATDBUNITNAME'
       Required = True
       Size = 50
     end
-    object cdsUserUnitsSTRATDBUNITRANK: TStringField
+    object cdsUserUnitsSTRATDBUNITRANK: TWideStringField
       FieldName = 'STRATDBUNITRANK'
       Required = True
     end
@@ -8080,13 +8043,13 @@ object dmStrat: TdmStrat
     ProviderName = 'dspUnitRanks'
     Left = 80
     Top = 676
-    object cdsUnitRanksRANKID: TStringField
+    object cdsUnitRanksRANKID: TWideStringField
       FieldName = 'RANKID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
       Size = 5
     end
-    object cdsUnitRanksUNITRANK: TStringField
+    object cdsUnitRanksUNITRANK: TWideStringField
       FieldName = 'UNITRANK'
       Required = True
     end
@@ -8145,12 +8108,12 @@ object dmStrat: TdmStrat
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsThisUnitCOUNTRYID: TStringField
+    object cdsThisUnitCOUNTRYID: TWideStringField
       FieldName = 'COUNTRYID'
       Required = True
       Size = 3
     end
-    object cdsThisUnitUNITNAME: TStringField
+    object cdsThisUnitUNITNAME: TWideStringField
       FieldName = 'UNITNAME'
       Required = True
       Size = 50
@@ -8159,7 +8122,7 @@ object dmStrat: TdmStrat
       FieldName = 'PARENTID'
       Required = True
     end
-    object cdsThisUnitRANKID: TStringField
+    object cdsThisUnitRANKID: TWideStringField
       FieldName = 'RANKID'
       Required = True
       Size = 5
@@ -8176,12 +8139,12 @@ object dmStrat: TdmStrat
       FieldName = 'MAXAGE'
       Required = True
     end
-    object cdsThisUnitAGEUNITS: TStringField
+    object cdsThisUnitAGEUNITS: TWideStringField
       FieldName = 'AGEUNITS'
       Required = True
       Size = 2
     end
-    object cdsThisUnitUNITRANK: TStringField
+    object cdsThisUnitUNITRANK: TWideStringField
       FieldName = 'UNITRANK'
       Required = True
     end
@@ -8228,7 +8191,7 @@ object dmStrat: TdmStrat
       FieldName = 'UNITID'
       Required = True
     end
-    object cdsThisUnitAgeCOUNTRYID: TStringField
+    object cdsThisUnitAgeCOUNTRYID: TWideStringField
       FieldName = 'COUNTRYID'
       Required = True
       Size = 3
@@ -8241,7 +8204,7 @@ object dmStrat: TdmStrat
       FieldName = 'MAXAGE'
       Required = True
     end
-    object cdsThisUnitAgeAGEUNITS: TStringField
+    object cdsThisUnitAgeAGEUNITS: TWideStringField
       FieldName = 'AGEUNITS'
       Required = True
       Size = 2
@@ -8286,11 +8249,11 @@ object dmStrat: TdmStrat
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsUserProjectsUSERID: TStringField
+    object cdsUserProjectsUSERID: TWideStringField
       FieldName = 'USERID'
       Required = True
     end
-    object cdsUserProjectsUSERPROJECTNAME: TStringField
+    object cdsUserProjectsUSERPROJECTNAME: TWideStringField
       FieldName = 'USERPROJECTNAME'
       Required = True
       Size = 50
@@ -8316,5 +8279,31 @@ object dmStrat: TdmStrat
     SQLConnection = sqlcStrat
     Left = 56
     Top = 8
+  end
+  object SQLConnection1: TSQLConnection
+    DriverName = 'DevartFirebird'
+    Params.Strings = (
+      'VendorLibOsx=libfbclient.dylib'
+      'GetDriverFunc=getSQLDriverFirebird'
+      'LibraryName=dbexpida41.dll'
+      'VendorLib=c:\exe32\fbclient.dll'
+      'DataBase=DataBase Name'
+      'User_Name=user'
+      'Password=password'
+      'SQLDialect=3'
+      'BlobSize=-1'
+      'ErrorResourceFile='
+      'LocaleCode=0000'
+      'DevartFirebird TransIsolation=ReadCommitted'
+      'ProductName=DevartFirebird'
+      
+        'DriverPackageLoader=TDBXDynalinkDriverLoader,DBXCommonDriver290.' +
+        'bpl'
+      
+        'MetaDataPackageLoader=TDBXDevartInterBaseMetaDataCommandFactory,' +
+        'DbxDevartInterBaseDriver290.bpl'
+      'DriverUnit=DbxDevartInterBase')
+    Left = 1016
+    Top = 744
   end
 end

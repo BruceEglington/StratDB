@@ -1,6 +1,5 @@
 object dmLIP: TdmLIP
-  OldCreateOrder = False
-  Height = 591
+  Height = 654
   Width = 1290
   object qLIPSizes: TSQLQuery
     MaxBlobSize = -1
@@ -28,9 +27,10 @@ object dmLIP: TdmLIP
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsLIPSizesLIPSIZEDESCRIPTION: TStringField
+    object cdsLIPSizesLIPSIZEDESCRIPTION: TWideStringField
       FieldName = 'LIPSIZEDESCRIPTION'
       Required = True
+      FixedChar = True
       Size = 50
     end
   end
@@ -54,16 +54,16 @@ object dmLIP: TdmLIP
     ProviderName = 'dspLIPRatings'
     Left = 84
     Top = 104
-    object cdsLIPRatingsLIPRATINGID: TStringField
+    object cdsLIPRatingsLIPRATINGID: TWideStringField
       FieldName = 'LIPRATINGID'
-      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
       FixedChar = True
       Size = 1
     end
-    object cdsLIPRatingsLIPRATINGDESCRIPTION: TStringField
+    object cdsLIPRatingsLIPRATINGDESCRIPTION: TWideStringField
       FieldName = 'LIPRATINGDESCRIPTION'
       Required = True
+      FixedChar = True
       Size = 30
     end
   end
@@ -92,9 +92,10 @@ object dmLIP: TdmLIP
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsLIPFormsLIPFORMTYPE: TStringField
+    object cdsLIPFormsLIPFORMTYPE: TWideStringField
       FieldName = 'LIPFORMTYPE'
       Required = True
+      FixedChar = True
       Size = 50
     end
   end
@@ -114,23 +115,10 @@ object dmLIP: TdmLIP
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsRefFullSOURCEID: TStringField
-      DisplayLabel = 'Reference ID'
-      FieldName = 'SOURCEID'
-      Required = True
-      Size = 100
-    end
-    object cdsRefFullSOURCEDES: TMemoField
+    object cdsRefFullSOURCEDES: TBlobField
       DisplayLabel = 'Reference'
       FieldName = 'SOURCEDES'
-      BlobType = ftMemo
       Size = 1
-    end
-    object cdsRefFullCONTINENTID: TStringField
-      DisplayLabel = 'Continent ID'
-      FieldName = 'CONTINENTID'
-      Required = True
-      Size = 3
     end
   end
   object dsLIPSizes: TDataSource
@@ -191,25 +179,26 @@ object dmLIP: TdmLIP
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsLIPsLIPNAME: TStringField
-      FieldName = 'LIPNAME'
-      Required = True
-      Size = 150
-    end
     object cdsLIPsLIPPARENTID: TIntegerField
       FieldName = 'LIPPARENTID'
       Required = True
     end
-    object cdsLIPsCONTINENTID: TStringField
+    object cdsLIPsLIPNAME: TWideStringField
+      FieldName = 'LIPNAME'
+      Required = True
+      FixedChar = True
+      Size = 50
+    end
+    object cdsLIPsLIPNAMELIPID: TWideStringField
+      FieldName = 'LIPNAMELIPID'
+      FixedChar = True
+      Size = 63
+    end
+    object cdsLIPsCONTINENTID: TWideStringField
       FieldName = 'CONTINENTID'
       Required = True
+      FixedChar = True
       Size = 3
-    end
-    object cdsLIPsLIPNAMELIPID: TStringField
-      FieldName = 'LIPNAMELIPID'
-      ReadOnly = True
-      Required = True
-      Size = 189
     end
   end
   object dsLIPs: TDataSource
@@ -252,24 +241,24 @@ object dmLIP: TdmLIP
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsValidFullVALIDSTATUSID: TStringField
-      FieldName = 'VALIDSTATUSID'
-      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
-      Required = True
-      Size = 5
-    end
     object cdsValidFullDATEDONE: TSQLTimeStampField
       FieldName = 'DATEDONE'
       Required = True
       DisplayFormat = 'ddddd'
     end
-    object cdsValidFullDONEBY: TStringField
+    object cdsValidFullCOMMENTS: TBlobField
+      FieldName = 'COMMENTS'
+    end
+    object cdsValidFullVALIDSTATUSID: TWideStringField
+      FieldName = 'VALIDSTATUSID'
+      Required = True
+      FixedChar = True
+      Size = 5
+    end
+    object cdsValidFullDONEBY: TWideStringField
       FieldName = 'DONEBY'
       Required = True
-    end
-    object cdsValidFullCOMMENTS: TMemoField
-      FieldName = 'COMMENTS'
-      BlobType = ftMemo
+      FixedChar = True
     end
   end
   object dsValidFull: TDataSource
@@ -440,25 +429,9 @@ object dmLIP: TdmLIP
       FieldName = 'LIPID'
       Required = True
     end
-    object cdsRep2LIPNAME: TStringField
-      FieldName = 'LIPNAME'
-      Required = True
-      Size = 50
-    end
-    object cdsRep2CONTOCEANID: TStringField
-      FieldName = 'CONTOCEANID'
-      Required = True
-      FixedChar = True
-      Size = 1
-    end
     object cdsRep2LIPSIZEID: TIntegerField
       FieldName = 'LIPSIZEID'
       Required = True
-    end
-    object cdsRep2CONTINENTID: TStringField
-      FieldName = 'CONTINENTID'
-      Required = True
-      Size = 3
     end
     object cdsRep2SPOTLATITUDE: TFloatField
       FieldName = 'SPOTLATITUDE'
@@ -486,42 +459,47 @@ object dmLIP: TdmLIP
     object cdsRep2VOLUMEESTIMATE: TFloatField
       FieldName = 'VOLUMEESTIMATE'
     end
-    object cdsRep2PLOTBARCODE: TStringField
-      FieldName = 'PLOTBARCODE'
-      Required = True
-      FixedChar = True
-      Size = 1
-    end
     object cdsRep2BARCODEAGE: TFloatField
       FieldName = 'BARCODEAGE'
       Required = True
     end
-    object cdsRep2LIPHEADING: TStringField
-      FieldName = 'LIPHEADING'
-      Size = 25
-    end
-    object cdsRep2LIPSIZEDESCRIPTION: TStringField
-      FieldName = 'LIPSIZEDESCRIPTION'
-      Required = True
-      Size = 50
-    end
-    object cdsRep2LIPRATINGDESCRIPTION: TStringField
-      FieldName = 'LIPRATINGDESCRIPTION'
-      Required = True
-      Size = 30
-    end
-    object cdsRep2DOMINANTCOMPOSITION: TStringField
-      FieldName = 'DOMINANTCOMPOSITION'
-      Required = True
-      Size = 50
-    end
-    object cdsRep2AGECONSTRAINTLEVEL: TStringField
-      FieldName = 'AGECONSTRAINTLEVEL'
-      Required = True
-      Size = 35
-    end
     object cdsRep2qRep3: TDataSetField
       FieldName = 'qRep3'
+    end
+    object cdsRep2LIPNAME: TWideStringField
+      FieldName = 'LIPNAME'
+      Required = True
+      FixedChar = True
+      Size = 50
+    end
+    object cdsRep2LIPHEADING: TWideStringField
+      FieldName = 'LIPHEADING'
+      FixedChar = True
+      Size = 25
+    end
+    object cdsRep2LIPSIZEDESCRIPTION: TWideStringField
+      FieldName = 'LIPSIZEDESCRIPTION'
+      Required = True
+      FixedChar = True
+      Size = 50
+    end
+    object cdsRep2LIPRATINGDESCRIPTION: TWideStringField
+      FieldName = 'LIPRATINGDESCRIPTION'
+      Required = True
+      FixedChar = True
+      Size = 30
+    end
+    object cdsRep2DOMINANTCOMPOSITION: TWideStringField
+      FieldName = 'DOMINANTCOMPOSITION'
+      Required = True
+      FixedChar = True
+      Size = 50
+    end
+    object cdsRep2AGECONSTRAINTLEVEL: TWideStringField
+      FieldName = 'AGECONSTRAINTLEVEL'
+      Required = True
+      FixedChar = True
+      Size = 35
     end
   end
   object cdsRep3: TClientDataSet
@@ -534,25 +512,9 @@ object dmLIP: TdmLIP
       FieldName = 'LIPID'
       Required = True
     end
-    object cdsRep3LIPNAME: TStringField
-      FieldName = 'LIPNAME'
-      Required = True
-      Size = 50
-    end
-    object cdsRep3CONTOCEANID: TStringField
-      FieldName = 'CONTOCEANID'
-      Required = True
-      FixedChar = True
-      Size = 1
-    end
     object cdsRep3LIPSIZEID: TIntegerField
       FieldName = 'LIPSIZEID'
       Required = True
-    end
-    object cdsRep3CONTINENTID: TStringField
-      FieldName = 'CONTINENTID'
-      Required = True
-      Size = 3
     end
     object cdsRep3SPOTLATITUDE: TFloatField
       FieldName = 'SPOTLATITUDE'
@@ -580,42 +542,47 @@ object dmLIP: TdmLIP
     object cdsRep3VOLUMEESTIMATE: TFloatField
       FieldName = 'VOLUMEESTIMATE'
     end
-    object cdsRep3PLOTBARCODE: TStringField
-      FieldName = 'PLOTBARCODE'
-      Required = True
-      FixedChar = True
-      Size = 1
-    end
     object cdsRep3BARCODEAGE: TFloatField
       FieldName = 'BARCODEAGE'
       Required = True
     end
-    object cdsRep3LIPHEADING: TStringField
-      FieldName = 'LIPHEADING'
-      Size = 25
-    end
-    object cdsRep3LIPSIZEDESCRIPTION: TStringField
-      FieldName = 'LIPSIZEDESCRIPTION'
-      Required = True
-      Size = 50
-    end
-    object cdsRep3LIPRATINGDESCRIPTION: TStringField
-      FieldName = 'LIPRATINGDESCRIPTION'
-      Required = True
-      Size = 30
-    end
-    object cdsRep3DOMINANTCOMPOSITION: TStringField
-      FieldName = 'DOMINANTCOMPOSITION'
-      Required = True
-      Size = 50
-    end
-    object cdsRep3AGECONSTRAINTLEVEL: TStringField
-      FieldName = 'AGECONSTRAINTLEVEL'
-      Required = True
-      Size = 35
-    end
     object cdsRep3qRep4: TDataSetField
       FieldName = 'qRep4'
+    end
+    object cdsRep3LIPNAME: TWideStringField
+      FieldName = 'LIPNAME'
+      Required = True
+      FixedChar = True
+      Size = 50
+    end
+    object cdsRep3LIPHEADING: TWideStringField
+      FieldName = 'LIPHEADING'
+      FixedChar = True
+      Size = 25
+    end
+    object cdsRep3LIPSIZEDESCRIPTION: TWideStringField
+      FieldName = 'LIPSIZEDESCRIPTION'
+      Required = True
+      FixedChar = True
+      Size = 50
+    end
+    object cdsRep3LIPRATINGDESCRIPTION: TWideStringField
+      FieldName = 'LIPRATINGDESCRIPTION'
+      Required = True
+      FixedChar = True
+      Size = 30
+    end
+    object cdsRep3DOMINANTCOMPOSITION: TWideStringField
+      FieldName = 'DOMINANTCOMPOSITION'
+      Required = True
+      FixedChar = True
+      Size = 50
+    end
+    object cdsRep3AGECONSTRAINTLEVEL: TWideStringField
+      FieldName = 'AGECONSTRAINTLEVEL'
+      Required = True
+      FixedChar = True
+      Size = 35
     end
   end
   object cdsRep4: TClientDataSet
@@ -628,25 +595,9 @@ object dmLIP: TdmLIP
       FieldName = 'LIPID'
       Required = True
     end
-    object cdsRep4LIPNAME: TStringField
-      FieldName = 'LIPNAME'
-      Required = True
-      Size = 50
-    end
-    object cdsRep4CONTOCEANID: TStringField
-      FieldName = 'CONTOCEANID'
-      Required = True
-      FixedChar = True
-      Size = 1
-    end
     object cdsRep4LIPSIZEID: TIntegerField
       FieldName = 'LIPSIZEID'
       Required = True
-    end
-    object cdsRep4CONTINENTID: TStringField
-      FieldName = 'CONTINENTID'
-      Required = True
-      Size = 3
     end
     object cdsRep4SPOTLATITUDE: TFloatField
       FieldName = 'SPOTLATITUDE'
@@ -674,38 +625,43 @@ object dmLIP: TdmLIP
     object cdsRep4VOLUMEESTIMATE: TFloatField
       FieldName = 'VOLUMEESTIMATE'
     end
-    object cdsRep4PLOTBARCODE: TStringField
-      FieldName = 'PLOTBARCODE'
-      Required = True
-      FixedChar = True
-      Size = 1
-    end
     object cdsRep4BARCODEAGE: TFloatField
       FieldName = 'BARCODEAGE'
       Required = True
     end
-    object cdsRep4LIPHEADING: TStringField
+    object cdsRep4LIPNAME: TWideStringField
+      FieldName = 'LIPNAME'
+      Required = True
+      FixedChar = True
+      Size = 50
+    end
+    object cdsRep4LIPHEADING: TWideStringField
       FieldName = 'LIPHEADING'
+      FixedChar = True
       Size = 25
     end
-    object cdsRep4LIPSIZEDESCRIPTION: TStringField
+    object cdsRep4LIPSIZEDESCRIPTION: TWideStringField
       FieldName = 'LIPSIZEDESCRIPTION'
       Required = True
+      FixedChar = True
       Size = 50
     end
-    object cdsRep4LIPRATINGDESCRIPTION: TStringField
+    object cdsRep4LIPRATINGDESCRIPTION: TWideStringField
       FieldName = 'LIPRATINGDESCRIPTION'
       Required = True
+      FixedChar = True
       Size = 30
     end
-    object cdsRep4DOMINANTCOMPOSITION: TStringField
+    object cdsRep4DOMINANTCOMPOSITION: TWideStringField
       FieldName = 'DOMINANTCOMPOSITION'
       Required = True
+      FixedChar = True
       Size = 50
     end
-    object cdsRep4AGECONSTRAINTLEVEL: TStringField
+    object cdsRep4AGECONSTRAINTLEVEL: TWideStringField
       FieldName = 'AGECONSTRAINTLEVEL'
       Required = True
+      FixedChar = True
       Size = 35
     end
   end
@@ -810,14 +766,15 @@ object dmLIP: TdmLIP
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsLIPParentLIPNAME: TStringField
-      FieldName = 'LIPNAME'
-      ProviderFlags = []
-      Size = 50
-    end
     object cdsLIPParentLIPPARENTID: TIntegerField
       FieldName = 'LIPPARENTID'
       ProviderFlags = []
+    end
+    object cdsLIPParentLIPNAME: TWideStringField
+      FieldName = 'LIPNAME'
+      Required = True
+      FixedChar = True
+      Size = 50
     end
   end
   object dsLIPParent: TDataSource
@@ -863,11 +820,6 @@ object dmLIP: TdmLIP
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsSubLIPsLIPNAME: TStringField
-      FieldName = 'LIPNAME'
-      ProviderFlags = []
-      Size = 50
-    end
     object cdsSubLIPsLIPPARENTID: TIntegerField
       FieldName = 'LIPPARENTID'
       ProviderFlags = []
@@ -881,6 +833,12 @@ object dmLIP: TdmLIP
       FieldName = 'MAXPLOTAGE'
       Required = True
       DisplayFormat = '###0.00'
+    end
+    object cdsSubLIPsLIPNAME: TWideStringField
+      FieldName = 'LIPNAME'
+      Required = True
+      FixedChar = True
+      Size = 50
     end
   end
   object dsSubLIPs: TDataSource
@@ -920,25 +878,9 @@ object dmLIP: TdmLIP
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object LIPQueryLIPNAME: TStringField
-      FieldName = 'LIPNAME'
-      Required = True
-      Size = 150
-    end
-    object LIPQueryLIPNAMELIPID: TStringField
-      FieldName = 'LIPNAMELIPID'
-      ProviderFlags = []
-      ReadOnly = True
-      Size = 189
-    end
     object LIPQueryLIPSIZEID: TIntegerField
       FieldName = 'LIPSIZEID'
       Required = True
-    end
-    object LIPQueryCONTINENTID: TStringField
-      FieldName = 'CONTINENTID'
-      Required = True
-      Size = 3
     end
     object LIPQuerySPOTLATITUDE: TFloatField
       FieldName = 'SPOTLATITUDE'
@@ -961,27 +903,9 @@ object dmLIP: TdmLIP
       FieldName = 'LIPPARENTID'
       Required = True
     end
-    object LIPQueryCONTOCEANID: TStringField
-      FieldName = 'CONTOCEANID'
-      Required = True
-      FixedChar = True
-      Size = 1
-    end
     object LIPQueryBARCODEAGE: TFloatField
       FieldName = 'BARCODEAGE'
       Required = True
-    end
-    object LIPQueryPLOTBARCODE: TStringField
-      FieldName = 'PLOTBARCODE'
-      Required = True
-      FixedChar = True
-      Size = 1
-    end
-    object LIPQueryLIPSIZEDESCRIPTION: TStringField
-      FieldName = 'LIPSIZEDESCRIPTION'
-      ProviderFlags = []
-      ReadOnly = True
-      Size = 50
     end
   end
   object dspLIPQuery: TDataSetProvider
@@ -999,17 +923,6 @@ object dmLIP: TdmLIP
       FieldName = 'LIPID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
-    end
-    object cdsLIPQueryLIPNAME: TStringField
-      FieldName = 'LIPNAME'
-      Required = True
-      Size = 150
-    end
-    object cdsLIPQueryCONTOCEANID: TStringField
-      FieldName = 'CONTOCEANID'
-      Required = True
-      FixedChar = True
-      Size = 1
     end
     object cdsLIPQueryLIPSIZEID: TIntegerField
       FieldName = 'LIPSIZEID'
@@ -1035,37 +948,14 @@ object dmLIP: TdmLIP
       Required = True
       DisplayFormat = '###0.00'
     end
-    object cdsLIPQueryLIPSIZEDESCRIPTION: TStringField
-      FieldName = 'LIPSIZEDESCRIPTION'
-      ProviderFlags = []
-      ReadOnly = True
-      Size = 50
-    end
     object cdsLIPQueryLIPPARENTID: TIntegerField
       FieldName = 'LIPPARENTID'
       Required = True
-    end
-    object cdsLIPQueryCONTINENTID: TStringField
-      FieldName = 'CONTINENTID'
-      Required = True
-      Size = 3
-    end
-    object cdsLIPQueryLIPNAMELIPID: TStringField
-      FieldName = 'LIPNAMELIPID'
-      ProviderFlags = []
-      ReadOnly = True
-      Size = 189
     end
     object cdsLIPQueryBARCODEAGE: TFloatField
       FieldName = 'BARCODEAGE'
       Required = True
       DisplayFormat = '###0.00'
-    end
-    object cdsLIPQueryPLOTBARCODE: TStringField
-      FieldName = 'PLOTBARCODE'
-      Required = True
-      FixedChar = True
-      Size = 1
     end
   end
   object dsLIPQuery: TDataSource
@@ -1092,26 +982,6 @@ object dmLIP: TdmLIP
     SQLConnection = sqlcLIP
     Left = 444
     Top = 217
-    object qLIPFormLIPID: TIntegerField
-      FieldName = 'LIPID'
-      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
-      Required = True
-    end
-    object qLIPFormLIPFORMORDER: TIntegerField
-      FieldName = 'LIPFORMORDER'
-      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
-      Required = True
-    end
-    object qLIPFormLIPFORMID: TIntegerField
-      FieldName = 'LIPFORMID'
-      Required = True
-    end
-    object qLIPFormLIPFORMTYPE: TStringField
-      FieldName = 'LIPFORMTYPE'
-      ProviderFlags = []
-      ReadOnly = True
-      Size = 50
-    end
   end
   object cdsLIPForm: TClientDataSet
     Aggregates = <>
@@ -1133,10 +1003,10 @@ object dmLIP: TdmLIP
       FieldName = 'LIPFORMID'
       Required = True
     end
-    object cdsLIPFormLIPFORMTYPE: TStringField
+    object cdsLIPFormLIPFORMTYPE: TWideStringField
       FieldName = 'LIPFORMTYPE'
-      ProviderFlags = []
-      ReadOnly = True
+      Required = True
+      FixedChar = True
       Size = 50
     end
   end
@@ -1162,15 +1032,6 @@ object dmLIP: TdmLIP
     SQLConnection = sqlcLIP
     Left = 444
     Top = 265
-    object qLIPCompositionLIPID: TIntegerField
-      FieldName = 'LIPID'
-      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
-      Required = True
-    end
-    object qLIPCompositionCOMPOSITIONID: TIntegerField
-      FieldName = 'COMPOSITIONID'
-      Required = True
-    end
   end
   object cdsLIPComposition: TClientDataSet
     Aggregates = <>
@@ -1250,35 +1111,6 @@ object dmLIP: TdmLIP
     SQLConnection = sqlcLIP
     Left = 440
     Top = 313
-    object qLIPValidLIPID: TIntegerField
-      FieldName = 'LIPID'
-      Required = True
-    end
-    object qLIPValidVALIDSTATUSID: TStringField
-      FieldName = 'VALIDSTATUSID'
-      Required = True
-      Size = 5
-    end
-    object qLIPValidDATEDONE: TSQLTimeStampField
-      FieldName = 'DATEDONE'
-      Required = True
-    end
-    object qLIPValidDONEBY: TStringField
-      FieldName = 'DONEBY'
-      Required = True
-    end
-    object qLIPValidVALIDSTATUSID_1: TStringField
-      FieldName = 'VALIDSTATUSID_1'
-      ProviderFlags = []
-      ReadOnly = True
-      Size = 5
-    end
-    object qLIPValidVALIDATIONSTATUS: TStringField
-      FieldName = 'VALIDATIONSTATUS'
-      ProviderFlags = []
-      ReadOnly = True
-      Size = 30
-    end
   end
   object cdsLIPValid: TClientDataSet
     Aggregates = <>
@@ -1291,30 +1123,25 @@ object dmLIP: TdmLIP
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsLIPValidVALIDSTATUSID: TStringField
-      FieldName = 'VALIDSTATUSID'
-      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
-      Required = True
-      Size = 5
-    end
     object cdsLIPValidDATEDONE: TSQLTimeStampField
       FieldName = 'DATEDONE'
       Required = True
     end
-    object cdsLIPValidDONEBY: TStringField
-      FieldName = 'DONEBY'
+    object cdsLIPValidVALIDSTATUSID: TWideStringField
+      FieldName = 'VALIDSTATUSID'
       Required = True
-    end
-    object cdsLIPValidVALIDSTATUSID_1: TStringField
-      FieldName = 'VALIDSTATUSID_1'
-      ProviderFlags = []
-      ReadOnly = True
+      FixedChar = True
       Size = 5
     end
-    object cdsLIPValidVALIDATIONSTATUS: TStringField
+    object cdsLIPValidDONEBY: TWideStringField
+      FieldName = 'DONEBY'
+      Required = True
+      FixedChar = True
+    end
+    object cdsLIPValidVALIDATIONSTATUS: TWideStringField
       FieldName = 'VALIDATIONSTATUS'
-      ProviderFlags = []
-      ReadOnly = True
+      Required = True
+      FixedChar = True
       Size = 30
     end
   end
@@ -1353,43 +1180,6 @@ object dmLIP: TdmLIP
     SQLConnection = sqlcLIP
     Left = 440
     Top = 357
-    object qLIPUnitsLIPID: TIntegerField
-      FieldName = 'LIPID'
-      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
-      Required = True
-    end
-    object qLIPUnitsUNITID: TIntegerField
-      FieldName = 'UNITID'
-      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
-      Required = True
-    end
-    object qLIPUnitsCOUNTRYID: TStringField
-      FieldName = 'COUNTRYID'
-      ProviderFlags = []
-      ReadOnly = True
-      Size = 3
-    end
-    object qLIPUnitsUNITNAME: TStringField
-      FieldName = 'UNITNAME'
-      ProviderFlags = []
-      ReadOnly = True
-      Size = 50
-    end
-    object qLIPUnitsRANKID: TStringField
-      FieldName = 'RANKID'
-      ProviderFlags = []
-      ReadOnly = True
-      Size = 5
-    end
-    object qLIPUnitsAGEYEARS: TFloatField
-      FieldName = 'AGEYEARS'
-      Required = True
-    end
-    object qLIPUnitsUNITRANK: TStringField
-      FieldName = 'UNITRANK'
-      ProviderFlags = []
-      ReadOnly = True
-    end
   end
   object cdsLIPUnits: TClientDataSet
     Aggregates = <>
@@ -1407,33 +1197,33 @@ object dmLIP: TdmLIP
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsLIPUnitsCOUNTRYID: TStringField
-      FieldName = 'COUNTRYID'
-      ProviderFlags = []
-      ReadOnly = True
-      Size = 3
-    end
-    object cdsLIPUnitsUNITNAME: TStringField
-      FieldName = 'UNITNAME'
-      ProviderFlags = []
-      ReadOnly = True
-      Size = 50
-    end
-    object cdsLIPUnitsRANKID: TStringField
-      FieldName = 'RANKID'
-      ProviderFlags = []
-      ReadOnly = True
-      Size = 5
-    end
     object cdsLIPUnitsAGEYEARS: TFloatField
       FieldName = 'AGEYEARS'
       Required = True
       DisplayFormat = '########0'
     end
-    object cdsLIPUnitsUNITRANK: TStringField
+    object cdsLIPUnitsCOUNTRYID: TWideStringField
+      FieldName = 'COUNTRYID'
+      Required = True
+      FixedChar = True
+      Size = 3
+    end
+    object cdsLIPUnitsUNITNAME: TWideStringField
+      FieldName = 'UNITNAME'
+      Required = True
+      FixedChar = True
+      Size = 50
+    end
+    object cdsLIPUnitsRANKID: TWideStringField
+      FieldName = 'RANKID'
+      Required = True
+      FixedChar = True
+      Size = 5
+    end
+    object cdsLIPUnitsUNITRANK: TWideStringField
       FieldName = 'UNITRANK'
-      ProviderFlags = []
-      ReadOnly = True
+      Required = True
+      FixedChar = True
     end
   end
   object dsLIPUnits: TDataSource
@@ -1462,32 +1252,6 @@ object dmLIP: TdmLIP
     SQLConnection = sqlcLIP
     Left = 440
     Top = 402
-    object qLIPRefsLIPID: TIntegerField
-      FieldName = 'LIPID'
-      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
-      Required = True
-    end
-    object qLIPRefsSOURCENUM: TIntegerField
-      FieldName = 'SOURCENUM'
-      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
-      Required = True
-    end
-    object qLIPRefsSOURCENUM_1: TIntegerField
-      FieldName = 'SOURCENUM_1'
-      ProviderFlags = []
-      ReadOnly = True
-    end
-    object qLIPRefsSOURCESHORT: TStringField
-      FieldName = 'SOURCESHORT'
-      ProviderFlags = []
-      ReadOnly = True
-      Size = 100
-    end
-    object qLIPRefsSOURCEYEAR: TIntegerField
-      FieldName = 'SOURCEYEAR'
-      ProviderFlags = []
-      ReadOnly = True
-    end
   end
   object cdsLIPRefs: TClientDataSet
     Aggregates = <>
@@ -1505,21 +1269,16 @@ object dmLIP: TdmLIP
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsLIPRefsSOURCENUM_1: TIntegerField
-      FieldName = 'SOURCENUM_1'
-      ProviderFlags = []
-      ReadOnly = True
-    end
-    object cdsLIPRefsSOURCESHORT: TStringField
-      FieldName = 'SOURCESHORT'
-      ProviderFlags = []
-      ReadOnly = True
-      Size = 100
-    end
     object cdsLIPRefsSOURCEYEAR: TSmallintField
       FieldName = 'SOURCEYEAR'
       ProviderFlags = []
       ReadOnly = True
+    end
+    object cdsLIPRefsSOURCESHORT: TWideStringField
+      FieldName = 'SOURCESHORT'
+      Required = True
+      FixedChar = True
+      Size = 100
     end
   end
   object dsLIPRefs: TDataSource
@@ -1553,9 +1312,10 @@ object dmLIP: TdmLIP
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsCompositionsDOMINANTCOMPOSITION: TStringField
+    object cdsCompositionsDOMINANTCOMPOSITION: TWideStringField
       FieldName = 'DOMINANTCOMPOSITION'
       Required = True
+      FixedChar = True
       Size = 50
     end
   end
@@ -1579,16 +1339,6 @@ object dmLIP: TdmLIP
     SQLConnection = sqlcLIP
     Left = 440
     Top = 450
-    object qLIPDescriptionLIPID: TIntegerField
-      FieldName = 'LIPID'
-      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
-      Required = True
-    end
-    object qLIPDescriptionDESCRIPTION: TMemoField
-      FieldName = 'DESCRIPTION'
-      BlobType = ftMemo
-      Size = 1
-    end
   end
   object cdsLIPDescription: TClientDataSet
     Aggregates = <>
@@ -1601,10 +1351,8 @@ object dmLIP: TdmLIP
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsLIPDescriptionDESCRIPTION: TMemoField
+    object cdsLIPDescriptionDESCRIPTION: TBlobField
       FieldName = 'DESCRIPTION'
-      BlobType = ftMemo
-      Size = 1
     end
   end
   object dsLIPDescription: TDataSource
@@ -1633,15 +1381,15 @@ object dmLIP: TdmLIP
     ProviderName = 'dspContOceans'
     Left = 90
     Top = 288
-    object cdsContOceansCONTOCEANID: TStringField
+    object cdsContOceansCONTOCEANID: TWideStringField
       FieldName = 'CONTOCEANID'
-      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
       FixedChar = True
       Size = 1
     end
-    object cdsContOceansCONTOCEAN: TStringField
+    object cdsContOceansCONTOCEAN: TWideStringField
       FieldName = 'CONTOCEAN'
+      FixedChar = True
       Size = 15
     end
   end
@@ -1651,7 +1399,6 @@ object dmLIP: TdmLIP
     Top = 286
   end
   object sqlcLIP: TSQLConnection
-    ConnectionName = 'StratDB_bromo2'
     DriverName = 'DevartFirebird'
     LoginPrompt = False
     Params.Strings = (
@@ -1659,22 +1406,16 @@ object dmLIP: TdmLIP
       'GetDriverFunc=getSQLDriverFirebird'
       'LibraryName=dbexpida41.dll'
       'VendorLib=fbclient.dll'
-      'DataBase=bromo2.usask.ca:s:\data\firebird\stratdb2021v30.fdb'
+      'DataBase=c:\data\firebird\stratdb2025v50_UTF8.fdb'
       'User_Name=SYSDBA'
       'Password=V0lcano3^'
       'SQLDialect=3'
-      'BlobSize=-1'
-      'ErrorResourceFile='
       'LocaleCode=0000'
       'DevartFirebird TransIsolation=ReadCommitted'
       'ProductName=DevartFirebird'
-      
-        'DriverPackageLoader=TDBXDynalinkDriverLoader,DBXCommonDriver260.' +
-        'bpl'
-      
-        'MetaDataPackageLoader=TDBXDevartInterBaseMetaDataCommandFactory,' +
-        'DbxDevartInterBaseDriver260.bpl'
-      'DriverUnit=DbxDevartInterBase')
+      'DriverUnit=DbxDevartInterBase'
+      'UseUnicode=true'
+      'Charset=UTF8')
     Left = 36
     Top = 12
   end
@@ -1740,34 +1481,6 @@ object dmLIP: TdmLIP
     SQLConnection = sqlcLIP
     Left = 440
     Top = 494
-    object qLIPForLIPID: TIntegerField
-      FieldName = 'LIPID'
-      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
-      Required = True
-    end
-    object qLIPForWHOFORID: TStringField
-      FieldName = 'WHOFORID'
-      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
-      Required = True
-      Size = 5
-    end
-    object qLIPForWHOFORID_1: TStringField
-      FieldName = 'WHOFORID_1'
-      ProviderFlags = []
-      ReadOnly = True
-      Size = 5
-    end
-    object qLIPForWHOFOR: TStringField
-      FieldName = 'WHOFOR'
-      ProviderFlags = []
-      ReadOnly = True
-      Size = 50
-    end
-    object qLIPForOWNER: TStringField
-      FieldName = 'OWNER'
-      ProviderFlags = []
-      ReadOnly = True
-    end
   end
   object cdsLIPFor: TClientDataSet
     Aggregates = <>
@@ -1780,17 +1493,28 @@ object dmLIP: TdmLIP
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsLIPForWHOFORID: TStringField
+    object cdsLIPForWHOFORID: TWideStringField
       FieldName = 'WHOFORID'
-      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
+      FixedChar = True
       Size = 5
     end
-    object cdsLIPForWHOFOR: TStringField
+    object cdsLIPForNEEDSCHANGE: TWideStringField
+      FieldName = 'NEEDSCHANGE'
+      Required = True
+      FixedChar = True
+      Size = 1
+    end
+    object cdsLIPForWHOFOR: TWideStringField
       FieldName = 'WHOFOR'
-      ProviderFlags = []
-      ReadOnly = True
+      Required = True
+      FixedChar = True
       Size = 50
+    end
+    object cdsLIPForOWNER: TWideStringField
+      FieldName = 'OWNER'
+      Required = True
+      FixedChar = True
     end
   end
   object dsLIPFor: TDataSource
@@ -1828,20 +1552,22 @@ object dmLIP: TdmLIP
     ProviderName = 'dspWhoFor'
     Left = 86
     Top = 427
-    object cdsWhoForWHOFORID: TStringField
+    object cdsWhoForWHOFORID: TWideStringField
       FieldName = 'WHOFORID'
-      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
+      FixedChar = True
       Size = 5
     end
-    object cdsWhoForWHOFOR: TStringField
+    object cdsWhoForWHOFOR: TWideStringField
       FieldName = 'WHOFOR'
       Required = True
+      FixedChar = True
       Size = 50
     end
-    object cdsWhoForOWNER: TStringField
+    object cdsWhoForOWNER: TWideStringField
       FieldName = 'OWNER'
       Required = True
+      FixedChar = True
     end
   end
   object dsWhoFor: TDataSource
@@ -1875,89 +1601,6 @@ object dmLIP: TdmLIP
     SQLConnection = sqlcLIP
     Left = 440
     Top = 542
-    object qDomainLIPLIPID: TIntegerField
-      FieldName = 'LIPID'
-      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
-      Required = True
-    end
-    object qDomainLIPDOMAINID: TIntegerField
-      FieldName = 'DOMAINID'
-      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
-      Required = True
-    end
-    object qDomainLIPINC4CHTYN: TStringField
-      FieldName = 'INC4CHTYN'
-      Required = True
-      FixedChar = True
-      Size = 1
-    end
-    object qDomainLIPCONTINENTID: TStringField
-      FieldName = 'CONTINENTID'
-      ProviderFlags = []
-      ReadOnly = True
-      Size = 3
-    end
-    object qDomainLIPMINPLOTAGE: TFloatField
-      FieldName = 'MINPLOTAGE'
-      ProviderFlags = []
-      ReadOnly = True
-    end
-    object qDomainLIPMAXPLOTAGE: TFloatField
-      FieldName = 'MAXPLOTAGE'
-      ProviderFlags = []
-      ReadOnly = True
-    end
-    object qDomainLIPLIPNAME: TStringField
-      FieldName = 'LIPNAME'
-      ProviderFlags = []
-      ReadOnly = True
-      Size = 150
-    end
-    object qDomainLIPCONTOCEANID: TStringField
-      FieldName = 'CONTOCEANID'
-      ProviderFlags = []
-      ReadOnly = True
-      FixedChar = True
-      Size = 1
-    end
-    object qDomainLIPLIPSIZEID: TIntegerField
-      FieldName = 'LIPSIZEID'
-      ProviderFlags = []
-      ReadOnly = True
-    end
-    object qDomainLIPLIPRATINGID: TStringField
-      FieldName = 'LIPRATINGID'
-      ProviderFlags = []
-      ReadOnly = True
-      FixedChar = True
-      Size = 1
-    end
-    object qDomainLIPCONSTRAINTLEVELID: TSmallintField
-      FieldName = 'CONSTRAINTLEVELID'
-      ProviderFlags = []
-      ReadOnly = True
-    end
-    object qDomainLIPAREALEXTENT: TFloatField
-      FieldName = 'AREALEXTENT'
-      ProviderFlags = []
-      ReadOnly = True
-    end
-    object qDomainLIPVOLUMEESTIMATE: TFloatField
-      FieldName = 'VOLUMEESTIMATE'
-      ProviderFlags = []
-      ReadOnly = True
-    end
-    object qDomainLIPLIPPARENTID: TIntegerField
-      FieldName = 'LIPPARENTID'
-      ProviderFlags = []
-      ReadOnly = True
-    end
-    object qDomainLIPDOMAINNAME: TStringField
-      FieldName = 'DOMAINNAME'
-      ProviderFlags = []
-      ReadOnly = True
-      Size = 150
-    end
   end
   object cdsDomainLIP: TClientDataSet
     Aggregates = <>
@@ -1975,18 +1618,6 @@ object dmLIP: TdmLIP
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsDomainLIPINC4CHTYN: TStringField
-      FieldName = 'INC4CHTYN'
-      Required = True
-      FixedChar = True
-      Size = 1
-    end
-    object cdsDomainLIPCONTINENTID: TStringField
-      FieldName = 'CONTINENTID'
-      ProviderFlags = []
-      ReadOnly = True
-      Size = 3
-    end
     object cdsDomainLIPMINPLOTAGE: TFloatField
       FieldName = 'MINPLOTAGE'
       ProviderFlags = []
@@ -1999,30 +1630,10 @@ object dmLIP: TdmLIP
       ReadOnly = True
       DisplayFormat = '###0.00'
     end
-    object cdsDomainLIPLIPNAME: TStringField
-      FieldName = 'LIPNAME'
-      ProviderFlags = []
-      ReadOnly = True
-      Size = 150
-    end
-    object cdsDomainLIPCONTOCEANID: TStringField
-      FieldName = 'CONTOCEANID'
-      ProviderFlags = []
-      ReadOnly = True
-      FixedChar = True
-      Size = 1
-    end
     object cdsDomainLIPLIPSIZEID: TIntegerField
       FieldName = 'LIPSIZEID'
       ProviderFlags = []
       ReadOnly = True
-    end
-    object cdsDomainLIPLIPRATINGID: TStringField
-      FieldName = 'LIPRATINGID'
-      ProviderFlags = []
-      ReadOnly = True
-      FixedChar = True
-      Size = 1
     end
     object cdsDomainLIPCONSTRAINTLEVELID: TSmallintField
       FieldName = 'CONSTRAINTLEVELID'
@@ -2045,11 +1656,41 @@ object dmLIP: TdmLIP
       ProviderFlags = []
       ReadOnly = True
     end
-    object cdsDomainLIPDOMAINNAME: TStringField
+    object cdsDomainLIPINC4CHTYN: TWideStringField
+      FieldName = 'INC4CHTYN'
+      Required = True
+      FixedChar = True
+      Size = 1
+    end
+    object cdsDomainLIPCONTINENTID: TWideStringField
+      FieldName = 'CONTINENTID'
+      Required = True
+      FixedChar = True
+      Size = 3
+    end
+    object cdsDomainLIPLIPNAME: TWideStringField
+      FieldName = 'LIPNAME'
+      Required = True
+      FixedChar = True
+      Size = 50
+    end
+    object cdsDomainLIPCONTOCEANID: TWideStringField
+      FieldName = 'CONTOCEANID'
+      Required = True
+      FixedChar = True
+      Size = 1
+    end
+    object cdsDomainLIPLIPRATINGID: TWideStringField
+      FieldName = 'LIPRATINGID'
+      Required = True
+      FixedChar = True
+      Size = 1
+    end
+    object cdsDomainLIPDOMAINNAME: TWideStringField
       FieldName = 'DOMAINNAME'
-      ProviderFlags = []
-      ReadOnly = True
-      Size = 150
+      Required = True
+      FixedChar = True
+      Size = 65
     end
   end
   object dsDomainLIP: TDataSource
@@ -2105,11 +1746,6 @@ object dmLIP: TdmLIP
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object qLIPMapMAPID2: TStringField
-      FieldName = 'MAPID2'
-      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
-      Required = True
-    end
     object qLIPMapDISPLAYORDER: TIntegerField
       FieldName = 'DISPLAYORDER'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
@@ -2118,16 +1754,6 @@ object dmLIP: TdmLIP
     object qLIPMapGISINT: TIntegerField
       FieldName = 'GISINT'
       Required = True
-    end
-    object qLIPMapGISSTR: TStringField
-      FieldName = 'GISSTR'
-      Required = True
-    end
-    object qLIPMapMAPNAME: TStringField
-      FieldName = 'MAPNAME'
-      ProviderFlags = []
-      ReadOnly = True
-      Size = 150
     end
   end
   object cdsLIPMap: TClientDataSet
@@ -2141,11 +1767,6 @@ object dmLIP: TdmLIP
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsLIPMapMAPID2: TStringField
-      FieldName = 'MAPID2'
-      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
-      Required = True
-    end
     object cdsLIPMapDISPLAYORDER: TIntegerField
       FieldName = 'DISPLAYORDER'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
@@ -2154,16 +1775,6 @@ object dmLIP: TdmLIP
     object cdsLIPMapGISINT: TIntegerField
       FieldName = 'GISINT'
       Required = True
-    end
-    object cdsLIPMapGISSTR: TStringField
-      FieldName = 'GISSTR'
-      Required = True
-    end
-    object cdsLIPMapMAPNAME: TStringField
-      FieldName = 'MAPNAME'
-      ProviderFlags = []
-      ReadOnly = True
-      Size = 150
     end
   end
   object dsLIPMap: TDataSource
@@ -2212,16 +1823,9 @@ object dmLIP: TdmLIP
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object qLIPCorrelativeCOMMENTS: TMemoField
+    object qLIPCorrelativeCOMMENTS: TBlobField
       FieldName = 'COMMENTS'
-      BlobType = ftMemo
-      Size = 1
-    end
-    object qLIPCorrelativeLIPNAME: TStringField
-      FieldName = 'LIPNAME'
-      ProviderFlags = []
-      ReadOnly = True
-      Size = 150
+      Size = -1
     end
     object qLIPCorrelativeMINPLOTAGE: TFloatField
       FieldName = 'MINPLOTAGE'
@@ -2230,17 +1834,6 @@ object dmLIP: TdmLIP
     end
     object qLIPCorrelativeMAXPLOTAGE: TFloatField
       FieldName = 'MAXPLOTAGE'
-      ProviderFlags = []
-      ReadOnly = True
-    end
-    object qLIPCorrelativeCONTINENTID: TStringField
-      FieldName = 'CONTINENTID'
-      ProviderFlags = []
-      ReadOnly = True
-      Size = 3
-    end
-    object qLIPCorrelativeCONTINENT: TStringField
-      FieldName = 'CONTINENT'
       ProviderFlags = []
       ReadOnly = True
     end
@@ -2261,16 +1854,8 @@ object dmLIP: TdmLIP
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsLIPCorrelativeCOMMENTS: TMemoField
+    object cdsLIPCorrelativeCOMMENTS: TBlobField
       FieldName = 'COMMENTS'
-      BlobType = ftMemo
-      Size = 1
-    end
-    object cdsLIPCorrelativeLIPNAME: TStringField
-      FieldName = 'LIPNAME'
-      ProviderFlags = []
-      ReadOnly = True
-      Size = 150
     end
     object cdsLIPCorrelativeMINPLOTAGE: TFloatField
       FieldName = 'MINPLOTAGE'
@@ -2279,17 +1864,6 @@ object dmLIP: TdmLIP
     end
     object cdsLIPCorrelativeMAXPLOTAGE: TFloatField
       FieldName = 'MAXPLOTAGE'
-      ProviderFlags = []
-      ReadOnly = True
-    end
-    object cdsLIPCorrelativeCONTINENTID: TStringField
-      FieldName = 'CONTINENTID'
-      ProviderFlags = []
-      ReadOnly = True
-      Size = 3
-    end
-    object cdsLIPCorrelativeCONTINENT: TStringField
-      FieldName = 'CONTINENT'
       ProviderFlags = []
       ReadOnly = True
     end
@@ -2319,18 +1893,6 @@ object dmLIP: TdmLIP
     ProviderName = 'dspYesNo'
     Left = 798
     Top = 8
-    object cdsYesNoYESNOID: TStringField
-      FieldName = 'YESNOID'
-      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
-      Required = True
-      FixedChar = True
-      Size = 1
-    end
-    object cdsYesNoYESNO: TStringField
-      FieldName = 'YESNO'
-      Required = True
-      Size = 11
-    end
   end
   object dsYesNo: TDataSource
     DataSet = cdsYesNo
@@ -2347,17 +1909,6 @@ object dmLIP: TdmLIP
       FieldName = 'LIPID'
       Required = True
     end
-    object cdsLipQLIPNAME: TStringField
-      FieldName = 'LIPNAME'
-      Required = True
-      Size = 50
-    end
-    object cdsLipQCONTOCEANID: TStringField
-      FieldName = 'CONTOCEANID'
-      Required = True
-      FixedChar = True
-      Size = 1
-    end
     object cdsLipQLIPSIZEID: TIntegerField
       FieldName = 'LIPSIZEID'
       Required = True
@@ -2365,17 +1916,6 @@ object dmLIP: TdmLIP
     object cdsLipQLIPPARENTID: TIntegerField
       FieldName = 'LIPPARENTID'
       Required = True
-    end
-    object cdsLipQLIPRATINGID: TStringField
-      FieldName = 'LIPRATINGID'
-      Required = True
-      FixedChar = True
-      Size = 1
-    end
-    object cdsLipQCONTINENTID: TStringField
-      FieldName = 'CONTINENTID'
-      Required = True
-      Size = 3
     end
     object cdsLipQSPOTLATITUDE: TFloatField
       FieldName = 'SPOTLATITUDE'
@@ -2414,16 +1954,6 @@ object dmLIP: TdmLIP
       FieldName = 'VOLUMEESTIMATE'
       DisplayFormat = '#####0.0'
     end
-    object cdsLipQLIPHEADING: TStringField
-      FieldName = 'LIPHEADING'
-      Size = 100
-    end
-    object cdsLipQPLOTBARCODE: TStringField
-      FieldName = 'PLOTBARCODE'
-      Required = True
-      FixedChar = True
-      Size = 1
-    end
     object cdsLipQqLIPCorrelative: TDataSetField
       FieldName = 'qLIPCorrelative'
     end
@@ -2459,6 +1989,41 @@ object dmLIP: TdmLIP
     end
     object cdsLipQqLIPParent: TDataSetField
       FieldName = 'qLIPParent'
+    end
+    object cdsLipQLIPNAME: TWideStringField
+      FieldName = 'LIPNAME'
+      Required = True
+      FixedChar = True
+      Size = 50
+    end
+    object cdsLipQLIPHEADING: TWideStringField
+      FieldName = 'LIPHEADING'
+      FixedChar = True
+      Size = 25
+    end
+    object cdsLipQCONTOCEANID: TWideStringField
+      FieldName = 'CONTOCEANID'
+      Required = True
+      FixedChar = True
+      Size = 1
+    end
+    object cdsLipQLIPRATINGID: TWideStringField
+      FieldName = 'LIPRATINGID'
+      Required = True
+      FixedChar = True
+      Size = 1
+    end
+    object cdsLipQCONTINENTID: TWideStringField
+      FieldName = 'CONTINENTID'
+      Required = True
+      FixedChar = True
+      Size = 3
+    end
+    object cdsLipQPLOTBARCODE: TWideStringField
+      FieldName = 'PLOTBARCODE'
+      Required = True
+      FixedChar = True
+      Size = 1
     end
   end
   object qInsertLIP: TSQLQuery
@@ -2525,16 +2090,6 @@ object dmLIP: TdmLIP
       FieldName = 'LIPID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
-    end
-    object cdsNewLIPNameCONTINENTID: TStringField
-      FieldName = 'CONTINENTID'
-      Required = True
-      Size = 3
-    end
-    object cdsNewLIPNameLIPNAME: TStringField
-      FieldName = 'LIPNAME'
-      Required = True
-      Size = 50
     end
   end
   object dsNewLIPName: TDataSource
@@ -2624,25 +2179,9 @@ object dmLIP: TdmLIP
       FieldName = 'LIPID'
       Required = True
     end
-    object cdsRep1LIPNAME: TStringField
-      FieldName = 'LIPNAME'
-      Required = True
-      Size = 50
-    end
-    object cdsRep1CONTOCEANID: TStringField
-      FieldName = 'CONTOCEANID'
-      Required = True
-      FixedChar = True
-      Size = 1
-    end
     object cdsRep1LIPSIZEID: TIntegerField
       FieldName = 'LIPSIZEID'
       Required = True
-    end
-    object cdsRep1CONTINENTID: TStringField
-      FieldName = 'CONTINENTID'
-      Required = True
-      Size = 3
     end
     object cdsRep1SPOTLATITUDE: TFloatField
       FieldName = 'SPOTLATITUDE'
@@ -2670,42 +2209,47 @@ object dmLIP: TdmLIP
     object cdsRep1VOLUMEESTIMATE: TFloatField
       FieldName = 'VOLUMEESTIMATE'
     end
-    object cdsRep1LIPSIZEDESCRIPTION: TStringField
-      FieldName = 'LIPSIZEDESCRIPTION'
-      Required = True
-      Size = 50
-    end
-    object cdsRep1PLOTBARCODE: TStringField
-      FieldName = 'PLOTBARCODE'
-      Required = True
-      FixedChar = True
-      Size = 1
-    end
     object cdsRep1BARCODEAGE: TFloatField
       FieldName = 'BARCODEAGE'
       Required = True
     end
-    object cdsRep1LIPHEADING: TStringField
-      FieldName = 'LIPHEADING'
-      Size = 25
-    end
-    object cdsRep1LIPRATINGDESCRIPTION: TStringField
-      FieldName = 'LIPRATINGDESCRIPTION'
-      Required = True
-      Size = 30
-    end
-    object cdsRep1DOMINANTCOMPOSITION: TStringField
-      FieldName = 'DOMINANTCOMPOSITION'
-      Required = True
-      Size = 50
-    end
-    object cdsRep1AGECONSTRAINTLEVEL: TStringField
-      FieldName = 'AGECONSTRAINTLEVEL'
-      Required = True
-      Size = 35
-    end
     object cdsRep1qRep2: TDataSetField
       FieldName = 'qRep2'
+    end
+    object cdsRep1LIPNAME: TWideStringField
+      FieldName = 'LIPNAME'
+      Required = True
+      FixedChar = True
+      Size = 50
+    end
+    object cdsRep1LIPSIZEDESCRIPTION: TWideStringField
+      FieldName = 'LIPSIZEDESCRIPTION'
+      Required = True
+      FixedChar = True
+      Size = 50
+    end
+    object cdsRep1LIPHEADING: TWideStringField
+      FieldName = 'LIPHEADING'
+      FixedChar = True
+      Size = 25
+    end
+    object cdsRep1LIPRATINGDESCRIPTION: TWideStringField
+      FieldName = 'LIPRATINGDESCRIPTION'
+      Required = True
+      FixedChar = True
+      Size = 30
+    end
+    object cdsRep1DOMINANTCOMPOSITION: TWideStringField
+      FieldName = 'DOMINANTCOMPOSITION'
+      Required = True
+      FixedChar = True
+      Size = 50
+    end
+    object cdsRep1AGECONSTRAINTLEVEL: TWideStringField
+      FieldName = 'AGECONSTRAINTLEVEL'
+      Required = True
+      FixedChar = True
+      Size = 35
     end
   end
   object dsRep1: TDataSource

@@ -1,0 +1,38 @@
+------------------------------------------------------------------------------------------------------------------------
+Exception message  : Access violation at address 0000000001944E21 in module 'StratDB.exe'. Read of address 00000000000022A0
+Depending on the error condition, it might be possible to restart the application.
+Exception class    : EAccessViolation
+Exception address  : 0000000001944E21
+Exception Time     : 2025-04-01 09:17:36.810
+------------------------------------------------------------------------------------------------------------------------
+Application Name   : StratDB.exe
+Application Version: 1.0.0.3
+Started at         : 2025-04-01 09:17:25.372
+Running for        :  11 seconds
+Computer Name      : EGLINGTON2
+Compiler Version   : 360
+------------------------------------------------------------------------------------------------------------------------
+IntraWeb Version   : 15.6.1
+Multi-session      : False
+Content Path       : C:\DevD12\StratDB\Win64\Release\wwwroot\
+Session count      : 1
+Current Thread ID  : 232
+Application Path   : C:\DevD12\StratDB\Win64\Release\
+Active Form        : [unassigned]
+Active Form list   :
+Form list          :
+Browser Name       : Firefox
+Browser UserAgent  : Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:136.0) Gecko/20100101 Firefox/136.0
+Session ID         : iQ5nEvFU8AV6zm5jJ7z-Ln3SQ8u
+Last Access        : 2025-04-01 09:17:36.785
+Callback           : False
+Runtime parameters : 
+------------------------------------------------------------------------------------------------------------------------
+Client IP address  : 127.0.0.1
+Request PathInfo   : /
+Request Method     : POST
+Request User Agent : Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:136.0) Gecko/20100101 Firefox/136.0
+Cookies Count      : 1
+------------------------------------------------------------------------------------------------------------------------
+[Stack trace is empty]
+------------------------------------------------------------------------------------------------------------------------

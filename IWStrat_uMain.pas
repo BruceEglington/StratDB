@@ -53,6 +53,7 @@ type
     procedure iwbCheckIniFileClick(Sender: TObject);
     procedure IWButton1Click(Sender: TObject);
     procedure IWButton2Click(Sender: TObject);
+    procedure TopBarlnkSignInClick(Sender: TObject);
   public
   protected
     procedure LoadWelcomeMessage;
@@ -187,6 +188,11 @@ begin
   TopBar.iwlSignOutClick(Sender);
 end;
 
+procedure TISFMain.TopBarlnkSignInClick(Sender: TObject);
+begin
+  TopBar.SignIn(Sender);
+end;
+
 procedure TISFMain.IWAppFormRender(Sender: TObject);
 var
   ShowUsagePermissions : boolean;
@@ -203,8 +209,8 @@ begin
   begin
     FrameMenu.Visible := true;
   end;
-  iwbPermissions.Visible := true;
-  iwbCheckIniFile.Visible := true;
+  iwbPermissions.Visible := false;
+  iwbCheckIniFile.Visible := false;
   if ((UserSession.ShowDebugButtons) and (UserSession.IsDeveloper) and (UserSession.LoggedIn)) then
   begin
     iwbPermissions.Visible := true;
@@ -263,11 +269,14 @@ procedure TISFMain.IWButton2Click(Sender: TObject);
 var
   WasSuccessful : boolean;
 begin
+  {
   dmDV.InsertReference(200000,1900,'test here','NAM','PUBL',WasSuccessful);
   if WasSuccessful then dmUser.SetDeveloperData('WasSuccessful')
                    else dmUser.SetDeveloperData('not WasSuccessful');
   dmUser.cdsDevInfo.Close;
   dmUser.cdsDevInfo.Open;
+  }
+  WebApplication.ShowMessage(dmUser.sqlcWebUser.Params.Text);
 end;
 
 procedure TISFMain.iwbCheckIniFileClick(Sender: TObject);

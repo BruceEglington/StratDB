@@ -113,7 +113,6 @@ type
     IWLabel27: TIWLabel;
     iwDBlcbDepositStatus: TIWDBLookupComboBox;
     IWLabel29: TIWLabel;
-    iwDBmComments: TIWDBMemo;
     iwrReferences: TIWRegion;
     IWLabel33: TIWLabel;
     iwDBgReference: TIWDBGrid;
@@ -121,6 +120,7 @@ type
     iwbDeleteRefLink: TIWButton;
     iwbAddRefLink: TIWButton;
     TopBar: TISFTopBarStrat;
+    iwDBmComments: TIWDBMemo;
     procedure IWAppFormRender(Sender: TObject);
     procedure iwbReturnClick(Sender: TObject);
     procedure iwbDetailsEditClick(Sender: TObject);

@@ -26,6 +26,7 @@ object ISFGrid: TISFGrid
     BorderOptions.NumericWidth = 0
     BorderOptions.Style = cbsNone
     object iwDBgResults: TIWDBGrid
+      AlignWithMargins = False
       Left = 0
       Top = 57
       Width = 879
@@ -43,10 +44,13 @@ object ISFGrid: TISFGrid
       Font.FontName = 'Arial'
       Font.Size = 8
       Font.Style = []
+      Font.PxSize = 10
       FrameBuffer = 40
       Lines = tlAll
       UseFrame = False
       UseSize = True
+      ShowEmptyCells = True
+      ShowInvisibleRows = True
       ScrollToCurrentRow = False
       Columns = <
         item
@@ -57,6 +61,7 @@ object ISFGrid: TISFGrid
           Font.FontName = 'Arial'
           Font.Size = 8
           Font.Style = []
+          Font.PxSize = 10
           Header = False
           Height = '0'
           ShowHint = True
@@ -79,6 +84,7 @@ object ISFGrid: TISFGrid
           Title.Font.FontName = 'Arial'
           Title.Font.Size = 8
           Title.Font.Style = [fsBold]
+          Title.Font.PxSize = 10
           Title.Header = False
           Title.Height = '0'
           Title.ShowHint = True
@@ -97,6 +103,7 @@ object ISFGrid: TISFGrid
           Font.FontName = 'Arial'
           Font.Size = 8
           Font.Style = []
+          Font.PxSize = 10
           Header = False
           Height = '0'
           ShowHint = True
@@ -117,6 +124,7 @@ object ISFGrid: TISFGrid
           Title.Font.FontName = 'Arial'
           Title.Font.Size = 8
           Title.Font.Style = [fsBold]
+          Title.Font.PxSize = 10
           Title.Header = False
           Title.Height = '0'
           Title.ShowHint = True
@@ -135,6 +143,7 @@ object ISFGrid: TISFGrid
           Font.FontName = 'Arial'
           Font.Size = 8
           Font.Style = []
+          Font.PxSize = 10
           Header = False
           Height = '0'
           ShowHint = True
@@ -155,6 +164,7 @@ object ISFGrid: TISFGrid
           Title.Font.FontName = 'Arial'
           Title.Font.Size = 8
           Title.Font.Style = [fsBold]
+          Title.Font.PxSize = 10
           Title.Header = False
           Title.Height = '0'
           Title.ShowHint = True
@@ -173,6 +183,7 @@ object ISFGrid: TISFGrid
           Font.FontName = 'Arial'
           Font.Size = 8
           Font.Style = []
+          Font.PxSize = 10
           Header = False
           Height = '0'
           ShowHint = True
@@ -193,6 +204,7 @@ object ISFGrid: TISFGrid
           Title.Font.FontName = 'Arial'
           Title.Font.Size = 8
           Title.Font.Style = [fsBold]
+          Title.Font.PxSize = 10
           Title.Header = False
           Title.Height = '0'
           Title.ShowHint = True
@@ -211,6 +223,7 @@ object ISFGrid: TISFGrid
           Font.FontName = 'Arial'
           Font.Size = 8
           Font.Style = []
+          Font.PxSize = 10
           Header = False
           Height = '0'
           ShowHint = True
@@ -231,6 +244,7 @@ object ISFGrid: TISFGrid
           Title.Font.FontName = 'Arial'
           Title.Font.Size = 8
           Title.Font.Style = [fsBold]
+          Title.Font.PxSize = 10
           Title.Header = False
           Title.Height = '0'
           Title.ShowHint = True
@@ -249,6 +263,7 @@ object ISFGrid: TISFGrid
           Font.FontName = 'Arial'
           Font.Size = 8
           Font.Style = []
+          Font.PxSize = 10
           Header = False
           Height = '0'
           ShowHint = True
@@ -269,6 +284,7 @@ object ISFGrid: TISFGrid
           Title.Font.FontName = 'Arial'
           Title.Font.Size = 8
           Title.Font.Style = [fsBold]
+          Title.Font.PxSize = 10
           Title.Header = False
           Title.Height = '0'
           Title.ShowHint = True
@@ -287,6 +303,7 @@ object ISFGrid: TISFGrid
           Font.FontName = 'Arial'
           Font.Size = 8
           Font.Style = []
+          Font.PxSize = 10
           Header = False
           Height = '0'
           ShowHint = True
@@ -307,6 +324,7 @@ object ISFGrid: TISFGrid
           Title.Font.FontName = 'Arial'
           Title.Font.Size = 8
           Title.Font.Style = [fsBold]
+          Title.Font.PxSize = 10
           Title.Header = False
           Title.Height = '0'
           Title.ShowHint = True
@@ -325,6 +343,7 @@ object ISFGrid: TISFGrid
           Font.FontName = 'Arial'
           Font.Size = 8
           Font.Style = []
+          Font.PxSize = 10
           Header = False
           Height = '0'
           ShowHint = True
@@ -345,6 +364,7 @@ object ISFGrid: TISFGrid
           Title.Font.FontName = 'Arial'
           Title.Font.Size = 8
           Title.Font.Style = [fsBold]
+          Title.Font.PxSize = 10
           Title.Header = False
           Title.Height = '0'
           Title.ShowHint = True
@@ -363,6 +383,7 @@ object ISFGrid: TISFGrid
           Font.FontName = 'Arial'
           Font.Size = 8
           Font.Style = []
+          Font.PxSize = 10
           Header = False
           Height = '0'
           ShowHint = True
@@ -382,6 +403,7 @@ object ISFGrid: TISFGrid
           Title.Font.FontName = 'Arial'
           Title.Font.Size = 8
           Title.Font.Style = [fsBold]
+          Title.Font.PxSize = 10
           Title.Header = False
           Title.Height = '0'
           Title.ShowHint = True
@@ -400,6 +422,7 @@ object ISFGrid: TISFGrid
           Font.FontName = 'Arial'
           Font.Size = 8
           Font.Style = []
+          Font.PxSize = 10
           Header = False
           Height = '0'
           ShowHint = True
@@ -420,6 +443,7 @@ object ISFGrid: TISFGrid
           Title.Font.FontName = 'Arial'
           Title.Font.Size = 8
           Title.Font.Style = [fsBold]
+          Title.Font.PxSize = 10
           Title.Header = False
           Title.Height = '0'
           Title.ShowHint = True
@@ -463,6 +487,7 @@ object ISFGrid: TISFGrid
         879
         57)
       object iwbDownload: TIWButton
+        AlignWithMargins = False
         Left = 730
         Top = 6
         Width = 129
@@ -473,11 +498,13 @@ object ISFGrid: TISFGrid
         Font.Color = clNone
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         FriendlyName = 'iwbDownload'
         OnClick = iwbDownloadClick
         ExplicitLeft = 722
       end
       object iwlFirstPage: TIWLink
+        AlignWithMargins = False
         Left = 30
         Top = 34
         Width = 33
@@ -490,6 +517,7 @@ object ISFGrid: TISFGrid
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         HasTabOrder = True
         DoSubmitValidation = False
         FriendlyName = 'iwlFirstPage'
@@ -499,6 +527,7 @@ object ISFGrid: TISFGrid
         Caption = 'First'
       end
       object iwlLastPage: TIWLink
+        AlignWithMargins = False
         Left = 240
         Top = 34
         Width = 35
@@ -511,6 +540,7 @@ object ISFGrid: TISFGrid
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         HasTabOrder = True
         DoSubmitValidation = False
         FriendlyName = 'iwlLastPage'
@@ -520,6 +550,7 @@ object ISFGrid: TISFGrid
         Caption = 'Last'
       end
       object iwlNextPage: TIWLink
+        AlignWithMargins = False
         Left = 206
         Top = 34
         Width = 35
@@ -532,6 +563,7 @@ object ISFGrid: TISFGrid
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         HasTabOrder = True
         DoSubmitValidation = False
         FriendlyName = 'iwlNextPage'
@@ -541,6 +573,7 @@ object ISFGrid: TISFGrid
         Caption = 'Next'
       end
       object iwlPrevPage: TIWLink
+        AlignWithMargins = False
         Left = 70
         Top = 34
         Width = 53
@@ -553,6 +586,7 @@ object ISFGrid: TISFGrid
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         HasTabOrder = True
         DoSubmitValidation = False
         FriendlyName = 'iwlPrevPage'
@@ -562,6 +596,7 @@ object ISFGrid: TISFGrid
         Caption = 'Previous'
       end
       object iwlPageNumTotal: TIWLabel
+        AlignWithMargins = False
         Left = 174
         Top = 35
         Width = 15
@@ -570,11 +605,13 @@ object ISFGrid: TISFGrid
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         HasTabOrder = False
         FriendlyName = 'iwlPageNumTotal'
         Caption = '11'
       end
       object iwlSortedBy: TIWLabel
+        AlignWithMargins = False
         Left = 708
         Top = 37
         Width = 150
@@ -584,6 +621,7 @@ object ISFGrid: TISFGrid
         Font.FontName = 'Arial'
         Font.Size = 8
         Font.Style = [fsItalic]
+        Font.PxSize = 10
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'iwlSortedBy'
@@ -591,6 +629,7 @@ object ISFGrid: TISFGrid
         ExplicitLeft = 700
       end
       object iwlPageNum: TIWLabel
+        AlignWithMargins = False
         Left = 140
         Top = 35
         Width = 14
@@ -600,11 +639,13 @@ object ISFGrid: TISFGrid
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         HasTabOrder = False
         FriendlyName = 'IWLabel1'
         Caption = '11'
       end
       object lblRecordCount: TIWLabel
+        AlignWithMargins = False
         Left = 30
         Top = 13
         Width = 145
@@ -613,12 +654,14 @@ object ISFGrid: TISFGrid
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'lblRecordCount'
         Caption = 'records match the query'
       end
       object iwlOf: TIWLabel
+        AlignWithMargins = False
         Left = 156
         Top = 35
         Width = 11
@@ -627,6 +670,7 @@ object ISFGrid: TISFGrid
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = []
+        Font.PxSize = 12
         HasTabOrder = False
         FriendlyName = 'iwlOf'
         Caption = 'of'

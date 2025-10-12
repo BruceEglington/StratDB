@@ -1,5 +1,4 @@
 object dmDV: TdmDV
-  OldCreateOrder = False
   Height = 846
   Width = 1071
   object QueryDV: TSQLQuery
@@ -59,37 +58,37 @@ object dmDV: TdmDV
     ProviderName = 'dspQueryDV'
     Left = 182
     Top = 14
-    object cdsQueryDVCOUNTRYABR: TStringField
+    object cdsQueryDVCOUNTRYABR: TWideStringField
       FieldName = 'COUNTRYABR'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
       Size = 3
     end
-    object cdsQueryDVUNITNAME: TStringField
+    object cdsQueryDVUNITNAME: TWideStringField
       FieldName = 'UNITNAME'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
       Size = 50
     end
-    object cdsQueryDVMATERIALABR: TStringField
+    object cdsQueryDVMATERIALABR: TWideStringField
       FieldName = 'MATERIALABR'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
       Size = 5
     end
-    object cdsQueryDVISOTOPESYSTEM: TStringField
+    object cdsQueryDVISOTOPESYSTEM: TWideStringField
       FieldName = 'ISOTOPESYSTEM'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
       Size = 15
     end
-    object cdsQueryDVAPPROACHABR: TStringField
+    object cdsQueryDVAPPROACHABR: TWideStringField
       FieldName = 'APPROACHABR'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
       Size = 5
     end
-    object cdsQueryDVINTERPABR: TStringField
+    object cdsQueryDVINTERPABR: TWideStringField
       FieldName = 'INTERPABR'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
@@ -109,12 +108,12 @@ object dmDV: TdmDV
       FieldName = 'IAGEMERROR'
       Required = True
     end
-    object cdsQueryDVAGEUNITS: TStringField
+    object cdsQueryDVAGEUNITS: TWideStringField
       FieldName = 'AGEUNITS'
       Required = True
       Size = 2
     end
-    object cdsQueryDVLITHOLOGY: TStringField
+    object cdsQueryDVLITHOLOGY: TWideStringField
       FieldName = 'LITHOLOGY'
       Required = True
       Size = 50
@@ -123,41 +122,41 @@ object dmDV: TdmDV
       FieldName = 'RECORDID'
       Required = True
     end
-    object cdsQueryDVCOUNTRY: TStringField
+    object cdsQueryDVCOUNTRY: TWideStringField
       FieldName = 'COUNTRY'
       Required = True
       Size = 30
     end
-    object cdsQueryDVMATERIALDESCRIPTION: TStringField
+    object cdsQueryDVMATERIALDESCRIPTION: TWideStringField
       FieldName = 'MATERIALDESCRIPTION'
       Required = True
       Size = 50
     end
-    object cdsQueryDVINTERPRETATION: TStringField
+    object cdsQueryDVINTERPRETATION: TWideStringField
       FieldName = 'INTERPRETATION'
       Required = True
       Size = 30
     end
-    object cdsQueryDVAPPROACHDESCRIPTION: TStringField
+    object cdsQueryDVAPPROACHDESCRIPTION: TWideStringField
       FieldName = 'APPROACHDESCRIPTION'
       Required = True
       Size = 50
     end
-    object cdsQueryDVISOSYSTEMNAME: TStringField
+    object cdsQueryDVISOSYSTEMNAME: TWideStringField
       FieldName = 'ISOSYSTEMNAME'
       Size = 30
     end
-    object cdsQueryDVWHOFORID: TStringField
+    object cdsQueryDVWHOFORID: TWideStringField
       FieldName = 'WHOFORID'
       Required = True
       Size = 5
     end
-    object cdsQueryDVTECHABR: TStringField
+    object cdsQueryDVTECHABR: TWideStringField
       FieldName = 'TECHABR'
       Required = True
       Size = 5
     end
-    object cdsQueryDVTECHNIQUE: TStringField
+    object cdsQueryDVTECHNIQUE: TWideStringField
       FieldName = 'TECHNIQUE'
       Size = 40
     end
@@ -258,17 +257,17 @@ object dmDV: TdmDV
     MaxBlobSize = -1
     Params = <
       item
-        DataType = ftUnknown
+        DataType = ftInteger
         Name = 'CHARTID'
         ParamType = ptInput
       end
       item
-        DataType = ftUnknown
+        DataType = ftFloat
         Name = 'CHARTMINAGE'
         ParamType = ptInput
       end
       item
-        DataType = ftUnknown
+        DataType = ftFloat
         Name = 'CHARTMAXAGE'
         ParamType = ptInput
       end>
@@ -333,28 +332,28 @@ object dmDV: TdmDV
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsDomainDatesINC4CHTYN: TStringField
+    object cdsDomainDatesINC4CHTYN: TWideStringField
       FieldName = 'INC4CHTYN'
       Required = True
       FixedChar = True
       Size = 1
     end
-    object cdsDomainDatesDOMAINNAME: TStringField
+    object cdsDomainDatesDOMAINNAME: TWideStringField
       FieldName = 'DOMAINNAME'
       Required = True
       Size = 150
     end
-    object cdsDomainDatesCOUNTRYID: TStringField
+    object cdsDomainDatesCOUNTRYID: TWideStringField
       FieldName = 'COUNTRYID'
       Required = True
       Size = 3
     end
-    object cdsDomainDatesUNITNAME: TStringField
+    object cdsDomainDatesUNITNAME: TWideStringField
       FieldName = 'UNITNAME'
       Required = True
       Size = 50
     end
-    object cdsDomainDatesRANKID: TStringField
+    object cdsDomainDatesRANKID: TWideStringField
       FieldName = 'RANKID'
       Required = True
       Size = 5
@@ -373,7 +372,7 @@ object dmDV: TdmDV
       FieldName = 'MAXAGE'
       Required = True
     end
-    object cdsDomainDatesUNITRANK: TStringField
+    object cdsDomainDatesUNITRANK: TWideStringField
       FieldName = 'UNITRANK'
       Required = True
     end
@@ -411,7 +410,7 @@ object dmDV: TdmDV
     ProviderName = 'dspDVUserDomains'
     Left = 182
     Top = 114
-    object cdsDVUserDomainsUSERID: TStringField
+    object cdsDVUserDomainsUSERID: TWideStringField
       FieldName = 'USERID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
@@ -481,7 +480,7 @@ object dmDV: TdmDV
     ProviderName = 'dspDVUser'
     Left = 182
     Top = 162
-    object cdsDVUserUSERNAMEID: TStringField
+    object cdsDVUserUSERNAMEID: TWideStringField
       FieldName = 'USERNAMEID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
@@ -579,37 +578,37 @@ object dmDV: TdmDV
       FieldName = 'DOMAINXMAX'
       Required = True
     end
-    object cdsDVDomainDatesProvincesCOUNTRYABR: TStringField
+    object cdsDVDomainDatesProvincesCOUNTRYABR: TWideStringField
       FieldName = 'COUNTRYABR'
       Required = True
       Size = 3
     end
-    object cdsDVDomainDatesProvincesUNITNAME: TStringField
+    object cdsDVDomainDatesProvincesUNITNAME: TWideStringField
       FieldName = 'UNITNAME'
       Required = True
       Size = 50
     end
-    object cdsDVDomainDatesProvincesMATERIALABR: TStringField
+    object cdsDVDomainDatesProvincesMATERIALABR: TWideStringField
       FieldName = 'MATERIALABR'
       Required = True
       Size = 5
     end
-    object cdsDVDomainDatesProvincesISOTOPESYSTEM: TStringField
+    object cdsDVDomainDatesProvincesISOTOPESYSTEM: TWideStringField
       FieldName = 'ISOTOPESYSTEM'
       Required = True
       Size = 15
     end
-    object cdsDVDomainDatesProvincesAPPROACHABR: TStringField
+    object cdsDVDomainDatesProvincesAPPROACHABR: TWideStringField
       FieldName = 'APPROACHABR'
       Required = True
       Size = 5
     end
-    object cdsDVDomainDatesProvincesTECHABR: TStringField
+    object cdsDVDomainDatesProvincesTECHABR: TWideStringField
       FieldName = 'TECHABR'
       Required = True
       Size = 5
     end
-    object cdsDVDomainDatesProvincesINTERPABR: TStringField
+    object cdsDVDomainDatesProvincesINTERPABR: TWideStringField
       FieldName = 'INTERPABR'
       Required = True
       Size = 5
@@ -626,12 +625,12 @@ object dmDV: TdmDV
       FieldName = 'IAGEMERROR'
       Required = True
     end
-    object cdsDVDomainDatesProvincesAGEUNITS: TStringField
+    object cdsDVDomainDatesProvincesAGEUNITS: TWideStringField
       FieldName = 'AGEUNITS'
       Required = True
       Size = 2
     end
-    object cdsDVDomainDatesProvincesLITHOLOGY: TStringField
+    object cdsDVDomainDatesProvincesLITHOLOGY: TWideStringField
       FieldName = 'LITHOLOGY'
       Required = True
       Size = 50
@@ -653,7 +652,7 @@ object dmDV: TdmDV
       FieldName = 'PREFLEVEL'
       Required = True
     end
-    object cdsDVDomainDatesProvincesDOMAINNAME: TStringField
+    object cdsDVDomainDatesProvincesDOMAINNAME: TWideStringField
       FieldName = 'DOMAINNAME'
       Required = True
       Size = 30
@@ -669,30 +668,21 @@ object dmDV: TdmDV
     Top = 274
   end
   object sqlcDateView: TSQLConnection
-    ConnectionName = 'DateView_bromo2'
     DriverName = 'DevartFirebird'
     LoginPrompt = False
     Params.Strings = (
       'VendorLibOsx=libfbclient.dylib'
       'GetDriverFunc=getSQLDriverFirebird'
-      'LibraryName=dbexpida41.dll'
-      'VendorLib=fbclient.dll'
-      'DataBase=bromo2.usask.ca:s:\data\firebird\dateview2021v30.fdb'
+      'LibraryName=c:\exe32\dbexpida41.dll'
+      'VendorLib=c:\exe32\fbclient.dll'
+      'DataBase=c:\data\firebird\dateview2025v50_UTF8.fdb'
       'User_Name=SYSDBA'
       'Password=V0lcano3^'
       'SQLDialect=3'
-      'BlobSize=-1'
-      'ErrorResourceFile='
-      'LocaleCode=0000'
       'DevartFirebird TransIsolation=ReadCommitted'
       'ProductName=DevartFirebird'
-      
-        'DriverPackageLoader=TDBXDynalinkDriverLoader,DBXCommonDriver260.' +
-        'bpl'
-      
-        'MetaDataPackageLoader=TDBXDevartInterBaseMetaDataCommandFactory,' +
-        'DbxDevartInterBaseDriver260.bpl'
-      'DriverUnit=DbxDevartInterBase')
+      'UseUnicode=true'
+      'Charset=UTF8')
     Left = 24
     Top = 16
   end
@@ -758,28 +748,28 @@ object dmDV: TdmDV
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object StringField1: TStringField
+    object StringField1: TWideStringField
       FieldName = 'INC4CHTYN'
       Required = True
       FixedChar = True
       Size = 1
     end
-    object StringField2: TStringField
+    object StringField2: TWideStringField
       FieldName = 'DOMAINNAME'
       Required = True
       Size = 150
     end
-    object StringField3: TStringField
+    object StringField3: TWideStringField
       FieldName = 'COUNTRYID'
       Required = True
       Size = 3
     end
-    object StringField4: TStringField
+    object StringField4: TWideStringField
       FieldName = 'UNITNAME'
       Required = True
       Size = 50
     end
-    object StringField5: TStringField
+    object StringField5: TWideStringField
       FieldName = 'RANKID'
       Required = True
       Size = 5
@@ -798,7 +788,7 @@ object dmDV: TdmDV
       FieldName = 'MAXAGE'
       Required = True
     end
-    object StringField6: TStringField
+    object StringField6: TWideStringField
       FieldName = 'UNITRANK'
       Required = True
     end
@@ -841,12 +831,12 @@ object dmDV: TdmDV
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsSuiteUNITNAME: TStringField
+    object cdsSuiteUNITNAME: TWideStringField
       FieldName = 'UNITNAME'
       Required = True
       Size = 50
     end
-    object cdsSuiteUNITRANK: TStringField
+    object cdsSuiteUNITRANK: TWideStringField
       FieldName = 'UNITRANK'
       Required = True
       Size = 5
@@ -971,9 +961,10 @@ object dmDV: TdmDV
     ProviderName = 'dspCount'
     Left = 502
     Top = 14
-    object cdsCountCOUNT: TIntegerField
+    object cdsCountCOUNT: TFMTBCDField
       FieldName = 'COUNT'
-      Required = True
+      Precision = 20
+      Size = 0
     end
   end
   object dsCount: TDataSource
@@ -1029,7 +1020,7 @@ object dmDV: TdmDV
     ProviderName = 'dspDVpdf'
     Left = 174
     Top = 382
-    object cdsDVpdfCOUNTRYABR: TStringField
+    object cdsDVpdfCOUNTRYABR: TWideStringField
       FieldName = 'COUNTRYABR'
       Required = True
       Size = 3
@@ -1038,32 +1029,32 @@ object dmDV: TdmDV
       FieldName = 'UNITID'
       Required = True
     end
-    object cdsDVpdfMATERIALABR: TStringField
+    object cdsDVpdfMATERIALABR: TWideStringField
       FieldName = 'MATERIALABR'
       Required = True
       Size = 5
     end
-    object cdsDVpdfISOTOPESYSTEM: TStringField
+    object cdsDVpdfISOTOPESYSTEM: TWideStringField
       FieldName = 'ISOTOPESYSTEM'
       Required = True
       Size = 15
     end
-    object cdsDVpdfAPPROACHABR: TStringField
+    object cdsDVpdfAPPROACHABR: TWideStringField
       FieldName = 'APPROACHABR'
       Required = True
       Size = 5
     end
-    object cdsDVpdfTECHABR: TStringField
+    object cdsDVpdfTECHABR: TWideStringField
       FieldName = 'TECHABR'
       Required = True
       Size = 5
     end
-    object cdsDVpdfINTERPABR: TStringField
+    object cdsDVpdfINTERPABR: TWideStringField
       FieldName = 'INTERPABR'
       Required = True
       Size = 5
     end
-    object cdsDVpdfAGEUNITS: TStringField
+    object cdsDVpdfAGEUNITS: TWideStringField
       FieldName = 'AGEUNITS'
       Required = True
       Size = 2
@@ -1085,7 +1076,7 @@ object dmDV: TdmDV
       FieldName = 'RAGEMERROR'
       Required = True
     end
-    object cdsDVpdfWHOFORID: TStringField
+    object cdsDVpdfWHOFORID: TWideStringField
       FieldName = 'WHOFORID'
       Required = True
       Size = 5
@@ -1202,7 +1193,7 @@ object dmDV: TdmDV
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsUserUnitSuiteSamplesSAMPLENO: TStringField
+    object cdsUserUnitSuiteSamplesSAMPLENO: TWideStringField
       FieldName = 'SAMPLENO'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
@@ -1211,12 +1202,12 @@ object dmDV: TdmDV
       FieldName = 'STRATDBUNITID'
       Required = True
     end
-    object cdsUserUnitSuiteSamplesSTRATDBUNITNAME: TStringField
+    object cdsUserUnitSuiteSamplesSTRATDBUNITNAME: TWideStringField
       FieldName = 'STRATDBUNITNAME'
       Required = True
       Size = 50
     end
-    object cdsUserUnitSuiteSamplesSTRATDBUNITRANK: TStringField
+    object cdsUserUnitSuiteSamplesSTRATDBUNITRANK: TWideStringField
       FieldName = 'STRATDBUNITRANK'
       Required = True
       Size = 5
@@ -1236,12 +1227,12 @@ object dmDV: TdmDV
       Required = True
       DisplayFormat = '###0.00000'
     end
-    object cdsUserUnitSuiteSamplesCOUNTRYID: TStringField
+    object cdsUserUnitSuiteSamplesCOUNTRYID: TWideStringField
       FieldName = 'COUNTRYID'
       Required = True
       Size = 3
     end
-    object cdsUserUnitSuiteSamplesUSERID: TStringField
+    object cdsUserUnitSuiteSamplesUSERID: TWideStringField
       FieldName = 'USERID'
       Required = True
     end
@@ -1357,7 +1348,7 @@ object dmDV: TdmDV
     OnReconcileError = cdsAnyReconcileError
     Left = 96
     Top = 648
-    object cdsUserSamplesForUnitUSERID: TStringField
+    object cdsUserSamplesForUnitUSERID: TWideStringField
       FieldName = 'USERID'
       Required = True
     end
@@ -1365,7 +1356,7 @@ object dmDV: TdmDV
       FieldName = 'UNITID'
       Required = True
     end
-    object cdsUserSamplesForUnitSAMPLENO: TStringField
+    object cdsUserSamplesForUnitSAMPLENO: TWideStringField
       FieldName = 'SAMPLENO'
       Required = True
     end
@@ -1497,21 +1488,21 @@ object dmDV: TdmDV
     SQLConnection = sqlcDateView
     Left = 554
     Top = 134
-    object qRawSmpSAMPLENO: TStringField
+    object qRawSmpSAMPLENO: TWideStringField
       FieldName = 'SAMPLENO'
       Required = True
     end
-    object qRawSmpFRAC: TStringField
+    object qRawSmpFRAC: TWideStringField
       FieldName = 'FRAC'
       Required = True
       Size = 15
     end
-    object qRawSmpZONEID: TStringField
+    object qRawSmpZONEID: TWideStringField
       FieldName = 'ZONEID'
       Required = True
       Size = 2
     end
-    object qRawSmpREGASSOCID: TStringField
+    object qRawSmpREGASSOCID: TWideStringField
       FieldName = 'REGASSOCID'
       ProviderFlags = []
       ReadOnly = True
@@ -1535,23 +1526,23 @@ object dmDV: TdmDV
     ProviderName = 'dspRawSmp'
     Left = 638
     Top = 132
-    object cdsRawSmpSAMPLENO: TStringField
+    object cdsRawSmpSAMPLENO: TWideStringField
       FieldName = 'SAMPLENO'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsRawSmpFRAC: TStringField
+    object cdsRawSmpFRAC: TWideStringField
       FieldName = 'FRAC'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
       Size = 15
     end
-    object cdsRawSmpZONEID: TStringField
+    object cdsRawSmpZONEID: TWideStringField
       FieldName = 'ZONEID'
       Required = True
       Size = 2
     end
-    object cdsRawSmpREGASSOCID: TStringField
+    object cdsRawSmpREGASSOCID: TWideStringField
       FieldName = 'REGASSOCID'
       ProviderFlags = []
       ReadOnly = True
@@ -1712,21 +1703,21 @@ object dmDV: TdmDV
     SQLConnection = sqlcDateView
     Left = 552
     Top = 184
-    object qRawDataXSAMPLENO: TStringField
+    object qRawDataXSAMPLENO: TWideStringField
       FieldName = 'SAMPLENO'
       Required = True
     end
-    object qRawDataXFRAC: TStringField
+    object qRawDataXFRAC: TWideStringField
       FieldName = 'FRAC'
       Required = True
       Size = 15
     end
-    object qRawDataXISOSYSTEM: TStringField
+    object qRawDataXISOSYSTEM: TWideStringField
       FieldName = 'ISOSYSTEM'
       Required = True
       Size = 15
     end
-    object qRawDataXVARIABLEID: TStringField
+    object qRawDataXVARIABLEID: TWideStringField
       FieldName = 'VARIABLEID'
       Required = True
       Size = 15
@@ -1735,7 +1726,7 @@ object dmDV: TdmDV
       FieldName = 'DATAVALUE'
       Required = True
     end
-    object qRawDataXNORMALISINGSTANDARD: TStringField
+    object qRawDataXNORMALISINGSTANDARD: TWideStringField
       FieldName = 'NORMALISINGSTANDARD'
       Required = True
       Size = 10
@@ -1744,11 +1735,11 @@ object dmDV: TdmDV
       FieldName = 'STANDARDVALUE'
       Required = True
     end
-    object qRawDataXVARIABLENAME: TStringField
+    object qRawDataXVARIABLENAME: TWideStringField
       FieldName = 'VARIABLENAME'
       Size = 30
     end
-    object qRawDataXREGASSOCID: TStringField
+    object qRawDataXREGASSOCID: TWideStringField
       FieldName = 'REGASSOCID'
       ProviderFlags = []
       ReadOnly = True
@@ -1766,21 +1757,21 @@ object dmDV: TdmDV
     Params = <>
     Left = 604
     Top = 184
-    object cdsRawDataXSAMPLENO: TStringField
+    object cdsRawDataXSAMPLENO: TWideStringField
       FieldName = 'SAMPLENO'
       Required = True
     end
-    object cdsRawDataXFRAC: TStringField
+    object cdsRawDataXFRAC: TWideStringField
       FieldName = 'FRAC'
       Required = True
       Size = 15
     end
-    object cdsRawDataXISOSYSTEM: TStringField
+    object cdsRawDataXISOSYSTEM: TWideStringField
       FieldName = 'ISOSYSTEM'
       Required = True
       Size = 15
     end
-    object cdsRawDataXVARIABLEID: TStringField
+    object cdsRawDataXVARIABLEID: TWideStringField
       FieldName = 'VARIABLEID'
       Required = True
       Size = 15
@@ -1789,7 +1780,7 @@ object dmDV: TdmDV
       FieldName = 'DATAVALUE'
       Required = True
     end
-    object cdsRawDataXNORMALISINGSTANDARD: TStringField
+    object cdsRawDataXNORMALISINGSTANDARD: TWideStringField
       FieldName = 'NORMALISINGSTANDARD'
       Required = True
       Size = 10
@@ -1798,7 +1789,7 @@ object dmDV: TdmDV
       FieldName = 'STANDARDVALUE'
       Required = True
     end
-    object cdsRawDataXVARIABLENAME: TStringField
+    object cdsRawDataXVARIABLENAME: TWideStringField
       FieldName = 'VARIABLENAME'
       Size = 30
     end
@@ -1807,7 +1798,7 @@ object dmDV: TdmDV
       ProviderFlags = []
       ReadOnly = True
     end
-    object cdsRawDataXREGASSOCID: TStringField
+    object cdsRawDataXREGASSOCID: TWideStringField
       FieldName = 'REGASSOCID'
       ProviderFlags = []
       ReadOnly = True
@@ -1905,24 +1896,24 @@ object dmDV: TdmDV
     SQLConnection = sqlcDateView
     Left = 790
     Top = 186
-    object qRawNormalisedValueXSAMPLENO: TStringField
+    object qRawNormalisedValueXSAMPLENO: TWideStringField
       FieldName = 'SAMPLENO'
       ProviderFlags = []
       ReadOnly = True
     end
-    object qRawNormalisedValueXFRAC: TStringField
+    object qRawNormalisedValueXFRAC: TWideStringField
       FieldName = 'FRAC'
       ProviderFlags = []
       ReadOnly = True
       Size = 15
     end
-    object qRawNormalisedValueXISOSYSTEM: TStringField
+    object qRawNormalisedValueXISOSYSTEM: TWideStringField
       FieldName = 'ISOSYSTEM'
       ProviderFlags = []
       ReadOnly = True
       Size = 15
     end
-    object qRawNormalisedValueXVARIABLEID: TStringField
+    object qRawNormalisedValueXVARIABLEID: TWideStringField
       FieldName = 'VARIABLEID'
       ProviderFlags = []
       ReadOnly = True
@@ -1933,7 +1924,7 @@ object dmDV: TdmDV
       ProviderFlags = []
       ReadOnly = True
     end
-    object qRawNormalisedValueXNORMALISINGSTANDARD: TStringField
+    object qRawNormalisedValueXNORMALISINGSTANDARD: TWideStringField
       FieldName = 'NORMALISINGSTANDARD'
       ProviderFlags = []
       ReadOnly = True
@@ -1961,24 +1952,24 @@ object dmDV: TdmDV
     Params = <>
     Left = 818
     Top = 186
-    object cdsRawNormalisedValueXSAMPLENO: TStringField
+    object cdsRawNormalisedValueXSAMPLENO: TWideStringField
       FieldName = 'SAMPLENO'
       ProviderFlags = []
       ReadOnly = True
     end
-    object cdsRawNormalisedValueXFRAC: TStringField
+    object cdsRawNormalisedValueXFRAC: TWideStringField
       FieldName = 'FRAC'
       ProviderFlags = []
       ReadOnly = True
       Size = 15
     end
-    object cdsRawNormalisedValueXISOSYSTEM: TStringField
+    object cdsRawNormalisedValueXISOSYSTEM: TWideStringField
       FieldName = 'ISOSYSTEM'
       ProviderFlags = []
       ReadOnly = True
       Size = 15
     end
-    object cdsRawNormalisedValueXVARIABLEID: TStringField
+    object cdsRawNormalisedValueXVARIABLEID: TWideStringField
       FieldName = 'VARIABLEID'
       ProviderFlags = []
       ReadOnly = True
@@ -1989,7 +1980,7 @@ object dmDV: TdmDV
       ProviderFlags = []
       ReadOnly = True
     end
-    object cdsRawNormalisedValueXNORMALISINGSTANDARD: TStringField
+    object cdsRawNormalisedValueXNORMALISINGSTANDARD: TWideStringField
       FieldName = 'NORMALISINGSTANDARD'
       ProviderFlags = []
       ReadOnly = True
@@ -2054,24 +2045,24 @@ object dmDV: TdmDV
     SQLConnection = sqlcDateView
     Left = 550
     Top = 232
-    object qRawDataXerrSAMPLENO: TStringField
+    object qRawDataXerrSAMPLENO: TWideStringField
       FieldName = 'SAMPLENO'
       ProviderFlags = []
       ReadOnly = True
     end
-    object qRawDataXerrFRAC: TStringField
+    object qRawDataXerrFRAC: TWideStringField
       FieldName = 'FRAC'
       ProviderFlags = []
       ReadOnly = True
       Size = 15
     end
-    object qRawDataXerrISOSYSTEM: TStringField
+    object qRawDataXerrISOSYSTEM: TWideStringField
       FieldName = 'ISOSYSTEM'
       ProviderFlags = []
       ReadOnly = True
       Size = 15
     end
-    object qRawDataXerrVARIABLEID: TStringField
+    object qRawDataXerrVARIABLEID: TWideStringField
       FieldName = 'VARIABLEID'
       ProviderFlags = []
       ReadOnly = True
@@ -2082,7 +2073,7 @@ object dmDV: TdmDV
       ProviderFlags = []
       ReadOnly = True
     end
-    object qRawDataXerrNORMALISINGSTANDARD: TStringField
+    object qRawDataXerrNORMALISINGSTANDARD: TWideStringField
       FieldName = 'NORMALISINGSTANDARD'
       ProviderFlags = []
       ReadOnly = True
@@ -2093,7 +2084,7 @@ object dmDV: TdmDV
       ProviderFlags = []
       ReadOnly = True
     end
-    object qRawDataXerrVARIABLENAME: TStringField
+    object qRawDataXerrVARIABLENAME: TWideStringField
       FieldName = 'VARIABLENAME'
       ProviderFlags = []
       ReadOnly = True
@@ -2111,24 +2102,24 @@ object dmDV: TdmDV
     Params = <>
     Left = 606
     Top = 232
-    object cdsRawDataXerrSAMPLENO: TStringField
+    object cdsRawDataXerrSAMPLENO: TWideStringField
       FieldName = 'SAMPLENO'
       ProviderFlags = []
       ReadOnly = True
     end
-    object cdsRawDataXerrFRAC: TStringField
+    object cdsRawDataXerrFRAC: TWideStringField
       FieldName = 'FRAC'
       ProviderFlags = []
       ReadOnly = True
       Size = 15
     end
-    object cdsRawDataXerrISOSYSTEM: TStringField
+    object cdsRawDataXerrISOSYSTEM: TWideStringField
       FieldName = 'ISOSYSTEM'
       ProviderFlags = []
       ReadOnly = True
       Size = 15
     end
-    object cdsRawDataXerrVARIABLEID: TStringField
+    object cdsRawDataXerrVARIABLEID: TWideStringField
       FieldName = 'VARIABLEID'
       ProviderFlags = []
       ReadOnly = True
@@ -2139,7 +2130,7 @@ object dmDV: TdmDV
       ProviderFlags = []
       ReadOnly = True
     end
-    object cdsRawDataXerrNORMALISINGSTANDARD: TStringField
+    object cdsRawDataXerrNORMALISINGSTANDARD: TWideStringField
       FieldName = 'NORMALISINGSTANDARD'
       ProviderFlags = []
       ReadOnly = True
@@ -2150,7 +2141,7 @@ object dmDV: TdmDV
       ProviderFlags = []
       ReadOnly = True
     end
-    object cdsRawDataXerrVARIABLENAME: TStringField
+    object cdsRawDataXerrVARIABLENAME: TWideStringField
       FieldName = 'VARIABLENAME'
       ProviderFlags = []
       ReadOnly = True
@@ -2198,24 +2189,24 @@ object dmDV: TdmDV
     SQLConnection = sqlcDateView
     Left = 686
     Top = 234
-    object qRawErrTypeXSAMPLENO: TStringField
+    object qRawErrTypeXSAMPLENO: TWideStringField
       FieldName = 'SAMPLENO'
       ProviderFlags = []
       ReadOnly = True
     end
-    object qRawErrTypeXFRAC: TStringField
+    object qRawErrTypeXFRAC: TWideStringField
       FieldName = 'FRAC'
       ProviderFlags = []
       ReadOnly = True
       Size = 15
     end
-    object qRawErrTypeXISOSYSTEM: TStringField
+    object qRawErrTypeXISOSYSTEM: TWideStringField
       FieldName = 'ISOSYSTEM'
       ProviderFlags = []
       ReadOnly = True
       Size = 15
     end
-    object qRawErrTypeXVARIABLEID: TStringField
+    object qRawErrTypeXVARIABLEID: TWideStringField
       FieldName = 'VARIABLEID'
       ProviderFlags = []
       ReadOnly = True
@@ -2226,7 +2217,7 @@ object dmDV: TdmDV
       ProviderFlags = []
       ReadOnly = True
     end
-    object qRawErrTypeXNORMALISINGSTANDARD: TStringField
+    object qRawErrTypeXNORMALISINGSTANDARD: TWideStringField
       FieldName = 'NORMALISINGSTANDARD'
       ProviderFlags = []
       ReadOnly = True
@@ -2237,7 +2228,7 @@ object dmDV: TdmDV
       ProviderFlags = []
       ReadOnly = True
     end
-    object qRawErrTypeXVARIABLENAME: TStringField
+    object qRawErrTypeXVARIABLENAME: TWideStringField
       FieldName = 'VARIABLENAME'
       ProviderFlags = []
       ReadOnly = True
@@ -2250,24 +2241,24 @@ object dmDV: TdmDV
     Params = <>
     Left = 714
     Top = 234
-    object cdsRawErrTypeXSAMPLENO: TStringField
+    object cdsRawErrTypeXSAMPLENO: TWideStringField
       FieldName = 'SAMPLENO'
       ProviderFlags = []
       ReadOnly = True
     end
-    object cdsRawErrTypeXFRAC: TStringField
+    object cdsRawErrTypeXFRAC: TWideStringField
       FieldName = 'FRAC'
       ProviderFlags = []
       ReadOnly = True
       Size = 15
     end
-    object cdsRawErrTypeXISOSYSTEM: TStringField
+    object cdsRawErrTypeXISOSYSTEM: TWideStringField
       FieldName = 'ISOSYSTEM'
       ProviderFlags = []
       ReadOnly = True
       Size = 15
     end
-    object cdsRawErrTypeXVARIABLEID: TStringField
+    object cdsRawErrTypeXVARIABLEID: TWideStringField
       FieldName = 'VARIABLEID'
       ProviderFlags = []
       ReadOnly = True
@@ -2278,7 +2269,7 @@ object dmDV: TdmDV
       ProviderFlags = []
       ReadOnly = True
     end
-    object cdsRawErrTypeXNORMALISINGSTANDARD: TStringField
+    object cdsRawErrTypeXNORMALISINGSTANDARD: TWideStringField
       FieldName = 'NORMALISINGSTANDARD'
       ProviderFlags = []
       ReadOnly = True
@@ -2289,7 +2280,7 @@ object dmDV: TdmDV
       ProviderFlags = []
       ReadOnly = True
     end
-    object cdsRawErrTypeXVARIABLENAME: TStringField
+    object cdsRawErrTypeXVARIABLENAME: TWideStringField
       FieldName = 'VARIABLENAME'
       ProviderFlags = []
       ReadOnly = True
@@ -2335,24 +2326,24 @@ object dmDV: TdmDV
     SQLConnection = sqlcDateView
     Left = 552
     Top = 278
-    object qRawDataPrecXSAMPLENO: TStringField
+    object qRawDataPrecXSAMPLENO: TWideStringField
       FieldName = 'SAMPLENO'
       ProviderFlags = []
       ReadOnly = True
     end
-    object qRawDataPrecXFRAC: TStringField
+    object qRawDataPrecXFRAC: TWideStringField
       FieldName = 'FRAC'
       ProviderFlags = []
       ReadOnly = True
       Size = 15
     end
-    object qRawDataPrecXISOSYSTEM: TStringField
+    object qRawDataPrecXISOSYSTEM: TWideStringField
       FieldName = 'ISOSYSTEM'
       ProviderFlags = []
       ReadOnly = True
       Size = 15
     end
-    object qRawDataPrecXVARIABLEID: TStringField
+    object qRawDataPrecXVARIABLEID: TWideStringField
       FieldName = 'VARIABLEID'
       ProviderFlags = []
       ReadOnly = True
@@ -2370,24 +2361,24 @@ object dmDV: TdmDV
     Params = <>
     Left = 604
     Top = 278
-    object cdsRawDataPrecXSAMPLENO: TStringField
+    object cdsRawDataPrecXSAMPLENO: TWideStringField
       FieldName = 'SAMPLENO'
       ProviderFlags = []
       ReadOnly = True
     end
-    object cdsRawDataPrecXFRAC: TStringField
+    object cdsRawDataPrecXFRAC: TWideStringField
       FieldName = 'FRAC'
       ProviderFlags = []
       ReadOnly = True
       Size = 15
     end
-    object cdsRawDataPrecXISOSYSTEM: TStringField
+    object cdsRawDataPrecXISOSYSTEM: TWideStringField
       FieldName = 'ISOSYSTEM'
       ProviderFlags = []
       ReadOnly = True
       Size = 15
     end
-    object cdsRawDataPrecXVARIABLEID: TStringField
+    object cdsRawDataPrecXVARIABLEID: TWideStringField
       FieldName = 'VARIABLEID'
       ProviderFlags = []
       ReadOnly = True
@@ -2442,21 +2433,21 @@ object dmDV: TdmDV
     SQLConnection = sqlcDateView
     Left = 552
     Top = 322
-    object qRawDataYSAMPLENO: TStringField
+    object qRawDataYSAMPLENO: TWideStringField
       FieldName = 'SAMPLENO'
       Required = True
     end
-    object qRawDataYFRAC: TStringField
+    object qRawDataYFRAC: TWideStringField
       FieldName = 'FRAC'
       Required = True
       Size = 15
     end
-    object qRawDataYISOSYSTEM: TStringField
+    object qRawDataYISOSYSTEM: TWideStringField
       FieldName = 'ISOSYSTEM'
       Required = True
       Size = 15
     end
-    object qRawDataYVARIABLEID: TStringField
+    object qRawDataYVARIABLEID: TWideStringField
       FieldName = 'VARIABLEID'
       Required = True
       Size = 15
@@ -2465,7 +2456,7 @@ object dmDV: TdmDV
       FieldName = 'DATAVALUE'
       Required = True
     end
-    object qRawDataYNORMALISINGSTANDARD: TStringField
+    object qRawDataYNORMALISINGSTANDARD: TWideStringField
       FieldName = 'NORMALISINGSTANDARD'
       Required = True
       Size = 10
@@ -2474,11 +2465,11 @@ object dmDV: TdmDV
       FieldName = 'STANDARDVALUE'
       Required = True
     end
-    object qRawDataYVARIABLENAME: TStringField
+    object qRawDataYVARIABLENAME: TWideStringField
       FieldName = 'VARIABLENAME'
       Size = 30
     end
-    object qRawDataYREGASSOCID: TStringField
+    object qRawDataYREGASSOCID: TWideStringField
       FieldName = 'REGASSOCID'
       ProviderFlags = []
       ReadOnly = True
@@ -2496,21 +2487,21 @@ object dmDV: TdmDV
     Params = <>
     Left = 604
     Top = 322
-    object cdsRawDataYSAMPLENO: TStringField
+    object cdsRawDataYSAMPLENO: TWideStringField
       FieldName = 'SAMPLENO'
       Required = True
     end
-    object cdsRawDataYFRAC: TStringField
+    object cdsRawDataYFRAC: TWideStringField
       FieldName = 'FRAC'
       Required = True
       Size = 15
     end
-    object cdsRawDataYISOSYSTEM: TStringField
+    object cdsRawDataYISOSYSTEM: TWideStringField
       FieldName = 'ISOSYSTEM'
       Required = True
       Size = 15
     end
-    object cdsRawDataYVARIABLEID: TStringField
+    object cdsRawDataYVARIABLEID: TWideStringField
       FieldName = 'VARIABLEID'
       Required = True
       Size = 15
@@ -2519,7 +2510,7 @@ object dmDV: TdmDV
       FieldName = 'DATAVALUE'
       Required = True
     end
-    object cdsRawDataYNORMALISINGSTANDARD: TStringField
+    object cdsRawDataYNORMALISINGSTANDARD: TWideStringField
       FieldName = 'NORMALISINGSTANDARD'
       Required = True
       Size = 10
@@ -2528,7 +2519,7 @@ object dmDV: TdmDV
       FieldName = 'STANDARDVALUE'
       Required = True
     end
-    object cdsRawDataYVARIABLENAME: TStringField
+    object cdsRawDataYVARIABLENAME: TWideStringField
       FieldName = 'VARIABLENAME'
       Size = 30
     end
@@ -2537,7 +2528,7 @@ object dmDV: TdmDV
       ProviderFlags = []
       ReadOnly = True
     end
-    object cdsRawDataYREGASSOCID: TStringField
+    object cdsRawDataYREGASSOCID: TWideStringField
       FieldName = 'REGASSOCID'
       ProviderFlags = []
       ReadOnly = True
@@ -2637,24 +2628,24 @@ object dmDV: TdmDV
     SQLConnection = sqlcDateView
     Left = 794
     Top = 324
-    object qRawNormalisedValueYSAMPLENO: TStringField
+    object qRawNormalisedValueYSAMPLENO: TWideStringField
       FieldName = 'SAMPLENO'
       ProviderFlags = []
       ReadOnly = True
     end
-    object qRawNormalisedValueYFRAC: TStringField
+    object qRawNormalisedValueYFRAC: TWideStringField
       FieldName = 'FRAC'
       ProviderFlags = []
       ReadOnly = True
       Size = 15
     end
-    object qRawNormalisedValueYISOSYSTEM: TStringField
+    object qRawNormalisedValueYISOSYSTEM: TWideStringField
       FieldName = 'ISOSYSTEM'
       ProviderFlags = []
       ReadOnly = True
       Size = 15
     end
-    object qRawNormalisedValueYVARIABLEID: TStringField
+    object qRawNormalisedValueYVARIABLEID: TWideStringField
       FieldName = 'VARIABLEID'
       ProviderFlags = []
       ReadOnly = True
@@ -2665,7 +2656,7 @@ object dmDV: TdmDV
       ProviderFlags = []
       ReadOnly = True
     end
-    object qRawNormalisedValueYNORMALISINGSTANDARD: TStringField
+    object qRawNormalisedValueYNORMALISINGSTANDARD: TWideStringField
       FieldName = 'NORMALISINGSTANDARD'
       ProviderFlags = []
       ReadOnly = True
@@ -2693,24 +2684,24 @@ object dmDV: TdmDV
     Params = <>
     Left = 822
     Top = 324
-    object cdsRawNormalisedValueYSAMPLENO: TStringField
+    object cdsRawNormalisedValueYSAMPLENO: TWideStringField
       FieldName = 'SAMPLENO'
       ProviderFlags = []
       ReadOnly = True
     end
-    object cdsRawNormalisedValueYFRAC: TStringField
+    object cdsRawNormalisedValueYFRAC: TWideStringField
       FieldName = 'FRAC'
       ProviderFlags = []
       ReadOnly = True
       Size = 15
     end
-    object cdsRawNormalisedValueYISOSYSTEM: TStringField
+    object cdsRawNormalisedValueYISOSYSTEM: TWideStringField
       FieldName = 'ISOSYSTEM'
       ProviderFlags = []
       ReadOnly = True
       Size = 15
     end
-    object cdsRawNormalisedValueYVARIABLEID: TStringField
+    object cdsRawNormalisedValueYVARIABLEID: TWideStringField
       FieldName = 'VARIABLEID'
       ProviderFlags = []
       ReadOnly = True
@@ -2721,7 +2712,7 @@ object dmDV: TdmDV
       ProviderFlags = []
       ReadOnly = True
     end
-    object cdsRawNormalisedValueYNORMALISINGSTANDARD: TStringField
+    object cdsRawNormalisedValueYNORMALISINGSTANDARD: TWideStringField
       FieldName = 'NORMALISINGSTANDARD'
       ProviderFlags = []
       ReadOnly = True
@@ -2786,24 +2777,24 @@ object dmDV: TdmDV
     SQLConnection = sqlcDateView
     Left = 554
     Top = 368
-    object qRawDataYerrSAMPLENO: TStringField
+    object qRawDataYerrSAMPLENO: TWideStringField
       FieldName = 'SAMPLENO'
       ProviderFlags = []
       ReadOnly = True
     end
-    object qRawDataYerrFRAC: TStringField
+    object qRawDataYerrFRAC: TWideStringField
       FieldName = 'FRAC'
       ProviderFlags = []
       ReadOnly = True
       Size = 15
     end
-    object qRawDataYerrISOSYSTEM: TStringField
+    object qRawDataYerrISOSYSTEM: TWideStringField
       FieldName = 'ISOSYSTEM'
       ProviderFlags = []
       ReadOnly = True
       Size = 15
     end
-    object qRawDataYerrVARIABLEID: TStringField
+    object qRawDataYerrVARIABLEID: TWideStringField
       FieldName = 'VARIABLEID'
       ProviderFlags = []
       ReadOnly = True
@@ -2814,7 +2805,7 @@ object dmDV: TdmDV
       ProviderFlags = []
       ReadOnly = True
     end
-    object qRawDataYerrNORMALISINGSTANDARD: TStringField
+    object qRawDataYerrNORMALISINGSTANDARD: TWideStringField
       FieldName = 'NORMALISINGSTANDARD'
       ProviderFlags = []
       ReadOnly = True
@@ -2825,7 +2816,7 @@ object dmDV: TdmDV
       ProviderFlags = []
       ReadOnly = True
     end
-    object qRawDataYerrVARIABLENAME: TStringField
+    object qRawDataYerrVARIABLENAME: TWideStringField
       FieldName = 'VARIABLENAME'
       ProviderFlags = []
       ReadOnly = True
@@ -2843,24 +2834,24 @@ object dmDV: TdmDV
     Params = <>
     Left = 606
     Top = 368
-    object cdsRawDataYerrSAMPLENO: TStringField
+    object cdsRawDataYerrSAMPLENO: TWideStringField
       FieldName = 'SAMPLENO'
       ProviderFlags = []
       ReadOnly = True
     end
-    object cdsRawDataYerrFRAC: TStringField
+    object cdsRawDataYerrFRAC: TWideStringField
       FieldName = 'FRAC'
       ProviderFlags = []
       ReadOnly = True
       Size = 15
     end
-    object cdsRawDataYerrISOSYSTEM: TStringField
+    object cdsRawDataYerrISOSYSTEM: TWideStringField
       FieldName = 'ISOSYSTEM'
       ProviderFlags = []
       ReadOnly = True
       Size = 15
     end
-    object cdsRawDataYerrVARIABLEID: TStringField
+    object cdsRawDataYerrVARIABLEID: TWideStringField
       FieldName = 'VARIABLEID'
       ProviderFlags = []
       ReadOnly = True
@@ -2871,7 +2862,7 @@ object dmDV: TdmDV
       ProviderFlags = []
       ReadOnly = True
     end
-    object cdsRawDataYerrNORMALISINGSTANDARD: TStringField
+    object cdsRawDataYerrNORMALISINGSTANDARD: TWideStringField
       FieldName = 'NORMALISINGSTANDARD'
       ProviderFlags = []
       ReadOnly = True
@@ -2882,7 +2873,7 @@ object dmDV: TdmDV
       ProviderFlags = []
       ReadOnly = True
     end
-    object cdsRawDataYerrVARIABLENAME: TStringField
+    object cdsRawDataYerrVARIABLENAME: TWideStringField
       FieldName = 'VARIABLENAME'
       ProviderFlags = []
       ReadOnly = True
@@ -2932,24 +2923,24 @@ object dmDV: TdmDV
     SQLConnection = sqlcDateView
     Left = 688
     Top = 372
-    object qRawDataRSAMPLENO: TStringField
+    object qRawDataRSAMPLENO: TWideStringField
       FieldName = 'SAMPLENO'
       ProviderFlags = []
       ReadOnly = True
     end
-    object qRawDataRFRAC: TStringField
+    object qRawDataRFRAC: TWideStringField
       FieldName = 'FRAC'
       ProviderFlags = []
       ReadOnly = True
       Size = 15
     end
-    object qRawDataRISOSYSTEM: TStringField
+    object qRawDataRISOSYSTEM: TWideStringField
       FieldName = 'ISOSYSTEM'
       ProviderFlags = []
       ReadOnly = True
       Size = 15
     end
-    object qRawDataRVARIABLEID: TStringField
+    object qRawDataRVARIABLEID: TWideStringField
       FieldName = 'VARIABLEID'
       ProviderFlags = []
       ReadOnly = True
@@ -2960,7 +2951,7 @@ object dmDV: TdmDV
       ProviderFlags = []
       ReadOnly = True
     end
-    object qRawDataRNORMALISINGSTANDARD: TStringField
+    object qRawDataRNORMALISINGSTANDARD: TWideStringField
       FieldName = 'NORMALISINGSTANDARD'
       ProviderFlags = []
       ReadOnly = True
@@ -2971,7 +2962,7 @@ object dmDV: TdmDV
       ProviderFlags = []
       ReadOnly = True
     end
-    object qRawDataRVARIABLENAME: TStringField
+    object qRawDataRVARIABLENAME: TWideStringField
       FieldName = 'VARIABLENAME'
       ProviderFlags = []
       ReadOnly = True
@@ -2984,24 +2975,24 @@ object dmDV: TdmDV
     Params = <>
     Left = 714
     Top = 370
-    object cdsRawErrTypeYSAMPLENO: TStringField
+    object cdsRawErrTypeYSAMPLENO: TWideStringField
       FieldName = 'SAMPLENO'
       ProviderFlags = []
       ReadOnly = True
     end
-    object cdsRawErrTypeYFRAC: TStringField
+    object cdsRawErrTypeYFRAC: TWideStringField
       FieldName = 'FRAC'
       ProviderFlags = []
       ReadOnly = True
       Size = 15
     end
-    object cdsRawErrTypeYISOSYSTEM: TStringField
+    object cdsRawErrTypeYISOSYSTEM: TWideStringField
       FieldName = 'ISOSYSTEM'
       ProviderFlags = []
       ReadOnly = True
       Size = 15
     end
-    object cdsRawErrTypeYVARIABLEID: TStringField
+    object cdsRawErrTypeYVARIABLEID: TWideStringField
       FieldName = 'VARIABLEID'
       ProviderFlags = []
       ReadOnly = True
@@ -3012,7 +3003,7 @@ object dmDV: TdmDV
       ProviderFlags = []
       ReadOnly = True
     end
-    object cdsRawErrTypeYNORMALISINGSTANDARD: TStringField
+    object cdsRawErrTypeYNORMALISINGSTANDARD: TWideStringField
       FieldName = 'NORMALISINGSTANDARD'
       ProviderFlags = []
       ReadOnly = True
@@ -3023,7 +3014,7 @@ object dmDV: TdmDV
       ProviderFlags = []
       ReadOnly = True
     end
-    object cdsRawErrTypeYVARIABLENAME: TStringField
+    object cdsRawErrTypeYVARIABLENAME: TWideStringField
       FieldName = 'VARIABLENAME'
       ProviderFlags = []
       ReadOnly = True
@@ -3069,24 +3060,24 @@ object dmDV: TdmDV
     SQLConnection = sqlcDateView
     Left = 552
     Top = 414
-    object qRawDataPrecYSAMPLENO: TStringField
+    object qRawDataPrecYSAMPLENO: TWideStringField
       FieldName = 'SAMPLENO'
       ProviderFlags = []
       ReadOnly = True
     end
-    object qRawDataPrecYFRAC: TStringField
+    object qRawDataPrecYFRAC: TWideStringField
       FieldName = 'FRAC'
       ProviderFlags = []
       ReadOnly = True
       Size = 15
     end
-    object qRawDataPrecYISOSYSTEM: TStringField
+    object qRawDataPrecYISOSYSTEM: TWideStringField
       FieldName = 'ISOSYSTEM'
       ProviderFlags = []
       ReadOnly = True
       Size = 15
     end
-    object qRawDataPrecYVARIABLEID: TStringField
+    object qRawDataPrecYVARIABLEID: TWideStringField
       FieldName = 'VARIABLEID'
       ProviderFlags = []
       ReadOnly = True
@@ -3104,24 +3095,24 @@ object dmDV: TdmDV
     Params = <>
     Left = 604
     Top = 414
-    object cdsRawDataPrecYSAMPLENO: TStringField
+    object cdsRawDataPrecYSAMPLENO: TWideStringField
       FieldName = 'SAMPLENO'
       ProviderFlags = []
       ReadOnly = True
     end
-    object cdsRawDataPrecYFRAC: TStringField
+    object cdsRawDataPrecYFRAC: TWideStringField
       FieldName = 'FRAC'
       ProviderFlags = []
       ReadOnly = True
       Size = 15
     end
-    object cdsRawDataPrecYISOSYSTEM: TStringField
+    object cdsRawDataPrecYISOSYSTEM: TWideStringField
       FieldName = 'ISOSYSTEM'
       ProviderFlags = []
       ReadOnly = True
       Size = 15
     end
-    object cdsRawDataPrecYVARIABLEID: TStringField
+    object cdsRawDataPrecYVARIABLEID: TWideStringField
       FieldName = 'VARIABLEID'
       ProviderFlags = []
       ReadOnly = True
@@ -3174,24 +3165,24 @@ object dmDV: TdmDV
     SQLConnection = sqlcDateView
     Left = 686
     Top = 410
-    object qRawErrTypeYSAMPLENO: TStringField
+    object qRawErrTypeYSAMPLENO: TWideStringField
       FieldName = 'SAMPLENO'
       ProviderFlags = []
       ReadOnly = True
     end
-    object qRawErrTypeYFRAC: TStringField
+    object qRawErrTypeYFRAC: TWideStringField
       FieldName = 'FRAC'
       ProviderFlags = []
       ReadOnly = True
       Size = 15
     end
-    object qRawErrTypeYISOSYSTEM: TStringField
+    object qRawErrTypeYISOSYSTEM: TWideStringField
       FieldName = 'ISOSYSTEM'
       ProviderFlags = []
       ReadOnly = True
       Size = 15
     end
-    object qRawErrTypeYVARIABLEID: TStringField
+    object qRawErrTypeYVARIABLEID: TWideStringField
       FieldName = 'VARIABLEID'
       ProviderFlags = []
       ReadOnly = True
@@ -3202,7 +3193,7 @@ object dmDV: TdmDV
       ProviderFlags = []
       ReadOnly = True
     end
-    object qRawErrTypeYNORMALISINGSTANDARD: TStringField
+    object qRawErrTypeYNORMALISINGSTANDARD: TWideStringField
       FieldName = 'NORMALISINGSTANDARD'
       ProviderFlags = []
       ReadOnly = True
@@ -3213,7 +3204,7 @@ object dmDV: TdmDV
       ProviderFlags = []
       ReadOnly = True
     end
-    object qRawErrTypeYVARIABLENAME: TStringField
+    object qRawErrTypeYVARIABLENAME: TWideStringField
       FieldName = 'VARIABLENAME'
       ProviderFlags = []
       ReadOnly = True
@@ -3226,24 +3217,24 @@ object dmDV: TdmDV
     Params = <>
     Left = 716
     Top = 412
-    object cdsRawDataRSAMPLENO: TStringField
+    object cdsRawDataRSAMPLENO: TWideStringField
       FieldName = 'SAMPLENO'
       ProviderFlags = []
       ReadOnly = True
     end
-    object cdsRawDataRFRAC: TStringField
+    object cdsRawDataRFRAC: TWideStringField
       FieldName = 'FRAC'
       ProviderFlags = []
       ReadOnly = True
       Size = 15
     end
-    object cdsRawDataRISOSYSTEM: TStringField
+    object cdsRawDataRISOSYSTEM: TWideStringField
       FieldName = 'ISOSYSTEM'
       ProviderFlags = []
       ReadOnly = True
       Size = 15
     end
-    object cdsRawDataRVARIABLEID: TStringField
+    object cdsRawDataRVARIABLEID: TWideStringField
       FieldName = 'VARIABLEID'
       ProviderFlags = []
       ReadOnly = True
@@ -3254,7 +3245,7 @@ object dmDV: TdmDV
       ProviderFlags = []
       ReadOnly = True
     end
-    object cdsRawDataRNORMALISINGSTANDARD: TStringField
+    object cdsRawDataRNORMALISINGSTANDARD: TWideStringField
       FieldName = 'NORMALISINGSTANDARD'
       ProviderFlags = []
       ReadOnly = True
@@ -3265,7 +3256,7 @@ object dmDV: TdmDV
       ProviderFlags = []
       ReadOnly = True
     end
-    object cdsRawDataRVARIABLENAME: TStringField
+    object cdsRawDataRVARIABLENAME: TWideStringField
       FieldName = 'VARIABLENAME'
       ProviderFlags = []
       ReadOnly = True
@@ -3315,21 +3306,21 @@ object dmDV: TdmDV
     SQLConnection = sqlcDateView
     Left = 556
     Top = 457
-    object qRawDataZSAMPLENO: TStringField
+    object qRawDataZSAMPLENO: TWideStringField
       FieldName = 'SAMPLENO'
       Required = True
     end
-    object qRawDataZFRAC: TStringField
+    object qRawDataZFRAC: TWideStringField
       FieldName = 'FRAC'
       Required = True
       Size = 15
     end
-    object qRawDataZISOSYSTEM: TStringField
+    object qRawDataZISOSYSTEM: TWideStringField
       FieldName = 'ISOSYSTEM'
       Required = True
       Size = 15
     end
-    object qRawDataZVARIABLEID: TStringField
+    object qRawDataZVARIABLEID: TWideStringField
       FieldName = 'VARIABLEID'
       Required = True
       Size = 15
@@ -3338,7 +3329,7 @@ object dmDV: TdmDV
       FieldName = 'DATAVALUE'
       Required = True
     end
-    object qRawDataZNORMALISINGSTANDARD: TStringField
+    object qRawDataZNORMALISINGSTANDARD: TWideStringField
       FieldName = 'NORMALISINGSTANDARD'
       Required = True
       Size = 10
@@ -3347,11 +3338,11 @@ object dmDV: TdmDV
       FieldName = 'STANDARDVALUE'
       Required = True
     end
-    object qRawDataZVARIABLENAME: TStringField
+    object qRawDataZVARIABLENAME: TWideStringField
       FieldName = 'VARIABLENAME'
       Size = 30
     end
-    object qRawDataZREGASSOCID: TStringField
+    object qRawDataZREGASSOCID: TWideStringField
       FieldName = 'REGASSOCID'
       ProviderFlags = []
       ReadOnly = True
@@ -3369,21 +3360,21 @@ object dmDV: TdmDV
     Params = <>
     Left = 608
     Top = 457
-    object cdsRawDataZSAMPLENO: TStringField
+    object cdsRawDataZSAMPLENO: TWideStringField
       FieldName = 'SAMPLENO'
       Required = True
     end
-    object cdsRawDataZFRAC: TStringField
+    object cdsRawDataZFRAC: TWideStringField
       FieldName = 'FRAC'
       Required = True
       Size = 15
     end
-    object cdsRawDataZISOSYSTEM: TStringField
+    object cdsRawDataZISOSYSTEM: TWideStringField
       FieldName = 'ISOSYSTEM'
       Required = True
       Size = 15
     end
-    object cdsRawDataZVARIABLEID: TStringField
+    object cdsRawDataZVARIABLEID: TWideStringField
       FieldName = 'VARIABLEID'
       Required = True
       Size = 15
@@ -3392,7 +3383,7 @@ object dmDV: TdmDV
       FieldName = 'DATAVALUE'
       Required = True
     end
-    object cdsRawDataZNORMALISINGSTANDARD: TStringField
+    object cdsRawDataZNORMALISINGSTANDARD: TWideStringField
       FieldName = 'NORMALISINGSTANDARD'
       Required = True
       Size = 10
@@ -3401,7 +3392,7 @@ object dmDV: TdmDV
       FieldName = 'STANDARDVALUE'
       Required = True
     end
-    object cdsRawDataZVARIABLENAME: TStringField
+    object cdsRawDataZVARIABLENAME: TWideStringField
       FieldName = 'VARIABLENAME'
       Size = 30
     end
@@ -3410,7 +3401,7 @@ object dmDV: TdmDV
       ProviderFlags = []
       ReadOnly = True
     end
-    object cdsRawDataZREGASSOCID: TStringField
+    object cdsRawDataZREGASSOCID: TWideStringField
       FieldName = 'REGASSOCID'
       ProviderFlags = []
       ReadOnly = True
@@ -3510,24 +3501,24 @@ object dmDV: TdmDV
     SQLConnection = sqlcDateView
     Left = 798
     Top = 459
-    object qRawNormalisedValueZSAMPLENO: TStringField
+    object qRawNormalisedValueZSAMPLENO: TWideStringField
       FieldName = 'SAMPLENO'
       ProviderFlags = []
       ReadOnly = True
     end
-    object qRawNormalisedValueZFRAC: TStringField
+    object qRawNormalisedValueZFRAC: TWideStringField
       FieldName = 'FRAC'
       ProviderFlags = []
       ReadOnly = True
       Size = 15
     end
-    object qRawNormalisedValueZISOSYSTEM: TStringField
+    object qRawNormalisedValueZISOSYSTEM: TWideStringField
       FieldName = 'ISOSYSTEM'
       ProviderFlags = []
       ReadOnly = True
       Size = 15
     end
-    object qRawNormalisedValueZVARIABLEID: TStringField
+    object qRawNormalisedValueZVARIABLEID: TWideStringField
       FieldName = 'VARIABLEID'
       ProviderFlags = []
       ReadOnly = True
@@ -3538,7 +3529,7 @@ object dmDV: TdmDV
       ProviderFlags = []
       ReadOnly = True
     end
-    object qRawNormalisedValueZNORMALISINGSTANDARD: TStringField
+    object qRawNormalisedValueZNORMALISINGSTANDARD: TWideStringField
       FieldName = 'NORMALISINGSTANDARD'
       ProviderFlags = []
       ReadOnly = True
@@ -3566,24 +3557,24 @@ object dmDV: TdmDV
     Params = <>
     Left = 826
     Top = 459
-    object cdsRawNormalisedValueZSAMPLENO: TStringField
+    object cdsRawNormalisedValueZSAMPLENO: TWideStringField
       FieldName = 'SAMPLENO'
       ProviderFlags = []
       ReadOnly = True
     end
-    object cdsRawNormalisedValueZFRAC: TStringField
+    object cdsRawNormalisedValueZFRAC: TWideStringField
       FieldName = 'FRAC'
       ProviderFlags = []
       ReadOnly = True
       Size = 15
     end
-    object cdsRawNormalisedValueZISOSYSTEM: TStringField
+    object cdsRawNormalisedValueZISOSYSTEM: TWideStringField
       FieldName = 'ISOSYSTEM'
       ProviderFlags = []
       ReadOnly = True
       Size = 15
     end
-    object cdsRawNormalisedValueZVARIABLEID: TStringField
+    object cdsRawNormalisedValueZVARIABLEID: TWideStringField
       FieldName = 'VARIABLEID'
       ProviderFlags = []
       ReadOnly = True
@@ -3594,7 +3585,7 @@ object dmDV: TdmDV
       ProviderFlags = []
       ReadOnly = True
     end
-    object cdsRawNormalisedValueZNORMALISINGSTANDARD: TStringField
+    object cdsRawNormalisedValueZNORMALISINGSTANDARD: TWideStringField
       FieldName = 'NORMALISINGSTANDARD'
       ProviderFlags = []
       ReadOnly = True
@@ -3659,24 +3650,24 @@ object dmDV: TdmDV
     SQLConnection = sqlcDateView
     Left = 558
     Top = 507
-    object qRawDataZerrSAMPLENO: TStringField
+    object qRawDataZerrSAMPLENO: TWideStringField
       FieldName = 'SAMPLENO'
       ProviderFlags = []
       ReadOnly = True
     end
-    object qRawDataZerrFRAC: TStringField
+    object qRawDataZerrFRAC: TWideStringField
       FieldName = 'FRAC'
       ProviderFlags = []
       ReadOnly = True
       Size = 15
     end
-    object qRawDataZerrISOSYSTEM: TStringField
+    object qRawDataZerrISOSYSTEM: TWideStringField
       FieldName = 'ISOSYSTEM'
       ProviderFlags = []
       ReadOnly = True
       Size = 15
     end
-    object qRawDataZerrVARIABLEID: TStringField
+    object qRawDataZerrVARIABLEID: TWideStringField
       FieldName = 'VARIABLEID'
       ProviderFlags = []
       ReadOnly = True
@@ -3687,7 +3678,7 @@ object dmDV: TdmDV
       ProviderFlags = []
       ReadOnly = True
     end
-    object qRawDataZerrNORMALISINGSTANDARD: TStringField
+    object qRawDataZerrNORMALISINGSTANDARD: TWideStringField
       FieldName = 'NORMALISINGSTANDARD'
       ProviderFlags = []
       ReadOnly = True
@@ -3698,7 +3689,7 @@ object dmDV: TdmDV
       ProviderFlags = []
       ReadOnly = True
     end
-    object qRawDataZerrVARIABLENAME: TStringField
+    object qRawDataZerrVARIABLENAME: TWideStringField
       FieldName = 'VARIABLENAME'
       ProviderFlags = []
       ReadOnly = True
@@ -3710,24 +3701,24 @@ object dmDV: TdmDV
     Params = <>
     Left = 610
     Top = 507
-    object cdsRawDataZerrSAMPLENO: TStringField
+    object cdsRawDataZerrSAMPLENO: TWideStringField
       FieldName = 'SAMPLENO'
       ProviderFlags = []
       ReadOnly = True
     end
-    object cdsRawDataZerrFRAC: TStringField
+    object cdsRawDataZerrFRAC: TWideStringField
       FieldName = 'FRAC'
       ProviderFlags = []
       ReadOnly = True
       Size = 15
     end
-    object cdsRawDataZerrISOSYSTEM: TStringField
+    object cdsRawDataZerrISOSYSTEM: TWideStringField
       FieldName = 'ISOSYSTEM'
       ProviderFlags = []
       ReadOnly = True
       Size = 15
     end
-    object cdsRawDataZerrVARIABLEID: TStringField
+    object cdsRawDataZerrVARIABLEID: TWideStringField
       FieldName = 'VARIABLEID'
       ProviderFlags = []
       ReadOnly = True
@@ -3738,7 +3729,7 @@ object dmDV: TdmDV
       ProviderFlags = []
       ReadOnly = True
     end
-    object cdsRawDataZerrNORMALISINGSTANDARD: TStringField
+    object cdsRawDataZerrNORMALISINGSTANDARD: TWideStringField
       FieldName = 'NORMALISINGSTANDARD'
       ProviderFlags = []
       ReadOnly = True
@@ -3749,7 +3740,7 @@ object dmDV: TdmDV
       ProviderFlags = []
       ReadOnly = True
     end
-    object cdsRawDataZerrVARIABLENAME: TStringField
+    object cdsRawDataZerrVARIABLENAME: TWideStringField
       FieldName = 'VARIABLENAME'
       ProviderFlags = []
       ReadOnly = True
@@ -3797,24 +3788,24 @@ object dmDV: TdmDV
     SQLConnection = sqlcDateView
     Left = 690
     Top = 509
-    object qRawErrTypeZSAMPLENO: TStringField
+    object qRawErrTypeZSAMPLENO: TWideStringField
       FieldName = 'SAMPLENO'
       ProviderFlags = []
       ReadOnly = True
     end
-    object qRawErrTypeZFRAC: TStringField
+    object qRawErrTypeZFRAC: TWideStringField
       FieldName = 'FRAC'
       ProviderFlags = []
       ReadOnly = True
       Size = 15
     end
-    object qRawErrTypeZISOSYSTEM: TStringField
+    object qRawErrTypeZISOSYSTEM: TWideStringField
       FieldName = 'ISOSYSTEM'
       ProviderFlags = []
       ReadOnly = True
       Size = 15
     end
-    object qRawErrTypeZVARIABLEID: TStringField
+    object qRawErrTypeZVARIABLEID: TWideStringField
       FieldName = 'VARIABLEID'
       ProviderFlags = []
       ReadOnly = True
@@ -3825,7 +3816,7 @@ object dmDV: TdmDV
       ProviderFlags = []
       ReadOnly = True
     end
-    object qRawErrTypeZNORMALISINGSTANDARD: TStringField
+    object qRawErrTypeZNORMALISINGSTANDARD: TWideStringField
       FieldName = 'NORMALISINGSTANDARD'
       ProviderFlags = []
       ReadOnly = True
@@ -3836,7 +3827,7 @@ object dmDV: TdmDV
       ProviderFlags = []
       ReadOnly = True
     end
-    object qRawErrTypeZVARIABLENAME: TStringField
+    object qRawErrTypeZVARIABLENAME: TWideStringField
       FieldName = 'VARIABLENAME'
       ProviderFlags = []
       ReadOnly = True
@@ -3849,24 +3840,24 @@ object dmDV: TdmDV
     Params = <>
     Left = 718
     Top = 509
-    object cdsRawErrTypeZSAMPLENO: TStringField
+    object cdsRawErrTypeZSAMPLENO: TWideStringField
       FieldName = 'SAMPLENO'
       ProviderFlags = []
       ReadOnly = True
     end
-    object cdsRawErrTypeZFRAC: TStringField
+    object cdsRawErrTypeZFRAC: TWideStringField
       FieldName = 'FRAC'
       ProviderFlags = []
       ReadOnly = True
       Size = 15
     end
-    object cdsRawErrTypeZISOSYSTEM: TStringField
+    object cdsRawErrTypeZISOSYSTEM: TWideStringField
       FieldName = 'ISOSYSTEM'
       ProviderFlags = []
       ReadOnly = True
       Size = 15
     end
-    object cdsRawErrTypeZVARIABLEID: TStringField
+    object cdsRawErrTypeZVARIABLEID: TWideStringField
       FieldName = 'VARIABLEID'
       ProviderFlags = []
       ReadOnly = True
@@ -3877,7 +3868,7 @@ object dmDV: TdmDV
       ProviderFlags = []
       ReadOnly = True
     end
-    object cdsRawErrTypeZNORMALISINGSTANDARD: TStringField
+    object cdsRawErrTypeZNORMALISINGSTANDARD: TWideStringField
       FieldName = 'NORMALISINGSTANDARD'
       ProviderFlags = []
       ReadOnly = True
@@ -3888,7 +3879,7 @@ object dmDV: TdmDV
       ProviderFlags = []
       ReadOnly = True
     end
-    object cdsRawErrTypeZVARIABLENAME: TStringField
+    object cdsRawErrTypeZVARIABLENAME: TWideStringField
       FieldName = 'VARIABLENAME'
       ProviderFlags = []
       ReadOnly = True
@@ -3934,24 +3925,24 @@ object dmDV: TdmDV
     SQLConnection = sqlcDateView
     Left = 560
     Top = 557
-    object qRawDataPrecZSAMPLENO: TStringField
+    object qRawDataPrecZSAMPLENO: TWideStringField
       FieldName = 'SAMPLENO'
       ProviderFlags = []
       ReadOnly = True
     end
-    object qRawDataPrecZFRAC: TStringField
+    object qRawDataPrecZFRAC: TWideStringField
       FieldName = 'FRAC'
       ProviderFlags = []
       ReadOnly = True
       Size = 15
     end
-    object qRawDataPrecZISOSYSTEM: TStringField
+    object qRawDataPrecZISOSYSTEM: TWideStringField
       FieldName = 'ISOSYSTEM'
       ProviderFlags = []
       ReadOnly = True
       Size = 15
     end
-    object qRawDataPrecZVARIABLEID: TStringField
+    object qRawDataPrecZVARIABLEID: TWideStringField
       FieldName = 'VARIABLEID'
       ProviderFlags = []
       ReadOnly = True
@@ -3969,24 +3960,24 @@ object dmDV: TdmDV
     Params = <>
     Left = 612
     Top = 557
-    object cdsRawDataPrecZSAMPLENO: TStringField
+    object cdsRawDataPrecZSAMPLENO: TWideStringField
       FieldName = 'SAMPLENO'
       ProviderFlags = []
       ReadOnly = True
     end
-    object cdsRawDataPrecZFRAC: TStringField
+    object cdsRawDataPrecZFRAC: TWideStringField
       FieldName = 'FRAC'
       ProviderFlags = []
       ReadOnly = True
       Size = 15
     end
-    object cdsRawDataPrecZISOSYSTEM: TStringField
+    object cdsRawDataPrecZISOSYSTEM: TWideStringField
       FieldName = 'ISOSYSTEM'
       ProviderFlags = []
       ReadOnly = True
       Size = 15
     end
-    object cdsRawDataPrecZVARIABLEID: TStringField
+    object cdsRawDataPrecZVARIABLEID: TWideStringField
       FieldName = 'VARIABLEID'
       ProviderFlags = []
       ReadOnly = True
@@ -4037,24 +4028,24 @@ object dmDV: TdmDV
     SQLConnection = sqlcDateView
     Left = 560
     Top = 598
-    object qRawDiscordanceSAMPLENO: TStringField
+    object qRawDiscordanceSAMPLENO: TWideStringField
       FieldName = 'SAMPLENO'
       ProviderFlags = []
       ReadOnly = True
     end
-    object qRawDiscordanceFRAC: TStringField
+    object qRawDiscordanceFRAC: TWideStringField
       FieldName = 'FRAC'
       ProviderFlags = []
       ReadOnly = True
       Size = 15
     end
-    object qRawDiscordanceISOSYSTEM: TStringField
+    object qRawDiscordanceISOSYSTEM: TWideStringField
       FieldName = 'ISOSYSTEM'
       ProviderFlags = []
       ReadOnly = True
       Size = 15
     end
-    object qRawDiscordanceVARIABLEID: TStringField
+    object qRawDiscordanceVARIABLEID: TWideStringField
       FieldName = 'VARIABLEID'
       ProviderFlags = []
       ReadOnly = True
@@ -4072,24 +4063,24 @@ object dmDV: TdmDV
     Params = <>
     Left = 612
     Top = 598
-    object cdsRawDiscordanceSAMPLENO: TStringField
+    object cdsRawDiscordanceSAMPLENO: TWideStringField
       FieldName = 'SAMPLENO'
       ProviderFlags = []
       ReadOnly = True
     end
-    object cdsRawDiscordanceFRAC: TStringField
+    object cdsRawDiscordanceFRAC: TWideStringField
       FieldName = 'FRAC'
       ProviderFlags = []
       ReadOnly = True
       Size = 15
     end
-    object cdsRawDiscordanceISOSYSTEM: TStringField
+    object cdsRawDiscordanceISOSYSTEM: TWideStringField
       FieldName = 'ISOSYSTEM'
       ProviderFlags = []
       ReadOnly = True
       Size = 15
     end
-    object cdsRawDiscordanceVARIABLEID: TStringField
+    object cdsRawDiscordanceVARIABLEID: TWideStringField
       FieldName = 'VARIABLEID'
       ProviderFlags = []
       ReadOnly = True
@@ -4135,7 +4126,7 @@ object dmDV: TdmDV
     SQLConnection = sqlcDateView
     Left = 712
     Top = 598
-    object qRawRefSAMPLENO: TStringField
+    object qRawRefSAMPLENO: TWideStringField
       FieldName = 'SAMPLENO'
       ProviderFlags = []
       ReadOnly = True
@@ -4145,7 +4136,7 @@ object dmDV: TdmDV
       ProviderFlags = []
       ReadOnly = True
     end
-    object qRawRefSOURCESHORT: TStringField
+    object qRawRefSOURCESHORT: TWideStringField
       FieldName = 'SOURCESHORT'
       ProviderFlags = []
       ReadOnly = True
@@ -4158,7 +4149,7 @@ object dmDV: TdmDV
     Params = <>
     Left = 740
     Top = 598
-    object cdsRawRefSAMPLENO: TStringField
+    object cdsRawRefSAMPLENO: TWideStringField
       FieldName = 'SAMPLENO'
       ProviderFlags = []
       ReadOnly = True
@@ -4168,7 +4159,7 @@ object dmDV: TdmDV
       ProviderFlags = []
       ReadOnly = True
     end
-    object cdsRawRefSOURCESHORT: TStringField
+    object cdsRawRefSOURCESHORT: TWideStringField
       FieldName = 'SOURCESHORT'
       ProviderFlags = []
       ReadOnly = True
@@ -4214,25 +4205,25 @@ object dmDV: TdmDV
     SQLConnection = sqlcDateView
     Left = 832
     Top = 558
-    object qRawDataDMSAMPLENO: TStringField
+    object qRawDataDMSAMPLENO: TWideStringField
       FieldName = 'SAMPLENO'
     end
-    object qRawDataDMFRAC: TStringField
+    object qRawDataDMFRAC: TWideStringField
       FieldName = 'FRAC'
       Size = 15
     end
-    object qRawDataDMISOSYSTEM: TStringField
+    object qRawDataDMISOSYSTEM: TWideStringField
       FieldName = 'ISOSYSTEM'
       Size = 15
     end
-    object qRawDataDMVARIABLEID: TStringField
+    object qRawDataDMVARIABLEID: TWideStringField
       FieldName = 'VARIABLEID'
       Size = 15
     end
     object qRawDataDMDATAVALUE: TFloatField
       FieldName = 'DATAVALUE'
     end
-    object qRawDataDMREGASSOCID: TStringField
+    object qRawDataDMREGASSOCID: TWideStringField
       FieldName = 'REGASSOCID'
       ProviderFlags = []
       ReadOnly = True
@@ -4250,18 +4241,18 @@ object dmDV: TdmDV
     Params = <>
     Left = 884
     Top = 558
-    object cdsRawDataDMSAMPLENO: TStringField
+    object cdsRawDataDMSAMPLENO: TWideStringField
       FieldName = 'SAMPLENO'
     end
-    object cdsRawDataDMFRAC: TStringField
+    object cdsRawDataDMFRAC: TWideStringField
       FieldName = 'FRAC'
       Size = 15
     end
-    object cdsRawDataDMISOSYSTEM: TStringField
+    object cdsRawDataDMISOSYSTEM: TWideStringField
       FieldName = 'ISOSYSTEM'
       Size = 15
     end
-    object cdsRawDataDMVARIABLEID: TStringField
+    object cdsRawDataDMVARIABLEID: TWideStringField
       FieldName = 'VARIABLEID'
       Size = 15
     end
@@ -4271,7 +4262,7 @@ object dmDV: TdmDV
     object cdsRawDataDMqRawDataDMerr: TDataSetField
       FieldName = 'qRawDataDMerr'
     end
-    object cdsRawDataDMREGASSOCID: TStringField
+    object cdsRawDataDMREGASSOCID: TWideStringField
       FieldName = 'REGASSOCID'
       ProviderFlags = []
       ReadOnly = True
@@ -4321,24 +4312,24 @@ object dmDV: TdmDV
     SQLConnection = sqlcDateView
     Left = 830
     Top = 600
-    object qRawDataDMerrSAMPLENO: TStringField
+    object qRawDataDMerrSAMPLENO: TWideStringField
       FieldName = 'SAMPLENO'
       ProviderFlags = []
       ReadOnly = True
     end
-    object qRawDataDMerrFRAC: TStringField
+    object qRawDataDMerrFRAC: TWideStringField
       FieldName = 'FRAC'
       ProviderFlags = []
       ReadOnly = True
       Size = 15
     end
-    object qRawDataDMerrISOSYSTEM: TStringField
+    object qRawDataDMerrISOSYSTEM: TWideStringField
       FieldName = 'ISOSYSTEM'
       ProviderFlags = []
       ReadOnly = True
       Size = 15
     end
-    object qRawDataDMerrVARIABLEID: TStringField
+    object qRawDataDMerrVARIABLEID: TWideStringField
       FieldName = 'VARIABLEID'
       ProviderFlags = []
       ReadOnly = True
@@ -4349,7 +4340,7 @@ object dmDV: TdmDV
       ProviderFlags = []
       ReadOnly = True
     end
-    object qRawDataDMerrNORMALISINGSTANDARD: TStringField
+    object qRawDataDMerrNORMALISINGSTANDARD: TWideStringField
       FieldName = 'NORMALISINGSTANDARD'
       ProviderFlags = []
       ReadOnly = True
@@ -4360,7 +4351,7 @@ object dmDV: TdmDV
       ProviderFlags = []
       ReadOnly = True
     end
-    object qRawDataDMerrVARIABLENAME: TStringField
+    object qRawDataDMerrVARIABLENAME: TWideStringField
       FieldName = 'VARIABLENAME'
       ProviderFlags = []
       ReadOnly = True
@@ -4378,24 +4369,24 @@ object dmDV: TdmDV
     Params = <>
     Left = 886
     Top = 600
-    object cdsRawDataDMerrSAMPLENO: TStringField
+    object cdsRawDataDMerrSAMPLENO: TWideStringField
       FieldName = 'SAMPLENO'
       ProviderFlags = []
       ReadOnly = True
     end
-    object cdsRawDataDMerrFRAC: TStringField
+    object cdsRawDataDMerrFRAC: TWideStringField
       FieldName = 'FRAC'
       ProviderFlags = []
       ReadOnly = True
       Size = 15
     end
-    object cdsRawDataDMerrISOSYSTEM: TStringField
+    object cdsRawDataDMerrISOSYSTEM: TWideStringField
       FieldName = 'ISOSYSTEM'
       ProviderFlags = []
       ReadOnly = True
       Size = 15
     end
-    object cdsRawDataDMerrVARIABLEID: TStringField
+    object cdsRawDataDMerrVARIABLEID: TWideStringField
       FieldName = 'VARIABLEID'
       ProviderFlags = []
       ReadOnly = True
@@ -4406,7 +4397,7 @@ object dmDV: TdmDV
       ProviderFlags = []
       ReadOnly = True
     end
-    object cdsRawDataDMerrNORMALISINGSTANDARD: TStringField
+    object cdsRawDataDMerrNORMALISINGSTANDARD: TWideStringField
       FieldName = 'NORMALISINGSTANDARD'
       ProviderFlags = []
       ReadOnly = True
@@ -4417,7 +4408,7 @@ object dmDV: TdmDV
       ProviderFlags = []
       ReadOnly = True
     end
-    object cdsRawDataDMerrVARIABLENAME: TStringField
+    object cdsRawDataDMerrVARIABLENAME: TWideStringField
       FieldName = 'VARIABLENAME'
       ProviderFlags = []
       ReadOnly = True
@@ -4482,7 +4473,7 @@ object dmDV: TdmDV
       FieldName = 'RECORDID'
       Required = True
     end
-    object cdsExistingCOUNTRYABR: TStringField
+    object cdsExistingCOUNTRYABR: TWideStringField
       FieldName = 'COUNTRYABR'
       Required = True
       Size = 3
@@ -4491,27 +4482,27 @@ object dmDV: TdmDV
       FieldName = 'UNITID'
       Required = True
     end
-    object cdsExistingMATERIALABR: TStringField
+    object cdsExistingMATERIALABR: TWideStringField
       FieldName = 'MATERIALABR'
       Required = True
       Size = 5
     end
-    object cdsExistingISOTOPESYSTEM: TStringField
+    object cdsExistingISOTOPESYSTEM: TWideStringField
       FieldName = 'ISOTOPESYSTEM'
       Required = True
       Size = 15
     end
-    object cdsExistingAPPROACHABR: TStringField
+    object cdsExistingAPPROACHABR: TWideStringField
       FieldName = 'APPROACHABR'
       Required = True
       Size = 5
     end
-    object cdsExistingTECHABR: TStringField
+    object cdsExistingTECHABR: TWideStringField
       FieldName = 'TECHABR'
       Required = True
       Size = 5
     end
-    object cdsExistingINTERPABR: TStringField
+    object cdsExistingINTERPABR: TWideStringField
       FieldName = 'INTERPABR'
       Required = True
       Size = 5
@@ -4531,36 +4522,36 @@ object dmDV: TdmDV
       Required = True
       DisplayFormat = '###0.000'
     end
-    object cdsExistingUNITNAME: TStringField
+    object cdsExistingUNITNAME: TWideStringField
       FieldName = 'UNITNAME'
       Required = True
       Size = 50
     end
-    object cdsExistingUNITRANK: TStringField
+    object cdsExistingUNITRANK: TWideStringField
       FieldName = 'UNITRANK'
       Required = True
       Size = 5
     end
-    object cdsExistingCONTINENTID: TStringField
+    object cdsExistingCONTINENTID: TWideStringField
       FieldName = 'CONTINENTID'
       Required = True
       Size = 3
     end
-    object cdsExistingMATERIALDESCRIPTION: TStringField
+    object cdsExistingMATERIALDESCRIPTION: TWideStringField
       FieldName = 'MATERIALDESCRIPTION'
       Required = True
       Size = 50
     end
-    object cdsExistingAPPROACHDESCRIPTION: TStringField
+    object cdsExistingAPPROACHDESCRIPTION: TWideStringField
       FieldName = 'APPROACHDESCRIPTION'
       Required = True
       Size = 50
     end
-    object cdsExistingTECHNIQUE: TStringField
+    object cdsExistingTECHNIQUE: TWideStringField
       FieldName = 'TECHNIQUE'
       Size = 40
     end
-    object cdsExistingINTERPRETATION: TStringField
+    object cdsExistingINTERPRETATION: TWideStringField
       FieldName = 'INTERPRETATION'
       Required = True
       Size = 30
@@ -4605,24 +4596,24 @@ object dmDV: TdmDV
     SQLConnection = sqlcDateView
     Left = 560
     Top = 646
-    object qRawAgePrefSAMPLENO: TStringField
+    object qRawAgePrefSAMPLENO: TWideStringField
       FieldName = 'SAMPLENO'
       ProviderFlags = []
       ReadOnly = True
     end
-    object qRawAgePrefFRAC: TStringField
+    object qRawAgePrefFRAC: TWideStringField
       FieldName = 'FRAC'
       ProviderFlags = []
       ReadOnly = True
       Size = 15
     end
-    object qRawAgePrefISOSYSTEM: TStringField
+    object qRawAgePrefISOSYSTEM: TWideStringField
       FieldName = 'ISOSYSTEM'
       ProviderFlags = []
       ReadOnly = True
       Size = 15
     end
-    object qRawAgePrefVARIABLEID: TStringField
+    object qRawAgePrefVARIABLEID: TWideStringField
       FieldName = 'VARIABLEID'
       ProviderFlags = []
       ReadOnly = True
@@ -4633,7 +4624,7 @@ object dmDV: TdmDV
       ProviderFlags = []
       ReadOnly = True
     end
-    object qRawAgePrefREGASSOCID: TStringField
+    object qRawAgePrefREGASSOCID: TWideStringField
       FieldName = 'REGASSOCID'
       ProviderFlags = []
       ReadOnly = True
@@ -4651,24 +4642,24 @@ object dmDV: TdmDV
     Params = <>
     Left = 612
     Top = 646
-    object cdsRawAgePrefSAMPLENO: TStringField
+    object cdsRawAgePrefSAMPLENO: TWideStringField
       FieldName = 'SAMPLENO'
       ProviderFlags = []
       ReadOnly = True
     end
-    object cdsRawAgePrefFRAC: TStringField
+    object cdsRawAgePrefFRAC: TWideStringField
       FieldName = 'FRAC'
       ProviderFlags = []
       ReadOnly = True
       Size = 15
     end
-    object cdsRawAgePrefISOSYSTEM: TStringField
+    object cdsRawAgePrefISOSYSTEM: TWideStringField
       FieldName = 'ISOSYSTEM'
       ProviderFlags = []
       ReadOnly = True
       Size = 15
     end
-    object cdsRawAgePrefVARIABLEID: TStringField
+    object cdsRawAgePrefVARIABLEID: TWideStringField
       FieldName = 'VARIABLEID'
       ProviderFlags = []
       ReadOnly = True
@@ -4684,7 +4675,7 @@ object dmDV: TdmDV
       ProviderFlags = []
       ReadOnly = True
     end
-    object cdsRawAgePrefREGASSOCID: TStringField
+    object cdsRawAgePrefREGASSOCID: TWideStringField
       FieldName = 'REGASSOCID'
       ProviderFlags = []
       ReadOnly = True
@@ -4713,13 +4704,13 @@ object dmDV: TdmDV
     SQLConnection = sqlcDateView
     Left = 832
     Top = 520
-    object qRawSmpLocCOUNTRYABR: TStringField
+    object qRawSmpLocCOUNTRYABR: TWideStringField
       FieldName = 'COUNTRYABR'
       ProviderFlags = []
       ReadOnly = True
       Size = 3
     end
-    object qRawSmpLocCONTINENTID: TStringField
+    object qRawSmpLocCONTINENTID: TWideStringField
       FieldName = 'CONTINENTID'
       ProviderFlags = []
       ReadOnly = True
@@ -4747,13 +4738,13 @@ object dmDV: TdmDV
     Params = <>
     Left = 864
     Top = 520
-    object cdsRawSmpLocCOUNTRYABR: TStringField
+    object cdsRawSmpLocCOUNTRYABR: TWideStringField
       FieldName = 'COUNTRYABR'
       ProviderFlags = []
       ReadOnly = True
       Size = 3
     end
-    object cdsRawSmpLocCONTINENTID: TStringField
+    object cdsRawSmpLocCONTINENTID: TWideStringField
       FieldName = 'CONTINENTID'
       ProviderFlags = []
       ReadOnly = True
@@ -4821,24 +4812,24 @@ object dmDV: TdmDV
     SQLConnection = sqlcDateView
     Left = 558
     Top = 696
-    object qRawDataAgeerrSAMPLENO: TStringField
+    object qRawDataAgeerrSAMPLENO: TWideStringField
       FieldName = 'SAMPLENO'
       ProviderFlags = []
       ReadOnly = True
     end
-    object qRawDataAgeerrFRAC: TStringField
+    object qRawDataAgeerrFRAC: TWideStringField
       FieldName = 'FRAC'
       ProviderFlags = []
       ReadOnly = True
       Size = 15
     end
-    object qRawDataAgeerrISOSYSTEM: TStringField
+    object qRawDataAgeerrISOSYSTEM: TWideStringField
       FieldName = 'ISOSYSTEM'
       ProviderFlags = []
       ReadOnly = True
       Size = 15
     end
-    object qRawDataAgeerrVARIABLEID: TStringField
+    object qRawDataAgeerrVARIABLEID: TWideStringField
       FieldName = 'VARIABLEID'
       ProviderFlags = []
       ReadOnly = True
@@ -4849,7 +4840,7 @@ object dmDV: TdmDV
       ProviderFlags = []
       ReadOnly = True
     end
-    object qRawDataAgeerrNORMALISINGSTANDARD: TStringField
+    object qRawDataAgeerrNORMALISINGSTANDARD: TWideStringField
       FieldName = 'NORMALISINGSTANDARD'
       ProviderFlags = []
       ReadOnly = True
@@ -4860,7 +4851,7 @@ object dmDV: TdmDV
       ProviderFlags = []
       ReadOnly = True
     end
-    object qRawDataAgeerrVARIABLENAME: TStringField
+    object qRawDataAgeerrVARIABLENAME: TWideStringField
       FieldName = 'VARIABLENAME'
       ProviderFlags = []
       ReadOnly = True
@@ -4878,24 +4869,24 @@ object dmDV: TdmDV
     Params = <>
     Left = 614
     Top = 696
-    object cdsRawDataAgeerrSAMPLENO: TStringField
+    object cdsRawDataAgeerrSAMPLENO: TWideStringField
       FieldName = 'SAMPLENO'
       ProviderFlags = []
       ReadOnly = True
     end
-    object cdsRawDataAgeerrFRAC: TStringField
+    object cdsRawDataAgeerrFRAC: TWideStringField
       FieldName = 'FRAC'
       ProviderFlags = []
       ReadOnly = True
       Size = 15
     end
-    object cdsRawDataAgeerrISOSYSTEM: TStringField
+    object cdsRawDataAgeerrISOSYSTEM: TWideStringField
       FieldName = 'ISOSYSTEM'
       ProviderFlags = []
       ReadOnly = True
       Size = 15
     end
-    object cdsRawDataAgeerrVARIABLEID: TStringField
+    object cdsRawDataAgeerrVARIABLEID: TWideStringField
       FieldName = 'VARIABLEID'
       ProviderFlags = []
       ReadOnly = True
@@ -4906,7 +4897,7 @@ object dmDV: TdmDV
       ProviderFlags = []
       ReadOnly = True
     end
-    object cdsRawDataAgeerrNORMALISINGSTANDARD: TStringField
+    object cdsRawDataAgeerrNORMALISINGSTANDARD: TWideStringField
       FieldName = 'NORMALISINGSTANDARD'
       ProviderFlags = []
       ReadOnly = True
@@ -4917,7 +4908,7 @@ object dmDV: TdmDV
       ProviderFlags = []
       ReadOnly = True
     end
-    object cdsRawDataAgeerrVARIABLENAME: TStringField
+    object cdsRawDataAgeerrVARIABLENAME: TWideStringField
       FieldName = 'VARIABLENAME'
       ProviderFlags = []
       ReadOnly = True
@@ -4981,22 +4972,6 @@ object dmDV: TdmDV
     Top = 72
   end
   object cdsData: TClientDataSet
-    PersistDataPacket.Data = {
-      AD0100009619E0BD010000001800000013000000000003000000AD0104745265
-      6304000100000000000853616D706C654E6F0100490000000100055749445448
-      0200020014000446726163010049000000010005574944544802000200140006
-      5A6F6E6549440100490000000100055749445448020002000200095062323037
-      5532333508000400000000000E5062323037553233355369676D610800040000
-      0000000950623230365532333808000400000000000E50623230365532333853
-      69676D6108000400000000000955323338506232303608000400000000000E55
-      32333850623230365369676D6108000400000000000A50623230375062323036
-      08000400000000000F506232303750623230365369676D610800040000000000
-      09496E636C756465594E01004900000001000557494454480200020001001250
-      657263656E74436F6E636F7264616E636508000400000000000C507265666572
-      7265644167650800040000000000115072656665727265644167655369676D61
-      0800040000000000045661723108000400000000000456617232080004000000
-      0000045661723308000400000000000000}
-    Active = True
     Aggregates = <>
     Params = <>
     OnReconcileError = cdsAnyReconcileError
@@ -5006,13 +4981,13 @@ object dmDV: TdmDV
       FieldName = 'tRec'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
     end
-    object cdsDataSampleNo: TStringField
+    object cdsDataSampleNo: TWideStringField
       FieldName = 'SampleNo'
     end
-    object cdsDataFrac: TStringField
+    object cdsDataFrac: TWideStringField
       FieldName = 'Frac'
     end
-    object cdsDataZoneID: TStringField
+    object cdsDataZoneID: TWideStringField
       FieldName = 'ZoneID'
       Size = 2
     end
@@ -5048,7 +5023,7 @@ object dmDV: TdmDV
       FieldName = 'Pb207Pb206Sigma'
       DisplayFormat = '#0.00000'
     end
-    object cdsDataIncludeYN: TStringField
+    object cdsDataIncludeYN: TWideStringField
       FieldName = 'IncludeYN'
       Size = 1
     end
@@ -5086,15 +5061,6 @@ object dmDV: TdmDV
     Top = 120
   end
   object cdsUnitPDF: TClientDataSet
-    PersistDataPacket.Data = {
-      C20000009619E0BD010000001800000008000000000003000000C20009436F75
-      6E7472794944010049000000010005574944544802000200030006556E697449
-      44040001000000000006537465704944040001000000000008556E69744E616D
-      65010049000000010005574944544802000200320008556E697452616E6B0100
-      490000000100055749445448020002001E0007556E6974416765080004000000
-      000008477261696E41676508000400000000000850444676616C756508000400
-      000000000000}
-    Active = True
     Aggregates = <>
     FieldDefs = <
       item
@@ -5144,10 +5110,8 @@ object dmDV: TdmDV
     OnReconcileError = cdsAnyReconcileError
     Left = 824
     Top = 72
-    object cdsUnitPDFCountryID: TStringField
+    object cdsUnitPDFCountryID: TWideStringField
       FieldName = 'CountryID'
-      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
-      Size = 3
     end
     object cdsUnitPDFUnitID: TIntegerField
       FieldName = 'UnitID'
@@ -5157,13 +5121,11 @@ object dmDV: TdmDV
       FieldName = 'StepID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
     end
-    object cdsUnitPDFUnitName: TStringField
+    object cdsUnitPDFUnitName: TWideStringField
       FieldName = 'UnitName'
-      Size = 50
     end
-    object cdsUnitPDFUnitRank: TStringField
+    object cdsUnitPDFUnitRank: TWideStringField
       FieldName = 'UnitRank'
-      Size = 30
     end
     object cdsUnitPDFUnitAge: TFloatField
       FieldName = 'UnitAge'
@@ -5215,24 +5177,24 @@ object dmDV: TdmDV
     SQLConnection = sqlcDateView
     Left = 558
     Top = 739
-    object qRawDataIncludeSAMPLENO: TStringField
+    object qRawDataIncludeSAMPLENO: TWideStringField
       FieldName = 'SAMPLENO'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object qRawDataIncludeFRAC: TStringField
+    object qRawDataIncludeFRAC: TWideStringField
       FieldName = 'FRAC'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
       Size = 15
     end
-    object qRawDataIncludeISOSYSTEM: TStringField
+    object qRawDataIncludeISOSYSTEM: TWideStringField
       FieldName = 'ISOSYSTEM'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
       Size = 15
     end
-    object qRawDataIncludeVARIABLEID: TStringField
+    object qRawDataIncludeVARIABLEID: TWideStringField
       FieldName = 'VARIABLEID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
@@ -5250,27 +5212,27 @@ object dmDV: TdmDV
     Params = <>
     Left = 610
     Top = 739
-    object cdsRawDataIncludeSAMPLENO: TStringField
+    object cdsRawDataIncludeSAMPLENO: TWideStringField
       FieldName = 'SAMPLENO'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       ReadOnly = True
       Required = True
     end
-    object cdsRawDataIncludeFRAC: TStringField
+    object cdsRawDataIncludeFRAC: TWideStringField
       FieldName = 'FRAC'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       ReadOnly = True
       Required = True
       Size = 15
     end
-    object cdsRawDataIncludeISOSYSTEM: TStringField
+    object cdsRawDataIncludeISOSYSTEM: TWideStringField
       FieldName = 'ISOSYSTEM'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       ReadOnly = True
       Required = True
       Size = 15
     end
-    object cdsRawDataIncludeVARIABLEID: TStringField
+    object cdsRawDataIncludeVARIABLEID: TWideStringField
       FieldName = 'VARIABLEID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       ReadOnly = True
@@ -5289,26 +5251,11 @@ object dmDV: TdmDV
     Top = 739
   end
   object cdsUnitGrainAgeData: TClientDataSet
-    PersistDataPacket.Data = {
-      950100009619E0BD010000001800000011000000000003000000950109436F75
-      6E7472794944010049000000010005574944544802000200140006556E697449
-      4404000100000000000853616D706C654E6F0100490000000100055749445448
-      0200020014000446726163010049000000010005574944544802000200140006
-      5A6F6E65494401004900000001000557494454480200020002000A416E616C79
-      7369734E6F040001000000000008556E69744E616D6501004900000001000557
-      4944544802000200140008556E697452616E6B01004900000001000557494454
-      4802000200140007556E6974416765080004000000000008477261696E416765
-      080004000000000013477261696E416765556E6365727461696E747908000400
-      0000000009496E636C756465594E010049000000010005574944544802000200
-      14001250657263656E74436F6E636F7264616E636508000400000000000A5265
-      674173736F634944080004000000000004566172310800040000000000045661
-      72320800040000000000045661723308000400000000000000}
-    Active = True
     Aggregates = <>
     Params = <>
     Left = 824
     Top = 120
-    object cdsUnitGrainAgeDataCountryID: TStringField
+    object cdsUnitGrainAgeDataCountryID: TWideStringField
       FieldName = 'CountryID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
     end
@@ -5316,15 +5263,15 @@ object dmDV: TdmDV
       FieldName = 'UnitID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
     end
-    object cdsUnitGrainAgeDataSampleNo: TStringField
+    object cdsUnitGrainAgeDataSampleNo: TWideStringField
       FieldName = 'SampleNo'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
     end
-    object cdsUnitGrainAgeDataFrac: TStringField
+    object cdsUnitGrainAgeDataFrac: TWideStringField
       FieldName = 'Frac'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
     end
-    object cdsUnitGrainAgeDataZoneID: TStringField
+    object cdsUnitGrainAgeDataZoneID: TWideStringField
       FieldName = 'ZoneID'
       Size = 2
     end
@@ -5332,10 +5279,10 @@ object dmDV: TdmDV
       FieldName = 'AnalysisNo'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
     end
-    object cdsUnitGrainAgeDataUnitName: TStringField
+    object cdsUnitGrainAgeDataUnitName: TWideStringField
       FieldName = 'UnitName'
     end
-    object cdsUnitGrainAgeDataUnitRank: TStringField
+    object cdsUnitGrainAgeDataUnitRank: TWideStringField
       FieldName = 'UnitRank'
     end
     object cdsUnitGrainAgeDataUnitAge: TFloatField
@@ -5350,7 +5297,7 @@ object dmDV: TdmDV
       FieldName = 'GrainAgeUncertainty'
       DisplayFormat = '###0.000'
     end
-    object cdsUnitGrainAgeDataIncludeYN: TStringField
+    object cdsUnitGrainAgeDataIncludeYN: TWideStringField
       FieldName = 'IncludeYN'
     end
     object cdsUnitGrainAgeDataPercentConcordance: TFloatField
@@ -5433,22 +5380,22 @@ object dmDV: TdmDV
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsSampleDetritalAgesCOUNTRYABR: TStringField
+    object cdsSampleDetritalAgesCOUNTRYABR: TWideStringField
       FieldName = 'COUNTRYABR'
       Required = True
       Size = 3
     end
-    object cdsSampleDetritalAgesMATERIALABR: TStringField
+    object cdsSampleDetritalAgesMATERIALABR: TWideStringField
       FieldName = 'MATERIALABR'
       Required = True
       Size = 5
     end
-    object cdsSampleDetritalAgesISOTOPESYSTEM: TStringField
+    object cdsSampleDetritalAgesISOTOPESYSTEM: TWideStringField
       FieldName = 'ISOTOPESYSTEM'
       Required = True
       Size = 15
     end
-    object cdsSampleDetritalAgesINTERPABR: TStringField
+    object cdsSampleDetritalAgesINTERPABR: TWideStringField
       FieldName = 'INTERPABR'
       Required = True
       Size = 5
@@ -5536,22 +5483,22 @@ object dmDV: TdmDV
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsMatchingAgesCOUNTRYABR: TStringField
+    object cdsMatchingAgesCOUNTRYABR: TWideStringField
       FieldName = 'COUNTRYABR'
       Required = True
       Size = 3
     end
-    object cdsMatchingAgesMATERIALABR: TStringField
+    object cdsMatchingAgesMATERIALABR: TWideStringField
       FieldName = 'MATERIALABR'
       Required = True
       Size = 5
     end
-    object cdsMatchingAgesISOTOPESYSTEM: TStringField
+    object cdsMatchingAgesISOTOPESYSTEM: TWideStringField
       FieldName = 'ISOTOPESYSTEM'
       Required = True
       Size = 15
     end
-    object cdsMatchingAgesINTERPABR: TStringField
+    object cdsMatchingAgesINTERPABR: TWideStringField
       FieldName = 'INTERPABR'
       Required = True
       Size = 5
@@ -5568,7 +5515,7 @@ object dmDV: TdmDV
       FieldName = 'RAGEMERROR'
       Required = True
     end
-    object cdsMatchingAgesSAMPLENO: TStringField
+    object cdsMatchingAgesSAMPLENO: TWideStringField
       FieldName = 'SAMPLENO'
       Required = True
     end
@@ -5580,12 +5527,12 @@ object dmDV: TdmDV
       FieldName = 'LATITUDE'
       Required = True
     end
-    object cdsMatchingAgesUNITNAME: TStringField
+    object cdsMatchingAgesUNITNAME: TWideStringField
       FieldName = 'UNITNAME'
       Required = True
       Size = 50
     end
-    object cdsMatchingAgesUNITRANK: TStringField
+    object cdsMatchingAgesUNITRANK: TWideStringField
       FieldName = 'UNITRANK'
       Required = True
       Size = 5
@@ -5731,7 +5678,7 @@ object dmDV: TdmDV
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsUserSourceSamplesSAMPLENO: TStringField
+    object cdsUserSourceSamplesSAMPLENO: TWideStringField
       FieldName = 'SAMPLENO'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
@@ -5741,7 +5688,7 @@ object dmDV: TdmDV
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsUserSourceSamplesUSERID: TStringField
+    object cdsUserSourceSamplesUSERID: TWideStringField
       FieldName = 'USERID'
       Required = True
     end
@@ -5749,12 +5696,12 @@ object dmDV: TdmDV
       FieldName = 'STRATDBUNITID'
       Required = True
     end
-    object cdsUserSourceSamplesSTRATDBUNITNAME: TStringField
+    object cdsUserSourceSamplesSTRATDBUNITNAME: TWideStringField
       FieldName = 'STRATDBUNITNAME'
       Required = True
       Size = 50
     end
-    object cdsUserSourceSamplesSTRATDBUNITRANK: TStringField
+    object cdsUserSourceSamplesSTRATDBUNITRANK: TWideStringField
       FieldName = 'STRATDBUNITRANK'
       Required = True
       Size = 30
@@ -5774,7 +5721,7 @@ object dmDV: TdmDV
       Required = True
       DisplayFormat = '##0.00000'
     end
-    object cdsUserSourceSamplesCOUNTRYID: TStringField
+    object cdsUserSourceSamplesCOUNTRYID: TWideStringField
       FieldName = 'COUNTRYID'
       Required = True
       Size = 3
@@ -5794,7 +5741,7 @@ object dmDV: TdmDV
       Required = True
       DisplayFormat = '###0.000'
     end
-    object cdsUserSourceSamplesSRCSAMPLENO: TStringField
+    object cdsUserSourceSamplesSRCSAMPLENO: TWideStringField
       FieldName = 'SRCSAMPLENO'
       Required = True
     end
@@ -5812,17 +5759,17 @@ object dmDV: TdmDV
       FieldName = 'SRCUNITID'
       Required = True
     end
-    object cdsUserSourceSamplesSRCINTERPABR: TStringField
+    object cdsUserSourceSamplesSRCINTERPABR: TWideStringField
       FieldName = 'SRCINTERPABR'
       Required = True
       Size = 5
     end
-    object cdsUserSourceSamplesSRCUNITNAME: TStringField
+    object cdsUserSourceSamplesSRCUNITNAME: TWideStringField
       FieldName = 'SRCUNITNAME'
       Required = True
       Size = 50
     end
-    object cdsUserSourceSamplesSRCUNITRANK: TStringField
+    object cdsUserSourceSamplesSRCUNITRANK: TWideStringField
       FieldName = 'SRCUNITRANK'
       Required = True
       Size = 5
@@ -5831,7 +5778,7 @@ object dmDV: TdmDV
       FieldName = 'SRCREFNUM'
       Required = True
     end
-    object cdsUserSourceSamplesSRCREFSHORT: TStringField
+    object cdsUserSourceSamplesSRCREFSHORT: TWideStringField
       FieldName = 'SRCREFSHORT'
       Required = True
       Size = 100
@@ -5880,11 +5827,11 @@ object dmDV: TdmDV
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsUserProjectsUSERID: TStringField
+    object cdsUserProjectsUSERID: TWideStringField
       FieldName = 'USERID'
       Required = True
     end
-    object cdsUserProjectsUSERPROJECTNAME: TStringField
+    object cdsUserProjectsUSERPROJECTNAME: TWideStringField
       FieldName = 'USERPROJECTNAME'
       Required = True
       Size = 50
@@ -5963,17 +5910,17 @@ object dmDV: TdmDV
       Required = True
       DisplayFormat = '###0.000'
     end
-    object cdsUserUnitGrainAgePDFREGASSOCID: TStringField
+    object cdsUserUnitGrainAgePDFREGASSOCID: TWideStringField
       FieldName = 'REGASSOCID'
       Required = True
       Size = 15
     end
-    object cdsUserUnitGrainAgePDFSTRATDBUNITNAME: TStringField
+    object cdsUserUnitGrainAgePDFSTRATDBUNITNAME: TWideStringField
       FieldName = 'STRATDBUNITNAME'
       Required = True
       Size = 50
     end
-    object cdsUserUnitGrainAgePDFSTRATDBUNITRANK: TStringField
+    object cdsUserUnitGrainAgePDFSTRATDBUNITRANK: TWideStringField
       FieldName = 'STRATDBUNITRANK'
       Required = True
       Size = 30
@@ -6106,7 +6053,7 @@ object dmDV: TdmDV
     OnReconcileError = cdsAnyReconcileError
     Left = 96
     Top = 504
-    object cdsSamplesForUnitUSERID: TStringField
+    object cdsSamplesForUnitUSERID: TWideStringField
       FieldName = 'USERID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
@@ -6116,7 +6063,7 @@ object dmDV: TdmDV
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsSamplesForUnitSAMPLENO: TStringField
+    object cdsSamplesForUnitSAMPLENO: TWideStringField
       FieldName = 'SAMPLENO'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
@@ -6125,12 +6072,12 @@ object dmDV: TdmDV
       FieldName = 'UNITID'
       Required = True
     end
-    object cdsSamplesForUnitSTRATDBUNITNAME: TStringField
+    object cdsSamplesForUnitSTRATDBUNITNAME: TWideStringField
       FieldName = 'STRATDBUNITNAME'
       Required = True
       Size = 50
     end
-    object cdsSamplesForUnitSTRATDBUNITRANK: TStringField
+    object cdsSamplesForUnitSTRATDBUNITRANK: TWideStringField
       FieldName = 'STRATDBUNITRANK'
       Required = True
       Size = 30
@@ -6147,7 +6094,7 @@ object dmDV: TdmDV
       FieldName = 'LATITUDE'
       Required = True
     end
-    object cdsSamplesForUnitCOUNTRYID: TStringField
+    object cdsSamplesForUnitCOUNTRYID: TWideStringField
       FieldName = 'COUNTRYID'
       Required = True
       Size = 3
@@ -6353,41 +6300,41 @@ object dmDV: TdmDV
     object cdsDVLIPDomainDatesProvincesLIPID: TIntegerField
       FieldName = 'LIPID'
     end
-    object cdsDVLIPDomainDatesProvincesLIPNAME: TStringField
+    object cdsDVLIPDomainDatesProvincesLIPNAME: TWideStringField
       FieldName = 'LIPNAME'
       Size = 50
     end
-    object StringField7: TStringField
+    object StringField7: TWideStringField
       FieldName = 'COUNTRYABR'
       Required = True
       Size = 3
     end
-    object StringField8: TStringField
+    object StringField8: TWideStringField
       FieldName = 'UNITNAME'
       Required = True
       Size = 50
     end
-    object StringField9: TStringField
+    object StringField9: TWideStringField
       FieldName = 'MATERIALABR'
       Required = True
       Size = 5
     end
-    object StringField10: TStringField
+    object StringField10: TWideStringField
       FieldName = 'ISOTOPESYSTEM'
       Required = True
       Size = 15
     end
-    object StringField11: TStringField
+    object StringField11: TWideStringField
       FieldName = 'APPROACHABR'
       Required = True
       Size = 5
     end
-    object StringField12: TStringField
+    object StringField12: TWideStringField
       FieldName = 'TECHABR'
       Required = True
       Size = 5
     end
-    object StringField13: TStringField
+    object StringField13: TWideStringField
       FieldName = 'INTERPABR'
       Required = True
       Size = 5
@@ -6404,12 +6351,12 @@ object dmDV: TdmDV
       FieldName = 'IAGEMERROR'
       Required = True
     end
-    object StringField14: TStringField
+    object StringField14: TWideStringField
       FieldName = 'AGEUNITS'
       Required = True
       Size = 2
     end
-    object StringField15: TStringField
+    object StringField15: TWideStringField
       FieldName = 'LITHOLOGY'
       Required = True
       Size = 50
@@ -6431,7 +6378,7 @@ object dmDV: TdmDV
       FieldName = 'PREFLEVEL'
       Required = True
     end
-    object StringField16: TStringField
+    object StringField16: TWideStringField
       FieldName = 'DOMAINNAME'
       Required = True
       Size = 30
@@ -6573,24 +6520,24 @@ object dmDV: TdmDV
     SQLConnection = sqlcDateView
     Left = 718
     Top = 643
-    object StringField17: TStringField
+    object StringField17: TWideStringField
       FieldName = 'SAMPLENO'
       ProviderFlags = []
       ReadOnly = True
     end
-    object StringField18: TStringField
+    object StringField18: TWideStringField
       FieldName = 'FRAC'
       ProviderFlags = []
       ReadOnly = True
       Size = 15
     end
-    object StringField19: TStringField
+    object StringField19: TWideStringField
       FieldName = 'ISOSYSTEM'
       ProviderFlags = []
       ReadOnly = True
       Size = 15
     end
-    object StringField20: TStringField
+    object StringField20: TWideStringField
       FieldName = 'VARIABLEID'
       ProviderFlags = []
       ReadOnly = True
@@ -6601,7 +6548,7 @@ object dmDV: TdmDV
       ProviderFlags = []
       ReadOnly = True
     end
-    object StringField21: TStringField
+    object StringField21: TWideStringField
       FieldName = 'NORMALISINGSTANDARD'
       ProviderFlags = []
       ReadOnly = True
@@ -6612,7 +6559,7 @@ object dmDV: TdmDV
       ProviderFlags = []
       ReadOnly = True
     end
-    object StringField22: TStringField
+    object StringField22: TWideStringField
       FieldName = 'VARIABLENAME'
       ProviderFlags = []
       ReadOnly = True
@@ -6625,24 +6572,24 @@ object dmDV: TdmDV
     Params = <>
     Left = 746
     Top = 643
-    object cdsRawDataVar1SAMPLENO: TStringField
+    object cdsRawDataVar1SAMPLENO: TWideStringField
       FieldName = 'SAMPLENO'
       ProviderFlags = []
       ReadOnly = True
     end
-    object cdsRawDataVar1FRAC: TStringField
+    object cdsRawDataVar1FRAC: TWideStringField
       FieldName = 'FRAC'
       ProviderFlags = []
       ReadOnly = True
       Size = 15
     end
-    object cdsRawDataVar1ISOSYSTEM: TStringField
+    object cdsRawDataVar1ISOSYSTEM: TWideStringField
       FieldName = 'ISOSYSTEM'
       ProviderFlags = []
       ReadOnly = True
       Size = 15
     end
-    object cdsRawDataVar1VARIABLEID: TStringField
+    object cdsRawDataVar1VARIABLEID: TWideStringField
       FieldName = 'VARIABLEID'
       ProviderFlags = []
       ReadOnly = True
@@ -6653,7 +6600,7 @@ object dmDV: TdmDV
       ProviderFlags = []
       ReadOnly = True
     end
-    object cdsRawDataVar1NORMALISINGSTANDARD: TStringField
+    object cdsRawDataVar1NORMALISINGSTANDARD: TWideStringField
       FieldName = 'NORMALISINGSTANDARD'
       ProviderFlags = []
       ReadOnly = True
@@ -6664,7 +6611,7 @@ object dmDV: TdmDV
       ProviderFlags = []
       ReadOnly = True
     end
-    object cdsRawDataVar1VARIABLENAME: TStringField
+    object cdsRawDataVar1VARIABLENAME: TWideStringField
       FieldName = 'VARIABLENAME'
       ProviderFlags = []
       ReadOnly = True
@@ -6714,24 +6661,24 @@ object dmDV: TdmDV
     SQLConnection = sqlcDateView
     Left = 718
     Top = 699
-    object StringField29: TStringField
+    object StringField29: TWideStringField
       FieldName = 'SAMPLENO'
       ProviderFlags = []
       ReadOnly = True
     end
-    object StringField30: TStringField
+    object StringField30: TWideStringField
       FieldName = 'FRAC'
       ProviderFlags = []
       ReadOnly = True
       Size = 15
     end
-    object StringField31: TStringField
+    object StringField31: TWideStringField
       FieldName = 'ISOSYSTEM'
       ProviderFlags = []
       ReadOnly = True
       Size = 15
     end
-    object StringField32: TStringField
+    object StringField32: TWideStringField
       FieldName = 'VARIABLEID'
       ProviderFlags = []
       ReadOnly = True
@@ -6742,7 +6689,7 @@ object dmDV: TdmDV
       ProviderFlags = []
       ReadOnly = True
     end
-    object StringField33: TStringField
+    object StringField33: TWideStringField
       FieldName = 'NORMALISINGSTANDARD'
       ProviderFlags = []
       ReadOnly = True
@@ -6753,7 +6700,7 @@ object dmDV: TdmDV
       ProviderFlags = []
       ReadOnly = True
     end
-    object StringField34: TStringField
+    object StringField34: TWideStringField
       FieldName = 'VARIABLENAME'
       ProviderFlags = []
       ReadOnly = True
@@ -6766,24 +6713,24 @@ object dmDV: TdmDV
     Params = <>
     Left = 746
     Top = 699
-    object cdsRawDataVar2SAMPLENO: TStringField
+    object cdsRawDataVar2SAMPLENO: TWideStringField
       FieldName = 'SAMPLENO'
       ProviderFlags = []
       ReadOnly = True
     end
-    object cdsRawDataVar2FRAC: TStringField
+    object cdsRawDataVar2FRAC: TWideStringField
       FieldName = 'FRAC'
       ProviderFlags = []
       ReadOnly = True
       Size = 15
     end
-    object cdsRawDataVar2ISOSYSTEM: TStringField
+    object cdsRawDataVar2ISOSYSTEM: TWideStringField
       FieldName = 'ISOSYSTEM'
       ProviderFlags = []
       ReadOnly = True
       Size = 15
     end
-    object cdsRawDataVar2VARIABLEID: TStringField
+    object cdsRawDataVar2VARIABLEID: TWideStringField
       FieldName = 'VARIABLEID'
       ProviderFlags = []
       ReadOnly = True
@@ -6794,7 +6741,7 @@ object dmDV: TdmDV
       ProviderFlags = []
       ReadOnly = True
     end
-    object cdsRawDataVar2NORMALISINGSTANDARD: TStringField
+    object cdsRawDataVar2NORMALISINGSTANDARD: TWideStringField
       FieldName = 'NORMALISINGSTANDARD'
       ProviderFlags = []
       ReadOnly = True
@@ -6805,7 +6752,7 @@ object dmDV: TdmDV
       ProviderFlags = []
       ReadOnly = True
     end
-    object cdsRawDataVar2VARIABLENAME: TStringField
+    object cdsRawDataVar2VARIABLENAME: TWideStringField
       FieldName = 'VARIABLENAME'
       ProviderFlags = []
       ReadOnly = True
@@ -6855,24 +6802,24 @@ object dmDV: TdmDV
     SQLConnection = sqlcDateView
     Left = 718
     Top = 747
-    object StringField41: TStringField
+    object StringField41: TWideStringField
       FieldName = 'SAMPLENO'
       ProviderFlags = []
       ReadOnly = True
     end
-    object StringField42: TStringField
+    object StringField42: TWideStringField
       FieldName = 'FRAC'
       ProviderFlags = []
       ReadOnly = True
       Size = 15
     end
-    object StringField43: TStringField
+    object StringField43: TWideStringField
       FieldName = 'ISOSYSTEM'
       ProviderFlags = []
       ReadOnly = True
       Size = 15
     end
-    object StringField44: TStringField
+    object StringField44: TWideStringField
       FieldName = 'VARIABLEID'
       ProviderFlags = []
       ReadOnly = True
@@ -6883,7 +6830,7 @@ object dmDV: TdmDV
       ProviderFlags = []
       ReadOnly = True
     end
-    object StringField45: TStringField
+    object StringField45: TWideStringField
       FieldName = 'NORMALISINGSTANDARD'
       ProviderFlags = []
       ReadOnly = True
@@ -6894,7 +6841,7 @@ object dmDV: TdmDV
       ProviderFlags = []
       ReadOnly = True
     end
-    object StringField46: TStringField
+    object StringField46: TWideStringField
       FieldName = 'VARIABLENAME'
       ProviderFlags = []
       ReadOnly = True
@@ -6907,24 +6854,24 @@ object dmDV: TdmDV
     Params = <>
     Left = 746
     Top = 747
-    object cdsRawDataVar3SAMPLENO: TStringField
+    object cdsRawDataVar3SAMPLENO: TWideStringField
       FieldName = 'SAMPLENO'
       ProviderFlags = []
       ReadOnly = True
     end
-    object cdsRawDataVar3FRAC: TStringField
+    object cdsRawDataVar3FRAC: TWideStringField
       FieldName = 'FRAC'
       ProviderFlags = []
       ReadOnly = True
       Size = 15
     end
-    object cdsRawDataVar3ISOSYSTEM: TStringField
+    object cdsRawDataVar3ISOSYSTEM: TWideStringField
       FieldName = 'ISOSYSTEM'
       ProviderFlags = []
       ReadOnly = True
       Size = 15
     end
-    object cdsRawDataVar3VARIABLEID: TStringField
+    object cdsRawDataVar3VARIABLEID: TWideStringField
       FieldName = 'VARIABLEID'
       ProviderFlags = []
       ReadOnly = True
@@ -6935,7 +6882,7 @@ object dmDV: TdmDV
       ProviderFlags = []
       ReadOnly = True
     end
-    object cdsRawDataVar3NORMALISINGSTANDARD: TStringField
+    object cdsRawDataVar3NORMALISINGSTANDARD: TWideStringField
       FieldName = 'NORMALISINGSTANDARD'
       ProviderFlags = []
       ReadOnly = True
@@ -6946,7 +6893,7 @@ object dmDV: TdmDV
       ProviderFlags = []
       ReadOnly = True
     end
-    object cdsRawDataVar3VARIABLENAME: TStringField
+    object cdsRawDataVar3VARIABLENAME: TWideStringField
       FieldName = 'VARIABLENAME'
       ProviderFlags = []
       ReadOnly = True
@@ -7001,7 +6948,7 @@ object dmDV: TdmDV
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object StringField53: TStringField
+    object StringField53: TWideStringField
       FieldName = 'SAMPLENO'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
@@ -7011,7 +6958,7 @@ object dmDV: TdmDV
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object StringField54: TStringField
+    object StringField54: TWideStringField
       FieldName = 'USERID'
       Required = True
     end
@@ -7019,12 +6966,12 @@ object dmDV: TdmDV
       FieldName = 'STRATDBUNITID'
       Required = True
     end
-    object StringField55: TStringField
+    object StringField55: TWideStringField
       FieldName = 'STRATDBUNITNAME'
       Required = True
       Size = 50
     end
-    object StringField56: TStringField
+    object StringField56: TWideStringField
       FieldName = 'STRATDBUNITRANK'
       Required = True
       Size = 30
@@ -7044,12 +6991,12 @@ object dmDV: TdmDV
       Required = True
       DisplayFormat = '##0.00000'
     end
-    object StringField57: TStringField
+    object StringField57: TWideStringField
       FieldName = 'COUNTRYID'
       Required = True
       Size = 3
     end
-    object StringField58: TStringField
+    object StringField58: TWideStringField
       FieldName = 'UNITNAME'
       Required = True
       Size = 50
@@ -7069,7 +7016,7 @@ object dmDV: TdmDV
       Required = True
       DisplayFormat = '###0.000'
     end
-    object StringField59: TStringField
+    object StringField59: TWideStringField
       FieldName = 'SRCSAMPLENO'
       Required = True
     end
@@ -7087,7 +7034,7 @@ object dmDV: TdmDV
       FieldName = 'SRCUNITID'
       Required = True
     end
-    object StringField60: TStringField
+    object StringField60: TWideStringField
       FieldName = 'SRCINTERPABR'
       Required = True
       Size = 5
@@ -7120,13 +7067,13 @@ object dmDV: TdmDV
     ProviderName = 'dspSampleZones'
     Left = 376
     Top = 384
-    object cdsSampleZonesZONEID: TStringField
+    object cdsSampleZonesZONEID: TWideStringField
       FieldName = 'ZONEID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
       Size = 2
     end
-    object cdsSampleZonesZONETYPE: TStringField
+    object cdsSampleZonesZONETYPE: TWideStringField
       FieldName = 'ZONETYPE'
       Required = True
     end
@@ -7185,7 +7132,7 @@ object dmDV: TdmDV
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object qRefFullSOURCESHORT: TStringField
+    object qRefFullSOURCESHORT: TWideStringField
       FieldName = 'SOURCESHORT'
       Required = True
       Size = 100
@@ -7194,22 +7141,21 @@ object dmDV: TdmDV
       FieldName = 'SOURCEYEAR'
       Required = True
     end
-    object qRefFullCONTINENTID: TStringField
+    object qRefFullCONTINENTID: TWideStringField
       FieldName = 'CONTINENTID'
       Required = True
       Size = 3
     end
-    object qRefFullWHOFORID: TStringField
+    object qRefFullWHOFORID: TWideStringField
       FieldName = 'WHOFORID'
       Required = True
       Size = 5
     end
-    object qRefFullSOURCEDESCRIPTION: TMemoField
+    object qRefFullSOURCEDESCRIPTION: TBlobField
       FieldName = 'SOURCEDESCRIPTION'
-      BlobType = ftMemo
-      Size = 1
+      Size = -1
     end
-    object qRefFullDOI: TStringField
+    object qRefFullDOI: TWideStringField
       FieldName = 'DOI'
       Size = 100
     end
@@ -7231,7 +7177,7 @@ object dmDV: TdmDV
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsRefFullSOURCESHORT: TStringField
+    object cdsRefFullSOURCESHORT: TWideStringField
       FieldName = 'SOURCESHORT'
       Required = True
       Size = 100
@@ -7240,22 +7186,20 @@ object dmDV: TdmDV
       FieldName = 'SOURCEYEAR'
       Required = True
     end
-    object cdsRefFullCONTINENTID: TStringField
+    object cdsRefFullCONTINENTID: TWideStringField
       FieldName = 'CONTINENTID'
       Required = True
       Size = 3
     end
-    object cdsRefFullWHOFORID: TStringField
+    object cdsRefFullWHOFORID: TWideStringField
       FieldName = 'WHOFORID'
       Required = True
       Size = 5
     end
-    object cdsRefFullSOURCEDESCRIPTION: TMemoField
+    object cdsRefFullSOURCEDESCRIPTION: TBlobField
       FieldName = 'SOURCEDESCRIPTION'
-      BlobType = ftMemo
-      Size = 1
     end
-    object cdsRefFullDOI: TStringField
+    object cdsRefFullDOI: TWideStringField
       FieldName = 'DOI'
       Size = 100
     end
@@ -7331,27 +7275,27 @@ object dmDV: TdmDV
     ProviderName = 'dspCompleteUserGrainData'
     Left = 374
     Top = 282
-    object cdsCompleteUserGrainDataUSERID: TStringField
+    object cdsCompleteUserGrainDataUSERID: TWideStringField
       FieldName = 'USERID'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsCompleteUserGrainDataSAMPLENO: TStringField
+    object cdsCompleteUserGrainDataSAMPLENO: TWideStringField
       FieldName = 'SAMPLENO'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
     end
-    object cdsCompleteUserGrainDataFRAC: TStringField
+    object cdsCompleteUserGrainDataFRAC: TWideStringField
       FieldName = 'FRAC'
       ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
       Required = True
       Size = 15
     end
-    object cdsCompleteUserGrainDataORIGINALNO: TStringField
+    object cdsCompleteUserGrainDataORIGINALNO: TWideStringField
       FieldName = 'ORIGINALNO'
       Required = True
     end
-    object cdsCompleteUserGrainDataLITHOLOGY: TStringField
+    object cdsCompleteUserGrainDataLITHOLOGY: TWideStringField
       FieldName = 'LITHOLOGY'
       Required = True
       Size = 50
@@ -7372,11 +7316,11 @@ object dmDV: TdmDV
       FieldName = 'USERPROJECTID'
       Required = True
     end
-    object cdsCompleteUserGrainDataUSERPROJECTNAME: TStringField
+    object cdsCompleteUserGrainDataUSERPROJECTNAME: TWideStringField
       FieldName = 'USERPROJECTNAME'
       Size = 50
     end
-    object cdsCompleteUserGrainDataCOUNTRYID: TStringField
+    object cdsCompleteUserGrainDataCOUNTRYID: TWideStringField
       FieldName = 'COUNTRYID'
       Required = True
       Size = 3
@@ -7389,12 +7333,12 @@ object dmDV: TdmDV
       FieldName = 'STRATDBUNITID'
       Required = True
     end
-    object cdsCompleteUserGrainDataSTRATDBUNITNAME: TStringField
+    object cdsCompleteUserGrainDataSTRATDBUNITNAME: TWideStringField
       FieldName = 'STRATDBUNITNAME'
       Required = True
       Size = 50
     end
-    object cdsCompleteUserGrainDataSTRATDBUNITRANK: TStringField
+    object cdsCompleteUserGrainDataSTRATDBUNITRANK: TWideStringField
       FieldName = 'STRATDBUNITRANK'
       Required = True
       Size = 30
