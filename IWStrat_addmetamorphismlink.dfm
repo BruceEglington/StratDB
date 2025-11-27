@@ -18,15 +18,15 @@ object ISFAddMetamorphismLink: TISFAddMetamorphismLink
   DesignLeft = 2
   DesignTop = 2
   object rectLeft: TIWRectangle
+    AlignWithMargins = False
     Left = 0
     Top = 55
     Width = 83
     Height = 545
     Align = alLeft
     ZIndex = 1
+    Font.PxSize = 13
     Font.Color = clWebBLACK
-    Font.Size = 10
-    Font.Style = []
     BorderOptions.Width = 0
     FriendlyName = 'rectLeft'
     Color = clWebLAVENDER
@@ -35,88 +35,89 @@ object ISFAddMetamorphismLink: TISFAddMetamorphismLink
     ExplicitTop = -145
   end
   object iwbReturn: TIWButton
+    AlignWithMargins = False
     Left = 102
     Top = 72
     Width = 104
     Height = 25
     Caption = 'Return'
     Color = clWebLIGHTGREEN
-    Font.Color = clNone
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbReturn'
     OnClick = iwbReturnClick
   end
   object iwbEdit: TIWButton
+    AlignWithMargins = False
     Left = 320
     Top = 72
     Width = 104
     Height = 25
     Caption = 'Edit'
     Color = clWebLEMONCHIFFON
-    Font.Color = clNone
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbEdit'
     TabOrder = 1
     OnClick = iwbEditClick
   end
   object iwbApplyUpdates: TIWButton
+    AlignWithMargins = False
     Left = 429
     Top = 72
     Width = 104
     Height = 25
     Caption = 'Apply Updates'
     Color = clWebPEACHPUFF
-    Font.Color = clNone
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbApplyUpdates'
     TabOrder = 2
     OnClick = iwbApplyUpdatesClick
   end
   object iwbCancelUpdates: TIWButton
+    AlignWithMargins = False
     Left = 538
     Top = 72
     Width = 104
     Height = 25
     Caption = 'Cancel Updates'
     Color = clWebLIGHTSALMON
-    Font.Color = clNone
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbCancelUpdates'
     TabOrder = 3
     OnClick = iwbCancelUpdatesClick
   end
   object iwbDeleteLink: TIWButton
+    AlignWithMargins = False
     Left = 648
     Top = 72
     Width = 145
     Height = 25
     Caption = 'Delete Current Record'
     Color = clWebLIGHTCORAL
-    Font.Color = clNone
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbDeleteLink'
     TabOrder = 4
     OnClick = iwbDeleteLinkClick
   end
   object IWLabel1: TIWLabel
+    AlignWithMargins = False
     Left = 104
     Top = 110
     Width = 34
     Height = 15
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'Order'
   end
   object IWDBEdit1: TIWDBEdit
+    AlignWithMargins = False
     Left = 242
     Top = 108
     Width = 39
@@ -124,10 +125,10 @@ object ISFAddMetamorphismLink: TISFAddMetamorphismLink
     StyleRenderOptions.RenderBorder = False
     Editable = False
     NonEditableAsLabel = True
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
     SubmitOnAsyncEvent = True
     TabOrder = 5
@@ -137,28 +138,29 @@ object ISFAddMetamorphismLink: TISFAddMetamorphismLink
     PasswordPrompt = False
   end
   object IWLabel2: TIWLabel
+    AlignWithMargins = False
     Left = 104
     Top = 140
     Width = 118
     Height = 15
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     HasTabOrder = False
     FriendlyName = 'IWLabel2'
     Caption = 'Metamorphic Grade'
   end
   object iwDBlcbGrade: TIWDBLookupComboBox
+    AlignWithMargins = False
     Left = 242
     Top = 136
     Width = 365
     Height = 21
     StyleRenderOptions.RenderBorder = False
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     Editable = False
     NonEditableAsLabel = True
     TabOrder = 6
@@ -170,22 +172,22 @@ object ISFAddMetamorphismLink: TISFAddMetamorphismLink
     ListField = 'GRADE'
     ListSource = dmStrat.dsMetamorphicGrades
     DisableWhenEmpty = True
-    NoSelectionText = '-- No Selection --'
   end
   object IWLabel4: TIWLabel
+    AlignWithMargins = False
     Left = 102
     Top = 166
     Width = 57
     Height = 15
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'Peak Age'
   end
   object IWDBEdit2: TIWDBEdit
+    AlignWithMargins = False
     Left = 242
     Top = 163
     Width = 73
@@ -193,10 +195,10 @@ object ISFAddMetamorphismLink: TISFAddMetamorphismLink
     StyleRenderOptions.RenderBorder = False
     Editable = False
     NonEditableAsLabel = True
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
     SubmitOnAsyncEvent = True
     TabOrder = 7
@@ -206,19 +208,20 @@ object ISFAddMetamorphismLink: TISFAddMetamorphismLink
     PasswordPrompt = False
   end
   object IWLabel5: TIWLabel
+    AlignWithMargins = False
     Left = 329
     Top = 166
     Width = 14
     Height = 15
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = ' + '
   end
   object IWDBEdit3: TIWDBEdit
+    AlignWithMargins = False
     Left = 353
     Top = 163
     Width = 73
@@ -226,10 +229,10 @@ object ISFAddMetamorphismLink: TISFAddMetamorphismLink
     StyleRenderOptions.RenderBorder = False
     Editable = False
     NonEditableAsLabel = True
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
     SubmitOnAsyncEvent = True
     TabOrder = 8
@@ -239,19 +242,20 @@ object ISFAddMetamorphismLink: TISFAddMetamorphismLink
     PasswordPrompt = False
   end
   object IWLabel6: TIWLabel
+    AlignWithMargins = False
     Left = 438
     Top = 166
     Width = 11
     Height = 15
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = ' - '
   end
   object IWDBEdit4: TIWDBEdit
+    AlignWithMargins = False
     Left = 455
     Top = 163
     Width = 73
@@ -259,10 +263,10 @@ object ISFAddMetamorphismLink: TISFAddMetamorphismLink
     StyleRenderOptions.RenderBorder = False
     Editable = False
     NonEditableAsLabel = True
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
     SubmitOnAsyncEvent = True
     TabOrder = 9
@@ -272,28 +276,29 @@ object ISFAddMetamorphismLink: TISFAddMetamorphismLink
     PasswordPrompt = False
   end
   object IWLabel12: TIWLabel
+    AlignWithMargins = False
     Left = 104
     Top = 196
     Width = 96
     Height = 15
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     HasTabOrder = False
     FriendlyName = 'IWLabel2'
     Caption = 'Age Constraints'
   end
   object iwDBlcbAgeConstraintLevel: TIWDBLookupComboBox
+    AlignWithMargins = False
     Left = 242
     Top = 196
     Width = 365
     Height = 21
     StyleRenderOptions.RenderBorder = False
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     Editable = False
     NonEditableAsLabel = True
     TabOrder = 10
@@ -305,22 +310,22 @@ object ISFAddMetamorphismLink: TISFAddMetamorphismLink
     ListField = 'AGECONSTRAINTLEVEL'
     ListSource = dmStrat.dsAgeConstraints
     DisableWhenEmpty = True
-    NoSelectionText = '-- No Selection --'
   end
   object IWLabel8: TIWLabel
+    AlignWithMargins = False
     Left = 102
     Top = 226
     Width = 112
     Height = 15
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'Peak Temperature'
   end
   object IWDBEdit5: TIWDBEdit
+    AlignWithMargins = False
     Left = 242
     Top = 223
     Width = 73
@@ -328,10 +333,10 @@ object ISFAddMetamorphismLink: TISFAddMetamorphismLink
     StyleRenderOptions.RenderBorder = False
     Editable = False
     NonEditableAsLabel = True
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
     SubmitOnAsyncEvent = True
     TabOrder = 11
@@ -341,6 +346,7 @@ object ISFAddMetamorphismLink: TISFAddMetamorphismLink
     PasswordPrompt = False
   end
   object IWDBEdit6: TIWDBEdit
+    AlignWithMargins = False
     Left = 353
     Top = 223
     Width = 73
@@ -348,10 +354,10 @@ object ISFAddMetamorphismLink: TISFAddMetamorphismLink
     StyleRenderOptions.RenderBorder = False
     Editable = False
     NonEditableAsLabel = True
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
     SubmitOnAsyncEvent = True
     TabOrder = 12
@@ -361,45 +367,46 @@ object ISFAddMetamorphismLink: TISFAddMetamorphismLink
     PasswordPrompt = False
   end
   object IWLabel10: TIWLabel
+    AlignWithMargins = False
     Left = 266
     Top = 243
     Width = 26
     Height = 15
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'min.'
   end
   object IWLabel11: TIWLabel
+    AlignWithMargins = False
     Left = 386
     Top = 243
     Width = 28
     Height = 15
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'max.'
   end
   object IWLabel9: TIWLabel
+    AlignWithMargins = False
     Left = 104
     Top = 266
     Width = 90
     Height = 15
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'Peak Pressure'
   end
   object IWDBEdit7: TIWDBEdit
+    AlignWithMargins = False
     Left = 242
     Top = 263
     Width = 73
@@ -407,10 +414,10 @@ object ISFAddMetamorphismLink: TISFAddMetamorphismLink
     StyleRenderOptions.RenderBorder = False
     Editable = False
     NonEditableAsLabel = True
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
     SubmitOnAsyncEvent = True
     TabOrder = 13
@@ -420,6 +427,7 @@ object ISFAddMetamorphismLink: TISFAddMetamorphismLink
     PasswordPrompt = False
   end
   object IWDBEdit8: TIWDBEdit
+    AlignWithMargins = False
     Left = 353
     Top = 263
     Width = 73
@@ -427,10 +435,10 @@ object ISFAddMetamorphismLink: TISFAddMetamorphismLink
     StyleRenderOptions.RenderBorder = False
     Editable = False
     NonEditableAsLabel = True
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
     SubmitOnAsyncEvent = True
     TabOrder = 14
@@ -440,28 +448,29 @@ object ISFAddMetamorphismLink: TISFAddMetamorphismLink
     PasswordPrompt = False
   end
   object IWLabel3: TIWLabel
+    AlignWithMargins = False
     Left = 102
     Top = 300
     Width = 50
     Height = 15
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     HasTabOrder = False
     FriendlyName = 'IWLabel2'
     Caption = 'Orogeny'
   end
   object iwDBlcbOrogeny: TIWDBLookupComboBox
+    AlignWithMargins = False
     Left = 242
     Top = 294
     Width = 365
     Height = 21
     StyleRenderOptions.RenderBorder = False
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     Editable = False
     NonEditableAsLabel = True
     TabOrder = 15
@@ -473,23 +482,21 @@ object ISFAddMetamorphismLink: TISFAddMetamorphismLink
     ListField = 'OROGENY'
     ListSource = dmStrat.dsOrogenies
     DisableWhenEmpty = True
-    NoSelectionText = '-- No Selection --'
   end
   object iwbOpen: TIWButton
+    AlignWithMargins = False
     Left = 211
     Top = 72
     Width = 104
     Height = 25
     Caption = 'Open'
     Color = clBtnFace
-    Font.Color = clNone
-    Font.Size = 10
-    Font.Style = []
     FriendlyName = 'iwbOpen'
     TabOrder = 16
     OnClick = iwbOpenClick
   end
   object iwDBnLink: TIWDBNavigator
+    AlignWithMargins = False
     Left = 104
     Top = 354
     Width = 150
@@ -506,6 +513,7 @@ object ISFAddMetamorphismLink: TISFAddMetamorphismLink
     OnInsert = iwDBnLinkInsert
   end
   object iwDBgLink: TIWDBGrid
+    AlignWithMargins = False
     Left = 104
     Top = 388
     Width = 793
@@ -518,24 +526,24 @@ object ISFAddMetamorphismLink: TISFAddMetamorphismLink
     BorderStyle = tfDefault
     CellPadding = 0
     CellSpacing = 0
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     FrameBuffer = 40
     Lines = tlAll
     UseFrame = True
     UseSize = True
+    ShowEmptyCells = True
+    ShowInvisibleRows = True
     ScrollToCurrentRow = False
     Columns = <
       item
         Alignment = taCenter
         BGColor = clNone
         DoSubmitValidation = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 8
-        Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -544,17 +552,16 @@ object ISFAddMetamorphismLink: TISFAddMetamorphismLink
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'METAMORPHISMORDER'
         Title.Alignment = taCenter
         Title.BGColor = clNone
         Title.DoSubmitValidation = True
-        Title.Font.Color = clNone
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -569,10 +576,9 @@ object ISFAddMetamorphismLink: TISFAddMetamorphismLink
         Alignment = taLeftJustify
         BGColor = clNone
         DoSubmitValidation = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 8
-        Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -581,17 +587,16 @@ object ISFAddMetamorphismLink: TISFAddMetamorphismLink
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'GRADE'
         Title.Alignment = taCenter
         Title.BGColor = clNone
         Title.DoSubmitValidation = True
-        Title.Font.Color = clNone
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -606,10 +611,9 @@ object ISFAddMetamorphismLink: TISFAddMetamorphismLink
         Alignment = taCenter
         BGColor = clNone
         DoSubmitValidation = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 8
-        Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -618,17 +622,16 @@ object ISFAddMetamorphismLink: TISFAddMetamorphismLink
         Width = '80'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'PEAKAGE'
         Title.Alignment = taCenter
         Title.BGColor = clNone
         Title.DoSubmitValidation = True
-        Title.Font.Color = clNone
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -643,10 +646,9 @@ object ISFAddMetamorphismLink: TISFAddMetamorphismLink
         Alignment = taCenter
         BGColor = clNone
         DoSubmitValidation = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 8
-        Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -655,17 +657,16 @@ object ISFAddMetamorphismLink: TISFAddMetamorphismLink
         Width = '50'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'AGEPLUS'
         Title.Alignment = taCenter
         Title.BGColor = clNone
         Title.DoSubmitValidation = True
-        Title.Font.Color = clNone
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -680,10 +681,9 @@ object ISFAddMetamorphismLink: TISFAddMetamorphismLink
         Alignment = taCenter
         BGColor = clNone
         DoSubmitValidation = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 8
-        Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -692,17 +692,16 @@ object ISFAddMetamorphismLink: TISFAddMetamorphismLink
         Width = '50'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'AGEMINUS'
         Title.Alignment = taCenter
         Title.BGColor = clNone
         Title.DoSubmitValidation = True
-        Title.Font.Color = clNone
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -717,10 +716,9 @@ object ISFAddMetamorphismLink: TISFAddMetamorphismLink
         Alignment = taLeftJustify
         BGColor = clNone
         DoSubmitValidation = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 8
-        Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -729,17 +727,16 @@ object ISFAddMetamorphismLink: TISFAddMetamorphismLink
         Width = '100'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'AGECONSTRAINTLEVEL'
         Title.Alignment = taCenter
         Title.BGColor = clNone
         Title.DoSubmitValidation = True
-        Title.Font.Color = clNone
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -754,10 +751,9 @@ object ISFAddMetamorphismLink: TISFAddMetamorphismLink
         Alignment = taCenter
         BGColor = clNone
         DoSubmitValidation = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 8
-        Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -766,17 +762,16 @@ object ISFAddMetamorphismLink: TISFAddMetamorphismLink
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'PEAKTMIN'
         Title.Alignment = taCenter
         Title.BGColor = clNone
         Title.DoSubmitValidation = True
-        Title.Font.Color = clNone
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -791,10 +786,9 @@ object ISFAddMetamorphismLink: TISFAddMetamorphismLink
         Alignment = taCenter
         BGColor = clNone
         DoSubmitValidation = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 8
-        Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -803,17 +797,16 @@ object ISFAddMetamorphismLink: TISFAddMetamorphismLink
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'PEAKTMAX'
         Title.Alignment = taCenter
         Title.BGColor = clNone
         Title.DoSubmitValidation = True
-        Title.Font.Color = clNone
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -828,10 +821,9 @@ object ISFAddMetamorphismLink: TISFAddMetamorphismLink
         Alignment = taCenter
         BGColor = clNone
         DoSubmitValidation = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 8
-        Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -840,17 +832,16 @@ object ISFAddMetamorphismLink: TISFAddMetamorphismLink
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'PEAKPMIN'
         Title.Alignment = taCenter
         Title.BGColor = clNone
         Title.DoSubmitValidation = True
-        Title.Font.Color = clNone
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -865,10 +856,9 @@ object ISFAddMetamorphismLink: TISFAddMetamorphismLink
         Alignment = taCenter
         BGColor = clNone
         DoSubmitValidation = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 8
-        Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -877,17 +867,16 @@ object ISFAddMetamorphismLink: TISFAddMetamorphismLink
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'PEAKPMAX'
         Title.Alignment = taCenter
         Title.BGColor = clNone
         Title.DoSubmitValidation = True
-        Title.Font.Color = clNone
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -902,10 +891,9 @@ object ISFAddMetamorphismLink: TISFAddMetamorphismLink
         Alignment = taLeftJustify
         BGColor = clNone
         DoSubmitValidation = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 8
-        Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -914,17 +902,16 @@ object ISFAddMetamorphismLink: TISFAddMetamorphismLink
         Width = '150'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'OROGENY'
         Title.Alignment = taCenter
         Title.BGColor = clNone
         Title.DoSubmitValidation = True
-        Title.Font.Color = clNone
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -952,40 +939,40 @@ object ISFAddMetamorphismLink: TISFAddMetamorphismLink
     RowCurrentColor = clWebYELLOW
   end
   object IWLabel7: TIWLabel
+    AlignWithMargins = False
     Left = 542
     Top = 166
     Width = 99
     Height = 15
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'Ma    (95% conf.)'
   end
   object IWLabel13: TIWLabel
+    AlignWithMargins = False
     Left = 438
     Top = 266
     Width = 40
     Height = 15
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'kilobar'
   end
   object IWLabel14: TIWLabel
+    AlignWithMargins = False
     Left = 436
     Top = 226
     Width = 67
     Height = 15
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'Centigrade'
@@ -1027,6 +1014,7 @@ object ISFAddMetamorphismLink: TISFAddMetamorphismLink
             ExplicitWidth = 700
             inherited lblWelcome: TIWLabel
               Left = 427
+              Font.Color = clWebDARKSLATEGRAY
               ExplicitLeft = 427
             end
           end
@@ -1035,7 +1023,13 @@ object ISFAddMetamorphismLink: TISFAddMetamorphismLink
           Width = 900
           ExplicitWidth = 900
           inherited iwlSignOut: TIWLink
-            TabOrder = -1
+            Font.Color = clWebBLUE
+          end
+          inherited lnkSignIn: TIWLink
+            Font.Color = clWebBLUE
+          end
+          inherited lblProgTitle: TIWLabel
+            Font.Color = clWebSTEELBLUE
           end
         end
       end

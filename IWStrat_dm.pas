@@ -1418,13 +1418,13 @@ begin
     dmUser.cdsUserInfo.Append;
     dmUser.cdsUserInfoUSERID.AsString := UserSession.UserID;
     dmUser.cdsUserInfoSOFTWAREID.AsString := UserSession.ThisProgram;
-    dmUser.cdsUserInfoLASTUSED.AsDateTime := Now;
+    dmUser.cdsUserInfoLASTUSED.AsDateTime := TDateTime.NowUTC;
     dmUser.cdsUserInfoSESSIONINFO.AsVariant := SQLMemoField;
     dmUser.cdsUserInfo.Post;
   end else
   begin
     dmUser.cdsUserInfo.Edit;
-    dmUser.cdsUserInfoLASTUSED.AsDateTime := Now;
+    dmUser.cdsUserInfoLASTUSED.AsDateTime := TDateTime.NowUTC;
     dmUser.cdsUserInfoSESSIONINFO.AsVariant := SQLMemoField;
     dmUser.cdsUserInfo.Post;
   end;

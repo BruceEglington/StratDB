@@ -17,6 +17,7 @@ object ISFChartEdit: TISFChartEdit
   DesignLeft = 2
   DesignTop = 2
   object IWDBNavigator1: TIWDBNavigator
+    AlignWithMargins = False
     Left = 172
     Top = 105
     Width = 108
@@ -32,6 +33,7 @@ object ISFChartEdit: TISFChartEdit
     Orientation = orHorizontal
   end
   object IWDBEdit1: TIWDBEdit
+    AlignWithMargins = False
     Left = 117
     Top = 166
     Width = 278
@@ -39,10 +41,10 @@ object ISFChartEdit: TISFChartEdit
     StyleRenderOptions.RenderBorder = False
     Editable = False
     NonEditableAsLabel = True
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
     SubmitOnAsyncEvent = True
     TabOrder = 1
@@ -52,61 +54,62 @@ object ISFChartEdit: TISFChartEdit
     PasswordPrompt = False
   end
   object iwbReturn: TIWButton
+    AlignWithMargins = False
     Left = 5
     Top = 74
     Width = 119
     Height = 25
     Caption = 'Return to list'
     Color = clWebLIGHTGREEN
-    Font.Color = clNone
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbReturn'
     TabOrder = 2
     OnClick = iwbReturnClick
   end
   object IWLabel1: TIWLabel
+    AlignWithMargins = False
     Left = 32
     Top = 168
     Width = 33
     Height = 15
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'Chart'
   end
   object iwbSave: TIWButton
+    AlignWithMargins = False
     Left = 317
     Top = 74
     Width = 119
     Height = 25
     Caption = 'Save changes'
     Color = clWebPEACHPUFF
-    Font.Color = clNone
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbSaveChanges'
     TabOrder = 4
     OnClick = iwbSaveClick
   end
   object iwbCancelChanges: TIWButton
+    AlignWithMargins = False
     Left = 447
     Top = 74
     Width = 119
     Height = 25
     Caption = 'Cancel changes'
     Color = clWebLIGHTSTEELBLUE
-    Font.Color = clNone
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbSaveChanges'
     TabOrder = 5
     OnClick = iwbCancelChangesClick
   end
   object iwbDelete: TIWButton
+    AlignWithMargins = False
     Left = 576
     Top = 73
     Width = 119
@@ -114,27 +117,27 @@ object ISFChartEdit: TISFChartEdit
     Caption = 'Delete'
     Confirmation = 'Are you sure you want to delete this record?'
     Color = clWebLIGHTCORAL
-    Font.Color = clNone
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbDelete'
     TabOrder = 3
     OnClick = iwbDeleteClick
   end
   object IWLabel2: TIWLabel
+    AlignWithMargins = False
     Left = 32
     Top = 140
     Width = 49
     Height = 15
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'Chart ID'
   end
   object IWDBEdit2: TIWDBEdit
+    AlignWithMargins = False
     Left = 117
     Top = 138
     Width = 64
@@ -142,10 +145,10 @@ object ISFChartEdit: TISFChartEdit
     StyleRenderOptions.RenderBorder = False
     Editable = False
     NonEditableAsLabel = True
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
     SubmitOnAsyncEvent = True
     TabOrder = 6
@@ -155,19 +158,20 @@ object ISFChartEdit: TISFChartEdit
     PasswordPrompt = False
   end
   object IWLabel3: TIWLabel
+    AlignWithMargins = False
     Left = 32
     Top = 196
     Width = 105
     Height = 15
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'Chart offset (mm)'
   end
   object IWDBEdit3: TIWDBEdit
+    AlignWithMargins = False
     Left = 200
     Top = 193
     Width = 45
@@ -175,10 +179,10 @@ object ISFChartEdit: TISFChartEdit
     StyleRenderOptions.RenderBorder = False
     Editable = False
     NonEditableAsLabel = True
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
     SubmitOnAsyncEvent = True
     TabOrder = 7
@@ -188,19 +192,20 @@ object ISFChartEdit: TISFChartEdit
     PasswordPrompt = False
   end
   object IWLabel4: TIWLabel
+    AlignWithMargins = False
     Left = 32
     Top = 224
     Width = 169
     Height = 15
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'Default Domain Offset (mm)'
   end
   object IWDBEdit4: TIWDBEdit
+    AlignWithMargins = False
     Left = 200
     Top = 222
     Width = 45
@@ -208,10 +213,10 @@ object ISFChartEdit: TISFChartEdit
     StyleRenderOptions.RenderBorder = False
     Editable = False
     NonEditableAsLabel = True
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
     SubmitOnAsyncEvent = True
     TabOrder = 8
@@ -221,20 +226,21 @@ object ISFChartEdit: TISFChartEdit
     PasswordPrompt = False
   end
   object IWLabel5: TIWLabel
+    AlignWithMargins = False
     Left = 32
     Top = 253
     Width = 69
     Height = 15
     Visible = False
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'Description'
   end
   object IWDBMemo1: TIWDBMemo
+    AlignWithMargins = False
     Left = 56
     Top = 274
     Width = 639
@@ -243,10 +249,9 @@ object ISFChartEdit: TISFChartEdit
     StyleRenderOptions.RenderBorder = False
     BGColor = clNone
     Editable = False
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     InvisibleBorder = False
     HorizScrollBar = False
     VertScrollBar = True
@@ -258,15 +263,13 @@ object ISFChartEdit: TISFChartEdit
     FriendlyName = 'IWDBMemo1'
   end
   object iwbEdit: TIWButton
+    AlignWithMargins = False
     Left = 167
     Top = 74
     Width = 119
     Height = 24
     Caption = 'Edit'
     Color = clWebLEMONCHIFFON
-    Font.Color = clNone
-    Font.Size = 10
-    Font.Style = []
     FriendlyName = 'iwbEdit'
     TabOrder = 10
     OnClick = iwbEditClick
@@ -308,6 +311,7 @@ object ISFChartEdit: TISFChartEdit
             ExplicitWidth = 516
             inherited lblWelcome: TIWLabel
               Left = 243
+              Font.Color = clWebDARKSLATEGRAY
               ExplicitLeft = 243
             end
           end
@@ -316,7 +320,13 @@ object ISFChartEdit: TISFChartEdit
           Width = 716
           ExplicitWidth = 716
           inherited iwlSignOut: TIWLink
-            TabOrder = -1
+            Font.Color = clWebBLUE
+          end
+          inherited lnkSignIn: TIWLink
+            Font.Color = clWebBLUE
+          end
+          inherited lblProgTitle: TIWLabel
+            Font.Color = clWebSTEELBLUE
           end
         end
       end

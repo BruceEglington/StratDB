@@ -15,7 +15,7 @@ object ISFGrainSources: TISFGrainSources
   LockOnSubmit = False
   ShowHint = True
   DesignLeft = 2
-  DesignTop = -1930
+  DesignTop = 2
   object iwrLeft: TIWRegion
     Left = 0
     Top = 55
@@ -38,6 +38,7 @@ object ISFGrainSources: TISFGrainSources
     BorderOptions.NumericWidth = 0
     BorderOptions.Style = cbsNone
     object iwDBgUnitsSamples: TIWDBGrid
+      AlignWithMargins = False
       Left = 0
       Top = 195
       Width = 991
@@ -51,24 +52,24 @@ object ISFGrainSources: TISFGrainSources
       BorderStyle = tfDefault
       CellPadding = 2
       CellSpacing = 0
-      Font.Color = clNone
       Font.FontName = 'Arial'
       Font.Size = 8
-      Font.Style = []
+      Font.PxSize = 10
       FrameBuffer = 40
       Lines = tlAll
       UseFrame = False
       UseSize = True
+      ShowEmptyCells = True
+      ShowInvisibleRows = True
       ScrollToCurrentRow = False
       Columns = <
         item
           Alignment = taCenter
           BGColor = clNone
           DoSubmitValidation = True
-          Font.Color = clNone
           Font.FontName = 'Verdana'
           Font.Size = 8
-          Font.Style = []
+          Font.PxSize = 10
           Header = False
           Height = '0'
           ShowHint = True
@@ -77,7 +78,6 @@ object ISFGrainSources: TISFGrainSources
           Width = '0'
           Wrap = False
           RawText = False
-          Css = ''
           BlobCharLimit = 0
           CompareHighlight = hcNone
           DataField = 'COUNTRYID'
@@ -85,10 +85,10 @@ object ISFGrainSources: TISFGrainSources
           Title.Alignment = taCenter
           Title.BGColor = clNone
           Title.DoSubmitValidation = True
-          Title.Font.Color = clNone
           Title.Font.FontName = 'Verdana'
           Title.Font.Size = 8
           Title.Font.Style = [fsBold]
+          Title.Font.PxSize = 10
           Title.Header = False
           Title.Height = '0'
           Title.ShowHint = True
@@ -103,10 +103,9 @@ object ISFGrainSources: TISFGrainSources
           Alignment = taCenter
           BGColor = clNone
           DoSubmitValidation = True
-          Font.Color = clNone
           Font.FontName = 'Verdana'
           Font.Size = 8
-          Font.Style = []
+          Font.PxSize = 10
           Header = False
           Height = '0'
           ShowHint = True
@@ -115,7 +114,6 @@ object ISFGrainSources: TISFGrainSources
           Width = '0'
           Wrap = False
           RawText = False
-          Css = ''
           BlobCharLimit = 0
           CompareHighlight = hcNone
           DataField = 'UNITID'
@@ -123,10 +121,10 @@ object ISFGrainSources: TISFGrainSources
           Title.Alignment = taCenter
           Title.BGColor = clNone
           Title.DoSubmitValidation = True
-          Title.Font.Color = clNone
           Title.Font.FontName = 'Verdana'
           Title.Font.Size = 8
           Title.Font.Style = [fsBold]
+          Title.Font.PxSize = 10
           Title.Header = False
           Title.Height = '0'
           Title.ShowHint = True
@@ -141,10 +139,9 @@ object ISFGrainSources: TISFGrainSources
           Alignment = taCenter
           BGColor = clNone
           DoSubmitValidation = True
-          Font.Color = clNone
           Font.FontName = 'Verdana'
           Font.Size = 8
-          Font.Style = []
+          Font.PxSize = 10
           Header = False
           Height = '0'
           ShowHint = True
@@ -153,7 +150,6 @@ object ISFGrainSources: TISFGrainSources
           Width = '0'
           Wrap = False
           RawText = False
-          Css = ''
           BlobCharLimit = 0
           CompareHighlight = hcNone
           DataField = 'STRATDBUNITID'
@@ -161,10 +157,10 @@ object ISFGrainSources: TISFGrainSources
           Title.Alignment = taCenter
           Title.BGColor = clNone
           Title.DoSubmitValidation = True
-          Title.Font.Color = clNone
           Title.Font.FontName = 'Verdana'
           Title.Font.Size = 8
           Title.Font.Style = [fsBold]
+          Title.Font.PxSize = 10
           Title.Header = False
           Title.Height = '0'
           Title.ShowHint = True
@@ -179,10 +175,9 @@ object ISFGrainSources: TISFGrainSources
           Alignment = taLeftJustify
           BGColor = clNone
           DoSubmitValidation = True
-          Font.Color = clNone
           Font.FontName = 'Verdana'
           Font.Size = 8
-          Font.Style = []
+          Font.PxSize = 10
           Header = False
           Height = '0'
           ShowHint = True
@@ -191,7 +186,6 @@ object ISFGrainSources: TISFGrainSources
           Width = '0'
           Wrap = False
           RawText = False
-          Css = ''
           BlobCharLimit = 0
           CompareHighlight = hcNone
           DataField = 'STRATDBUNITNAME'
@@ -199,10 +193,10 @@ object ISFGrainSources: TISFGrainSources
           Title.Alignment = taCenter
           Title.BGColor = clNone
           Title.DoSubmitValidation = True
-          Title.Font.Color = clNone
           Title.Font.FontName = 'Verdana'
           Title.Font.Size = 8
           Title.Font.Style = [fsBold]
+          Title.Font.PxSize = 10
           Title.Header = False
           Title.Height = '0'
           Title.ShowHint = True
@@ -217,10 +211,9 @@ object ISFGrainSources: TISFGrainSources
           Alignment = taLeftJustify
           BGColor = clNone
           DoSubmitValidation = True
-          Font.Color = clNone
           Font.FontName = 'Verdana'
           Font.Size = 8
-          Font.Style = []
+          Font.PxSize = 10
           Header = False
           Height = '0'
           ShowHint = True
@@ -229,7 +222,6 @@ object ISFGrainSources: TISFGrainSources
           Width = '0'
           Wrap = False
           RawText = False
-          Css = ''
           BlobCharLimit = 0
           CompareHighlight = hcNone
           DataField = 'STRATDBUNITRANK'
@@ -237,10 +229,10 @@ object ISFGrainSources: TISFGrainSources
           Title.Alignment = taCenter
           Title.BGColor = clNone
           Title.DoSubmitValidation = True
-          Title.Font.Color = clNone
           Title.Font.FontName = 'Verdana'
           Title.Font.Size = 8
           Title.Font.Style = [fsBold]
+          Title.Font.PxSize = 10
           Title.Header = False
           Title.Height = '0'
           Title.ShowHint = True
@@ -255,10 +247,9 @@ object ISFGrainSources: TISFGrainSources
           Alignment = taRightJustify
           BGColor = clNone
           DoSubmitValidation = True
-          Font.Color = clNone
           Font.FontName = 'Verdana'
           Font.Size = 8
-          Font.Style = []
+          Font.PxSize = 10
           Header = False
           Height = '0'
           ShowHint = True
@@ -267,7 +258,6 @@ object ISFGrainSources: TISFGrainSources
           Width = '0'
           Wrap = False
           RawText = False
-          Css = ''
           BlobCharLimit = 0
           CompareHighlight = hcNone
           DataField = 'STRATDBUNITAGE'
@@ -275,10 +265,10 @@ object ISFGrainSources: TISFGrainSources
           Title.Alignment = taCenter
           Title.BGColor = clNone
           Title.DoSubmitValidation = True
-          Title.Font.Color = clNone
           Title.Font.FontName = 'Verdana'
           Title.Font.Size = 8
           Title.Font.Style = [fsBold]
+          Title.Font.PxSize = 10
           Title.Header = False
           Title.Height = '0'
           Title.ShowHint = True
@@ -293,10 +283,9 @@ object ISFGrainSources: TISFGrainSources
           Alignment = taLeftJustify
           BGColor = clNone
           DoSubmitValidation = True
-          Font.Color = clNone
           Font.FontName = 'Verdana'
           Font.Size = 8
-          Font.Style = []
+          Font.PxSize = 10
           Header = False
           Height = '0'
           ShowHint = True
@@ -305,7 +294,6 @@ object ISFGrainSources: TISFGrainSources
           Width = '0'
           Wrap = False
           RawText = False
-          Css = ''
           BlobCharLimit = 0
           CompareHighlight = hcNone
           DataField = 'SAMPLENO'
@@ -315,10 +303,10 @@ object ISFGrainSources: TISFGrainSources
           Title.Alignment = taCenter
           Title.BGColor = clNone
           Title.DoSubmitValidation = True
-          Title.Font.Color = clNone
           Title.Font.FontName = 'Verdana'
           Title.Font.Size = 8
           Title.Font.Style = [fsBold]
+          Title.Font.PxSize = 10
           Title.Header = False
           Title.Height = '0'
           Title.ShowHint = True
@@ -333,10 +321,9 @@ object ISFGrainSources: TISFGrainSources
           Alignment = taRightJustify
           BGColor = clNone
           DoSubmitValidation = True
-          Font.Color = clNone
           Font.FontName = 'Verdana'
           Font.Size = 8
-          Font.Style = []
+          Font.PxSize = 10
           Header = False
           Height = '0'
           ShowHint = True
@@ -345,7 +332,6 @@ object ISFGrainSources: TISFGrainSources
           Width = '0'
           Wrap = False
           RawText = False
-          Css = ''
           BlobCharLimit = 0
           CompareHighlight = hcNone
           DataField = 'LONGITUDE'
@@ -353,10 +339,10 @@ object ISFGrainSources: TISFGrainSources
           Title.Alignment = taCenter
           Title.BGColor = clNone
           Title.DoSubmitValidation = True
-          Title.Font.Color = clNone
           Title.Font.FontName = 'Verdana'
           Title.Font.Size = 8
           Title.Font.Style = [fsBold]
+          Title.Font.PxSize = 10
           Title.Header = False
           Title.Height = '0'
           Title.ShowHint = True
@@ -371,10 +357,9 @@ object ISFGrainSources: TISFGrainSources
           Alignment = taRightJustify
           BGColor = clNone
           DoSubmitValidation = True
-          Font.Color = clNone
           Font.FontName = 'Verdana'
           Font.Size = 8
-          Font.Style = []
+          Font.PxSize = 10
           Header = False
           Height = '0'
           ShowHint = True
@@ -383,7 +368,6 @@ object ISFGrainSources: TISFGrainSources
           Width = '0'
           Wrap = False
           RawText = False
-          Css = ''
           BlobCharLimit = 0
           CompareHighlight = hcNone
           DataField = 'LATITUDE'
@@ -391,10 +375,10 @@ object ISFGrainSources: TISFGrainSources
           Title.Alignment = taCenter
           Title.BGColor = clNone
           Title.DoSubmitValidation = True
-          Title.Font.Color = clNone
           Title.Font.FontName = 'Verdana'
           Title.Font.Size = 8
           Title.Font.Style = [fsBold]
+          Title.Font.PxSize = 10
           Title.Header = False
           Title.Height = '0'
           Title.ShowHint = True
@@ -434,15 +418,13 @@ object ISFGrainSources: TISFGrainSources
       BorderOptions.NumericWidth = 0
       BorderOptions.Style = cbsNone
       object iwbReturn: TIWButton
+        AlignWithMargins = False
         Left = 6
         Top = 10
         Width = 124
         Height = 25
         Caption = 'Return'
         Color = clWebLIGHTGREEN
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         FriendlyName = 'iwbReturn'
         OnClick = iwbReturnClick
       end
@@ -462,57 +444,58 @@ object ISFGrainSources: TISFGrainSources
         991
         50)
       object iwlUnitsSamples: TIWLabel
+        AlignWithMargins = False
         Left = 5
         Top = -7
         Width = 272
         Height = 29
-        Font.Color = clNone
         Font.FontName = 'Verdana'
         Font.Size = 18
         Font.Style = [fsBold]
+        Font.PxSize = 24
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'iwlUnitsSamples'
         Caption = 'Units and Samples'
       end
       object iwlUnitsSamplesSortedBy: TIWLabel
+        AlignWithMargins = False
         Left = 820
         Top = 29
         Width = 150
         Height = 14
         Anchors = [akTop, akRight]
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 8
         Font.Style = [fsItalic]
+        Font.PxSize = 10
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'iwlUnitsSortedBy'
         Caption = 'Sorted as specified in query'
       end
       object iwbDeleteUnitsSamplesRecord: TIWButton
+        AlignWithMargins = False
         Left = 492
         Top = 22
         Width = 200
         Height = 25
         Caption = 'Delete record'
         Color = clBtnFace
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         FriendlyName = 'iwbDeleteRecord'
         TabOrder = 1
         OnClick = iwbDeleteUnitsSamplesRecordClick
       end
       object iwlUnitsSamplesPartialList: TIWLabel
+        AlignWithMargins = False
         Left = 6
         Top = 29
         Width = 172
         Height = 14
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 8
         Font.Style = [fsItalic]
+        Font.PxSize = 10
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'iwlUnitsSamplesPartialList'
@@ -530,20 +513,19 @@ object ISFGrainSources: TISFGrainSources
       BorderOptions.NumericWidth = 0
       BorderOptions.Style = cbsNone
       object iwbFindSources: TIWButton
+        AlignWithMargins = False
         Left = 25
         Top = 262
         Width = 264
         Height = 25
         Caption = 'Find Potential Provenance Localities'
         Color = clWebLIGHTSKYBLUE
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         FriendlyName = 'iwbFindSources'
         TabOrder = 3
         OnClick = iwbFindSourcesClick
       end
       object iwrgIsotopeSystemVariable: TIWRadioGroup
+        AlignWithMargins = False
         Left = 25
         Top = 32
         Width = 201
@@ -551,10 +533,8 @@ object ISFGrainSources: TISFGrainSources
         SubmitOnAsyncEvent = True
         RawText = False
         Editable = True
-        Font.Color = clNone
         Font.FontName = 'Verdana'
-        Font.Size = 10
-        Font.Style = []
+        Font.PxSize = 13
         FriendlyName = 'iwrgIsotopeSystemVariable'
         ItemIndex = 0
         Items.Strings = (
@@ -564,16 +544,17 @@ object ISFGrainSources: TISFGrainSources
         TabOrder = 4
       end
       object iwcbAreas: TIWCheckBox
+        AlignWithMargins = False
         Left = 595
         Top = 65
         Width = 231
         Height = 21
         Caption = 'Include selection from Areas'
         Editable = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = [fsBold]
+        Font.PxSize = 12
         SubmitOnAsyncEvent = True
         Style = stNormal
         TabOrder = 6
@@ -581,23 +562,23 @@ object ISFGrainSources: TISFGrainSources
         FriendlyName = 'iwcbAreas'
       end
       object iwlAreas: TIWListbox
+        AlignWithMargins = False
         Left = 595
         Top = 90
         Width = 313
         Height = 147
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
+        Font.PxSize = 12
         RequireSelection = False
         TabOrder = 7
         NonEditableAsLabel = True
         FriendlyName = 'iwlAreas'
         Sorted = True
         MultiSelect = True
-        NoSelectionText = '-- No Selection --'
       end
       object iwcbContinents: TIWCheckBox
+        AlignWithMargins = False
         Left = 25
         Top = 63
         Width = 231
@@ -605,10 +586,10 @@ object ISFGrainSources: TISFGrainSources
         Visible = False
         Caption = 'Include selection from Regions'
         Editable = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = [fsBold]
+        Font.PxSize = 12
         SubmitOnAsyncEvent = True
         Style = stNormal
         TabOrder = 8
@@ -616,23 +597,23 @@ object ISFGrainSources: TISFGrainSources
         FriendlyName = 'iwcbContinents'
       end
       object iwlContinents: TIWListbox
+        AlignWithMargins = False
         Left = 25
         Top = 90
         Width = 313
         Height = 147
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
+        Font.PxSize = 12
         RequireSelection = False
         TabOrder = 9
         NonEditableAsLabel = True
         FriendlyName = 'iwlContinents'
         Sorted = True
         MultiSelect = True
-        NoSelectionText = '-- No Selection --'
       end
       object iwbDeleteUserProvenanceData: TIWButton
+        AlignWithMargins = False
         Left = 595
         Top = 262
         Width = 284
@@ -640,9 +621,6 @@ object ISFGrainSources: TISFGrainSources
         Caption = 'Delete Existing Project Provenance Localities'
         Enabled = False
         Color = clWebLIGHTCORAL
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         FriendlyName = 'iwbDeleteUserProvenanceData'
         TabOrder = 11
         OnClick = iwbDeleteUserProvenanceDataClick
@@ -697,14 +675,15 @@ object ISFGrainSources: TISFGrainSources
           BorderOptions.NumericWidth = 0
           BorderOptions.Style = cbsNone
           object IWLabel2: TIWLabel
+            AlignWithMargins = False
             Left = 6
             Top = 8
             Width = 434
             Height = 14
-            Font.Color = clNone
             Font.FontName = 'Arial'
             Font.Size = 8
             Font.Style = [fsItalic]
+            Font.PxSize = 10
             NoWrap = True
             HasTabOrder = False
             FriendlyName = 'iwlUnitsSamplesPartialList'
@@ -734,6 +713,7 @@ object ISFGrainSources: TISFGrainSources
           BorderOptions.NumericWidth = 0
           BorderOptions.Style = cbsNone
           object iwdbgGrainSources: TIWDBGrid
+            AlignWithMargins = False
             Left = 0
             Top = 0
             Width = 943
@@ -747,24 +727,24 @@ object ISFGrainSources: TISFGrainSources
             BorderStyle = tfDefault
             CellPadding = 0
             CellSpacing = 0
-            Font.Color = clNone
             Font.FontName = 'Arial'
             Font.Size = 8
-            Font.Style = []
+            Font.PxSize = 10
             FrameBuffer = 40
             Lines = tlAll
             UseFrame = True
             UseSize = True
+            ShowEmptyCells = True
+            ShowInvisibleRows = True
             ScrollToCurrentRow = False
             Columns = <
               item
                 Alignment = taCenter
                 BGColor = clNone
                 DoSubmitValidation = True
-                Font.Color = clNone
                 Font.FontName = 'Arial'
                 Font.Size = 8
-                Font.Style = []
+                Font.PxSize = 10
                 Header = False
                 Height = '0'
                 ShowHint = True
@@ -774,17 +754,16 @@ object ISFGrainSources: TISFGrainSources
                 Width = '0'
                 Wrap = False
                 RawText = False
-                Css = ''
                 BlobCharLimit = 0
                 CompareHighlight = hcNone
                 DataField = 'USERPROJECTID'
                 Title.Alignment = taCenter
                 Title.BGColor = clNone
                 Title.DoSubmitValidation = True
-                Title.Font.Color = clNone
                 Title.Font.FontName = 'Arial'
                 Title.Font.Size = 8
                 Title.Font.Style = [fsBold]
+                Title.Font.PxSize = 10
                 Title.Header = False
                 Title.Height = '0'
                 Title.ShowHint = True
@@ -799,10 +778,9 @@ object ISFGrainSources: TISFGrainSources
                 Alignment = taCenter
                 BGColor = clNone
                 DoSubmitValidation = True
-                Font.Color = clNone
                 Font.FontName = 'Arial'
                 Font.Size = 8
-                Font.Style = []
+                Font.PxSize = 10
                 Header = False
                 Height = '0'
                 ShowHint = True
@@ -812,17 +790,16 @@ object ISFGrainSources: TISFGrainSources
                 Width = '0'
                 Wrap = False
                 RawText = False
-                Css = ''
                 BlobCharLimit = 0
                 CompareHighlight = hcNone
                 DataField = 'STRATDBUNITID'
                 Title.Alignment = taCenter
                 Title.BGColor = clNone
                 Title.DoSubmitValidation = True
-                Title.Font.Color = clNone
                 Title.Font.FontName = 'Arial'
                 Title.Font.Size = 8
                 Title.Font.Style = [fsBold]
+                Title.Font.PxSize = 10
                 Title.Header = False
                 Title.Height = '0'
                 Title.ShowHint = True
@@ -837,10 +814,9 @@ object ISFGrainSources: TISFGrainSources
                 Alignment = taLeftJustify
                 BGColor = clNone
                 DoSubmitValidation = True
-                Font.Color = clNone
                 Font.FontName = 'Arial'
                 Font.Size = 8
-                Font.Style = []
+                Font.PxSize = 10
                 Header = False
                 Height = '0'
                 ShowHint = True
@@ -850,17 +826,16 @@ object ISFGrainSources: TISFGrainSources
                 Width = '0'
                 Wrap = False
                 RawText = False
-                Css = ''
                 BlobCharLimit = 0
                 CompareHighlight = hcNone
                 DataField = 'STRATDBUNITNAME'
                 Title.Alignment = taCenter
                 Title.BGColor = clNone
                 Title.DoSubmitValidation = True
-                Title.Font.Color = clNone
                 Title.Font.FontName = 'Arial'
                 Title.Font.Size = 8
                 Title.Font.Style = [fsBold]
+                Title.Font.PxSize = 10
                 Title.Header = False
                 Title.Height = '0'
                 Title.ShowHint = True
@@ -875,10 +850,9 @@ object ISFGrainSources: TISFGrainSources
                 Alignment = taLeftJustify
                 BGColor = clNone
                 DoSubmitValidation = True
-                Font.Color = clNone
                 Font.FontName = 'Arial'
                 Font.Size = 8
-                Font.Style = []
+                Font.PxSize = 10
                 Header = False
                 Height = '0'
                 ShowHint = True
@@ -888,17 +862,16 @@ object ISFGrainSources: TISFGrainSources
                 Width = '0'
                 Wrap = False
                 RawText = False
-                Css = ''
                 BlobCharLimit = 0
                 CompareHighlight = hcNone
                 DataField = 'STRATDBUNITRANK'
                 Title.Alignment = taCenter
                 Title.BGColor = clNone
                 Title.DoSubmitValidation = True
-                Title.Font.Color = clNone
                 Title.Font.FontName = 'Arial'
                 Title.Font.Size = 8
                 Title.Font.Style = [fsBold]
+                Title.Font.PxSize = 10
                 Title.Header = False
                 Title.Height = '0'
                 Title.ShowHint = True
@@ -913,10 +886,9 @@ object ISFGrainSources: TISFGrainSources
                 Alignment = taRightJustify
                 BGColor = clNone
                 DoSubmitValidation = True
-                Font.Color = clNone
                 Font.FontName = 'Arial'
                 Font.Size = 8
-                Font.Style = []
+                Font.PxSize = 10
                 Header = False
                 Height = '0'
                 ShowHint = True
@@ -926,17 +898,16 @@ object ISFGrainSources: TISFGrainSources
                 Width = '0'
                 Wrap = False
                 RawText = False
-                Css = ''
                 BlobCharLimit = 0
                 CompareHighlight = hcNone
                 DataField = 'STRATDBUNITAGE'
                 Title.Alignment = taCenter
                 Title.BGColor = clNone
                 Title.DoSubmitValidation = True
-                Title.Font.Color = clNone
                 Title.Font.FontName = 'Arial'
                 Title.Font.Size = 8
                 Title.Font.Style = [fsBold]
+                Title.Font.PxSize = 10
                 Title.Header = False
                 Title.Height = '0'
                 Title.ShowHint = True
@@ -951,10 +922,9 @@ object ISFGrainSources: TISFGrainSources
                 Alignment = taLeftJustify
                 BGColor = clNone
                 DoSubmitValidation = True
-                Font.Color = clNone
                 Font.FontName = 'Arial'
                 Font.Size = 8
-                Font.Style = []
+                Font.PxSize = 10
                 Header = False
                 Height = '0'
                 ShowHint = True
@@ -964,17 +934,16 @@ object ISFGrainSources: TISFGrainSources
                 Width = '0'
                 Wrap = False
                 RawText = False
-                Css = ''
                 BlobCharLimit = 0
                 CompareHighlight = hcNone
                 DataField = 'SAMPLENO'
                 Title.Alignment = taCenter
                 Title.BGColor = clNone
                 Title.DoSubmitValidation = True
-                Title.Font.Color = clNone
                 Title.Font.FontName = 'Arial'
                 Title.Font.Size = 8
                 Title.Font.Style = [fsBold]
+                Title.Font.PxSize = 10
                 Title.Header = False
                 Title.Height = '0'
                 Title.ShowHint = True
@@ -989,10 +958,9 @@ object ISFGrainSources: TISFGrainSources
                 Alignment = taRightJustify
                 BGColor = clNone
                 DoSubmitValidation = True
-                Font.Color = clNone
                 Font.FontName = 'Arial'
                 Font.Size = 8
-                Font.Style = []
+                Font.PxSize = 10
                 Header = False
                 Height = '0'
                 ShowHint = True
@@ -1002,17 +970,16 @@ object ISFGrainSources: TISFGrainSources
                 Width = '0'
                 Wrap = False
                 RawText = False
-                Css = ''
                 BlobCharLimit = 0
                 CompareHighlight = hcNone
                 DataField = 'LONGITUDE'
                 Title.Alignment = taCenter
                 Title.BGColor = clNone
                 Title.DoSubmitValidation = True
-                Title.Font.Color = clNone
                 Title.Font.FontName = 'Arial'
                 Title.Font.Size = 8
                 Title.Font.Style = [fsBold]
+                Title.Font.PxSize = 10
                 Title.Header = False
                 Title.Height = '0'
                 Title.ShowHint = True
@@ -1027,10 +994,9 @@ object ISFGrainSources: TISFGrainSources
                 Alignment = taRightJustify
                 BGColor = clNone
                 DoSubmitValidation = True
-                Font.Color = clNone
                 Font.FontName = 'Arial'
                 Font.Size = 8
-                Font.Style = []
+                Font.PxSize = 10
                 Header = False
                 Height = '0'
                 ShowHint = True
@@ -1040,17 +1006,16 @@ object ISFGrainSources: TISFGrainSources
                 Width = '0'
                 Wrap = False
                 RawText = False
-                Css = ''
                 BlobCharLimit = 0
                 CompareHighlight = hcNone
                 DataField = 'LATITUDE'
                 Title.Alignment = taCenter
                 Title.BGColor = clNone
                 Title.DoSubmitValidation = True
-                Title.Font.Color = clNone
                 Title.Font.FontName = 'Arial'
                 Title.Font.Size = 8
                 Title.Font.Style = [fsBold]
+                Title.Font.PxSize = 10
                 Title.Header = False
                 Title.Height = '0'
                 Title.ShowHint = True
@@ -1065,10 +1030,9 @@ object ISFGrainSources: TISFGrainSources
                 Alignment = taCenter
                 BGColor = clNone
                 DoSubmitValidation = True
-                Font.Color = clNone
                 Font.FontName = 'Arial'
                 Font.Size = 8
-                Font.Style = []
+                Font.PxSize = 10
                 Header = False
                 Height = '0'
                 ShowHint = True
@@ -1078,17 +1042,16 @@ object ISFGrainSources: TISFGrainSources
                 Width = '0'
                 Wrap = False
                 RawText = False
-                Css = ''
                 BlobCharLimit = 0
                 CompareHighlight = hcNone
                 DataField = 'COUNTRYID'
                 Title.Alignment = taCenter
                 Title.BGColor = clNone
                 Title.DoSubmitValidation = True
-                Title.Font.Color = clNone
                 Title.Font.FontName = 'Arial'
                 Title.Font.Size = 8
                 Title.Font.Style = [fsBold]
+                Title.Font.PxSize = 10
                 Title.Header = False
                 Title.Height = '0'
                 Title.ShowHint = True
@@ -1103,10 +1066,9 @@ object ISFGrainSources: TISFGrainSources
                 Alignment = taRightJustify
                 BGColor = clNone
                 DoSubmitValidation = True
-                Font.Color = clNone
                 Font.FontName = 'Arial'
                 Font.Size = 8
-                Font.Style = []
+                Font.PxSize = 10
                 Header = False
                 Height = '0'
                 ShowHint = True
@@ -1116,17 +1078,16 @@ object ISFGrainSources: TISFGrainSources
                 Width = '0'
                 Wrap = False
                 RawText = False
-                Css = ''
                 BlobCharLimit = 0
                 CompareHighlight = hcNone
                 DataField = 'SRCUNITID'
                 Title.Alignment = taCenter
                 Title.BGColor = clNone
                 Title.DoSubmitValidation = True
-                Title.Font.Color = clNone
                 Title.Font.FontName = 'Arial'
                 Title.Font.Size = 8
                 Title.Font.Style = [fsBold]
+                Title.Font.PxSize = 10
                 Title.Header = False
                 Title.Height = '0'
                 Title.ShowHint = True
@@ -1141,10 +1102,9 @@ object ISFGrainSources: TISFGrainSources
                 Alignment = taRightJustify
                 BGColor = clNone
                 DoSubmitValidation = True
-                Font.Color = clNone
                 Font.FontName = 'Arial'
                 Font.Size = 8
-                Font.Style = []
+                Font.PxSize = 10
                 Header = False
                 Height = '0'
                 ShowHint = True
@@ -1154,17 +1114,16 @@ object ISFGrainSources: TISFGrainSources
                 Width = '0'
                 Wrap = False
                 RawText = False
-                Css = ''
                 BlobCharLimit = 0
                 CompareHighlight = hcNone
                 DataField = 'SOURCERECORDID'
                 Title.Alignment = taCenter
                 Title.BGColor = clNone
                 Title.DoSubmitValidation = True
-                Title.Font.Color = clNone
                 Title.Font.FontName = 'Arial'
                 Title.Font.Size = 8
                 Title.Font.Style = [fsBold]
+                Title.Font.PxSize = 10
                 Title.Header = False
                 Title.Height = '0'
                 Title.ShowHint = True
@@ -1179,10 +1138,9 @@ object ISFGrainSources: TISFGrainSources
                 Alignment = taCenter
                 BGColor = clNone
                 DoSubmitValidation = True
-                Font.Color = clNone
                 Font.FontName = 'Arial'
                 Font.Size = 8
-                Font.Style = []
+                Font.PxSize = 10
                 Header = False
                 Height = '0'
                 ShowHint = True
@@ -1192,17 +1150,16 @@ object ISFGrainSources: TISFGrainSources
                 Width = '0'
                 Wrap = False
                 RawText = False
-                Css = ''
                 BlobCharLimit = 0
                 CompareHighlight = hcNone
                 DataField = 'SRCINTERPABR'
                 Title.Alignment = taCenter
                 Title.BGColor = clNone
                 Title.DoSubmitValidation = True
-                Title.Font.Color = clNone
                 Title.Font.FontName = 'Arial'
                 Title.Font.Size = 8
                 Title.Font.Style = [fsBold]
+                Title.Font.PxSize = 10
                 Title.Header = False
                 Title.Height = '0'
                 Title.ShowHint = True
@@ -1217,10 +1174,9 @@ object ISFGrainSources: TISFGrainSources
                 Alignment = taLeftJustify
                 BGColor = clNone
                 DoSubmitValidation = True
-                Font.Color = clNone
                 Font.FontName = 'Arial'
                 Font.Size = 8
-                Font.Style = []
+                Font.PxSize = 10
                 Header = False
                 Height = '0'
                 ShowHint = True
@@ -1230,17 +1186,16 @@ object ISFGrainSources: TISFGrainSources
                 Width = '0'
                 Wrap = False
                 RawText = False
-                Css = ''
                 BlobCharLimit = 0
                 CompareHighlight = hcNone
                 DataField = 'SRCSAMPLENO'
                 Title.Alignment = taCenter
                 Title.BGColor = clNone
                 Title.DoSubmitValidation = True
-                Title.Font.Color = clNone
                 Title.Font.FontName = 'Arial'
                 Title.Font.Size = 8
                 Title.Font.Style = [fsBold]
+                Title.Font.PxSize = 10
                 Title.Header = False
                 Title.Height = '0'
                 Title.ShowHint = True
@@ -1255,10 +1210,9 @@ object ISFGrainSources: TISFGrainSources
                 Alignment = taRightJustify
                 BGColor = clNone
                 DoSubmitValidation = True
-                Font.Color = clNone
                 Font.FontName = 'Arial'
                 Font.Size = 8
-                Font.Style = []
+                Font.PxSize = 10
                 Header = False
                 Height = '0'
                 ShowHint = True
@@ -1268,17 +1222,16 @@ object ISFGrainSources: TISFGrainSources
                 Width = '0'
                 Wrap = False
                 RawText = False
-                Css = ''
                 BlobCharLimit = 0
                 CompareHighlight = hcNone
                 DataField = 'SRCAGE'
                 Title.Alignment = taCenter
                 Title.BGColor = clNone
                 Title.DoSubmitValidation = True
-                Title.Font.Color = clNone
                 Title.Font.FontName = 'Arial'
                 Title.Font.Size = 8
                 Title.Font.Style = [fsBold]
+                Title.Font.PxSize = 10
                 Title.Header = False
                 Title.Height = '0'
                 Title.ShowHint = True
@@ -1293,10 +1246,9 @@ object ISFGrainSources: TISFGrainSources
                 Alignment = taRightJustify
                 BGColor = clNone
                 DoSubmitValidation = True
-                Font.Color = clNone
                 Font.FontName = 'Arial'
                 Font.Size = 8
-                Font.Style = []
+                Font.PxSize = 10
                 Header = False
                 Height = '0'
                 ShowHint = True
@@ -1306,17 +1258,16 @@ object ISFGrainSources: TISFGrainSources
                 Width = '0'
                 Wrap = False
                 RawText = False
-                Css = ''
                 BlobCharLimit = 0
                 CompareHighlight = hcNone
                 DataField = 'SRCLONGITUDE'
                 Title.Alignment = taCenter
                 Title.BGColor = clNone
                 Title.DoSubmitValidation = True
-                Title.Font.Color = clNone
                 Title.Font.FontName = 'Arial'
                 Title.Font.Size = 8
                 Title.Font.Style = [fsBold]
+                Title.Font.PxSize = 10
                 Title.Header = False
                 Title.Height = '0'
                 Title.ShowHint = True
@@ -1331,10 +1282,9 @@ object ISFGrainSources: TISFGrainSources
                 Alignment = taRightJustify
                 BGColor = clNone
                 DoSubmitValidation = True
-                Font.Color = clNone
                 Font.FontName = 'Arial'
                 Font.Size = 8
-                Font.Style = []
+                Font.PxSize = 10
                 Header = False
                 Height = '0'
                 ShowHint = True
@@ -1344,17 +1294,16 @@ object ISFGrainSources: TISFGrainSources
                 Width = '0'
                 Wrap = False
                 RawText = False
-                Css = ''
                 BlobCharLimit = 0
                 CompareHighlight = hcNone
                 DataField = 'SRCLATITUDE'
                 Title.Alignment = taCenter
                 Title.BGColor = clNone
                 Title.DoSubmitValidation = True
-                Title.Font.Color = clNone
                 Title.Font.FontName = 'Arial'
                 Title.Font.Size = 8
                 Title.Font.Style = [fsBold]
+                Title.Font.PxSize = 10
                 Title.Header = False
                 Title.Height = '0'
                 Title.ShowHint = True
@@ -1397,6 +1346,7 @@ object ISFGrainSources: TISFGrainSources
       BorderOptions.NumericWidth = 0
       BorderOptions.Style = cbsNone
       object iwbDownloadMatchingData: TIWButton
+        AlignWithMargins = False
         Left = 31
         Top = 6
         Width = 222
@@ -1404,14 +1354,14 @@ object ISFGrainSources: TISFGrainSources
         Caption = 'Download Provenance Localities'
         Enabled = False
         Color = clBtnFace
-        Font.Color = clNone
         Font.Size = 9
-        Font.Style = []
+        Font.PxSize = 12
         FriendlyName = 'iwbDownloadMatchingData'
         TabOrder = 10
         OnClick = iwbDownloadMatchingDataClick
       end
       object iwbDownloadDetritalSampleLocalities: TIWButton
+        AlignWithMargins = False
         Left = 345
         Top = 6
         Width = 222
@@ -1419,10 +1369,9 @@ object ISFGrainSources: TISFGrainSources
         Caption = 'Download Detrital Sample Localities'
         Enabled = False
         Color = clBtnFace
-        Font.Color = clNone
         Font.Enabled = False
         Font.Size = 9
-        Font.Style = []
+        Font.PxSize = 12
         FriendlyName = 'iwbDownloadDetritalSampleLocalities'
         TabOrder = 14
         OnClick = iwbDownloadDetritalSampleLocalitiesClick
@@ -1439,31 +1388,31 @@ object ISFGrainSources: TISFGrainSources
       BorderOptions.NumericWidth = 0
       BorderOptions.Style = cbsNone
       object iwlUserProject: TIWComboBox
+        AlignWithMargins = False
         Left = 273
         Top = 22
         Width = 336
         Height = 21
         StyleRenderOptions.RenderBorder = False
-        Font.Color = clNone
         Font.FontName = 'Arial'
-        Font.Size = 10
         Font.Style = [fsBold]
+        Font.PxSize = 13
         OnChange = iwlUserProjectChange
         NonEditableAsLabel = True
         TabOrder = 13
         ItemIndex = -1
         FriendlyName = 'iwlUserProject'
-        NoSelectionText = '-- No Selection --'
       end
       object IWLabel1: TIWLabel
+        AlignWithMargins = False
         Left = 6
         Top = 14
         Width = 244
         Height = 38
-        Font.Color = clNone
         Font.FontName = 'Verdana'
         Font.Size = 24
         Font.Style = [fsBold]
+        Font.PxSize = 32
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel1'
@@ -1508,6 +1457,7 @@ object ISFGrainSources: TISFGrainSources
             ExplicitWidth = 879
             inherited lblWelcome: TIWLabel
               Left = 606
+              Font.Color = clWebDARKSLATEGRAY
               ExplicitLeft = 606
             end
           end
@@ -1516,7 +1466,13 @@ object ISFGrainSources: TISFGrainSources
           Width = 1079
           ExplicitWidth = 1079
           inherited iwlSignOut: TIWLink
-            TabOrder = -1
+            Font.Color = clWebBLUE
+          end
+          inherited lnkSignIn: TIWLink
+            Font.Color = clWebBLUE
+          end
+          inherited lblProgTitle: TIWLabel
+            Font.Color = clWebSTEELBLUE
           end
         end
       end

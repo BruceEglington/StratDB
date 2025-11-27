@@ -18,74 +18,75 @@ object ISFNewRecord3: TISFNewRecord3
   DesignLeft = 2
   DesignTop = 2
   object iwbSubmitQuery: TIWButton
+    AlignWithMargins = False
     Left = 272
     Top = 386
     Width = 187
     Height = 25
     Caption = 'Submit new data record'
     Color = clWebLIGHTGREEN
-    Font.Color = clNone
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbSubmitQuery'
     TabOrder = 2
     OnClick = iwbSubmitQueryClick
   end
   object IWLabel3: TIWLabel
+    AlignWithMargins = False
     Left = 100
     Top = 123
     Width = 107
     Height = 15
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'Stratigraphic unit'
   end
   object IWLabel1: TIWLabel
+    AlignWithMargins = False
     Left = 100
     Top = 158
     Width = 64
     Height = 15
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'Reference'
   end
   object iwcbReference: TIWComboBox
+    AlignWithMargins = False
     Left = 234
     Top = 155
     Width = 623
     Height = 21
     StyleRenderOptions.RenderBorder = False
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     NonEditableAsLabel = True
     ItemIndex = -1
     Sorted = True
     FriendlyName = 'iwcbUnit'
-    NoSelectionText = '-- No Selection --'
   end
   object iwlWhoFor: TIWListbox
+    AlignWithMargins = False
     Left = 234
     Top = 208
     Width = 349
     Height = 121
     RenderSize = False
     StyleRenderOptions.RenderSize = False
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     RequireSelection = False
     UseSize = False
     TabOrder = 1
@@ -98,60 +99,62 @@ object ISFNewRecord3: TISFNewRecord3
       'two=2')
     Sorted = True
     MultiSelect = True
-    NoSelectionText = '-- No Selection --'
   end
   object lblReferenceError: TIWLabel
+    AlignWithMargins = False
     Left = 606
     Top = 182
     Width = 106
     Height = 15
-    Font.Color = clWebRED
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
+    Font.Color = clWebRED
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'lblReferenceError'
     Caption = 'lblReferenceError'
   end
   object lblWhoForError: TIWLabel
+    AlignWithMargins = False
     Left = 606
     Top = 220
     Width = 91
     Height = 15
-    Font.Color = clWebRED
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
+    Font.Color = clWebRED
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'lblWhoForError'
     Caption = 'lblWhoForError'
   end
   object IWLabel2: TIWLabel
+    AlignWithMargins = False
     Left = 100
     Top = 191
     Width = 91
     Height = 15
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'Accessable by'
   end
   object rectLeft: TIWRectangle
+    AlignWithMargins = False
     Left = 0
     Top = 55
     Width = 83
     Height = 578
     Align = alLeft
     ZIndex = 1
+    Font.PxSize = 13
     Font.Color = clWebBLACK
-    Font.Size = 10
-    Font.Style = []
     BorderOptions.Width = 0
     FriendlyName = 'rectLeft'
     Color = clWebLAVENDER
@@ -159,43 +162,44 @@ object ISFNewRecord3: TISFNewRecord3
     VAlign = vaMiddle
   end
   object iwCancel: TIWButton
+    AlignWithMargins = False
     Left = 670
     Top = 386
     Width = 187
     Height = 25
     Caption = 'Cancel and return to main page'
     Color = clWebLIGHTSALMON
-    Font.Color = clNone
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwCancel'
     TabOrder = 3
     OnClick = iwCancelClick
   end
   object iweUnit: TIWEdit
+    AlignWithMargins = False
     Left = 234
     Top = 120
     Width = 309
     Height = 21
     StyleRenderOptions.RenderBorder = False
     NonEditableAsLabel = True
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iweUnit'
     SubmitOnAsyncEvent = True
     TabOrder = 5
   end
   object lblStratigraphicUnitError: TIWLabel
+    AlignWithMargins = False
     Left = 568
     Top = 123
     Width = 144
     Height = 15
-    Font.Color = clWebRED
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
+    Font.Color = clWebRED
     HasTabOrder = False
     FriendlyName = 'lblStratigraphicUnitError'
     Caption = 'lblStratigraphicUnitError'
@@ -240,6 +244,7 @@ object ISFNewRecord3: TISFNewRecord3
               Top = 0
               Width = 64
               Alignment = taRightJustify
+              Font.Color = clWebDARKSLATEGRAY
               ExplicitLeft = 480
               ExplicitTop = 0
               ExplicitWidth = 64
@@ -250,7 +255,13 @@ object ISFNewRecord3: TISFNewRecord3
           Width = 1103
           ExplicitWidth = 1103
           inherited iwlSignOut: TIWLink
-            TabOrder = -1
+            Font.Color = clWebBLUE
+          end
+          inherited lnkSignIn: TIWLink
+            Font.Color = clWebBLUE
+          end
+          inherited lblProgTitle: TIWLabel
+            Font.Color = clWebSTEELBLUE
           end
         end
       end

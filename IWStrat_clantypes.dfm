@@ -18,6 +18,7 @@ object ISFClanTypes: TISFClanTypes
   DesignLeft = 2
   DesignTop = 2
   object iwDBg: TIWDBGrid
+    AlignWithMargins = False
     Left = 102
     Top = 184
     Width = 553
@@ -30,24 +31,24 @@ object ISFClanTypes: TISFClanTypes
     BorderStyle = tfDefault
     CellPadding = 0
     CellSpacing = 0
-    Font.Color = clNone
     Font.FontName = 'Verdana'
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     FrameBuffer = 40
     Lines = tlAll
     UseFrame = False
     UseSize = True
+    ShowEmptyCells = True
+    ShowInvisibleRows = True
     ScrollToCurrentRow = False
     Columns = <
       item
         Alignment = taLeftJustify
         BGColor = clNone
         DoSubmitValidation = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 8
-        Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -56,7 +57,6 @@ object ISFClanTypes: TISFClanTypes
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'DEPOSITCLANID'
@@ -64,10 +64,10 @@ object ISFClanTypes: TISFClanTypes
         Title.Alignment = taCenter
         Title.BGColor = clNone
         Title.DoSubmitValidation = True
-        Title.Font.Color = clNone
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -82,10 +82,9 @@ object ISFClanTypes: TISFClanTypes
         Alignment = taLeftJustify
         BGColor = clNone
         DoSubmitValidation = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 8
-        Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -94,7 +93,6 @@ object ISFClanTypes: TISFClanTypes
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'DEPOSITCLAN'
@@ -102,10 +100,10 @@ object ISFClanTypes: TISFClanTypes
         Title.Alignment = taCenter
         Title.BGColor = clNone
         Title.DoSubmitValidation = True
-        Title.Font.Color = clNone
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -131,23 +129,24 @@ object ISFClanTypes: TISFClanTypes
     RowHeaderColor = clWebLIGHTSTEELBLUE
     RowAlternateColor = clNone
     RowCurrentColor = clNone
-    TabOrder = -1
   end
   object iwlSortedBy: TIWLabel
+    AlignWithMargins = False
     Left = 516
     Top = 170
     Width = 137
     Height = 14
     Alignment = taRightJustify
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 8
     Font.Style = [fsItalic]
+    Font.PxSize = 10
     HasTabOrder = False
     FriendlyName = 'iwlSortedBy'
     Caption = 'Sorted as specified in query'
   end
   object iwlPrevPage: TIWLink
+    AlignWithMargins = False
     Left = 102
     Top = 167
     Width = 97
@@ -156,10 +155,11 @@ object ISFClanTypes: TISFClanTypes
     StyleRenderOptions.RenderSize = False
     Alignment = taLeftJustify
     Color = clNone
-    Font.Color = clWebBLUE
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
+    Font.Style = [fsUnderline]
+    Font.PxSize = 12
+    Font.Color = clWebBLUE
     HasTabOrder = True
     DoSubmitValidation = False
     FriendlyName = 'iwlPrevPage'
@@ -169,6 +169,7 @@ object ISFClanTypes: TISFClanTypes
     Caption = 'Previous page'
   end
   object iwlNextPage: TIWLink
+    AlignWithMargins = False
     Left = 228
     Top = 167
     Width = 65
@@ -177,10 +178,11 @@ object ISFClanTypes: TISFClanTypes
     StyleRenderOptions.RenderSize = False
     Alignment = taLeftJustify
     Color = clNone
-    Font.Color = clWebBLUE
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
+    Font.Style = [fsUnderline]
+    Font.PxSize = 12
+    Font.Color = clWebBLUE
     HasTabOrder = True
     DoSubmitValidation = False
     FriendlyName = 'iwlNextPage'
@@ -190,30 +192,29 @@ object ISFClanTypes: TISFClanTypes
     Caption = 'Next page'
   end
   object iwbClose: TIWButton
+    AlignWithMargins = False
     Left = 102
     Top = 74
     Width = 75
     Height = 25
     Caption = 'Close'
     Color = clWebLIGHTGREEN
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbClose'
-    TabOrder = 0
     OnClick = iwbCloseClick
   end
   object rectLeft: TIWRectangle
+    AlignWithMargins = False
     Left = 0
     Top = 55
     Width = 83
     Height = 543
     Align = alLeft
     ZIndex = 1
+    Font.PxSize = 13
     Font.Color = clWebBLACK
-    Font.Size = 10
-    Font.Style = []
     BorderOptions.Width = 0
     FriendlyName = 'rectLeft'
     Color = clWebLAVENDER
@@ -221,21 +222,22 @@ object ISFClanTypes: TISFClanTypes
     VAlign = vaMiddle
   end
   object iwbDownload: TIWButton
+    AlignWithMargins = False
     Left = 196
     Top = 74
     Width = 129
     Height = 25
     Caption = 'Download to Excel'
     Color = clBtnFace
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbDownload'
     TabOrder = 1
     OnClick = iwbDownloadClick
   end
   object iwbApplyUpdates: TIWButton
+    AlignWithMargins = False
     Left = 338
     Top = 74
     Width = 129
@@ -243,14 +245,14 @@ object ISFClanTypes: TISFClanTypes
     Visible = False
     Caption = 'Save changes'
     Color = clWebPEACHPUFF
-    Font.Color = clNone
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbApplyUpdates'
     TabOrder = 4
     OnClick = iwbApplyUpdatesClick
   end
   object iwbCancelUpdates: TIWButton
+    AlignWithMargins = False
     Left = 480
     Top = 74
     Width = 129
@@ -258,14 +260,14 @@ object ISFClanTypes: TISFClanTypes
     Visible = False
     Caption = 'Cancel changes'
     Color = clWebLIGHTSTEELBLUE
-    Font.Color = clNone
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbCancelUpdates'
     TabOrder = 5
     OnClick = iwbCancelUpdatesClick
   end
   object iwbAddNew: TIWButton
+    AlignWithMargins = False
     Left = 622
     Top = 74
     Width = 133
@@ -273,9 +275,8 @@ object ISFClanTypes: TISFClanTypes
     Visible = False
     Caption = 'Add New'
     Color = clWebLIGHTSKYBLUE
-    Font.Color = clNone
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbAddNew'
     TabOrder = 6
     OnClick = iwbAddNewClick
@@ -317,6 +318,7 @@ object ISFClanTypes: TISFClanTypes
             ExplicitWidth = 600
             inherited lblWelcome: TIWLabel
               Left = 327
+              Font.Color = clWebDARKSLATEGRAY
               ExplicitLeft = 327
             end
           end
@@ -324,6 +326,15 @@ object ISFClanTypes: TISFClanTypes
         inherited iwrSignInOut: TIWRegion
           Width = 800
           ExplicitWidth = 800
+          inherited iwlSignOut: TIWLink
+            Font.Color = clWebBLUE
+          end
+          inherited lnkSignIn: TIWLink
+            Font.Color = clWebBLUE
+          end
+          inherited lblProgTitle: TIWLabel
+            Font.Color = clWebSTEELBLUE
+          end
         end
       end
     end

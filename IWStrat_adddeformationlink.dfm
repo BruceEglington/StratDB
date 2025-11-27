@@ -18,6 +18,7 @@ object ISFAddDeformationLink: TISFAddDeformationLink
   DesignLeft = 2
   DesignTop = 2
   object IWDBEdit1: TIWDBEdit
+    AlignWithMargins = False
     Left = 242
     Top = 108
     Width = 39
@@ -26,10 +27,10 @@ object ISFAddDeformationLink: TISFAddDeformationLink
     Alignment = taRightJustify
     Editable = False
     NonEditableAsLabel = True
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
     SubmitOnAsyncEvent = True
     TabOrder = 2
@@ -39,55 +40,55 @@ object ISFAddDeformationLink: TISFAddDeformationLink
     PasswordPrompt = False
   end
   object iwbReturn: TIWButton
+    AlignWithMargins = False
     Left = 102
     Top = 72
     Width = 104
     Height = 25
     Caption = 'Return'
     Color = clWebLIGHTGREEN
-    Font.Color = clNone
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbReturn'
     OnClick = iwbReturnClick
   end
   object IWLabel1: TIWLabel
+    AlignWithMargins = False
     Left = 104
     Top = 110
     Width = 34
     Height = 15
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'Order'
   end
   object iwbCancelUpdates: TIWButton
+    AlignWithMargins = False
     Left = 591
     Top = 72
     Width = 104
     Height = 25
     Caption = 'Cancel Updates'
     Color = clWebLIGHTSALMON
-    Font.Color = clNone
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbCancelUpdates'
     TabOrder = 1
     OnClick = iwbCancelUpdatesClick
   end
   object rectLeft: TIWRectangle
+    AlignWithMargins = False
     Left = 0
     Top = 55
     Width = 83
     Height = 595
     Align = alLeft
     ZIndex = 1
+    Font.PxSize = 13
     Font.Color = clWebBLACK
-    Font.Size = 10
-    Font.Style = []
     BorderOptions.Width = 0
     FriendlyName = 'rectLeft'
     Color = clWebLAVENDER
@@ -96,6 +97,7 @@ object ISFAddDeformationLink: TISFAddDeformationLink
     ExplicitHeight = 350
   end
   object iwDBnLink: TIWDBNavigator
+    AlignWithMargins = False
     Left = 104
     Top = 366
     Width = 150
@@ -112,10 +114,11 @@ object ISFAddDeformationLink: TISFAddDeformationLink
     OnInsert = iwDBnLinkInsert
   end
   object iwDBgLink: TIWDBGrid
+    AlignWithMargins = False
     Left = 104
     Top = 400
     Width = 738
-    Height = 213
+    Height = 233
     BorderColors.Color = clNone
     BorderColors.Light = clNone
     BorderColors.Dark = clNone
@@ -124,24 +127,24 @@ object ISFAddDeformationLink: TISFAddDeformationLink
     BorderStyle = tfDefault
     CellPadding = 0
     CellSpacing = 0
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     FrameBuffer = 40
     Lines = tlAll
     UseFrame = True
     UseSize = True
+    ShowEmptyCells = True
+    ShowInvisibleRows = True
     ScrollToCurrentRow = False
     Columns = <
       item
         Alignment = taCenter
         BGColor = clNone
         DoSubmitValidation = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 8
-        Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -150,17 +153,16 @@ object ISFAddDeformationLink: TISFAddDeformationLink
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'DEFORMATIONORDER'
         Title.Alignment = taCenter
         Title.BGColor = clNone
         Title.DoSubmitValidation = True
-        Title.Font.Color = clNone
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -175,10 +177,9 @@ object ISFAddDeformationLink: TISFAddDeformationLink
         Alignment = taCenter
         BGColor = clNone
         DoSubmitValidation = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 8
-        Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -187,17 +188,16 @@ object ISFAddDeformationLink: TISFAddDeformationLink
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'AGEMIN'
         Title.Alignment = taCenter
         Title.BGColor = clNone
         Title.DoSubmitValidation = True
-        Title.Font.Color = clNone
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -212,10 +212,9 @@ object ISFAddDeformationLink: TISFAddDeformationLink
         Alignment = taCenter
         BGColor = clNone
         DoSubmitValidation = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 8
-        Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -224,17 +223,16 @@ object ISFAddDeformationLink: TISFAddDeformationLink
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'AGEMAX'
         Title.Alignment = taCenter
         Title.BGColor = clNone
         Title.DoSubmitValidation = True
-        Title.Font.Color = clNone
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -249,10 +247,9 @@ object ISFAddDeformationLink: TISFAddDeformationLink
         Alignment = taLeftJustify
         BGColor = clNone
         DoSubmitValidation = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 8
-        Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -261,17 +258,16 @@ object ISFAddDeformationLink: TISFAddDeformationLink
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'AGECONSTRAINTLEVEL'
         Title.Alignment = taCenter
         Title.BGColor = clNone
         Title.DoSubmitValidation = True
-        Title.Font.Color = clNone
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -286,10 +282,9 @@ object ISFAddDeformationLink: TISFAddDeformationLink
         Alignment = taCenter
         BGColor = clNone
         DoSubmitValidation = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 8
-        Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -298,17 +293,16 @@ object ISFAddDeformationLink: TISFAddDeformationLink
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'DUCTILITYTYPEID'
         Title.Alignment = taCenter
         Title.BGColor = clNone
         Title.DoSubmitValidation = True
-        Title.Font.Color = clNone
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -323,10 +317,9 @@ object ISFAddDeformationLink: TISFAddDeformationLink
         Alignment = taLeftJustify
         BGColor = clNone
         DoSubmitValidation = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 8
-        Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -335,17 +328,16 @@ object ISFAddDeformationLink: TISFAddDeformationLink
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'OROGENY'
         Title.Alignment = taCenter
         Title.BGColor = clNone
         Title.DoSubmitValidation = True
-        Title.Font.Color = clNone
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -360,10 +352,9 @@ object ISFAddDeformationLink: TISFAddDeformationLink
         Alignment = taCenter
         BGColor = clNone
         DoSubmitValidation = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 8
-        Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -372,17 +363,16 @@ object ISFAddDeformationLink: TISFAddDeformationLink
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'DEFORMATIONTYPEID'
         Title.Alignment = taCenter
         Title.BGColor = clNone
         Title.DoSubmitValidation = True
-        Title.Font.Color = clNone
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -410,70 +400,71 @@ object ISFAddDeformationLink: TISFAddDeformationLink
     RowCurrentColor = clWebYELLOW
   end
   object iwbDeleteLink: TIWButton
+    AlignWithMargins = False
     Left = 714
     Top = 72
     Width = 145
     Height = 25
     Caption = 'Delete Current Record'
     Color = clWebLIGHTCORAL
-    Font.Color = clNone
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbDeleteLink'
     TabOrder = 3
     OnClick = iwbDeleteLinkClick
   end
   object iwbEdit: TIWButton
+    AlignWithMargins = False
     Left = 346
     Top = 72
     Width = 104
     Height = 25
     Caption = 'Edit'
     Color = clWebLEMONCHIFFON
-    Font.Color = clNone
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbEdit'
     TabOrder = 4
     OnClick = iwbEditClick
   end
   object iwbApplyUpdates: TIWButton
+    AlignWithMargins = False
     Left = 469
     Top = 72
     Width = 104
     Height = 25
     Caption = 'Apply Updates'
     Color = clWebPEACHPUFF
-    Font.Color = clNone
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbApplyUpdates'
     TabOrder = 5
     OnClick = iwbApplyUpdatesClick
   end
   object IWLabel3: TIWLabel
+    AlignWithMargins = False
     Left = 102
     Top = 291
     Width = 50
     Height = 15
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     HasTabOrder = False
     FriendlyName = 'IWLabel2'
     Caption = 'Orogeny'
   end
   object iwDBlcbOrogeny: TIWDBLookupComboBox
+    AlignWithMargins = False
     Left = 242
     Top = 287
     Width = 365
     Height = 21
     StyleRenderOptions.RenderBorder = False
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     Editable = False
     NonEditableAsLabel = True
     TabOrder = 6
@@ -485,22 +476,22 @@ object ISFAddDeformationLink: TISFAddDeformationLink
     ListField = 'OROGENY'
     ListSource = dmStrat.dsOrogenies
     DisableWhenEmpty = True
-    NoSelectionText = '-- No Selection --'
   end
   object IWLabel4: TIWLabel
+    AlignWithMargins = False
     Left = 102
     Top = 162
     Width = 52
     Height = 15
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'Age (Ma)'
   end
   object IWDBEdit2: TIWDBEdit
+    AlignWithMargins = False
     Left = 242
     Top = 159
     Width = 73
@@ -509,10 +500,10 @@ object ISFAddDeformationLink: TISFAddDeformationLink
     Alignment = taRightJustify
     Editable = False
     NonEditableAsLabel = True
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
     SubmitOnAsyncEvent = True
     TabOrder = 7
@@ -522,6 +513,7 @@ object ISFAddDeformationLink: TISFAddDeformationLink
     PasswordPrompt = False
   end
   object IWDBEdit3: TIWDBEdit
+    AlignWithMargins = False
     Left = 353
     Top = 159
     Width = 73
@@ -530,10 +522,10 @@ object ISFAddDeformationLink: TISFAddDeformationLink
     Alignment = taRightJustify
     Editable = False
     NonEditableAsLabel = True
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
     SubmitOnAsyncEvent = True
     TabOrder = 8
@@ -543,54 +535,55 @@ object ISFAddDeformationLink: TISFAddDeformationLink
     PasswordPrompt = False
   end
   object IWLabel10: TIWLabel
+    AlignWithMargins = False
     Left = 266
     Top = 183
     Width = 26
     Height = 15
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'min.'
   end
   object IWLabel11: TIWLabel
+    AlignWithMargins = False
     Left = 386
     Top = 183
     Width = 28
     Height = 15
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'max.'
   end
   object IWLabel2: TIWLabel
+    AlignWithMargins = False
     Left = 102
     Top = 208
     Width = 96
     Height = 15
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     HasTabOrder = False
     FriendlyName = 'IWLabel2'
     Caption = 'Age Constraints'
   end
   object iwDBlcbAgeconstraintlevel: TIWDBLookupComboBox
+    AlignWithMargins = False
     Left = 242
     Top = 204
     Width = 365
     Height = 21
     StyleRenderOptions.RenderBorder = False
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     Editable = False
     NonEditableAsLabel = True
     TabOrder = 9
@@ -602,45 +595,43 @@ object ISFAddDeformationLink: TISFAddDeformationLink
     ListField = 'AGECONSTRAINTLEVEL'
     ListSource = dmStrat.dsAgeConstraints
     DisableWhenEmpty = True
-    NoSelectionText = '-- No Selection --'
   end
   object iwbOpen: TIWButton
+    AlignWithMargins = False
     Left = 224
     Top = 72
     Width = 104
     Height = 25
     Caption = 'Open'
     Color = clBtnFace
-    Font.Color = clNone
-    Font.Size = 10
-    Font.Style = []
     FriendlyName = 'iwbOpen'
     TabOrder = 10
     OnClick = iwbOpenClick
   end
   object IWLabel5: TIWLabel
+    AlignWithMargins = False
     Left = 102
     Top = 264
     Width = 78
     Height = 15
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     HasTabOrder = False
     FriendlyName = 'IWLabel2'
     Caption = 'Ductility Type'
   end
   object iwDBlcbDuctility: TIWDBLookupComboBox
+    AlignWithMargins = False
     Left = 242
     Top = 260
     Width = 365
     Height = 21
     StyleRenderOptions.RenderBorder = False
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     Editable = False
     NonEditableAsLabel = True
     TabOrder = 11
@@ -652,18 +643,18 @@ object ISFAddDeformationLink: TISFAddDeformationLink
     ListField = 'DUCTILITYTYPE'
     ListSource = dmStrat.dsDuctilities
     DisableWhenEmpty = True
-    NoSelectionText = '-- No Selection --'
   end
   object iwDBlcbOrogenyType: TIWDBLookupComboBox
+    AlignWithMargins = False
     Left = 242
     Top = 316
     Width = 365
     Height = 21
     StyleRenderOptions.RenderBorder = False
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     Editable = False
     NonEditableAsLabel = True
     TabOrder = 12
@@ -675,44 +666,44 @@ object ISFAddDeformationLink: TISFAddDeformationLink
     ListField = 'DEFORMATIONTYPE'
     ListSource = dmStrat.dsOrogenyTypes
     DisableWhenEmpty = True
-    NoSelectionText = '-- No Selection --'
   end
   object IWLabel6: TIWLabel
+    AlignWithMargins = False
     Left = 102
     Top = 320
     Width = 82
     Height = 15
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     HasTabOrder = False
     FriendlyName = 'IWLabel2'
     Caption = 'Orogeny Type'
   end
   object IWLabel7: TIWLabel
+    AlignWithMargins = False
     Left = 102
     Top = 236
     Width = 57
     Height = 15
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     HasTabOrder = False
     FriendlyName = 'IWLabel2'
     Caption = 'Vergence'
   end
   object iwDBlcbVergence: TIWDBLookupComboBox
+    AlignWithMargins = False
     Left = 242
     Top = 232
     Width = 365
     Height = 21
     StyleRenderOptions.RenderBorder = False
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     Editable = False
     NonEditableAsLabel = True
     TabOrder = 13
@@ -724,7 +715,6 @@ object ISFAddDeformationLink: TISFAddDeformationLink
     ListField = 'DIRECTIONNAME'
     ListSource = dmStrat.dsDirections
     DisableWhenEmpty = True
-    NoSelectionText = '-- No Selection --'
   end
   inline TopBar: TISFTopBarStrat
     Left = 0
@@ -763,6 +753,7 @@ object ISFAddDeformationLink: TISFAddDeformationLink
             ExplicitWidth = 700
             inherited lblWelcome: TIWLabel
               Left = 427
+              Font.Color = clWebDARKSLATEGRAY
               ExplicitLeft = 427
             end
           end
@@ -771,7 +762,13 @@ object ISFAddDeformationLink: TISFAddDeformationLink
           Width = 900
           ExplicitWidth = 900
           inherited iwlSignOut: TIWLink
-            TabOrder = -1
+            Font.Color = clWebBLUE
+          end
+          inherited lnkSignIn: TIWLink
+            Font.Color = clWebBLUE
+          end
+          inherited lblProgTitle: TIWLabel
+            Font.Color = clWebSTEELBLUE
           end
         end
       end

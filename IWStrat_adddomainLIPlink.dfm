@@ -2,7 +2,7 @@ object ISFAddDomainLIPLink: TISFAddDomainLIPLink
   Left = 0
   Top = 0
   Width = 720
-  Height = 405
+  Height = 462
   RenderInvisibleControls = False
   OnRender = IWAppFormRender
   AllowPageAccess = True
@@ -18,6 +18,7 @@ object ISFAddDomainLIPLink: TISFAddDomainLIPLink
   DesignLeft = 2
   DesignTop = 2
   object IWDBEdit1: TIWDBEdit
+    AlignWithMargins = False
     Left = 242
     Top = 108
     Width = 73
@@ -25,10 +26,10 @@ object ISFAddDomainLIPLink: TISFAddDomainLIPLink
     StyleRenderOptions.RenderBorder = False
     Editable = False
     NonEditableAsLabel = True
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
     SubmitOnAsyncEvent = True
     TabOrder = 2
@@ -38,84 +39,86 @@ object ISFAddDomainLIPLink: TISFAddDomainLIPLink
     PasswordPrompt = False
   end
   object iwbReturn: TIWButton
+    AlignWithMargins = False
     Left = 102
     Top = 72
     Width = 104
     Height = 25
     Caption = 'Return'
     Color = clWebLIGHTGREEN
-    Font.Color = clNone
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbReturn'
     OnClick = iwbReturnClick
   end
   object IWLabel1: TIWLabel
+    AlignWithMargins = False
     Left = 104
     Top = 110
     Width = 64
     Height = 15
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'Domain ID'
   end
   object IWLabel2: TIWLabel
+    AlignWithMargins = False
     Left = 104
     Top = 136
     Width = 143
     Height = 15
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     HasTabOrder = False
     FriendlyName = 'IWLabel2'
     Caption = 'Large Igneous Province'
   end
   object iwbCancelUpdates: TIWButton
+    AlignWithMargins = False
     Left = 440
     Top = 72
     Width = 104
     Height = 25
     Caption = 'Cancel Updates'
     Color = clWebLIGHTSALMON
-    Font.Color = clNone
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbCancelUpdates'
     TabOrder = 6
     OnClick = iwbCancelUpdatesClick
   end
   object rectLeft: TIWRectangle
+    AlignWithMargins = False
     Left = 0
     Top = 55
     Width = 83
-    Height = 350
+    Height = 407
     Align = alLeft
     ZIndex = 1
+    Font.PxSize = 13
     Font.Color = clWebBLACK
-    Font.Size = 10
-    Font.Style = []
     BorderOptions.Width = 0
     FriendlyName = 'rectLeft'
     Color = clWebLAVENDER
     Alignment = taLeftJustify
     VAlign = vaMiddle
+    ExplicitHeight = 350
   end
   object iwDBlcbLink: TIWDBLookupComboBox
+    AlignWithMargins = False
     Left = 240
     Top = 132
     Width = 365
     Height = 21
     StyleRenderOptions.RenderBorder = False
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     Editable = False
     NonEditableAsLabel = True
     TabOrder = 3
@@ -127,9 +130,9 @@ object ISFAddDomainLIPLink: TISFAddDomainLIPLink
     ListField = 'DOMAINNAME'
     ListSource = dmStrat.dsDomains
     DisableWhenEmpty = True
-    NoSelectionText = '-- No Selection --'
   end
   object iwDBnLink: TIWDBNavigator
+    AlignWithMargins = False
     Left = 104
     Top = 206
     Width = 150
@@ -146,10 +149,11 @@ object ISFAddDomainLIPLink: TISFAddDomainLIPLink
     OnInsert = iwDBnLinkInsert
   end
   object iwDBgLink: TIWDBGrid
+    AlignWithMargins = False
     Left = 104
     Top = 240
     Width = 601
-    Height = 150
+    Height = 185
     BorderColors.Color = clNone
     BorderColors.Light = clNone
     BorderColors.Dark = clNone
@@ -158,24 +162,24 @@ object ISFAddDomainLIPLink: TISFAddDomainLIPLink
     BorderStyle = tfDefault
     CellPadding = 0
     CellSpacing = 0
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     FrameBuffer = 40
     Lines = tlAll
     UseFrame = True
     UseSize = True
+    ShowEmptyCells = True
+    ShowInvisibleRows = True
     ScrollToCurrentRow = False
     Columns = <
       item
         Alignment = taLeftJustify
         BGColor = clNone
         DoSubmitValidation = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 8
-        Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -184,17 +188,16 @@ object ISFAddDomainLIPLink: TISFAddDomainLIPLink
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'UNITID'
         Title.Alignment = taCenter
         Title.BGColor = clNone
         Title.DoSubmitValidation = True
-        Title.Font.Color = clNone
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -209,10 +212,9 @@ object ISFAddDomainLIPLink: TISFAddDomainLIPLink
         Alignment = taCenter
         BGColor = clNone
         DoSubmitValidation = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 8
-        Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -221,17 +223,16 @@ object ISFAddDomainLIPLink: TISFAddDomainLIPLink
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'DOMAINID'
         Title.Alignment = taCenter
         Title.BGColor = clNone
         Title.DoSubmitValidation = True
-        Title.Font.Color = clNone
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -246,10 +247,9 @@ object ISFAddDomainLIPLink: TISFAddDomainLIPLink
         Alignment = taCenter
         BGColor = clNone
         DoSubmitValidation = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 8
-        Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -258,17 +258,16 @@ object ISFAddDomainLIPLink: TISFAddDomainLIPLink
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'DOMAINNAME'
         Title.Alignment = taCenter
         Title.BGColor = clNone
         Title.DoSubmitValidation = True
-        Title.Font.Color = clNone
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -283,10 +282,9 @@ object ISFAddDomainLIPLink: TISFAddDomainLIPLink
         Alignment = taCenter
         BGColor = clNone
         DoSubmitValidation = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 8
-        Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -295,17 +293,16 @@ object ISFAddDomainLIPLink: TISFAddDomainLIPLink
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'INC4CHTYN'
         Title.Alignment = taCenter
         Title.BGColor = clNone
         Title.DoSubmitValidation = True
-        Title.Font.Color = clNone
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -333,70 +330,71 @@ object ISFAddDomainLIPLink: TISFAddDomainLIPLink
     RowCurrentColor = clWebYELLOW
   end
   object iwbDeleteLink: TIWButton
+    AlignWithMargins = False
     Left = 560
     Top = 72
     Width = 145
     Height = 25
     Caption = 'Delete Current Record'
     Color = clWebLIGHTCORAL
-    Font.Color = clNone
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbDeleteLink'
     TabOrder = 7
     OnClick = iwbDeleteLinkClick
   end
   object iwbEdit: TIWButton
+    AlignWithMargins = False
     Left = 216
     Top = 72
     Width = 104
     Height = 25
     Caption = 'Edit'
     Color = clWebLEMONCHIFFON
-    Font.Color = clNone
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbEdit'
     TabOrder = 1
     OnClick = iwbEditClick
   end
   object iwbApplyUpdates: TIWButton
+    AlignWithMargins = False
     Left = 326
     Top = 72
     Width = 104
     Height = 25
     Caption = 'Apply Updates'
     Color = clWebPEACHPUFF
-    Font.Color = clNone
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbApplyUpdates'
     TabOrder = 5
     OnClick = iwbApplyUpdatesClick
   end
   object IWLabel3: TIWLabel
+    AlignWithMargins = False
     Left = 104
     Top = 160
     Width = 79
     Height = 15
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'Incl. for Chart'
   end
   object iwDBlcbInc4Cht: TIWDBLookupComboBox
+    AlignWithMargins = False
     Left = 240
     Top = 159
     Width = 129
     Height = 21
     StyleRenderOptions.RenderBorder = False
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     Editable = False
     NonEditableAsLabel = True
     TabOrder = 4
@@ -408,7 +406,6 @@ object ISFAddDomainLIPLink: TISFAddDomainLIPLink
     ListField = 'YESNO'
     ListSource = dmStrat.dsYesNo
     DisableWhenEmpty = True
-    NoSelectionText = '-- No Selection --'
   end
   inline TopBar: TISFTopBarStrat
     Left = 0
@@ -447,6 +444,7 @@ object ISFAddDomainLIPLink: TISFAddDomainLIPLink
             ExplicitWidth = 520
             inherited lblWelcome: TIWLabel
               Left = 247
+              Font.Color = clWebDARKSLATEGRAY
               ExplicitLeft = 247
             end
           end
@@ -455,7 +453,13 @@ object ISFAddDomainLIPLink: TISFAddDomainLIPLink
           Width = 720
           ExplicitWidth = 720
           inherited iwlSignOut: TIWLink
-            TabOrder = -1
+            Font.Color = clWebBLUE
+          end
+          inherited lnkSignIn: TIWLink
+            Font.Color = clWebBLUE
+          end
+          inherited lblProgTitle: TIWLabel
+            Font.Color = clWebSTEELBLUE
           end
         end
       end

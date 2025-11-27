@@ -113,10 +113,8 @@ begin
     try
       dmStrat.cdsRefFull.Post;
       dmStrat.cdsRefFull.ApplyUpdates(-1);
-      //dmUser.SetDeveloperData('RefDetails iwApplyUpdatesClick - call ReplicateChanges');
       //dmStrat.cdsRefFull.Close;
       //dmStrat.cdsRefFull.Open;
-      //dmReplicate.ReplicateChanges('ttNoTrace');
     except
     end;
   end;

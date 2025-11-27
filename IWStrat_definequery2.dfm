@@ -27,15 +27,15 @@ object ISFDefineQuery2: TISFDefineQuery2
     BorderOptions.NumericWidth = 0
     BorderOptions.Style = cbsNone
     object rectLeft: TIWRectangle
+      AlignWithMargins = False
       Left = 0
       Top = 0
       Width = 83
       Height = 2945
       Align = alLeft
       ZIndex = 1
+      Font.PxSize = 13
       Font.Color = clWebBLACK
-      Font.Size = 10
-      Font.Style = []
       BorderOptions.Width = 0
       FriendlyName = 'rectLeft'
       Color = clWebLAVENDER
@@ -65,42 +65,42 @@ object ISFDefineQuery2: TISFDefineQuery2
       BorderOptions.NumericWidth = 0
       BorderOptions.Style = cbsNone
       object iwbCancel: TIWButton
+        AlignWithMargins = False
         Left = 560
         Top = 17
         Width = 150
         Height = 25
         Caption = 'Cancel query definition'
         Color = clWebLIGHTSALMON
-        Font.Color = clNone
         Font.Size = 9
-        Font.Style = []
+        Font.PxSize = 12
         FriendlyName = 'iwbCancel'
         OnClick = iwbCancelClick
       end
       object iwbClearCheckboxes: TIWButton
+        AlignWithMargins = False
         Left = 360
         Top = 17
         Width = 150
         Height = 25
         Caption = 'Clear checkboxes'
         Color = clBtnFace
-        Font.Color = clNone
         Font.Size = 9
-        Font.Style = []
+        Font.PxSize = 12
         FriendlyName = 'iwbClearCheckboxes'
         TabOrder = 1
         OnClick = iwbClearCheckboxesClick
       end
       object iwbSubmitQuery: TIWButton
+        AlignWithMargins = False
         Left = 16
         Top = 17
         Width = 293
         Height = 25
         Caption = 'Submit Query'
         Color = clWebLIGHTGREEN
-        Font.Color = clNone
         Font.Size = 9
-        Font.Style = []
+        Font.PxSize = 12
         FriendlyName = 'iwbSubmitQuery'
         TabOrder = 2
         OnClick = iwbSubmitQueryClick
@@ -116,6 +116,7 @@ object ISFDefineQuery2: TISFDefineQuery2
       BorderOptions.NumericWidth = 0
       BorderOptions.Style = cbsNone
       object iweToSort: TIWEdit
+        AlignWithMargins = False
         Left = 281
         Top = 205
         Width = 81
@@ -123,25 +124,25 @@ object ISFDefineQuery2: TISFDefineQuery2
         StyleRenderOptions.RenderBorder = False
         Alignment = taRightJustify
         NonEditableAsLabel = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
+        Font.PxSize = 12
         FriendlyName = 'IWEdit1'
         SubmitOnAsyncEvent = True
         TabOrder = 3
       end
       object iwcbToSort: TIWCheckBox
+        AlignWithMargins = False
         Left = 16
         Top = 205
         Width = 259
         Height = 21
         Caption = 'to Sort Order (maximum)'
         Editable = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = [fsBold]
+        Font.PxSize = 12
         SubmitOnAsyncEvent = True
         Style = stNormal
         TabOrder = 4
@@ -149,6 +150,7 @@ object ISFDefineQuery2: TISFDefineQuery2
         FriendlyName = 'iwcbToSort'
       end
       object iweFromSort: TIWEdit
+        AlignWithMargins = False
         Left = 281
         Top = 178
         Width = 81
@@ -156,25 +158,25 @@ object ISFDefineQuery2: TISFDefineQuery2
         StyleRenderOptions.RenderBorder = False
         Alignment = taRightJustify
         NonEditableAsLabel = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
+        Font.PxSize = 12
         FriendlyName = 'iweFromSort'
         SubmitOnAsyncEvent = True
         TabOrder = 5
       end
       object iwcbFromSort: TIWCheckBox
+        AlignWithMargins = False
         Left = 16
         Top = 178
         Width = 259
         Height = 21
         Caption = 'Include from Sort Order (minimum)'
         Editable = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = [fsBold]
+        Font.PxSize = 12
         SubmitOnAsyncEvent = True
         Style = stNormal
         TabOrder = 6
@@ -182,6 +184,7 @@ object ISFDefineQuery2: TISFDefineQuery2
         FriendlyName = 'iwcbFromSort'
       end
       object iweToDate: TIWEdit
+        AlignWithMargins = False
         Left = 300
         Top = 101
         Width = 59
@@ -189,25 +192,25 @@ object ISFDefineQuery2: TISFDefineQuery2
         StyleRenderOptions.RenderBorder = False
         Alignment = taRightJustify
         NonEditableAsLabel = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
+        Font.PxSize = 12
         FriendlyName = 'IWEdit1'
         SubmitOnAsyncEvent = True
         TabOrder = 7
       end
       object iwcbToDate: TIWCheckBox
+        AlignWithMargins = False
         Left = 16
         Top = 101
         Width = 278
         Height = 21
         Caption = 'to Maximum Age'
         Editable = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = [fsBold]
+        Font.PxSize = 12
         SubmitOnAsyncEvent = True
         Style = stNormal
         TabOrder = 8
@@ -215,6 +218,7 @@ object ISFDefineQuery2: TISFDefineQuery2
         FriendlyName = 'iwcbToDate'
       end
       object iweFromDate: TIWEdit
+        AlignWithMargins = False
         Left = 300
         Top = 74
         Width = 59
@@ -222,25 +226,25 @@ object ISFDefineQuery2: TISFDefineQuery2
         StyleRenderOptions.RenderBorder = False
         Alignment = taRightJustify
         NonEditableAsLabel = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
+        Font.PxSize = 12
         FriendlyName = 'IWEdit1'
         SubmitOnAsyncEvent = True
         TabOrder = 9
       end
       object iwcbFromDate: TIWCheckBox
+        AlignWithMargins = False
         Left = 16
         Top = 74
         Width = 278
         Height = 21
         Caption = 'Include from Minimum Age'
         Editable = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = [fsBold]
+        Font.PxSize = 12
         SubmitOnAsyncEvent = True
         Style = stNormal
         TabOrder = 10
@@ -248,16 +252,17 @@ object ISFDefineQuery2: TISFDefineQuery2
         FriendlyName = 'iwcbFromDate'
       end
       object iwcbRestrictParentID: TIWCheckBox
+        AlignWithMargins = False
         Left = 16
         Top = 15
         Width = 402
         Height = 21
         Caption = 'Restrict results to top level units (ParentID must be zero)'
         Editable = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = [fsBold]
+        Font.PxSize = 12
         SubmitOnAsyncEvent = True
         Style = stNormal
         TabOrder = 11
@@ -265,16 +270,17 @@ object ISFDefineQuery2: TISFDefineQuery2
         FriendlyName = 'iwcbRestrictParentID'
       end
       object IWText1: TIWText
+        AlignWithMargins = False
         Left = 447
         Top = 15
         Width = 261
         Height = 274
         BGColor = clNone
         ConvertSpaces = True
-        Font.Color = clWebDARKSLATEGRAY
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
+        Font.PxSize = 12
+        Font.Color = clWebDARKSLATEGRAY
         FriendlyName = 'IWText1'
         Lines.Strings = (
           'Select parameters which define the records '
@@ -299,14 +305,16 @@ object ISFDefineQuery2: TISFDefineQuery2
         WantReturns = True
       end
       object iwlblErrorTop: TIWLabel
+        AlignWithMargins = False
         Left = 17
         Top = 268
         Width = 250
         Height = 15
-        Font.Color = clWebRED
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = [fsBold]
+        Font.PxSize = 12
+        Font.Color = clWebRED
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'iwlblErrorTop'
@@ -323,33 +331,33 @@ object ISFDefineQuery2: TISFDefineQuery2
       BorderOptions.NumericWidth = 0
       BorderOptions.Style = cbsNone
       object iwlUnits: TIWListbox
+        AlignWithMargins = False
         Left = 20
         Top = 41
         Width = 421
         Height = 249
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
+        Font.PxSize = 12
         RequireSelection = False
         TabOrder = 12
         NonEditableAsLabel = True
         FriendlyName = 'iwlUnits'
         Sorted = True
         MultiSelect = True
-        NoSelectionText = '-- No Selection --'
       end
       object iwcbUnits: TIWCheckBox
+        AlignWithMargins = False
         Left = 15
         Top = 14
         Width = 422
         Height = 21
         Caption = 'Include selection from Stratigraphic Units'
         Editable = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = [fsBold]
+        Font.PxSize = 12
         SubmitOnAsyncEvent = True
         Style = stNormal
         TabOrder = 13
@@ -357,15 +365,15 @@ object ISFDefineQuery2: TISFDefineQuery2
         FriendlyName = 'iwcbUnits'
       end
       object IWButton8: TIWButton
+        AlignWithMargins = False
         Left = 517
         Top = 48
         Width = 125
         Height = 25
         Caption = 'Submit Query'
         Color = clWebLIGHTGREEN
-        Font.Color = clNone
         Font.Size = 9
-        Font.Style = []
+        Font.PxSize = 12
         FriendlyName = 'iwbSubmitQuery2'
         TabOrder = 14
         OnClick = iwbSubmitQueryClick
@@ -381,30 +389,30 @@ object ISFDefineQuery2: TISFDefineQuery2
       BorderOptions.NumericWidth = 0
       BorderOptions.Style = cbsNone
       object IWButton3: TIWButton
+        AlignWithMargins = False
         Left = 517
         Top = 256
         Width = 125
         Height = 25
         Caption = 'Submit Query'
         Color = clWebLIGHTGREEN
-        Font.Color = clNone
         Font.Size = 9
-        Font.Style = []
+        Font.PxSize = 12
         FriendlyName = 'iwbSubmitQuery2'
         TabOrder = 15
         OnClick = iwbSubmitQueryClick
       end
       object iwlDomains: TIWListbox
+        AlignWithMargins = False
         Left = 20
         Top = 43
         Width = 623
         Height = 190
         RenderSize = False
         StyleRenderOptions.RenderSize = False
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
+        Font.PxSize = 12
         RequireSelection = False
         UseSize = False
         TabOrder = 16
@@ -412,19 +420,19 @@ object ISFDefineQuery2: TISFDefineQuery2
         FriendlyName = 'iwlDomains'
         Sorted = True
         MultiSelect = True
-        NoSelectionText = '-- No Selection --'
       end
       object iwcbDomains: TIWCheckBox
+        AlignWithMargins = False
         Left = 15
         Top = 16
         Width = 422
         Height = 21
         Caption = 'Include selection from Domains'
         Editable = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = [fsBold]
+        Font.PxSize = 12
         SubmitOnAsyncEvent = True
         Style = stNormal
         TabOrder = 17
@@ -442,30 +450,30 @@ object ISFDefineQuery2: TISFDefineQuery2
       BorderOptions.NumericWidth = 0
       BorderOptions.Style = cbsNone
       object IWButton4: TIWButton
+        AlignWithMargins = False
         Left = 517
         Top = 250
         Width = 125
         Height = 25
         Caption = 'Submit Query'
         Color = clWebLIGHTGREEN
-        Font.Color = clNone
         Font.Size = 9
-        Font.Style = []
+        Font.PxSize = 12
         FriendlyName = 'iwbSubmitQuery2'
         TabOrder = 18
         OnClick = iwbSubmitQueryClick
       end
       object iwlReferences: TIWListbox
+        AlignWithMargins = False
         Left = 20
         Top = 30
         Width = 612
         Height = 203
         RenderSize = False
         StyleRenderOptions.RenderSize = False
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
+        Font.PxSize = 12
         RequireSelection = False
         UseSize = False
         TabOrder = 19
@@ -473,19 +481,19 @@ object ISFDefineQuery2: TISFDefineQuery2
         FriendlyName = 'iwlReferences'
         Sorted = True
         MultiSelect = True
-        NoSelectionText = '-- No Selection --'
       end
       object iwcbReferences: TIWCheckBox
+        AlignWithMargins = False
         Left = 15
         Top = 3
         Width = 422
         Height = 21
         Caption = 'Include selection from References'
         Editable = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = [fsBold]
+        Font.PxSize = 12
         SubmitOnAsyncEvent = True
         Style = stNormal
         TabOrder = 20
@@ -503,30 +511,30 @@ object ISFDefineQuery2: TISFDefineQuery2
       BorderOptions.NumericWidth = 0
       BorderOptions.Style = cbsNone
       object IWButton2: TIWButton
+        AlignWithMargins = False
         Left = 517
         Top = 215
         Width = 125
         Height = 25
         Caption = 'Submit Query'
         Color = clWebLIGHTGREEN
-        Font.Color = clNone
         Font.Size = 9
-        Font.Style = []
+        Font.PxSize = 12
         FriendlyName = 'iwbSubmitQuery2'
         TabOrder = 21
         OnClick = iwbSubmitQueryClick
       end
       object iwlPeriods: TIWListbox
+        AlignWithMargins = False
         Left = 20
         Top = 51
         Width = 623
         Height = 158
         RenderSize = False
         StyleRenderOptions.RenderSize = False
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
+        Font.PxSize = 12
         RequireSelection = False
         UseSize = False
         TabOrder = 22
@@ -534,19 +542,19 @@ object ISFDefineQuery2: TISFDefineQuery2
         FriendlyName = 'iwlPeriods'
         Sorted = True
         MultiSelect = True
-        NoSelectionText = '-- No Selection --'
       end
       object iwcbPeriods: TIWCheckBox
+        AlignWithMargins = False
         Left = 15
         Top = 24
         Width = 422
         Height = 21
         Caption = 'Include selection from Chronostratigraphic Periods'
         Editable = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = [fsBold]
+        Font.PxSize = 12
         SubmitOnAsyncEvent = True
         Style = stNormal
         TabOrder = 23
@@ -564,30 +572,30 @@ object ISFDefineQuery2: TISFDefineQuery2
       BorderOptions.NumericWidth = 0
       BorderOptions.Style = cbsNone
       object IWButton5: TIWButton
+        AlignWithMargins = False
         Left = 517
         Top = 168
         Width = 125
         Height = 25
         Caption = 'Submit Query'
         Color = clWebLIGHTGREEN
-        Font.Color = clNone
         Font.Size = 9
-        Font.Style = []
+        Font.PxSize = 12
         FriendlyName = 'iwbSubmitQuery2'
         TabOrder = 24
         OnClick = iwbSubmitQueryClick
       end
       object iwlAgeConstraints: TIWListbox
+        AlignWithMargins = False
         Left = 20
         Top = 46
         Width = 623
         Height = 107
         RenderSize = False
         StyleRenderOptions.RenderSize = False
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
+        Font.PxSize = 12
         RequireSelection = False
         UseSize = False
         TabOrder = 25
@@ -595,19 +603,19 @@ object ISFDefineQuery2: TISFDefineQuery2
         FriendlyName = 'iwlPeriods'
         Sorted = True
         MultiSelect = True
-        NoSelectionText = '-- No Selection --'
       end
       object iwcbAgeConstraints: TIWCheckBox
+        AlignWithMargins = False
         Left = 15
         Top = 19
         Width = 446
         Height = 21
         Caption = 'Include selection from Age Constraints'
         Editable = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = [fsBold]
+        Font.PxSize = 12
         SubmitOnAsyncEvent = True
         Style = stNormal
         TabOrder = 26
@@ -625,30 +633,30 @@ object ISFDefineQuery2: TISFDefineQuery2
       BorderOptions.NumericWidth = 0
       BorderOptions.Style = cbsNone
       object IWButton7: TIWButton
+        AlignWithMargins = False
         Left = 517
         Top = 136
         Width = 125
         Height = 25
         Caption = 'Submit Query'
         Color = clWebLIGHTGREEN
-        Font.Color = clNone
         Font.Size = 9
-        Font.Style = []
+        Font.PxSize = 12
         FriendlyName = 'iwbSubmitQuery2'
         TabOrder = 27
         OnClick = iwbSubmitQueryClick
       end
       object iwlWhoFor: TIWListbox
+        AlignWithMargins = False
         Left = 20
         Top = 39
         Width = 322
         Height = 158
         RenderSize = False
         StyleRenderOptions.RenderSize = False
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
+        Font.PxSize = 12
         RequireSelection = False
         UseSize = False
         TabOrder = 28
@@ -656,19 +664,19 @@ object ISFDefineQuery2: TISFDefineQuery2
         FriendlyName = 'iwlWhoFor'
         Sorted = True
         MultiSelect = True
-        NoSelectionText = '-- No Selection --'
       end
       object iwcbWhoFor: TIWCheckBox
+        AlignWithMargins = False
         Left = 15
         Top = 12
         Width = 449
         Height = 21
         Caption = 'Include selection from Who For'
         Editable = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = [fsBold]
+        Font.PxSize = 12
         SubmitOnAsyncEvent = True
         Style = stNormal
         TabOrder = 29
@@ -686,30 +694,31 @@ object ISFDefineQuery2: TISFDefineQuery2
       BorderOptions.NumericWidth = 0
       BorderOptions.Style = cbsNone
       object IWButton6: TIWButton
+        AlignWithMargins = False
         Left = 517
         Top = 40
         Width = 125
         Height = 25
         Caption = 'Submit Query'
         Color = clWebLIGHTGREEN
-        Font.Color = clNone
         Font.Size = 9
-        Font.Style = []
+        Font.PxSize = 12
         FriendlyName = 'iwbSubmitQuery2'
         TabOrder = 30
         OnClick = iwbSubmitQueryClick
       end
       object iwcbInc4Cht: TIWCheckBox
+        AlignWithMargins = False
         Left = 15
         Top = 12
         Width = 476
         Height = 21
         Caption = 'Include selection from Include for Chart'
         Editable = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = [fsBold]
+        Font.PxSize = 12
         SubmitOnAsyncEvent = True
         Style = stNormal
         TabOrder = 31
@@ -717,16 +726,16 @@ object ISFDefineQuery2: TISFDefineQuery2
         FriendlyName = 'iwcbInc4Cht'
       end
       object iwlInc4Cht: TIWListbox
+        AlignWithMargins = False
         Left = 20
         Top = 39
         Width = 444
         Height = 90
         RenderSize = False
         StyleRenderOptions.RenderSize = False
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
+        Font.PxSize = 12
         RequireSelection = False
         UseSize = False
         TabOrder = 32
@@ -734,7 +743,6 @@ object ISFDefineQuery2: TISFDefineQuery2
         FriendlyName = 'iwlPeriods'
         Sorted = True
         MultiSelect = True
-        NoSelectionText = '-- No Selection --'
       end
     end
     object iwrValidation: TIWRegion
@@ -747,30 +755,30 @@ object ISFDefineQuery2: TISFDefineQuery2
       BorderOptions.NumericWidth = 0
       BorderOptions.Style = cbsNone
       object IWButton1: TIWButton
+        AlignWithMargins = False
         Left = 517
         Top = 184
         Width = 125
         Height = 25
         Caption = 'Submit Query'
         Color = clWebLIGHTGREEN
-        Font.Color = clNone
         Font.Size = 9
-        Font.Style = []
+        Font.PxSize = 12
         FriendlyName = 'iwbSubmitQuery2'
         TabOrder = 33
         OnClick = iwbSubmitQueryClick
       end
       object iwlValidation: TIWListbox
+        AlignWithMargins = False
         Left = 20
         Top = 39
         Width = 471
         Height = 170
         RenderSize = False
         StyleRenderOptions.RenderSize = False
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
+        Font.PxSize = 12
         RequireSelection = False
         UseSize = False
         TabOrder = 34
@@ -778,19 +786,19 @@ object ISFDefineQuery2: TISFDefineQuery2
         FriendlyName = 'iwlValidation'
         Sorted = True
         MultiSelect = True
-        NoSelectionText = '-- No Selection --'
       end
       object iwcbValidation: TIWCheckBox
+        AlignWithMargins = False
         Left = 15
         Top = 12
         Width = 476
         Height = 21
         Caption = 'Include selection from Validation Status'
         Editable = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = [fsBold]
+        Font.PxSize = 12
         SubmitOnAsyncEvent = True
         Style = stNormal
         TabOrder = 35
@@ -808,34 +816,37 @@ object ISFDefineQuery2: TISFDefineQuery2
       BorderOptions.NumericWidth = 0
       BorderOptions.Style = cbsNone
       object iwlblErrorBottom: TIWLabel
+        AlignWithMargins = False
         Left = 327
         Top = 162
         Width = 250
         Height = 15
-        Font.Color = clWebRED
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = [fsBold]
+        Font.PxSize = 12
+        Font.Color = clWebRED
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'iwlblErrorBottom'
         Caption = 'No items selected or boxes not checked'
       end
       object iwbSubmitQuery2: TIWButton
+        AlignWithMargins = False
         Left = 66
         Top = 152
         Width = 125
         Height = 25
         Caption = 'Submit Query'
         Color = clWebLIGHTGREEN
-        Font.Color = clNone
         Font.Size = 9
-        Font.Style = []
+        Font.PxSize = 12
         FriendlyName = 'iwbSubmitQuery2'
         TabOrder = 36
         OnClick = iwbSubmitQueryClick
       end
       object iwrgOrderBy: TIWRadioGroup
+        AlignWithMargins = False
         Left = 20
         Top = 39
         Width = 417
@@ -843,10 +854,9 @@ object ISFDefineQuery2: TISFDefineQuery2
         SubmitOnAsyncEvent = True
         RawText = False
         Editable = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
+        Font.PxSize = 12
         FriendlyName = 'iwrgOrderBy'
         ItemIndex = 0
         Items.Strings = (
@@ -858,14 +868,15 @@ object ISFDefineQuery2: TISFDefineQuery2
         TabOrder = 37
       end
       object IWLabel4: TIWLabel
+        AlignWithMargins = False
         Left = 15
         Top = 18
         Width = 101
         Height = 15
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = [fsBold]
+        Font.PxSize = 12
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel4'
@@ -910,6 +921,7 @@ object ISFDefineQuery2: TISFDefineQuery2
             ExplicitWidth = 622
             inherited lblWelcome: TIWLabel
               Left = 349
+              Font.Color = clWebDARKSLATEGRAY
               ExplicitLeft = 349
             end
           end
@@ -918,7 +930,13 @@ object ISFDefineQuery2: TISFDefineQuery2
           Width = 822
           ExplicitWidth = 822
           inherited iwlSignOut: TIWLink
-            TabOrder = -1
+            Font.Color = clWebBLUE
+          end
+          inherited lnkSignIn: TIWLink
+            Font.Color = clWebBLUE
+          end
+          inherited lblProgTitle: TIWLabel
+            Font.Color = clWebSTEELBLUE
           end
         end
       end

@@ -14,92 +14,92 @@ object ISFAddRefLink: TISFAddRefLink
   LockUntilLoaded = False
   LockOnSubmit = True
   ShowHint = True
-  XPTheme = True
-  DesignLeft = 8
-  DesignTop = 8
+  DesignLeft = 2
+  DesignTop = 2
   object iwDBeID: TIWDBEdit
+    AlignWithMargins = False
     Left = 240
     Top = 109
     Width = 73
     Height = 21
+    StyleRenderOptions.RenderBorder = False
     Editable = False
     NonEditableAsLabel = True
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     FriendlyName = 'iwDBeID'
     SubmitOnAsyncEvent = True
     TabOrder = 2
     AutoEditable = False
     DataField = 'UNITID'
-    PasswordPrompt = False
     DataSource = dmStrat.dsRefs
+    PasswordPrompt = False
   end
   object iwbReturn: TIWButton
+    AlignWithMargins = False
     Left = 102
     Top = 72
     Width = 104
     Height = 25
     Caption = 'Return'
     Color = clWebLIGHTGREEN
-    Font.Color = clNone
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbReturn'
-    TabOrder = 0
     OnClick = iwbReturnClick
   end
   object iwlID: TIWLabel
+    AlignWithMargins = False
     Left = 104
     Top = 110
     Width = 40
     Height = 15
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     HasTabOrder = False
     FriendlyName = 'iwlID'
     Caption = 'Unit ID'
   end
   object IWLabel2: TIWLabel
+    AlignWithMargins = False
     Left = 104
     Top = 140
     Width = 106
     Height = 15
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     HasTabOrder = False
     FriendlyName = 'IWLabel2'
     Caption = 'Reference (Short)'
   end
   object iwbCancelUpdates: TIWButton
+    AlignWithMargins = False
     Left = 432
     Top = 72
     Width = 104
     Height = 25
     Caption = 'Cancel Updates'
     Color = clWebLIGHTSALMON
-    Font.Color = clNone
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbCancelUpdates'
     TabOrder = 1
     OnClick = iwbCancelUpdatesClick
   end
   object rectLeft: TIWRectangle
+    AlignWithMargins = False
     Left = 0
     Top = 55
     Width = 83
     Height = 545
     Align = alLeft
     ZIndex = 1
+    Font.PxSize = 13
     Font.Color = clWebBLACK
-    Font.Size = 10
-    Font.Style = []
     BorderOptions.Width = 0
     FriendlyName = 'rectLeft'
     Color = clWebLAVENDER
@@ -108,14 +108,16 @@ object ISFAddRefLink: TISFAddRefLink
     ExplicitHeight = 350
   end
   object iwDBlcbLink: TIWDBLookupComboBox
+    AlignWithMargins = False
     Left = 240
     Top = 136
     Width = 365
     Height = 21
-    Font.Color = clNone
+    StyleRenderOptions.RenderBorder = False
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     Editable = False
     NonEditableAsLabel = True
     TabOrder = 3
@@ -127,9 +129,9 @@ object ISFAddRefLink: TISFAddRefLink
     ListField = 'SOURCESHORT'
     ListSource = dmStrat.dsReferences
     DisableWhenEmpty = True
-    NoSelectionText = '-- No Selection --'
   end
   object iwDBnLink: TIWDBNavigator
+    AlignWithMargins = False
     Left = 104
     Top = 178
     Width = 150
@@ -146,6 +148,7 @@ object ISFAddRefLink: TISFAddRefLink
     OnInsert = iwDBnLinkInsert
   end
   object iwDBgLink: TIWDBGrid
+    AlignWithMargins = False
     Left = 104
     Top = 212
     Width = 583
@@ -158,24 +161,24 @@ object ISFAddRefLink: TISFAddRefLink
     BorderStyle = tfDefault
     CellPadding = 0
     CellSpacing = 0
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     FrameBuffer = 40
     Lines = tlAll
     UseFrame = True
     UseSize = True
+    ShowEmptyCells = True
+    ShowInvisibleRows = True
     ScrollToCurrentRow = False
     Columns = <
       item
         Alignment = taCenter
         BGColor = clNone
         DoSubmitValidation = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 8
-        Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -184,17 +187,16 @@ object ISFAddRefLink: TISFAddRefLink
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'SOURCENUM'
         Title.Alignment = taCenter
         Title.BGColor = clNone
         Title.DoSubmitValidation = True
-        Title.Font.Color = clNone
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -209,10 +211,9 @@ object ISFAddRefLink: TISFAddRefLink
         Alignment = taLeftJustify
         BGColor = clNone
         DoSubmitValidation = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 8
-        Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -221,17 +222,16 @@ object ISFAddRefLink: TISFAddRefLink
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'SOURCESHORT'
         Title.Alignment = taCenter
         Title.BGColor = clNone
         Title.DoSubmitValidation = True
-        Title.Font.Color = clNone
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -246,10 +246,9 @@ object ISFAddRefLink: TISFAddRefLink
         Alignment = taCenter
         BGColor = clNone
         DoSubmitValidation = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 8
-        Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -258,17 +257,16 @@ object ISFAddRefLink: TISFAddRefLink
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'SOURCEYEAR'
         Title.Alignment = taCenter
         Title.BGColor = clNone
         Title.DoSubmitValidation = True
-        Title.Font.Color = clNone
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -294,48 +292,47 @@ object ISFAddRefLink: TISFAddRefLink
     RowHeaderColor = clWebCADETBLUE
     RowAlternateColor = clNone
     RowCurrentColor = clWebYELLOW
-    TabOrder = -1
   end
   object iwbDeleteLink: TIWButton
+    AlignWithMargins = False
     Left = 542
     Top = 72
     Width = 145
     Height = 25
     Caption = 'Delete Current Record'
     Color = clWebLIGHTCORAL
-    Font.Color = clNone
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbDeleteLink'
-    TabOrder = 5
+    TabOrder = 4
     OnClick = iwbDeleteLinkClick
   end
   object iwbEdit: TIWButton
+    AlignWithMargins = False
     Left = 212
     Top = 72
     Width = 104
     Height = 25
     Caption = 'Edit'
     Color = clWebLEMONCHIFFON
-    Font.Color = clNone
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbEdit'
-    TabOrder = 6
+    TabOrder = 5
     OnClick = iwbEditClick
   end
   object iwbApplyUpdates: TIWButton
+    AlignWithMargins = False
     Left = 322
     Top = 72
     Width = 104
     Height = 25
     Caption = 'Apply Updates'
     Color = clWebPEACHPUFF
-    Font.Color = clNone
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbApplyUpdates'
-    TabOrder = 7
+    TabOrder = 6
     OnClick = iwbApplyUpdatesClick
   end
   inline TopBar: TISFTopBarStrat
@@ -362,7 +359,7 @@ object ISFAddRefLink: TISFAddRefLink
     ExplicitWidth = 689
     inherited IWFrameRegion: TIWRegion
       Width = 689
-      TabOrder = 8
+      TabOrder = 7
       ExplicitWidth = 689
       inherited iwrHeader: TIWRegion
         Width = 689
@@ -375,6 +372,7 @@ object ISFAddRefLink: TISFAddRefLink
             ExplicitWidth = 489
             inherited lblWelcome: TIWLabel
               Left = 216
+              Font.Color = clWebDARKSLATEGRAY
               ExplicitLeft = 216
             end
           end
@@ -382,6 +380,15 @@ object ISFAddRefLink: TISFAddRefLink
         inherited iwrSignInOut: TIWRegion
           Width = 689
           ExplicitWidth = 689
+          inherited iwlSignOut: TIWLink
+            Font.Color = clWebBLUE
+          end
+          inherited lnkSignIn: TIWLink
+            Font.Color = clWebBLUE
+          end
+          inherited lblProgTitle: TIWLabel
+            Font.Color = clWebSTEELBLUE
+          end
         end
       end
     end

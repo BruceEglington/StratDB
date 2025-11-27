@@ -5,7 +5,7 @@ interface
 uses
   Classes, SysUtils, IWAppForm, IWApplication, IWTypes, Controls,
   IWBaseControl, IWControl, IWCompLabel, IWCompGrids, IWDBGrids, IWDBStdCtrls,
-  Forms, IWHTMLControls,
+  Forms, IWHTMLControls, System.DateUtils,
   IWVCLBaseControl, IWBaseHTMLControl, IWCompButton,
   IWStrat_frTopBar, jpeg, IWCompExtCtrls,
   IWVCLBaseContainer, IWContainer,
@@ -285,7 +285,7 @@ begin
     try
       MemStream:=TMemoryStream.Create;
       try
-        fr.SetValue('Current_Date',Now);
+        fr.SetValue('Current_Date',TDateTime.Now);
         fr.Run(InStream,MemStream);
         WebApplication.SendStream(MemStream,true,TStandardMimeType.Xlsx,frFileNameStr); //save as an attachment
         MemStream:=nil; //If we actually sent the stream, WebApplication.SendStream will free it.

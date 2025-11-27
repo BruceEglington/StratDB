@@ -14,150 +14,103 @@ object ISFDomainValidCheck: TISFDomainValidCheck
   LockUntilLoaded = False
   LockOnSubmit = True
   ShowHint = True
-  XPTheme = True
-  DesignLeft = 8
-  DesignTop = 8
+  DesignLeft = 2
+  DesignTop = 2
   object IWDBEdit1: TIWDBEdit
+    AlignWithMargins = False
     Left = 242
     Top = 108
     Width = 73
     Height = 21
-    Cursor = crAuto
-    ParentShowHint = False
-    ShowHint = True
-    ZIndex = 0
-    RenderSize = True
-    Alignment = taLeftJustify
-    BGColor = clNone
-    FocusColor = clNone
+    StyleRenderOptions.RenderBorder = False
     Editable = False
     NonEditableAsLabel = True
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
-    MaxLength = 0
-    ReadOnly = False
-    Required = False
-    ScriptEvents = <>
     SubmitOnAsyncEvent = True
-    TabOrder = 0
     AutoEditable = False
     DataField = 'DOMAINID'
-    PasswordPrompt = False
     DataSource = dmStrat.dsDomainValidFull
+    PasswordPrompt = False
   end
   object IWDBEdit2: TIWDBEdit
+    AlignWithMargins = False
     Left = 242
     Top = 134
     Width = 211
     Height = 21
-    Cursor = crAuto
-    ParentShowHint = False
-    ShowHint = True
-    ZIndex = 0
-    RenderSize = True
-    Alignment = taLeftJustify
-    BGColor = clNone
-    FocusColor = clNone
+    StyleRenderOptions.RenderBorder = False
     Editable = False
     NonEditableAsLabel = True
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     FriendlyName = 'IWDBEdit2'
-    MaxLength = 0
-    ReadOnly = False
-    Required = False
-    ScriptEvents = <>
     SubmitOnAsyncEvent = True
     TabOrder = 1
     AutoEditable = False
     DataField = 'VALIDSTATUSID'
-    PasswordPrompt = False
     DataSource = dmStrat.dsDomainValidFull
+    PasswordPrompt = False
   end
   object IWDBEdit4: TIWDBEdit
+    AlignWithMargins = False
     Left = 242
     Top = 160
     Width = 211
     Height = 21
-    Cursor = crAuto
-    ParentShowHint = False
-    ShowHint = True
-    ZIndex = 0
-    RenderSize = True
-    Alignment = taLeftJustify
-    BGColor = clNone
-    FocusColor = clNone
+    StyleRenderOptions.RenderBorder = False
     Editable = False
     NonEditableAsLabel = True
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     FriendlyName = 'IWDBEdit4'
-    MaxLength = 0
-    ReadOnly = False
-    Required = False
-    ScriptEvents = <>
     SubmitOnAsyncEvent = True
     TabOrder = 2
     AutoEditable = False
     DataField = 'DONEBY'
-    PasswordPrompt = False
     DataSource = dmStrat.dsDomainValidFull
+    PasswordPrompt = False
   end
   object IWDBEdit5: TIWDBEdit
+    AlignWithMargins = False
     Left = 242
     Top = 186
     Width = 267
     Height = 21
-    Cursor = crAuto
-    ParentShowHint = False
-    ShowHint = True
-    ZIndex = 0
-    RenderSize = True
-    Alignment = taLeftJustify
-    BGColor = clNone
-    FocusColor = clNone
+    StyleRenderOptions.RenderBorder = False
     Editable = False
     NonEditableAsLabel = True
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     FriendlyName = 'IWDBEdit4'
-    MaxLength = 0
-    ReadOnly = False
-    Required = False
-    ScriptEvents = <>
     SubmitOnAsyncEvent = True
     TabOrder = 3
     AutoEditable = False
     DataField = 'DATEDONE'
-    PasswordPrompt = False
     DataSource = dmStrat.dsDomainValidFull
+    PasswordPrompt = False
   end
   object IWDBMemo1: TIWDBMemo
+    AlignWithMargins = False
     Left = 104
     Top = 246
     Width = 565
     Height = 278
-    Cursor = crAuto
-    ParentShowHint = False
-    ShowHint = True
-    ZIndex = 0
-    RenderSize = True
+    StyleRenderOptions.RenderBorder = False
     BGColor = clWebWHITE
     Editable = False
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
-    ScriptEvents = <>
+    Font.PxSize = 12
     InvisibleBorder = False
     HorizScrollBar = False
     VertScrollBar = True
@@ -170,175 +123,109 @@ object ISFDomainValidCheck: TISFDomainValidCheck
     FriendlyName = 'IWDBMemo1'
   end
   object iwbSaveReturn: TIWButton
+    AlignWithMargins = False
     Left = 102
     Top = 76
     Width = 87
     Height = 25
-    Cursor = crAuto
-    ParentShowHint = False
-    ShowHint = True
-    ZIndex = 0
-    RenderSize = True
     Caption = 'Save'
     Color = clWebLIGHTGREEN
-    Font.Color = clNone
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbSaveReturn'
-    ScriptEvents = <>
     TabOrder = 5
     OnClick = iwbReturnClick
   end
   object IWLabel1: TIWLabel
+    AlignWithMargins = False
     Left = 104
     Top = 110
     Width = 64
     Height = 15
-    Cursor = crAuto
-    ParentShowHint = False
-    ShowHint = True
-    ZIndex = 0
-    RenderSize = True
-    Alignment = taLeftJustify
-    BGColor = clNone
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
-    NoWrap = False
-    ConvertSpaces = False
+    Font.PxSize = 12
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'Domain ID'
-    RawText = False
   end
   object IWLabel2: TIWLabel
+    AlignWithMargins = False
     Left = 104
     Top = 136
     Width = 101
     Height = 15
-    Cursor = crAuto
-    ParentShowHint = False
-    ShowHint = True
-    ZIndex = 0
-    RenderSize = True
-    Alignment = taLeftJustify
-    BGColor = clNone
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
-    NoWrap = False
-    ConvertSpaces = False
+    Font.PxSize = 12
     HasTabOrder = False
     FriendlyName = 'IWLabel2'
     Caption = 'Validation Status'
-    RawText = False
   end
   object IWLabel3: TIWLabel
+    AlignWithMargins = False
     Left = 104
     Top = 162
     Width = 101
     Height = 15
-    Cursor = crAuto
-    ParentShowHint = False
-    ShowHint = True
-    ZIndex = 0
-    RenderSize = True
-    Alignment = taLeftJustify
-    BGColor = clNone
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
-    NoWrap = False
-    ConvertSpaces = False
+    Font.PxSize = 12
     HasTabOrder = False
     FriendlyName = 'IWLabel3'
     Caption = 'First objection by'
-    RawText = False
   end
   object IWLabel4: TIWLabel
+    AlignWithMargins = False
     Left = 104
     Top = 188
     Width = 130
     Height = 15
-    Cursor = crAuto
-    ParentShowHint = False
-    ShowHint = True
-    ZIndex = 0
-    RenderSize = True
-    Alignment = taLeftJustify
-    BGColor = clNone
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
-    NoWrap = False
-    ConvertSpaces = False
+    Font.PxSize = 12
     HasTabOrder = False
     FriendlyName = 'IWLabel4'
     Caption = 'Date for this objection'
-    RawText = False
   end
   object IWLabel5: TIWLabel
+    AlignWithMargins = False
     Left = 104
     Top = 224
     Width = 68
     Height = 15
-    Cursor = crAuto
-    ParentShowHint = False
-    ShowHint = True
-    ZIndex = 0
-    RenderSize = True
-    Alignment = taLeftJustify
-    BGColor = clNone
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
-    NoWrap = False
-    ConvertSpaces = False
+    Font.PxSize = 12
     HasTabOrder = False
     FriendlyName = 'IWLabel5'
     Caption = 'Comments'
-    RawText = False
   end
   object iwbCancelReturn: TIWButton
+    AlignWithMargins = False
     Left = 202
     Top = 76
     Width = 87
     Height = 25
-    Cursor = crAuto
-    ParentShowHint = False
-    ShowHint = True
-    ZIndex = 0
-    RenderSize = True
     Caption = 'Cancel'
     Color = clWebLIGHTSALMON
-    Font.Color = clNone
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbCancelReturn'
-    ScriptEvents = <>
     TabOrder = 6
     OnClick = iwbReturnClick
   end
   object rectLeft: TIWRectangle
+    AlignWithMargins = False
     Left = 0
     Top = 55
     Width = 83
     Height = 490
-    Cursor = crAuto
     Align = alLeft
-    ParentShowHint = False
-    ShowHint = True
     ZIndex = 1
-    RenderSize = True
+    Font.PxSize = 13
     Font.Color = clWebBLACK
-    Font.Size = 10
-    Font.Style = []
-    BorderOptions.Color = clNone
     BorderOptions.Width = 0
     FriendlyName = 'rectLeft'
     Color = clWebLAVENDER
@@ -346,47 +233,31 @@ object ISFDomainValidCheck: TISFDomainValidCheck
     VAlign = vaMiddle
   end
   object iwbClearObjection: TIWButton
+    AlignWithMargins = False
     Left = 472
     Top = 76
     Width = 121
     Height = 25
-    Cursor = crAuto
-    ParentShowHint = False
-    ShowHint = True
-    ZIndex = 0
-    RenderSize = True
     Caption = 'Clear objection'
     Color = clWebPEACHPUFF
-    Font.Color = clNone
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbClearObjection'
-    ScriptEvents = <>
     TabOrder = 7
     OnClick = iwbClearObjectionClick
   end
   object IWLabel6: TIWLabel
+    AlignWithMargins = False
     Left = 240
     Top = 224
     Width = 295
     Height = 15
-    Cursor = crAuto
-    ParentShowHint = False
-    ShowHint = True
-    ZIndex = 0
-    RenderSize = True
-    Alignment = taLeftJustify
-    BGColor = clNone
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
-    NoWrap = False
-    ConvertSpaces = False
+    Font.PxSize = 12
     HasTabOrder = False
     FriendlyName = 'IWLabel6'
     Caption = '(add your comments above any that already exist)'
-    RawText = False
   end
   inline TopBar: TISFTopBarStrat
     Left = 0
@@ -425,6 +296,7 @@ object ISFDomainValidCheck: TISFDomainValidCheck
             ExplicitWidth = 517
             inherited lblWelcome: TIWLabel
               Left = 244
+              Font.Color = clWebDARKSLATEGRAY
               ExplicitLeft = 244
             end
           end
@@ -432,6 +304,15 @@ object ISFDomainValidCheck: TISFDomainValidCheck
         inherited iwrSignInOut: TIWRegion
           Width = 717
           ExplicitWidth = 717
+          inherited iwlSignOut: TIWLink
+            Font.Color = clWebBLUE
+          end
+          inherited lnkSignIn: TIWLink
+            Font.Color = clWebBLUE
+          end
+          inherited lblProgTitle: TIWLabel
+            Font.Color = clWebSTEELBLUE
+          end
         end
       end
     end

@@ -3196,7 +3196,7 @@ object dmStratC: TdmStratC
     Params.Strings = (
       'VendorLibOsx=libfbclient.dylib'
       'GetDriverFunc=getSQLDriverFirebird'
-      'LibraryName=dbexpida41.dll'
+      'c:\exe32\=dbexpida41.dll'
       'VendorLib=c:\exe32\fbclient.dll'
       'DataBase=c:\data\firebird\stratdb2025v50_UTF8.fdb'
       'User_Name=SYSDBA'

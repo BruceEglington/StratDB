@@ -25,19 +25,17 @@ object ISFDomainZircon: TISFDomainZircon
     RenderInvisibleControls = False
     Align = alLeft
     BorderOptions.NumericWidth = 0
-    BorderOptions.BorderWidth = cbwNumeric
     BorderOptions.Style = cbsNone
-    BorderOptions.Color = clNone
     object rectLeft: TIWRectangle
+      AlignWithMargins = False
       Left = 0
       Top = 0
       Width = 83
       Height = 1795
       Align = alLeft
       ZIndex = 1
+      Font.PxSize = 13
       Font.Color = clWebBLACK
-      Font.Size = 10
-      Font.Style = []
       BorderOptions.Width = 0
       FriendlyName = 'rectLeft'
       Color = clWebLAVENDER
@@ -54,74 +52,61 @@ object ISFDomainZircon: TISFDomainZircon
     RenderInvisibleControls = False
     Align = alClient
     BorderOptions.NumericWidth = 0
-    BorderOptions.BorderWidth = cbwNumeric
     BorderOptions.Style = cbsNone
-    BorderOptions.Color = clNone
     object iwrTopButtons: TIWRegion
       Left = 0
       Top = 0
       Width = 1015
       Height = 60
       RenderInvisibleControls = False
-      TabOrder = 0
       Align = alTop
       BorderOptions.NumericWidth = 0
-      BorderOptions.BorderWidth = cbwNumeric
       BorderOptions.Style = cbsNone
-      BorderOptions.Color = clNone
       object iwbDetailsEdit: TIWButton
+        AlignWithMargins = False
         Left = 263
         Top = 19
         Width = 129
         Height = 25
         Caption = 'Edit this record'
         Color = clWebLEMONCHIFFON
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         FriendlyName = 'iwbDetailsEdit'
-        TabOrder = 3
+        TabOrder = 4
       end
       object iwbReturn: TIWButton
+        AlignWithMargins = False
         Left = 96
         Top = 19
         Width = 141
         Height = 25
         Caption = 'Return to Main page'
         Color = clWebLIGHTGREEN
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         FriendlyName = 'iwbReturn'
-        TabOrder = 2
+        TabOrder = 3
         OnClick = iwbReturnClick
       end
       object iwbApplyUpdates: TIWButton
+        AlignWithMargins = False
         Left = 422
         Top = 19
         Width = 129
         Height = 25
         Caption = 'Apply updates'
         Color = clWebPEACHPUFF
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         FriendlyName = 'iwbDetailsEdit'
-        TabOrder = 4
+        TabOrder = 5
         OnClick = iwbApplyUpdatesClick
       end
       object iwbCancel: TIWButton
+        AlignWithMargins = False
         Left = 584
         Top = 19
         Width = 129
         Height = 25
         Caption = 'Cancel updates'
         Color = clWebLIGHTSALMON
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         FriendlyName = 'iwbDetailsEdit'
-        TabOrder = 5
+        TabOrder = 6
         OnClick = iwbCancelClick
       end
     end
@@ -133,34 +118,27 @@ object ISFDomainZircon: TISFDomainZircon
       RenderInvisibleControls = False
       Align = alBottom
       BorderOptions.NumericWidth = 0
-      BorderOptions.BorderWidth = cbwNumeric
       BorderOptions.Style = cbsNone
-      BorderOptions.Color = clNone
       object iwbDetailsEdit2: TIWButton
+        AlignWithMargins = False
         Left = 426
         Top = 27
         Width = 129
         Height = 25
         Caption = 'Edit this record'
         Color = clWebLEMONCHIFFON
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         FriendlyName = 'iwbDetailsEdit2'
-        TabOrder = 0
       end
       object iwbReturn2: TIWButton
+        AlignWithMargins = False
         Left = 228
         Top = 27
         Width = 141
         Height = 25
         Caption = 'Return to Main page'
         Color = clWebLIGHTGREEN
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         FriendlyName = 'iwbReturn2'
-        TabOrder = 1
+        TabOrder = 2
         OnClick = iwbReturnClick
       end
     end
@@ -172,31 +150,28 @@ object ISFDomainZircon: TISFDomainZircon
       RenderInvisibleControls = False
       Align = alBottom
       BorderOptions.NumericWidth = 0
-      BorderOptions.BorderWidth = cbwNumeric
-      BorderOptions.Style = cbsSolid
-      BorderOptions.Color = clNone
       object IWLabel66: TIWLabel
+        AlignWithMargins = False
         Left = 4
         Top = 12
         Width = 174
         Height = 16
-        Font.Color = clNone
         Font.FontName = 'Arial'
-        Font.Size = 10
-        Font.Style = []
+        Font.PxSize = 13
         HasTabOrder = False
         FriendlyName = 'IWLabel1'
         Caption = 'Stratigraphic Unit Database'
       end
       object IWLabel67: TIWLabel
+        AlignWithMargins = False
         Left = 4
         Top = 30
         Width = 159
         Height = 14
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 8
         Font.Style = [fsItalic]
+        Font.PxSize = 10
         HasTabOrder = False
         FriendlyName = 'IWLabel2'
         Caption = '(c) Dr Bruce Eglington (2007)'
@@ -211,37 +186,37 @@ object ISFDomainZircon: TISFDomainZircon
       TabOrder = 1
       Align = alTop
       BorderOptions.NumericWidth = 0
-      BorderOptions.BorderWidth = cbwNumeric
       BorderOptions.Style = cbsNone
-      BorderOptions.Color = clNone
       Color = clWebHONEYDEW
       object IWLabel5: TIWLabel
+        AlignWithMargins = False
         Left = 16
         Top = 9
         Width = 75
         Height = 19
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 12
         Font.Style = [fsBold, fsUnderline]
+        Font.PxSize = 16
         HasTabOrder = False
         FriendlyName = 'IWLabel1'
         Caption = 'Domain :'
       end
       object IWLabel3: TIWLabel
+        AlignWithMargins = False
         Left = 12
         Top = 42
         Width = 86
         Height = 15
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
+        Font.PxSize = 12
         HasTabOrder = False
         FriendlyName = 'IWLabel3'
         Caption = 'Domain name'
       end
       object IWDBEdit3: TIWDBEdit
+        AlignWithMargins = False
         Left = 104
         Top = 39
         Width = 357
@@ -249,64 +224,66 @@ object ISFDomainZircon: TISFDomainZircon
         StyleRenderOptions.RenderBorder = False
         BGColor = clWebLEMONCHIFFON
         NonEditableAsLabel = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 13
         Font.Style = [fsBold]
+        Font.PxSize = 17
         FriendlyName = 'IWDBEdit1'
         SubmitOnAsyncEvent = True
-        TabOrder = 7
+        TabOrder = 8
         AutoEditable = True
         DataField = 'DOMAINNAME'
         DataSource = dmStrat.dsDomainQ
         PasswordPrompt = False
       end
       object IWDBEdit7: TIWDBEdit
+        AlignWithMargins = False
         Left = 104
         Top = 183
         Width = 121
         Height = 21
         StyleRenderOptions.RenderBorder = False
         NonEditableAsLabel = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = [fsBold]
+        Font.PxSize = 12
         FriendlyName = 'IWDBEdit1'
         SubmitOnAsyncEvent = True
-        TabOrder = 8
+        TabOrder = 9
         AutoEditable = True
         DataField = 'DOMAINPARENTID'
         DataSource = dmStrat.dsDomainQ
         PasswordPrompt = False
       end
       object IWLabel4: TIWLabel
+        AlignWithMargins = False
         Left = 508
         Top = 42
         Width = 28
         Height = 15
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
+        Font.PxSize = 12
         HasTabOrder = False
         FriendlyName = 'IWLabel4'
         Caption = 'Type'
       end
       object IWLabel2: TIWLabel
+        AlignWithMargins = False
         Left = 478
         Top = 74
         Width = 44
         Height = 15
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
+        Font.PxSize = 12
         HasTabOrder = False
         FriendlyName = 'IWLabel2'
         Caption = 'Region'
       end
       object IWDBEdit2: TIWDBEdit
+        AlignWithMargins = False
         Left = 553
         Top = 72
         Width = 249
@@ -314,32 +291,33 @@ object ISFDomainZircon: TISFDomainZircon
         StyleRenderOptions.RenderBorder = False
         Editable = False
         NonEditableAsLabel = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = [fsBold]
+        Font.PxSize = 12
         FriendlyName = 'IWDBEdit1'
         SubmitOnAsyncEvent = True
-        TabOrder = 9
+        TabOrder = 10
         AutoEditable = False
         DataField = 'CONTINENT'
         DataSource = dmStrat.dsDomainQ
         PasswordPrompt = False
       end
       object IWLabel1: TIWLabel
+        AlignWithMargins = False
         Left = 12
         Top = 74
         Width = 64
         Height = 15
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
+        Font.PxSize = 12
         HasTabOrder = False
         FriendlyName = 'IWLabel1'
         Caption = 'Domain ID'
       end
       object IWDBEdit1: TIWDBEdit
+        AlignWithMargins = False
         Left = 104
         Top = 71
         Width = 121
@@ -347,32 +325,33 @@ object ISFDomainZircon: TISFDomainZircon
         StyleRenderOptions.RenderBorder = False
         Editable = False
         NonEditableAsLabel = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = [fsBold]
+        Font.PxSize = 12
         FriendlyName = 'IWDBEdit1'
         SubmitOnAsyncEvent = True
-        TabOrder = 10
+        TabOrder = 11
         AutoEditable = False
         DataField = 'DOMAINID'
         DataSource = dmStrat.dsDomainQ
         PasswordPrompt = False
       end
       object IWLabel10: TIWLabel
+        AlignWithMargins = False
         Left = 12
         Top = 158
         Width = 89
         Height = 15
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
+        Font.PxSize = 12
         HasTabOrder = False
         FriendlyName = 'IWLabel3'
         Caption = 'Parent domain'
       end
       object IWDBEdit8: TIWDBEdit
+        AlignWithMargins = False
         Left = 104
         Top = 155
         Width = 301
@@ -380,19 +359,20 @@ object ISFDomainZircon: TISFDomainZircon
         StyleRenderOptions.RenderBorder = False
         Editable = False
         NonEditableAsLabel = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = [fsBold, fsItalic]
+        Font.PxSize = 12
         FriendlyName = 'IWDBEdit1'
         SubmitOnAsyncEvent = True
-        TabOrder = 11
+        TabOrder = 12
         AutoEditable = False
         DataField = 'DOMAINNAME'
         DataSource = dmStrat.dsDomainParent
         PasswordPrompt = False
       end
       object IWDBEdit9: TIWDBEdit
+        AlignWithMargins = False
         Left = 553
         Top = 155
         Width = 249
@@ -400,85 +380,84 @@ object ISFDomainZircon: TISFDomainZircon
         StyleRenderOptions.RenderBorder = False
         Editable = False
         NonEditableAsLabel = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = [fsBold, fsItalic]
+        Font.PxSize = 12
         FriendlyName = 'IWDBEdit1'
         SubmitOnAsyncEvent = True
-        TabOrder = 12
+        TabOrder = 13
         AutoEditable = False
         DataField = 'DOMAINTYPE'
         DataSource = dmStrat.dsDomainParent
         PasswordPrompt = False
       end
       object IWLabel8: TIWLabel
+        AlignWithMargins = False
         Left = 12
         Top = 186
         Width = 56
         Height = 15
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
+        Font.PxSize = 12
         HasTabOrder = False
         FriendlyName = 'IWLabel11'
         Caption = 'Parent ID'
       end
       object iwbGoToParent: TIWButton
+        AlignWithMargins = False
         Left = 236
         Top = 181
         Width = 105
         Height = 25
         Caption = 'Go to Parent'
         Color = clWebLIGHTBLUE
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
+        Font.PxSize = 12
         FriendlyName = 'iwbGoToParent'
-        TabOrder = 13
+        TabOrder = 14
       end
       object IWLabel16: TIWLabel
+        AlignWithMargins = False
         Left = 508
         Top = 158
         Width = 28
         Height = 15
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
+        Font.PxSize = 12
         HasTabOrder = False
         FriendlyName = 'IWLabel4'
         Caption = 'Type'
       end
       object iwbAddDomainToDateView: TIWButton
+        AlignWithMargins = False
         Left = 748
         Top = 8
         Width = 157
         Height = 25
         Caption = 'Add to DateView'
         Color = clWebLIGHTSKYBLUE
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         FriendlyName = 'iwbAddDomainToDateView'
-        TabOrder = 14
+        TabOrder = 15
       end
       object IWLabel21: TIWLabel
+        AlignWithMargins = False
         Left = 12
         Top = 102
         Width = 88
         Height = 15
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
+        Font.PxSize = 12
         HasTabOrder = False
         FriendlyName = 'IWLabel1'
         Caption = 'Min. Plot Age ='
       end
       object IWDBEdit5: TIWDBEdit
+        AlignWithMargins = False
         Left = 125
         Top = 99
         Width = 62
@@ -486,32 +465,33 @@ object ISFDomainZircon: TISFDomainZircon
         StyleRenderOptions.RenderBorder = False
         Alignment = taRightJustify
         NonEditableAsLabel = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = [fsBold]
+        Font.PxSize = 12
         FriendlyName = 'IWDBEdit1'
         SubmitOnAsyncEvent = True
-        TabOrder = 15
+        TabOrder = 16
         AutoEditable = True
         DataField = 'MINPLOTAGE'
         DataSource = dmStrat.dsDomainQ
         PasswordPrompt = False
       end
       object IWLabel23: TIWLabel
+        AlignWithMargins = False
         Left = 215
         Top = 102
         Width = 90
         Height = 15
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
+        Font.PxSize = 12
         HasTabOrder = False
         FriendlyName = 'IWLabel1'
         Caption = 'Max. Plot Age ='
       end
       object IWDBEdit6: TIWDBEdit
+        AlignWithMargins = False
         Left = 305
         Top = 99
         Width = 62
@@ -519,31 +499,32 @@ object ISFDomainZircon: TISFDomainZircon
         StyleRenderOptions.RenderBorder = False
         Alignment = taRightJustify
         NonEditableAsLabel = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = [fsBold]
+        Font.PxSize = 12
         FriendlyName = 'IWDBEdit1'
         SubmitOnAsyncEvent = True
-        TabOrder = 16
+        TabOrder = 17
         AutoEditable = True
         DataField = 'MAXPLOTAGE'
         DataSource = dmStrat.dsDomainQ
         PasswordPrompt = False
       end
       object iwDBlcbDomainType: TIWDBLookupComboBox
+        AlignWithMargins = False
         Left = 553
         Top = 39
         Width = 249
         Height = 21
         StyleRenderOptions.RenderBorder = False
         BGColor = clWebLEMONCHIFFON
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = [fsBold]
+        Font.PxSize = 12
         NonEditableAsLabel = True
-        TabOrder = 17
+        TabOrder = 18
         AutoEditable = True
         DataField = 'DOMAINTYPEID'
         DataSource = dmStrat.dsDomainQ
@@ -552,7 +533,6 @@ object ISFDomainZircon: TISFDomainZircon
         ListField = 'DOMAINTYPE'
         ListSource = dmStrat.dsDomainTypes
         DisableWhenEmpty = True
-        NoSelectionText = '-- No Selection --'
       end
       object iwrDatesAvailable: TIWRegion
         Left = 0
@@ -561,24 +541,23 @@ object ISFDomainZircon: TISFDomainZircon
         Height = 29
         RenderInvisibleControls = False
         BorderOptions.NumericWidth = 0
-        BorderOptions.BorderWidth = cbwNumeric
         BorderOptions.Style = cbsNone
-        BorderOptions.Color = clNone
         Color = clWebHONEYDEW
         object IWLabel30: TIWLabel
+          AlignWithMargins = False
           Left = 12
           Top = 3
           Width = 114
           Height = 15
-          Font.Color = clNone
           Font.FontName = 'Arial'
           Font.Size = 9
-          Font.Style = []
+          Font.PxSize = 12
           HasTabOrder = False
           FriendlyName = 'IWLabel11'
           Caption = 'Minimum DV age ='
         end
         object IWDBEdit10: TIWDBEdit
+          AlignWithMargins = False
           Left = 125
           Top = 5
           Width = 62
@@ -587,32 +566,33 @@ object ISFDomainZircon: TISFDomainZircon
           Alignment = taRightJustify
           Editable = False
           NonEditableAsLabel = True
-          Font.Color = clNone
           Font.FontName = 'Arial'
           Font.Size = 9
           Font.Style = [fsBold]
+          Font.PxSize = 12
           FriendlyName = 'IWDBEdit1'
           SubmitOnAsyncEvent = True
-          TabOrder = 18
+          TabOrder = 19
           AutoEditable = False
           DataField = 'MINAGE'
           DataSource = dmDV.dsDVMinMax
           PasswordPrompt = False
         end
         object IWLabel31: TIWLabel
+          AlignWithMargins = False
           Left = 193
           Top = 8
           Width = 116
           Height = 15
-          Font.Color = clNone
           Font.FontName = 'Arial'
           Font.Size = 9
-          Font.Style = []
+          Font.PxSize = 12
           HasTabOrder = False
           FriendlyName = 'IWLabel11'
           Caption = 'Maximum DV age ='
         end
         object IWDBEdit12: TIWDBEdit
+          AlignWithMargins = False
           Left = 305
           Top = 5
           Width = 62
@@ -621,42 +601,44 @@ object ISFDomainZircon: TISFDomainZircon
           Alignment = taRightJustify
           Editable = False
           NonEditableAsLabel = True
-          Font.Color = clNone
           Font.FontName = 'Arial'
           Font.Size = 9
           Font.Style = [fsBold]
+          Font.PxSize = 12
           FriendlyName = 'IWDBEdit1'
           SubmitOnAsyncEvent = True
-          TabOrder = 19
+          TabOrder = 20
           AutoEditable = False
           DataField = 'MAXAGE'
           DataSource = dmDV.dsDVMinMax
           PasswordPrompt = False
         end
         object IWLabel32: TIWLabel
+          AlignWithMargins = False
           Left = 373
           Top = 8
           Width = 17
           Height = 15
-          Font.Color = clNone
           Font.FontName = 'Arial'
           Font.Size = 9
-          Font.Style = []
+          Font.PxSize = 12
           HasTabOrder = False
           FriendlyName = 'IWLabel11'
           Caption = 'Ma'
         end
         object iwlDatesAvailable: TIWLabel
+          AlignWithMargins = False
           Left = 553
           Top = 8
           Width = 249
           Height = 15
           Alignment = taCenter
           BGColor = clWebGREENYELLOW
-          Font.Color = clWebBLACK
           Font.FontName = 'Arial'
           Font.Size = 9
           Font.Style = [fsBold]
+          Font.PxSize = 12
+          Font.Color = clWebBLACK
           HasTabOrder = False
           AutoSize = False
           FriendlyName = 'iwlDatesAvailable'
@@ -689,7 +671,7 @@ object ISFDomainZircon: TISFDomainZircon
     ExplicitWidth = 1100
     inherited IWFrameRegion: TIWRegion
       Width = 1100
-      TabOrder = 6
+      TabOrder = 7
       ExplicitWidth = 1100
       inherited iwrHeader: TIWRegion
         Width = 1100
@@ -702,6 +684,7 @@ object ISFDomainZircon: TISFDomainZircon
             ExplicitWidth = 900
             inherited lblWelcome: TIWLabel
               Left = 627
+              Font.Color = clWebDARKSLATEGRAY
               ExplicitLeft = 627
             end
           end
@@ -709,6 +692,15 @@ object ISFDomainZircon: TISFDomainZircon
         inherited iwrSignInOut: TIWRegion
           Width = 1100
           ExplicitWidth = 1100
+          inherited iwlSignOut: TIWLink
+            Font.Color = clWebBLUE
+          end
+          inherited lnkSignIn: TIWLink
+            Font.Color = clWebBLUE
+          end
+          inherited lblProgTitle: TIWLabel
+            Font.Color = clWebSTEELBLUE
+          end
         end
       end
     end

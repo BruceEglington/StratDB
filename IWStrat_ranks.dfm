@@ -18,20 +18,22 @@ object ISFRanks: TISFRanks
   DesignLeft = 2
   DesignTop = 2
   object iwlSortedBy: TIWLabel
+    AlignWithMargins = False
     Left = 515
     Top = 114
     Width = 137
     Height = 14
     Alignment = taRightJustify
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 8
     Font.Style = [fsItalic]
+    Font.PxSize = 10
     HasTabOrder = False
     FriendlyName = 'iwlSortedBy'
     Caption = 'Sorted as specified in query'
   end
   object iwlPrevPage: TIWLink
+    AlignWithMargins = False
     Left = 101
     Top = 111
     Width = 97
@@ -40,10 +42,11 @@ object ISFRanks: TISFRanks
     StyleRenderOptions.RenderSize = False
     Alignment = taLeftJustify
     Color = clNone
-    Font.Color = clWebBLUE
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
+    Font.Style = [fsUnderline]
+    Font.PxSize = 12
+    Font.Color = clWebBLUE
     HasTabOrder = True
     DoSubmitValidation = False
     FriendlyName = 'iwlPrevPage'
@@ -53,6 +56,7 @@ object ISFRanks: TISFRanks
     Caption = 'Previous page'
   end
   object iwlNextPage: TIWLink
+    AlignWithMargins = False
     Left = 227
     Top = 111
     Width = 65
@@ -61,10 +65,11 @@ object ISFRanks: TISFRanks
     StyleRenderOptions.RenderSize = False
     Alignment = taLeftJustify
     Color = clNone
-    Font.Color = clWebBLUE
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
+    Font.Style = [fsUnderline]
+    Font.PxSize = 12
+    Font.Color = clWebBLUE
     HasTabOrder = True
     DoSubmitValidation = False
     FriendlyName = 'iwlNextPage'
@@ -74,30 +79,29 @@ object ISFRanks: TISFRanks
     Caption = 'Next page'
   end
   object iwbClose: TIWButton
+    AlignWithMargins = False
     Left = 102
     Top = 74
     Width = 75
     Height = 25
     Caption = 'Close'
     Color = clWebLIGHTGREEN
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbClose'
-    TabOrder = 0
     OnClick = iwbCloseClick
   end
   object rectLeft: TIWRectangle
+    AlignWithMargins = False
     Left = 0
     Top = 55
     Width = 83
     Height = 543
     Align = alLeft
     ZIndex = 1
+    Font.PxSize = 13
     Font.Color = clWebBLACK
-    Font.Size = 10
-    Font.Style = []
     BorderOptions.Width = 0
     FriendlyName = 'rectLeft'
     Color = clWebLAVENDER
@@ -105,21 +109,22 @@ object ISFRanks: TISFRanks
     VAlign = vaMiddle
   end
   object iwbDownload: TIWButton
+    AlignWithMargins = False
     Left = 196
     Top = 74
     Width = 129
     Height = 25
     Caption = 'Download to Excel'
     Color = clBtnFace
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbDownload'
     TabOrder = 1
     OnClick = iwbDownloadClick
   end
   object iwbApplyUpdates: TIWButton
+    AlignWithMargins = False
     Left = 338
     Top = 74
     Width = 129
@@ -127,14 +132,14 @@ object ISFRanks: TISFRanks
     Visible = False
     Caption = 'Save changes'
     Color = clWebPEACHPUFF
-    Font.Color = clNone
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbApplyUpdates'
     TabOrder = 4
     OnClick = iwbApplyUpdatesClick
   end
   object iwbCancelUpdates: TIWButton
+    AlignWithMargins = False
     Left = 480
     Top = 74
     Width = 129
@@ -142,14 +147,14 @@ object ISFRanks: TISFRanks
     Visible = False
     Caption = 'Cancel changes'
     Color = clWebLIGHTSTEELBLUE
-    Font.Color = clNone
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbCancelUpdates'
     TabOrder = 5
     OnClick = iwbCancelUpdatesClick
   end
   object iwbAddNew: TIWButton
+    AlignWithMargins = False
     Left = 622
     Top = 74
     Width = 133
@@ -157,14 +162,14 @@ object ISFRanks: TISFRanks
     Visible = False
     Caption = 'Add New'
     Color = clWebLIGHTSKYBLUE
-    Font.Color = clNone
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbAddNew'
     TabOrder = 6
     OnClick = iwbAddNewClick
   end
   object iwDBg: TIWDBGrid
+    AlignWithMargins = False
     Left = 102
     Top = 128
     Width = 553
@@ -177,24 +182,24 @@ object ISFRanks: TISFRanks
     BorderStyle = tfDefault
     CellPadding = 0
     CellSpacing = 0
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     FrameBuffer = 40
     Lines = tlAll
     UseFrame = False
     UseSize = True
+    ShowEmptyCells = True
+    ShowInvisibleRows = True
     ScrollToCurrentRow = False
     Columns = <
       item
         Alignment = taCenter
         BGColor = clNone
         DoSubmitValidation = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 8
-        Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -203,17 +208,16 @@ object ISFRanks: TISFRanks
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'RANKID'
         Title.Alignment = taCenter
         Title.BGColor = clNone
         Title.DoSubmitValidation = True
-        Title.Font.Color = clNone
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -228,10 +232,9 @@ object ISFRanks: TISFRanks
         Alignment = taLeftJustify
         BGColor = clNone
         DoSubmitValidation = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 8
-        Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -240,7 +243,6 @@ object ISFRanks: TISFRanks
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'UNITRANK'
@@ -248,10 +250,10 @@ object ISFRanks: TISFRanks
         Title.Alignment = taCenter
         Title.BGColor = clNone
         Title.DoSubmitValidation = True
-        Title.Font.Color = clNone
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -266,10 +268,9 @@ object ISFRanks: TISFRanks
         Alignment = taRightJustify
         BGColor = clNone
         DoSubmitValidation = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 8
-        Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -278,17 +279,15 @@ object ISFRanks: TISFRanks
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'RANKWIDTH'
         Title.Alignment = taCenter
         Title.BGColor = clNone
         Title.DoSubmitValidation = True
-        Title.Font.Color = clNone
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
-        Title.Font.Style = []
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -314,7 +313,6 @@ object ISFRanks: TISFRanks
     RowHeaderColor = clWebLIGHTSTEELBLUE
     RowAlternateColor = clNone
     RowCurrentColor = clNone
-    TabOrder = -1
   end
   inline TopBar: TISFTopBarStrat
     Left = 0
@@ -353,6 +351,7 @@ object ISFRanks: TISFRanks
             ExplicitWidth = 600
             inherited lblWelcome: TIWLabel
               Left = 471
+              Font.Color = clWebDARKSLATEGRAY
               ExplicitLeft = 561
             end
           end
@@ -360,6 +359,15 @@ object ISFRanks: TISFRanks
         inherited iwrSignInOut: TIWRegion
           Width = 800
           ExplicitWidth = 800
+          inherited iwlSignOut: TIWLink
+            Font.Color = clWebBLUE
+          end
+          inherited lnkSignIn: TIWLink
+            Font.Color = clWebBLUE
+          end
+          inherited lblProgTitle: TIWLabel
+            Font.Color = clWebSTEELBLUE
+          end
         end
       end
     end

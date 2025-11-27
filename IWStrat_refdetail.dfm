@@ -25,7 +25,6 @@ object ISFRefDetails: TISFRefDetails
     StyleRenderOptions.RenderBorder = False
     Editable = False
     NonEditableAsLabel = True
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
@@ -46,9 +45,7 @@ object ISFRefDetails: TISFRefDetails
     Height = 25
     Caption = 'Return'
     Color = clWebLIGHTGREEN
-    Font.Color = clNone
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     FriendlyName = 'iwbReturn'
     TabOrder = 8
@@ -60,10 +57,8 @@ object ISFRefDetails: TISFRefDetails
     Top = 110
     Width = 79
     Height = 15
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
@@ -76,10 +71,8 @@ object ISFRefDetails: TISFRefDetails
     Top = 163
     Width = 106
     Height = 15
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
@@ -94,9 +87,7 @@ object ISFRefDetails: TISFRefDetails
     Height = 25
     Caption = 'Cancel Updates'
     Color = clWebLIGHTSALMON
-    Font.Color = clNone
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     FriendlyName = 'iwbCancelUpdates'
     TabOrder = 9
@@ -110,10 +101,8 @@ object ISFRefDetails: TISFRefDetails
     Height = 545
     Align = alLeft
     ZIndex = 1
-    Font.Color = clWebBLACK
-    Font.Size = 10
-    Font.Style = []
     Font.PxSize = 13
+    Font.Color = clWebBLACK
     BorderOptions.Width = 0
     FriendlyName = 'rectLeft'
     Color = clWebLAVENDER
@@ -128,7 +117,6 @@ object ISFRefDetails: TISFRefDetails
     Width = 365
     Height = 21
     StyleRenderOptions.RenderBorder = False
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
@@ -152,9 +140,7 @@ object ISFRefDetails: TISFRefDetails
     Height = 25
     Caption = 'Delete Current Record'
     Color = clWebLIGHTCORAL
-    Font.Color = clNone
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     FriendlyName = 'iwbDeleteLink'
     TabOrder = 10
@@ -168,9 +154,7 @@ object ISFRefDetails: TISFRefDetails
     Height = 25
     Caption = 'Edit'
     Color = clWebLEMONCHIFFON
-    Font.Color = clNone
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     FriendlyName = 'iwbEdit'
     OnClick = iwbEditClick
@@ -183,9 +167,7 @@ object ISFRefDetails: TISFRefDetails
     Height = 25
     Caption = 'Apply Updates'
     Color = clWebPEACHPUFF
-    Font.Color = clNone
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     FriendlyName = 'iwbApplyUpdates'
     TabOrder = 6
@@ -199,7 +181,6 @@ object ISFRefDetails: TISFRefDetails
     Height = 21
     StyleRenderOptions.RenderBorder = False
     NonEditableAsLabel = True
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
@@ -218,10 +199,8 @@ object ISFRefDetails: TISFRefDetails
     Top = 190
     Width = 44
     Height = 15
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
@@ -234,10 +213,8 @@ object ISFRefDetails: TISFRefDetails
     Top = 222
     Width = 88
     Height = 15
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
@@ -250,10 +227,8 @@ object ISFRefDetails: TISFRefDetails
     Top = 138
     Width = 97
     Height = 15
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
@@ -268,7 +243,6 @@ object ISFRefDetails: TISFRefDetails
     Height = 21
     StyleRenderOptions.RenderBorder = False
     NonEditableAsLabel = True
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
@@ -287,10 +261,8 @@ object ISFRefDetails: TISFRefDetails
     Top = 375
     Width = 33
     Height = 15
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
@@ -305,10 +277,8 @@ object ISFRefDetails: TISFRefDetails
     Height = 21
     StyleRenderOptions.RenderBorder = False
     NonEditableAsLabel = True
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     FriendlyName = 'iwDBeRefDOI'
     SubmitOnAsyncEvent = True
@@ -324,10 +294,8 @@ object ISFRefDetails: TISFRefDetails
     Top = 398
     Width = 50
     Height = 15
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
@@ -341,7 +309,6 @@ object ISFRefDetails: TISFRefDetails
     Width = 365
     Height = 21
     StyleRenderOptions.RenderBorder = False
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
@@ -378,11 +345,10 @@ object ISFRefDetails: TISFRefDetails
     StyleRenderOptions.RenderBorder = False
     BGColor = clNone
     Editable = False
-    Font.Color = clWebRED
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
+    Font.Color = clWebRED
     InvisibleBorder = True
     HorizScrollBar = False
     VertScrollBar = False
@@ -404,10 +370,8 @@ object ISFRefDetails: TISFRefDetails
     StyleRenderOptions.RenderBorder = False
     BGColor = clNone
     Editable = True
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
     Font.PxSize = 12
     InvisibleBorder = False
     HorizScrollBar = False
@@ -456,6 +420,7 @@ object ISFRefDetails: TISFRefDetails
             ExplicitWidth = 800
             inherited lblWelcome: TIWLabel
               Left = 527
+              Font.Color = clWebDARKSLATEGRAY
               ExplicitLeft = 561
             end
           end
@@ -464,7 +429,13 @@ object ISFRefDetails: TISFRefDetails
           Width = 1000
           ExplicitWidth = 1000
           inherited iwlSignOut: TIWLink
-            TabOrder = -1
+            Font.Color = clWebBLUE
+          end
+          inherited lnkSignIn: TIWLink
+            Font.Color = clWebBLUE
+          end
+          inherited lblProgTitle: TIWLabel
+            Font.Color = clWebSTEELBLUE
           end
         end
       end

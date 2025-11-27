@@ -18,15 +18,15 @@ object ISFDefineDepositQuery: TISFDefineDepositQuery
   DesignLeft = 2
   DesignTop = 2
   object rectLeft: TIWRectangle
+    AlignWithMargins = False
     Left = 0
     Top = 55
     Width = 83
     Height = 2006
     Align = alLeft
     ZIndex = 1
+    Font.PxSize = 13
     Font.Color = clWebBLACK
-    Font.Size = 10
-    Font.Style = []
     BorderOptions.Width = 0
     FriendlyName = 'rectLeft'
     Color = clWebLAVENDER
@@ -56,22 +56,24 @@ object ISFDefineDepositQuery: TISFDefineDepositQuery
       BorderOptions.NumericWidth = 0
       BorderOptions.Style = cbsNone
       object iwcbFromDate: TIWCheckBox
+        AlignWithMargins = False
         Left = 15
         Top = 153
         Width = 224
         Height = 21
         Caption = 'Include from Minimum Age'
         Editable = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = [fsBold]
+        Font.PxSize = 12
         SubmitOnAsyncEvent = True
         Style = stNormal
         Checked = False
         FriendlyName = 'iwcbFromDate'
       end
       object iweFromDate: TIWEdit
+        AlignWithMargins = False
         Left = 245
         Top = 153
         Width = 59
@@ -79,25 +81,25 @@ object ISFDefineDepositQuery: TISFDefineDepositQuery
         StyleRenderOptions.RenderBorder = False
         Alignment = taRightJustify
         NonEditableAsLabel = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
+        Font.PxSize = 12
         FriendlyName = 'iweFromDate'
         SubmitOnAsyncEvent = True
         TabOrder = 1
       end
       object iwcbToDate: TIWCheckBox
+        AlignWithMargins = False
         Left = 15
         Top = 180
         Width = 224
         Height = 21
         Caption = 'to Maximum Age'
         Editable = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = [fsBold]
+        Font.PxSize = 12
         SubmitOnAsyncEvent = True
         Style = stNormal
         TabOrder = 2
@@ -105,6 +107,7 @@ object ISFDefineDepositQuery: TISFDefineDepositQuery
         FriendlyName = 'iwcbToDate'
       end
       object iweToDate: TIWEdit
+        AlignWithMargins = False
         Left = 245
         Top = 180
         Width = 59
@@ -112,39 +115,41 @@ object ISFDefineDepositQuery: TISFDefineDepositQuery
         StyleRenderOptions.RenderBorder = False
         Alignment = taRightJustify
         NonEditableAsLabel = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
+        Font.PxSize = 12
         FriendlyName = 'iweToDate'
         SubmitOnAsyncEvent = True
         TabOrder = 3
       end
       object iwlblErrorTop: TIWLabel
+        AlignWithMargins = False
         Left = 117
         Top = 58
         Width = 250
         Height = 15
-        Font.Color = clWebRED
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = [fsBold]
+        Font.PxSize = 12
+        Font.Color = clWebRED
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'iwlblErrorTop'
         Caption = 'No items selected or boxes not checked'
       end
       object IWText1: TIWText
+        AlignWithMargins = False
         Left = 471
         Top = 67
         Width = 261
         Height = 264
         BGColor = clNone
         ConvertSpaces = True
-        Font.Color = clWebDARKSLATEGRAY
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
+        Font.PxSize = 12
+        Font.Color = clWebDARKSLATEGRAY
         FriendlyName = 'IWText1'
         Lines.Strings = (
           'Select parameters which define the records '
@@ -169,16 +174,17 @@ object ISFDefineDepositQuery: TISFDefineDepositQuery
         WantReturns = True
       end
       object iwcbRestrictParentID: TIWCheckBox
+        AlignWithMargins = False
         Left = 15
         Top = 103
         Width = 422
         Height = 21
         Caption = 'Restrict results to top level deposits (ParentID must be zero)'
         Editable = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = [fsBold]
+        Font.PxSize = 12
         SubmitOnAsyncEvent = True
         Style = stNormal
         TabOrder = 4
@@ -186,43 +192,43 @@ object ISFDefineDepositQuery: TISFDefineDepositQuery
         FriendlyName = 'iwcbRestrictParentID'
       end
       object iwbCancel: TIWButton
+        AlignWithMargins = False
         Left = 560
         Top = 16
         Width = 150
         Height = 25
         Caption = 'Cancel query definition'
         Color = clWebLIGHTSALMON
-        Font.Color = clNone
         Font.Size = 9
-        Font.Style = []
+        Font.PxSize = 12
         FriendlyName = 'iwbCancel'
         TabOrder = 5
         OnClick = iwbCancelClick
       end
       object iwbClearCheckboxes: TIWButton
+        AlignWithMargins = False
         Left = 360
         Top = 16
         Width = 150
         Height = 25
         Caption = 'Clear checkboxes'
         Color = clBtnFace
-        Font.Color = clNone
         Font.Size = 9
-        Font.Style = []
+        Font.PxSize = 12
         FriendlyName = 'iwbClearCheckboxes'
         TabOrder = 6
         OnClick = iwbClearCheckboxesClick
       end
       object iwbSubmitQuery: TIWButton
+        AlignWithMargins = False
         Left = 16
         Top = 16
         Width = 293
         Height = 25
         Caption = 'Submit Query'
         Color = clWebLIGHTGREEN
-        Font.Color = clNone
         Font.Size = 9
-        Font.Style = []
+        Font.PxSize = 12
         FriendlyName = 'iwbSubmitQuery'
         TabOrder = 7
         OnClick = iwbSubmitQueryClick
@@ -238,30 +244,29 @@ object ISFDefineDepositQuery: TISFDefineDepositQuery
       Align = alTop
       BorderOptions.NumericWidth = 0
       BorderOptions.Style = cbsNone
-      ExplicitTop = 289
       object IWButton8: TIWButton
+        AlignWithMargins = False
         Left = 500
         Top = 224
         Width = 125
         Height = 25
         Caption = 'Submit Query'
         Color = clWebLIGHTGREEN
-        Font.Color = clNone
         Font.Size = 9
-        Font.Style = []
+        Font.PxSize = 12
         FriendlyName = 'iwbSubmitQuery2'
         TabOrder = 8
         OnClick = iwbSubmitQueryClick
       end
       object iwlDeposits: TIWListbox
+        AlignWithMargins = False
         Left = 20
         Top = 30
         Width = 349
         Height = 249
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
+        Font.PxSize = 12
         RequireSelection = False
         TabOrder = 9
         NonEditableAsLabel = True
@@ -273,19 +278,19 @@ object ISFDefineDepositQuery: TISFDefineDepositQuery
           'two=2')
         Sorted = True
         MultiSelect = True
-        NoSelectionText = '-- No Selection --'
       end
       object iwcbDeposits: TIWCheckBox
+        AlignWithMargins = False
         Left = 15
         Top = 3
         Width = 352
         Height = 21
         Caption = 'Include selection from Deposits'
         Editable = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = [fsBold]
+        Font.PxSize = 12
         SubmitOnAsyncEvent = True
         Style = stNormal
         TabOrder = 10
@@ -304,16 +309,16 @@ object ISFDefineDepositQuery: TISFDefineDepositQuery
       BorderOptions.NumericWidth = 0
       BorderOptions.Style = cbsNone
       object iwlDepositClans: TIWListbox
+        AlignWithMargins = False
         Left = 20
         Top = 30
         Width = 461
         Height = 158
         RenderSize = False
         StyleRenderOptions.RenderSize = False
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
+        Font.PxSize = 12
         RequireSelection = False
         UseSize = False
         TabOrder = 11
@@ -326,33 +331,33 @@ object ISFDefineDepositQuery: TISFDefineDepositQuery
           'two=2')
         Sorted = True
         MultiSelect = True
-        NoSelectionText = '-- No Selection --'
       end
       object IWButton2: TIWButton
+        AlignWithMargins = False
         Left = 500
         Top = 152
         Width = 125
         Height = 25
         Caption = 'Submit Query'
         Color = clWebLIGHTGREEN
-        Font.Color = clNone
         Font.Size = 9
-        Font.Style = []
+        Font.PxSize = 12
         FriendlyName = 'iwbSubmitQuery2'
         TabOrder = 12
         OnClick = iwbSubmitQueryClick
       end
       object iwcbDepositClans: TIWCheckBox
+        AlignWithMargins = False
         Left = 15
         Top = 3
         Width = 466
         Height = 21
         Caption = 'Include selection from Deposit Clans'
         Editable = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = [fsBold]
+        Font.PxSize = 12
         SubmitOnAsyncEvent = True
         Style = stNormal
         TabOrder = 13
@@ -371,30 +376,30 @@ object ISFDefineDepositQuery: TISFDefineDepositQuery
       BorderOptions.NumericWidth = 0
       BorderOptions.Style = cbsNone
       object IWButton3: TIWButton
+        AlignWithMargins = False
         Left = 500
         Top = 152
         Width = 125
         Height = 25
         Caption = 'Submit Query'
         Color = clWebLIGHTGREEN
-        Font.Color = clNone
         Font.Size = 9
-        Font.Style = []
+        Font.PxSize = 12
         FriendlyName = 'iwbSubmitQuery2'
         TabOrder = 14
         OnClick = iwbSubmitQueryClick
       end
       object iwlDepositStatus: TIWListbox
+        AlignWithMargins = False
         Left = 20
         Top = 30
         Width = 461
         Height = 158
         RenderSize = False
         StyleRenderOptions.RenderSize = False
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
+        Font.PxSize = 12
         RequireSelection = False
         UseSize = False
         TabOrder = 15
@@ -407,19 +412,19 @@ object ISFDefineDepositQuery: TISFDefineDepositQuery
           'two=2')
         Sorted = True
         MultiSelect = True
-        NoSelectionText = '-- No Selection --'
       end
       object iwcbDepositStatus: TIWCheckBox
+        AlignWithMargins = False
         Left = 15
         Top = 3
         Width = 466
         Height = 21
         Caption = 'Include selection from Deposit Status'
         Editable = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = [fsBold]
+        Font.PxSize = 12
         SubmitOnAsyncEvent = True
         Style = stNormal
         TabOrder = 16
@@ -438,30 +443,30 @@ object ISFDefineDepositQuery: TISFDefineDepositQuery
       BorderOptions.NumericWidth = 0
       BorderOptions.Style = cbsNone
       object IWButton4: TIWButton
+        AlignWithMargins = False
         Left = 500
         Top = 168
         Width = 125
         Height = 25
         Caption = 'Submit Query'
         Color = clWebLIGHTGREEN
-        Font.Color = clNone
         Font.Size = 9
-        Font.Style = []
+        Font.PxSize = 12
         FriendlyName = 'iwbSubmitQuery2'
         TabOrder = 17
         OnClick = iwbSubmitQueryClick
       end
       object iwlCommodities: TIWListbox
+        AlignWithMargins = False
         Left = 20
         Top = 39
         Width = 461
         Height = 158
         RenderSize = False
         StyleRenderOptions.RenderSize = False
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
+        Font.PxSize = 12
         RequireSelection = False
         UseSize = False
         TabOrder = 18
@@ -474,19 +479,19 @@ object ISFDefineDepositQuery: TISFDefineDepositQuery
           'two=2')
         Sorted = True
         MultiSelect = True
-        NoSelectionText = '-- No Selection --'
       end
       object iwcbCommodities: TIWCheckBox
+        AlignWithMargins = False
         Left = 15
         Top = 3
         Width = 466
         Height = 21
         Caption = 'Include selection from Commodities'
         Editable = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = [fsBold]
+        Font.PxSize = 12
         SubmitOnAsyncEvent = True
         Style = stNormal
         TabOrder = 19
@@ -505,30 +510,30 @@ object ISFDefineDepositQuery: TISFDefineDepositQuery
       BorderOptions.NumericWidth = 0
       BorderOptions.Style = cbsNone
       object IWButton1: TIWButton
+        AlignWithMargins = False
         Left = 500
         Top = 128
         Width = 125
         Height = 25
         Caption = 'Submit Query'
         Color = clWebLIGHTGREEN
-        Font.Color = clNone
         Font.Size = 9
-        Font.Style = []
+        Font.PxSize = 12
         FriendlyName = 'iwbSubmitQuery2'
         TabOrder = 20
         OnClick = iwbSubmitQueryClick
       end
       object iwlValidation: TIWListbox
+        AlignWithMargins = False
         Left = 20
         Top = 39
         Width = 317
         Height = 121
         RenderSize = False
         StyleRenderOptions.RenderSize = False
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
+        Font.PxSize = 12
         RequireSelection = False
         UseSize = False
         TabOrder = 21
@@ -541,19 +546,19 @@ object ISFDefineDepositQuery: TISFDefineDepositQuery
           'two=2')
         Sorted = True
         MultiSelect = True
-        NoSelectionText = '-- No Selection --'
       end
       object iwcbValidation: TIWCheckBox
+        AlignWithMargins = False
         Left = 15
         Top = 12
         Width = 466
         Height = 21
         Caption = 'Include selection from Validation Status'
         Editable = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = [fsBold]
+        Font.PxSize = 12
         SubmitOnAsyncEvent = True
         Style = stNormal
         TabOrder = 22
@@ -572,34 +577,37 @@ object ISFDefineDepositQuery: TISFDefineDepositQuery
       BorderOptions.NumericWidth = 0
       BorderOptions.Style = cbsNone
       object iwlblErrorBottom: TIWLabel
+        AlignWithMargins = False
         Left = 154
         Top = 125
         Width = 250
         Height = 15
-        Font.Color = clWebRED
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = [fsBold]
+        Font.PxSize = 12
+        Font.Color = clWebRED
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'iwlblErrorBottom'
         Caption = 'No items selected or boxes not checked'
       end
       object iwbSubmitQuery2: TIWButton
+        AlignWithMargins = False
         Left = 500
         Top = 115
         Width = 125
         Height = 25
         Caption = 'Submit Query'
         Color = clWebLIGHTGREEN
-        Font.Color = clNone
         Font.Size = 9
-        Font.Style = []
+        Font.PxSize = 12
         FriendlyName = 'iwbSubmitQuery2'
         TabOrder = 23
         OnClick = iwbSubmitQueryClick
       end
       object iwrgOrderBy: TIWRadioGroup
+        AlignWithMargins = False
         Left = 20
         Top = 24
         Width = 417
@@ -607,10 +615,9 @@ object ISFDefineDepositQuery: TISFDefineDepositQuery
         SubmitOnAsyncEvent = True
         RawText = False
         Editable = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
+        Font.PxSize = 12
         FriendlyName = 'iwrgOrderBy'
         ItemIndex = 0
         Items.Strings = (
@@ -622,14 +629,15 @@ object ISFDefineDepositQuery: TISFDefineDepositQuery
         TabOrder = -1
       end
       object IWLabel4: TIWLabel
+        AlignWithMargins = False
         Left = 15
         Top = 3
         Width = 101
         Height = 15
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = [fsBold]
+        Font.PxSize = 12
         HasTabOrder = False
         FriendlyName = 'IWLabel4'
         Caption = 'Order results by'
@@ -673,6 +681,7 @@ object ISFDefineDepositQuery: TISFDefineDepositQuery
             ExplicitWidth = 653
             inherited lblWelcome: TIWLabel
               Left = 380
+              Font.Color = clWebDARKSLATEGRAY
               ExplicitLeft = 380
             end
           end
@@ -681,7 +690,13 @@ object ISFDefineDepositQuery: TISFDefineDepositQuery
           Width = 853
           ExplicitWidth = 853
           inherited iwlSignOut: TIWLink
-            TabOrder = -1
+            Font.Color = clWebBLUE
+          end
+          inherited lnkSignIn: TIWLink
+            Font.Color = clWebBLUE
+          end
+          inherited lblProgTitle: TIWLabel
+            Font.Color = clWebSTEELBLUE
           end
         end
       end

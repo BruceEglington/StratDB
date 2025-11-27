@@ -17,45 +17,42 @@ object ISFDefineNewContinent: TISFDefineNewContinent
   DesignLeft = 2
   DesignTop = 2
   object iwbContinue: TIWButton
+    AlignWithMargins = False
     Left = 317
     Top = 138
     Width = 94
     Height = 25
     Caption = 'Continue'
     Color = clWebLIGHTGREEN
-    Font.Color = clNone
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbContinue'
     OnClick = iwbContinueClick
   end
   object IWLabel1: TIWLabel
+    AlignWithMargins = False
     Left = 36
     Top = 78
     Width = 44
     Height = 15
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'Region'
   end
   object iwlContinent: TIWComboBox
+    AlignWithMargins = False
     Left = 132
     Top = 72
     Width = 259
     Height = 21
     StyleRenderOptions.RenderBorder = False
-    Font.Color = clNone
-    Font.Size = 10
-    Font.Style = []
     NonEditableAsLabel = True
     TabOrder = 1
     ItemIndex = -1
     FriendlyName = 'iwlContinent'
-    NoSelectionText = '-- No Selection --'
   end
   inline TopBar: TISFTopBarStrat
     Left = 0
@@ -94,6 +91,7 @@ object ISFDefineNewContinent: TISFDefineNewContinent
             ExplicitWidth = 516
             inherited lblWelcome: TIWLabel
               Left = 243
+              Font.Color = clWebDARKSLATEGRAY
               ExplicitLeft = 243
             end
           end
@@ -102,7 +100,13 @@ object ISFDefineNewContinent: TISFDefineNewContinent
           Width = 716
           ExplicitWidth = 716
           inherited iwlSignOut: TIWLink
-            TabOrder = -1
+            Font.Color = clWebBLUE
+          end
+          inherited lnkSignIn: TIWLink
+            Font.Color = clWebBLUE
+          end
+          inherited lblProgTitle: TIWLabel
+            Font.Color = clWebSTEELBLUE
           end
         end
       end

@@ -5,6 +5,7 @@ interface
 uses
   Classes, SysUtils, IWAppForm, IWApplication, IWTypes,
   Controls, Forms, IWCompButton, IWCompLabel, IWBaseControl,
+  System.DateUtils,
   IWControl, IWCompEdit, IWDBStdCtrls, IWCompGrids, IWDBGrids, IWCompMemo,
   IWCompListbox, IWVCLBaseControl,
   DB, IWBaseHTMLControl, IWCompRectangle, IWCompCheckbox,
@@ -504,7 +505,7 @@ begin
       dmStrat.cdsValidFull.Append;
       dmStrat.cdsValidFullUNITID.AsString := UserSession.RecordChosen;
       dmStrat.cdsValidFullVALIDSTATUSID.AsString := 'Check';
-      dmStrat.cdsValidFullDATEDONE.AsDateTime := Now;
+      dmStrat.cdsValidFullDATEDONE.AsDateTime := TDateTime.NowUTC;
       dmStrat.cdsValidFullDONEBY.AsString := UserSession.UserID;
       dmStrat.cdsValidFullCOMMENTS.AsString := ' ';
       dmStrat.cdsValidFull.Post;
@@ -514,7 +515,7 @@ begin
     dmStrat.cdsValidFull.Edit;
     dmStrat.cdsValidFullUNITID.AsString := UserSession.RecordChosen;
     dmStrat.cdsValidFullVALIDSTATUSID.AsString := 'Check';
-    dmStrat.cdsValidFullDATEDONE.AsDateTime := Now;
+    dmStrat.cdsValidFullDATEDONE.AsDateTime := TDateTime.NowUTC;
     dmStrat.cdsValidFullDONEBY.AsString := UserSession.UserID;
     dmStrat.cdsValidFullCOMMENTS.AsString := ' ';
     dmStrat.cdsValidFull.Post;
@@ -523,7 +524,7 @@ begin
     dmStrat.cdsValidFull.Edit;
     dmStrat.cdsValidFullUNITID.AsString := UserSession.RecordChosen;
     dmStrat.cdsValidFullVALIDSTATUSID.AsString := 'Check';
-    dmStrat.cdsValidFullDATEDONE.AsDateTime := Now;
+    dmStrat.cdsValidFullDATEDONE.AsDateTime := TDateTime.NowUTC;
     dmStrat.cdsValidFull.Post;
     dmStrat.cdsValidFull.Filter := 'ValidStatusID='+''''+'Check'+'''';
     dmStrat.cdsValidFull.Filtered := true;
@@ -932,7 +933,7 @@ begin
       dmStrat.cdsValid.Edit;
       dmStrat.cdsValidVALIDSTATUSID.AsString := 'Valid';
       dmStrat.cdsValidDONEBY.AsString := UserSession.UserID;
-      dmStrat.cdsValidDATEDONE.AsDateTime := Now;
+      dmStrat.cdsValidDATEDONE.AsDateTime := TDateTime.NowUTC;
       dmStrat.cdsValid.Post;
     end;
     if (not HasValidityRecord) then
@@ -940,7 +941,7 @@ begin
       dmStrat.cdsValid.Append;
       dmStrat.cdsValidUNITID.AsString := dmStrat.cdsUnitQUNITID.AsString;
       dmStrat.cdsValidVALIDSTATUSID.AsString := 'Valid';
-      dmStrat.cdsValidDATEDONE.AsDateTime := Now;
+      dmStrat.cdsValidDATEDONE.AsDateTime := TDateTime.NowUTC;
       dmStrat.cdsValidDONEBY.AsString := UserSession.UserID;
       dmStrat.cdsValidFullCOMMENTS.AsString := ' ';
       dmStrat.cdsValid.Post;

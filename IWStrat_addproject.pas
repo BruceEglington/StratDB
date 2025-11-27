@@ -80,12 +80,10 @@ begin
   if(Sender = iwbApplyUpdates) then
   begin
     dmStrat.cdsUserProjects.ApplyUpdates(0);
-    //dmUser.SetDeveloperData('AddProject iwApplyUpdatesClick - call ReplicateChanges');
     dmStrat.cdsUserProjects.Close;
     dmStrat.qUserProjects.Close;
     dmStrat.qUserProjects.ParamByName('UserID').AsString := UserSession.UserID;
     dmStrat.cdsUserProjects.Open;
-    //dmReplicate.ReplicateChanges('ttNoTrace');
   end;
 end;
 
@@ -101,7 +99,6 @@ procedure TISFAddProject.iwbDeleteLinkClick(Sender: TObject);
 begin
   dmStrat.cdsUserProjects.Delete;
   dmStrat.cdsUserProjects.ApplyUpdates(0);
-  //dmReplicate.ReplicateChanges('ttNoTrace');
 end;
 
 procedure TISFAddProject.iwbEditClick(Sender: TObject);

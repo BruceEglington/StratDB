@@ -53,6 +53,7 @@ object ISFReferences: TISFReferences
             ExplicitWidth = 584
             inherited lblWelcome: TIWLabel
               Left = 311
+              Font.Color = clWebDARKSLATEGRAY
               ExplicitLeft = 561
             end
           end
@@ -61,7 +62,13 @@ object ISFReferences: TISFReferences
           Width = 784
           ExplicitWidth = 784
           inherited iwlSignOut: TIWLink
-            TabOrder = -1
+            Font.Color = clWebBLUE
+          end
+          inherited lnkSignIn: TIWLink
+            Font.Color = clWebBLUE
+          end
+          inherited lblProgTitle: TIWLabel
+            Font.Color = clWebSTEELBLUE
           end
         end
       end
@@ -77,15 +84,15 @@ object ISFReferences: TISFReferences
     BorderOptions.NumericWidth = 0
     BorderOptions.Style = cbsNone
     object rectLeft: TIWRectangle
+      AlignWithMargins = False
       Left = 0
       Top = 0
       Width = 83
       Height = 1000
       Align = alLeft
       ZIndex = 1
+      Font.PxSize = 13
       Font.Color = clWebBLACK
-      Font.Size = 10
-      Font.Style = []
       BorderOptions.Width = 0
       FriendlyName = 'rectLeft'
       Color = clWebLAVENDER
@@ -103,11 +110,8 @@ object ISFReferences: TISFReferences
       Align = alClient
       BorderOptions.NumericWidth = 0
       BorderOptions.Style = cbsNone
-      ExplicitLeft = 84
-      ExplicitTop = 1
-      ExplicitWidth = 699
-      ExplicitHeight = 608
       object iwDBgReferences: TIWDBGrid
+        AlignWithMargins = False
         Left = 0
         Top = 96
         Width = 701
@@ -121,24 +125,24 @@ object ISFReferences: TISFReferences
         BorderStyle = tfDefault
         CellPadding = 2
         CellSpacing = 0
-        Font.Color = clNone
         Font.FontName = 'Verdana'
         Font.Size = 8
-        Font.Style = []
+        Font.PxSize = 10
         FrameBuffer = 40
         Lines = tlAll
         UseFrame = False
         UseSize = True
+        ShowEmptyCells = True
+        ShowInvisibleRows = True
         ScrollToCurrentRow = False
         Columns = <
           item
             Alignment = taRightJustify
             BGColor = clNone
             DoSubmitValidation = True
-            Font.Color = clNone
             Font.FontName = 'Arial'
             Font.Size = 8
-            Font.Style = []
+            Font.PxSize = 10
             Header = False
             Height = '0'
             ShowHint = True
@@ -147,7 +151,6 @@ object ISFReferences: TISFReferences
             Width = '0'
             Wrap = False
             RawText = False
-            Css = ''
             BlobCharLimit = 0
             CompareHighlight = hcNone
             DataField = 'SOURCENUM'
@@ -157,10 +160,10 @@ object ISFReferences: TISFReferences
             Title.Alignment = taCenter
             Title.BGColor = clNone
             Title.DoSubmitValidation = True
-            Title.Font.Color = clNone
             Title.Font.FontName = 'Arial'
             Title.Font.Size = 8
             Title.Font.Style = [fsBold]
+            Title.Font.PxSize = 10
             Title.Header = False
             Title.Height = '0'
             Title.ShowHint = True
@@ -175,10 +178,9 @@ object ISFReferences: TISFReferences
             Alignment = taLeftJustify
             BGColor = clNone
             DoSubmitValidation = True
-            Font.Color = clNone
             Font.FontName = 'Arial'
             Font.Size = 8
-            Font.Style = []
+            Font.PxSize = 10
             Header = False
             Height = '0'
             ShowHint = True
@@ -187,7 +189,6 @@ object ISFReferences: TISFReferences
             Width = '0'
             Wrap = False
             RawText = False
-            Css = ''
             BlobCharLimit = 0
             CompareHighlight = hcNone
             DataField = 'CONTINENT'
@@ -195,10 +196,10 @@ object ISFReferences: TISFReferences
             Title.Alignment = taCenter
             Title.BGColor = clNone
             Title.DoSubmitValidation = True
-            Title.Font.Color = clNone
             Title.Font.FontName = 'Arial'
             Title.Font.Size = 8
             Title.Font.Style = [fsBold]
+            Title.Font.PxSize = 10
             Title.Header = False
             Title.Height = '0'
             Title.ShowHint = True
@@ -213,10 +214,9 @@ object ISFReferences: TISFReferences
             Alignment = taLeftJustify
             BGColor = clNone
             DoSubmitValidation = True
-            Font.Color = clNone
             Font.FontName = 'Arial'
             Font.Size = 8
-            Font.Style = []
+            Font.PxSize = 10
             Header = False
             Height = '0'
             ShowHint = True
@@ -225,7 +225,6 @@ object ISFReferences: TISFReferences
             Width = '0'
             Wrap = False
             RawText = False
-            Css = ''
             BlobCharLimit = 0
             CompareHighlight = hcNone
             DataField = 'SOURCESHORT'
@@ -235,10 +234,10 @@ object ISFReferences: TISFReferences
             Title.Alignment = taCenter
             Title.BGColor = clNone
             Title.DoSubmitValidation = True
-            Title.Font.Color = clNone
             Title.Font.FontName = 'Arial'
             Title.Font.Size = 8
             Title.Font.Style = [fsBold]
+            Title.Font.PxSize = 10
             Title.Header = False
             Title.Height = '0'
             Title.ShowHint = True
@@ -253,10 +252,9 @@ object ISFReferences: TISFReferences
             Alignment = taLeftJustify
             BGColor = clNone
             DoSubmitValidation = True
-            Font.Color = clNone
             Font.FontName = 'Arial'
             Font.Size = 8
-            Font.Style = []
+            Font.PxSize = 10
             Header = False
             Height = '0'
             ShowHint = True
@@ -265,7 +263,6 @@ object ISFReferences: TISFReferences
             Width = '0'
             Wrap = False
             RawText = False
-            Css = ''
             BlobCharLimit = 0
             CompareHighlight = hcNone
             DataField = 'SOURCEYEAR'
@@ -273,10 +270,10 @@ object ISFReferences: TISFReferences
             Title.Alignment = taCenter
             Title.BGColor = clNone
             Title.DoSubmitValidation = True
-            Title.Font.Color = clNone
             Title.Font.FontName = 'Arial'
             Title.Font.Size = 8
             Title.Font.Style = [fsBold]
+            Title.Font.PxSize = 10
             Title.Header = False
             Title.Height = '0'
             Title.ShowHint = True
@@ -316,31 +313,30 @@ object ISFReferences: TISFReferences
         Align = alTop
         BorderOptions.NumericWidth = 0
         BorderOptions.Style = cbsNone
-        ExplicitWidth = 699
         object iwbAddNewReference: TIWButton
+          AlignWithMargins = False
           Left = 222
           Top = 11
           Width = 133
           Height = 25
           Caption = 'Add New Reference'
           Color = clWebLIGHTSKYBLUE
-          Font.Color = clNone
           Font.Size = 9
-          Font.Style = []
+          Font.PxSize = 12
           FriendlyName = 'iwbAddNewReference'
           TabOrder = 6
           OnClick = iwbAddNewReferenceClick
         end
         object iwbReturn: TIWButton
+          AlignWithMargins = False
           Left = 5
           Top = 11
           Width = 162
           Height = 25
           Caption = 'Return'
           Color = clWebLIGHTGREEN
-          Font.Color = clNone
           Font.Size = 9
-          Font.Style = []
+          Font.PxSize = 12
           FriendlyName = 'iwbReturn'
           OnClick = iwbReturnClick
         end
@@ -354,27 +350,28 @@ object ISFReferences: TISFReferences
         Align = alTop
         BorderOptions.NumericWidth = 0
         BorderOptions.Style = cbsNone
-        ExplicitWidth = 699
         DesignSize = (
           701
           48)
         object iwlSortedBy: TIWLabel
+          AlignWithMargins = False
           Left = 549
           Top = 31
           Width = 137
           Height = 14
           Anchors = [akTop, akRight]
           Alignment = taRightJustify
-          Font.Color = clNone
           Font.FontName = 'Arial'
           Font.Size = 8
           Font.Style = [fsItalic]
+          Font.PxSize = 10
           HasTabOrder = False
           FriendlyName = 'iwlSortedBy'
           Caption = 'Sorted as specified in query'
           ExplicitLeft = 545
         end
         object iwlLastPage: TIWLink
+          AlignWithMargins = False
           Left = 263
           Top = 28
           Width = 34
@@ -383,10 +380,11 @@ object ISFReferences: TISFReferences
           StyleRenderOptions.RenderSize = False
           Alignment = taLeftJustify
           Color = clNone
-          Font.Color = clWebBLUE
           Font.FontName = 'Arial'
           Font.Size = 9
-          Font.Style = []
+          Font.Style = [fsUnderline]
+          Font.PxSize = 12
+          Font.Color = clWebBLUE
           HasTabOrder = True
           DoSubmitValidation = False
           FriendlyName = 'iwlLastPage'
@@ -396,6 +394,7 @@ object ISFReferences: TISFReferences
           Caption = 'Last'
         end
         object iwlFirstPage: TIWLink
+          AlignWithMargins = False
           Left = 14
           Top = 28
           Width = 33
@@ -404,10 +403,11 @@ object ISFReferences: TISFReferences
           StyleRenderOptions.RenderSize = False
           Alignment = taLeftJustify
           Color = clNone
-          Font.Color = clWebBLUE
           Font.FontName = 'Arial'
           Font.Size = 9
-          Font.Style = []
+          Font.Style = [fsUnderline]
+          Font.PxSize = 12
+          Font.Color = clWebBLUE
           HasTabOrder = True
           DoSubmitValidation = False
           FriendlyName = 'iwlFirstPage'
@@ -417,19 +417,20 @@ object ISFReferences: TISFReferences
           Caption = 'First'
         end
         object iwlOf: TIWLabel
+          AlignWithMargins = False
           Left = 156
           Top = 28
           Width = 11
           Height = 15
-          Font.Color = clNone
           Font.FontName = 'Arial'
           Font.Size = 9
-          Font.Style = []
+          Font.PxSize = 12
           HasTabOrder = False
           FriendlyName = 'iwlOf'
           Caption = 'of'
         end
         object iwlNextPage: TIWLink
+          AlignWithMargins = False
           Left = 222
           Top = 28
           Width = 35
@@ -438,10 +439,11 @@ object ISFReferences: TISFReferences
           StyleRenderOptions.RenderSize = False
           Alignment = taLeftJustify
           Color = clNone
-          Font.Color = clWebBLUE
           Font.FontName = 'Arial'
           Font.Size = 9
-          Font.Style = []
+          Font.Style = [fsUnderline]
+          Font.PxSize = 12
+          Font.Color = clWebBLUE
           HasTabOrder = True
           DoSubmitValidation = False
           FriendlyName = 'iwlNextPage'
@@ -451,33 +453,34 @@ object ISFReferences: TISFReferences
           Caption = 'Next'
         end
         object iwlPageNum: TIWLabel
+          AlignWithMargins = False
           Left = 132
           Top = 28
           Width = 14
           Height = 15
           Alignment = taRightJustify
-          Font.Color = clNone
           Font.FontName = 'Arial'
           Font.Size = 9
-          Font.Style = []
+          Font.PxSize = 12
           HasTabOrder = False
           FriendlyName = 'IWLabel1'
           Caption = '11'
         end
         object iwlPageNumTotal: TIWLabel
+          AlignWithMargins = False
           Left = 191
           Top = 28
           Width = 15
           Height = 15
-          Font.Color = clNone
           Font.FontName = 'Arial'
           Font.Size = 9
-          Font.Style = []
+          Font.PxSize = 12
           HasTabOrder = False
           FriendlyName = 'iwlPageNumTotal'
           Caption = '11'
         end
         object iwlPrevPage: TIWLink
+          AlignWithMargins = False
           Left = 53
           Top = 28
           Width = 53
@@ -486,10 +489,11 @@ object ISFReferences: TISFReferences
           StyleRenderOptions.RenderSize = False
           Alignment = taLeftJustify
           Color = clNone
-          Font.Color = clWebBLUE
           Font.FontName = 'Arial'
           Font.Size = 9
-          Font.Style = []
+          Font.Style = [fsUnderline]
+          Font.PxSize = 12
+          Font.Color = clWebBLUE
           HasTabOrder = True
           DoSubmitValidation = False
           FriendlyName = 'iwlPrevPage'

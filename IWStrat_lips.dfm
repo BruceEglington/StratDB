@@ -18,6 +18,7 @@ object ISFLIPS: TISFLIPS
   DesignLeft = 2
   DesignTop = 2
   object iwDBg: TIWDBGrid
+    AlignWithMargins = False
     Left = 103
     Top = 188
     Width = 652
@@ -30,24 +31,24 @@ object ISFLIPS: TISFLIPS
     BorderStyle = tfDefault
     CellPadding = 0
     CellSpacing = 0
-    Font.Color = clNone
     Font.FontName = 'Verdana'
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     FrameBuffer = 40
     Lines = tlAll
     UseFrame = False
     UseSize = True
+    ShowEmptyCells = True
+    ShowInvisibleRows = True
     ScrollToCurrentRow = False
     Columns = <
       item
         Alignment = taCenter
         BGColor = clNone
         DoSubmitValidation = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 8
-        Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -56,7 +57,6 @@ object ISFLIPS: TISFLIPS
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'LIPID'
@@ -64,10 +64,10 @@ object ISFLIPS: TISFLIPS
         Title.Alignment = taCenter
         Title.BGColor = clNone
         Title.DoSubmitValidation = True
-        Title.Font.Color = clNone
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -82,10 +82,9 @@ object ISFLIPS: TISFLIPS
         Alignment = taLeftJustify
         BGColor = clNone
         DoSubmitValidation = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 8
-        Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -94,17 +93,16 @@ object ISFLIPS: TISFLIPS
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'CONTINENTID'
         Title.Alignment = taCenter
         Title.BGColor = clNone
         Title.DoSubmitValidation = True
-        Title.Font.Color = clNone
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -119,10 +117,9 @@ object ISFLIPS: TISFLIPS
         Alignment = taLeftJustify
         BGColor = clNone
         DoSubmitValidation = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 8
-        Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -131,7 +128,6 @@ object ISFLIPS: TISFLIPS
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'LIPNAME'
@@ -139,10 +135,10 @@ object ISFLIPS: TISFLIPS
         Title.Alignment = taCenter
         Title.BGColor = clNone
         Title.DoSubmitValidation = True
-        Title.Font.Color = clNone
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -157,10 +153,9 @@ object ISFLIPS: TISFLIPS
         Alignment = taCenter
         BGColor = clNone
         DoSubmitValidation = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 8
-        Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -169,7 +164,6 @@ object ISFLIPS: TISFLIPS
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'LIPPARENTID'
@@ -177,10 +171,10 @@ object ISFLIPS: TISFLIPS
         Title.Alignment = taCenter
         Title.BGColor = clNone
         Title.DoSubmitValidation = True
-        Title.Font.Color = clNone
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -206,47 +200,46 @@ object ISFLIPS: TISFLIPS
     RowHeaderColor = clWebLIGHTSTEELBLUE
     RowAlternateColor = clNone
     RowCurrentColor = clWebYELLOW
-    TabOrder = -1
   end
   object iwlSortedBy: TIWLabel
+    AlignWithMargins = False
     Left = 516
     Top = 174
     Width = 137
     Height = 14
     Alignment = taRightJustify
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 8
     Font.Style = [fsItalic]
+    Font.PxSize = 10
     HasTabOrder = False
     FriendlyName = 'iwlSortedBy'
     Caption = 'Sorted as specified in query'
   end
   object iwbClose: TIWButton
+    AlignWithMargins = False
     Left = 102
     Top = 74
     Width = 75
     Height = 25
     Caption = 'Close'
     Color = clWebLIGHTGREEN
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbClose'
-    TabOrder = 0
     OnClick = iwbCloseClick
   end
   object rectLeft: TIWRectangle
+    AlignWithMargins = False
     Left = 0
     Top = 55
     Width = 83
     Height = 543
     Align = alLeft
     ZIndex = 1
+    Font.PxSize = 13
     Font.Color = clWebBLACK
-    Font.Size = 10
-    Font.Style = []
     BorderOptions.Width = 0
     FriendlyName = 'rectLeft'
     Color = clWebLAVENDER
@@ -254,21 +247,22 @@ object ISFLIPS: TISFLIPS
     VAlign = vaMiddle
   end
   object iwbDownload: TIWButton
+    AlignWithMargins = False
     Left = 196
     Top = 74
     Width = 129
     Height = 25
     Caption = 'Download to Excel'
     Color = clBtnFace
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbDownload'
     TabOrder = 1
     OnClick = iwbDownloadClick
   end
   object iwbApplyUpdates: TIWButton
+    AlignWithMargins = False
     Left = 338
     Top = 74
     Width = 129
@@ -276,14 +270,14 @@ object ISFLIPS: TISFLIPS
     Visible = False
     Caption = 'Save changes'
     Color = clWebPEACHPUFF
-    Font.Color = clNone
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbApplyUpdates'
     TabOrder = 2
     OnClick = iwbApplyUpdatesClick
   end
   object iwbCancelUpdates: TIWButton
+    AlignWithMargins = False
     Left = 480
     Top = 74
     Width = 129
@@ -291,14 +285,14 @@ object ISFLIPS: TISFLIPS
     Visible = False
     Caption = 'Cancel changes'
     Color = clWebLIGHTSTEELBLUE
-    Font.Color = clNone
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbCancelUpdates'
     TabOrder = 3
     OnClick = iwbCancelUpdatesClick
   end
   object iwbAddNew: TIWButton
+    AlignWithMargins = False
     Left = 622
     Top = 74
     Width = 133
@@ -306,14 +300,14 @@ object ISFLIPS: TISFLIPS
     Visible = False
     Caption = 'Add New'
     Color = clWebLIGHTSKYBLUE
-    Font.Color = clNone
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbAddNew'
     TabOrder = 4
     OnClick = iwbAddNewClick
   end
   object IWDBNavigator1: TIWDBNavigator
+    AlignWithMargins = False
     Left = 338
     Top = 154
     Width = 120
@@ -352,7 +346,7 @@ object ISFLIPS: TISFLIPS
     ExplicitWidth = 800
     inherited IWFrameRegion: TIWRegion
       Width = 800
-      TabOrder = 6
+      TabOrder = 5
       ExplicitWidth = 800
       inherited iwrHeader: TIWRegion
         Width = 800
@@ -365,6 +359,7 @@ object ISFLIPS: TISFLIPS
             ExplicitWidth = 600
             inherited lblWelcome: TIWLabel
               Left = 471
+              Font.Color = clWebDARKSLATEGRAY
               ExplicitLeft = 561
             end
           end
@@ -372,6 +367,15 @@ object ISFLIPS: TISFLIPS
         inherited iwrSignInOut: TIWRegion
           Width = 800
           ExplicitWidth = 800
+          inherited iwlSignOut: TIWLink
+            Font.Color = clWebBLUE
+          end
+          inherited lnkSignIn: TIWLink
+            Font.Color = clWebBLUE
+          end
+          inherited lblProgTitle: TIWLabel
+            Font.Color = clWebSTEELBLUE
+          end
         end
       end
     end

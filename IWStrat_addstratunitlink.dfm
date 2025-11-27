@@ -18,6 +18,7 @@ object ISFAddStratUnitLink: TISFAddStratUnitLink
   DesignLeft = 2
   DesignTop = 2
   object IWDBEdit1: TIWDBEdit
+    AlignWithMargins = False
     Left = 242
     Top = 108
     Width = 73
@@ -25,10 +26,10 @@ object ISFAddStratUnitLink: TISFAddStratUnitLink
     StyleRenderOptions.RenderBorder = False
     Editable = False
     NonEditableAsLabel = True
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
     SubmitOnAsyncEvent = True
     TabOrder = 2
@@ -38,68 +39,68 @@ object ISFAddStratUnitLink: TISFAddStratUnitLink
     PasswordPrompt = False
   end
   object iwbReturn: TIWButton
+    AlignWithMargins = False
     Left = 102
     Top = 72
     Width = 104
     Height = 25
     Caption = 'Return'
     Color = clWebLIGHTGREEN
-    Font.Color = clNone
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbReturn'
     OnClick = iwbReturnClick
   end
   object IWLabel1: TIWLabel
+    AlignWithMargins = False
     Left = 104
     Top = 110
     Width = 64
     Height = 15
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'Domain ID'
   end
   object IWLabel2: TIWLabel
+    AlignWithMargins = False
     Left = 104
     Top = 136
     Width = 86
     Height = 15
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     HasTabOrder = False
     FriendlyName = 'IWLabel2'
     Caption = 'Lithostrat. Unit'
   end
   object iwbCancelUpdates: TIWButton
+    AlignWithMargins = False
     Left = 432
     Top = 72
     Width = 104
     Height = 25
     Caption = 'Cancel Updates'
     Color = clWebLIGHTSALMON
-    Font.Color = clNone
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbCancelUpdates'
     TabOrder = 1
     OnClick = iwbCancelUpdatesClick
   end
   object rectLeft: TIWRectangle
+    AlignWithMargins = False
     Left = 0
     Top = 55
     Width = 83
     Height = 350
     Align = alLeft
     ZIndex = 1
+    Font.PxSize = 13
     Font.Color = clWebBLACK
-    Font.Size = 10
-    Font.Style = []
     BorderOptions.Width = 0
     FriendlyName = 'rectLeft'
     Color = clWebLAVENDER
@@ -107,15 +108,16 @@ object ISFAddStratUnitLink: TISFAddStratUnitLink
     VAlign = vaMiddle
   end
   object iwDBlcbLink: TIWDBLookupComboBox
+    AlignWithMargins = False
     Left = 240
     Top = 132
     Width = 365
     Height = 21
     StyleRenderOptions.RenderBorder = False
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     Editable = False
     NonEditableAsLabel = True
     TabOrder = 3
@@ -127,9 +129,9 @@ object ISFAddStratUnitLink: TISFAddStratUnitLink
     ListField = 'UNITNAME'
     ListSource = dmStrat.dsUnits
     DisableWhenEmpty = True
-    NoSelectionText = '-- No Selection --'
   end
   object iwDBnLink: TIWDBNavigator
+    AlignWithMargins = False
     Left = 104
     Top = 210
     Width = 120
@@ -145,6 +147,7 @@ object ISFAddStratUnitLink: TISFAddStratUnitLink
     Orientation = orHorizontal
   end
   object iwDBgLink: TIWDBGrid
+    AlignWithMargins = False
     Left = 104
     Top = 244
     Width = 583
@@ -157,24 +160,24 @@ object ISFAddStratUnitLink: TISFAddStratUnitLink
     BorderStyle = tfDefault
     CellPadding = 0
     CellSpacing = 0
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     FrameBuffer = 40
     Lines = tlAll
     UseFrame = True
     UseSize = True
+    ShowEmptyCells = True
+    ShowInvisibleRows = True
     ScrollToCurrentRow = False
     Columns = <
       item
         Alignment = taLeftJustify
         BGColor = clNone
         DoSubmitValidation = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 8
-        Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -183,17 +186,16 @@ object ISFAddStratUnitLink: TISFAddStratUnitLink
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'DOMAINID'
         Title.Alignment = taCenter
         Title.BGColor = clNone
         Title.DoSubmitValidation = True
-        Title.Font.Color = clNone
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -208,10 +210,9 @@ object ISFAddStratUnitLink: TISFAddStratUnitLink
         Alignment = taCenter
         BGColor = clNone
         DoSubmitValidation = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 8
-        Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -220,17 +221,16 @@ object ISFAddStratUnitLink: TISFAddStratUnitLink
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'UNITID'
         Title.Alignment = taCenter
         Title.BGColor = clNone
         Title.DoSubmitValidation = True
-        Title.Font.Color = clNone
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -245,10 +245,9 @@ object ISFAddStratUnitLink: TISFAddStratUnitLink
         Alignment = taLeftJustify
         BGColor = clNone
         DoSubmitValidation = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 8
-        Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -257,17 +256,16 @@ object ISFAddStratUnitLink: TISFAddStratUnitLink
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'UNITNAME'
         Title.Alignment = taCenter
         Title.BGColor = clNone
         Title.DoSubmitValidation = True
-        Title.Font.Color = clNone
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -282,10 +280,9 @@ object ISFAddStratUnitLink: TISFAddStratUnitLink
         Alignment = taLeftJustify
         BGColor = clNone
         DoSubmitValidation = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 8
-        Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -294,17 +291,16 @@ object ISFAddStratUnitLink: TISFAddStratUnitLink
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'UNITRANK'
         Title.Alignment = taCenter
         Title.BGColor = clNone
         Title.DoSubmitValidation = True
-        Title.Font.Color = clNone
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -319,10 +315,9 @@ object ISFAddStratUnitLink: TISFAddStratUnitLink
         Alignment = taLeftJustify
         BGColor = clNone
         DoSubmitValidation = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 8
-        Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -331,17 +326,16 @@ object ISFAddStratUnitLink: TISFAddStratUnitLink
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'COUNTRYID'
         Title.Alignment = taCenter
         Title.BGColor = clNone
         Title.DoSubmitValidation = True
-        Title.Font.Color = clNone
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -369,75 +363,74 @@ object ISFAddStratUnitLink: TISFAddStratUnitLink
     RowCurrentColor = clWebYELLOW
   end
   object iwbDeleteLink: TIWButton
+    AlignWithMargins = False
     Left = 542
     Top = 72
     Width = 145
     Height = 25
     Caption = 'Delete Current Record'
     Color = clWebLIGHTCORAL
-    Font.Color = clNone
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbDeleteLink'
     TabOrder = 4
     OnClick = iwbDeleteLinkClick
   end
   object iwbEdit: TIWButton
+    AlignWithMargins = False
     Left = 212
     Top = 72
     Width = 104
     Height = 25
     Caption = 'Edit'
     Color = clWebLEMONCHIFFON
-    Font.Color = clNone
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbEdit'
     TabOrder = 5
     OnClick = iwbEditClick
   end
   object iwbApplyUpdates: TIWButton
+    AlignWithMargins = False
     Left = 322
     Top = 72
     Width = 104
     Height = 25
     Caption = 'Apply Updates'
     Color = clWebPEACHPUFF
-    Font.Color = clNone
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbApplyUpdates'
     TabOrder = 6
     OnClick = iwbApplyUpdatesClick
   end
   object IWButton1: TIWButton
+    AlignWithMargins = False
     Left = 572
     Top = 212
     Width = 75
     Height = 25
     Caption = 'IWButton1'
     Color = clBtnFace
-    Font.Color = clNone
-    Font.Size = 10
-    Font.Style = []
     FriendlyName = 'IWButton1'
     TabOrder = 7
     OnClick = IWButton1Click
   end
   object IWLabel3: TIWLabel
+    AlignWithMargins = False
     Left = 104
     Top = 160
     Width = 125
     Height = 15
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'Incl. for Chart (0 or 1)'
   end
   object IWDBEdit2: TIWDBEdit
+    AlignWithMargins = False
     Left = 239
     Top = 160
     Width = 22
@@ -445,10 +438,10 @@ object ISFAddStratUnitLink: TISFAddStratUnitLink
     StyleRenderOptions.RenderBorder = False
     Editable = False
     NonEditableAsLabel = True
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
     SubmitOnAsyncEvent = True
     TabOrder = 8
@@ -494,6 +487,7 @@ object ISFAddStratUnitLink: TISFAddStratUnitLink
             ExplicitWidth = 489
             inherited lblWelcome: TIWLabel
               Left = 216
+              Font.Color = clWebDARKSLATEGRAY
               ExplicitLeft = 216
             end
           end
@@ -502,7 +496,13 @@ object ISFAddStratUnitLink: TISFAddStratUnitLink
           Width = 689
           ExplicitWidth = 689
           inherited iwlSignOut: TIWLink
-            TabOrder = -1
+            Font.Color = clWebBLUE
+          end
+          inherited lnkSignIn: TIWLink
+            Font.Color = clWebBLUE
+          end
+          inherited lblProgTitle: TIWLabel
+            Font.Color = clWebSTEELBLUE
           end
         end
       end

@@ -17,102 +17,106 @@ object ISFReferenceQuery: TISFReferenceQuery
   DesignLeft = 2
   DesignTop = 2
   object iweReferenceFrom: TIWEdit
+    AlignWithMargins = False
     Left = 142
     Top = 103
     Width = 179
     Height = 21
     StyleRenderOptions.RenderBorder = False
     NonEditableAsLabel = True
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'IWEdit1'
     SubmitOnAsyncEvent = True
     TabOrder = 1
   end
   object IWLabel1: TIWLabel
+    AlignWithMargins = False
     Left = 102
     Top = 80
     Width = 158
     Height = 15
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'Show references ranging'
   end
   object iwbSubmit: TIWButton
+    AlignWithMargins = False
     Left = 102
     Top = 616
     Width = 349
     Height = 25
     Caption = 'Submit'
     Color = clWebLIGHTGREEN
-    Font.Color = clNone
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbSubmit'
     TabOrder = 5
     OnClick = iwbSubmitClick
   end
   object IWLabel2: TIWLabel
+    AlignWithMargins = False
     Left = 102
     Top = 106
     Width = 29
     Height = 15
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel2'
     Caption = 'from'
   end
   object IWLabel3: TIWLabel
+    AlignWithMargins = False
     Left = 102
     Top = 134
     Width = 12
     Height = 15
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel3'
     Caption = 'to'
   end
   object iweReferenceTo: TIWEdit
+    AlignWithMargins = False
     Left = 142
     Top = 131
     Width = 179
     Height = 21
     StyleRenderOptions.RenderBorder = False
     NonEditableAsLabel = True
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'IWEdit1'
     SubmitOnAsyncEvent = True
     TabOrder = 2
   end
   object iwcbContinents: TIWCheckBox
+    AlignWithMargins = False
     Left = 102
     Top = 174
     Width = 351
     Height = 21
     Caption = 'Include selection from Regions'
     Editable = True
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     SubmitOnAsyncEvent = True
     Style = stNormal
     TabOrder = 3
@@ -120,14 +124,14 @@ object ISFReferenceQuery: TISFReferenceQuery
     FriendlyName = 'iwcbContinents'
   end
   object iwlContinents: TIWListbox
+    AlignWithMargins = False
     Left = 104
     Top = 196
     Width = 349
     Height = 373
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     RequireSelection = False
     UseSize = False
     TabOrder = 4
@@ -139,46 +143,47 @@ object ISFReferenceQuery: TISFReferenceQuery
       'two=2')
     Sorted = True
     MultiSelect = True
-    NoSelectionText = '-- No Selection --'
   end
   object lblFromError: TIWLabel
+    AlignWithMargins = False
     Left = 353
     Top = 104
     Width = 75
     Height = 15
-    Font.Color = clWebRED
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
+    Font.Color = clWebRED
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'lblFromError'
     Caption = 'lblFromError'
   end
   object lblToError: TIWLabel
+    AlignWithMargins = False
     Left = 353
     Top = 132
     Width = 59
     Height = 15
-    Font.Color = clWebRED
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
+    Font.Color = clWebRED
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'lblToError'
     Caption = 'lblToError'
   end
   object rectLeft: TIWRectangle
+    AlignWithMargins = False
     Left = 0
     Top = 55
     Width = 83
     Height = 649
     Align = alLeft
     ZIndex = 1
+    Font.PxSize = 13
     Font.Color = clWebBLACK
-    Font.Size = 10
-    Font.Style = []
     BorderOptions.Width = 0
     FriendlyName = 'rectLeft'
     Color = clWebLAVENDER
@@ -225,6 +230,7 @@ object ISFReferenceQuery: TISFReferenceQuery
               Left = 254
               Width = 64
               Alignment = taRightJustify
+              Font.Color = clWebDARKSLATEGRAY
               ExplicitLeft = 419
               ExplicitWidth = 64
             end
@@ -234,7 +240,13 @@ object ISFReferenceQuery: TISFReferenceQuery
           Width = 727
           ExplicitWidth = 727
           inherited iwlSignOut: TIWLink
-            TabOrder = -1
+            Font.Color = clWebBLUE
+          end
+          inherited lnkSignIn: TIWLink
+            Font.Color = clWebBLUE
+          end
+          inherited lblProgTitle: TIWLabel
+            Font.Color = clWebSTEELBLUE
           end
         end
       end

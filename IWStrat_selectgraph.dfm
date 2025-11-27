@@ -17,6 +17,7 @@ object ISFSelectGraph: TISFSelectGraph
   DesignLeft = 2
   DesignTop = 2
   object iwrgPlotType: TIWRadioGroup
+    AlignWithMargins = False
     Left = 112
     Top = 100
     Width = 537
@@ -24,10 +25,9 @@ object ISFSelectGraph: TISFSelectGraph
     SubmitOnAsyncEvent = True
     RawText = False
     Editable = True
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwrgPlotType'
     ItemIndex = 0
     Items.Strings = (
@@ -36,34 +36,36 @@ object ISFSelectGraph: TISFSelectGraph
     Layout = glVertical
   end
   object IWLabel1: TIWLabel
+    AlignWithMargins = False
     Left = 92
     Top = 76
     Width = 152
     Height = 15
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'Choose the plot required'
   end
   object iwbSubmitGraphSelection: TIWButton
+    AlignWithMargins = False
     Left = 238
     Top = 384
     Width = 75
     Height = 25
     Caption = 'Submit'
     Color = clWebLIGHTGREEN
-    Font.Color = clNone
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbSubmitGraphSelection'
     TabOrder = 6
     OnClick = iwbSubmitGraphSelectionClick
   end
   object iwrgNormalisationType: TIWRadioGroup
+    AlignWithMargins = False
     Left = 110
     Top = 182
     Width = 550
@@ -72,10 +74,9 @@ object ISFSelectGraph: TISFSelectGraph
     SubmitOnAsyncEvent = True
     RawText = False
     Editable = True
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwrgPlotType'
     ItemIndex = 0
     Items.Strings = (
@@ -87,29 +88,30 @@ object ISFSelectGraph: TISFSelectGraph
     TabOrder = 1
   end
   object IWLabel3: TIWLabel
+    AlignWithMargins = False
     Left = 92
     Top = 158
     Width = 181
     Height = 15
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'Probability plot normalisation'
   end
   object rectLeft: TIWRectangle
+    AlignWithMargins = False
     Left = 0
     Top = 55
     Width = 83
     Height = 592
     Align = alLeft
     ZIndex = 1
+    Font.PxSize = 13
     Font.Color = clWebBLACK
-    Font.Size = 10
-    Font.Style = []
     BorderOptions.Width = 0
     FriendlyName = 'rectLeft'
     Color = clWebLAVENDER
@@ -117,80 +119,82 @@ object ISFSelectGraph: TISFSelectGraph
     VAlign = vaMiddle
   end
   object iwlSpectrumAgeHeading: TIWLabel
+    AlignWithMargins = False
     Left = 92
     Top = 236
     Width = 178
     Height = 15
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'iwlSpectrumAges'
     Caption = 'Probability density age limits'
   end
   object iwlFromAge: TIWLabel
+    AlignWithMargins = False
     Left = 112
     Top = 258
     Width = 88
     Height = 15
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'iwlFromAge'
     Caption = 'Older age limit'
   end
   object iweFromAge: TIWEdit
+    AlignWithMargins = False
     Left = 202
     Top = 256
     Width = 67
     Height = 21
     StyleRenderOptions.RenderBorder = False
     NonEditableAsLabel = True
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iweFromAge'
     SubmitOnAsyncEvent = True
     TabOrder = 3
     Text = 'iweFromAge'
   end
   object iwlToAge: TIWLabel
+    AlignWithMargins = False
     Left = 294
     Top = 258
     Width = 105
     Height = 15
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'iwlToAge'
     Caption = 'Younger age limit'
   end
   object iwetoAge: TIWEdit
+    AlignWithMargins = False
     Left = 402
     Top = 256
     Width = 67
     Height = 21
     StyleRenderOptions.RenderBorder = False
     NonEditableAsLabel = True
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwetoAge'
     SubmitOnAsyncEvent = True
     TabOrder = 4
     Text = 'iweFromAge'
   end
   object iwcbSpectrumAges: TIWCheckBox
+    AlignWithMargins = False
     Left = 350
     Top = 232
     Width = 121
@@ -198,10 +202,9 @@ object ISFSelectGraph: TISFSelectGraph
     Cursor = crAuto
     Caption = 'Reset to defaults'
     Editable = True
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     SubmitOnAsyncEvent = True
     Style = stNormal
     TabOrder = 2
@@ -210,6 +213,7 @@ object ISFSelectGraph: TISFSelectGraph
     FriendlyName = 'iwcbSpectrumAges'
   end
   object iwrgPDFType: TIWRadioGroup
+    AlignWithMargins = False
     Left = 110
     Top = 314
     Width = 434
@@ -218,10 +222,9 @@ object ISFSelectGraph: TISFSelectGraph
     SubmitOnAsyncEvent = True
     RawText = False
     Editable = True
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwrgShowAllSampleLocalities'
     ItemIndex = 1
     Items.Strings = (
@@ -231,29 +234,30 @@ object ISFSelectGraph: TISFSelectGraph
     TabOrder = 5
   end
   object IWLabel4: TIWLabel
+    AlignWithMargins = False
     Left = 92
     Top = 293
     Width = 198
     Height = 15
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'iwlSpectrumAges'
     Caption = 'Probability density function type'
   end
   object iwbReturn: TIWButton
+    AlignWithMargins = False
     Left = 406
     Top = 384
     Width = 135
     Height = 25
     Caption = 'Return to Main Form'
     Color = clWebLIGHTSALMON
-    Font.Color = clNone
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbReturn'
     TabOrder = 7
     OnClick = iwbReturnClick
@@ -295,6 +299,7 @@ object ISFSelectGraph: TISFSelectGraph
             ExplicitWidth = 905
             inherited lblWelcome: TIWLabel
               Left = 776
+              Font.Color = clWebDARKSLATEGRAY
               ExplicitLeft = 561
             end
           end
@@ -303,7 +308,13 @@ object ISFSelectGraph: TISFSelectGraph
           Width = 1105
           ExplicitWidth = 1105
           inherited iwlSignOut: TIWLink
-            TabOrder = -1
+            Font.Color = clWebBLUE
+          end
+          inherited lnkSignIn: TIWLink
+            Font.Color = clWebBLUE
+          end
+          inherited lblProgTitle: TIWLabel
+            Font.Color = clWebSTEELBLUE
           end
         end
       end

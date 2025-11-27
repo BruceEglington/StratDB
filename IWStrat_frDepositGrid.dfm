@@ -51,6 +51,12 @@ object ISFDepositGrid: TISFDepositGrid
           ExplicitHeight = 768
           inherited IWMenu1: TIWMenu
             Height = 688
+            MainMenuStyle.MenuItemFont.Color = clWebINDIGO
+            MainMenuStyle.SelectedMenuItemFont.Color = clWebINDIGO
+            MainMenuStyle.DisabledMenuItemFont.Color = clWebSILVER
+            SubMenuStyle.MenuItemFont.Color = clWebINDIGO
+            SubMenuStyle.SelectedMenuItemFont.Color = clWebINDIGO
+            SubMenuStyle.DisabledMenuItemFont.Color = clWebSILVER
             ExplicitHeight = 344
           end
           inherited IWRegion2: TIWRegion
@@ -101,9 +107,7 @@ object ISFDepositGrid: TISFDepositGrid
         Anchors = [akTop, akRight]
         Caption = 'Download to Excel'
         Color = clBtnFace
-        Font.Color = clNone
         Font.Size = 9
-        Font.Style = []
         Font.PxSize = 12
         FriendlyName = 'iwbDownload'
         OnClick = iwbDownloadClick
@@ -119,11 +123,11 @@ object ISFDepositGrid: TISFDepositGrid
         StyleRenderOptions.RenderSize = False
         Alignment = taLeftJustify
         Color = clNone
-        Font.Color = clWebBLUE
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
+        Font.Style = [fsUnderline]
         Font.PxSize = 12
+        Font.Color = clWebBLUE
         HasTabOrder = True
         DoSubmitValidation = False
         FriendlyName = 'iwlFirstPage'
@@ -142,11 +146,11 @@ object ISFDepositGrid: TISFDepositGrid
         StyleRenderOptions.RenderSize = False
         Alignment = taLeftJustify
         Color = clNone
-        Font.Color = clWebBLUE
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
+        Font.Style = [fsUnderline]
         Font.PxSize = 12
+        Font.Color = clWebBLUE
         HasTabOrder = True
         DoSubmitValidation = False
         FriendlyName = 'iwlLastPage'
@@ -165,11 +169,11 @@ object ISFDepositGrid: TISFDepositGrid
         StyleRenderOptions.RenderSize = False
         Alignment = taLeftJustify
         Color = clNone
-        Font.Color = clWebBLUE
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
+        Font.Style = [fsUnderline]
         Font.PxSize = 12
+        Font.Color = clWebBLUE
         HasTabOrder = True
         DoSubmitValidation = False
         FriendlyName = 'iwlNextPage'
@@ -188,11 +192,11 @@ object ISFDepositGrid: TISFDepositGrid
         StyleRenderOptions.RenderSize = False
         Alignment = taLeftJustify
         Color = clNone
-        Font.Color = clWebBLUE
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
+        Font.Style = [fsUnderline]
         Font.PxSize = 12
+        Font.Color = clWebBLUE
         HasTabOrder = True
         DoSubmitValidation = False
         FriendlyName = 'iwlPrevPage'
@@ -207,10 +211,8 @@ object ISFDepositGrid: TISFDepositGrid
         Top = 35
         Width = 15
         Height = 15
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
         Font.PxSize = 12
         HasTabOrder = False
         FriendlyName = 'iwlPageNumTotal'
@@ -223,7 +225,6 @@ object ISFDepositGrid: TISFDepositGrid
         Width = 150
         Height = 14
         Anchors = [akTop, akRight]
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 8
         Font.Style = [fsItalic]
@@ -241,10 +242,8 @@ object ISFDepositGrid: TISFDepositGrid
         Width = 14
         Height = 15
         Alignment = taRightJustify
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
         Font.PxSize = 12
         HasTabOrder = False
         FriendlyName = 'IWLabel1'
@@ -256,10 +255,8 @@ object ISFDepositGrid: TISFDepositGrid
         Top = 13
         Width = 145
         Height = 15
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
         Font.PxSize = 12
         NoWrap = True
         HasTabOrder = False
@@ -272,10 +269,8 @@ object ISFDepositGrid: TISFDepositGrid
         Top = 35
         Width = 11
         Height = 15
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
         Font.PxSize = 12
         HasTabOrder = False
         FriendlyName = 'iwlOf'
@@ -305,10 +300,8 @@ object ISFDepositGrid: TISFDepositGrid
         Anchors = [akTop, akRight]
         Caption = 'Download Commodities to Excel'
         Color = clBtnFace
-        Font.Color = clNone
         Font.FontName = 'Tahoma'
         Font.Size = 9
-        Font.Style = []
         Font.PxSize = 12
         FriendlyName = 'iwbDownloadCommodities'
         TabOrder = 6
@@ -322,10 +315,8 @@ object ISFDepositGrid: TISFDepositGrid
         Width = 349
         Height = 13
         Anchors = [akTop, akRight]
-        Font.Color = clNone
         Font.FontName = 'Tahoma'
         Font.Size = 8
-        Font.Style = []
         Font.PxSize = 10
         NoWrap = True
         HasTabOrder = False
@@ -341,10 +332,7 @@ object ISFDepositGrid: TISFDepositGrid
         Height = 21
         Anchors = [akTop, akRight]
         StyleRenderOptions.RenderBorder = False
-        Font.Color = clNone
         Font.FontName = 'Tahoma'
-        Font.Size = 10
-        Font.Style = []
         Font.PxSize = 13
         TabOrder = 8
         AutoEditable = False
@@ -354,7 +342,6 @@ object ISFDepositGrid: TISFDepositGrid
         ListSource = dmStratD.dsCommodityAssociations
         DisableWhenEmpty = True
         ExplicitLeft = 560
-        NoSelectionText = '-- No Selection --'
       end
       object IWLabel2: TIWLabel
         AlignWithMargins = False
@@ -363,10 +350,7 @@ object ISFDepositGrid: TISFDepositGrid
         Width = 145
         Height = 16
         Anchors = [akTop, akRight]
-        Font.Color = clNone
         Font.FontName = 'Tahoma'
-        Font.Size = 10
-        Font.Style = []
         Font.PxSize = 13
         NoWrap = True
         HasTabOrder = False
@@ -399,10 +383,8 @@ object ISFDepositGrid: TISFDepositGrid
         BorderStyle = tfDefault
         CellPadding = 2
         CellSpacing = 0
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 8
-        Font.Style = []
         Font.PxSize = 10
         FrameBuffer = 40
         Lines = tlAll
@@ -416,10 +398,8 @@ object ISFDepositGrid: TISFDepositGrid
             Alignment = taCenter
             BGColor = clNone
             DoSubmitValidation = True
-            Font.Color = clNone
             Font.FontName = 'Arial'
             Font.Size = 8
-            Font.Style = []
             Font.PxSize = 10
             Header = False
             Height = '0'
@@ -429,7 +409,6 @@ object ISFDepositGrid: TISFDepositGrid
             Width = '0'
             Wrap = False
             RawText = False
-            Css = ''
             BlobCharLimit = 0
             CompareHighlight = hcNone
             DataField = 'SDBDEPOSITID'
@@ -438,7 +417,6 @@ object ISFDepositGrid: TISFDepositGrid
             Title.Alignment = taCenter
             Title.BGColor = clNone
             Title.DoSubmitValidation = True
-            Title.Font.Color = clNone
             Title.Font.FontName = 'Arial'
             Title.Font.Size = 8
             Title.Font.Style = [fsBold]
@@ -457,10 +435,8 @@ object ISFDepositGrid: TISFDepositGrid
             Alignment = taLeftJustify
             BGColor = clNone
             DoSubmitValidation = True
-            Font.Color = clNone
             Font.FontName = 'Arial'
             Font.Size = 8
-            Font.Style = []
             Font.PxSize = 10
             Header = False
             Height = '0'
@@ -470,14 +446,12 @@ object ISFDepositGrid: TISFDepositGrid
             Width = '0'
             Wrap = True
             RawText = False
-            Css = ''
             BlobCharLimit = 0
             CompareHighlight = hcNone
             DataField = 'DEPOSITNAME'
             Title.Alignment = taCenter
             Title.BGColor = clNone
             Title.DoSubmitValidation = True
-            Title.Font.Color = clNone
             Title.Font.FontName = 'Arial'
             Title.Font.Size = 8
             Title.Font.Style = [fsBold]
@@ -496,10 +470,8 @@ object ISFDepositGrid: TISFDepositGrid
             Alignment = taLeftJustify
             BGColor = clNone
             DoSubmitValidation = True
-            Font.Color = clNone
             Font.FontName = 'Arial'
             Font.Size = 8
-            Font.Style = []
             Font.PxSize = 10
             Header = False
             Height = '0'
@@ -509,14 +481,12 @@ object ISFDepositGrid: TISFDepositGrid
             Width = '0'
             Wrap = True
             RawText = False
-            Css = ''
             BlobCharLimit = 0
             CompareHighlight = hcNone
             DataField = 'DEPOSITCLAN'
             Title.Alignment = taCenter
             Title.BGColor = clNone
             Title.DoSubmitValidation = True
-            Title.Font.Color = clNone
             Title.Font.FontName = 'Arial'
             Title.Font.Size = 8
             Title.Font.Style = [fsBold]
@@ -535,10 +505,8 @@ object ISFDepositGrid: TISFDepositGrid
             Alignment = taCenter
             BGColor = clNone
             DoSubmitValidation = True
-            Font.Color = clNone
             Font.FontName = 'Arial'
             Font.Size = 8
-            Font.Style = []
             Font.PxSize = 10
             Header = False
             Height = '0'
@@ -548,14 +516,12 @@ object ISFDepositGrid: TISFDepositGrid
             Width = '0'
             Wrap = True
             RawText = False
-            Css = ''
             BlobCharLimit = 0
             CompareHighlight = hcNone
             DataField = 'COUNTRYID'
             Title.Alignment = taCenter
             Title.BGColor = clNone
             Title.DoSubmitValidation = True
-            Title.Font.Color = clNone
             Title.Font.FontName = 'Arial'
             Title.Font.Size = 8
             Title.Font.Style = [fsBold]
@@ -574,10 +540,8 @@ object ISFDepositGrid: TISFDepositGrid
             Alignment = taRightJustify
             BGColor = clNone
             DoSubmitValidation = True
-            Font.Color = clNone
             Font.FontName = 'Arial'
             Font.Size = 8
-            Font.Style = []
             Font.PxSize = 10
             Header = False
             Height = '0'
@@ -587,14 +551,12 @@ object ISFDepositGrid: TISFDepositGrid
             Width = '0'
             Wrap = True
             RawText = False
-            Css = ''
             BlobCharLimit = 0
             CompareHighlight = hcNone
             DataField = 'DEPLATITUDE'
             Title.Alignment = taCenter
             Title.BGColor = clNone
             Title.DoSubmitValidation = True
-            Title.Font.Color = clNone
             Title.Font.FontName = 'Arial'
             Title.Font.Size = 8
             Title.Font.Style = [fsBold]
@@ -613,10 +575,8 @@ object ISFDepositGrid: TISFDepositGrid
             Alignment = taRightJustify
             BGColor = clNone
             DoSubmitValidation = True
-            Font.Color = clNone
             Font.FontName = 'Arial'
             Font.Size = 8
-            Font.Style = []
             Font.PxSize = 10
             Header = False
             Height = '0'
@@ -626,14 +586,12 @@ object ISFDepositGrid: TISFDepositGrid
             Width = '0'
             Wrap = True
             RawText = False
-            Css = ''
             BlobCharLimit = 0
             CompareHighlight = hcNone
             DataField = 'DEPLONGITUDE'
             Title.Alignment = taCenter
             Title.BGColor = clNone
             Title.DoSubmitValidation = True
-            Title.Font.Color = clNone
             Title.Font.FontName = 'Arial'
             Title.Font.Size = 8
             Title.Font.Style = [fsBold]
@@ -652,10 +610,8 @@ object ISFDepositGrid: TISFDepositGrid
             Alignment = taRightJustify
             BGColor = clNone
             DoSubmitValidation = True
-            Font.Color = clNone
             Font.FontName = 'Arial'
             Font.Size = 8
-            Font.Style = []
             Font.PxSize = 10
             Header = False
             Height = '0'
@@ -665,14 +621,12 @@ object ISFDepositGrid: TISFDepositGrid
             Width = '0'
             Wrap = False
             RawText = False
-            Css = ''
             BlobCharLimit = 0
             CompareHighlight = hcNone
             DataField = 'APPROXAGE'
             Title.Alignment = taCenter
             Title.BGColor = clNone
             Title.DoSubmitValidation = True
-            Title.Font.Color = clNone
             Title.Font.FontName = 'Arial'
             Title.Font.Size = 8
             Title.Font.Style = [fsBold]
@@ -691,10 +645,8 @@ object ISFDepositGrid: TISFDepositGrid
             Alignment = taRightJustify
             BGColor = clNone
             DoSubmitValidation = True
-            Font.Color = clNone
             Font.FontName = 'Arial'
             Font.Size = 8
-            Font.Style = []
             Font.PxSize = 10
             Header = False
             Height = '0'
@@ -704,14 +656,12 @@ object ISFDepositGrid: TISFDepositGrid
             Width = '0'
             Wrap = False
             RawText = False
-            Css = ''
             BlobCharLimit = 0
             CompareHighlight = hcNone
             DataField = 'APPROXAGEUNCERTAINTY'
             Title.Alignment = taCenter
             Title.BGColor = clNone
             Title.DoSubmitValidation = True
-            Title.Font.Color = clNone
             Title.Font.FontName = 'Arial'
             Title.Font.Size = 8
             Title.Font.Style = [fsBold]
@@ -730,10 +680,8 @@ object ISFDepositGrid: TISFDepositGrid
             Alignment = taLeftJustify
             BGColor = clNone
             DoSubmitValidation = True
-            Font.Color = clNone
             Font.FontName = 'Arial'
             Font.Size = 8
-            Font.Style = []
             Font.PxSize = 10
             Header = False
             Height = '0'
@@ -743,14 +691,12 @@ object ISFDepositGrid: TISFDepositGrid
             Width = '0'
             Wrap = False
             RawText = False
-            Css = ''
             BlobCharLimit = 0
             CompareHighlight = hcNone
             DataField = 'DATINGTYPE'
             Title.Alignment = taCenter
             Title.BGColor = clNone
             Title.DoSubmitValidation = True
-            Title.Font.Color = clNone
             Title.Font.FontName = 'Arial'
             Title.Font.Size = 8
             Title.Font.Style = [fsBold]
@@ -769,10 +715,8 @@ object ISFDepositGrid: TISFDepositGrid
             Alignment = taLeftJustify
             BGColor = clNone
             DoSubmitValidation = True
-            Font.Color = clNone
             Font.FontName = 'Arial'
             Font.Size = 8
-            Font.Style = []
             Font.PxSize = 10
             Header = False
             Height = '0'
@@ -782,14 +726,12 @@ object ISFDepositGrid: TISFDepositGrid
             Width = '0'
             Wrap = False
             RawText = False
-            Css = ''
             BlobCharLimit = 0
             CompareHighlight = hcNone
             DataField = 'GEODYNAMICSETTING'
             Title.Alignment = taCenter
             Title.BGColor = clNone
             Title.DoSubmitValidation = True
-            Title.Font.Color = clNone
             Title.Font.FontName = 'Arial'
             Title.Font.Size = 8
             Title.Font.Style = [fsBold]
@@ -808,10 +750,8 @@ object ISFDepositGrid: TISFDepositGrid
             Alignment = taLeftJustify
             BGColor = clNone
             DoSubmitValidation = True
-            Font.Color = clNone
             Font.FontName = 'Arial'
             Font.Size = 8
-            Font.Style = []
             Font.PxSize = 10
             Header = False
             Height = '0'
@@ -821,14 +761,12 @@ object ISFDepositGrid: TISFDepositGrid
             Width = '0'
             Wrap = False
             RawText = False
-            Css = ''
             BlobCharLimit = 0
             CompareHighlight = hcNone
             DataField = 'DEPOSITPARENTID'
             Title.Alignment = taCenter
             Title.BGColor = clNone
             Title.DoSubmitValidation = True
-            Title.Font.Color = clNone
             Title.Font.FontName = 'Arial'
             Title.Font.Size = 8
             Title.Font.Style = [fsBold]
@@ -847,10 +785,8 @@ object ISFDepositGrid: TISFDepositGrid
             Alignment = taLeftJustify
             BGColor = clNone
             DoSubmitValidation = True
-            Font.Color = clNone
             Font.FontName = 'Arial'
             Font.Size = 8
-            Font.Style = []
             Font.PxSize = 10
             Header = False
             Height = '0'
@@ -860,14 +796,12 @@ object ISFDepositGrid: TISFDepositGrid
             Width = '0'
             Wrap = True
             RawText = False
-            Css = ''
             BlobCharLimit = 0
             CompareHighlight = hcNone
             DataField = 'DATABASENAME'
             Title.Alignment = taCenter
             Title.BGColor = clNone
             Title.DoSubmitValidation = True
-            Title.Font.Color = clNone
             Title.Font.FontName = 'Arial'
             Title.Font.Size = 8
             Title.Font.Style = [fsBold]
@@ -941,6 +875,7 @@ object ISFDepositGrid: TISFDepositGrid
             ExplicitWidth = 879
             inherited lblWelcome: TIWLabel
               Left = 606
+              Font.Color = clWebDARKSLATEGRAY
               NoWrap = True
               ExplicitLeft = 606
             end
@@ -950,7 +885,13 @@ object ISFDepositGrid: TISFDepositGrid
           Width = 1079
           ExplicitWidth = 1079
           inherited iwlSignOut: TIWLink
-            TabOrder = -1
+            Font.Color = clWebBLUE
+          end
+          inherited lnkSignIn: TIWLink
+            Font.Color = clWebBLUE
+          end
+          inherited lblProgTitle: TIWLabel
+            Font.Color = clWebSTEELBLUE
           end
         end
       end

@@ -97,7 +97,7 @@ begin
   FrameMenu.IWImageStratDB.Visible := true;
   if (not UserSession.LoggedIn) then
   begin
-    FrameMenu.Visible := false;
+    FrameMenu.Visible := true;    //normally false
   end else
   begin
     FrameMenu.Visible := true;
@@ -204,7 +204,7 @@ begin
   if (UserSession.LoggedIn) then LoadWelcomeMessage;       //bme
   if (not UserSession.LoggedIn) then
   begin
-    FrameMenu.Visible := false;
+    FrameMenu.Visible := true;   //normally false
   end else
   begin
     FrameMenu.Visible := true;
@@ -537,25 +537,6 @@ begin
   dmOpt.sqlcStrat.Params.Append('UseQuoteChar=False');
   dmOpt.sqlcStrat.Params.Append('FetchAll=False');
   dmOpt.sqlcStrat.Params.Append('UseUnicode=False');
-  //define connection parameters for Replication connection
-  dmReplicate.sqlcStrat.Connected := false;
-  dmReplicate.sqlcStrat.Params.Clear;
-  dmReplicate.sqlcStrat.Params.Append('DriverName='+DriverName);
-  dmReplicate.sqlcStrat.Params.Append('Database='+StratDBPath);
-  dmReplicate.sqlcStrat.Params.Append('User_Name='+DBUserName);
-  dmReplicate.sqlcStrat.Params.Append('Password='+DBPassword);
-  dmReplicate.sqlcStrat.Params.Append('SQLDialect='+DBSQLDialectStr);
-  dmReplicate.sqlcStrat.Params.Append('Charset='+DBCharSet);
-  dmReplicate.sqlcStrat.Params.Append('LocaleCode=0000');
-  dmReplicate.sqlcStrat.Params.Append('DevartInterBase TransIsolation=ReadCommitted');
-  dmReplicate.sqlcStrat.Params.Append('WaitOnLocks=True');
-  dmReplicate.sqlcStrat.Params.Append('CharLength=1');
-  dmReplicate.sqlcStrat.Params.Append('EnableBCD=True');
-  dmReplicate.sqlcStrat.Params.Append('OptimizedNumerics=True');
-  dmReplicate.sqlcStrat.Params.Append('LongStrings=True');
-  dmReplicate.sqlcStrat.Params.Append('UseQuoteChar=False');
-  dmReplicate.sqlcStrat.Params.Append('FetchAll=False');
-  dmReplicate.sqlcStrat.Params.Append('UseUnicode=False');
   }
   finally
     AppIni.Free;

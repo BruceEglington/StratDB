@@ -18,6 +18,7 @@ object ISFAddLinkToApplication: TISFAddLinkToApplication
   DesignLeft = 2
   DesignTop = 2
   object IWDBEdit1: TIWDBEdit
+    AlignWithMargins = False
     Left = 240
     Top = 105
     Width = 73
@@ -25,10 +26,10 @@ object ISFAddLinkToApplication: TISFAddLinkToApplication
     StyleRenderOptions.RenderBorder = False
     Editable = False
     NonEditableAsLabel = True
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     FriendlyName = 'IWDBEdit1'
     SubmitOnAsyncEvent = True
     TabOrder = 2
@@ -38,68 +39,68 @@ object ISFAddLinkToApplication: TISFAddLinkToApplication
     PasswordPrompt = False
   end
   object iwbSaveReturn: TIWButton
+    AlignWithMargins = False
     Left = 102
     Top = 72
     Width = 87
     Height = 25
     Caption = 'Save'
     Color = clWebLIGHTGREEN
-    Font.Color = clNone
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbSaveReturn'
     OnClick = iwbReturnClick
   end
   object IWLabel1: TIWLabel
+    AlignWithMargins = False
     Left = 104
     Top = 110
     Width = 40
     Height = 15
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'Unit ID'
   end
   object IWLabel2: TIWLabel
+    AlignWithMargins = False
     Left = 104
     Top = 136
     Width = 66
     Height = 15
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     HasTabOrder = False
     FriendlyName = 'IWLabel2'
     Caption = 'Application'
   end
   object iwbCancelReturn: TIWButton
+    AlignWithMargins = False
     Left = 202
     Top = 72
     Width = 87
     Height = 25
     Caption = 'Cancel'
     Color = clWebLIGHTSALMON
-    Font.Color = clNone
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbCancelReturn'
     TabOrder = 1
     OnClick = iwbReturnClick
   end
   object rectLeft: TIWRectangle
+    AlignWithMargins = False
     Left = 0
     Top = 55
     Width = 83
     Height = 350
     Align = alLeft
     ZIndex = 1
+    Font.PxSize = 13
     Font.Color = clWebBLACK
-    Font.Size = 10
-    Font.Style = []
     BorderOptions.Width = 0
     FriendlyName = 'rectLeft'
     Color = clWebLAVENDER
@@ -107,15 +108,16 @@ object ISFAddLinkToApplication: TISFAddLinkToApplication
     VAlign = vaMiddle
   end
   object iwDBlcbApplication: TIWDBLookupComboBox
+    AlignWithMargins = False
     Left = 240
     Top = 132
     Width = 365
     Height = 21
     StyleRenderOptions.RenderBorder = False
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     Editable = False
     NonEditableAsLabel = True
     TabOrder = 3
@@ -127,9 +129,9 @@ object ISFAddLinkToApplication: TISFAddLinkToApplication
     ListField = 'APPLICATION'
     ListSource = dmStrat.dsApplications
     DisableWhenEmpty = True
-    NoSelectionText = '-- No Selection --'
   end
   object iwDBnLinkToApplications: TIWDBNavigator
+    AlignWithMargins = False
     Left = 108
     Top = 164
     Width = 120
@@ -145,10 +147,11 @@ object ISFAddLinkToApplication: TISFAddLinkToApplication
     Orientation = orHorizontal
   end
   object IWDBGrid1: TIWDBGrid
+    AlignWithMargins = False
     Left = 104
     Top = 200
     Width = 505
-    Height = 150
+    Height = 169
     BorderColors.Color = clNone
     BorderColors.Light = clNone
     BorderColors.Dark = clNone
@@ -157,24 +160,24 @@ object ISFAddLinkToApplication: TISFAddLinkToApplication
     BorderStyle = tfDefault
     CellPadding = 0
     CellSpacing = 0
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     FrameBuffer = 40
     Lines = tlAll
     UseFrame = True
     UseSize = True
+    ShowEmptyCells = True
+    ShowInvisibleRows = True
     ScrollToCurrentRow = False
     Columns = <
       item
         Alignment = taLeftJustify
         BGColor = clNone
         DoSubmitValidation = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 8
-        Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -183,17 +186,16 @@ object ISFAddLinkToApplication: TISFAddLinkToApplication
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'UNITID'
         Title.Alignment = taCenter
         Title.BGColor = clNone
         Title.DoSubmitValidation = True
-        Title.Font.Color = clNone
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -208,10 +210,9 @@ object ISFAddLinkToApplication: TISFAddLinkToApplication
         Alignment = taLeftJustify
         BGColor = clNone
         DoSubmitValidation = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 8
-        Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -220,17 +221,16 @@ object ISFAddLinkToApplication: TISFAddLinkToApplication
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'APPLICATIONID'
         Title.Alignment = taCenter
         Title.BGColor = clNone
         Title.DoSubmitValidation = True
-        Title.Font.Color = clNone
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -245,10 +245,9 @@ object ISFAddLinkToApplication: TISFAddLinkToApplication
         Alignment = taLeftJustify
         BGColor = clNone
         DoSubmitValidation = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 8
-        Font.Style = []
+        Font.PxSize = 10
         Header = False
         Height = '0'
         ShowHint = True
@@ -257,17 +256,16 @@ object ISFAddLinkToApplication: TISFAddLinkToApplication
         Width = '0'
         Wrap = False
         RawText = False
-        Css = ''
         BlobCharLimit = 0
         CompareHighlight = hcNone
         DataField = 'APPLICATION'
         Title.Alignment = taCenter
         Title.BGColor = clNone
         Title.DoSubmitValidation = True
-        Title.Font.Color = clNone
         Title.Font.FontName = 'Arial'
         Title.Font.Size = 8
         Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
         Title.Header = False
         Title.Height = '0'
         Title.ShowHint = True
@@ -295,15 +293,15 @@ object ISFAddLinkToApplication: TISFAddLinkToApplication
     RowCurrentColor = clWebYELLOW
   end
   object iwbDeleteLink: TIWButton
+    AlignWithMargins = False
     Left = 464
     Top = 72
     Width = 145
     Height = 25
     Caption = 'Delete Current Record'
     Color = clWebLIGHTCORAL
-    Font.Color = clNone
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbDeleteLink'
     TabOrder = 4
     OnClick = iwbReturnClick
@@ -345,6 +343,7 @@ object ISFAddLinkToApplication: TISFAddLinkToApplication
             ExplicitWidth = 489
             inherited lblWelcome: TIWLabel
               Left = 216
+              Font.Color = clWebDARKSLATEGRAY
               ExplicitLeft = 216
             end
           end
@@ -353,7 +352,13 @@ object ISFAddLinkToApplication: TISFAddLinkToApplication
           Width = 689
           ExplicitWidth = 689
           inherited iwlSignOut: TIWLink
-            TabOrder = -1
+            Font.Color = clWebBLUE
+          end
+          inherited lnkSignIn: TIWLink
+            Font.Color = clWebBLUE
+          end
+          inherited lblProgTitle: TIWLabel
+            Font.Color = clWebSTEELBLUE
           end
         end
       end

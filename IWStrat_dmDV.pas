@@ -4,10 +4,10 @@ interface
 
 uses
   Forms,
-  SysUtils, Classes, FMTBcd, DB, SqlExpr, DBClient, Provider,
+  System.SysUtils, Classes, FMTBcd, DB, SqlExpr, DBClient, Provider,
   DBXCommon,
   IWCompListbox, WideStrings,
-  Data.DBXFirebird, DbxDevartInterBase;
+  DbxDevartInterBase;
 
 type
   TdmDV = class(TDataModule)
@@ -1060,6 +1060,8 @@ type
     cdsUnitPDFCountryID: TWideStringField;
     cdsUnitPDFUnitName: TWideStringField;
     cdsUnitPDFUnitRank: TWideStringField;
+    cdsDVUserUSERID: TWideStringField;
+    cdsDVUserLASTUSED: TSQLTimeStampField;
     procedure cdsAnyReconcileError(DataSet: TCustomClientDataSet;
       E: EReconcileError; UpdateKind: TUpdateKind;
       var Action: TReconcileAction);

@@ -3,60 +3,43 @@ object ISFSelectMap: TISFSelectMap
   Top = 0
   Width = 713
   Height = 349
+  RenderInvisibleControls = True
   OnRender = IWAppFormRender
+  AllowPageAccess = True
   ConnectionMode = cmAny
   Title = 'Select Chart'
-  SupportedBrowsers = [brIE, brNetscape7, brOpera, brSafari, brNetscape6]
   OnCreate = IWAppFormCreate
-  AllowPageAccess = True
-  BrowserSecurityCheck = True
   Background.Fixed = False
   HandleTabs = False
   LeftToRight = True
   LockUntilLoaded = False
   LockOnSubmit = True
   ShowHint = True
-  XPTheme = True
-  DesignLeft = 8
-  DesignTop = 8
+  DesignLeft = 2
+  DesignTop = 2
   object iwbNextStageOfQuery: TIWButton
+    AlignWithMargins = False
     Left = 112
     Top = 194
     Width = 141
     Height = 25
-    Cursor = crAuto
-    IW50Hint = False
-    ParentShowHint = False
-    ShowHint = True
-    ZIndex = 0
-    RenderSize = True
     Caption = 'Proceed'
-    DoSubmitValidation = True
     Color = clWebLIGHTGREEN
-    Font.Color = clNone
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbNextStageOfQuery'
-    ScriptEvents = <>
-    TabOrder = 0
     OnClick = iwbNextStageOfQueryClick
   end
   object rectLeft: TIWRectangle
+    AlignWithMargins = False
     Left = 0
     Top = 55
     Width = 83
     Height = 294
-    Cursor = crAuto
     Align = alLeft
-    IW50Hint = False
-    ParentShowHint = False
-    ShowHint = True
     ZIndex = 1
-    RenderSize = True
+    Font.PxSize = 13
     Font.Color = clWebBLACK
-    Font.Size = 10
-    Font.Style = []
-    BorderOptions.Color = clNone
     BorderOptions.Width = 0
     FriendlyName = 'rectLeft'
     Color = clWebLAVENDER
@@ -64,82 +47,45 @@ object ISFSelectMap: TISFSelectMap
     VAlign = vaMiddle
   end
   object iwbCancel: TIWButton
+    AlignWithMargins = False
     Left = 356
     Top = 194
     Width = 141
     Height = 25
-    Cursor = crAuto
-    IW50Hint = False
-    ParentShowHint = False
-    ShowHint = True
-    ZIndex = 0
-    RenderSize = True
     Caption = 'Cancel'
-    DoSubmitValidation = True
     Color = clWebLIGHTSALMON
-    Font.Color = clNone
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbCancel'
-    ScriptEvents = <>
     TabOrder = 1
     OnClick = iwbCancelClick
   end
   object iwcbMaps: TIWComboBox
+    AlignWithMargins = False
     Left = 112
     Top = 108
     Width = 385
     Height = 21
-    Cursor = crAuto
-    IW50Hint = False
-    ParentShowHint = False
-    ShowHint = True
-    ZIndex = 0
-    RenderSize = True
-    BGColor = clNone
-    Font.Color = clNone
-    Font.Size = 10
-    Font.Style = []
-    FocusColor = clNone
-    AutoHideOnMenuActivation = False
-    ItemsHaveValues = False
-    NoSelectionText = '-- No Selection --'
-    Required = False
-    RequireSelection = True
-    ScriptEvents = <>
-    UseSize = True
-    Style = stNormal
-    ButtonColor = clBtnFace
-    DoSubmitValidation = True
-    Editable = True
+    StyleRenderOptions.RenderBorder = False
     NonEditableAsLabel = True
     TabOrder = 2
     ItemIndex = -1
-    Sorted = False
     FriendlyName = 'iwcbMaps'
   end
   object iwlblError: TIWLabel
+    AlignWithMargins = False
     Left = 112
     Top = 87
     Width = 34
     Height = 15
-    Cursor = crAuto
-    IW50Hint = False
-    ParentShowHint = False
-    ShowHint = True
-    ZIndex = 0
-    RenderSize = False
-    Alignment = taLeftJustify
-    BGColor = clNone
-    Font.Color = clWebBLACK
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
-    NoWrap = False
-    ConvertSpaces = False
+    Font.PxSize = 12
+    Font.Color = clWebBLACK
+    HasTabOrder = False
     FriendlyName = 'iwlblError'
     Caption = 'Maps'
-    RawText = False
   end
   inline TopBar: TISFTopBarStrat
     Left = 0
@@ -175,10 +121,10 @@ object ISFSelectMap: TISFSelectMap
           ExplicitWidth = 713
           inherited iwrDisplayUserName: TIWRegion
             Width = 513
-            ExplicitLeft = 200
             ExplicitWidth = 513
             inherited lblWelcome: TIWLabel
               Left = 384
+              Font.Color = clWebDARKSLATEGRAY
               ExplicitLeft = 561
             end
           end
@@ -186,6 +132,15 @@ object ISFSelectMap: TISFSelectMap
         inherited iwrSignInOut: TIWRegion
           Width = 713
           ExplicitWidth = 713
+          inherited iwlSignOut: TIWLink
+            Font.Color = clWebBLUE
+          end
+          inherited lnkSignIn: TIWLink
+            Font.Color = clWebBLUE
+          end
+          inherited lblProgTitle: TIWLabel
+            Font.Color = clWebSTEELBLUE
+          end
         end
       end
     end

@@ -22,7 +22,7 @@ const
   usGrainProbabilitiesDetritalUPb = 'GrainUPb';
   usGrainSourcesDetritalUPb = 'GrainSources';
 
-  MaxGuestRecords = 10;
+  MaxGuestRecords = 500;
   DefaultMapFolder = 'files/maps/';
   DefaultMapFileName = 'country.shp';
   DefaultMapDBFName = 'country.dbf';
@@ -41,7 +41,7 @@ const
   MaxSamp    = 1000;
 
   NothingChosen = 'nothing';
-  Copyright1 = '(c) Dr Bruce Eglington (2004-2022)';
+  Copyright1 = '(c) Dr Bruce Eglington (2004-2025)';
   Copyright2 = 'StratDB / IGCP 509/648 Database';
 
 

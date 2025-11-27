@@ -2,7 +2,7 @@ object ISFMain: TISFMain
   Left = 0
   Top = 0
   Width = 831
-  Height = 573
+  Height = 576
   RenderInvisibleControls = False
   OnRender = IWAppFormRender
   AllowPageAccess = True
@@ -26,7 +26,7 @@ object ISFMain: TISFMain
     Left = 200
     Top = 55
     Width = 631
-    Height = 518
+    Height = 521
     HorzScrollBar.Visible = False
     VertScrollBar.Visible = False
     RenderInvisibleControls = False
@@ -37,7 +37,7 @@ object ISFMain: TISFMain
       Left = 0
       Top = 453
       Width = 631
-      Height = 65
+      Height = 68
       HorzScrollBar.Visible = False
       VertScrollBar.Visible = False
       RenderInvisibleControls = False
@@ -46,7 +46,7 @@ object ISFMain: TISFMain
       BorderOptions.Style = cbsNone
       DesignSize = (
         631
-        65)
+        68)
       object iwlDeveloperName: TIWLabel
         AlignWithMargins = False
         Left = 22
@@ -54,10 +54,8 @@ object ISFMain: TISFMain
         Width = 113
         Height = 15
         Anchors = [akLeft, akTop, akBottom]
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
         Font.PxSize = 12
         NoWrap = True
         HasTabOrder = False
@@ -71,10 +69,8 @@ object ISFMain: TISFMain
         Width = 141
         Height = 14
         Anchors = [akLeft, akTop, akBottom]
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 8
-        Font.Style = []
         Font.PxSize = 10
         NoWrap = True
         HasTabOrder = False
@@ -84,14 +80,12 @@ object ISFMain: TISFMain
       object iwlNumUses: TIWLabel
         AlignWithMargins = False
         Left = 491
-        Top = 54
+        Top = 42
         Width = 155
         Height = 14
         Anchors = [akLeft, akTop, akRight, akBottom]
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 8
-        Font.Style = []
         Font.PxSize = 10
         NoWrap = True
         HasTabOrder = False
@@ -126,8 +120,8 @@ object ISFMain: TISFMain
       end
       object IWButton1: TIWButton
         AlignWithMargins = False
-        Left = 456
-        Top = 18
+        Left = 444
+        Top = 6
         Width = 120
         Height = 30
         Visible = False
@@ -164,9 +158,6 @@ object ISFMain: TISFMain
             Alignment = taLeftJustify
             BGColor = clNone
             DoSubmitValidation = True
-            Font.Color = clNone
-            Font.Size = 10
-            Font.Style = []
             Font.PxSize = 13
             Header = False
             Height = '0'
@@ -183,9 +174,6 @@ object ISFMain: TISFMain
             Title.Alignment = taCenter
             Title.BGColor = clNone
             Title.DoSubmitValidation = True
-            Title.Font.Color = clNone
-            Title.Font.Size = 10
-            Title.Font.Style = []
             Title.Font.PxSize = 13
             Title.Header = False
             Title.Height = '0'
@@ -201,9 +189,6 @@ object ISFMain: TISFMain
             Alignment = taLeftJustify
             BGColor = clNone
             DoSubmitValidation = True
-            Font.Color = clNone
-            Font.Size = 10
-            Font.Style = []
             Font.PxSize = 13
             Header = False
             Height = '0'
@@ -220,9 +205,6 @@ object ISFMain: TISFMain
             Title.Alignment = taCenter
             Title.BGColor = clNone
             Title.DoSubmitValidation = True
-            Title.Font.Color = clNone
-            Title.Font.Size = 10
-            Title.Font.Style = []
             Title.Font.PxSize = 13
             Title.Header = False
             Title.Height = '0'
@@ -238,9 +220,6 @@ object ISFMain: TISFMain
             Alignment = taLeftJustify
             BGColor = clNone
             DoSubmitValidation = True
-            Font.Color = clNone
-            Font.Size = 10
-            Font.Style = []
             Font.PxSize = 13
             Header = False
             Height = '0'
@@ -257,9 +236,6 @@ object ISFMain: TISFMain
             Title.Alignment = taCenter
             Title.BGColor = clNone
             Title.DoSubmitValidation = True
-            Title.Font.Color = clNone
-            Title.Font.Size = 10
-            Title.Font.Style = []
             Title.Font.PxSize = 13
             Title.Header = False
             Title.Height = '0'
@@ -305,18 +281,17 @@ object ISFMain: TISFMain
         Left = 22
         Top = 30
         Width = 150
-        Height = 14
+        Height = 17
         Anchors = [akLeft, akTop, akBottom]
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 8
-        Font.Style = []
         Font.PxSize = 10
         NoWrap = True
         HasTabOrder = False
         AutoSize = False
         FriendlyName = 'iwlProgressDate'
         Caption = 'yyyy-mm-dd'
+        ExplicitHeight = 14
       end
     end
     object IWRegion4: TIWRegion
@@ -347,11 +322,11 @@ object ISFMain: TISFMain
           Width = 338
           Height = 22
           ZIndex = 1
-          Font.Color = clWebCORNFLOWERBLUE
           Font.FontName = 'Arial'
           Font.Size = 14
           Font.Style = [fsBold]
           Font.PxSize = 18
+          Font.Color = clWebCORNFLOWERBLUE
           NoWrap = True
           HasTabOrder = False
           FriendlyName = 'lblWelcome'
@@ -379,10 +354,8 @@ object ISFMain: TISFMain
           StyleRenderOptions.RenderBorder = False
           BGColor = clWebWHITE
           Editable = False
-          Font.Color = clNone
           Font.FontName = 'Arial'
           Font.Size = 9
-          Font.Style = []
           Font.PxSize = 12
           InvisibleBorder = True
           HorizScrollBar = False
@@ -393,9 +366,7 @@ object ISFMain: TISFMain
           DataField = 'PROGRESSDETAILS'
           DataSource = dmUser.dsProgress
           FriendlyName = 'IWDBMemo1'
-          ExplicitLeft = 7
-          ExplicitTop = -6
-          ExplicitHeight = 377
+          ExplicitWidth = 620
         end
         object IWRegion2: TIWRegion
           Left = 0
@@ -424,7 +395,7 @@ object ISFMain: TISFMain
     Left = 0
     Top = 55
     Width = 200
-    Height = 518
+    Height = 521
     RenderInvisibleControls = False
     Align = alLeft
     BorderOptions.NumericWidth = 0
@@ -433,7 +404,7 @@ object ISFMain: TISFMain
       Left = 0
       Top = 0
       Width = 200
-      Height = 518
+      Height = 521
       HorzScrollBar.Visible = False
       VertScrollBar.Visible = False
       Align = alLeft
@@ -441,20 +412,26 @@ object ISFMain: TISFMain
       TabOrder = 0
       TabStop = True
       ExplicitWidth = 200
-      ExplicitHeight = 518
+      ExplicitHeight = 521
       inherited IWFrameRegion: TIWRegion
         Width = 200
-        Height = 518
+        Height = 521
         TabOrder = 7
         ExplicitWidth = 200
-        ExplicitHeight = 518
+        ExplicitHeight = 521
         inherited IWRegion1: TIWRegion
           Width = 200
-          Height = 518
+          Height = 521
           ExplicitWidth = 200
-          ExplicitHeight = 518
+          ExplicitHeight = 521
           inherited IWMenu1: TIWMenu
-            Height = 438
+            Height = 441
+            MainMenuStyle.MenuItemFont.Color = clWebINDIGO
+            MainMenuStyle.SelectedMenuItemFont.Color = clWebINDIGO
+            MainMenuStyle.DisabledMenuItemFont.Color = clWebSILVER
+            SubMenuStyle.MenuItemFont.Color = clWebINDIGO
+            SubMenuStyle.SelectedMenuItemFont.Color = clWebINDIGO
+            SubMenuStyle.DisabledMenuItemFont.Color = clWebSILVER
             ExplicitHeight = 438
           end
           inherited IWRegion2: TIWRegion
@@ -510,6 +487,7 @@ object ISFMain: TISFMain
             ExplicitWidth = 631
             inherited lblWelcome: TIWLabel
               Left = 358
+              Font.Color = clWebDARKSLATEGRAY
               NoWrap = True
               ExplicitLeft = 606
             end
@@ -519,10 +497,14 @@ object ISFMain: TISFMain
           Width = 831
           ExplicitWidth = 831
           inherited iwlSignOut: TIWLink
-            TabOrder = -1
+            Font.Color = clWebBLUE
           end
           inherited lnkSignIn: TIWLink
+            Font.Color = clWebBLUE
             OnClick = TopBarlnkSignInClick
+          end
+          inherited lblProgTitle: TIWLabel
+            Font.Color = clWebSTEELBLUE
           end
         end
       end

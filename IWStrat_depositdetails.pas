@@ -4,6 +4,7 @@ interface
 
 uses
   Classes, SysUtils, IWAppForm, IWApplication, IWTypes,
+  System.DateUtils,
   Controls, Forms, IWCompButton, IWCompLabel, IWBaseControl,
   IWControl, IWCompEdit, IWDBStdCtrls, IWCompGrids, IWDBGrids, IWCompMemo,
   IWCompListbox, IWVCLBaseControl,
@@ -252,7 +253,7 @@ begin
       dmStratD.cdsValid.Edit;
       dmStratD.cdsValidVALIDSTATUSID.AsString := 'Valid';
       dmStratD.cdsValidDONEBY.AsString := UserSession.UserID;
-      dmStratD.cdsValidDATEDONE.AsDateTime := Now;
+      dmStratD.cdsValidDATEDONE.AsDateTime := TDateTime.NowUTC;
       dmStratD.cdsValid.Post;
     end;
     if (not HasValidityRecord) then
@@ -260,7 +261,7 @@ begin
       dmStratD.cdsValid.Append;
       dmStratD.cdsValidSDBDEPOSITID.AsString := dmStratD.cdsDepositSDBDEPOSITID.AsString;
       dmStratD.cdsValidVALIDSTATUSID.AsString := 'Valid';
-      dmStratD.cdsValidDATEDONE.AsDateTime := Now;
+      dmStratD.cdsValidDATEDONE.AsDateTime := TDateTime.NowUTC;
       dmStratD.cdsValidDONEBY.AsString := UserSession.UserID;
       dmStratD.cdsValidFullCOMMENTS.AsString := ' ';
       dmStratD.cdsValid.Post;
@@ -328,7 +329,7 @@ begin
       dmStratD.cdsValidFull.Append;
       dmStratD.cdsValidFullSDBDEPOSITID.AsString := UserSession.RecordChosen;
       dmStratD.cdsValidFullVALIDSTATUSID.AsString := 'Check';
-      dmStratD.cdsValidFullDATEDONE.AsDateTime := Now;
+      dmStratD.cdsValidFullDATEDONE.AsDateTime := TDateTime.NowUTC;
       dmStratD.cdsValidFullDONEBY.AsString := UserSession.UserID;
       dmStratD.cdsValidFullCOMMENTS.AsString := ' ';
       dmStratD.cdsValidFull.Post;
@@ -338,7 +339,7 @@ begin
     dmStratD.cdsValidFull.Edit;
     dmStratD.cdsValidFullSDBDEPOSITID.AsString := UserSession.RecordChosen;
     dmStratD.cdsValidFullVALIDSTATUSID.AsString := 'Check';
-    dmStratD.cdsValidFullDATEDONE.AsDateTime := Now;
+    dmStratD.cdsValidFullDATEDONE.AsDateTime := TDateTime.NowUTC;
     dmStratD.cdsValidFullDONEBY.AsString := UserSession.UserID;
     dmStratD.cdsValidFullCOMMENTS.AsString := ' ';
     dmStratD.cdsValidFull.Post;
@@ -347,7 +348,7 @@ begin
     dmStratD.cdsValidFull.Edit;
     dmStratD.cdsValidFullSDBDEPOSITID.AsString := UserSession.RecordChosen;
     dmStratD.cdsValidFullVALIDSTATUSID.AsString := 'Check';
-    dmStratD.cdsValidFullDATEDONE.AsDateTime := Now;
+    dmStratD.cdsValidFullDATEDONE.AsDateTime := TDateTime.NowUTC;
     dmStratD.cdsValidFull.Post;
     dmStratD.cdsValidFull.Filter := 'ValidStatusID='+''''+'Check'+'''';
     dmStratD.cdsValidFull.Filtered := true;
@@ -626,79 +627,6 @@ begin
   ShowHideEditButtons;
   dmStratD.cdsHostUnitAge.Close;
   dmStratD.cdsHostUnitAge.Open;
-  {
-  dmReplicate.cdsRemoteNodes.Open;
-  RemoteNodeName := dmReplicate.cdsRemoteNodesNODENAME.AsString;
-  RemoteNodeServer := dmReplicate.cdsRemoteNodesNODESERVER.AsString;
-  RemoteNodePath := dmReplicate.cdsRemoteNodesNODEPATH.AsString;
-  RemoteNodeDBName := RemoteNodeServer+':'+RemoteNodePath;
-  //RemoteNodeDBName := dmReplicate.cdsRemoteNodesNODEDBNAME.AsString;
-  RemoteNodeDBType := dmReplicate.cdsRemoteNodesNODEDBTYPE.AsString;
-  RemoteNodeDBVersion := dmReplicate.cdsRemoteNodesNODEDBVERSION.AsString;
-  //RemoteNodeCharSet := dmReplicate.cdsRemoteNodesNODECHARSET.AsString;
-  //RemoteNodeSQLDialect := dmReplicate.cdsRemoteNodesNODESQLDIALECT.AsString;
-  RemoteNodeUserLogin := dmReplicate.cdsRemoteNodesNODEUSERLOGIN.AsString;
-  RemoteNodeUserPassword := dmReplicate.cdsRemoteNodesNODEUSERPASSWORD.AsString;
-  RemoteTmpStringList := TStringList.Create;
-  RemoteTmpStringList.Clear;
-  RemoteTmpStringList.Text := dmReplicate.cdsRemoteNodesNODEDBSPECIFIC.AsString;
-  RemoteNodeCharSet := RemoteTmpStringList.Values['CHARSET'];
-  RemoteNodeSQLDialect := RemoteTmpStringList.Values['SQLDIALECT'];
-  RemoteTmpStringList.Free;
-  dmReplicate.cdsRemoteNodes.Close;
-  }
-  //dmUser.SetDeveloperData(RemoteNodeName);
-  //dmUser.SetDeveloperData(RemoteNodeCharSet);
-  //dmUser.SetDeveloperData(RemoteNodeDBName);
-  //dmUser.SetDeveloperData(RemoteNodeDBType);
-  //dmUser.SetDeveloperData(RemoteNodeDBVersion);
-  //dmUser.SetDeveloperData(RemoteNodeSQLDialect);
-  //dmUser.SetDeveloperData(RemoteNodeUserLogin);
-  //dmUser.SetDeveloperData(RemoteNodeUserPassword);
-  {
-  LocalTmpStringList := TStringList.Create;
-  dmReplicate.qLocalNodes.Close;
-  dmReplicate.cdsLocalNodes.Close;
-  dmReplicate.cdsLocalNodes.Open;
-  Cnt := dmReplicate.cdsLocalNodes.RecordCount;
-  for i := 1 to Cnt do
-  begin
-    LocalNodeName := dmReplicate.cdsLocalNodesNODENAME.AsString;
-    LocalNodeDBName := dmReplicate.cdsLocalNodesNODEDBNAME.AsString;
-    LocalNodeDBType := dmReplicate.cdsLocalNodesNODEDBTYPE.AsString;
-    LocalNodeServer := dmReplicate.cdsLocalNodesNODESERVER.AsString;
-    LocalNodePath := dmReplicate.cdsLocalNodesNODEPATH.AsString;
-    LocalNodeDBName := LocalNodeServer+':'+LocalNodePath;
-    //LocalNodeDBVersion := dmReplicate.cdsLocalNodesNODEDBVERSION.AsString;
-    //LocalNodeCharSet := dmReplicate.cdsLocalNodesNODECHARSET.AsString;
-    //LocalNodeSQLDialect := dmReplicate.cdsLocalNodesNODESQLDIALECT.AsString;
-    LocalNodeUserLogin := dmReplicate.cdsLocalNodesNODEUSERLOGIN.AsString;
-    LocalNodeUserPassword := dmReplicate.cdsLocalNodesNODEUSERPASSWORD.AsString;
-    LocalTmpStringList.Clear;
-    LocalTmpStringList.Text := dmReplicate.cdsLocalNodesNODEDBSPECIFIC.AsString;
-    LocalNodeCharSet := LocalTmpStringList.Values['CHARSET'];
-    LocalNodeSQLDialect := LocalTmpStringList.Values['SQLDIALECT'];
-    //dmUser.SetDeveloperData(LocalNodeName);
-    //dmUser.SetDeveloperData(LocalNodeCharSet);
-    //dmUser.SetDeveloperData(LocalNodeDBName);
-    //dmUser.SetDeveloperData(LocalNodeDBType);
-    //dmUser.SetDeveloperData(LocalNodeDBVersion);
-    //dmUser.SetDeveloperData(LocalNodeSQLDialect);
-    //dmUser.SetDeveloperData(LocalNodeUserLogin);
-    //dmUser.SetDeveloperData(LocalNodeUserPassword);
-    dmReplicate.ReplicateFromStratDB(LocalNodeServer,LocalNodePath,
-      LocalNodeName,LocalNodeCharSet,
-      LocalNodeDBName,LocalNodeDBType,LocalNodeDBVersion,LocalNodeSQLDialect,
-      LocalNodeUserLogin,LocalNodeUserPassword,
-      RemoteNodeServer,RemoteNodePath,
-      RemoteNodeName,RemoteNodeCharSet,RemoteNodeDBName,
-      RemoteNodeDBType,RemoteNodeDBVersion,RemoteNodeSQLDialect,RemoteNodeUserLogin,
-      RemoteNodeUserPassword,'ttNoTrace');
-    dmReplicate.cdsLocalNodes.Next;
-  end;
-  LocalTmpStringList.Free;
-  dmReplicate.cdsLocalNodes.Close;
-  }
 end;
 
 procedure TISFDepositDetails.IWDBGrid4Columns0TitleClick(Sender: TObject);
@@ -851,3 +779,4 @@ begin
 end;
 
 end.
+

@@ -1,6 +1,7 @@
 program StratDB;
 
 uses
+  IWRtlFix,
   IWStart,
   //Forms,
   IWStrat_uMain in 'IWStrat_uMain.pas' {Form1},
@@ -115,3 +116,4 @@ uses
 begin
   TIWStart.Execute(True);
 end.
+

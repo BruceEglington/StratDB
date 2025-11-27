@@ -480,13 +480,16 @@ object dmDV: TdmDV
     ProviderName = 'dspDVUser'
     Left = 182
     Top = 162
-    object cdsDVUserUSERNAMEID: TWideStringField
-      FieldName = 'USERNAMEID'
-      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
-      Required = True
-    end
     object cdsDVUserNUMCONTRIBUTED: TIntegerField
       FieldName = 'NUMCONTRIBUTED'
+    end
+    object cdsDVUserUSERID: TWideStringField
+      FieldName = 'USERID'
+      Required = True
+      FixedChar = True
+    end
+    object cdsDVUserLASTUSED: TSQLTimeStampField
+      FieldName = 'LASTUSED'
     end
   end
   object dsDVUser: TDataSource

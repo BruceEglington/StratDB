@@ -37,6 +37,7 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
     BorderOptions.NumericWidth = 0
     BorderOptions.Style = cbsNone
     object iwDBgResults: TIWDBGrid
+      AlignWithMargins = False
       Left = 0
       Top = 362
       Width = 991
@@ -50,24 +51,24 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
       BorderStyle = tfDefault
       CellPadding = 2
       CellSpacing = 0
-      Font.Color = clNone
       Font.FontName = 'Arial'
       Font.Size = 8
-      Font.Style = []
+      Font.PxSize = 10
       FrameBuffer = 40
       Lines = tlAll
       UseFrame = False
       UseSize = True
+      ShowEmptyCells = True
+      ShowInvisibleRows = True
       ScrollToCurrentRow = False
       Columns = <
         item
           Alignment = taRightJustify
           BGColor = clNone
           DoSubmitValidation = True
-          Font.Color = clNone
           Font.FontName = 'Arial'
           Font.Size = 8
-          Font.Style = []
+          Font.PxSize = 10
           Header = False
           Height = '0'
           ShowHint = True
@@ -76,17 +77,16 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
           Width = '0'
           Wrap = False
           RawText = False
-          Css = ''
           BlobCharLimit = 0
           CompareHighlight = hcNone
           DataField = 'UNITID'
           Title.Alignment = taCenter
           Title.BGColor = clNone
           Title.DoSubmitValidation = True
-          Title.Font.Color = clNone
           Title.Font.FontName = 'Arial'
           Title.Font.Size = 8
           Title.Font.Style = [fsBold]
+          Title.Font.PxSize = 10
           Title.Header = False
           Title.Height = '0'
           Title.ShowHint = True
@@ -101,10 +101,9 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
           Alignment = taLeftJustify
           BGColor = clNone
           DoSubmitValidation = True
-          Font.Color = clNone
           Font.FontName = 'Arial'
           Font.Size = 8
-          Font.Style = []
+          Font.PxSize = 10
           Header = False
           Height = '0'
           ShowHint = True
@@ -113,17 +112,16 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
           Width = '0'
           Wrap = True
           RawText = False
-          Css = ''
           BlobCharLimit = 0
           CompareHighlight = hcNone
           DataField = 'COUNTRY'
           Title.Alignment = taCenter
           Title.BGColor = clNone
           Title.DoSubmitValidation = True
-          Title.Font.Color = clNone
           Title.Font.FontName = 'Arial'
           Title.Font.Size = 8
           Title.Font.Style = [fsBold]
+          Title.Font.PxSize = 10
           Title.Header = False
           Title.Height = '0'
           Title.ShowHint = True
@@ -138,10 +136,9 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
           Alignment = taLeftJustify
           BGColor = clNone
           DoSubmitValidation = True
-          Font.Color = clNone
           Font.FontName = 'Arial'
           Font.Size = 8
-          Font.Style = []
+          Font.PxSize = 10
           Header = False
           Height = '0'
           ShowHint = True
@@ -150,17 +147,16 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
           Width = '0'
           Wrap = True
           RawText = False
-          Css = ''
           BlobCharLimit = 0
           CompareHighlight = hcNone
           DataField = 'UNITNAME'
           Title.Alignment = taCenter
           Title.BGColor = clNone
           Title.DoSubmitValidation = True
-          Title.Font.Color = clNone
           Title.Font.FontName = 'Arial'
           Title.Font.Size = 8
           Title.Font.Style = [fsBold]
+          Title.Font.PxSize = 10
           Title.Header = False
           Title.Height = '0'
           Title.ShowHint = True
@@ -175,10 +171,9 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
           Alignment = taLeftJustify
           BGColor = clNone
           DoSubmitValidation = True
-          Font.Color = clNone
           Font.FontName = 'Arial'
           Font.Size = 8
-          Font.Style = []
+          Font.PxSize = 10
           Header = False
           Height = '0'
           ShowHint = True
@@ -187,17 +182,16 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
           Width = '0'
           Wrap = True
           RawText = False
-          Css = ''
           BlobCharLimit = 0
           CompareHighlight = hcNone
           DataField = 'UNITRANK'
           Title.Alignment = taCenter
           Title.BGColor = clNone
           Title.DoSubmitValidation = True
-          Title.Font.Color = clNone
           Title.Font.FontName = 'Arial'
           Title.Font.Size = 8
           Title.Font.Style = [fsBold]
+          Title.Font.PxSize = 10
           Title.Header = False
           Title.Height = '0'
           Title.ShowHint = True
@@ -212,10 +206,9 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
           Alignment = taRightJustify
           BGColor = clNone
           DoSubmitValidation = True
-          Font.Color = clNone
           Font.FontName = 'Arial'
           Font.Size = 8
-          Font.Style = []
+          Font.PxSize = 10
           Header = False
           Height = '0'
           ShowHint = True
@@ -224,17 +217,16 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
           Width = '0'
           Wrap = True
           RawText = False
-          Css = ''
           BlobCharLimit = 0
           CompareHighlight = hcNone
           DataField = 'AGEYEARS'
           Title.Alignment = taCenter
           Title.BGColor = clNone
           Title.DoSubmitValidation = True
-          Title.Font.Color = clNone
           Title.Font.FontName = 'Arial'
           Title.Font.Size = 8
           Title.Font.Style = [fsBold]
+          Title.Font.PxSize = 10
           Title.Header = False
           Title.Height = '0'
           Title.ShowHint = True
@@ -249,10 +241,9 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
           Alignment = taRightJustify
           BGColor = clNone
           DoSubmitValidation = True
-          Font.Color = clNone
           Font.FontName = 'Arial'
           Font.Size = 8
-          Font.Style = []
+          Font.PxSize = 10
           Header = False
           Height = '0'
           ShowHint = True
@@ -261,17 +252,16 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
           Width = '0'
           Wrap = True
           RawText = False
-          Css = ''
           BlobCharLimit = 0
           CompareHighlight = hcNone
           DataField = 'PARENTID'
           Title.Alignment = taCenter
           Title.BGColor = clNone
           Title.DoSubmitValidation = True
-          Title.Font.Color = clNone
           Title.Font.FontName = 'Arial'
           Title.Font.Size = 8
           Title.Font.Style = [fsBold]
+          Title.Font.PxSize = 10
           Title.Header = False
           Title.Height = '0'
           Title.ShowHint = True
@@ -286,10 +276,9 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
           Alignment = taRightJustify
           BGColor = clNone
           DoSubmitValidation = True
-          Font.Color = clNone
           Font.FontName = 'Arial'
           Font.Size = 8
-          Font.Style = []
+          Font.PxSize = 10
           Header = False
           Height = '0'
           ShowHint = True
@@ -298,17 +287,16 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
           Width = '0'
           Wrap = True
           RawText = False
-          Css = ''
           BlobCharLimit = 0
           CompareHighlight = hcNone
           DataField = 'MINAGE'
           Title.Alignment = taCenter
           Title.BGColor = clNone
           Title.DoSubmitValidation = True
-          Title.Font.Color = clNone
           Title.Font.FontName = 'Arial'
           Title.Font.Size = 8
           Title.Font.Style = [fsBold]
+          Title.Font.PxSize = 10
           Title.Header = False
           Title.Height = '0'
           Title.ShowHint = True
@@ -323,10 +311,9 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
           Alignment = taRightJustify
           BGColor = clNone
           DoSubmitValidation = True
-          Font.Color = clNone
           Font.FontName = 'Arial'
           Font.Size = 8
-          Font.Style = []
+          Font.PxSize = 10
           Header = False
           Height = '0'
           ShowHint = True
@@ -335,17 +322,16 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
           Width = '0'
           Wrap = True
           RawText = False
-          Css = ''
           BlobCharLimit = 0
           CompareHighlight = hcNone
           DataField = 'MAXAGE'
           Title.Alignment = taCenter
           Title.BGColor = clNone
           Title.DoSubmitValidation = True
-          Title.Font.Color = clNone
           Title.Font.FontName = 'Arial'
           Title.Font.Size = 8
           Title.Font.Style = [fsBold]
+          Title.Font.PxSize = 10
           Title.Header = False
           Title.Height = '0'
           Title.ShowHint = True
@@ -360,10 +346,9 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
           Alignment = taCenter
           BGColor = clNone
           DoSubmitValidation = True
-          Font.Color = clNone
           Font.FontName = 'Arial'
           Font.Size = 8
-          Font.Style = []
+          Font.PxSize = 10
           Header = False
           Height = '0'
           ShowHint = True
@@ -372,17 +357,16 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
           Width = '0'
           Wrap = False
           RawText = False
-          Css = ''
           BlobCharLimit = 0
           CompareHighlight = hcNone
           DataField = 'AGEUNITS'
           Title.Alignment = taCenter
           Title.BGColor = clNone
           Title.DoSubmitValidation = True
-          Title.Font.Color = clNone
           Title.Font.FontName = 'Arial'
           Title.Font.Size = 8
           Title.Font.Style = [fsBold]
+          Title.Font.PxSize = 10
           Title.Header = False
           Title.Height = '0'
           Title.ShowHint = True
@@ -397,10 +381,9 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
           Alignment = taLeftJustify
           BGColor = clNone
           DoSubmitValidation = True
-          Font.Color = clNone
           Font.FontName = 'Arial'
           Font.Size = 8
-          Font.Style = []
+          Font.PxSize = 10
           Header = False
           Height = '0'
           ShowHint = True
@@ -409,17 +392,16 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
           Width = '0'
           Wrap = False
           RawText = False
-          Css = ''
           BlobCharLimit = 0
           CompareHighlight = hcNone
           DataField = 'APPROVALSTATUS'
           Title.Alignment = taCenter
           Title.BGColor = clNone
           Title.DoSubmitValidation = True
-          Title.Font.Color = clNone
           Title.Font.FontName = 'Arial'
           Title.Font.Size = 8
           Title.Font.Style = [fsBold]
+          Title.Font.PxSize = 10
           Title.Header = False
           Title.Height = '0'
           Title.ShowHint = True
@@ -449,6 +431,7 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
       ExplicitTop = 205
     end
     object iwDBgUnits: TIWDBGrid
+      AlignWithMargins = False
       Left = 0
       Top = 1100
       Width = 991
@@ -462,24 +445,24 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
       BorderStyle = tfDefault
       CellPadding = 2
       CellSpacing = 0
-      Font.Color = clNone
       Font.FontName = 'Verdana'
       Font.Size = 8
-      Font.Style = []
+      Font.PxSize = 10
       FrameBuffer = 40
       Lines = tlAll
       UseFrame = False
       UseSize = True
+      ShowEmptyCells = True
+      ShowInvisibleRows = True
       ScrollToCurrentRow = False
       Columns = <
         item
           Alignment = taCenter
           BGColor = clNone
           DoSubmitValidation = True
-          Font.Color = clNone
           Font.FontName = 'Verdana'
           Font.Size = 8
-          Font.Style = []
+          Font.PxSize = 10
           Header = False
           Height = '0'
           ShowHint = True
@@ -488,7 +471,6 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
           Width = '0'
           Wrap = False
           RawText = False
-          Css = ''
           BlobCharLimit = 0
           CompareHighlight = hcNone
           DataField = 'COUNTRYID'
@@ -497,10 +479,10 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
           Title.Alignment = taCenter
           Title.BGColor = clNone
           Title.DoSubmitValidation = True
-          Title.Font.Color = clNone
           Title.Font.FontName = 'Verdana'
           Title.Font.Size = 8
           Title.Font.Style = [fsBold]
+          Title.Font.PxSize = 10
           Title.Header = False
           Title.Height = '0'
           Title.ShowHint = True
@@ -515,10 +497,9 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
           Alignment = taCenter
           BGColor = clNone
           DoSubmitValidation = True
-          Font.Color = clNone
           Font.FontName = 'Verdana'
           Font.Size = 8
-          Font.Style = []
+          Font.PxSize = 10
           Header = False
           Height = '0'
           ShowHint = True
@@ -527,7 +508,6 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
           Width = '0'
           Wrap = False
           RawText = False
-          Css = ''
           BlobCharLimit = 0
           CompareHighlight = hcNone
           DataField = 'UNITID'
@@ -535,10 +515,10 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
           Title.Alignment = taCenter
           Title.BGColor = clNone
           Title.DoSubmitValidation = True
-          Title.Font.Color = clNone
           Title.Font.FontName = 'Verdana'
           Title.Font.Size = 8
           Title.Font.Style = [fsBold]
+          Title.Font.PxSize = 10
           Title.Header = False
           Title.Height = '0'
           Title.ShowHint = True
@@ -553,10 +533,9 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
           Alignment = taLeftJustify
           BGColor = clNone
           DoSubmitValidation = True
-          Font.Color = clNone
           Font.FontName = 'Verdana'
           Font.Size = 8
-          Font.Style = []
+          Font.PxSize = 10
           Header = False
           Height = '0'
           ShowHint = True
@@ -565,17 +544,16 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
           Width = '0'
           Wrap = False
           RawText = False
-          Css = ''
           BlobCharLimit = 0
           CompareHighlight = hcNone
           DataField = 'STRATDBUNITNAME'
           Title.Alignment = taCenter
           Title.BGColor = clNone
           Title.DoSubmitValidation = True
-          Title.Font.Color = clNone
           Title.Font.FontName = 'Verdana'
           Title.Font.Size = 8
           Title.Font.Style = [fsBold]
+          Title.Font.PxSize = 10
           Title.Header = False
           Title.Height = '0'
           Title.ShowHint = True
@@ -590,10 +568,9 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
           Alignment = taLeftJustify
           BGColor = clNone
           DoSubmitValidation = True
-          Font.Color = clNone
           Font.FontName = 'Verdana'
           Font.Size = 8
-          Font.Style = []
+          Font.PxSize = 10
           Header = False
           Height = '0'
           ShowHint = True
@@ -602,17 +579,16 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
           Width = '0'
           Wrap = False
           RawText = False
-          Css = ''
           BlobCharLimit = 0
           CompareHighlight = hcNone
           DataField = 'STRATDBUNITRANK'
           Title.Alignment = taCenter
           Title.BGColor = clNone
           Title.DoSubmitValidation = True
-          Title.Font.Color = clNone
           Title.Font.FontName = 'Verdana'
           Title.Font.Size = 8
           Title.Font.Style = [fsBold]
+          Title.Font.PxSize = 10
           Title.Header = False
           Title.Height = '0'
           Title.ShowHint = True
@@ -627,10 +603,9 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
           Alignment = taRightJustify
           BGColor = clNone
           DoSubmitValidation = True
-          Font.Color = clNone
           Font.FontName = 'Verdana'
           Font.Size = 8
-          Font.Style = []
+          Font.PxSize = 10
           Header = False
           Height = '0'
           ShowHint = True
@@ -639,17 +614,16 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
           Width = '0'
           Wrap = False
           RawText = False
-          Css = ''
           BlobCharLimit = 0
           CompareHighlight = hcNone
           DataField = 'UNITAGE'
           Title.Alignment = taCenter
           Title.BGColor = clNone
           Title.DoSubmitValidation = True
-          Title.Font.Color = clNone
           Title.Font.FontName = 'Verdana'
           Title.Font.Size = 8
           Title.Font.Style = [fsBold]
+          Title.Font.PxSize = 10
           Title.Header = False
           Title.Height = '0'
           Title.ShowHint = True
@@ -664,10 +638,9 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
           Alignment = taCenter
           BGColor = clNone
           DoSubmitValidation = True
-          Font.Color = clNone
           Font.FontName = 'Verdana'
           Font.Size = 8
-          Font.Style = []
+          Font.PxSize = 10
           Header = False
           Height = '0'
           ShowHint = True
@@ -676,17 +649,16 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
           Width = '0'
           Wrap = False
           RawText = False
-          Css = ''
           BlobCharLimit = 0
           CompareHighlight = hcNone
           DataField = 'DVUNITID'
           Title.Alignment = taCenter
           Title.BGColor = clNone
           Title.DoSubmitValidation = True
-          Title.Font.Color = clNone
           Title.Font.FontName = 'Verdana'
           Title.Font.Size = 8
           Title.Font.Style = [fsBold]
+          Title.Font.PxSize = 10
           Title.Header = False
           Title.Height = '0'
           Title.ShowHint = True
@@ -717,6 +689,7 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
       ExplicitWidth = 857
     end
     object iwDBgUnitsSamples: TIWDBGrid
+      AlignWithMargins = False
       Left = 0
       Top = 1682
       Width = 991
@@ -730,24 +703,24 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
       BorderStyle = tfDefault
       CellPadding = 2
       CellSpacing = 0
-      Font.Color = clNone
       Font.FontName = 'Verdana'
       Font.Size = 8
-      Font.Style = []
+      Font.PxSize = 10
       FrameBuffer = 40
       Lines = tlAll
       UseFrame = False
       UseSize = True
+      ShowEmptyCells = True
+      ShowInvisibleRows = True
       ScrollToCurrentRow = False
       Columns = <
         item
           Alignment = taCenter
           BGColor = clNone
           DoSubmitValidation = True
-          Font.Color = clNone
           Font.FontName = 'Verdana'
           Font.Size = 8
-          Font.Style = []
+          Font.PxSize = 10
           Header = False
           Height = '0'
           ShowHint = True
@@ -756,7 +729,6 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
           Width = '0'
           Wrap = False
           RawText = False
-          Css = ''
           BlobCharLimit = 0
           CompareHighlight = hcNone
           DataField = 'COUNTRYID'
@@ -765,10 +737,10 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
           Title.Alignment = taCenter
           Title.BGColor = clNone
           Title.DoSubmitValidation = True
-          Title.Font.Color = clNone
           Title.Font.FontName = 'Verdana'
           Title.Font.Size = 8
           Title.Font.Style = [fsBold]
+          Title.Font.PxSize = 10
           Title.Header = False
           Title.Height = '0'
           Title.ShowHint = True
@@ -783,10 +755,9 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
           Alignment = taCenter
           BGColor = clNone
           DoSubmitValidation = True
-          Font.Color = clNone
           Font.FontName = 'Verdana'
           Font.Size = 8
-          Font.Style = []
+          Font.PxSize = 10
           Header = False
           Height = '0'
           ShowHint = True
@@ -795,17 +766,16 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
           Width = '0'
           Wrap = False
           RawText = False
-          Css = ''
           BlobCharLimit = 0
           CompareHighlight = hcNone
           DataField = 'UNITID'
           Title.Alignment = taCenter
           Title.BGColor = clNone
           Title.DoSubmitValidation = True
-          Title.Font.Color = clNone
           Title.Font.FontName = 'Verdana'
           Title.Font.Size = 8
           Title.Font.Style = [fsBold]
+          Title.Font.PxSize = 10
           Title.Header = False
           Title.Height = '0'
           Title.ShowHint = True
@@ -820,10 +790,9 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
           Alignment = taCenter
           BGColor = clNone
           DoSubmitValidation = True
-          Font.Color = clNone
           Font.FontName = 'Verdana'
           Font.Size = 8
-          Font.Style = []
+          Font.PxSize = 10
           Header = False
           Height = '0'
           ShowHint = True
@@ -832,17 +801,16 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
           Width = '0'
           Wrap = False
           RawText = False
-          Css = ''
           BlobCharLimit = 0
           CompareHighlight = hcNone
           DataField = 'STRATDBUNITID'
           Title.Alignment = taCenter
           Title.BGColor = clNone
           Title.DoSubmitValidation = True
-          Title.Font.Color = clNone
           Title.Font.FontName = 'Verdana'
           Title.Font.Size = 8
           Title.Font.Style = [fsBold]
+          Title.Font.PxSize = 10
           Title.Header = False
           Title.Height = '0'
           Title.ShowHint = True
@@ -857,10 +825,9 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
           Alignment = taLeftJustify
           BGColor = clNone
           DoSubmitValidation = True
-          Font.Color = clNone
           Font.FontName = 'Verdana'
           Font.Size = 8
-          Font.Style = []
+          Font.PxSize = 10
           Header = False
           Height = '0'
           ShowHint = True
@@ -869,17 +836,16 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
           Width = '0'
           Wrap = False
           RawText = False
-          Css = ''
           BlobCharLimit = 0
           CompareHighlight = hcNone
           DataField = 'STRATDBUNITNAME'
           Title.Alignment = taCenter
           Title.BGColor = clNone
           Title.DoSubmitValidation = True
-          Title.Font.Color = clNone
           Title.Font.FontName = 'Verdana'
           Title.Font.Size = 8
           Title.Font.Style = [fsBold]
+          Title.Font.PxSize = 10
           Title.Header = False
           Title.Height = '0'
           Title.ShowHint = True
@@ -894,10 +860,9 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
           Alignment = taLeftJustify
           BGColor = clNone
           DoSubmitValidation = True
-          Font.Color = clNone
           Font.FontName = 'Verdana'
           Font.Size = 8
-          Font.Style = []
+          Font.PxSize = 10
           Header = False
           Height = '0'
           ShowHint = True
@@ -906,17 +871,16 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
           Width = '0'
           Wrap = False
           RawText = False
-          Css = ''
           BlobCharLimit = 0
           CompareHighlight = hcNone
           DataField = 'STRATDBUNITRANK'
           Title.Alignment = taCenter
           Title.BGColor = clNone
           Title.DoSubmitValidation = True
-          Title.Font.Color = clNone
           Title.Font.FontName = 'Verdana'
           Title.Font.Size = 8
           Title.Font.Style = [fsBold]
+          Title.Font.PxSize = 10
           Title.Header = False
           Title.Height = '0'
           Title.ShowHint = True
@@ -931,10 +895,9 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
           Alignment = taRightJustify
           BGColor = clNone
           DoSubmitValidation = True
-          Font.Color = clNone
           Font.FontName = 'Verdana'
           Font.Size = 8
-          Font.Style = []
+          Font.PxSize = 10
           Header = False
           Height = '0'
           ShowHint = True
@@ -943,17 +906,16 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
           Width = '0'
           Wrap = False
           RawText = False
-          Css = ''
           BlobCharLimit = 0
           CompareHighlight = hcNone
           DataField = 'STRATDBUNITAGE'
           Title.Alignment = taCenter
           Title.BGColor = clNone
           Title.DoSubmitValidation = True
-          Title.Font.Color = clNone
           Title.Font.FontName = 'Verdana'
           Title.Font.Size = 8
           Title.Font.Style = [fsBold]
+          Title.Font.PxSize = 10
           Title.Header = False
           Title.Height = '0'
           Title.ShowHint = True
@@ -968,10 +930,9 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
           Alignment = taLeftJustify
           BGColor = clNone
           DoSubmitValidation = True
-          Font.Color = clNone
           Font.FontName = 'Verdana'
           Font.Size = 8
-          Font.Style = []
+          Font.PxSize = 10
           Header = False
           Height = '0'
           ShowHint = True
@@ -980,7 +941,6 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
           Width = '0'
           Wrap = False
           RawText = False
-          Css = ''
           BlobCharLimit = 0
           CompareHighlight = hcNone
           DataField = 'SAMPLENO'
@@ -988,10 +948,10 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
           Title.Alignment = taCenter
           Title.BGColor = clNone
           Title.DoSubmitValidation = True
-          Title.Font.Color = clNone
           Title.Font.FontName = 'Verdana'
           Title.Font.Size = 8
           Title.Font.Style = [fsBold]
+          Title.Font.PxSize = 10
           Title.Header = False
           Title.Height = '0'
           Title.ShowHint = True
@@ -1006,10 +966,9 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
           Alignment = taRightJustify
           BGColor = clNone
           DoSubmitValidation = True
-          Font.Color = clNone
           Font.FontName = 'Verdana'
           Font.Size = 8
-          Font.Style = []
+          Font.PxSize = 10
           Header = False
           Height = '0'
           ShowHint = True
@@ -1018,17 +977,16 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
           Width = '0'
           Wrap = False
           RawText = False
-          Css = ''
           BlobCharLimit = 0
           CompareHighlight = hcNone
           DataField = 'LONGITUDE'
           Title.Alignment = taCenter
           Title.BGColor = clNone
           Title.DoSubmitValidation = True
-          Title.Font.Color = clNone
           Title.Font.FontName = 'Verdana'
           Title.Font.Size = 8
           Title.Font.Style = [fsBold]
+          Title.Font.PxSize = 10
           Title.Header = False
           Title.Height = '0'
           Title.ShowHint = True
@@ -1043,10 +1001,9 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
           Alignment = taRightJustify
           BGColor = clNone
           DoSubmitValidation = True
-          Font.Color = clNone
           Font.FontName = 'Verdana'
           Font.Size = 8
-          Font.Style = []
+          Font.PxSize = 10
           Header = False
           Height = '0'
           ShowHint = True
@@ -1055,17 +1012,16 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
           Width = '0'
           Wrap = False
           RawText = False
-          Css = ''
           BlobCharLimit = 0
           CompareHighlight = hcNone
           DataField = 'LATITUDE'
           Title.Alignment = taCenter
           Title.BGColor = clNone
           Title.DoSubmitValidation = True
-          Title.Font.Color = clNone
           Title.Font.FontName = 'Verdana'
           Title.Font.Size = 8
           Title.Font.Style = [fsBold]
+          Title.Font.PxSize = 10
           Title.Header = False
           Title.Height = '0'
           Title.ShowHint = True
@@ -1109,6 +1065,7 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
         991
         57)
       object iwlFirstPage: TIWLink
+        AlignWithMargins = False
         Left = 30
         Top = 34
         Width = 33
@@ -1117,10 +1074,11 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
         StyleRenderOptions.RenderSize = False
         Alignment = taLeftJustify
         Color = clNone
-        Font.Color = clWebBLUE
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
+        Font.Style = [fsUnderline]
+        Font.PxSize = 12
+        Font.Color = clWebBLUE
         HasTabOrder = True
         DoSubmitValidation = False
         FriendlyName = 'iwlFirstPage'
@@ -1130,6 +1088,7 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
         Caption = 'First'
       end
       object iwlLastPage: TIWLink
+        AlignWithMargins = False
         Left = 240
         Top = 34
         Width = 35
@@ -1138,10 +1097,11 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
         StyleRenderOptions.RenderSize = False
         Alignment = taLeftJustify
         Color = clNone
-        Font.Color = clWebBLUE
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
+        Font.Style = [fsUnderline]
+        Font.PxSize = 12
+        Font.Color = clWebBLUE
         HasTabOrder = True
         DoSubmitValidation = False
         FriendlyName = 'iwlLastPage'
@@ -1151,6 +1111,7 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
         Caption = 'Last'
       end
       object iwlNextPage: TIWLink
+        AlignWithMargins = False
         Left = 206
         Top = 34
         Width = 35
@@ -1159,10 +1120,11 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
         StyleRenderOptions.RenderSize = False
         Alignment = taLeftJustify
         Color = clNone
-        Font.Color = clWebBLUE
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
+        Font.Style = [fsUnderline]
+        Font.PxSize = 12
+        Font.Color = clWebBLUE
         HasTabOrder = True
         DoSubmitValidation = False
         FriendlyName = 'iwlNextPage'
@@ -1172,6 +1134,7 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
         Caption = 'Next'
       end
       object iwlPrevPage: TIWLink
+        AlignWithMargins = False
         Left = 70
         Top = 34
         Width = 53
@@ -1180,10 +1143,11 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
         StyleRenderOptions.RenderSize = False
         Alignment = taLeftJustify
         Color = clNone
-        Font.Color = clWebBLUE
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
+        Font.Style = [fsUnderline]
+        Font.PxSize = 12
+        Font.Color = clWebBLUE
         HasTabOrder = True
         DoSubmitValidation = False
         FriendlyName = 'iwlPrevPage'
@@ -1193,28 +1157,29 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
         Caption = 'Previous'
       end
       object iwlPageNumTotal: TIWLabel
+        AlignWithMargins = False
         Left = 174
         Top = 35
         Width = 15
         Height = 15
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
+        Font.PxSize = 12
         HasTabOrder = False
         FriendlyName = 'iwlPageNumTotal'
         Caption = '11'
       end
       object iwlSortedBy: TIWLabel
+        AlignWithMargins = False
         Left = 820
         Top = 37
         Width = 150
         Height = 14
         Anchors = [akTop, akRight]
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 8
         Font.Style = [fsItalic]
+        Font.PxSize = 10
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'iwlSortedBy'
@@ -1222,56 +1187,57 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
         ExplicitLeft = 700
       end
       object iwlPageNum: TIWLabel
+        AlignWithMargins = False
         Left = 140
         Top = 35
         Width = 14
         Height = 15
         Alignment = taRightJustify
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
+        Font.PxSize = 12
         HasTabOrder = False
         FriendlyName = 'IWLabel1'
         Caption = '11'
       end
       object lblRecordCount: TIWLabel
+        AlignWithMargins = False
         Left = 30
         Top = 13
         Width = 145
         Height = 15
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
+        Font.PxSize = 12
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'lblRecordCount'
         Caption = 'records match the query'
       end
       object iwlOf: TIWLabel
+        AlignWithMargins = False
         Left = 156
         Top = 35
         Width = 11
         Height = 15
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
+        Font.PxSize = 12
         HasTabOrder = False
         FriendlyName = 'iwlOf'
         Caption = 'of'
       end
       object iwlQueryResults: TIWLabel
+        AlignWithMargins = False
         Left = 344
         Top = 6
         Width = 251
         Height = 29
         Alignment = taCenter
-        Font.Color = clNone
         Font.FontName = 'Verdana'
         Font.Size = 18
         Font.Style = [fsBold]
+        Font.PxSize = 24
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'iwlQueryResults'
@@ -1289,15 +1255,13 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
       BorderOptions.NumericWidth = 0
       BorderOptions.Style = cbsNone
       object iwbReturn: TIWButton
+        AlignWithMargins = False
         Left = 6
         Top = 10
         Width = 124
         Height = 25
         Caption = 'Return'
         Color = clWebLIGHTGREEN
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         FriendlyName = 'iwbReturn'
         OnClick = iwbReturnClick
       end
@@ -1313,48 +1277,45 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
       BorderOptions.NumericWidth = 0
       BorderOptions.Style = cbsNone
       object iwlUserProject: TIWLabel
+        AlignWithMargins = False
         Left = 6
         Top = 16
         Width = 244
         Height = 38
-        Font.Color = clNone
         Font.FontName = 'Verdana'
         Font.Size = 24
         Font.Style = [fsBold]
+        Font.PxSize = 32
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel1'
         Caption = 'User Project'
       end
       object iwcbUserProject: TIWComboBox
+        AlignWithMargins = False
         Left = 16
         Top = 174
         Width = 411
         Height = 21
         StyleRenderOptions.RenderBorder = False
-        Font.Color = clNone
         Font.FontName = 'Arial'
-        Font.Size = 10
         Font.Style = [fsBold]
+        Font.PxSize = 13
         OnChange = iwlUserProject1Change
         NonEditableAsLabel = True
         TabOrder = 1
         ItemIndex = -1
         FriendlyName = 'iwlUserProject'
-        NoSelectionText = '-- No Selection --'
       end
       object iwlbUserProject: TIWListbox
+        AlignWithMargins = False
         Left = 467
         Top = 0
         Width = 497
         Height = 225
         Visible = False
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         TabOrder = 67
         FriendlyName = 'iwlbUserProject'
-        NoSelectionText = '-- No Selection --'
       end
     end
     object iwrUnitsButtons: TIWRegion
@@ -1367,44 +1328,39 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
       BorderOptions.NumericWidth = 0
       BorderOptions.Style = cbsNone
       object iwbUnitsAdd: TIWButton
+        AlignWithMargins = False
         Left = 149
         Top = 24
         Width = 200
         Height = 25
         Caption = 'Add to Units Table'
         Color = clWebLIGHTGREEN
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         FriendlyName = 'iwbUnitsAdd'
         TabOrder = 4
         OnClick = iwbUnitsAddClick
       end
       object iwbUnitsClear: TIWButton
+        AlignWithMargins = False
         Left = 475
         Top = 24
         Width = 200
         Height = 25
         Caption = 'Empty Units Table'
         Color = clWebLIGHTCORAL
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         FriendlyName = 'iwbUnitsClear'
         TabOrder = 3
         OnClick = iwbUnitsClearClick
       end
       object iwcbIncludeSubunits: TIWCheckBox
+        AlignWithMargins = False
         Left = 10
         Top = 24
         Width = 121
         Height = 21
         Caption = 'Include Subunits'
         Editable = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
-        Font.Size = 10
-        Font.Style = []
+        Font.PxSize = 13
         SubmitOnAsyncEvent = True
         Style = stNormal
         TabOrder = 2
@@ -1426,87 +1382,88 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
         991
         50)
       object iwlUnits: TIWLabel
+        AlignWithMargins = False
         Left = 5
         Top = -7
         Width = 69
         Height = 29
         Alignment = taCenter
-        Font.Color = clNone
         Font.FontName = 'Verdana'
         Font.Size = 18
         Font.Style = [fsBold]
+        Font.PxSize = 24
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'iwlUnits'
         Caption = 'Units'
       end
       object iwlUnitsSortedBy: TIWLabel
+        AlignWithMargins = False
         Left = 820
         Top = 29
         Width = 150
         Height = 14
         Anchors = [akTop, akRight]
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 8
         Font.Style = [fsItalic]
+        Font.PxSize = 10
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'iwlUnitsSortedBy'
         Caption = 'Sorted as specified in query'
       end
       object iwbDeleteUnitRecord: TIWButton
+        AlignWithMargins = False
         Left = 621
         Top = 19
         Width = 170
         Height = 25
         Caption = 'Delete record'
         Color = clBtnFace
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         FriendlyName = 'iwbDeleteUnitRecord'
         TabOrder = 8
         OnClick = iwbDeleteUnitRecordClick
       end
       object iwlUnitsPartialList: TIWLabel
+        AlignWithMargins = False
         Left = 6
         Top = 29
         Width = 172
         Height = 14
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 8
         Font.Style = [fsItalic]
+        Font.PxSize = 10
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'iwlUnitsPartialList'
         Caption = 'Only a partial list may be shown'
       end
       object iwbDownloadUnits: TIWButton
+        AlignWithMargins = False
         Left = 418
         Top = 19
         Width = 170
         Height = 25
         Caption = 'Download Units'
         Color = clBtnFace
-        Font.Color = clNone
         Font.Size = 9
-        Font.Style = []
+        Font.PxSize = 12
         FriendlyName = 'iwbDownloadUnits'
         TabOrder = 7
         OnClick = iwbDownloadUnitsClick
       end
       object iwbShowUnits: TIWButton
+        AlignWithMargins = False
         Left = 215
         Top = 19
         Width = 170
         Height = 25
         Caption = 'Show Units'
         Color = clBtnFace
-        Font.Color = clNone
         Font.Size = 9
-        Font.Style = []
+        Font.PxSize = 12
         FriendlyName = 'iwbShowUnits'
         TabOrder = 6
         OnClick = iwbShowUnitsClick
@@ -1523,34 +1480,31 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
       BorderOptions.NumericWidth = 0
       BorderOptions.Style = cbsNone
       object iwbUnitsSamplesAdd: TIWButton
+        AlignWithMargins = False
         Left = 296
         Top = 22
         Width = 200
         Height = 25
         Caption = 'Add to Units+Samples Table'
         Color = clWebLIGHTGREEN
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         FriendlyName = 'iwbUnitsAdd'
         TabOrder = 10
         OnClick = iwbUnitsSamplesAddClick
       end
       object iwbUnitsSamplesClear: TIWButton
+        AlignWithMargins = False
         Left = 625
         Top = 22
         Width = 200
         Height = 25
         Caption = 'Empty Units+Samples Table'
         Color = clWebLIGHTCORAL
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         FriendlyName = 'iwbUnitsClear'
         TabOrder = 9
         OnClick = iwbUnitsSamplesClearClick
       end
       object iwrgIsotopeSystemVariable: TIWRadioGroup
+        AlignWithMargins = False
         Left = 37
         Top = 22
         Width = 202
@@ -1559,10 +1513,8 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
         SubmitOnAsyncEvent = True
         RawText = False
         Editable = True
-        Font.Color = clNone
         Font.FontName = 'Verdana'
-        Font.Size = 10
-        Font.Style = []
+        Font.PxSize = 13
         FriendlyName = 'iwrgIsotopeSystemVariable'
         ItemIndex = 0
         Items.Strings = (
@@ -1588,100 +1540,99 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
         991
         55)
       object iwlUnitsSamples: TIWLabel
+        AlignWithMargins = False
         Left = 5
         Top = -7
         Width = 272
         Height = 29
-        Font.Color = clNone
         Font.FontName = 'Verdana'
         Font.Size = 18
         Font.Style = [fsBold]
+        Font.PxSize = 24
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'iwlUnitsSamples'
         Caption = 'Units and Samples'
       end
       object iwlUnitsSamplesSortedBy: TIWLabel
+        AlignWithMargins = False
         Left = 820
         Top = 35
         Width = 150
         Height = 14
         Anchors = [akTop, akRight]
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 8
         Font.Style = [fsItalic]
+        Font.PxSize = 10
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'iwlUnitsSortedBy'
         Caption = 'Sorted as specified in query'
       end
       object iwbDeleteUnitsSamplesRecord: TIWButton
+        AlignWithMargins = False
         Left = 685
         Top = 27
         Width = 103
         Height = 25
         Caption = 'Delete record'
         Color = clBtnFace
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         FriendlyName = 'iwbDeleteRecord'
         TabOrder = 16
         OnClick = iwbDeleteUnitsSamplesRecordClick
       end
       object iwlUnitsSamplesPartialList: TIWLabel
+        AlignWithMargins = False
         Left = 6
         Top = 35
         Width = 172
         Height = 14
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 8
         Font.Style = [fsItalic]
+        Font.PxSize = 10
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'iwlUnitsSamplesPartialList'
         Caption = 'Only a partial list may be shown'
       end
       object iwbDownloadUnitsSamples: TIWButton
+        AlignWithMargins = False
         Left = 348
         Top = 27
         Width = 168
         Height = 25
         Caption = 'Download Units / Samples'
         Color = clBtnFace
-        Font.Color = clNone
         Font.Size = 9
-        Font.Style = []
+        Font.PxSize = 12
         FriendlyName = 'iwbDownloadUnitsSamples'
         TabOrder = 14
         OnClick = iwbDownloadUnitsSamplesClick
       end
       object iwbShowUnitsSamples: TIWButton
+        AlignWithMargins = False
         Left = 184
         Top = 28
         Width = 145
         Height = 25
         Caption = 'Show Units / Samples'
         Color = clBtnFace
-        Font.Color = clNone
         Font.Size = 9
-        Font.Style = []
+        Font.PxSize = 12
         FriendlyName = 'iwbShowUnitsSamples'
         TabOrder = 12
         OnClick = iwbShowUnitsSamplesClick
       end
       object iwbUpdateUnitAge: TIWButton
+        AlignWithMargins = False
         Left = 536
         Top = 27
         Width = 124
         Height = 25
         Caption = 'Check Unit Ages'
         Color = clBtnFace
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         FriendlyName = 'iwbUpdateUnitAge'
         TabOrder = 15
         OnClick = iwbUpdateUnitAgeClick
@@ -1699,90 +1650,85 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
       BorderOptions.Style = cbsNone
       Color = clWebLEMONCHIFFON
       object IWLabel1: TIWLabel
+        AlignWithMargins = False
         Left = 6
         Top = 14
         Width = 125
         Height = 18
-        Font.Color = clNone
         Font.FontName = 'Verdana'
         Font.Size = 12
         Font.Style = [fsBold]
+        Font.PxSize = 16
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel3'
         Caption = 'Data Options'
       end
       object iweGraphAgeFrom: TIWEdit
+        AlignWithMargins = False
         Left = 16
         Top = 46
         Width = 59
         Height = 21
         StyleRenderOptions.RenderBorder = False
         NonEditableAsLabel = True
-        Font.Color = clNone
         Font.FontName = 'Verdana'
-        Font.Size = 10
-        Font.Style = []
+        Font.PxSize = 13
         FriendlyName = 'iweGraphAgeFrom'
         SubmitOnAsyncEvent = True
         TabOrder = 23
         Text = '0.0'
       end
       object IWLabel11: TIWLabel
+        AlignWithMargins = False
         Left = 98
         Top = 49
         Width = 117
         Height = 16
-        Font.Color = clNone
         Font.FontName = 'Verdana'
-        Font.Size = 10
-        Font.Style = []
+        Font.PxSize = 13
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel5'
         Caption = '<= Age (Ma) <='
       end
       object iweGraphAgeTo: TIWEdit
+        AlignWithMargins = False
         Left = 240
         Top = 46
         Width = 59
         Height = 21
         StyleRenderOptions.RenderBorder = False
         NonEditableAsLabel = True
-        Font.Color = clNone
         Font.FontName = 'Verdana'
-        Font.Size = 10
-        Font.Style = []
+        Font.PxSize = 13
         FriendlyName = 'iweGraphAgeTo'
         SubmitOnAsyncEvent = True
         TabOrder = 24
         Text = '4500.0'
       end
       object iwbScalePDFAxes: TIWButton
+        AlignWithMargins = False
         Left = 505
         Top = 521
         Width = 136
         Height = 25
         Caption = 'Rescale Axes'
         Color = clBtnFace
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         FriendlyName = 'iwbScalePDFAxes'
         TabOrder = 41
         OnClick = iwbScalePDFAxesClick
       end
       object iwcbGraphsAutoscale: TIWCheckBox
+        AlignWithMargins = False
         Left = 505
         Top = 552
         Width = 136
         Height = 21
         Caption = 'Auto-scale axes'
         Editable = True
-        Font.Color = clNone
         Font.FontName = 'Verdana'
-        Font.Size = 10
-        Font.Style = []
+        Font.PxSize = 13
         SubmitOnAsyncEvent = True
         Style = stNormal
         TabOrder = 42
@@ -1792,90 +1738,83 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
         FriendlyName = 'iwcbGraphsAutoscale'
       end
       object iweConcordanceFrom: TIWEdit
+        AlignWithMargins = False
         Left = 16
         Top = 73
         Width = 59
         Height = 21
         StyleRenderOptions.RenderBorder = False
         NonEditableAsLabel = True
-        Font.Color = clNone
         Font.FontName = 'Verdana'
-        Font.Size = 10
-        Font.Style = []
+        Font.PxSize = 13
         FriendlyName = 'iweConcordanceFrom'
         SubmitOnAsyncEvent = True
         TabOrder = 25
         Text = '90.0'
       end
       object IWLabel5: TIWLabel
+        AlignWithMargins = False
         Left = 86
         Top = 73
         Width = 165
         Height = 16
-        Font.Color = clNone
         Font.FontName = 'Verdana'
-        Font.Size = 10
-        Font.Style = []
+        Font.PxSize = 13
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel5'
         Caption = '<= % Concordance <='
       end
       object iweConcordanceTo: TIWEdit
+        AlignWithMargins = False
         Left = 240
         Top = 72
         Width = 59
         Height = 21
         StyleRenderOptions.RenderBorder = False
         NonEditableAsLabel = True
-        Font.Color = clNone
         Font.FontName = 'Verdana'
-        Font.Size = 10
-        Font.Style = []
+        Font.PxSize = 13
         FriendlyName = 'iweConcordanceTo'
         SubmitOnAsyncEvent = True
         TabOrder = 26
         Text = '110.0'
       end
       object iwbCalculateProbabilityCurves: TIWButton
+        AlignWithMargins = False
         Left = 16
         Top = 409
         Width = 230
         Height = 25
         Caption = 'Calculate Probability Curves'
         Color = clWebLIGHTSKYBLUE
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         FriendlyName = 'iwbCalculateProbabilityCurves'
         TabOrder = 29
         OnClick = iwbCalculateProbabilityCurvesClick
       end
       object IWLabel4: TIWLabel
+        AlignWithMargins = False
         Left = 505
         Top = 48
         Width = 211
         Height = 16
-        Font.Color = clNone
         Font.FontName = 'Verdana'
-        Font.Size = 10
-        Font.Style = []
+        Font.PxSize = 13
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel4'
         Caption = 'Min. 1 sigma age uncertainty'
       end
       object iwcbExcludeDataWithoutAnalyses: TIWCheckBox
+        AlignWithMargins = False
         Left = 505
         Top = 72
         Width = 264
         Height = 21
         Caption = 'Exclude Data Without Analyses'
         Editable = True
-        Font.Color = clNone
         Font.FontName = 'Verdana'
-        Font.Size = 10
-        Font.Style = []
+        Font.PxSize = 13
         SubmitOnAsyncEvent = True
         Style = stNormal
         TabOrder = 28
@@ -1883,6 +1822,7 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
         FriendlyName = 'iwcbExcludeDataWithoutAnalyses'
       end
       object iwrgAndOr: TIWRadioGroup
+        AlignWithMargins = False
         Left = 863
         Top = 70
         Width = 89
@@ -1890,10 +1830,8 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
         SubmitOnAsyncEvent = True
         RawText = False
         Editable = True
-        Font.Color = clNone
         Font.FontName = 'Verdana'
-        Font.Size = 10
-        Font.Style = []
+        Font.PxSize = 13
         FriendlyName = 'iwrgAndOr'
         ItemIndex = 0
         Items.Strings = (
@@ -1903,387 +1841,362 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
         TabOrder = 31
       end
       object IWLabel10: TIWLabel
+        AlignWithMargins = False
         Left = 844
         Top = 48
         Width = 113
         Height = 16
-        Font.Color = clNone
         Font.FontName = 'Verdana'
-        Font.Size = 10
-        Font.Style = []
+        Font.PxSize = 13
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel10'
         Caption = 'Probability type'
       end
       object iweMinimumUncertainty: TIWEdit
+        AlignWithMargins = False
         Left = 711
         Top = 46
         Width = 43
         Height = 21
         StyleRenderOptions.RenderBorder = False
         NonEditableAsLabel = True
-        Font.Color = clNone
         Font.FontName = 'Verdana'
-        Font.Size = 10
-        Font.Style = []
+        Font.PxSize = 13
         FriendlyName = 'iweMinimumUncertainty'
         SubmitOnAsyncEvent = True
         TabOrder = 27
         Text = '5.0'
       end
       object IWLabel7: TIWLabel
+        AlignWithMargins = False
         Left = 768
         Top = 48
         Width = 20
         Height = 16
-        Font.Color = clNone
         Font.FontName = 'Verdana'
-        Font.Size = 10
-        Font.Style = []
+        Font.PxSize = 13
         HasTabOrder = False
         FriendlyName = 'IWLabel4'
         Caption = 'Ma'
       end
       object iwe1: TIWEdit
+        AlignWithMargins = False
         Left = 127
         Top = 613
         Width = 59
         Height = 21
         StyleRenderOptions.RenderBorder = False
         NonEditableAsLabel = True
-        Font.Color = clNone
         Font.FontName = 'Verdana'
-        Font.Size = 10
-        Font.Style = []
+        Font.PxSize = 13
         FriendlyName = 'iweConcordanceFrom'
         SubmitOnAsyncEvent = True
         TabOrder = 43
         Text = '0.1'
       end
       object IWLabel2: TIWLabel
+        AlignWithMargins = False
         Left = 12
         Top = 614
         Width = 108
         Height = 16
-        Font.Color = clNone
         Font.FontName = 'Verdana'
-        Font.Size = 10
-        Font.Style = []
+        Font.PxSize = 13
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel5'
         Caption = 'Symbol cutoffs'
       end
       object IWLabel3: TIWLabel
+        AlignWithMargins = False
         Left = 192
         Top = 614
         Width = 59
         Height = 16
-        Font.Color = clNone
         Font.FontName = 'Verdana'
-        Font.Size = 10
-        Font.Style = []
+        Font.PxSize = 13
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel5'
         Caption = '<= 1 <='
       end
       object iwe2: TIWEdit
+        AlignWithMargins = False
         Left = 255
         Top = 613
         Width = 59
         Height = 21
         StyleRenderOptions.RenderBorder = False
         NonEditableAsLabel = True
-        Font.Color = clNone
         Font.FontName = 'Verdana'
-        Font.Size = 10
-        Font.Style = []
+        Font.PxSize = 13
         FriendlyName = 'iweConcordanceFrom'
         SubmitOnAsyncEvent = True
         TabOrder = 44
         Text = '10.0'
       end
       object IWLabel6: TIWLabel
+        AlignWithMargins = False
         Left = 320
         Top = 614
         Width = 59
         Height = 16
-        Font.Color = clNone
         Font.FontName = 'Verdana'
-        Font.Size = 10
-        Font.Style = []
+        Font.PxSize = 13
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel5'
         Caption = '<= 2 <='
       end
       object iwe3: TIWEdit
+        AlignWithMargins = False
         Left = 383
         Top = 613
         Width = 59
         Height = 21
         StyleRenderOptions.RenderBorder = False
         NonEditableAsLabel = True
-        Font.Color = clNone
         Font.FontName = 'Verdana'
-        Font.Size = 10
-        Font.Style = []
+        Font.PxSize = 13
         FriendlyName = 'iweConcordanceFrom'
         SubmitOnAsyncEvent = True
         TabOrder = 45
         Text = '40.0'
       end
       object IWLabel8: TIWLabel
+        AlignWithMargins = False
         Left = 448
         Top = 614
         Width = 59
         Height = 16
-        Font.Color = clNone
         Font.FontName = 'Verdana'
-        Font.Size = 10
-        Font.Style = []
+        Font.PxSize = 13
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel5'
         Caption = '<= 3 <='
       end
       object iwe4: TIWEdit
+        AlignWithMargins = False
         Left = 513
         Top = 613
         Width = 59
         Height = 21
         StyleRenderOptions.RenderBorder = False
         NonEditableAsLabel = True
-        Font.Color = clNone
         Font.FontName = 'Verdana'
-        Font.Size = 10
-        Font.Style = []
+        Font.PxSize = 13
         FriendlyName = 'iweConcordanceFrom'
         SubmitOnAsyncEvent = True
         TabOrder = 46
         Text = '60.0'
       end
       object IWLabel9: TIWLabel
+        AlignWithMargins = False
         Left = 578
         Top = 614
         Width = 59
         Height = 16
-        Font.Color = clNone
         Font.FontName = 'Verdana'
-        Font.Size = 10
-        Font.Style = []
+        Font.PxSize = 13
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel5'
         Caption = '<= 4 <='
       end
       object iwe5: TIWEdit
+        AlignWithMargins = False
         Left = 643
         Top = 613
         Width = 59
         Height = 21
         StyleRenderOptions.RenderBorder = False
         NonEditableAsLabel = True
-        Font.Color = clNone
         Font.FontName = 'Verdana'
-        Font.Size = 10
-        Font.Style = []
+        Font.PxSize = 13
         FriendlyName = 'iweConcordanceFrom'
         SubmitOnAsyncEvent = True
         TabOrder = 47
         Text = '80.0'
       end
       object IWLabel13: TIWLabel
+        AlignWithMargins = False
         Left = 708
         Top = 614
         Width = 34
         Height = 16
-        Font.Color = clNone
         Font.FontName = 'Verdana'
-        Font.Size = 10
-        Font.Style = []
+        Font.PxSize = 13
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel5'
         Caption = '<= 5'
       end
       object iweXMin: TIWEdit
+        AlignWithMargins = False
         Left = 16
         Top = 547
         Width = 59
         Height = 21
         StyleRenderOptions.RenderBorder = False
         NonEditableAsLabel = True
-        Font.Color = clNone
         Font.FontName = 'Verdana'
-        Font.Size = 10
-        Font.Style = []
+        Font.PxSize = 13
         FriendlyName = 'iweXMin'
         SubmitOnAsyncEvent = True
         TabOrder = 38
         Text = '0.0'
       end
       object iweYMin: TIWEdit
+        AlignWithMargins = False
         Left = 16
         Top = 520
         Width = 59
         Height = 21
         StyleRenderOptions.RenderBorder = False
         NonEditableAsLabel = True
-        Font.Color = clNone
         Font.FontName = 'Verdana'
-        Font.Size = 10
-        Font.Style = []
+        Font.PxSize = 13
         FriendlyName = 'iweYMin'
         SubmitOnAsyncEvent = True
         TabOrder = 35
         Text = '0.0'
       end
       object IWLabel25: TIWLabel
+        AlignWithMargins = False
         Left = 99
         Top = 550
         Width = 119
         Height = 16
-        Font.Color = clNone
         Font.FontName = 'Verdana'
-        Font.Size = 10
-        Font.Style = []
+        Font.PxSize = 13
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel5'
         Caption = '<= Grain Age <='
       end
       object IWLabel26: TIWLabel
+        AlignWithMargins = False
         Left = 81
         Top = 522
         Width = 158
         Height = 16
-        Font.Color = clNone
         Font.FontName = 'Verdana'
-        Font.Size = 10
-        Font.Style = []
+        Font.PxSize = 13
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel5'
         Caption = '<= Deposition Age <='
       end
       object iweXMax: TIWEdit
+        AlignWithMargins = False
         Left = 241
         Top = 547
         Width = 59
         Height = 21
         StyleRenderOptions.RenderBorder = False
         NonEditableAsLabel = True
-        Font.Color = clNone
         Font.FontName = 'Verdana'
-        Font.Size = 10
-        Font.Style = []
+        Font.PxSize = 13
         FriendlyName = 'iweXMax'
         SubmitOnAsyncEvent = True
         TabOrder = 39
         Text = '4500.0'
       end
       object iweYMax: TIWEdit
+        AlignWithMargins = False
         Left = 241
         Top = 520
         Width = 59
         Height = 21
         StyleRenderOptions.RenderBorder = False
         NonEditableAsLabel = True
-        Font.Color = clNone
         Font.FontName = 'Verdana'
-        Font.Size = 10
-        Font.Style = []
+        Font.PxSize = 13
         FriendlyName = 'iweYMax'
         SubmitOnAsyncEvent = True
         TabOrder = 36
         Text = '4500.0'
       end
       object IWLabel12: TIWLabel
+        AlignWithMargins = False
         Left = 323
         Top = 522
         Width = 73
         Height = 16
-        Font.Color = clNone
         Font.FontName = 'Verdana'
-        Font.Size = 10
-        Font.Style = []
+        Font.PxSize = 13
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel5'
         Caption = 'Increment'
       end
       object IWLabel14: TIWLabel
+        AlignWithMargins = False
         Left = 323
         Top = 550
         Width = 73
         Height = 16
-        Font.Color = clNone
         Font.FontName = 'Verdana'
-        Font.Size = 10
-        Font.Style = []
+        Font.PxSize = 13
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel5'
         Caption = 'Increment'
       end
       object iweYIncrement: TIWEdit
+        AlignWithMargins = False
         Left = 400
         Top = 520
         Width = 59
         Height = 21
         StyleRenderOptions.RenderBorder = False
         NonEditableAsLabel = True
-        Font.Color = clNone
         Font.FontName = 'Verdana'
-        Font.Size = 10
-        Font.Style = []
+        Font.PxSize = 13
         FriendlyName = 'iweYMax'
         SubmitOnAsyncEvent = True
         TabOrder = 37
         Text = '400.0'
       end
       object iweXIncrement: TIWEdit
+        AlignWithMargins = False
         Left = 400
         Top = 547
         Width = 59
         Height = 21
         StyleRenderOptions.RenderBorder = False
         NonEditableAsLabel = True
-        Font.Color = clNone
         Font.FontName = 'Verdana'
-        Font.Size = 10
-        Font.Style = []
+        Font.PxSize = 13
         FriendlyName = 'iweXMax'
         SubmitOnAsyncEvent = True
         TabOrder = 40
         Text = '400.0'
       end
       object IWLabel15: TIWLabel
+        AlignWithMargins = False
         Left = 6
         Top = 486
         Width = 138
         Height = 18
-        Font.Color = clNone
         Font.FontName = 'Verdana'
         Font.Size = 12
         Font.Style = [fsBold]
+        Font.PxSize = 16
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel3'
         Caption = 'Graph Options'
       end
       object iwcbShow1: TIWCheckBox
+        AlignWithMargins = False
         Left = 211
         Top = 636
         Width = 30
         Height = 21
         Editable = True
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         SubmitOnAsyncEvent = True
         Style = stNormal
         TabOrder = 48
@@ -2292,14 +2205,12 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
         FriendlyName = 'iwcbShow1'
       end
       object iwcbShow2: TIWCheckBox
+        AlignWithMargins = False
         Left = 339
         Top = 636
         Width = 30
         Height = 21
         Editable = True
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         SubmitOnAsyncEvent = True
         Style = stNormal
         TabOrder = 49
@@ -2308,14 +2219,12 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
         FriendlyName = 'iwcbShow2'
       end
       object iwcbShow3: TIWCheckBox
+        AlignWithMargins = False
         Left = 467
         Top = 636
         Width = 30
         Height = 21
         Editable = True
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         SubmitOnAsyncEvent = True
         Style = stNormal
         TabOrder = 50
@@ -2324,14 +2233,12 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
         FriendlyName = 'iwcbShow3'
       end
       object iwcbShow4: TIWCheckBox
+        AlignWithMargins = False
         Left = 599
         Top = 636
         Width = 30
         Height = 21
         Editable = True
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         SubmitOnAsyncEvent = True
         Style = stNormal
         TabOrder = 51
@@ -2340,14 +2247,12 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
         FriendlyName = 'iwcbShow4'
       end
       object iwcbShow5: TIWCheckBox
+        AlignWithMargins = False
         Left = 729
         Top = 636
         Width = 30
         Height = 21
         Editable = True
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         SubmitOnAsyncEvent = True
         Style = stNormal
         TabOrder = 52
@@ -2356,6 +2261,7 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
         FriendlyName = 'iwcbShow5'
       end
       object iwbDeleteUserGrainAgePDF: TIWButton
+        AlignWithMargins = False
         Left = 266
         Top = 409
         Width = 230
@@ -2363,28 +2269,24 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
         Caption = 'Delete User Project PDF Records'
         Enabled = False
         Color = clWebLIGHTCORAL
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         FriendlyName = 'iwbDeleteUserGrainAgePDF'
         TabOrder = 30
         OnClick = iwbDeleteUserGrainAgePDFClick
       end
       object iwbGraphExistingProbabilityCurves: TIWButton
+        AlignWithMargins = False
         Left = 516
         Top = 409
         Width = 230
         Height = 25
         Caption = 'Graph Existing Probability Curves'
         Color = clWebLIGHTSKYBLUE
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         FriendlyName = 'iwbGraphExistingProbabilityCurves'
         TabOrder = 32
         OnClick = iwbGraphExistingProbabilityCurvesClick
       end
       object iweVar1Cutoff: TIWEdit
+        AlignWithMargins = False
         Left = 766
         Top = 520
         Width = 59
@@ -2392,16 +2294,15 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
         StyleRenderOptions.RenderBorder = False
         Alignment = taRightJustify
         NonEditableAsLabel = True
-        Font.Color = clNone
         Font.FontName = 'Verdana'
-        Font.Size = 10
-        Font.Style = []
+        Font.PxSize = 13
         FriendlyName = 'iweVar1Cutoff'
         SubmitOnAsyncEvent = True
         TabOrder = 53
         Text = '0.1'
       end
       object iweVar2Cutoff: TIWEdit
+        AlignWithMargins = False
         Left = 766
         Top = 544
         Width = 59
@@ -2409,16 +2310,15 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
         StyleRenderOptions.RenderBorder = False
         Alignment = taRightJustify
         NonEditableAsLabel = True
-        Font.Color = clNone
         Font.FontName = 'Verdana'
-        Font.Size = 10
-        Font.Style = []
+        Font.PxSize = 13
         FriendlyName = 'iweVar2Cutoff'
         SubmitOnAsyncEvent = True
         TabOrder = 54
         Text = '600.0'
       end
       object iweVar3Cutoff: TIWEdit
+        AlignWithMargins = False
         Left = 766
         Top = 568
         Width = 59
@@ -2426,40 +2326,37 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
         StyleRenderOptions.RenderBorder = False
         Alignment = taRightJustify
         NonEditableAsLabel = True
-        Font.Color = clNone
         Font.FontName = 'Verdana'
-        Font.Size = 10
-        Font.Style = []
+        Font.PxSize = 13
         FriendlyName = 'iweVar3Cutoff'
         SubmitOnAsyncEvent = True
         TabOrder = 55
         Text = '10.0'
       end
       object IWLabel19: TIWLabel
+        AlignWithMargins = False
         Left = 766
         Top = 498
         Width = 198
         Height = 16
-        Font.Color = clNone
         Font.FontName = 'Verdana'
-        Font.Size = 10
         Font.Style = [fsBold]
+        Font.PxSize = 13
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel5'
         Caption = 'Zircon Chemistry Cutoffs'
       end
       object iwcbVar1: TIWCheckBox
+        AlignWithMargins = False
         Left = 831
         Top = 520
         Width = 154
         Height = 21
         Caption = 'Th/U'
         Editable = True
-        Font.Color = clNone
         Font.FontName = 'Verdana'
-        Font.Size = 10
-        Font.Style = []
+        Font.PxSize = 13
         SubmitOnAsyncEvent = True
         Style = stNormal
         TabOrder = 56
@@ -2468,16 +2365,15 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
         FriendlyName = 'iwcbVar1'
       end
       object iwcbVar2: TIWCheckBox
+        AlignWithMargins = False
         Left = 831
         Top = 544
         Width = 154
         Height = 21
         Caption = 'T from Ti in zircon'
         Editable = True
-        Font.Color = clNone
         Font.FontName = 'Verdana'
-        Font.Size = 10
-        Font.Style = []
+        Font.PxSize = 13
         SubmitOnAsyncEvent = True
         Style = stNormal
         TabOrder = 57
@@ -2485,16 +2381,15 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
         FriendlyName = 'iwcbVar2'
       end
       object iwcbVar3: TIWCheckBox
+        AlignWithMargins = False
         Left = 831
         Top = 568
         Width = 154
         Height = 21
         Caption = 'delta 18 Oxygen'
         Editable = True
-        Font.Color = clNone
         Font.FontName = 'Verdana'
-        Font.Size = 10
-        Font.Style = []
+        Font.PxSize = 13
         SubmitOnAsyncEvent = True
         Style = stNormal
         TabOrder = 58
@@ -2502,13 +2397,11 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
         FriendlyName = 'iwcbVar3'
       end
       object iwrectCutoffs: TIWRectangle
+        AlignWithMargins = False
         Left = 754
         Top = 496
         Width = 6
         Height = 161
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         BorderOptions.Width = 0
         FriendlyName = 'iwrectCutoffs'
         Color = clMoneyGreen
@@ -2516,16 +2409,15 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
         VAlign = vaMiddle
       end
       object iwcbShowBelowCutoff: TIWCheckBox
+        AlignWithMargins = False
         Left = 768
         Top = 636
         Width = 177
         Height = 21
         Caption = 'Show <= cutoff'
         Editable = True
-        Font.Color = clNone
         Font.FontName = 'Verdana'
-        Font.Size = 10
-        Font.Style = []
+        Font.PxSize = 13
         SubmitOnAsyncEvent = True
         Style = stNormal
         TabOrder = 60
@@ -2534,16 +2426,15 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
         FriendlyName = 'iwcbShowBelowCutoff'
       end
       object iwcbShowAboveCutoff: TIWCheckBox
+        AlignWithMargins = False
         Left = 768
         Top = 618
         Width = 177
         Height = 21
         Caption = 'Show > cutoff'
         Editable = True
-        Font.Color = clNone
         Font.FontName = 'Verdana'
-        Font.Size = 10
-        Font.Style = []
+        Font.PxSize = 13
         SubmitOnAsyncEvent = True
         Style = stNormal
         TabOrder = 59
@@ -2552,70 +2443,62 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
         FriendlyName = 'iwcbShowAboveCutoff'
       end
       object IWLabel16: TIWLabel
+        AlignWithMargins = False
         Left = 6
         Top = 592
         Width = 172
         Height = 16
-        Font.Color = clNone
         Font.FontName = 'Verdana'
-        Font.Size = 10
         Font.Style = [fsBold]
+        Font.PxSize = 13
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel5'
         Caption = 'Age Probability Graph'
       end
       object iwbPopulateChemistryGraph: TIWButton
+        AlignWithMargins = False
         Left = 766
         Top = 409
         Width = 230
         Height = 25
         Caption = 'Populate Chemistry Graph'
         Color = clWebLIGHTSKYBLUE
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         FriendlyName = 'iwbPopulateChemistryGraph'
         TabOrder = 34
         OnClick = iwbPopulateChemistryGraphClick
       end
       object iwbGetChemistryAgeData: TIWButton
+        AlignWithMargins = False
         Left = 766
         Top = 383
         Width = 230
         Height = 25
         Caption = 'Get Chemistry Age Data'
         Color = clWebLIGHTSKYBLUE
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         FriendlyName = 'iwbGetChemistryAgeData'
         TabOrder = 33
         OnClick = iwbGetChemistryAgeDataClick
       end
       object iwlSampleZones: TIWListbox
+        AlignWithMargins = False
         Left = 16
         Top = 152
         Width = 284
         Height = 233
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         TabOrder = 65
         FriendlyName = 'iwlSampleZones'
-        NoSelectionText = '-- No Selection --'
       end
       object iwcbIncludeSampleZones: TIWCheckBox
+        AlignWithMargins = False
         Left = 16
         Top = 125
         Width = 202
         Height = 21
         Caption = 'Include Grain Zones'
         Editable = True
-        Font.Color = clNone
         Font.FontName = 'Verdana'
-        Font.Size = 10
-        Font.Style = []
+        Font.PxSize = 13
         SubmitOnAsyncEvent = True
         Style = stNormal
         TabOrder = 66
@@ -2634,6 +2517,7 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
       BorderOptions.NumericWidth = 0
       BorderOptions.Style = cbsNone
       object iwbDownloadGrainCurves: TIWButton
+        AlignWithMargins = False
         Left = 16
         Top = 14
         Width = 249
@@ -2641,14 +2525,14 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
         Caption = 'Download Probability Curves to Excel'
         Enabled = False
         Color = clBtnFace
-        Font.Color = clNone
         Font.Size = 9
-        Font.Style = []
+        Font.PxSize = 12
         FriendlyName = 'iwbDownloadGrainCurves'
         TabOrder = 62
         OnClick = iwbDownloadGrainCurvesClick
       end
       object iwmGraphExplanation: TIWMemo
+        AlignWithMargins = False
         Left = 505
         Top = 6
         Width = 467
@@ -2656,10 +2540,10 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
         StyleRenderOptions.RenderBorder = False
         BGColor = clNone
         Editable = False
-        Font.Color = clWebGRAY
         Font.FontName = 'Verdana'
         Font.Size = 8
-        Font.Style = []
+        Font.PxSize = 10
+        Font.Color = clWebGRAY
         InvisibleBorder = True
         HorizScrollBar = False
         VertScrollBar = False
@@ -2688,6 +2572,7 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
       BorderOptions.NumericWidth = 0
       BorderOptions.Style = cbsNone
       object iwChartPDF: TIWChart
+        AlignWithMargins = False
         Left = 0
         Top = 0
         Width = 991
@@ -2726,12 +2611,12 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
         Gradient.MidColor = 15395562
         Gradient.StartColor = 15395562
         Gradient.Visible = True
-        LeftWall.Color = 14745599
+        LeftWall.Color = clLightyellow
         Legend.Alignment = laBottom
         Legend.CheckBoxes = True
         Legend.Font.Name = 'Verdana'
         Legend.Shadow.Transparency = 0
-        RightWall.Color = 14745599
+        RightWall.Color = clLightyellow
         SubFoot.Alignment = taRightJustify
         SubFoot.Font.Color = clGray
         SubFoot.Font.Name = 'Verdana'
@@ -2750,49 +2635,49 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
         BottomAxis.AutomaticMinimum = False
         BottomAxis.Axis.Color = 4210752
         BottomAxis.ExactDateTime = False
-        BottomAxis.Grid.Color = 11119017
+        BottomAxis.Grid.Color = clDarkgray
         BottomAxis.Increment = 400.000000000000000000
         BottomAxis.LabelsFormat.Font.Name = 'Verdana'
         BottomAxis.Maximum = 4500.000000000000000000
-        BottomAxis.TicksInner.Color = 11119017
+        BottomAxis.TicksInner.Color = clDarkgray
         BottomAxis.Title.Caption = 'Grain Age (Ma)'
         BottomAxis.Title.Font.Height = -13
         BottomAxis.Title.Font.Name = 'Verdana'
         BottomAxis.Title.Font.Style = [fsBold]
         DepthAxis.Axis.Color = 4210752
-        DepthAxis.Grid.Color = 11119017
+        DepthAxis.Grid.Color = clDarkgray
         DepthAxis.LabelsFormat.Font.Name = 'Verdana'
-        DepthAxis.TicksInner.Color = 11119017
+        DepthAxis.TicksInner.Color = clDarkgray
         DepthAxis.Title.Font.Name = 'Verdana'
         DepthTopAxis.Axis.Color = 4210752
-        DepthTopAxis.Grid.Color = 11119017
+        DepthTopAxis.Grid.Color = clDarkgray
         DepthTopAxis.LabelsFormat.Font.Name = 'Verdana'
-        DepthTopAxis.TicksInner.Color = 11119017
+        DepthTopAxis.TicksInner.Color = clDarkgray
         DepthTopAxis.Title.Font.Name = 'Verdana'
         LeftAxis.Automatic = False
         LeftAxis.AutomaticMaximum = False
         LeftAxis.AutomaticMinimum = False
         LeftAxis.Axis.Color = 4210752
         LeftAxis.ExactDateTime = False
-        LeftAxis.Grid.Color = 11119017
+        LeftAxis.Grid.Color = clDarkgray
         LeftAxis.Increment = 200.000000000000000000
         LeftAxis.Inverted = True
         LeftAxis.LabelsFormat.Font.Name = 'Verdana'
         LeftAxis.Maximum = 3600.000000000000000000
-        LeftAxis.TicksInner.Color = 11119017
+        LeftAxis.TicksInner.Color = clDarkgray
         LeftAxis.Title.Caption = 'Deposition Age (Ma)'
         LeftAxis.Title.Font.Height = -13
         LeftAxis.Title.Font.Name = 'Verdana'
         LeftAxis.Title.Font.Style = [fsBold]
         RightAxis.Axis.Color = 4210752
-        RightAxis.Grid.Color = 11119017
+        RightAxis.Grid.Color = clDarkgray
         RightAxis.LabelsFormat.Font.Name = 'Verdana'
-        RightAxis.TicksInner.Color = 11119017
+        RightAxis.TicksInner.Color = clDarkgray
         RightAxis.Title.Font.Name = 'Verdana'
         TopAxis.Axis.Color = 4210752
-        TopAxis.Grid.Color = 11119017
+        TopAxis.Grid.Color = clDarkgray
         TopAxis.LabelsFormat.Font.Name = 'Verdana'
-        TopAxis.TicksInner.Color = 11119017
+        TopAxis.TicksInner.Color = clDarkgray
         TopAxis.Title.Font.Name = 'Verdana'
         View3D = False
         Align = alClient
@@ -2807,7 +2692,6 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
           19)
         ColorPaletteIndex = 13
         object Series1: TPointSeries
-          HoverElement = [heCurrent]
           Title = '1'
           ClickableLine = False
           Pointer.Brush.Color = clBlack
@@ -2823,7 +2707,6 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
           YValues.Order = loNone
         end
         object Series2: TPointSeries
-          HoverElement = [heCurrent]
           Title = '2'
           ClickableLine = False
           Pointer.Brush.Color = clBlack
@@ -2839,7 +2722,6 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
           YValues.Order = loNone
         end
         object Series3: TPointSeries
-          HoverElement = [heCurrent]
           Title = '3'
           ClickableLine = False
           Pointer.Brush.Color = clBlack
@@ -2855,7 +2737,6 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
           YValues.Order = loNone
         end
         object Series4: TPointSeries
-          HoverElement = [heCurrent]
           Title = '4'
           ClickableLine = False
           Pointer.Brush.Color = 4227327
@@ -2870,7 +2751,6 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
           YValues.Order = loNone
         end
         object Series5: TPointSeries
-          HoverElement = [heCurrent]
           Title = '5'
           ClickableLine = False
           Pointer.Brush.Color = clRed
@@ -2887,7 +2767,6 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
           YValues.Order = loNone
         end
         object Series6: TLineSeries
-          HoverElement = [heCurrent]
           ColorEachLine = False
           SeriesColor = 4227200
           Title = 'Equal age'
@@ -2919,6 +2798,7 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
       BorderOptions.NumericWidth = 0
       BorderOptions.Style = cbsNone
       object iwChartChem: TIWChart
+        AlignWithMargins = False
         Left = 0
         Top = 0
         Width = 991
@@ -2958,12 +2838,12 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
         Gradient.MidColor = 15395562
         Gradient.StartColor = 15395562
         Gradient.Visible = True
-        LeftWall.Color = 14745599
+        LeftWall.Color = clLightyellow
         Legend.Alignment = laBottom
         Legend.CheckBoxes = True
         Legend.Font.Name = 'Verdana'
         Legend.Shadow.Transparency = 0
-        RightWall.Color = 14745599
+        RightWall.Color = clLightyellow
         SubFoot.Alignment = taRightJustify
         SubFoot.Font.Color = clGray
         SubFoot.Font.Name = 'Verdana'
@@ -2979,49 +2859,49 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
         BottomAxis.AutomaticMinimum = False
         BottomAxis.Axis.Color = 4210752
         BottomAxis.ExactDateTime = False
-        BottomAxis.Grid.Color = 11119017
+        BottomAxis.Grid.Color = clDarkgray
         BottomAxis.Increment = 400.000000000000000000
         BottomAxis.LabelsFormat.Font.Name = 'Verdana'
         BottomAxis.Maximum = 4500.000000000000000000
-        BottomAxis.TicksInner.Color = 11119017
+        BottomAxis.TicksInner.Color = clDarkgray
         BottomAxis.Title.Caption = 'Grain Age (Ma)'
         BottomAxis.Title.Font.Height = -13
         BottomAxis.Title.Font.Name = 'Verdana'
         BottomAxis.Title.Font.Style = [fsBold]
         DepthAxis.Axis.Color = 4210752
-        DepthAxis.Grid.Color = 11119017
+        DepthAxis.Grid.Color = clDarkgray
         DepthAxis.LabelsFormat.Font.Name = 'Verdana'
-        DepthAxis.TicksInner.Color = 11119017
+        DepthAxis.TicksInner.Color = clDarkgray
         DepthAxis.Title.Font.Name = 'Verdana'
         DepthTopAxis.Axis.Color = 4210752
-        DepthTopAxis.Grid.Color = 11119017
+        DepthTopAxis.Grid.Color = clDarkgray
         DepthTopAxis.LabelsFormat.Font.Name = 'Verdana'
-        DepthTopAxis.TicksInner.Color = 11119017
+        DepthTopAxis.TicksInner.Color = clDarkgray
         DepthTopAxis.Title.Font.Name = 'Verdana'
         LeftAxis.Automatic = False
         LeftAxis.AutomaticMaximum = False
         LeftAxis.AutomaticMinimum = False
         LeftAxis.Axis.Color = 4210752
         LeftAxis.ExactDateTime = False
-        LeftAxis.Grid.Color = 11119017
+        LeftAxis.Grid.Color = clDarkgray
         LeftAxis.Increment = 200.000000000000000000
         LeftAxis.Inverted = True
         LeftAxis.LabelsFormat.Font.Name = 'Verdana'
         LeftAxis.Maximum = 3600.000000000000000000
-        LeftAxis.TicksInner.Color = 11119017
+        LeftAxis.TicksInner.Color = clDarkgray
         LeftAxis.Title.Caption = 'Deposition Age (Ma)'
         LeftAxis.Title.Font.Height = -13
         LeftAxis.Title.Font.Name = 'Verdana'
         LeftAxis.Title.Font.Style = [fsBold]
         RightAxis.Axis.Color = 4210752
-        RightAxis.Grid.Color = 11119017
+        RightAxis.Grid.Color = clDarkgray
         RightAxis.LabelsFormat.Font.Name = 'Verdana'
-        RightAxis.TicksInner.Color = 11119017
+        RightAxis.TicksInner.Color = clDarkgray
         RightAxis.Title.Font.Name = 'Verdana'
         TopAxis.Axis.Color = 4210752
-        TopAxis.Grid.Color = 11119017
+        TopAxis.Grid.Color = clDarkgray
         TopAxis.LabelsFormat.Font.Name = 'Verdana'
-        TopAxis.TicksInner.Color = 11119017
+        TopAxis.TicksInner.Color = clDarkgray
         TopAxis.Title.Font.Name = 'Verdana'
         View3D = False
         Align = alClient
@@ -3036,7 +2916,6 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
           19)
         ColorPaletteIndex = 13
         object PointSeries5: TPointSeries
-          HoverElement = [heCurrent]
           Title = 'Th/U > Chosen value'
           ClickableLine = False
           Pointer.Brush.Color = clRed
@@ -3053,7 +2932,6 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
           YValues.Order = loNone
         end
         object Series7: TPointSeries
-          HoverElement = [heCurrent]
           Title = 'Th/U <= Chosen value'
           ClickableLine = False
           Pointer.Brush.Color = clBlue
@@ -3066,7 +2944,6 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
           YValues.Order = loNone
         end
         object Series8: TLineSeries
-          HoverElement = [heCurrent]
           SeriesColor = 4227200
           Title = 'Equal Age'
           Brush.Color = 4227200
@@ -3092,6 +2969,7 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
       BorderOptions.NumericWidth = 0
       BorderOptions.Style = cbsNone
       object IWMemo1: TIWMemo
+        AlignWithMargins = False
         Left = 505
         Top = 6
         Width = 467
@@ -3099,10 +2977,10 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
         StyleRenderOptions.RenderBorder = False
         BGColor = clNone
         Editable = False
-        Font.Color = clWebGRAY
         Font.FontName = 'Verdana'
         Font.Size = 8
-        Font.Style = []
+        Font.PxSize = 10
+        Font.Color = clWebGRAY
         InvisibleBorder = True
         HorizScrollBar = False
         VertScrollBar = False
@@ -3118,6 +2996,7 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
             'reflect values less than the cutoff.')
       end
       object iwbDownloadGrainAgeData: TIWButton
+        AlignWithMargins = False
         Left = 16
         Top = 14
         Width = 249
@@ -3125,14 +3004,14 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
         Caption = 'Download Grain Age Data to Excel'
         Enabled = False
         Color = clBtnFace
-        Font.Color = clNone
         Font.Size = 9
-        Font.Style = []
+        Font.PxSize = 12
         FriendlyName = 'iwbDownloadGrainAgeData'
         TabOrder = 63
         OnClick = iwbDownloadGrainAgeDataClick
       end
       object iwbDownloadData: TIWButton
+        AlignWithMargins = False
         Left = 16
         Top = 45
         Width = 249
@@ -3140,9 +3019,8 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
         Caption = 'Download Data'
         Enabled = False
         Color = clBtnFace
-        Font.Color = clNone
         Font.Size = 9
-        Font.Style = []
+        Font.PxSize = 12
         FriendlyName = 'iwbDownloadData'
         TabOrder = 68
         OnClick = iwbDownloadDataClick
@@ -3186,6 +3064,7 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
             ExplicitWidth = 879
             inherited lblWelcome: TIWLabel
               Left = 606
+              Font.Color = clWebDARKSLATEGRAY
               ExplicitLeft = 606
             end
           end
@@ -3194,7 +3073,13 @@ object ISFGridGrainProbabilityUnits: TISFGridGrainProbabilityUnits
           Width = 1079
           ExplicitWidth = 1079
           inherited iwlSignOut: TIWLink
-            TabOrder = -1
+            Font.Color = clWebBLUE
+          end
+          inherited lnkSignIn: TIWLink
+            Font.Color = clWebBLUE
+          end
+          inherited lblProgTitle: TIWLabel
+            Font.Color = clWebSTEELBLUE
           end
         end
       end

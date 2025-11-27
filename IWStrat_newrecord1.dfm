@@ -18,29 +18,30 @@ object ISFNewRecord1: TISFNewRecord1
   DesignLeft = 2
   DesignTop = 2
   object iwbNextStageOfQuery: TIWButton
+    AlignWithMargins = False
     Left = 96
     Top = 180
     Width = 169
     Height = 25
     Caption = 'Proceed to next step'
     Color = clWebLIGHTGREEN
-    Font.Color = clNone
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbNextStageOfQuery'
     OnClick = iwbNextStageOfQueryClick
   end
   object IWText1: TIWText
+    AlignWithMargins = False
     Left = 422
     Top = 78
     Width = 259
     Height = 161
     BGColor = clNone
     ConvertSpaces = True
-    Font.Color = clWebDARKSLATEGRAY
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
+    Font.Color = clWebDARKSLATEGRAY
     FriendlyName = 'IWText1'
     Lines.Strings = (
       'Specify the Region within which the new '
@@ -52,46 +53,46 @@ object ISFNewRecord1: TISFNewRecord1
     WantReturns = True
   end
   object iwcbContinent: TIWComboBox
+    AlignWithMargins = False
     Left = 92
     Top = 102
     Width = 310
     Height = 21
     StyleRenderOptions.RenderBorder = False
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     NonEditableAsLabel = True
     TabOrder = 1
     ItemIndex = -1
     Sorted = True
     FriendlyName = 'iwcbContinent'
-    NoSelectionText = '-- No Selection --'
   end
   object IWLabel1: TIWLabel
+    AlignWithMargins = False
     Left = 92
     Top = 80
     Width = 42
     Height = 15
-    Font.Color = clNone
     Font.FontName = 'Arial'
     Font.Size = 9
     Font.Style = [fsBold]
+    Font.PxSize = 12
     NoWrap = True
     HasTabOrder = False
     FriendlyName = 'IWLabel1'
     Caption = 'Region'
   end
   object rectLeft: TIWRectangle
+    AlignWithMargins = False
     Left = 0
     Top = 55
     Width = 83
     Height = 208
     Align = alLeft
     ZIndex = 1
+    Font.PxSize = 13
     Font.Color = clWebBLACK
-    Font.Size = 10
-    Font.Style = []
     BorderOptions.Width = 0
     FriendlyName = 'rectLeft'
     Color = clWebLAVENDER
@@ -99,15 +100,15 @@ object ISFNewRecord1: TISFNewRecord1
     VAlign = vaMiddle
   end
   object iwbCancel: TIWButton
+    AlignWithMargins = False
     Left = 288
     Top = 180
     Width = 105
     Height = 25
     Caption = 'Cancel'
     Color = clWebLIGHTSALMON
-    Font.Color = clNone
     Font.Size = 9
-    Font.Style = []
+    Font.PxSize = 12
     FriendlyName = 'iwbCancel'
     TabOrder = 2
     OnClick = iwbCancelClick
@@ -152,6 +153,7 @@ object ISFNewRecord1: TISFNewRecord1
               Top = 0
               Width = 64
               Alignment = taRightJustify
+              Font.Color = clWebDARKSLATEGRAY
               ExplicitLeft = 480
               ExplicitTop = 0
               ExplicitWidth = 64
@@ -162,7 +164,13 @@ object ISFNewRecord1: TISFNewRecord1
           Width = 690
           ExplicitWidth = 690
           inherited iwlSignOut: TIWLink
-            TabOrder = -1
+            Font.Color = clWebBLUE
+          end
+          inherited lnkSignIn: TIWLink
+            Font.Color = clWebBLUE
+          end
+          inherited lblProgTitle: TIWLabel
+            Font.Color = clWebSTEELBLUE
           end
         end
       end

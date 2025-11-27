@@ -27,15 +27,15 @@ object ISFChartDetails: TISFChartDetails
     BorderOptions.NumericWidth = 0
     BorderOptions.Style = cbsNone
     object rectLeft: TIWRectangle
+      AlignWithMargins = False
       Left = 0
       Top = 0
       Width = 83
       Height = 1795
       Align = alLeft
       ZIndex = 1
+      Font.PxSize = 13
       Font.Color = clWebBLACK
-      Font.Size = 10
-      Font.Style = []
       BorderOptions.Width = 0
       FriendlyName = 'rectLeft'
       Color = clWebLAVENDER
@@ -63,57 +63,49 @@ object ISFChartDetails: TISFChartDetails
       BorderOptions.NumericWidth = 0
       BorderOptions.Style = cbsNone
       object iwbDetailsEdit: TIWButton
+        AlignWithMargins = False
         Left = 263
         Top = 19
         Width = 129
         Height = 25
         Caption = 'Edit this record'
         Color = clWebLEMONCHIFFON
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         FriendlyName = 'iwbDetailsEdit'
         TabOrder = 9
         OnClick = iwbDetailsEditClick
       end
       object iwbReturn: TIWButton
+        AlignWithMargins = False
         Left = 96
         Top = 19
         Width = 141
         Height = 25
         Caption = 'Return to Main page'
         Color = clWebLIGHTGREEN
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         FriendlyName = 'iwbReturn'
         TabOrder = 8
         OnClick = iwbReturnClick
       end
       object iwbApplyUpdates: TIWButton
+        AlignWithMargins = False
         Left = 422
         Top = 19
         Width = 129
         Height = 25
         Caption = 'Apply updates'
         Color = clWebPEACHPUFF
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         FriendlyName = 'iwbDetailsEdit'
         TabOrder = 10
         OnClick = iwbApplyUpdatesClick
       end
       object iwbCancel: TIWButton
+        AlignWithMargins = False
         Left = 584
         Top = 19
         Width = 129
         Height = 25
         Caption = 'Cancel updates'
         Color = clWebLIGHTSALMON
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         FriendlyName = 'iwbDetailsEdit'
         TabOrder = 11
         OnClick = iwbCancelClick
@@ -131,33 +123,35 @@ object ISFChartDetails: TISFChartDetails
       BorderOptions.Style = cbsNone
       Color = clWebHONEYDEW
       object IWLabel5: TIWLabel
+        AlignWithMargins = False
         Left = 16
         Top = 9
         Width = 57
         Height = 19
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 12
         Font.Style = [fsBold, fsUnderline]
+        Font.PxSize = 16
         HasTabOrder = False
         FriendlyName = 'IWLabel1'
         Caption = 'Chart :'
       end
       object IWLabel3: TIWLabel
+        AlignWithMargins = False
         Left = 12
         Top = 45
         Width = 71
         Height = 15
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
+        Font.PxSize = 12
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel3'
         Caption = 'Chart name'
       end
       object IWDBEdit3: TIWDBEdit
+        AlignWithMargins = False
         Left = 104
         Top = 44
         Width = 357
@@ -166,10 +160,10 @@ object ISFChartDetails: TISFChartDetails
         BGColor = clWebLEMONCHIFFON
         Editable = False
         NonEditableAsLabel = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 13
         Font.Style = [fsBold]
+        Font.PxSize = 17
         FriendlyName = 'IWDBEdit1'
         SubmitOnAsyncEvent = True
         AutoEditable = True
@@ -178,20 +172,21 @@ object ISFChartDetails: TISFChartDetails
         PasswordPrompt = False
       end
       object IWLabel1: TIWLabel
+        AlignWithMargins = False
         Left = 12
         Top = 75
         Width = 49
         Height = 15
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
+        Font.PxSize = 12
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel1'
         Caption = 'Chart ID'
       end
       object IWDBEdit1: TIWDBEdit
+        AlignWithMargins = False
         Left = 104
         Top = 75
         Width = 121
@@ -199,10 +194,10 @@ object ISFChartDetails: TISFChartDetails
         StyleRenderOptions.RenderBorder = False
         Editable = False
         NonEditableAsLabel = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = [fsBold]
+        Font.PxSize = 12
         FriendlyName = 'IWDBEdit1'
         SubmitOnAsyncEvent = True
         TabOrder = 1
@@ -212,19 +207,20 @@ object ISFChartDetails: TISFChartDetails
         PasswordPrompt = False
       end
       object IWLabel12: TIWLabel
+        AlignWithMargins = False
         Left = 12
         Top = 141
         Width = 69
         Height = 15
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
+        Font.PxSize = 12
         HasTabOrder = False
         FriendlyName = 'IWLabel11'
         Caption = 'Description'
       end
       object iwDBmDescription: TIWDBMemo
+        AlignWithMargins = False
         Left = 104
         Top = 141
         Width = 709
@@ -232,10 +228,9 @@ object ISFChartDetails: TISFChartDetails
         StyleRenderOptions.RenderBorder = False
         BGColor = clWebHONEYDEW
         Editable = False
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 8
-        Font.Style = []
+        Font.PxSize = 10
         InvisibleBorder = False
         HorizScrollBar = False
         VertScrollBar = True
@@ -248,19 +243,20 @@ object ISFChartDetails: TISFChartDetails
         FriendlyName = 'iwDBmDescription'
       end
       object IWLabel2: TIWLabel
+        AlignWithMargins = False
         Left = 272
         Top = 75
         Width = 107
         Height = 15
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
+        Font.PxSize = 12
         HasTabOrder = False
         FriendlyName = 'IWLabel1'
         Caption = 'Chart Offset (mm)'
       end
       object IWDBEdit2: TIWDBEdit
+        AlignWithMargins = False
         Left = 381
         Top = 75
         Width = 56
@@ -268,10 +264,10 @@ object ISFChartDetails: TISFChartDetails
         StyleRenderOptions.RenderBorder = False
         Editable = False
         NonEditableAsLabel = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = [fsBold]
+        Font.PxSize = 12
         FriendlyName = 'IWDBEdit1'
         SubmitOnAsyncEvent = True
         TabOrder = 12
@@ -281,20 +277,21 @@ object ISFChartDetails: TISFChartDetails
         PasswordPrompt = False
       end
       object IWLabel4: TIWLabel
+        AlignWithMargins = False
         Left = 480
         Top = 75
         Width = 169
         Height = 15
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
+        Font.PxSize = 12
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel1'
         Caption = 'Default Domain Offset (mm)'
       end
       object IWDBEdit4: TIWDBEdit
+        AlignWithMargins = False
         Left = 645
         Top = 75
         Width = 56
@@ -302,10 +299,10 @@ object ISFChartDetails: TISFChartDetails
         StyleRenderOptions.RenderBorder = False
         Editable = False
         NonEditableAsLabel = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = [fsBold]
+        Font.PxSize = 12
         FriendlyName = 'IWDBEdit1'
         SubmitOnAsyncEvent = True
         TabOrder = 15
@@ -315,19 +312,20 @@ object ISFChartDetails: TISFChartDetails
         PasswordPrompt = False
       end
       object IWLabel14: TIWLabel
+        AlignWithMargins = False
         Left = 272
         Top = 102
         Width = 99
         Height = 15
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
+        Font.PxSize = 12
         HasTabOrder = False
         FriendlyName = 'IWLabel1'
         Caption = 'Default min. age'
       end
       object IWDBEdit5: TIWDBEdit
+        AlignWithMargins = False
         Left = 381
         Top = 102
         Width = 56
@@ -335,10 +333,10 @@ object ISFChartDetails: TISFChartDetails
         StyleRenderOptions.RenderBorder = False
         Editable = False
         NonEditableAsLabel = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = [fsBold]
+        Font.PxSize = 12
         FriendlyName = 'IWDBEdit1'
         SubmitOnAsyncEvent = True
         TabOrder = 31
@@ -348,20 +346,21 @@ object ISFChartDetails: TISFChartDetails
         PasswordPrompt = False
       end
       object IWLabel15: TIWLabel
+        AlignWithMargins = False
         Left = 480
         Top = 102
         Width = 101
         Height = 15
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
+        Font.PxSize = 12
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel1'
         Caption = 'Default max. age'
       end
       object IWDBEdit6: TIWDBEdit
+        AlignWithMargins = False
         Left = 645
         Top = 102
         Width = 56
@@ -369,10 +368,10 @@ object ISFChartDetails: TISFChartDetails
         StyleRenderOptions.RenderBorder = False
         Editable = False
         NonEditableAsLabel = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = [fsBold]
+        Font.PxSize = 12
         FriendlyName = 'IWDBEdit1'
         SubmitOnAsyncEvent = True
         TabOrder = 32
@@ -382,20 +381,21 @@ object ISFChartDetails: TISFChartDetails
         PasswordPrompt = False
       end
       object IWLabel18: TIWLabel
+        AlignWithMargins = False
         Left = 480
         Top = 48
         Width = 56
         Height = 15
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
+        Font.PxSize = 12
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel1'
         Caption = 'Owner ID'
       end
       object IWDBEdit7: TIWDBEdit
+        AlignWithMargins = False
         Left = 644
         Top = 48
         Width = 169
@@ -403,10 +403,10 @@ object ISFChartDetails: TISFChartDetails
         StyleRenderOptions.RenderBorder = False
         Editable = False
         NonEditableAsLabel = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
         Font.Style = [fsBold]
+        Font.PxSize = 12
         FriendlyName = 'IWDBEdit1'
         SubmitOnAsyncEvent = True
         TabOrder = 36
@@ -428,20 +428,22 @@ object ISFChartDetails: TISFChartDetails
       BorderOptions.Style = cbsNone
       Color = clWebWHITESMOKE
       object IWLabel9: TIWLabel
+        AlignWithMargins = False
         Left = 8
         Top = 6
         Width = 162
         Height = 19
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 12
         Font.Style = [fsBold, fsUnderline]
+        Font.PxSize = 16
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel1'
         Caption = 'Domains included :'
       end
       object iwDBgDomain: TIWDBGrid
+        AlignWithMargins = False
         Left = 109
         Top = 38
         Width = 900
@@ -454,24 +456,24 @@ object ISFChartDetails: TISFChartDetails
         BorderStyle = tfDefault
         CellPadding = 2
         CellSpacing = 0
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 8
-        Font.Style = []
+        Font.PxSize = 10
         FrameBuffer = 40
         Lines = tlAll
         UseFrame = True
         UseSize = True
+        ShowEmptyCells = True
+        ShowInvisibleRows = True
         ScrollToCurrentRow = False
         Columns = <
           item
             Alignment = taCenter
             BGColor = clNone
             DoSubmitValidation = True
-            Font.Color = clNone
             Font.FontName = 'Arial'
             Font.Size = 8
-            Font.Style = []
+            Font.PxSize = 10
             Header = False
             Height = '0'
             ShowHint = True
@@ -480,7 +482,6 @@ object ISFChartDetails: TISFChartDetails
             Width = '20'
             Wrap = False
             RawText = False
-            Css = ''
             BlobCharLimit = 0
             CompareHighlight = hcNone
             DataField = 'CHARTID'
@@ -488,10 +489,10 @@ object ISFChartDetails: TISFChartDetails
             Title.Alignment = taCenter
             Title.BGColor = clNone
             Title.DoSubmitValidation = True
-            Title.Font.Color = clNone
             Title.Font.FontName = 'Arial'
             Title.Font.Size = 8
             Title.Font.Style = [fsBold]
+            Title.Font.PxSize = 10
             Title.Header = False
             Title.Height = '0'
             Title.ShowHint = True
@@ -506,10 +507,9 @@ object ISFChartDetails: TISFChartDetails
             Alignment = taCenter
             BGColor = clNone
             DoSubmitValidation = True
-            Font.Color = clNone
             Font.FontName = 'Arial'
             Font.Size = 8
-            Font.Style = []
+            Font.PxSize = 10
             Header = False
             Height = '0'
             ShowHint = True
@@ -518,7 +518,6 @@ object ISFChartDetails: TISFChartDetails
             Width = '20'
             Wrap = False
             RawText = False
-            Css = ''
             BlobCharLimit = 0
             CompareHighlight = hcNone
             DataField = 'DOMAINORDER'
@@ -526,10 +525,9 @@ object ISFChartDetails: TISFChartDetails
             Title.Alignment = taCenter
             Title.BGColor = clNone
             Title.DoSubmitValidation = True
-            Title.Font.Color = clNone
             Title.Font.FontName = 'Arial'
             Title.Font.Size = 8
-            Title.Font.Style = []
+            Title.Font.PxSize = 10
             Title.Header = False
             Title.Height = '0'
             Title.ShowHint = True
@@ -544,10 +542,9 @@ object ISFChartDetails: TISFChartDetails
             Alignment = taRightJustify
             BGColor = clNone
             DoSubmitValidation = True
-            Font.Color = clNone
             Font.FontName = 'Arial'
             Font.Size = 8
-            Font.Style = []
+            Font.PxSize = 10
             Header = False
             Height = '0'
             ShowHint = True
@@ -556,7 +553,6 @@ object ISFChartDetails: TISFChartDetails
             Width = '20'
             Wrap = True
             RawText = False
-            Css = ''
             BlobCharLimit = 0
             CompareHighlight = hcNone
             DataField = 'OFFSET_MM'
@@ -564,10 +560,10 @@ object ISFChartDetails: TISFChartDetails
             Title.Alignment = taCenter
             Title.BGColor = clNone
             Title.DoSubmitValidation = True
-            Title.Font.Color = clNone
             Title.Font.FontName = 'Arial'
             Title.Font.Size = 8
             Title.Font.Style = [fsBold]
+            Title.Font.PxSize = 10
             Title.Header = False
             Title.Height = '0'
             Title.ShowHint = True
@@ -582,10 +578,9 @@ object ISFChartDetails: TISFChartDetails
             Alignment = taRightJustify
             BGColor = clNone
             DoSubmitValidation = True
-            Font.Color = clNone
             Font.FontName = 'Arial'
             Font.Size = 8
-            Font.Style = []
+            Font.PxSize = 10
             Header = False
             Height = '0'
             ShowHint = True
@@ -594,7 +589,6 @@ object ISFChartDetails: TISFChartDetails
             Width = '30'
             Wrap = False
             RawText = False
-            Css = ''
             BlobCharLimit = 0
             CompareHighlight = hcNone
             DataField = 'DOMAINXMIN'
@@ -602,10 +596,10 @@ object ISFChartDetails: TISFChartDetails
             Title.Alignment = taCenter
             Title.BGColor = clNone
             Title.DoSubmitValidation = True
-            Title.Font.Color = clNone
             Title.Font.FontName = 'Arial'
             Title.Font.Size = 8
             Title.Font.Style = [fsBold]
+            Title.Font.PxSize = 10
             Title.Header = False
             Title.Height = '0'
             Title.ShowHint = True
@@ -620,10 +614,9 @@ object ISFChartDetails: TISFChartDetails
             Alignment = taRightJustify
             BGColor = clNone
             DoSubmitValidation = True
-            Font.Color = clNone
             Font.FontName = 'Arial'
             Font.Size = 8
-            Font.Style = []
+            Font.PxSize = 10
             Header = False
             Height = '0'
             ShowHint = True
@@ -632,7 +625,6 @@ object ISFChartDetails: TISFChartDetails
             Width = '30'
             Wrap = False
             RawText = False
-            Css = ''
             BlobCharLimit = 0
             CompareHighlight = hcNone
             DataField = 'DOMAINXMAX'
@@ -640,10 +632,10 @@ object ISFChartDetails: TISFChartDetails
             Title.Alignment = taCenter
             Title.BGColor = clNone
             Title.DoSubmitValidation = True
-            Title.Font.Color = clNone
             Title.Font.FontName = 'Arial'
             Title.Font.Size = 8
             Title.Font.Style = [fsBold]
+            Title.Font.PxSize = 10
             Title.Header = False
             Title.Height = '0'
             Title.ShowHint = True
@@ -658,10 +650,9 @@ object ISFChartDetails: TISFChartDetails
             Alignment = taRightJustify
             BGColor = clNone
             DoSubmitValidation = True
-            Font.Color = clNone
             Font.FontName = 'Arial'
             Font.Size = 8
-            Font.Style = []
+            Font.PxSize = 10
             Header = False
             Height = '0'
             ShowHint = True
@@ -670,7 +661,6 @@ object ISFChartDetails: TISFChartDetails
             Width = '40'
             Wrap = False
             RawText = False
-            Css = ''
             BlobCharLimit = 0
             CompareHighlight = hcNone
             DataField = 'MINPLOTAGE'
@@ -678,10 +668,10 @@ object ISFChartDetails: TISFChartDetails
             Title.Alignment = taCenter
             Title.BGColor = clNone
             Title.DoSubmitValidation = True
-            Title.Font.Color = clNone
             Title.Font.FontName = 'Arial'
             Title.Font.Size = 8
             Title.Font.Style = [fsBold]
+            Title.Font.PxSize = 10
             Title.Header = False
             Title.Height = '0'
             Title.ShowHint = True
@@ -696,10 +686,9 @@ object ISFChartDetails: TISFChartDetails
             Alignment = taRightJustify
             BGColor = clNone
             DoSubmitValidation = True
-            Font.Color = clNone
             Font.FontName = 'Arial'
             Font.Size = 8
-            Font.Style = []
+            Font.PxSize = 10
             Header = False
             Height = '0'
             ShowHint = True
@@ -708,7 +697,6 @@ object ISFChartDetails: TISFChartDetails
             Width = '40'
             Wrap = False
             RawText = False
-            Css = ''
             BlobCharLimit = 0
             CompareHighlight = hcNone
             DataField = 'MAXPLOTAGE'
@@ -716,10 +704,10 @@ object ISFChartDetails: TISFChartDetails
             Title.Alignment = taCenter
             Title.BGColor = clNone
             Title.DoSubmitValidation = True
-            Title.Font.Color = clNone
             Title.Font.FontName = 'Arial'
             Title.Font.Size = 8
             Title.Font.Style = [fsBold]
+            Title.Font.PxSize = 10
             Title.Header = False
             Title.Height = '0'
             Title.ShowHint = True
@@ -734,10 +722,9 @@ object ISFChartDetails: TISFChartDetails
             Alignment = taCenter
             BGColor = clNone
             DoSubmitValidation = True
-            Font.Color = clNone
             Font.FontName = 'Arial'
             Font.Size = 8
-            Font.Style = []
+            Font.PxSize = 10
             Header = False
             Height = '0'
             ShowHint = True
@@ -746,7 +733,6 @@ object ISFChartDetails: TISFChartDetails
             Width = '30'
             Wrap = True
             RawText = False
-            Css = ''
             BlobCharLimit = 0
             CompareHighlight = hcNone
             DataField = 'DOMAINID'
@@ -754,10 +740,10 @@ object ISFChartDetails: TISFChartDetails
             Title.Alignment = taCenter
             Title.BGColor = clNone
             Title.DoSubmitValidation = True
-            Title.Font.Color = clNone
             Title.Font.FontName = 'Arial'
             Title.Font.Size = 8
             Title.Font.Style = [fsBold]
+            Title.Font.PxSize = 10
             Title.Header = False
             Title.Height = '0'
             Title.ShowHint = True
@@ -772,10 +758,9 @@ object ISFChartDetails: TISFChartDetails
             Alignment = taCenter
             BGColor = clNone
             DoSubmitValidation = True
-            Font.Color = clNone
             Font.FontName = 'Arial'
             Font.Size = 8
-            Font.Style = []
+            Font.PxSize = 10
             Header = False
             Height = '0'
             ShowHint = True
@@ -784,7 +769,6 @@ object ISFChartDetails: TISFChartDetails
             Width = '20'
             Wrap = True
             RawText = False
-            Css = ''
             BlobCharLimit = 0
             CompareHighlight = hcNone
             DataField = 'CONTINENTID'
@@ -792,10 +776,10 @@ object ISFChartDetails: TISFChartDetails
             Title.Alignment = taCenter
             Title.BGColor = clNone
             Title.DoSubmitValidation = True
-            Title.Font.Color = clNone
             Title.Font.FontName = 'Arial'
             Title.Font.Size = 8
             Title.Font.Style = [fsBold]
+            Title.Font.PxSize = 10
             Title.Header = False
             Title.Height = '0'
             Title.ShowHint = True
@@ -810,10 +794,9 @@ object ISFChartDetails: TISFChartDetails
             Alignment = taLeftJustify
             BGColor = clNone
             DoSubmitValidation = True
-            Font.Color = clNone
             Font.FontName = 'Arial'
             Font.Size = 8
-            Font.Style = []
+            Font.PxSize = 10
             Header = False
             Height = '0'
             ShowHint = True
@@ -822,7 +805,6 @@ object ISFChartDetails: TISFChartDetails
             Width = '250'
             Wrap = True
             RawText = False
-            Css = ''
             BlobCharLimit = 0
             CompareHighlight = hcNone
             DataField = 'DOMAINNAME'
@@ -832,10 +814,10 @@ object ISFChartDetails: TISFChartDetails
             Title.Alignment = taCenter
             Title.BGColor = clNone
             Title.DoSubmitValidation = True
-            Title.Font.Color = clNone
             Title.Font.FontName = 'Arial'
             Title.Font.Size = 8
             Title.Font.Style = [fsBold]
+            Title.Font.PxSize = 10
             Title.Header = False
             Title.Height = '0'
             Title.ShowHint = True
@@ -863,20 +845,22 @@ object ISFChartDetails: TISFChartDetails
         RowCurrentColor = clNone
       end
       object iwlSortedBy: TIWLabel
+        AlignWithMargins = False
         Left = 837
         Top = 8
         Width = 94
         Height = 14
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 8
         Font.Style = [fsItalic]
+        Font.PxSize = 10
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'iwlSortedBy'
         Caption = 'Default sort order'
       end
       object iwDBnDomains: TIWDBNavigator
+        AlignWithMargins = False
         Left = 344
         Top = 4
         Width = 120
@@ -892,20 +876,21 @@ object ISFChartDetails: TISFChartDetails
         Orientation = orHorizontal
       end
       object iwbAddDomain: TIWButton
+        AlignWithMargins = False
         Left = 12
         Top = 40
         Width = 91
         Height = 25
         Caption = 'Add link'
         Color = clBtnFace
-        Font.Color = clNone
         Font.Size = 9
-        Font.Style = []
+        Font.PxSize = 12
         FriendlyName = 'iwbAddDomain'
         TabOrder = 13
         OnClick = iwbAddDomainClick
       end
       object iwbDeleteDomain: TIWButton
+        AlignWithMargins = False
         Left = 12
         Top = 71
         Width = 91
@@ -913,22 +898,21 @@ object ISFChartDetails: TISFChartDetails
         Caption = 'Delete link'
         Confirmation = 'Are you sure you wish to delete this?'
         Color = clBtnFace
-        Font.Color = clNone
         Font.Size = 9
-        Font.Style = []
+        Font.PxSize = 12
         FriendlyName = 'iwbDeleteDomain'
         TabOrder = 14
         OnClick = iwbDeleteDomainClick
       end
       object IWLabel10: TIWLabel
+        AlignWithMargins = False
         Left = 426
         Top = 279
         Width = 188
         Height = 14
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 8
-        Font.Style = []
+        Font.PxSize = 10
         HasTabOrder = False
         FriendlyName = 'IWLabel2'
         Caption = 'Click on Domain Name to edit details'
@@ -944,29 +928,25 @@ object ISFChartDetails: TISFChartDetails
       BorderOptions.NumericWidth = 0
       BorderOptions.Style = cbsNone
       object iwbDetailsEdit2: TIWButton
+        AlignWithMargins = False
         Left = 426
         Top = 27
         Width = 129
         Height = 25
         Caption = 'Edit this record'
         Color = clWebLEMONCHIFFON
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         FriendlyName = 'iwbDetailsEdit2'
         TabOrder = 6
         OnClick = iwbDetailsEditClick
       end
       object iwbReturn2: TIWButton
+        AlignWithMargins = False
         Left = 228
         Top = 27
         Width = 141
         Height = 25
         Caption = 'Return to Main page'
         Color = clWebLIGHTGREEN
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         FriendlyName = 'iwbReturn2'
         TabOrder = 7
         OnClick = iwbReturnClick
@@ -981,27 +961,27 @@ object ISFChartDetails: TISFChartDetails
       Align = alTop
       BorderOptions.NumericWidth = 0
       object IWLabel66: TIWLabel
+        AlignWithMargins = False
         Left = 4
         Top = 12
         Width = 174
         Height = 16
-        Font.Color = clNone
         Font.FontName = 'Arial'
-        Font.Size = 10
-        Font.Style = []
+        Font.PxSize = 13
         HasTabOrder = False
         FriendlyName = 'IWLabel1'
         Caption = 'Stratigraphic Unit Database'
       end
       object IWLabel67: TIWLabel
+        AlignWithMargins = False
         Left = 4
         Top = 30
         Width = 159
         Height = 14
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 8
         Font.Style = [fsItalic]
+        Font.PxSize = 10
         HasTabOrder = False
         FriendlyName = 'IWLabel2'
         Caption = '(c) Dr Bruce Eglington (2007)'
@@ -1017,432 +997,383 @@ object ISFChartDetails: TISFChartDetails
       BorderOptions.NumericWidth = 0
       Color = clWebCADETBLUE
       object IWLabel6: TIWLabel
+        AlignWithMargins = False
         Left = 381
         Top = 18
         Width = 287
         Height = 16
         Alignment = taCenter
-        Font.Color = clNone
         Font.FontName = 'Arial'
-        Font.Size = 10
         Font.Style = [fsBold]
+        Font.PxSize = 13
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel6'
         Caption = 'Export Time-Space Data to Create GIS Charts'
       end
       object iwbTimeSpaceUnits: TIWButton
+        AlignWithMargins = False
         Left = 152
         Top = 98
         Width = 231
         Height = 25
         Caption = 'Domain Units'
         Color = clWebLIGHTSTEELBLUE
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         FriendlyName = 'iwbTimeSpaceUnits'
         TabOrder = 16
         OnClick = iwbTimeSpaceUnitsClick
       end
       object iwbTimeSpaceMetamorphism: TIWButton
+        AlignWithMargins = False
         Left = 405
         Top = 184
         Width = 231
         Height = 25
         Caption = 'Domain Metamorphism'
         Color = clWebLIGHTSTEELBLUE
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         FriendlyName = 'iwbTimeSpaceMetamorphism'
         TabOrder = 17
         OnClick = iwbTimeSpaceMetamorphismClick
       end
       object iwbTimeSpaceDeformation: TIWButton
+        AlignWithMargins = False
         Left = 405
         Top = 212
         Width = 231
         Height = 25
         Caption = 'Domain Deformation'
         Color = clWebLIGHTSTEELBLUE
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         FriendlyName = 'iwbTimeSpaceDeformation'
         TabOrder = 18
         OnClick = iwbTimeSpaceDeformationClick
       end
       object iwbTimeSpaceDomainHeadings: TIWButton
+        AlignWithMargins = False
         Left = 405
         Top = 98
         Width = 231
         Height = 25
         Caption = 'Domain Headings'
         Color = clWebLIGHTSTEELBLUE
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         FriendlyName = 'iwbTimeSpaceDomainHeadings'
         TabOrder = 19
         OnClick = iwbTimeSpaceDomainHeadingsClick
       end
       object iweChartMinAge: TIWEdit
+        AlignWithMargins = False
         Left = 405
         Top = 40
         Width = 62
         Height = 21
         StyleRenderOptions.RenderBorder = False
         NonEditableAsLabel = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
-        Font.Size = 10
-        Font.Style = []
+        Font.PxSize = 13
         FriendlyName = 'iweChartMinAge'
         SubmitOnAsyncEvent = True
         TabOrder = 20
         Text = '1500'
       end
       object IWLabel7: TIWLabel
+        AlignWithMargins = False
         Left = 256
         Top = 44
         Width = 141
         Height = 16
-        Font.Color = clNone
         Font.FontName = 'Arial'
-        Font.Size = 10
-        Font.Style = []
+        Font.PxSize = 13
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel7'
         Caption = 'Minimum age for chart'
       end
       object iweChartMaxAge: TIWEdit
+        AlignWithMargins = False
         Left = 658
         Top = 40
         Width = 62
         Height = 21
         StyleRenderOptions.RenderBorder = False
         NonEditableAsLabel = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
-        Font.Size = 10
-        Font.Style = []
+        Font.PxSize = 13
         FriendlyName = 'iweChartMaxAge'
         SubmitOnAsyncEvent = True
         TabOrder = 21
         Text = '2600'
       end
       object IWLabel8: TIWLabel
+        AlignWithMargins = False
         Left = 506
         Top = 44
         Width = 146
         Height = 16
-        Font.Color = clNone
         Font.FontName = 'Arial'
-        Font.Size = 10
-        Font.Style = []
+        Font.PxSize = 13
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel7'
         Caption = 'Maximum age for chart'
       end
       object iwbTimeSpaceUnitFeatures: TIWButton
+        AlignWithMargins = False
         Left = 152
         Top = 126
         Width = 231
         Height = 25
         Caption = 'Domain Unit Features'
         Color = clWebLIGHTSTEELBLUE
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         FriendlyName = 'iwbTimeSpaceUnitFeatures'
         TabOrder = 22
         OnClick = iwbTimeSpaceUnitFeaturesClick
       end
       object iwbTimeSpaceEconomic: TIWButton
+        AlignWithMargins = False
         Left = 152
         Top = 155
         Width = 231
         Height = 25
         Caption = 'Domain Economic'
         Color = clWebLIGHTSTEELBLUE
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         FriendlyName = 'iwbTimeSpaceEconomic'
         TabOrder = 23
         OnClick = iwbTimeSpaceEconomicClick
       end
       object iwbTimeSpaceDomainColumns: TIWButton
+        AlignWithMargins = False
         Left = 406
         Top = 126
         Width = 231
         Height = 25
         Caption = 'Domain Column Lines'
         Color = clWebLIGHTSTEELBLUE
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         FriendlyName = 'iwbTimeSpaceDomainColumns'
         TabOrder = 24
         OnClick = iwbTimeSpaceDomainColumnsClick
       end
       object iwbGeochronology: TIWButton
+        AlignWithMargins = False
         Left = 658
         Top = 98
         Width = 231
         Height = 25
         Caption = 'DateView Geochronology'
         Color = clWebLIGHTSTEELBLUE
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         FriendlyName = 'iwbGeochronologyStrat'
         TabOrder = 25
         OnClick = iwbGeochronologyStratClick
       end
       object iwbTimeSpaceLIP: TIWButton
+        AlignWithMargins = False
         Left = 152
         Top = 430
         Width = 231
         Height = 25
         Caption = 'Large Igneous Provinces'
         Color = clWebLIGHTSTEELBLUE
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         FriendlyName = 'iwbTimeSpaceLIP'
         TabOrder = 26
         OnClick = iwbTimeSpaceLIPClick
       end
       object iwbTimeSpaceDomainBoxes: TIWButton
+        AlignWithMargins = False
         Left = 406
         Top = 155
         Width = 231
         Height = 25
         Caption = 'Domain Boxes'
         Color = clWebLIGHTSTEELBLUE
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         FriendlyName = 'iwbTimeSpaceDomainBoxes'
         TabOrder = 29
         OnClick = iwbTimeSpaceDomainBoxesClick
       end
       object iwbTimeSpaceDomainBoxes2: TIWButton
+        AlignWithMargins = False
         Left = 406
         Top = 461
         Width = 231
         Height = 25
         Caption = 'Domain Boxes'
         Color = clWebLIGHTSTEELBLUE
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         FriendlyName = 'iwbTimeSpaceDomainBoxes2'
         TabOrder = 30
         OnClick = iwbTimeSpaceDomainBoxesClick
       end
       object iwbLIPDVCurves: TIWButton
+        AlignWithMargins = False
         Left = 658
         Top = 494
         Width = 231
         Height = 25
         Caption = 'Calculate LIP Probability Curves'
         Color = clWebLIGHTSTEELBLUE
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         FriendlyName = 'iwbLIPDVCurves'
         TabOrder = 33
         OnClick = iwbDVCurvesClick
       end
       object iwbLIPDVCurvesExportUPb: TIWButton
+        AlignWithMargins = False
         Left = 658
         Top = 546
         Width = 231
         Height = 25
         Caption = 'Curves Export (U-Pb)'
         Color = clWebLIGHTSTEELBLUE
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         FriendlyName = 'iwbLIPDVCurvesExportUPb'
         TabOrder = 37
         OnClick = iwbLIPDVCurvesExportUPbClick
       end
       object iwbLIPDVCurvesExportArAr: TIWButton
+        AlignWithMargins = False
         Left = 658
         Top = 577
         Width = 231
         Height = 25
         Caption = 'Curves Export (Ar-Ar)'
         Color = clWebLIGHTSTEELBLUE
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         FriendlyName = 'iwbLIPDVCurvesExportArAr'
         TabOrder = 38
         OnClick = iwbLIPDVCurvesExportArArClick
       end
       object iwbLIPDVCurvesExportOther: TIWButton
+        AlignWithMargins = False
         Left = 658
         Top = 608
         Width = 231
         Height = 25
         Caption = 'Curves Export (Other)'
         Color = clWebLIGHTSTEELBLUE
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         FriendlyName = 'iwbLIPDVCurvesExportOther'
         TabOrder = 39
         OnClick = iwbLIPDVCurvesExportOtherClick
       end
       object iwbLIPDVCurvesExportnd: TIWButton
+        AlignWithMargins = False
         Left = 658
         Top = 639
         Width = 231
         Height = 25
         Caption = 'Curves Export (Not specified)'
         Color = clWebLIGHTSTEELBLUE
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         FriendlyName = 'iwbLIPDVCurvesExportnd'
         TabOrder = 40
         OnClick = iwbLIPDVCurvesExportndClick
       end
       object iwbTimeSpaceDomainHeadingsLIP: TIWButton
+        AlignWithMargins = False
         Left = 406
         Top = 430
         Width = 231
         Height = 25
         Caption = 'Domain Headings'
         Color = clWebLIGHTSTEELBLUE
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         FriendlyName = 'iwbTimeSpaceDomainHeadingsLIP'
         TabOrder = 41
         OnClick = iwbTimeSpaceDomainHeadingsClick
       end
       object IWLabel19: TIWLabel
+        AlignWithMargins = False
         Left = 374
         Top = 76
         Width = 306
         Height = 16
         Alignment = taCenter
-        Font.Color = clNone
         Font.FontName = 'Arial'
-        Font.Size = 10
         Font.Style = [fsBold]
+        Font.PxSize = 13
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel6'
         Caption = 'Domains, Units, Metamorphism and Deformation'
       end
       object IWLabel20: TIWLabel
+        AlignWithMargins = False
         Left = 442
         Top = 408
         Width = 172
         Height = 16
-        Font.Color = clNone
         Font.FontName = 'Arial'
-        Font.Size = 10
         Font.Style = [fsBold]
+        Font.PxSize = 13
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel6'
         Caption = 'Large Igneous Provinces'
       end
       object iwbDomainDVCurves: TIWButton
+        AlignWithMargins = False
         Left = 658
         Top = 150
         Width = 231
         Height = 25
         Caption = 'Calculate Domain Probability Curves'
         Color = clWebLIGHTSTEELBLUE
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         FriendlyName = 'iwbDomainDVCurves'
         TabOrder = 42
         OnClick = iwbDVCurvesClick
       end
       object iwbDomainDVCurvesExportCryst: TIWButton
+        AlignWithMargins = False
         Left = 658
         Top = 208
         Width = 231
         Height = 25
         Caption = 'Curves Export (Crystallisation)'
         Color = clWebLIGHTSTEELBLUE
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         FriendlyName = 'iwbDomainDVCurvesExportCryst'
         TabOrder = 43
         OnClick = iwbDomainDVCurvesExportCrystClick
       end
       object iwbDomainDVCurvesExportCool: TIWButton
+        AlignWithMargins = False
         Left = 658
         Top = 236
         Width = 231
         Height = 25
         Caption = 'Curves Export (Cooling)'
         Color = clWebLIGHTSTEELBLUE
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         FriendlyName = 'iwbDomainDVCurvesExportCool'
         TabOrder = 44
         OnClick = iwbDomainDVCurvesExportCoolClick
       end
       object iwbDomainDVCurvesExportDetri: TIWButton
+        AlignWithMargins = False
         Left = 658
         Top = 265
         Width = 231
         Height = 25
         Caption = 'Curves Export (Detrital summary)'
         Color = clWebLIGHTSTEELBLUE
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         FriendlyName = 'iwbDomainDVCurvesExportDetri'
         TabOrder = 46
         OnClick = iwbDomainDVCurvesExportDetriClick
       end
       object iwbDomainDVCurvesExportMetpR: TIWButton
+        AlignWithMargins = False
         Left = 658
         Top = 294
         Width = 231
         Height = 25
         Caption = 'Curves Export (Metamorphic)'
         Color = clWebLIGHTSTEELBLUE
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         FriendlyName = 'iwbDomainDVCurvesExportMetpR'
         TabOrder = 47
         OnClick = iwbDomainDVCurvesExportMetpRClick
       end
       object iwbDomainDVCurvesExportCrsRs: TIWButton
+        AlignWithMargins = False
         Left = 658
         Top = 322
         Width = 231
         Height = 25
         Caption = 'Curves Export (Nd T-DM)'
         Color = clWebLIGHTSTEELBLUE
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         FriendlyName = 'iwbDomainDVCurvesExportCrsRs'
         TabOrder = 48
         OnClick = iwbDomainDVCurvesExportCrsRsClick
       end
       object iwrgOrAnd: TIWRadioGroup
+        AlignWithMargins = False
         Left = 825
         Top = 40
         Width = 74
@@ -1450,10 +1381,8 @@ object ISFChartDetails: TISFChartDetails
         SubmitOnAsyncEvent = True
         RawText = False
         Editable = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
-        Font.Size = 10
-        Font.Style = []
+        Font.PxSize = 13
         FriendlyName = 'iwrgOrAnd'
         ItemIndex = 1
         Items.Strings = (
@@ -1463,258 +1392,236 @@ object ISFChartDetails: TISFChartDetails
         TabOrder = 45
       end
       object IWLabel21: TIWLabel
+        AlignWithMargins = False
         Left = 759
         Top = 44
         Width = 60
         Height = 16
-        Font.Color = clNone
         Font.FontName = 'Arial'
-        Font.Size = 10
-        Font.Style = []
+        Font.PxSize = 13
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel7'
         Caption = 'PDF type'
       end
       object iwbMapUnits: TIWButton
+        AlignWithMargins = False
         Left = 152
         Top = 298
         Width = 231
         Height = 25
         Caption = 'Map - Unit Associations'
         Color = clWebLIGHTSTEELBLUE
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         FriendlyName = 'iwbMapUnits'
         TabOrder = 50
         OnClick = iwbMapUnitsClick
       end
       object iwbTimeSpaceUnconformities: TIWButton
+        AlignWithMargins = False
         Left = 152
         Top = 184
         Width = 231
         Height = 25
         Caption = 'Domain Unit Unconformities'
         Color = clWebLIGHTSTEELBLUE
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         FriendlyName = 'iwbTimeSpaceUnconformities'
         TabOrder = 51
         OnClick = iwbTimeSpaceUnconformitiesClick
       end
       object iwbMapLIPs: TIWButton
+        AlignWithMargins = False
         Left = 152
         Top = 578
         Width = 231
         Height = 25
         Caption = 'Map - LIP Associations'
         Color = clWebLIGHTSTEELBLUE
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         FriendlyName = 'iwbMapLIPs'
         TabOrder = 52
         OnClick = iwbMapLIPsClick
       end
       object iwbDomainDVCurvesExportCombined: TIWButton
+        AlignWithMargins = False
         Left = 658
         Top = 350
         Width = 231
         Height = 25
         Caption = 'Curves Export (Combined)'
         Color = clWebLIGHTSTEELBLUE
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         FriendlyName = 'iwbDomainDVCurvesExportCombined'
         TabOrder = 53
         OnClick = iwbDomainDVCurvesExportCombinedClick
       end
       object IWLabel23: TIWLabel
+        AlignWithMargins = False
         Left = 658
         Top = 186
         Width = 106
         Height = 16
-        Font.Color = clNone
         Font.FontName = 'Arial'
-        Font.Size = 10
-        Font.Style = []
+        Font.PxSize = 13
         HasTabOrder = False
         FriendlyName = 'IWLabel23'
         Caption = 'Domain order >='
       end
       object IWLabel24: TIWLabel
+        AlignWithMargins = False
         Left = 813
         Top = 186
         Width = 36
         Height = 16
-        Font.Color = clNone
         Font.FontName = 'Arial'
-        Font.Size = 10
-        Font.Style = []
+        Font.PxSize = 13
         HasTabOrder = False
         FriendlyName = 'IWLabel24'
         Caption = 'and <'
       end
       object iweDomOrderGE: TIWEdit
+        AlignWithMargins = False
         Left = 759
         Top = 181
         Width = 33
         Height = 21
         StyleRenderOptions.RenderBorder = False
         NonEditableAsLabel = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
-        Font.Size = 10
-        Font.Style = []
+        Font.PxSize = 13
         FriendlyName = 'iweDomOrderGE'
         SubmitOnAsyncEvent = True
         TabOrder = 54
         Text = '1'
       end
       object iweDomOrderLT: TIWEdit
+        AlignWithMargins = False
         Left = 856
         Top = 181
         Width = 33
         Height = 21
         StyleRenderOptions.RenderBorder = False
         NonEditableAsLabel = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
-        Font.Size = 10
-        Font.Style = []
+        Font.PxSize = 13
         FriendlyName = 'iweDomOrderLT'
         SubmitOnAsyncEvent = True
         TabOrder = 55
         Text = '80'
       end
       object IWLabel25: TIWLabel
+        AlignWithMargins = False
         Left = 654
         Top = 525
         Width = 235
         Height = 15
         Alignment = taCenter
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
+        Font.PxSize = 12
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel23'
         Caption = 'Uses domain order values specified above'
       end
       object IWLabel26: TIWLabel
+        AlignWithMargins = False
         Left = 450
         Top = 704
         Width = 135
         Height = 16
-        Font.Color = clNone
         Font.FontName = 'Arial'
-        Font.Size = 10
         Font.Style = [fsBold]
+        Font.PxSize = 13
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel6'
         Caption = 'Legend and Layout'
       end
       object iwbAgeLines: TIWButton
+        AlignWithMargins = False
         Left = 152
         Top = 778
         Width = 231
         Height = 25
         Caption = 'Age lines'
         Color = clWebLIGHTSTEELBLUE
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         FriendlyName = 'iwbMapLIPs'
         TabOrder = 56
         OnClick = iwbAgeLinesClick
       end
       object IWLabel27: TIWLabel
+        AlignWithMargins = False
         Left = 405
         Top = 734
         Width = 150
         Height = 16
-        Font.Color = clNone
         Font.FontName = 'Arial'
-        Font.Size = 10
-        Font.Style = []
+        Font.PxSize = 13
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel7'
         Caption = 'Increment for Age Lines'
       end
       object iweChartAgeLineIncrement: TIWEdit
+        AlignWithMargins = False
         Left = 561
         Top = 730
         Width = 62
         Height = 21
         StyleRenderOptions.RenderBorder = False
         NonEditableAsLabel = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
-        Font.Size = 10
-        Font.Style = []
+        Font.PxSize = 13
         FriendlyName = 'iweChartAgeLineIncrement'
         SubmitOnAsyncEvent = True
         TabOrder = 57
         Text = '100'
       end
       object IWLabel28: TIWLabel
+        AlignWithMargins = False
         Left = 658
         Top = 128
         Width = 106
         Height = 16
-        Font.Color = clNone
         Font.FontName = 'Arial'
-        Font.Size = 10
-        Font.Style = []
+        Font.PxSize = 13
         HasTabOrder = False
         FriendlyName = 'IWLabel23'
         Caption = 'Interp. Rating >='
       end
       object iweChartPrefLevel: TIWEdit
+        AlignWithMargins = False
         Left = 759
         Top = 123
         Width = 33
         Height = 21
         StyleRenderOptions.RenderBorder = False
         NonEditableAsLabel = True
-        Font.Color = clNone
         Font.FontName = 'Arial'
-        Font.Size = 10
-        Font.Style = []
+        Font.PxSize = 13
         FriendlyName = 'iweChartPrefLevel'
         SubmitOnAsyncEvent = True
         TabOrder = 58
         Text = '1'
       end
       object iwbGeochronologyLIP: TIWButton
+        AlignWithMargins = False
         Left = 658
         Top = 433
         Width = 231
         Height = 25
         Caption = 'DateView Geochronology'
         Color = clWebLIGHTSTEELBLUE
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         FriendlyName = 'iwbGeochronologyLIP'
         TabOrder = 60
         OnClick = iwbGeochronologyLIPClick
       end
       object IWLabel29: TIWLabel
+        AlignWithMargins = False
         Left = 670
         Top = 464
         Width = 217
         Height = 16
-        Font.Color = clNone
         Font.FontName = 'Arial'
-        Font.Size = 10
-        Font.Style = []
+        Font.PxSize = 13
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel23'
@@ -1731,86 +1638,80 @@ object ISFChartDetails: TISFChartDetails
       BorderOptions.NumericWidth = 0
       Color = clWebLIGHTSEAGREEN
       object IWLabel11: TIWLabel
+        AlignWithMargins = False
         Left = 356
         Top = 20
         Width = 322
         Height = 16
         Alignment = taCenter
-        Font.Color = clNone
         Font.FontName = 'Arial'
-        Font.Size = 10
         Font.Style = [fsBold]
+        Font.PxSize = 13
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel6'
         Caption = 'Download Time-Space Summary Data for Domains'
       end
       object iwbDownloadUnits: TIWButton
+        AlignWithMargins = False
         Left = 152
         Top = 51
         Width = 231
         Height = 25
         Caption = 'Download Domains/Units'
         Color = clBtnFace
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         FriendlyName = 'iwbDownloadUnits'
         TabOrder = 27
         OnClick = iwbDownloadUnitsClick
       end
       object iwbDownloadLIPs: TIWButton
+        AlignWithMargins = False
         Left = 406
         Top = 51
         Width = 231
         Height = 25
         Caption = 'Download Domains/LIPs'
         Color = clBtnFace
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         FriendlyName = 'iwbDownloadLIPs'
         TabOrder = 28
         OnClick = iwbDownloadLIPsClick
       end
       object IWLabel13: TIWLabel
+        AlignWithMargins = False
         Left = 401
         Top = 116
         Width = 243
         Height = 14
         Alignment = taCenter
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 8
-        Font.Style = []
+        Font.PxSize = 10
         HasTabOrder = False
         FriendlyName = 'IWLabel2'
         Caption = 'Utilises age limits from Export specifications below'
       end
       object iwbDownloadLIPUnits: TIWButton
+        AlignWithMargins = False
         Left = 658
         Top = 51
         Width = 231
         Height = 25
         Caption = 'Download Domains/LIPs/Units'
         Color = clBtnFace
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         FriendlyName = 'iwbDownloadLIPUnits'
         TabOrder = 49
         OnClick = iwbDownloadLIPUnitsClick
       end
       object IWLabel22: TIWLabel
+        AlignWithMargins = False
         Left = 288
         Top = 82
         Width = 466
         Height = 14
         Alignment = taCenter
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 8
-        Font.Style = []
+        Font.PxSize = 10
         HasTabOrder = False
         FriendlyName = 'IWLabel2'
         Caption = 
@@ -1830,20 +1731,22 @@ object ISFChartDetails: TISFChartDetails
       BorderOptions.Style = cbsNone
       Color = clWebWHITESMOKE
       object IWLabel16: TIWLabel
+        AlignWithMargins = False
         Left = 6
         Top = 26
         Width = 198
         Height = 19
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 12
         Font.Style = [fsBold, fsUnderline]
+        Font.PxSize = 16
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'IWLabel1'
         Caption = 'Users linked by owner :'
       end
       object IWDBGrid1: TIWDBGrid
+        AlignWithMargins = False
         Left = 107
         Top = 58
         Width = 900
@@ -1856,24 +1759,24 @@ object ISFChartDetails: TISFChartDetails
         BorderStyle = tfDefault
         CellPadding = 2
         CellSpacing = 0
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 8
-        Font.Style = []
+        Font.PxSize = 10
         FrameBuffer = 40
         Lines = tlAll
         UseFrame = True
         UseSize = True
+        ShowEmptyCells = True
+        ShowInvisibleRows = True
         ScrollToCurrentRow = False
         Columns = <
           item
             Alignment = taCenter
             BGColor = clNone
             DoSubmitValidation = True
-            Font.Color = clNone
             Font.FontName = 'Arial'
             Font.Size = 8
-            Font.Style = []
+            Font.PxSize = 10
             Header = False
             Height = '0'
             ShowHint = True
@@ -1882,17 +1785,16 @@ object ISFChartDetails: TISFChartDetails
             Width = '20'
             Wrap = False
             RawText = False
-            Css = ''
             BlobCharLimit = 0
             CompareHighlight = hcNone
             DataField = 'CHARTID'
             Title.Alignment = taCenter
             Title.BGColor = clNone
             Title.DoSubmitValidation = True
-            Title.Font.Color = clNone
             Title.Font.FontName = 'Arial'
             Title.Font.Size = 8
             Title.Font.Style = [fsBold]
+            Title.Font.PxSize = 10
             Title.Header = False
             Title.Height = '0'
             Title.ShowHint = True
@@ -1907,10 +1809,9 @@ object ISFChartDetails: TISFChartDetails
             Alignment = taCenter
             BGColor = clNone
             DoSubmitValidation = True
-            Font.Color = clNone
             Font.FontName = 'Arial'
             Font.Size = 8
-            Font.Style = []
+            Font.PxSize = 10
             Header = False
             Height = '0'
             ShowHint = True
@@ -1919,17 +1820,15 @@ object ISFChartDetails: TISFChartDetails
             Width = '80'
             Wrap = False
             RawText = False
-            Css = ''
             BlobCharLimit = 0
             CompareHighlight = hcNone
             DataField = 'USERID'
             Title.Alignment = taCenter
             Title.BGColor = clNone
             Title.DoSubmitValidation = True
-            Title.Font.Color = clNone
             Title.Font.FontName = 'Arial'
             Title.Font.Size = 8
-            Title.Font.Style = []
+            Title.Font.PxSize = 10
             Title.Header = False
             Title.Height = '0'
             Title.ShowHint = True
@@ -1957,20 +1856,22 @@ object ISFChartDetails: TISFChartDetails
         RowCurrentColor = clNone
       end
       object IWLabel17: TIWLabel
+        AlignWithMargins = False
         Left = 835
         Top = 28
         Width = 94
         Height = 14
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 8
         Font.Style = [fsItalic]
+        Font.PxSize = 10
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'iwlSortedBy'
         Caption = 'Default sort order'
       end
       object iwDBnUsers: TIWDBNavigator
+        AlignWithMargins = False
         Left = 342
         Top = 24
         Width = 120
@@ -1986,20 +1887,21 @@ object ISFChartDetails: TISFChartDetails
         Orientation = orHorizontal
       end
       object iwbAddUser: TIWButton
+        AlignWithMargins = False
         Left = 10
         Top = 60
         Width = 91
         Height = 25
         Caption = 'Add link'
         Color = clBtnFace
-        Font.Color = clNone
         Font.Size = 9
-        Font.Style = []
+        Font.PxSize = 12
         FriendlyName = 'iwbAddDomain'
         TabOrder = 34
         OnClick = iwbAddUserClick
       end
       object iwbDeleteUser: TIWButton
+        AlignWithMargins = False
         Left = 10
         Top = 91
         Width = 91
@@ -2007,9 +1909,8 @@ object ISFChartDetails: TISFChartDetails
         Caption = 'Delete link'
         Confirmation = 'Are you sure you wish to delete this?'
         Color = clBtnFace
-        Font.Color = clNone
         Font.Size = 9
-        Font.Style = []
+        Font.PxSize = 12
         FriendlyName = 'iwbDeleteDomain'
         TabOrder = 35
         OnClick = iwbDeleteUserClick
@@ -2053,6 +1954,7 @@ object ISFChartDetails: TISFChartDetails
             ExplicitWidth = 900
             inherited lblWelcome: TIWLabel
               Left = 627
+              Font.Color = clWebDARKSLATEGRAY
               ExplicitLeft = 627
             end
           end
@@ -2061,7 +1963,13 @@ object ISFChartDetails: TISFChartDetails
           Width = 1100
           ExplicitWidth = 1100
           inherited iwlSignOut: TIWLink
-            TabOrder = -1
+            Font.Color = clWebBLUE
+          end
+          inherited lnkSignIn: TIWLink
+            Font.Color = clWebBLUE
+          end
+          inherited lblProgTitle: TIWLabel
+            Font.Color = clWebSTEELBLUE
           end
         end
       end

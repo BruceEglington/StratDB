@@ -3,8 +3,8 @@ unit ServerController;
 interface
 
 uses
-  System.SysUtils, System.Classes, IWServerControllerBase, IWBaseForm, 
-  //Web.HTTPApp,
+  System.SysUtils, System.Classes, IWServerControllerBase, IWBaseForm, HTTPApp,
+  
   System.DateUtils,
   // For OnNewSession Event
   //UserSessionUnit,
@@ -17,15 +17,12 @@ uses
   IW.Browser.Safari, IW.Browser.Chrome, IW.Browser.Android, IW.Browser.ChromeMobile,
   IW.Browser.OperaNext,IW.Browser.Opera,IW.Browser.OperaMobile,
   IW.Browser.SearchEngine,
-  //Winapi.Windows,
-  // For OnNewSession Event
   System.IniFiles,
   IW.Common.AppInfo,
   midaslib,
-  IWStrat_constants,
   usrIW_dm,
-  IWStrat_dmopt,
-  IWStrat_dm, IWStrat_dmC, IWStrat_dmD, IWStrat_dmDV, IWStrat_dmLIP;
+  IWStrat_dmC, IWStrat_dm, IWStrat_dmD, IWStrat_dmDV, IWStrat_dmLIP,
+  IWStrat_dmopt, IWStrat_constants;
 
 type
   TIWServerController = class(TIWServerControllerBase)
@@ -67,8 +64,8 @@ type
     LastVisitedForm : TIWAppFormClass; // This is interesting for the Login form only
 
     UserID, 
-   	UserPassword,
-	  UserDisplayName : widestring;
+	UserPassword, 
+	UserDisplayName : widestring;
 
     ThisProgram : widestring;
     ThisProgramName : widestring;
@@ -99,24 +96,22 @@ type
     ContinentValues : TStringList;
     IncludeAreaValues : boolean;
     AreaValues : TStringList;
-    IncludeReferenceValues: Boolean;
-    ReferenceValues: TStringList;
-    ReferenceStartFrom: string;
-    ReferenceEndWith: string;
-    IncludeValidationValues: Boolean;
-    ValidationValues: TStringList;
-    IncludeUsersWhoForValues : Boolean;
-    UsersWhoForValues : TStringList;
     IncludeUnitValues: Boolean;
     UnitValues: TStringList;
     IncludeUnitRankValues: Boolean;
     UnitRankValues: TStringList;
+    IncludeReferenceValues: Boolean;
+    ReferenceValues: TStringList;
+    IncludeValidationValues: Boolean;
+    ValidationValues: TStringList;
     IncludeDateFromValue: Boolean;
     DateFromField: string;
     IncludeDateToValue: Boolean;
     DateToField: string;
     OrderByValue: string;
     LinkToDateView : Boolean;
+    ReferenceStartFrom: string;
+    ReferenceEndWith: string;
     UnitStartFrom, UnitEndWith : string;
     IncludeSeams : Boolean;
     IncludeAllParentIDs : boolean;
@@ -144,6 +139,8 @@ type
     MorphologyValues: TStringList;
     IncludeContOceanValues: Boolean;
     ContOceanValues: TStringList;
+    IncludeUsersWhoForValues : Boolean;
+    UsersWhoForValues : TStringList;
     IncludeDepositValues : boolean;
     DepositValues : TStringList;
     IncludeClanValues : boolean;
@@ -204,6 +201,7 @@ type
     dmStratC : TdmStratC;
     dmStratD : TdmStratD;
     dmLIP : TdmLIP;
+    //dmReplicate : TdmReplicate;
 
     procedure NeedLogin(AForm : TIWAppFormClass);
     procedure AfterLogin;
@@ -225,14 +223,12 @@ implementation
 uses
   System.IOUtils,
   IWInit,
-  usr_constants,
-  usr_insufficientright,
-  usr_uForgotten,
-  usr_uLogin,
-  usr_uregister,
-  usr_uDBInterface,
-  IWStrat_umain,
-  IWStrat_constvalues, NumRecipes_varb;
+  XMLDoc, XMLIntf, IWStrat_umain,
+  
+  usr_uLogin, usr_uregister, 
+  usr_uDBInterface, usr_uDonate, 
+  IWStrat_constvalues, NumRecipes_varb,
+  usr_constants;
 
 function IWServerController: TIWServerController;
 begin
@@ -427,11 +423,13 @@ begin
       dmUser.sqlcWebUser.Params.Append('VendorLib='+VendorLib);
       dmUser.sqlcWebUser.Params.Append('GetDriverFunc='+GetDriverFunc);
       dmUser.sqlcWebUser.Params.Append('DriverName='+DriverName);
+ 
       dmUser.sqlcWebUser.Params.Append('Database='+UserControlPath);
       dmUser.sqlcWebUser.Params.Append('User_Name='+DBUserName);
       dmUser.sqlcWebUser.Params.Append('Password='+DBPassword);
       dmUser.sqlcWebUser.Params.Append('SQLDialect='+DBSQLDialectStr);
       dmUser.sqlcWebUser.Params.Append('Charset='+DBCharSet);
+      //dmUser.sqlcWebUser.Params.Append('LocaleCode=0000');
       dmUser.sqlcWebUser.Params.Append('DevartFirebird TransIsolation=ReadCommitted');
       dmUser.sqlcWebUser.Params.Append('UseUnicode=true');
     except
@@ -450,6 +448,7 @@ begin
       dmStrat.sqlcStrat.Params.Append('Password='+DBPassword);
       dmStrat.sqlcStrat.Params.Append('SQLDialect='+DBSQLDialectStr);
       dmStrat.sqlcStrat.Params.Append('Charset='+DBCharSet);
+      //dmStrat.sqlcStrat.Params.Append('LocaleCode=0000');
       dmStrat.sqlcStrat.Params.Append('DevartFirebird TransIsolation=ReadCommitted');
       dmStrat.sqlcStrat.Params.Append('UseUnicode=true');
     except
@@ -468,6 +467,7 @@ begin
       dmStratC.sqlcStrat.Params.Append('Password='+DBPassword);
       dmStratC.sqlcStrat.Params.Append('SQLDialect='+DBSQLDialectStr);
       dmStratC.sqlcStrat.Params.Append('Charset='+DBCharSet);
+      //dmStratC.sqlcStrat.Params.Append('LocaleCode=0000');
       dmStratC.sqlcStrat.Params.Append('DevartFirebird TransIsolation=ReadCommitted');
       dmStratC.sqlcStrat.Params.Append('UseUnicode=true');
     except
@@ -486,6 +486,7 @@ begin
       dmStratD.sqlcStrat.Params.Append('Password='+DBPassword);
       dmStratD.sqlcStrat.Params.Append('SQLDialect='+DBSQLDialectStr);
       dmStratD.sqlcStrat.Params.Append('Charset='+DBCharSet);
+      //dmStratD.sqlcStrat.Params.Append('LocaleCode=0000');
       dmStratD.sqlcStrat.Params.Append('DevartFirebird TransIsolation=ReadCommitted');
       dmStratD.sqlcStrat.Params.Append('UseUnicode=true');
     except
@@ -504,6 +505,7 @@ begin
       dmDV.sqlcDateView.Params.Append('Password='+DBPassword);
       dmDV.sqlcDateView.Params.Append('SQLDialect='+DBSQLDialectStr);
       dmDV.sqlcDateView.Params.Append('Charset='+DBCharSet);
+      //dmDV.sqlcDateView.Params.Append('LocaleCode=0000');
       dmDV.sqlcDateView.Params.Append('DevartFirebird TransIsolation=ReadCommitted');
       dmDV.sqlcDateView.Params.Append('UseUnicode=true');
     except
@@ -522,6 +524,7 @@ begin
       dmLIP.sqlcLIP.Params.Append('Password='+DBPassword);
       dmLIP.sqlcLIP.Params.Append('SQLDialect='+DBSQLDialectStr);
       dmLIP.sqlcLIP.Params.Append('Charset='+DBCharSet);
+      //dmLIP.sqlcLIP.Params.Append('LocaleCode=0000');
       dmLIP.sqlcLIP.Params.Append('DevartFirebird TransIsolation=ReadCommitted');
       dmLIP.sqlcLIP.Params.Append('UseUnicode=true');
     except
@@ -540,6 +543,7 @@ begin
       dmOpt.sqlcStrat.Params.Append('Password='+DBPassword);
       dmOpt.sqlcStrat.Params.Append('SQLDialect='+DBSQLDialectStr);
       dmOpt.sqlcStrat.Params.Append('Charset='+DBCharSet);
+      //dmOpt.sqlcStrat.Params.Append('LocaleCode=0000');
       dmOpt.sqlcStrat.Params.Append('DevartFirebird TransIsolation=ReadCommitted');
       dmOpt.sqlcStrat.Params.Append('UseUnicode=true');
     except
@@ -578,19 +582,19 @@ begin
   //UserSessionID := integer(@Self);
   LoggedIn := FALSE;
   dmUser := TdmUser.Create(Self);
-  dmUser.sqlcWebUser.Connected := false;
   dmStrat := TdmStrat.Create(Self);
-  dmStrat.sqlcStrat.Connected := false;
-  dmOpt := TdmOpt.Create(Self);
-  dmOpt.sqlcStrat.Connected := false;
   dmDV := TdmDV.Create(Self);
-  dmDV.sqlcDateView.Connected := false;
+  dmOpt := TdmOpt.Create(Self);
   dmStratC := TdmStratC.Create(Self);
-  dmStratC.sqlcStrat.Connected := false;
   dmLIP := TdmLIP.Create(Self);
   dmStratD := TdmStratD.Create(Self);
-  dmStratD.sqlcStrat.Connected := false;
+  dmUser.sqlcWebUser.Connected := false;
+  dmStrat.sqlcStrat.Connected := false;
+  dmDV.sqlcDateView.Connected := false;
+  dmOpt.sqlcStrat.Connected := false;
   dmLIP.sqlcLIP.Connected := false;
+  dmStratC.sqlcStrat.Connected := false;
+  dmStratD.sqlcStrat.Connected := false;
   ContinentValues := TStringList.Create;
   AreaValues := TStringList.Create;
   UnitValues := TStringList.Create;
@@ -645,13 +649,13 @@ begin
   FreeAndNil(DepositStatusValues);
   FreeAndNil(SampleZoneValues);
   FreeAndNil(UserProjectValues);
-  dmUser.sqlcWebUser.Connected := false;
   dmStrat.sqlcStrat.Connected := false;
   dmOpt.sqlcStrat.Connected := false;
   dmDV.sqlcDateView.Connected := false;
   dmStratC.sqlcStrat.Connected := false;
   dmLIP.sqlcLIP.Connected := false;
   dmStratD.sqlcStrat.Connected := false;
+  dmUser.sqlcWebUser.Connected := false;
   inherited Destroy;
 end;
 

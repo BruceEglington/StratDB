@@ -17,14 +17,14 @@ object ISFLIPGrid: TISFLIPGrid
   DesignLeft = 2
   DesignTop = 2
   object rectRight: TIWRectangle
+    AlignWithMargins = False
     Left = 1075
     Top = 55
     Width = 4
     Height = 745
     Align = alRight
+    Font.PxSize = 13
     Font.Color = clWebBLACK
-    Font.Size = 10
-    Font.Style = []
     BorderOptions.Width = 0
     FriendlyName = 'rectRight'
     Color = clWebLIGHTSLATEGRAY
@@ -33,14 +33,14 @@ object ISFLIPGrid: TISFLIPGrid
     ExplicitHeight = 936
   end
   object IWRectangle1: TIWRectangle
+    AlignWithMargins = False
     Left = 1071
     Top = 55
     Width = 4
     Height = 745
     Align = alRight
+    Font.PxSize = 13
     Font.Color = clWebBLACK
-    Font.Size = 10
-    Font.Style = []
     BorderOptions.Width = 0
     FriendlyName = 'rectRight'
     Color = clWebLIGHTSLATEGRAY
@@ -82,7 +82,13 @@ object ISFLIPGrid: TISFLIPGrid
           ExplicitWidth = 200
           ExplicitHeight = 745
           inherited IWMenu1: TIWMenu
-            Height = 615
+            Height = 665
+            MainMenuStyle.MenuItemFont.Color = clWebINDIGO
+            MainMenuStyle.SelectedMenuItemFont.Color = clWebINDIGO
+            MainMenuStyle.DisabledMenuItemFont.Color = clWebSILVER
+            SubMenuStyle.MenuItemFont.Color = clWebINDIGO
+            SubMenuStyle.SelectedMenuItemFont.Color = clWebINDIGO
+            SubMenuStyle.DisabledMenuItemFont.Color = clWebSILVER
             ExplicitHeight = 544
           end
           inherited IWRegion2: TIWRegion
@@ -111,6 +117,7 @@ object ISFLIPGrid: TISFLIPGrid
     BorderOptions.NumericWidth = 0
     BorderOptions.Style = cbsNone
     object iwDBgResults: TIWDBGrid
+      AlignWithMargins = False
       Left = 0
       Top = 57
       Width = 871
@@ -124,24 +131,24 @@ object ISFLIPGrid: TISFLIPGrid
       BorderStyle = tfDefault
       CellPadding = 2
       CellSpacing = 0
-      Font.Color = clNone
       Font.FontName = 'Arial'
       Font.Size = 8
-      Font.Style = []
+      Font.PxSize = 10
       FrameBuffer = 40
       Lines = tlAll
       UseFrame = False
       UseSize = True
+      ShowEmptyCells = True
+      ShowInvisibleRows = True
       ScrollToCurrentRow = False
       Columns = <
         item
           Alignment = taRightJustify
           BGColor = clNone
           DoSubmitValidation = True
-          Font.Color = clNone
           Font.FontName = 'Arial'
           Font.Size = 8
-          Font.Style = []
+          Font.PxSize = 10
           Header = False
           Height = '0'
           ShowHint = True
@@ -150,7 +157,6 @@ object ISFLIPGrid: TISFLIPGrid
           Width = '0'
           Wrap = False
           RawText = False
-          Css = ''
           BlobCharLimit = 0
           CompareHighlight = hcNone
           DataField = 'LIPID'
@@ -160,10 +166,10 @@ object ISFLIPGrid: TISFLIPGrid
           Title.Alignment = taCenter
           Title.BGColor = clNone
           Title.DoSubmitValidation = True
-          Title.Font.Color = clNone
           Title.Font.FontName = 'Arial'
           Title.Font.Size = 8
           Title.Font.Style = [fsBold]
+          Title.Font.PxSize = 10
           Title.Header = False
           Title.Height = '0'
           Title.ShowHint = True
@@ -178,10 +184,9 @@ object ISFLIPGrid: TISFLIPGrid
           Alignment = taLeftJustify
           BGColor = clNone
           DoSubmitValidation = True
-          Font.Color = clNone
           Font.FontName = 'Arial'
           Font.Size = 8
-          Font.Style = []
+          Font.PxSize = 10
           Header = False
           Height = '0'
           ShowHint = True
@@ -190,7 +195,6 @@ object ISFLIPGrid: TISFLIPGrid
           Width = '0'
           Wrap = True
           RawText = False
-          Css = ''
           BlobCharLimit = 0
           CompareHighlight = hcNone
           DataField = 'LIPNAME'
@@ -198,10 +202,10 @@ object ISFLIPGrid: TISFLIPGrid
           Title.Alignment = taCenter
           Title.BGColor = clNone
           Title.DoSubmitValidation = True
-          Title.Font.Color = clNone
           Title.Font.FontName = 'Arial'
           Title.Font.Size = 8
           Title.Font.Style = [fsBold]
+          Title.Font.PxSize = 10
           Title.Header = False
           Title.Height = '0'
           Title.ShowHint = True
@@ -216,10 +220,9 @@ object ISFLIPGrid: TISFLIPGrid
           Alignment = taLeftJustify
           BGColor = clNone
           DoSubmitValidation = True
-          Font.Color = clNone
           Font.FontName = 'Arial'
           Font.Size = 8
-          Font.Style = []
+          Font.PxSize = 10
           Header = False
           Height = '0'
           ShowHint = True
@@ -228,7 +231,6 @@ object ISFLIPGrid: TISFLIPGrid
           Width = '0'
           Wrap = True
           RawText = False
-          Css = ''
           BlobCharLimit = 0
           CompareHighlight = hcNone
           DataField = 'LIPSIZEDESCRIPTION'
@@ -236,10 +238,10 @@ object ISFLIPGrid: TISFLIPGrid
           Title.Alignment = taCenter
           Title.BGColor = clNone
           Title.DoSubmitValidation = True
-          Title.Font.Color = clNone
           Title.Font.FontName = 'Arial'
           Title.Font.Size = 8
           Title.Font.Style = [fsBold]
+          Title.Font.PxSize = 10
           Title.Header = False
           Title.Height = '0'
           Title.ShowHint = True
@@ -254,10 +256,9 @@ object ISFLIPGrid: TISFLIPGrid
           Alignment = taCenter
           BGColor = clNone
           DoSubmitValidation = True
-          Font.Color = clNone
           Font.FontName = 'Arial'
           Font.Size = 8
-          Font.Style = []
+          Font.PxSize = 10
           Header = False
           Height = '0'
           ShowHint = True
@@ -266,7 +267,6 @@ object ISFLIPGrid: TISFLIPGrid
           Width = '0'
           Wrap = True
           RawText = False
-          Css = ''
           BlobCharLimit = 0
           CompareHighlight = hcNone
           DataField = 'MINPLOTAGE'
@@ -274,10 +274,10 @@ object ISFLIPGrid: TISFLIPGrid
           Title.Alignment = taCenter
           Title.BGColor = clNone
           Title.DoSubmitValidation = True
-          Title.Font.Color = clNone
           Title.Font.FontName = 'Arial'
           Title.Font.Size = 8
           Title.Font.Style = [fsBold]
+          Title.Font.PxSize = 10
           Title.Header = False
           Title.Height = '0'
           Title.ShowHint = True
@@ -292,10 +292,9 @@ object ISFLIPGrid: TISFLIPGrid
           Alignment = taCenter
           BGColor = clNone
           DoSubmitValidation = True
-          Font.Color = clNone
           Font.FontName = 'Arial'
           Font.Size = 8
-          Font.Style = []
+          Font.PxSize = 10
           Header = False
           Height = '0'
           ShowHint = True
@@ -304,7 +303,6 @@ object ISFLIPGrid: TISFLIPGrid
           Width = '0'
           Wrap = True
           RawText = False
-          Css = ''
           BlobCharLimit = 0
           CompareHighlight = hcNone
           DataField = 'MAXPLOTAGE'
@@ -312,10 +310,10 @@ object ISFLIPGrid: TISFLIPGrid
           Title.Alignment = taCenter
           Title.BGColor = clNone
           Title.DoSubmitValidation = True
-          Title.Font.Color = clNone
           Title.Font.FontName = 'Arial'
           Title.Font.Size = 8
           Title.Font.Style = [fsBold]
+          Title.Font.PxSize = 10
           Title.Header = False
           Title.Height = '0'
           Title.ShowHint = True
@@ -330,10 +328,9 @@ object ISFLIPGrid: TISFLIPGrid
           Alignment = taCenter
           BGColor = clNone
           DoSubmitValidation = True
-          Font.Color = clNone
           Font.FontName = 'Arial'
           Font.Size = 8
-          Font.Style = []
+          Font.PxSize = 10
           Header = False
           Height = '0'
           ShowHint = True
@@ -342,7 +339,6 @@ object ISFLIPGrid: TISFLIPGrid
           Width = '0'
           Wrap = False
           RawText = False
-          Css = ''
           BlobCharLimit = 0
           CompareHighlight = hcNone
           DataField = 'BARCODEAGE'
@@ -350,10 +346,10 @@ object ISFLIPGrid: TISFLIPGrid
           Title.Alignment = taCenter
           Title.BGColor = clNone
           Title.DoSubmitValidation = True
-          Title.Font.Color = clNone
           Title.Font.FontName = 'Arial'
           Title.Font.Size = 8
           Title.Font.Style = [fsBold]
+          Title.Font.PxSize = 10
           Title.Header = False
           Title.Height = '0'
           Title.ShowHint = True
@@ -368,10 +364,9 @@ object ISFLIPGrid: TISFLIPGrid
           Alignment = taRightJustify
           BGColor = clNone
           DoSubmitValidation = True
-          Font.Color = clNone
           Font.FontName = 'Arial'
           Font.Size = 8
-          Font.Style = []
+          Font.PxSize = 10
           Header = False
           Height = '0'
           ShowHint = True
@@ -380,7 +375,6 @@ object ISFLIPGrid: TISFLIPGrid
           Width = '0'
           Wrap = True
           RawText = False
-          Css = ''
           BlobCharLimit = 0
           CompareHighlight = hcNone
           DataField = 'SPOTLATITUDE'
@@ -388,10 +382,10 @@ object ISFLIPGrid: TISFLIPGrid
           Title.Alignment = taCenter
           Title.BGColor = clNone
           Title.DoSubmitValidation = True
-          Title.Font.Color = clNone
           Title.Font.FontName = 'Arial'
           Title.Font.Size = 8
           Title.Font.Style = [fsBold]
+          Title.Font.PxSize = 10
           Title.Header = False
           Title.Height = '0'
           Title.ShowHint = True
@@ -406,10 +400,9 @@ object ISFLIPGrid: TISFLIPGrid
           Alignment = taRightJustify
           BGColor = clNone
           DoSubmitValidation = True
-          Font.Color = clNone
           Font.FontName = 'Arial'
           Font.Size = 8
-          Font.Style = []
+          Font.PxSize = 10
           Header = False
           Height = '0'
           ShowHint = True
@@ -418,7 +411,6 @@ object ISFLIPGrid: TISFLIPGrid
           Width = '0'
           Wrap = True
           RawText = False
-          Css = ''
           BlobCharLimit = 0
           CompareHighlight = hcNone
           DataField = 'SPOTLONGITUDE'
@@ -426,10 +418,10 @@ object ISFLIPGrid: TISFLIPGrid
           Title.Alignment = taCenter
           Title.BGColor = clNone
           Title.DoSubmitValidation = True
-          Title.Font.Color = clNone
           Title.Font.FontName = 'Arial'
           Title.Font.Size = 8
           Title.Font.Style = [fsBold]
+          Title.Font.PxSize = 10
           Title.Header = False
           Title.Height = '0'
           Title.ShowHint = True
@@ -473,6 +465,7 @@ object ISFLIPGrid: TISFLIPGrid
         871
         57)
       object iwbDownload: TIWButton
+        AlignWithMargins = False
         Left = 722
         Top = 6
         Width = 129
@@ -480,13 +473,13 @@ object ISFLIPGrid: TISFLIPGrid
         Anchors = [akTop, akRight]
         Caption = 'Download to Excel'
         Color = clBtnFace
-        Font.Color = clNone
         Font.Size = 9
-        Font.Style = []
+        Font.PxSize = 12
         FriendlyName = 'iwbDownload'
         OnClick = iwbDownloadClick
       end
       object iwlFirstPage: TIWLink
+        AlignWithMargins = False
         Left = 30
         Top = 34
         Width = 33
@@ -495,10 +488,11 @@ object ISFLIPGrid: TISFLIPGrid
         StyleRenderOptions.RenderSize = False
         Alignment = taLeftJustify
         Color = clNone
-        Font.Color = clWebBLUE
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
+        Font.Style = [fsUnderline]
+        Font.PxSize = 12
+        Font.Color = clWebBLUE
         HasTabOrder = True
         DoSubmitValidation = False
         FriendlyName = 'iwlFirstPage'
@@ -508,6 +502,7 @@ object ISFLIPGrid: TISFLIPGrid
         Caption = 'First'
       end
       object iwlLastPage: TIWLink
+        AlignWithMargins = False
         Left = 240
         Top = 34
         Width = 35
@@ -516,10 +511,11 @@ object ISFLIPGrid: TISFLIPGrid
         StyleRenderOptions.RenderSize = False
         Alignment = taLeftJustify
         Color = clNone
-        Font.Color = clWebBLUE
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
+        Font.Style = [fsUnderline]
+        Font.PxSize = 12
+        Font.Color = clWebBLUE
         HasTabOrder = True
         DoSubmitValidation = False
         FriendlyName = 'iwlLastPage'
@@ -529,6 +525,7 @@ object ISFLIPGrid: TISFLIPGrid
         Caption = 'Last'
       end
       object iwlNextPage: TIWLink
+        AlignWithMargins = False
         Left = 206
         Top = 34
         Width = 35
@@ -537,10 +534,11 @@ object ISFLIPGrid: TISFLIPGrid
         StyleRenderOptions.RenderSize = False
         Alignment = taLeftJustify
         Color = clNone
-        Font.Color = clWebBLUE
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
+        Font.Style = [fsUnderline]
+        Font.PxSize = 12
+        Font.Color = clWebBLUE
         HasTabOrder = True
         DoSubmitValidation = False
         FriendlyName = 'iwlNextPage'
@@ -550,6 +548,7 @@ object ISFLIPGrid: TISFLIPGrid
         Caption = 'Next'
       end
       object iwlPrevPage: TIWLink
+        AlignWithMargins = False
         Left = 70
         Top = 34
         Width = 53
@@ -558,10 +557,11 @@ object ISFLIPGrid: TISFLIPGrid
         StyleRenderOptions.RenderSize = False
         Alignment = taLeftJustify
         Color = clNone
-        Font.Color = clWebBLUE
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
+        Font.Style = [fsUnderline]
+        Font.PxSize = 12
+        Font.Color = clWebBLUE
         HasTabOrder = True
         DoSubmitValidation = False
         FriendlyName = 'iwlPrevPage'
@@ -571,84 +571,83 @@ object ISFLIPGrid: TISFLIPGrid
         Caption = 'Previous'
       end
       object iwlPageNumTotal: TIWLabel
+        AlignWithMargins = False
         Left = 173
         Top = 35
         Width = 15
         Height = 15
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
+        Font.PxSize = 12
         HasTabOrder = False
         FriendlyName = 'iwlPageNumTotal'
         Caption = '11'
       end
       object iwlSortedBy: TIWLabel
+        AlignWithMargins = False
         Left = 700
         Top = 37
         Width = 150
         Height = 14
         Anchors = [akTop, akRight]
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 8
         Font.Style = [fsItalic]
+        Font.PxSize = 10
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'iwlSortedBy'
         Caption = 'Sorted as specified in query'
       end
       object iwlPageNum: TIWLabel
+        AlignWithMargins = False
         Left = 136
         Top = 35
         Width = 14
         Height = 15
         Alignment = taRightJustify
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
+        Font.PxSize = 12
         HasTabOrder = False
         FriendlyName = 'IWLabel1'
         Caption = '11'
       end
       object lblRecordCount: TIWLabel
+        AlignWithMargins = False
         Left = 30
         Top = 13
         Width = 145
         Height = 15
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
+        Font.PxSize = 12
         NoWrap = True
         HasTabOrder = False
         FriendlyName = 'lblRecordCount'
         Caption = 'records match the query'
       end
       object iwlOf: TIWLabel
+        AlignWithMargins = False
         Left = 156
         Top = 35
         Width = 11
         Height = 15
-        Font.Color = clNone
         Font.FontName = 'Arial'
         Font.Size = 9
-        Font.Style = []
+        Font.PxSize = 12
         HasTabOrder = False
         FriendlyName = 'iwlOf'
         Caption = 'of'
       end
       object iwbCalcBarcodeAges: TIWButton
+        AlignWithMargins = False
         Left = 448
         Top = 20
         Width = 141
         Height = 25
         Caption = 'Calc. Barcode Ages'
         Color = clBtnFace
-        Font.Color = clNone
-        Font.Size = 10
-        Font.Style = []
         FriendlyName = 'iwbCalcBarcodeAges'
         TabOrder = 6
         OnClick = iwbCalcBarcodeAgesClick
@@ -692,6 +691,7 @@ object ISFLIPGrid: TISFLIPGrid
             ExplicitWidth = 879
             inherited lblWelcome: TIWLabel
               Left = 606
+              Font.Color = clWebDARKSLATEGRAY
               ExplicitLeft = 606
             end
           end
@@ -700,7 +700,13 @@ object ISFLIPGrid: TISFLIPGrid
           Width = 1079
           ExplicitWidth = 1079
           inherited iwlSignOut: TIWLink
-            TabOrder = -1
+            Font.Color = clWebBLUE
+          end
+          inherited lnkSignIn: TIWLink
+            Font.Color = clWebBLUE
+          end
+          inherited lblProgTitle: TIWLabel
+            Font.Color = clWebSTEELBLUE
           end
         end
       end
