@@ -1,5 +1,6 @@
 object IWUserSession: TIWUserSession
-  OldCreateOrder = False
-  Height = 150
-  Width = 215
+  OnCreate = IWUserSessionBaseCreate
+  OnDestroy = IWUserSessionBaseDestroy
+  Height = 291
+  Width = 324
 end

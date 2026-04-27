@@ -1,78 +1,603 @@
 object ISFMain: TISFMain
   Left = 0
   Top = 0
-  Width = 555
-  Height = 400
+  Width = 1039
+  Height = 720
+  Margins.Left = 4
+  Margins.Top = 4
+  Margins.Right = 4
+  Margins.Bottom = 4
   RenderInvisibleControls = False
+  OnRender = IWAppFormRender
   AllowPageAccess = True
   ConnectionMode = cmAny
-  SupportedBrowsers = []
+  Title = 'StratDB'
+  PreventBackButton = True
+  OnCreate = IWAppFormCreate
+  Background.Filename = 
+    'W:\source\IntraWeb6.0\Demos\Win32\Delphi\DieFlyDie\Files\grid_ba' +
+    'ckground.gif'
   Background.Fixed = False
   HandleTabs = False
   LeftToRight = True
-  LockUntilLoaded = True
+  LockUntilLoaded = False
   LockOnSubmit = True
+  StyleSheet.Filename = 'styles.css'
   ShowHint = True
-  XPTheme = True
-  DesignLeft = 8
-  DesignTop = 8
-  object IWButton1: TIWButton
-    Left = 144
-    Top = 80
-    Width = 75
-    Height = 25
-    Cursor = crAuto
-    IW50Hint = False
-    ParentShowHint = False
-    ShowHint = True
-    ZIndex = 0
-    RenderSize = True
-    StyleRenderOptions.RenderSize = True
-    StyleRenderOptions.RenderPosition = True
-    StyleRenderOptions.RenderFont = True
-    StyleRenderOptions.RenderZIndex = True
-    StyleRenderOptions.RenderVisibility = True
-    StyleRenderOptions.RenderStatus = True
-    StyleRenderOptions.RenderAbsolute = True
-    Caption = 'IWButton1'
-    DoSubmitValidation = True
-    Color = clBtnFace
-    Font.Color = clNone
-    Font.Size = 10
-    Font.Style = []
-    FriendlyName = 'IWButton1'
-    ScriptEvents = <>
-    TabOrder = 0
-    OnClick = IWButton1Click
+  PixelsPerInch = 120
+  DesignLeft = 2
+  DesignTop = -49
+  object IWRegion1: TIWRegion
+    Left = 250
+    Top = 69
+    Width = 789
+    Height = 651
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
+    HorzScrollBar.Visible = False
+    VertScrollBar.Visible = False
+    RenderInvisibleControls = False
+    Align = alClient
+    BorderOptions.NumericWidth = 0
+    BorderOptions.Style = cbsNone
+    object iwRFooter: TIWRegion
+      Left = 0
+      Top = 566
+      Width = 789
+      Height = 85
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
+      HorzScrollBar.Visible = False
+      VertScrollBar.Visible = False
+      RenderInvisibleControls = False
+      Align = alBottom
+      BorderOptions.NumericWidth = 0
+      BorderOptions.Style = cbsNone
+      DesignSize = (
+        789
+        85)
+      object iwlDeveloperName: TIWLabel
+        AlignWithMargins = False
+        Left = 28
+        Top = 11
+        Width = 113
+        Height = 15
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
+        Anchors = [akLeft, akTop, akBottom]
+        Font.FontName = 'Arial'
+        Font.Size = 9
+        Font.PxSize = 12
+        NoWrap = True
+        HasTabOrder = False
+        FriendlyName = 'iwlDeveloperName'
+        Caption = 'Dr Bruce Eglington'
+      end
+      object iwlDeveloperEmail: TIWLabel
+        AlignWithMargins = False
+        Left = 28
+        Top = 58
+        Width = 141
+        Height = 14
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
+        Anchors = [akLeft, akTop, akBottom]
+        Font.FontName = 'Arial'
+        Font.Size = 8
+        Font.PxSize = 10
+        NoWrap = True
+        HasTabOrder = False
+        FriendlyName = 'iwlDeveloperEmail'
+        Caption = 'bruce.eglington@usask.ca'
+      end
+      object iwlNumUses: TIWLabel
+        AlignWithMargins = False
+        Left = 614
+        Top = 53
+        Width = 194
+        Height = 17
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
+        Anchors = [akLeft, akTop, akRight, akBottom]
+        Font.FontName = 'Arial'
+        Font.Size = 8
+        Font.PxSize = 10
+        NoWrap = True
+        HasTabOrder = False
+        FriendlyName = 'iwlNumUses'
+        Caption = 'This program has been used '
+      end
+      object iwbPermissions: TIWButton
+        AlignWithMargins = False
+        Left = 243
+        Top = 10
+        Width = 146
+        Height = 32
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
+        Visible = False
+        Caption = 'Permissions'
+        Color = clBtnFace
+        FriendlyName = 'iwbPermissions'
+        TabOrder = 2
+        OnClick = iwbPermissionsClick
+      end
+      object iwbCheckIniFile: TIWButton
+        AlignWithMargins = False
+        Left = 330
+        Top = 50
+        Width = 146
+        Height = 31
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
+        Visible = False
+        Caption = 'Check IniFile'
+        Color = clBtnFace
+        FriendlyName = 'iwbCheckIniFile'
+        TabOrder = 3
+        OnClick = iwbCheckIniFileClick
+      end
+      object IWButton1: TIWButton
+        AlignWithMargins = False
+        Left = 555
+        Top = 8
+        Width = 150
+        Height = 37
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
+        Visible = False
+        Caption = 'IWButton1'
+        Color = clBtnFace
+        FriendlyName = 'IWButton1'
+        TabOrder = 4
+      end
+      object iwdbgDevInfo: TIWDBGrid
+        AlignWithMargins = False
+        Left = 750
+        Top = 20
+        Width = 500
+        Height = 188
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
+        Visible = False
+        BorderColors.Color = clNone
+        BorderColors.Light = clNone
+        BorderColors.Dark = clNone
+        BGColor = clNone
+        BorderSize = 0
+        BorderStyle = tfDefault
+        CellPadding = 0
+        CellSpacing = 0
+        FrameBuffer = 40
+        Lines = tlAll
+        UseFrame = True
+        UseSize = False
+        ShowEmptyCells = True
+        ShowInvisibleRows = True
+        ScrollToCurrentRow = False
+        Columns = <
+          item
+            Alignment = taLeftJustify
+            BGColor = clNone
+            DoSubmitValidation = True
+            Font.PxSize = 13
+            Header = False
+            Height = '0'
+            ShowHint = True
+            VAlign = vaMiddle
+            Visible = True
+            Width = '0'
+            Wrap = False
+            RawText = False
+            BlobCharLimit = 0
+            CompareHighlight = hcNone
+            DataField = 'DEVINFOORDER'
+            LinkField = 'DEVINFOORDER'
+            Title.Alignment = taCenter
+            Title.BGColor = clNone
+            Title.DoSubmitValidation = True
+            Title.Font.PxSize = 13
+            Title.Header = False
+            Title.Height = '0'
+            Title.ShowHint = True
+            Title.Text = 'DEVINFOORDER'
+            Title.VAlign = vaMiddle
+            Title.Visible = True
+            Title.Width = '0'
+            Title.Wrap = False
+            Title.RawText = True
+          end
+          item
+            Alignment = taLeftJustify
+            BGColor = clNone
+            DoSubmitValidation = True
+            Font.PxSize = 13
+            Header = False
+            Height = '0'
+            ShowHint = True
+            VAlign = vaMiddle
+            Visible = True
+            Width = '0'
+            Wrap = False
+            RawText = False
+            BlobCharLimit = 0
+            CompareHighlight = hcNone
+            DataField = 'DATESAVED'
+            LinkField = 'DATESAVED'
+            Title.Alignment = taCenter
+            Title.BGColor = clNone
+            Title.DoSubmitValidation = True
+            Title.Font.PxSize = 13
+            Title.Header = False
+            Title.Height = '0'
+            Title.ShowHint = True
+            Title.Text = 'DATESAVED'
+            Title.VAlign = vaMiddle
+            Title.Visible = True
+            Title.Width = '0'
+            Title.Wrap = False
+            Title.RawText = True
+          end
+          item
+            Alignment = taLeftJustify
+            BGColor = clNone
+            DoSubmitValidation = True
+            Font.PxSize = 13
+            Header = False
+            Height = '0'
+            ShowHint = True
+            VAlign = vaMiddle
+            Visible = True
+            Width = '0'
+            Wrap = False
+            RawText = False
+            BlobCharLimit = 0
+            CompareHighlight = hcNone
+            DataField = 'QUERYCHECK'
+            LinkField = 'QUERYCHECK'
+            Title.Alignment = taCenter
+            Title.BGColor = clNone
+            Title.DoSubmitValidation = True
+            Title.Font.PxSize = 13
+            Title.Header = False
+            Title.Height = '0'
+            Title.ShowHint = True
+            Title.Text = 'QUERYCHECK'
+            Title.VAlign = vaMiddle
+            Title.Visible = True
+            Title.Width = '0'
+            Title.Wrap = False
+            Title.RawText = True
+          end>
+        DataSource = dmUser.dsDevInfo
+        FooterRowCount = 0
+        FriendlyName = 'iwdbgDevInfo'
+        FromStart = True
+        HighlightColor = clNone
+        HighlightRows = False
+        Options = [dgShowTitles]
+        RefreshMode = rmAutomatic
+        RowLimit = 0
+        RollOver = True
+        RowClick = False
+        RollOverColor = clInfoBk
+        RowHeaderColor = clNone
+        RowAlternateColor = clNone
+        RowCurrentColor = clNone
+      end
+      object IWButton2: TIWButton
+        AlignWithMargins = False
+        Left = 397
+        Top = 8
+        Width = 150
+        Height = 37
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
+        Visible = False
+        Caption = 'IWButton2'
+        Color = clBtnFace
+        FriendlyName = 'IWButton2'
+        TabOrder = 6
+      end
+      object iwlProgressDate: TIWLabel
+        AlignWithMargins = False
+        Left = 28
+        Top = 38
+        Width = 187
+        Height = 21
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
+        Anchors = [akLeft, akTop, akBottom]
+        Font.FontName = 'Arial'
+        Font.Size = 8
+        Font.PxSize = 10
+        NoWrap = True
+        HasTabOrder = False
+        AutoSize = False
+        FriendlyName = 'iwlProgressDate'
+        Caption = 'yyyy-mm-dd'
+      end
+    end
+    object IWRegion4: TIWRegion
+      Left = 0
+      Top = 0
+      Width = 789
+      Height = 566
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
+      HorzScrollBar.Visible = False
+      VertScrollBar.Visible = False
+      RenderInvisibleControls = False
+      TabOrder = 5
+      Align = alClient
+      BorderOptions.NumericWidth = 0
+      BorderOptions.Style = cbsNone
+      object iwRHeader: TIWRegion
+        Left = 0
+        Top = 0
+        Width = 789
+        Height = 75
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
+        RenderInvisibleControls = False
+        Align = alTop
+        BorderOptions.NumericWidth = 0
+        BorderOptions.Style = cbsNone
+        object lblWelcome: TIWLabel
+          AlignWithMargins = False
+          Left = 13
+          Top = 23
+          Width = 338
+          Height = 22
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
+          ZIndex = 1
+          Font.FontName = 'Arial'
+          Font.Size = 14
+          Font.Style = [fsBold]
+          Font.PxSize = 18
+          Font.Color = clWebCORNFLOWERBLUE
+          NoWrap = True
+          HasTabOrder = False
+          FriendlyName = 'lblWelcome'
+          Caption = 'Welcome to this database system'
+        end
+      end
+      object iwRMemo: TIWRegion
+        Left = 0
+        Top = 75
+        Width = 789
+        Height = 491
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
+        RenderInvisibleControls = False
+        TabOrder = 1
+        Align = alClient
+        BorderOptions.NumericWidth = 0
+        BorderOptions.Style = cbsNone
+        ClipRegion = False
+        object IWDBMemo1: TIWDBMemo
+          AlignWithMargins = False
+          Left = 16
+          Top = 0
+          Width = 745
+          Height = 491
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
+          Align = alClient
+          StyleRenderOptions.RenderBorder = False
+          BGColor = clWebWHITE
+          Editable = False
+          Font.FontName = 'Arial'
+          Font.Size = 9
+          Font.PxSize = 12
+          InvisibleBorder = True
+          HorizScrollBar = False
+          VertScrollBar = True
+          Required = False
+          SubmitOnAsyncEvent = True
+          AutoEditable = False
+          DataField = 'PROGRESSDETAILS'
+          DataSource = dmUser.dsProgress
+          FriendlyName = 'IWDBMemo1'
+        end
+        object IWRegion2: TIWRegion
+          Left = 0
+          Top = 0
+          Width = 16
+          Height = 491
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
+          RenderInvisibleControls = False
+          Align = alLeft
+          BorderOptions.NumericWidth = 0
+          BorderOptions.Style = cbsNone
+        end
+        object IWRegion3: TIWRegion
+          Left = 761
+          Top = 0
+          Width = 28
+          Height = 491
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
+          RenderInvisibleControls = False
+          Align = alRight
+          BorderOptions.NumericWidth = 0
+          BorderOptions.Style = cbsNone
+        end
+      end
+    end
   end
-  object IWLabel1: TIWLabel
-    Left = 120
-    Top = 184
-    Width = 206
-    Height = 16
-    Cursor = crAuto
-    IW50Hint = False
-    ParentShowHint = False
-    ShowHint = True
-    ZIndex = 0
-    RenderSize = True
-    StyleRenderOptions.RenderSize = True
-    StyleRenderOptions.RenderPosition = True
-    StyleRenderOptions.RenderFont = True
-    StyleRenderOptions.RenderZIndex = True
-    StyleRenderOptions.RenderVisibility = True
-    StyleRenderOptions.RenderStatus = True
-    StyleRenderOptions.RenderAbsolute = True
-    Alignment = taLeftJustify
-    BGColor = clNone
-    Font.Color = clNone
-    Font.Size = 10
+  object IWRegion5: TIWRegion
+    Left = 0
+    Top = 69
+    Width = 250
+    Height = 651
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
+    RenderInvisibleControls = False
+    Align = alLeft
+    BorderOptions.NumericWidth = 0
+    BorderOptions.Style = cbsNone
+    inline FrameMenu: TISFFrameMenu
+      Left = 0
+      Top = 0
+      Width = 250
+      Height = 651
+      Margins.Left = 5
+      Margins.Top = 5
+      Margins.Right = 5
+      Margins.Bottom = 5
+      HorzScrollBar.Visible = False
+      VertScrollBar.Visible = False
+      Align = alLeft
+      AutoScroll = True
+      TabOrder = 0
+      TabStop = True
+      ExplicitWidth = 250
+      ExplicitHeight = 651
+      inherited IWFrameRegion: TIWRegion
+        Width = 250
+        Height = 651
+        TabOrder = 7
+        ExplicitWidth = 250
+        ExplicitHeight = 651
+        inherited IWRegion1: TIWRegion
+          Width = 250
+          Height = 651
+          ExplicitWidth = 250
+          ExplicitHeight = 651
+          inherited IWMenu1: TIWMenu
+            Height = 551
+            MainMenuStyle.MenuItemFont.Color = clWebINDIGO
+            MainMenuStyle.SelectedMenuItemFont.Color = clWebINDIGO
+            MainMenuStyle.DisabledMenuItemFont.Color = clWebSILVER
+            SubMenuStyle.MenuItemFont.Color = clWebINDIGO
+            SubMenuStyle.SelectedMenuItemFont.Color = clWebINDIGO
+            SubMenuStyle.DisabledMenuItemFont.Color = clWebSILVER
+            ExplicitHeight = 551
+          end
+          inherited IWRegion2: TIWRegion
+            Width = 250
+            ExplicitWidth = 250
+            inherited IWRegion3: TIWRegion
+              Width = 250
+              ExplicitWidth = 250
+              inherited IWImageStratDB: TIWImage
+                Width = 200
+                Height = 97
+                ExplicitWidth = 200
+                ExplicitHeight = 97
+              end
+              inherited IWImageIGCP509: TIWImage
+                Width = 250
+                ExplicitWidth = 250
+              end
+            end
+          end
+        end
+      end
+    end
+  end
+  inline TopBar: TISFTopBarStrat
+    Left = 0
+    Top = 0
+    Width = 1039
+    Height = 69
+    Margins.Left = 5
+    Margins.Top = 5
+    Margins.Right = 5
+    Margins.Bottom = 5
+    HorzScrollBar.Visible = False
+    VertScrollBar.Visible = False
+    Align = alTop
+    Constraints.MaxHeight = 69
+    Constraints.MinHeight = 69
+    Constraints.MinWidth = 750
+    Color = clNone
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -15
+    Font.Name = 'Arial'
     Font.Style = []
-    NoWrap = False
-    ConvertSpaces = False
-    HasTabOrder = False
-    FriendlyName = 'IWLabel1'
-    Caption = 'Test of new Intraweb application'
-    RawText = False
+    ParentColor = False
+    ParentFont = False
+    TabOrder = 2
+    TabStop = True
+    ExplicitWidth = 1039
+    inherited IWFrameRegion: TIWRegion
+      Width = 1039
+      TabOrder = 8
+      ExplicitWidth = 1039
+      inherited iwrHeader: TIWRegion
+        Width = 1039
+        ExplicitWidth = 1039
+        inherited iwrWelcome: TIWRegion
+          Width = 1039
+          ExplicitWidth = 1039
+          inherited iwrDisplayUserName: TIWRegion
+            Width = 789
+            ExplicitWidth = 789
+            inherited lblWelcome: TIWLabel
+              Left = 606
+              Font.Color = clWebDARKSLATEGRAY
+              ExplicitLeft = 606
+            end
+          end
+        end
+        inherited iwrSignInOut: TIWRegion
+          Width = 1039
+          ExplicitWidth = 1039
+          inherited iwlSignOut: TIWLink
+            Font.Color = clWebBLUE
+          end
+          inherited lnkSignIn: TIWLink
+            Font.Color = clWebBLUE
+            OnClick = TopBarlnkSignInClick
+          end
+          inherited lblProgTitle: TIWLabel
+            Font.Color = clWebSTEELBLUE
+          end
+        end
+      end
+    end
   end
 end

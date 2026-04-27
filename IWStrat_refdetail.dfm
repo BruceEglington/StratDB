@@ -1,0 +1,444 @@
+object ISFRefDetails: TISFRefDetails
+  Left = 0
+  Top = 0
+  Width = 1000
+  Height = 600
+  RenderInvisibleControls = False
+  OnRender = IWAppFormRender
+  AllowPageAccess = True
+  ConnectionMode = cmAny
+  OnCreate = IWAppFormCreate
+  Background.Fixed = False
+  HandleTabs = False
+  LeftToRight = True
+  LockUntilLoaded = False
+  LockOnSubmit = True
+  ShowHint = True
+  DesignLeft = 2
+  DesignTop = 2
+  object iwDBeRefID: TIWDBEdit
+    AlignWithMargins = False
+    Left = 242
+    Top = 109
+    Width = 73
+    Height = 21
+    StyleRenderOptions.RenderBorder = False
+    Editable = False
+    NonEditableAsLabel = True
+    Font.FontName = 'Arial'
+    Font.Size = 9
+    Font.Style = [fsBold]
+    Font.PxSize = 12
+    FriendlyName = 'iwDBeRefID'
+    SubmitOnAsyncEvent = True
+    TabOrder = 11
+    AutoEditable = False
+    DataField = 'SOURCENUM'
+    DataSource = dmStrat.dsRefFull
+    PasswordPrompt = False
+  end
+  object iwbReturn: TIWButton
+    AlignWithMargins = False
+    Left = 102
+    Top = 72
+    Width = 104
+    Height = 25
+    Caption = 'Return'
+    Color = clWebLIGHTGREEN
+    Font.Size = 9
+    Font.PxSize = 12
+    FriendlyName = 'iwbReturn'
+    TabOrder = 8
+    OnClick = iwbReturnClick
+  end
+  object IWLabel1: TIWLabel
+    AlignWithMargins = False
+    Left = 104
+    Top = 110
+    Width = 79
+    Height = 15
+    Font.FontName = 'Arial'
+    Font.Size = 9
+    Font.PxSize = 12
+    NoWrap = True
+    HasTabOrder = False
+    FriendlyName = 'IWLabel1'
+    Caption = 'Reference ID'
+  end
+  object IWLabel2: TIWLabel
+    AlignWithMargins = False
+    Left = 104
+    Top = 163
+    Width = 106
+    Height = 15
+    Font.FontName = 'Arial'
+    Font.Size = 9
+    Font.PxSize = 12
+    NoWrap = True
+    HasTabOrder = False
+    FriendlyName = 'IWLabel2'
+    Caption = 'Reference (Short)'
+  end
+  object iwbCancelUpdates: TIWButton
+    AlignWithMargins = False
+    Left = 432
+    Top = 72
+    Width = 104
+    Height = 25
+    Caption = 'Cancel Updates'
+    Color = clWebLIGHTSALMON
+    Font.Size = 9
+    Font.PxSize = 12
+    FriendlyName = 'iwbCancelUpdates'
+    TabOrder = 9
+    OnClick = iwbCancelUpdatesClick
+  end
+  object rectLeft: TIWRectangle
+    AlignWithMargins = False
+    Left = 0
+    Top = 55
+    Width = 83
+    Height = 545
+    Align = alLeft
+    ZIndex = 1
+    Font.PxSize = 13
+    Font.Color = clWebBLACK
+    BorderOptions.Width = 0
+    FriendlyName = 'rectLeft'
+    Color = clWebLAVENDER
+    Alignment = taLeftJustify
+    VAlign = vaMiddle
+    ExplicitHeight = 350
+  end
+  object iwDBlcbRegionID: TIWDBLookupComboBox
+    AlignWithMargins = False
+    Left = 242
+    Top = 190
+    Width = 365
+    Height = 21
+    StyleRenderOptions.RenderBorder = False
+    Font.FontName = 'Arial'
+    Font.Size = 9
+    Font.Style = [fsBold]
+    Font.PxSize = 12
+    NonEditableAsLabel = True
+    TabOrder = 3
+    AutoEditable = True
+    DataField = 'CONTINENTID'
+    DataSource = dmStrat.dsRefFull
+    FriendlyName = 'iwDBlcbRegionID'
+    KeyField = 'CONTINENTID'
+    ListField = 'CONTINENT'
+    ListSource = dmStrat.dsContinents
+    DisableWhenEmpty = True
+  end
+  object iwbDeleteLink: TIWButton
+    AlignWithMargins = False
+    Left = 542
+    Top = 72
+    Width = 145
+    Height = 25
+    Caption = 'Delete Current Record'
+    Color = clWebLIGHTCORAL
+    Font.Size = 9
+    Font.PxSize = 12
+    FriendlyName = 'iwbDeleteLink'
+    TabOrder = 10
+    OnClick = iwbDeleteLinkClick
+  end
+  object iwbEdit: TIWButton
+    AlignWithMargins = False
+    Left = 212
+    Top = 72
+    Width = 104
+    Height = 25
+    Caption = 'Edit'
+    Color = clWebLEMONCHIFFON
+    Font.Size = 9
+    Font.PxSize = 12
+    FriendlyName = 'iwbEdit'
+    OnClick = iwbEditClick
+  end
+  object iwbApplyUpdates: TIWButton
+    AlignWithMargins = False
+    Left = 322
+    Top = 72
+    Width = 104
+    Height = 25
+    Caption = 'Apply Updates'
+    Color = clWebPEACHPUFF
+    Font.Size = 9
+    Font.PxSize = 12
+    FriendlyName = 'iwbApplyUpdates'
+    TabOrder = 6
+    OnClick = iwbApplyUpdatesClick
+  end
+  object iwDBeRefShort: TIWDBEdit
+    AlignWithMargins = False
+    Left = 242
+    Top = 163
+    Width = 659
+    Height = 21
+    StyleRenderOptions.RenderBorder = False
+    NonEditableAsLabel = True
+    Font.FontName = 'Arial'
+    Font.Size = 9
+    Font.Style = [fsBold]
+    Font.PxSize = 12
+    FriendlyName = 'iwDBeRefShort'
+    SubmitOnAsyncEvent = True
+    TabOrder = 2
+    AutoEditable = True
+    DataField = 'SOURCESHORT'
+    DataSource = dmStrat.dsRefFull
+    PasswordPrompt = False
+  end
+  object IWLabel3: TIWLabel
+    AlignWithMargins = False
+    Left = 102
+    Top = 190
+    Width = 44
+    Height = 15
+    Font.FontName = 'Arial'
+    Font.Size = 9
+    Font.PxSize = 12
+    NoWrap = True
+    HasTabOrder = False
+    FriendlyName = 'IWLabel2'
+    Caption = 'Region'
+  end
+  object IWLabel4: TIWLabel
+    AlignWithMargins = False
+    Left = 102
+    Top = 222
+    Width = 88
+    Height = 15
+    Font.FontName = 'Arial'
+    Font.Size = 9
+    Font.PxSize = 12
+    NoWrap = True
+    HasTabOrder = False
+    FriendlyName = 'IWLabel2'
+    Caption = 'Full Reference'
+  end
+  object IWLabel5: TIWLabel
+    AlignWithMargins = False
+    Left = 104
+    Top = 138
+    Width = 97
+    Height = 15
+    Font.FontName = 'Arial'
+    Font.Size = 9
+    Font.PxSize = 12
+    NoWrap = True
+    HasTabOrder = False
+    FriendlyName = 'IWLabel1'
+    Caption = 'Publication Year'
+  end
+  object iwDBeRefYear: TIWDBEdit
+    AlignWithMargins = False
+    Left = 242
+    Top = 136
+    Width = 73
+    Height = 21
+    StyleRenderOptions.RenderBorder = False
+    NonEditableAsLabel = True
+    Font.FontName = 'Arial'
+    Font.Size = 9
+    Font.Style = [fsBold]
+    Font.PxSize = 12
+    FriendlyName = 'iwDBeRefYear'
+    SubmitOnAsyncEvent = True
+    TabOrder = 1
+    AutoEditable = True
+    DataField = 'SOURCEYEAR'
+    DataSource = dmStrat.dsRefFull
+    PasswordPrompt = False
+  end
+  object IWLabel6: TIWLabel
+    AlignWithMargins = False
+    Left = 104
+    Top = 375
+    Width = 33
+    Height = 15
+    Font.FontName = 'Arial'
+    Font.Size = 9
+    Font.PxSize = 12
+    NoWrap = True
+    HasTabOrder = False
+    FriendlyName = 'IWLabel2'
+    Caption = 'D.O.I.'
+  end
+  object iwDBeRefDOI: TIWDBEdit
+    AlignWithMargins = False
+    Left = 242
+    Top = 371
+    Width = 659
+    Height = 21
+    StyleRenderOptions.RenderBorder = False
+    NonEditableAsLabel = True
+    Font.FontName = 'Arial'
+    Font.Size = 9
+    Font.PxSize = 12
+    FriendlyName = 'iwDBeRefDOI'
+    SubmitOnAsyncEvent = True
+    TabOrder = 5
+    AutoEditable = True
+    DataField = 'DOI'
+    DataSource = dmStrat.dsRefFull
+    PasswordPrompt = False
+  end
+  object IWLabel7: TIWLabel
+    AlignWithMargins = False
+    Left = 102
+    Top = 398
+    Width = 50
+    Height = 15
+    Font.FontName = 'Arial'
+    Font.Size = 9
+    Font.PxSize = 12
+    NoWrap = True
+    HasTabOrder = False
+    FriendlyName = 'IWLabel2'
+    Caption = 'Who For'
+  end
+  object iwDBlcbWhoFor: TIWDBLookupComboBox
+    AlignWithMargins = False
+    Left = 242
+    Top = 398
+    Width = 365
+    Height = 21
+    StyleRenderOptions.RenderBorder = False
+    Font.FontName = 'Arial'
+    Font.Size = 9
+    Font.Style = [fsBold]
+    Font.PxSize = 12
+    NonEditableAsLabel = True
+    TabOrder = 7
+    AutoEditable = True
+    DataField = 'WHOFORID'
+    DataSource = dmStrat.dsRefFull
+    FriendlyName = 'iwDBlcbWhoFor'
+    KeyField = 'WHOFORID'
+    ListField = 'WHOFOR'
+    ListSource = dmStrat.dsUsersWhoFor
+    DisableWhenEmpty = True
+  end
+  object iwbCopyRefShort: TIWButton
+    AlignWithMargins = False
+    Left = 723
+    Top = 190
+    Width = 178
+    Height = 25
+    Caption = 'Copy Ref (short) to Full'
+    Color = clBtnFace
+    FriendlyName = 'iwbCopyRefShort'
+    TabOrder = 4
+    OnClick = iwbCopyRefShortClick
+  end
+  object IWMemoASCIIwarning: TIWMemo
+    AlignWithMargins = False
+    Left = 242
+    Top = 496
+    Width = 659
+    Height = 89
+    StyleRenderOptions.RenderBorder = False
+    BGColor = clNone
+    Editable = False
+    Font.FontName = 'Arial'
+    Font.Size = 9
+    Font.PxSize = 12
+    Font.Color = clWebRED
+    InvisibleBorder = True
+    HorizScrollBar = False
+    VertScrollBar = False
+    Required = False
+    SubmitOnAsyncEvent = False
+    FriendlyName = 'IWMemoASCIIwarning'
+    Lines.Strings = (
+      
+        'NOTE: StratDB and DateView now handle Unicode text. Please conta' +
+        'ct the database administrator if you encounter problems with non' +
+        '-ASCII/ANSI characters during data entry.')
+  end
+  object IWDBMemo1: TIWDBMemo
+    AlignWithMargins = False
+    Left = 242
+    Top = 217
+    Width = 659
+    Height = 136
+    StyleRenderOptions.RenderBorder = False
+    BGColor = clNone
+    Editable = True
+    Font.FontName = 'Arial'
+    Font.Size = 9
+    Font.PxSize = 12
+    InvisibleBorder = False
+    HorizScrollBar = False
+    VertScrollBar = True
+    Required = False
+    SubmitOnAsyncEvent = True
+    AutoEditable = False
+    DataField = 'SOURCEDESCRIPTION'
+    DataSource = dmStrat.dsRefFull
+    FriendlyName = 'IWDBMemo1'
+  end
+  inline TopBar: TISFTopBarStrat
+    Left = 0
+    Top = 0
+    Width = 1000
+    Height = 55
+    HorzScrollBar.Visible = False
+    VertScrollBar.Visible = False
+    Align = alTop
+    Constraints.MaxHeight = 55
+    Constraints.MinHeight = 55
+    Constraints.MinWidth = 600
+    Color = clNone
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Arial'
+    Font.Style = []
+    ParentColor = False
+    ParentFont = False
+    TabOrder = 0
+    TabStop = True
+    ExplicitWidth = 1000
+    inherited IWFrameRegion: TIWRegion
+      Width = 1000
+      TabOrder = 12
+      ExplicitWidth = 1000
+      inherited iwrHeader: TIWRegion
+        Width = 1000
+        ExplicitWidth = 1000
+        inherited iwrWelcome: TIWRegion
+          Width = 1000
+          ExplicitWidth = 1000
+          inherited iwrDisplayUserName: TIWRegion
+            Width = 800
+            ExplicitWidth = 800
+            inherited lblWelcome: TIWLabel
+              Left = 527
+              Font.Color = clWebDARKSLATEGRAY
+              ExplicitLeft = 561
+            end
+          end
+        end
+        inherited iwrSignInOut: TIWRegion
+          Width = 1000
+          ExplicitWidth = 1000
+          inherited iwlSignOut: TIWLink
+            Font.Color = clWebBLUE
+          end
+          inherited lnkSignIn: TIWLink
+            Font.Color = clWebBLUE
+          end
+          inherited lblProgTitle: TIWLabel
+            Font.Color = clWebSTEELBLUE
+          end
+        end
+      end
+    end
+  end
+end

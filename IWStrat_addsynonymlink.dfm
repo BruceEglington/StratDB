@@ -1,0 +1,420 @@
+object ISFAddSynonymLink: TISFAddSynonymLink
+  Left = 0
+  Top = 0
+  Width = 689
+  Height = 405
+  RenderInvisibleControls = False
+  OnRender = IWAppFormRender
+  AllowPageAccess = True
+  ConnectionMode = cmAny
+  OnCreate = IWAppFormCreate
+  Background.Fixed = False
+  HandleTabs = False
+  LeftToRight = True
+  LockUntilLoaded = False
+  LockOnSubmit = True
+  ShowHint = True
+  DesignLeft = 2
+  DesignTop = 2
+  object IWDBEdit1: TIWDBEdit
+    AlignWithMargins = False
+    Left = 242
+    Top = 108
+    Width = 73
+    Height = 21
+    StyleRenderOptions.RenderBorder = False
+    Editable = False
+    NonEditableAsLabel = True
+    Font.FontName = 'Arial'
+    Font.Size = 9
+    Font.Style = [fsBold]
+    Font.PxSize = 12
+    FriendlyName = 'IWDBEdit1'
+    SubmitOnAsyncEvent = True
+    TabOrder = 2
+    AutoEditable = False
+    DataField = 'UNITID'
+    DataSource = dmStrat.dsSynonyms
+    PasswordPrompt = False
+  end
+  object iwbReturn: TIWButton
+    AlignWithMargins = False
+    Left = 102
+    Top = 72
+    Width = 104
+    Height = 25
+    Caption = 'Return'
+    Color = clWebLIGHTGREEN
+    Font.Size = 9
+    Font.PxSize = 12
+    FriendlyName = 'iwbReturn'
+    OnClick = iwbReturnClick
+  end
+  object IWLabel1: TIWLabel
+    AlignWithMargins = False
+    Left = 104
+    Top = 110
+    Width = 40
+    Height = 15
+    Font.FontName = 'Arial'
+    Font.Size = 9
+    Font.PxSize = 12
+    HasTabOrder = False
+    FriendlyName = 'IWLabel1'
+    Caption = 'Unit ID'
+  end
+  object IWLabel2: TIWLabel
+    AlignWithMargins = False
+    Left = 104
+    Top = 138
+    Width = 80
+    Height = 15
+    Font.FontName = 'Arial'
+    Font.Size = 9
+    Font.PxSize = 12
+    HasTabOrder = False
+    FriendlyName = 'IWLabel2'
+    Caption = 'Synonym unit'
+  end
+  object iwbCancelUpdates: TIWButton
+    AlignWithMargins = False
+    Left = 432
+    Top = 72
+    Width = 104
+    Height = 25
+    Caption = 'Cancel Updates'
+    Color = clWebLIGHTSALMON
+    Font.Size = 9
+    Font.PxSize = 12
+    FriendlyName = 'iwbCancelUpdates'
+    TabOrder = 1
+    OnClick = iwbCancelUpdatesClick
+  end
+  object rectLeft: TIWRectangle
+    AlignWithMargins = False
+    Left = 0
+    Top = 55
+    Width = 83
+    Height = 350
+    Align = alLeft
+    ZIndex = 1
+    Font.PxSize = 13
+    Font.Color = clWebBLACK
+    BorderOptions.Width = 0
+    FriendlyName = 'rectLeft'
+    Color = clWebLAVENDER
+    Alignment = taLeftJustify
+    VAlign = vaMiddle
+  end
+  object iwDBlcbLink: TIWDBLookupComboBox
+    AlignWithMargins = False
+    Left = 240
+    Top = 132
+    Width = 365
+    Height = 21
+    StyleRenderOptions.RenderBorder = False
+    Font.FontName = 'Arial'
+    Font.Size = 9
+    Font.Style = [fsBold]
+    Font.PxSize = 12
+    Editable = False
+    NonEditableAsLabel = True
+    TabOrder = 3
+    AutoEditable = False
+    DataField = 'SYNONYMID'
+    DataSource = dmStrat.dsSynonyms
+    FriendlyName = 'iwDBlcbLink'
+    KeyField = 'UNITID'
+    ListField = 'UNITNAME'
+    ListSource = dmStrat.dsUnits
+    DisableWhenEmpty = True
+  end
+  object iwDBnLink: TIWDBNavigator
+    AlignWithMargins = False
+    Left = 104
+    Top = 170
+    Width = 120
+    Height = 28
+    Confirmations.Delete = 'Are you sure you want to delete this record?'
+    Confirmations.Post = 'Are you sure you want to update this record?'
+    Confirmations.Cancel = 'Are you sure you want to cancel your changes to this record?'
+    DataSource = dmStrat.dsSynonyms
+    FriendlyName = 'iwDBnLink'
+    ImageHeight = 24
+    ImageWidth = 24
+    VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast]
+    Orientation = orHorizontal
+  end
+  object iwDBgLink: TIWDBGrid
+    AlignWithMargins = False
+    Left = 104
+    Top = 204
+    Width = 505
+    Height = 150
+    BorderColors.Color = clNone
+    BorderColors.Light = clNone
+    BorderColors.Dark = clNone
+    BGColor = clNone
+    BorderSize = 1
+    BorderStyle = tfDefault
+    CellPadding = 0
+    CellSpacing = 0
+    Font.FontName = 'Arial'
+    Font.Size = 9
+    Font.PxSize = 12
+    FrameBuffer = 40
+    Lines = tlAll
+    UseFrame = True
+    UseSize = True
+    ShowEmptyCells = True
+    ShowInvisibleRows = True
+    ScrollToCurrentRow = False
+    Columns = <
+      item
+        Alignment = taLeftJustify
+        BGColor = clNone
+        DoSubmitValidation = True
+        Font.FontName = 'Arial'
+        Font.Size = 8
+        Font.PxSize = 10
+        Header = False
+        Height = '0'
+        ShowHint = True
+        VAlign = vaMiddle
+        Visible = True
+        Width = '0'
+        Wrap = False
+        RawText = False
+        BlobCharLimit = 0
+        CompareHighlight = hcNone
+        DataField = 'UNITID'
+        Title.Alignment = taCenter
+        Title.BGColor = clNone
+        Title.DoSubmitValidation = True
+        Title.Font.FontName = 'Arial'
+        Title.Font.Size = 8
+        Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
+        Title.Header = False
+        Title.Height = '0'
+        Title.ShowHint = True
+        Title.Text = 'Unit ID'
+        Title.VAlign = vaMiddle
+        Title.Visible = True
+        Title.Width = '0'
+        Title.Wrap = False
+        Title.RawText = True
+      end
+      item
+        Alignment = taCenter
+        BGColor = clNone
+        DoSubmitValidation = True
+        Font.FontName = 'Arial'
+        Font.Size = 8
+        Font.PxSize = 10
+        Header = False
+        Height = '0'
+        ShowHint = True
+        VAlign = vaMiddle
+        Visible = True
+        Width = '0'
+        Wrap = False
+        RawText = False
+        BlobCharLimit = 0
+        CompareHighlight = hcNone
+        DataField = 'SYNONYMID'
+        Title.Alignment = taCenter
+        Title.BGColor = clNone
+        Title.DoSubmitValidation = True
+        Title.Font.FontName = 'Arial'
+        Title.Font.Size = 8
+        Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
+        Title.Header = False
+        Title.Height = '0'
+        Title.ShowHint = True
+        Title.Text = 'Synonym ID'
+        Title.VAlign = vaMiddle
+        Title.Visible = True
+        Title.Width = '0'
+        Title.Wrap = False
+        Title.RawText = True
+      end
+      item
+        Alignment = taLeftJustify
+        BGColor = clNone
+        DoSubmitValidation = True
+        Font.FontName = 'Arial'
+        Font.Size = 8
+        Font.PxSize = 10
+        Header = False
+        Height = '0'
+        ShowHint = True
+        VAlign = vaMiddle
+        Visible = True
+        Width = '0'
+        Wrap = False
+        RawText = False
+        BlobCharLimit = 0
+        CompareHighlight = hcNone
+        DataField = 'UNITNAME'
+        Title.Alignment = taCenter
+        Title.BGColor = clNone
+        Title.DoSubmitValidation = True
+        Title.Font.FontName = 'Arial'
+        Title.Font.Size = 8
+        Title.Font.Style = [fsBold]
+        Title.Font.PxSize = 10
+        Title.Header = False
+        Title.Height = '0'
+        Title.ShowHint = True
+        Title.Text = 'Unit Name'
+        Title.VAlign = vaMiddle
+        Title.Visible = True
+        Title.Width = '0'
+        Title.Wrap = False
+        Title.RawText = True
+      end>
+    DataSource = dmStrat.dsSynonyms
+    FooterRowCount = 0
+    FriendlyName = 'iwDBgLink'
+    FromStart = True
+    HighlightColor = clNone
+    HighlightRows = False
+    Options = [dgShowTitles]
+    RefreshMode = rmAutomatic
+    RowLimit = 0
+    RollOver = True
+    RowClick = False
+    RollOverColor = clWebLIGHTGOLDENRODYELLOW
+    RowHeaderColor = clWebCADETBLUE
+    RowAlternateColor = clNone
+    RowCurrentColor = clWebYELLOW
+  end
+  object iwbDeleteLink: TIWButton
+    AlignWithMargins = False
+    Left = 542
+    Top = 72
+    Width = 145
+    Height = 25
+    Caption = 'Delete Current Record'
+    Color = clWebLIGHTCORAL
+    Font.Size = 9
+    Font.PxSize = 12
+    FriendlyName = 'iwbDeleteLink'
+    TabOrder = 4
+    OnClick = iwbDeleteLinkClick
+  end
+  object iwbEdit: TIWButton
+    AlignWithMargins = False
+    Left = 212
+    Top = 72
+    Width = 104
+    Height = 25
+    Caption = 'Edit'
+    Color = clWebLEMONCHIFFON
+    Font.Size = 9
+    Font.PxSize = 12
+    FriendlyName = 'iwbEdit'
+    TabOrder = 5
+    OnClick = iwbEditClick
+  end
+  object iwbApplyUpdates: TIWButton
+    AlignWithMargins = False
+    Left = 322
+    Top = 72
+    Width = 104
+    Height = 25
+    Caption = 'Apply Updates'
+    Color = clWebPEACHPUFF
+    Font.Size = 9
+    Font.PxSize = 12
+    FriendlyName = 'iwbApplyUpdates'
+    TabOrder = 6
+    OnClick = iwbApplyUpdatesClick
+  end
+  object iwbInsertReverseLink: TIWButton
+    AlignWithMargins = False
+    Left = 464
+    Top = 173
+    Width = 145
+    Height = 25
+    Caption = 'Insert Reverse Link'
+    Color = clWebLIGHTSKYBLUE
+    Font.Size = 9
+    Font.PxSize = 12
+    FriendlyName = 'iwbInsertReverseLink'
+    TabOrder = 7
+    OnClick = iwbInsertReverseLinkClick
+  end
+  object IWLabel3: TIWLabel
+    AlignWithMargins = False
+    Left = 198
+    Top = 360
+    Width = 344
+    Height = 16
+    Font.FontName = 'Arial'
+    Font.PxSize = 13
+    HasTabOrder = False
+    FriendlyName = 'IWLabel3'
+    Caption = 'Synonyms = Names previously used for the same unit'
+  end
+  inline TopBar: TISFTopBarStrat
+    Left = 0
+    Top = 0
+    Width = 689
+    Height = 55
+    HorzScrollBar.Visible = False
+    VertScrollBar.Visible = False
+    Align = alTop
+    Constraints.MaxHeight = 55
+    Constraints.MinHeight = 55
+    Constraints.MinWidth = 600
+    Color = clNone
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Arial'
+    Font.Style = []
+    ParentColor = False
+    ParentFont = False
+    TabOrder = 0
+    TabStop = True
+    ExplicitWidth = 689
+    inherited IWFrameRegion: TIWRegion
+      Width = 689
+      TabOrder = 8
+      ExplicitWidth = 689
+      inherited iwrHeader: TIWRegion
+        Width = 689
+        ExplicitWidth = 689
+        inherited iwrWelcome: TIWRegion
+          Width = 689
+          ExplicitWidth = 689
+          inherited iwrDisplayUserName: TIWRegion
+            Width = 489
+            ExplicitWidth = 489
+            inherited lblWelcome: TIWLabel
+              Left = 216
+              Font.Color = clWebDARKSLATEGRAY
+              ExplicitLeft = 216
+            end
+          end
+        end
+        inherited iwrSignInOut: TIWRegion
+          Width = 689
+          ExplicitWidth = 689
+          inherited iwlSignOut: TIWLink
+            Font.Color = clWebBLUE
+          end
+          inherited lnkSignIn: TIWLink
+            Font.Color = clWebBLUE
+          end
+          inherited lblProgTitle: TIWLabel
+            Font.Color = clWebSTEELBLUE
+          end
+        end
+      end
+    end
+  end
+end

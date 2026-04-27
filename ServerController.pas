@@ -5,156 +5,34 @@ interface
 uses
   SysUtils, Classes, IWServerControllerBase, IWBaseForm, HTTPApp,
   // For OnNewSession Event
-  IWApplication, IWAppForm,
-  IniFiles,
-  IWStrat_dm, IWStrat_dmOpt,
-  IWStrat_dmDV, IWStrat_dmC, IWStrat_dmLIP,
-  IWStrat_dmD,
-  uSetupOctaGateURLBase, IWStrat_constants,
-  usrIW_dm, midaslib;
+  System.IniFiles,
+  UserSessionUnit, IWApplication, IWAppForm, IW.Browser.Browser,
+  IW.HTTP.Request, IW.HTTP.Reply,
+  IWGlobal,
+  IW.Browser.Other, IW.Browser.Firefox, IW.Browser.FirefoxMobile,
+  IW.Browser.Webkit, IW.Browser.SafariMobile,
+  IW.Browser.Safari, IW.Browser.Chrome, IW.Browser.Android, IW.Browser.ChromeMobile,
+  IW.Browser.OperaNext,IW.Browser.Opera,IW.Browser.OperaMobile,
+  IW.Browser.SearchEngine,
+  IW.Common.AppInfo,
+  midaslib;
 
 type
   TIWServerController = class(TIWServerControllerBase)
-    procedure IWServerControllerBaseNewSession(ASession: TIWApplication;
-      var VMainForm: TIWBaseForm);
-    procedure IWServerControllerBaseCreate(Sender: TObject);
+    procedure IWServerControllerBaseGetMainForm(var vMainForm: TIWBaseForm);
+    procedure IWServerControllerBaseNewSession(ASession: TIWApplication);
+    procedure IWServerControllerBaseBrowserCheck(aSession: TIWApplication;
+      var rBrowser: TBrowser);
+
   private
+    { Private declarations }
     procedure GetIniFile;
+
   public
+    { Public declarations }
   end;
 
-  TUserSession = class(TComponent)
-  public
-    UserID, UserPassword, UserDisplayName : string;
-    LoggedIn : boolean; // User logged in or not
-    LastVisitedForm : TIWAppFormClass; // This is interesting for the Login form only
-    ThisProgram : string;
-    CanView : boolean;
-    CanModify : boolean;
-    CanInsert : boolean;
-    CanDelete : boolean;
-    IsDeveloper : boolean;
-    CanValidate : boolean;
-    CanExport : boolean;
-    CanViewPlus : boolean;
-    CanModifyPlus : boolean;
-    WhereAmI :  string;  // string used to identify where one is in program process
-    NumRecordsFound : integer;
-    RecordChosen : string;
-    ParameterChosen: string;
-    UnitSender : string;
-    Parameter2Chosen : string;
-    NumRecordsPerPage : integer;
-    PageNum, PageNumTotal : integer;
-
-    IncludeContinentValues : boolean;
-    ContinentValues : TStringList;
-    IncludeAreaValues : boolean;
-    AreaValues : TStringList;
-    IncludeUnitValues: Boolean;
-    UnitValues: TStringList;
-    IncludeReferenceValues: Boolean;
-    ReferenceValues: TStringList;
-    IncludeValidationValues: Boolean;
-    ValidationValues: TStringList;
-    IncludeDateFromValue: Boolean;
-    DateFromField: string;
-    IncludeDateToValue: Boolean;
-    DateToField: string;
-    OrderByValue: string;
-    LinkToDateView : Boolean;
-    ReferenceStartFrom: string;
-    ReferenceEndWith: string;
-    UnitStartFrom, UnitEndWith : string;
-    IncludeSeams : Boolean;
-    IncludeAllParentIDs : boolean;
-    IncludeSortFromValue: Boolean;
-    SortFromField: string;
-    IncludeSortToValue: Boolean;
-    SortToField: string;
-    IncludeDomainValues : boolean;
-    DomainValues : TStringList;
-    IncludeDomainTypeValues : boolean;
-    DomainTypeValues : TStringList;
-    IncludeDomainValidationValues : boolean;
-    DomainValidationValues : TStringList;
-    IncludeOrogenyValues : boolean;
-    OrogenyValues : TStringList;
-    IncludePeriodValues: Boolean;
-    PeriodValues: TStringList;
-    IncludeLIPValues: Boolean;
-    LIPValues: TStringList;
-    IncludeSizeValues: Boolean;
-    SizeValues: TStringList;
-    IncludeRatingValues: Boolean;
-    RatingValues: TStringList;
-    IncludeMorphologyValues: Boolean;
-    MorphologyValues: TStringList;
-    IncludeContOceanValues: Boolean;
-    ContOceanValues: TStringList;
-    IncludeUsersWhoForValues : Boolean;
-    UsersWhoForValues : TStringList;
-    IncludeDepositValues : boolean;
-    DepositValues : TStringList;
-    IncludeClanValues : boolean;
-    ClanValues : TStringList;
-    IncludeCommodityValues : boolean;
-    CommodityValues : TStringList;
-    IncludeAgeConstraintValues : boolean;
-    AgeConstraintValues : TStringList;
-    IncludeInc4ChtValues : boolean;
-    Inc4ChtValues : TStringList;
-    IncludeDepositStatusValues : boolean;
-    DepositStatusValues : TStringList;
-
-    NewContinentID, NewAreaID,
-    NewUnit,
-    NewReferenceID : string;
-    ChartValue : string;
-
-    GraphType : string;
-    FromAge, ToAge : double;
-    MinimumDateUncertainty: string;
-    NormalisationType: string;
-    PDFType : string;
-    AxisChoiceX, AxisChoiceY : string;
-    DataHaveChanged : boolean;
-    PDFHasChanged : boolean;
-    NumberOfPoints    :  integer;
-    StartAtX, EndAtX,
-    StartAtY, EndAtY,
-    StartAtZ, EndAtZ  : double;
-    LongitudeMin, LongitudeMax,
-    LatitudeMin, LatitudeMax : double;
-    TMultiplier : double;
-
-    MapFileName : string;
-    MapDBFName : string;
-    MapFieldName : string;
-    MapValueFieldName : string;
-    UseDBF : boolean;
-    HORZSIZE, VERTSIZE : integer;
-
-    dmUser : TdmUser;
-    dmStrat : TdmStrat;
-    dmOpt : TdmOpt;
-    dmDV  : TdmDV;
-    dmStratC : TdmStratC;
-    dmStratD : TdmStratD;
-    dmLIP : TdmLIP;
-
-    constructor Create(AOwner: TComponent); override;
-    destructor Destroy; override;
-    procedure GetStringsValues(AStrings: TStrings; AKey: String; AValueList: TStringList);
-    //procedure GetStringValues(AString: String; AKey: String; AValueList: TStringList);
-    procedure SetCookies;
-    procedure GetCookies;
-    procedure NeedLogin(AForm : TIWAppFormClass);
-    procedure AfterLogin;
-  end;
-
-
-  function UserSession: TUserSession;
+  function UserSession: TIWUserSession;
   function IWServerController: TIWServerController;
 
 implementation
@@ -162,781 +40,357 @@ implementation
 {$R *.dfm}
 
 uses
-  IWInit, IWGlobal,
-  usr_uLogin, usr_uregister,
-  usr_uDBInterface, IWStrat_constvalues, NumRecipes_varb, IWStrat_uMain;
+  IWInit, System.IOUtils,
+  IWStrat_constants, IWStrat_constvalues, usrIW_dm,
+  usr_uDBInterface, IWStrat_dm, IWStrat_dmopt, usr_uLogin, usr_uRegister,
+  IWStrat_uMain, IWStrat_dmC, IWStrat_dmD, IWStrat_dmDV, IWStrat_dmLIP;
 
 function IWServerController: TIWServerController;
 begin
   Result := TIWServerController(GServerController);
 end;
 
+{ TIWServerController }
 
-
-function UserSession: TUserSession;
+procedure TIWServerController.IWServerControllerBaseNewSession(
+  ASession: TIWApplication);
 begin
-  Result := TUserSession(WebApplication.Data);
+  ASession.Data := TIWUserSession.Create(nil, ASession);
+  GetIniFile;
+end;
+
+function UserSession: TIWUserSession;
+begin
+  Result := TIWUserSession(WebApplication.Data);
+end;
+
+procedure TIWServerController.IWServerControllerBaseBrowserCheck(
+  aSession: TIWApplication; var rBrowser: TBrowser);
+  {
+  //use the following in the uses interface to be able to use code in this procedure
+  //IW.Browser.Browser,
+  IW.Browser.Other, IW.Browser.Firefox, IW.Browser.FirefoxMobile,
+  IW.Browser.InternetExplorer, IW.Browser.Webkit, IW.Browser.SafariMobile,
+  IW.Browser.Safari, IW.Browser.Chrome, IW.Browser.Android, IW.Browser.ChromeMobile,
+  IW.Browser.OperaNext,IW.Browser.Opera,IW.Browser.OperaMobile,
+  IW.Browser.SearchEngine,
+  }
+var
+  uas : string;
+begin
+  //uas := Lowercase(ASession.Request.UserAgent); //convert user-agent string to lowercase for comparison
+  {
+  if (rBrowser is TSearchEngine) then //Use IW's built-in detection
+  begin
+    ASession.Terminate('403 Forbidden. Indexing of this resource by search engines is not allowed!');
+    rBrowser.destroy;
+    rBrowser := TInternetExplorer.Create(9);
+    //Log this session including the uas so you know that the server defended itself
+  end
+  else if (Pos('baidu',uas) > 0) //Screen deeperinto user-agent string. These conditions can be moved to a function or class. They are exposed here for simplicity.
+    or (Pos('yandex',uas) > 0)
+    or (Pos('naverbot',uas) > 0)
+    or (Pos('yeti',uas) > 0)
+    or (Pos('seznambot',uas) > 0)
+    or (Pos('slurp',uas) > 0)
+    or (Pos('teoma',uas) > 0)
+    or (Pos('moget',uas) > 0)
+    or (Pos('ichiro',uas) > 0)
+    or (Pos('sogu',uas) > 0)
+    or (Pos('bot',uas) > 0)
+    or (Pos('spider',uas) > 0) then
+  begin
+    ASession.Terminate('403 Forbidden. Crawling this site is not allowed!');
+    rBrowser.destroy;
+    rBrowser := TInternetExplorer.Create(9);
+    //Log this session including the uas so you have a record of it
+  end;
+  // unknown browser
+  if (rBrowser is TOther) then begin
+    rBrowser.Free;
+    // accept the unknown browser as Firefox (probably the best idea)
+    rBrowser := TFireFox.Create(TFireFox.MIN_VERSION);
+  end
+  // if is Safari, but older or unsupported version
+  else if (rBrowser is TSafari) and (not rBrowser.IsSupported) then begin
+    rBrowser.Free;
+    // we will create it as the minimum supported version. Please note that we are using TSafari.MIN_VERSION class property
+    rBrowser := TSafari.Create(TSafari.MIN_VERSION);
+  end
+  // if is Chrome, but older or unsupported version
+  else if (rBrowser is TChrome) and (not rBrowser.IsSupported) then begin
+    rBrowser.Free;
+    // we will create it as the minimum supported version. Please note that we are using TChrome.MIN_VERSION class property
+    rBrowser := TChrome.Create(TChrome.MIN_VERSION);
+  end
+  // if is Firefox, but older or unsupported version
+  else if (rBrowser is TFirefox) and (not rBrowser.IsSupported) then begin
+    rBrowser.Free;
+    // we will create it as the minimum supported version. Please note that we are using TFirefox.MIN_VERSION class property
+    rBrowser := TFirefox.Create(TFirefox.MIN_VERSION);
+  end
+  // if is IE, but older or unsupported version
+  else if (rBrowser is TInternetExplorer) and (not rBrowser.IsSupported) then begin
+    rBrowser.Free;
+    // we will create it as the minimum supported version. Please note that we are using TInternetExplorer.MIN_VERSION class property
+    rBrowser := TInternetExplorer.Create(TInternetExplorer.MIN_VERSION);
+  end;
+  }
+end;
+
+procedure TIWServerController.IWServerControllerBaseGetMainForm(
+  var vMainForm: TIWBaseForm);
+begin
+  vMainForm := TISFMain.Create(WebApplication);
 end;
 
 procedure TIWServerController.GetIniFile;
 var
   AppIni   : TIniFile;
   tmpStr   : string;
+  iCode    : integer;
+  DebugButtons,
+  DebugDelayConnections,
+  URLBase,
+  DBMonitor,
+  DriverName,
+  LibraryName, VendorLib, GetDriverFunc,
+  IniFileName,
+  IniFileNameAppInfo,
+  IniFilePath,
+  CommonFilePath,
+  UserControlPath,
+  StratDBPath,
+  DateViewPath,
+  DBUserName, DBPassword,
+  DBSpecific,
+  DBSQLDialectStr,DBCharSet,
+  EnableBCD,
+  DataPath   : string;
+  PublicPath : string;
 begin
-  AppIni := TIniFile.Create('stratdb.ini');
+  dmUser.sqlcWebUser.Connected := false;
+  dmStrat.sqlcStrat.Connected := false;
+  dmDV.sqlcDateView.Connected := false;
+  dmOpt.sqlcStrat.Connected := false;
+  dmLIP.sqlcLIP.Connected := false;
+  dmStratC.sqlcStrat.Connected := false;
+  dmStratD.sqlcStrat.Connected := false;
+  URLBase := '/';
+  DBMonitor := 'active';
+  UserSession.ShowDebugButtons := true;    //bme - normally false
+  UserSession.DelayConnections := false;    //bme - normally false
+  UserControlPath := 'c:\Data\Firebird\UserControl2025v50_utf8.fdb';
+  StratDBPath := 'c:\Data\Firebird\StratDB2025v50_utf8.fdb';
+  DateViewPath := 'c:\Data\Firebird\DateView2025v50_utf8.fdb';
+  DriverName := 'DevartFirebird';
+  LibraryName := 'c:\exe64\dbexpida41.dll';
+  VendorLib := 'c:\exe64\fbclient.dll';
+  GetDriverFunc := 'getSQLDriverFirebird';
+  DBUserName := 'SYSDBA';
+  DBPassword := 'V0lcano3^';
+  DBSQLDialectStr := '3';
+  DBCharSet := 'UTF8';
+  PublicPath := TPath.GetPublicPath;
+  CommonFilePath := IncludeTrailingPathDelimiter(PublicPath) + 'EggSoft\';
+  IniFilePath := CommonFilePath;
+  IniFilename := IniFilePath + 'stratdb.ini';
+  IniFileNameAppInfo := ChangeFileExt(TIWAppInfo.GetAppFullFileName, '.ini');
+  AppIni := TIniFile.Create(IniFilename);
   try
     URLBase := AppIni.ReadString('URLBase','URLBase','/stratdb');
     if (URLBase = '/') then URLBase := '';
+    UserControlPath := AppIni.ReadString('Paths','UserControl path','c:\Data\Firebird\UserControl2025v50_utf8.fdb');
+    StratDBPath := AppIni.ReadString('Paths','StratDB path','c:\Data\Firebird\StratDB2025v50_utf8.fdb');
+    DateViewPath := AppIni.ReadString('Paths','DateView path','c:\Data\Firebird\DateView2025v50_utf8.fdb');
+    DriverName := AppIni.ReadString('Parameters','DriverName','DevartFirebird');
+    LibraryName := AppIni.ReadString('Parameters','LibraryName','c:\exe64\dbexpida41.dll');
+    VendorLib := AppIni.ReadString('Parameters','VendorLib','c:\exe64\fbclient.dll');
+    GetDriverFunc := AppIni.ReadString('Parameters','GetDriverFunc','getSQLDriverFirebird');
+    DBUserName := AppIni.ReadString('Parameters','User_Name','SYSDBA');
+    DBPassword := AppIni.ReadString('Parameters','Password','V0lcano3^');
+    DBSQLDialectStr := AppIni.ReadString('Parameters','SQLDialect','3');
+    DBCharSet := AppIni.ReadString('Parameters','Charset','UTF8');
+    DBMonitor := AppIni.ReadString('Monitor','DBMonitor','Active');
+    DebugButtons := AppIni.ReadString('Debug','Buttons','Active');
+    DebugDelayConnections := AppIni.ReadString('Debug','DelayConnections','true');
+    //EnableBCD := AppIni.ReadString('Parameters','EnableBCD','false');
+    if (DebugButtons = 'Active') then UserSession.ShowDebugButtons := true;
+    if (DebugDelayConnections = 'true') then UserSession.DelayConnections := true;
+    {
+    FromEmailAddress := AppIni.ReadString('Email','FromEmailAddress','aht820@usask.ca');
+    FromName := AppIni.ReadString('Email','FromName','EggSoft developer and database administrator');
+    HostName := AppIni.ReadString('Email','HostName','smtp.office365.com');
+    HostPort := AppIni.ReadString('Email','HostPort','587');
+    EmailUserID := AppIni.ReadString('Email','EmailUserID','aht820@usask.ca');
+    EmailPassword := AppIni.ReadString('Email','EmailPassword','nuC7Sy3Af4bu');
+    URLonTerminate := AppIni.ReadString('URL','URLonTerminate','http://sil.usask.ca');
+    FromEmailAddress := Trim(FromEmailAddress);
+    FromName := Trim(FromName);
+    HostName := Trim(HostName);
+    HostPort := Trim(HostPort);
+    EmailUserID := Trim(EmailUserID);
+    EmailPassword := Trim(EmailPassword);
+    URLonTerminate := Trim(URLonTerminate);
+    }
+    //define connection parameters for UserControl connection
+    try
+      dmUser.sqlcWebUser.Connected := false;
+      dmUser.sqlcWebUser.Params.Clear;
+      dmUser.sqlcWebUser.Params.Append('LibraryName='+LibraryName);
+      dmUser.sqlcWebUser.Params.Append('VendorLib='+VendorLib);
+      dmUser.sqlcWebUser.Params.Append('GetDriverFunc='+GetDriverFunc);
+      dmUser.sqlcWebUser.Params.Append('DriverName='+DriverName);
+      dmUser.sqlcWebUser.Params.Append('Database='+UserControlPath);
+      dmUser.sqlcWebUser.Params.Append('User_Name='+DBUserName);
+      dmUser.sqlcWebUser.Params.Append('Password='+DBPassword);
+      dmUser.sqlcWebUser.Params.Append('SQLDialect='+DBSQLDialectStr);
+      dmUser.sqlcWebUser.Params.Append('Charset='+DBCharSet);
+      dmUser.sqlcWebUser.Params.Append('DevartFirebird TransIsolation=ReadCommitted');
+      dmUser.sqlcWebUser.Params.Append('UseUnicode=true');
+    except
+      WebApplication.ShowMessage('Problem defining dmUser.sqlcWebUser');
+    end;
+    //define connection parameters for StratDB connection
+    try
+      dmStrat.sqlcStrat.Connected := false;
+      dmStrat.sqlcStrat.Params.Clear;
+      dmStrat.sqlcStrat.Params.Append('LibraryName='+LibraryName);
+      dmStrat.sqlcStrat.Params.Append('VendorLib='+VendorLib);
+      dmStrat.sqlcStrat.Params.Append('GetDriverFunc='+GetDriverFunc);
+      dmStrat.sqlcStrat.Params.Append('DriverName='+DriverName);
+      dmStrat.sqlcStrat.Params.Append('Database='+StratDBPath);
+      dmStrat.sqlcStrat.Params.Append('User_Name='+DBUserName);
+      dmStrat.sqlcStrat.Params.Append('Password='+DBPassword);
+      dmStrat.sqlcStrat.Params.Append('SQLDialect='+DBSQLDialectStr);
+      dmStrat.sqlcStrat.Params.Append('Charset='+DBCharSet);
+      dmStrat.sqlcStrat.Params.Append('DevartFirebird TransIsolation=ReadCommitted');
+      dmStrat.sqlcStrat.Params.Append('UseUnicode=true');
+    except
+      WebApplication.ShowMessage('Problem defining dmStrat.sqlcStrat');
+    end;
+    //define connection parameters for StratDB charts connection
+    try
+      dmStratC.sqlcStrat.Connected := false;
+      dmStratC.sqlcStrat.Params.Clear;
+      dmStratC.sqlcStrat.Params.Append('LibraryName='+LibraryName);
+      dmStratC.sqlcStrat.Params.Append('VendorLib='+VendorLib);
+      dmStratC.sqlcStrat.Params.Append('GetDriverFunc='+GetDriverFunc);
+      dmStratC.sqlcStrat.Params.Append('DriverName='+DriverName);
+      dmStratC.sqlcStrat.Params.Append('Database='+StratDBPath);
+      dmStratC.sqlcStrat.Params.Append('User_Name='+DBUserName);
+      dmStratC.sqlcStrat.Params.Append('Password='+DBPassword);
+      dmStratC.sqlcStrat.Params.Append('SQLDialect='+DBSQLDialectStr);
+      dmStratC.sqlcStrat.Params.Append('Charset='+DBCharSet);
+      dmStratC.sqlcStrat.Params.Append('DevartFirebird TransIsolation=ReadCommitted');
+      dmStratC.sqlcStrat.Params.Append('UseUnicode=true');
+    except
+      WebApplication.ShowMessage('Problem defining dmStratC.sqlcStrat');
+    end;
+    //define connection parameters for StratDB data connection
+    try
+      dmStratD.sqlcStrat.Connected := false;
+      dmStratD.sqlcStrat.Params.Clear;
+      dmStratD.sqlcStrat.Params.Append('LibraryName='+LibraryName);
+      dmStratD.sqlcStrat.Params.Append('VendorLib='+VendorLib);
+      dmStratD.sqlcStrat.Params.Append('GetDriverFunc='+GetDriverFunc);
+      dmStratD.sqlcStrat.Params.Append('DriverName='+DriverName);
+      dmStratD.sqlcStrat.Params.Append('Database='+StratDBPath);
+      dmStratD.sqlcStrat.Params.Append('User_Name='+DBUserName);
+      dmStratD.sqlcStrat.Params.Append('Password='+DBPassword);
+      dmStratD.sqlcStrat.Params.Append('SQLDialect='+DBSQLDialectStr);
+      dmStratD.sqlcStrat.Params.Append('Charset='+DBCharSet);
+      dmStratD.sqlcStrat.Params.Append('DevartFirebird TransIsolation=ReadCommitted');
+      dmStratD.sqlcStrat.Params.Append('UseUnicode=true');
+    except
+      WebApplication.ShowMessage('Problem defining dmStratD.sqlcStrat');
+    end;
+    //define connection parameters for DateView connection
+    try
+      dmDV.sqlcDateView.Connected := false;
+      dmDV.sqlcDateView.Params.Clear;
+      dmDV.sqlcDateView.Params.Append('LibraryName='+LibraryName);
+      dmDV.sqlcDateView.Params.Append('VendorLib='+VendorLib);
+      dmDV.sqlcDateView.Params.Append('GetDriverFunc='+GetDriverFunc);
+      dmDV.sqlcDateView.Params.Append('DriverName='+DriverName);
+      dmDV.sqlcDateView.Params.Append('Database='+DateViewPath);
+      dmDV.sqlcDateView.Params.Append('User_Name='+DBUserName);
+      dmDV.sqlcDateView.Params.Append('Password='+DBPassword);
+      dmDV.sqlcDateView.Params.Append('SQLDialect='+DBSQLDialectStr);
+      dmDV.sqlcDateView.Params.Append('Charset='+DBCharSet);
+      dmDV.sqlcDateView.Params.Append('DevartFirebird TransIsolation=ReadCommitted');
+      dmDV.sqlcDateView.Params.Append('UseUnicode=true');
+    except
+      WebApplication.ShowMessage('Problem defining dmDV.sqlcDateView');
+    end;
+    //define connection parameters for LIP connection
+    try
+      dmLIP.sqlcLIP.Connected := false;
+      dmLIP.sqlcLIP.Params.Clear;
+      dmLIP.sqlcLIP.Params.Append('LibraryName='+LibraryName);
+      dmLIP.sqlcLIP.Params.Append('VendorLib='+VendorLib);
+      dmLIP.sqlcLIP.Params.Append('GetDriverFunc='+GetDriverFunc);
+      dmLIP.sqlcLIP.Params.Append('DriverName='+DriverName);
+      dmLIP.sqlcLIP.Params.Append('Database='+StratDBPath);
+      dmLIP.sqlcLIP.Params.Append('User_Name='+DBUserName);
+      dmLIP.sqlcLIP.Params.Append('Password='+DBPassword);
+      dmLIP.sqlcLIP.Params.Append('SQLDialect='+DBSQLDialectStr);
+      dmLIP.sqlcLIP.Params.Append('Charset='+DBCharSet);
+      dmLIP.sqlcLIP.Params.Append('DevartFirebird TransIsolation=ReadCommitted');
+      dmLIP.sqlcLIP.Params.Append('UseUnicode=true');
+    except
+      WebApplication.ShowMessage('Problem defining dmLIP.sqlcLIP');
+    end;
+    //define connection parameters for Options connection
+    try
+      dmOpt.sqlcStrat.Connected := false;
+      dmOpt.sqlcStrat.Params.Clear;
+      dmOpt.sqlcStrat.Params.Append('LibraryName='+LibraryName);
+      dmOpt.sqlcStrat.Params.Append('VendorLib='+VendorLib);
+      dmOpt.sqlcStrat.Params.Append('GetDriverFunc='+GetDriverFunc);
+      dmOpt.sqlcStrat.Params.Append('DriverName='+DriverName);
+      dmOpt.sqlcStrat.Params.Append('Database='+StratDBPath);
+      dmOpt.sqlcStrat.Params.Append('User_Name='+DBUserName);
+      dmOpt.sqlcStrat.Params.Append('Password='+DBPassword);
+      dmOpt.sqlcStrat.Params.Append('SQLDialect='+DBSQLDialectStr);
+      dmOpt.sqlcStrat.Params.Append('Charset='+DBCharSet);
+      dmOpt.sqlcStrat.Params.Append('DevartFirebird TransIsolation=ReadCommitted');
+      dmOpt.sqlcStrat.Params.Append('UseUnicode=true');
+    except
+      WebApplication.ShowMessage('Problem defining dmOpt.sqlcStrat');
+    end;
+    if (DBMonitor = 'Active') then
+    begin
+      dmUser.SQLMonitor1.Active := true;
+      dmStrat.SQLMonitor1.Active := true;
+      dmDV.SQLMonitor1.Active := true;
+      dmOpt.SQLMonitor1.Active := true;
+      dmStratC.SQLMonitor1.Active := true;
+      dmStratD.SQLMonitor1.Active := true;
+      dmLIP.SQLMonitor1.Active := true;
+    end else
+    begin
+      dmUser.SQLMonitor1.Active := false;
+      dmStrat.SQLMonitor1.Active := false;
+      dmDV.SQLMonitor1.Active := false;
+      dmOpt.SQLMonitor1.Active := false;
+      dmStratC.SQLMonitor1.Active := false;
+      dmStratD.SQLMonitor1.Active := false;
+      dmLIP.SQLMonitor1.Active := false;
+    end;
+    dmUser.sqlcWebUser.connected := true;
+    dmStrat.sqlcStrat.Connected := true;
+    dmStratC.sqlcStrat.Connected := true;
+    dmStratD.sqlcStrat.Connected := true;
+    dmDV.sqlcDateView.Connected := true;
+    dmOpt.sqlcStrat.Connected := true;
+    dmLIP.sqlcLIP.Connected := true;
   finally
     AppIni.Free;
   end;
 end;
 
-procedure TIWServerController.IWServerControllerBaseCreate(Sender: TObject);
-begin
-  GetIniFile;
-end;
-
-procedure TIWServerController.IWServerControllerBaseNewSession(
-  ASession: TIWApplication; var VMainForm: TIWBaseForm);
-begin
-  ASession.Data := TUserSession.Create(nil);
-end;
-
-procedure TUserSession.GetStringsValues(AStrings: TStrings;
-                           AKey: String; AValueList: TStringList);
-//from routine published by Bob Swart
-var
-  FieldValue: String;
-  i, match: Integer;
-begin
-  AKey := AKey + '=';
-  for i:=0 to Pred(AStrings.Count) do
-  begin
-    FieldValue := AStrings.Strings[i];
-    if Pos(AKey, FieldValue) = 1 then //exact match
-    begin
-      match := Pos('=', FieldValue);
-      if match > 0 then
-        AValueList.Add(Copy(FieldValue, match+1, Length(FieldValue)-match))
-    end;
-  end;
-end;
-
-{
-procedure TUserSession.GetStringValues(AString: String;
-                           AKey: String; AValueList: TStringList);
-var
-  FieldValue: String;
-  i, match: Integer;
-  match2 : integer;
-begin
-  FieldValue := AString;
-  match := 0;
-  match2 := Pos(',', FieldValue);
-  repeat
-    match2 := Pos(',', FieldValue);
-    if (match2 > 0) then
-    begin
-      AValueList.Add(Copy(FieldValue, match+1, match2-match+1));
-      FieldValue := Copy(FieldValue,match2+1, Length(FieldValue)-match+1);
-    end else
-    begin
-      AValueList.Add(Copy(FieldValue, match+1, Length(FieldValue)-match+1));
-      match2 := 0;
-    end;
-  until (match2 = 0);
-end;
-}
-
-constructor TUserSession.Create(AOwner: TComponent);
-begin
-  inherited Create(AOwner);
-  LoggedIn := FALSE;
-  dmUser := TdmUser.Create(Self);
-  dmUser.sqlcWebUser.Connected := false;
-  dmStrat := TdmStrat.Create(Self);
-  dmStrat.sqlcStrat.Connected := false;
-  dmStrat := TdmStrat.Create(Self);
-  dmStrat.sqlcStrat.Connected := false;
-  dmDV := TdmDV.Create(Self);
-  dmDV.sqlcDateView.Connected := false;
-  dmOpt := TdmOpt.Create(Self);
-  dmOpt.sqlcStrat.Connected := false;
-  dmStratC := TdmStratC.Create(Self);
-  dmStratC.sqlcStrat.Connected := false;
-  dmLIP := TdmLIP.Create(Self);
-  dmLIP.sqlcLIP.Connected := false;
-  dmStratD := TdmStratD.Create(Self);
-  dmStratD.sqlcStrat.Connected := false;
-  ContinentValues := TStringList.Create;
-  AreaValues := TStringList.Create;
-  UnitValues := TStringList.Create;
-  ReferenceValues := TStringList.Create;
-  ValidationValues := TStringList.Create;
-  DomainValues := TStringList.Create;
-  DomainTypeValues := TStringList.Create;
-  DomainValidationValues := TStringList.Create;
-  OrogenyValues := TStringList.Create;
-  PeriodValues := TStringList.Create;
-  LIPValues := TStringList.Create;
-  SizeValues := TStringList.Create;
-  RatingValues := TStringList.Create;
-  MorphologyValues := TStringList.Create;
-  ContOceanValues := TStringList.Create;
-  UsersWhoForValues := TStringList.Create;
-  DepositValues := TStringList.Create;
-  ClanValues := TStringList.Create;
-  CommodityValues := TStringList.Create;
-  AgeConstraintValues := TStringList.Create;
-  Inc4ChtValues := TStringList.Create;
-  DepositStatusValues := TStringList.Create;
-end;
-
-destructor TUserSession.Destroy;
-begin
-  FreeAndNil(ContinentValues);
-  FreeAndNil(AreaValues);
-  FreeAndNil(UnitValues);
-  FreeAndNil(ReferenceValues);
-  FreeAndNil(ValidationValues);
-  FreeAndNil(DomainValues);
-  FreeAndNil(DomainTypeValues);
-  FreeAndNil(DomainValidationValues);
-  FreeAndNil(OrogenyValues);
-  FreeAndNil(PeriodValues);
-  FreeAndNil(LIPValues);
-  FreeAndNil(SizeValues);
-  FreeAndNil(RatingValues);
-  FreeAndNil(MorphologyValues);
-  FreeAndNil(ContOceanValues);
-  FreeAndNil(UsersWhoForValues);
-  FreeAndNil(DepositValues);
-  FreeAndNil(ClanValues);
-  FreeAndNil(CommodityValues);
-  FreeAndNil(AgeConstraintValues);
-  FreeAndNil(Inc4ChtValues);
-  FreeAndNil(DepositStatusValues);
-  dmStrat.sqlcStrat.Connected := false;
-  dmOpt.sqlcStrat.Connected := false;
-  dmDV.sqlcDateView.Connected := false;
-  dmStratC.sqlcStrat.Connected := false;
-  dmLIP.sqlcLIP.Connected := false;
-  dmStratD.sqlcStrat.Connected := false;
-  dmUser.sqlcWebUser.Connected := false;
-  inherited Destroy;
-end;
-
-procedure TUserSession.SetCookies;
-var
-  tmpString : string;
-  tmpANSIstring : ANSIstring;
-  i : integer;
-  AStringList : TStringList;
-  tNow : TDateTime;
-begin
-  AStringList := TStringList.Create;
-  try
-    AStringList.Clear;
-    if UserSession.IncludeContinentValues then
-    begin
-      AStringList.Add('IncludeContinentValues='+IntToStr(UserSession.ContinentValues.Count));
-      for i := 1 to UserSession.ContinentValues.Count do
-      begin
-        AStringList.Add('ContinentValues='+UserSession.ContinentValues.Strings[i-1]);
-      end;
-    end;
-    if UserSession.IncludeAreaValues then
-    begin
-      AStringList.Add('IncludeAreaValues='+IntToStr(UserSession.AreaValues.Count));
-      for i := 1 to UserSession.AreaValues.Count do
-      begin
-        AStringList.Add('AreaValues='+UserSession.AreaValues.Strings[i-1]);
-      end;
-    end;
-    if UserSession.IncludeUnitValues then
-    begin
-      AStringList.Add('IncludeUnitValues='+IntToStr(UserSession.UnitValues.Count));
-      for i := 1 to UserSession.UnitValues.Count do
-      begin
-        AStringList.Add('UnitValues='+UserSession.UnitValues.Strings[i-1]);
-      end;
-    end;
-    if UserSession.IncludeReferenceValues then
-    begin
-      AStringList.Add('IncludeReferenceValues='+IntToStr(UserSession.ReferenceValues.Count));
-      for i := 1 to UserSession.ReferenceValues.Count do
-      begin
-        AStringList.Add('ReferenceValues='+UserSession.ReferenceValues.Strings[i-1]);
-      end;
-    end;
-    if UserSession.IncludeValidationValues then
-    begin
-      AStringList.Add('IncludeValidationValues='+IntToStr(UserSession.ValidationValues.Count));
-      for i := 1 to UserSession.ValidationValues.Count do
-      begin
-        AStringList.Add('ValidationValues='+UserSession.ValidationValues.Strings[i-1]);
-      end;
-    end;
-    if UserSession.IncludeDateFromValue then
-    begin
-      AStringList.Add('IncludeDateFromValue='+IntToStr(1));
-      AStringList.Add('DateFromField='+UserSession.DateFromField);
-    end;
-    if UserSession.IncludeDateToValue then
-    begin
-      AStringList.Add('IncludeDateToValue='+IntToStr(1));
-      AStringList.Add('DateToField='+UserSession.DateToField);
-    end;
-    if UserSession.IncludeAllParentIDs then
-    begin
-      AStringList.Add('IncludeAllParentIDs='+IntToStr(1));
-    end else
-    begin
-      AStringList.Add('IncludeAllParentIDs='+IntToStr(0));
-    end;
-    AStringList.Add('OrderByValue='+UserSession.OrderByValue);
-    if UserSession.CanInsert then
-    begin
-      AStringList.Add('NewContinentID='+UserSession.NewContinentID);
-      AStringList.Add('NewAreaID='+UserSession.NewAreaID);
-      AStringList.Add('NewUnit='+UserSession.NewUnit);
-      AStringList.Add('NewReferenceID='+UserSession.NewReferenceID);
-    end;
-    if UserSession.IncludeSortFromValue then
-    begin
-      AStringList.Add('IncludeSortFromValue='+IntToStr(1));
-      AStringList.Add('SortFromField='+UserSession.SortFromField);
-    end;
-    if UserSession.IncludeSortToValue then
-    begin
-      AStringList.Add('IncludeSortToValue='+IntToStr(1));
-      AStringList.Add('SortToField='+UserSession.SortToField);
-    end;
-    if UserSession.IncludeDomainValues then
-    begin
-      AStringList.Add('IncludeDomainValues='+IntToStr(UserSession.DomainValues.Count));
-      for i := 1 to UserSession.DomainValues.Count do
-      begin
-        AStringList.Add('DomainValues='+UserSession.DomainValues.Strings[i-1]);
-      end;
-    end;
-    if UserSession.IncludeDomainTypeValues then
-    begin
-      AStringList.Add('IncludeDomainTypeValues='+IntToStr(UserSession.DomainTypeValues.Count));
-      for i := 1 to UserSession.DomainTypeValues.Count do
-      begin
-        AStringList.Add('DomainTypeValues='+UserSession.DomainTypeValues.Strings[i-1]);
-      end;
-    end;
-    if UserSession.IncludeDomainValidationValues then
-    begin
-      AStringList.Add('IncludeDomainValidationValues='+IntToStr(UserSession.DomainValidationValues.Count));
-      for i := 1 to UserSession.DomainValidationValues.Count do
-      begin
-        AStringList.Add('DomainValidationValues='+UserSession.DomainValidationValues.Strings[i-1]);
-      end;
-    end;
-    if UserSession.IncludeOrogenyValues then
-    begin
-      AStringList.Add('IncludeOrogenyValues='+IntToStr(UserSession.OrogenyValues.Count));
-      for i := 1 to UserSession.OrogenyValues.Count do
-      begin
-        AStringList.Add('OrogenyValues='+UserSession.OrogenyValues.Strings[i-1]);
-      end;
-    end;
-    if UserSession.IncludePeriodValues then
-    begin
-      AStringList.Add('IncludePeriodValues='+IntToStr(UserSession.PeriodValues.Count));
-      for i := 1 to UserSession.PeriodValues.Count do
-      begin
-        AStringList.Add('PeriodValues='+UserSession.PeriodValues.Strings[i-1]);
-      end;
-    end;
-    if UserSession.IncludeLIPValues then
-    begin
-      AStringList.Add('IncludeLIPValues='+IntToStr(UserSession.LIPValues.Count));
-      for i := 1 to UserSession.LIPValues.Count do
-      begin
-        AStringList.Add('LIPValues='+UserSession.LIPValues.Strings[i-1]);
-      end;
-    end;
-    if UserSession.IncludeSizeValues then
-    begin
-      AStringList.Add('IncludeSizeValues='+IntToStr(UserSession.SizeValues.Count));
-      for i := 1 to UserSession.SizeValues.Count do
-      begin
-        AStringList.Add('SizeValues='+UserSession.SizeValues.Strings[i-1]);
-      end;
-    end;
-    if UserSession.IncludeRatingValues then
-    begin
-      AStringList.Add('IncludeRatingValues='+IntToStr(UserSession.RatingValues.Count));
-      for i := 1 to UserSession.RatingValues.Count do
-      begin
-        AStringList.Add('RatingValues='+UserSession.RatingValues.Strings[i-1]);
-      end;
-    end;
-    if UserSession.IncludeMorphologyValues then
-    begin
-      AStringList.Add('IncludeMorphologyValues='+IntToStr(UserSession.MorphologyValues.Count));
-      for i := 1 to UserSession.MorphologyValues.Count do
-      begin
-        AStringList.Add('MorphologyValues='+UserSession.MorphologyValues.Strings[i-1]);
-      end;
-    end;
-    if UserSession.IncludeContOceanValues then
-    begin
-      AStringList.Add('IncludeContOceanValues='+IntToStr(UserSession.ContOceanValues.Count));
-      for i := 1 to UserSession.ContOceanValues.Count do
-      begin
-        AStringList.Add('ContOceanValues='+UserSession.ContOceanValues.Strings[i-1]);
-      end;
-    end;
-    if UserSession.IncludeUsersWhoForValues then
-    begin
-      AStringList.Add('IncludeUsersWhoForValues='+IntToStr(UserSession.UsersWhoForValues.Count));
-      for i := 1 to UserSession.UsersWhoForValues.Count do
-      begin
-        AStringList.Add('UsersWhoForValues='+UserSession.UsersWhoForValues.Strings[i-1]);
-      end;
-    end;
-    if UserSession.IncludeDepositValues then
-    begin
-      AStringList.Add('IncludeDepositValues='+IntToStr(UserSession.DepositValues.Count));
-      for i := 1 to UserSession.DepositValues.Count do
-      begin
-        AStringList.Add('DepositValues='+UserSession.DepositValues.Strings[i-1]);
-      end;
-    end;
-    if UserSession.IncludeClanValues then
-    begin
-      AStringList.Add('IncludeClanValues='+IntToStr(UserSession.ClanValues.Count));
-      for i := 1 to UserSession.ClanValues.Count do
-      begin
-        AStringList.Add('ClanValues='+UserSession.ClanValues.Strings[i-1]);
-      end;
-    end;
-    if UserSession.IncludeCommodityValues then
-    begin
-      AStringList.Add('IncludeCommodityValues='+IntToStr(UserSession.CommodityValues.Count));
-      for i := 1 to UserSession.CommodityValues.Count do
-      begin
-        AStringList.Add('CommodityValues='+UserSession.CommodityValues.Strings[i-1]);
-      end;
-    end;
-    if UserSession.IncludeAgeConstraintValues then
-    begin
-      AStringList.Add('IncludeAgeConstraintValues='+IntToStr(UserSession.AgeConstraintValues.Count));
-      for i := 1 to UserSession.AgeConstraintValues.Count do
-      begin
-        AStringList.Add('AgeConstraintValues='+UserSession.AgeConstraintValues.Strings[i-1]);
-      end;
-    end;
-    if UserSession.IncludeInc4ChtValues then
-    begin
-      AStringList.Add('IncludeInc4ChtValues='+IntToStr(UserSession.Inc4ChtValues.Count));
-      for i := 1 to UserSession.Inc4ChtValues.Count do
-      begin
-        AStringList.Add('Inc4ChtValues='+UserSession.Inc4ChtValues.Strings[i-1]);
-      end;
-    end;
-    if UserSession.IncludeDepositStatusValues then
-    begin
-      AStringList.Add('IncludeDepositStatusValues='+IntToStr(UserSession.DepositStatusValues.Count));
-      for i := 1 to UserSession.DepositStatusValues.Count do
-      begin
-        AStringList.Add('DepositStatusValues='+UserSession.DepositStatusValues.Strings[i-1]);
-      end;
-    end;
-    tNow := Now;
-    WebApplication.ShowMessage('before LoggedIn');
-    if (UserSession.LoggedIn) then
-    begin
-      tmpstring := AStringList.Text;
-      tmpANSIstring := tmpstring;
-      WebApplication.ShowMessage(tmpstring);
-      WebApplication.ShowMessage(tmpANSIstring);
-      dmUser.qCookieInfo.Close;
-      dmUser.qCookieInfo.ParamByName('USERNAMEID').AsString := UserSession.UserID;
-      dmUser.qCookieInfo.ParamByName('SOFTWAREID').AsString := UserSession.ThisProgram;
-      dmUser.cdsCookieInfo.Close;
-      dmUser.cdsCookieInfo.Open;
-      if (dmUser.cdsCookieInfo.RecordCount > 0) then
-      begin
-        WebApplication.ShowMessage('cdsCookieInfo RecordCount > 0');
-        WebApplication.ShowMessage(UserSession.UserID);
-        WebApplication.ShowMessage(UserSession.ThisProgram);
-        WebApplication.ShowMessage(DateTimeToStr(tNow));
-        dmUser.cdsCookieInfo.Edit;
-        dmUser.cdsCookieInfoLASTUSED.AsDateTime := Now;
-        dmUser.cdsCookieInfoCOOKIEINFO.AsString := tmpANSIstring;
-        dmUser.cdsCookieInfo.Post;
-      end else
-      begin
-        WebApplication.ShowMessage('cdsCookieInfo RecordCount = 0');
-        WebApplication.ShowMessage(UserSession.UserID);
-        WebApplication.ShowMessage(UserSession.ThisProgram);
-        WebApplication.ShowMessage(DateTimeToStr(tNow));
-        dmUser.cdsCookieInfo.Append;
-        dmUser.cdsCookieInfoUSERNAMEID.AsString := UserSession.UserID;
-        dmUser.cdsCookieInfoSOFTWAREID.AsString := UserSession.ThisProgram;
-        dmUser.cdsCookieInfoLASTUSED.AsDateTime := Now;
-        dmUser.cdsCookieInfoCOOKIEINFO.AsString := tmpANSIstring;
-        dmUser.cdsCookieInfo.Post;
-      end;
-      WebApplication.ShowMessage(dmUser.cdsCookieInfoCOOKIEINFO.AsString);
-      try
-        dmUser.cdsCookieInfo.ApplyUpdates(0);
-        WebApplication.ShowMessage('Updates applied to cdsCookieInfo');
-        dmUser.SetDeveloperData(tmpANSIstring);
-      except
-        WebApplication.ShowMessage('Not able to apply updates to cdsCookieInfo');
-      end;
-    end;
-  finally
-    AStringList.Free;
-  end;
-end;
-
-procedure TUserSession.GetCookies;
-var
-  tmpString : string;
-  i, tmpi, iCode : integer;
-  tmpStringValues : TStringList;
-  AStringList : TStringList;
-begin
-  AStringList := TStringList.Create;
-  try
-    dmUser.qCookieInfo.Close;
-    dmUser.qCookieInfo.ParamByName('USERNAMEID').AsString := UserSession.UserID;
-    dmUser.qCookieInfo.ParamByName('SOFTWAREID').AsString := UserSession.ThisProgram;
-    dmUser.cdsCookieInfo.Close;
-    dmUser.cdsCookieInfo.Open;
-    if (dmUser.cdsCookieInfo.RecordCount > 0) then
-    begin
-      AStringList.Text := dmUser.cdsCookieInfoCOOKIEINFO.AsString;
-    end;
-    Val(AStringList.Values['IncludeContinentValues'],tmpi,iCode);
-    if (iCode > 0) then tmpi := 0;
-    if (tmpi > 0) then
-    begin
-      UserSession.IncludeContinentValues := true;
-      UserSession.GetStringsValues(AStringList,'ContinentValues',UserSession.ContinentValues);
-    end;
-    Val(AStringList.Values['IncludeAreaValues'],tmpi,iCode);
-    if (iCode > 0) then tmpi := 0;
-    if (tmpi > 0) then
-    begin
-      UserSession.IncludeAreaValues := true;
-      UserSession.GetStringsValues(AStringList,'AreaValues',UserSession.AreaValues);
-    end;
-    Val(AStringList.Values['IncludeUnitValues'],tmpi,iCode);
-    if (iCode > 0) then tmpi := 0;
-    if (tmpi > 0) then
-    begin
-      UserSession.IncludeUnitValues := true;
-      UserSession.GetStringsValues(AStringList,'UnitValues',UserSession.UnitValues);
-    end;
-    Val(AStringList.Values['IncludeReferenceValues'],tmpi,iCode);
-    if (iCode > 0) then tmpi := 0;
-    if (tmpi > 0) then
-    begin
-      UserSession.IncludeReferenceValues := true;
-      UserSession.GetStringsValues(AStringList,'ReferenceValues',UserSession.ReferenceValues);
-    end;
-    Val(AStringList.Values['IncludeValidationValues'],tmpi,iCode);
-    if (iCode > 0) then tmpi := 0;
-    if (tmpi > 0) then
-    begin
-      UserSession.IncludeValidationValues := true;
-      UserSession.GetStringsValues(AStringList,'ValidationValues',UserSession.ValidationValues);
-    end;
-    Val(AStringList.Values['IncludeDateFromValue'],tmpi,iCode);
-    if (iCode > 0) then tmpi := 0;
-    if (tmpi > 0) then
-    begin
-      UserSession.IncludeDateFromValue := true;
-      UserSession.DateFromField := AStringList.Values['DateFromField'];
-    end;
-    Val(AStringList.Values['IncludeDateToValue'],tmpi,iCode);
-    if (iCode > 0) then tmpi := 0;
-    if (tmpi > 0) then
-    begin
-      UserSession.IncludeDateToValue := true;
-      UserSession.DateToField := AStringList.Values['DateToField'];
-    end;
-    Val(AStringList.Values['IncludeAllParentIDs'],tmpi,iCode);
-    if (iCode > 0) then tmpi := 0;
-    if (tmpi > 0) then
-    begin
-      UserSession.IncludeAllParentIDs := true;
-    end else
-    begin
-      UserSession.IncludeAllParentIDs := false;
-    end;
-    UserSession.OrderByValue := AStringList.Values['OrderByValue'];
-    if UserSession.CanInsert then
-    begin
-      UserSession.NewContinentID := AStringList.Values['NewContinentID'];
-      UserSession.NewAreaID := AStringList.Values['NewAreaID'];
-      UserSession.NewUnit := AStringList.Values['NewUnit'];
-      UserSession.NewReferenceID := AStringList.Values['NewReferenceID'];
-    end;
-    Val(AStringList.Values['IncludeSortFromValue'],tmpi,iCode);
-    if (iCode > 0) then tmpi := 0;
-    if (tmpi > 0) then
-    begin
-      UserSession.IncludeSortFromValue := true;
-      UserSession.SortFromField := AStringList.Values['SortFromField'];
-    end;
-    Val(AStringList.Values['IncludeSortToValue'],tmpi,iCode);
-    if (iCode > 0) then tmpi := 0;
-    if (tmpi > 0) then
-    begin
-      UserSession.IncludeSortToValue := true;
-      UserSession.SortToField := AStringList.Values['SortToField'];
-    end;
-    Val(AStringList.Values['IncludeDomainValues'],tmpi,iCode);
-    if (iCode > 0) then tmpi := 0;
-    if (tmpi > 0) then
-    begin
-      UserSession.IncludeDomainValues := true;
-      UserSession.GetStringsValues(AStringList,'DomainValues',UserSession.DomainValues);
-    end;
-    Val(AStringList.Values['IncludeDomainTypeValues'],tmpi,iCode);
-    if (iCode > 0) then tmpi := 0;
-    if (tmpi > 0) then
-    begin
-      UserSession.IncludeDomainTypeValues := true;
-      UserSession.GetStringsValues(AStringList,'DomainTypeValues',UserSession.DomainTypeValues);
-    end;
-    Val(AStringList.Values['IncludeDomainValidationValues'],tmpi,iCode);
-    if (iCode > 0) then tmpi := 0;
-    if (tmpi > 0) then
-    begin
-      UserSession.IncludeDomainValidationValues := true;
-      UserSession.GetStringsValues(AStringList,'DomainValidationValues',UserSession.DomainValidationValues);
-    end;
-    Val(AStringList.Values['IncludeOrogenyValues'],tmpi,iCode);
-    if (iCode > 0) then tmpi := 0;
-    if (tmpi > 0) then
-    begin
-      UserSession.IncludeOrogenyValues := true;
-      UserSession.GetStringsValues(AStringList,'OrogenyValues',UserSession.OrogenyValues);
-    end;
-    Val(AStringList.Values['IncludePeriodValues'],tmpi,iCode);
-    if (iCode > 0) then tmpi := 0;
-    if (tmpi > 0) then
-    begin
-      UserSession.IncludePeriodValues := true;
-      UserSession.GetStringsValues(AStringList,'PeriodValues',UserSession.PeriodValues);
-    end;
-    Val(AStringList.Values['IncludeLIPValues'],tmpi,iCode);
-    if (iCode > 0) then tmpi := 0;
-    if (tmpi > 0) then
-    begin
-      UserSession.IncludeLIPValues := true;
-      UserSession.GetStringsValues(AStringList,'LIPValues',UserSession.LIPValues);
-    end;
-    Val(AStringList.Values['IncludeSizeValues'],tmpi,iCode);
-    if (iCode > 0) then tmpi := 0;
-    if (tmpi > 0) then
-    begin
-      UserSession.IncludeSizeValues := true;
-      UserSession.GetStringsValues(AStringList,'SizeValues',UserSession.SizeValues);
-    end;
-    Val(AStringList.Values['IncludeRatingValues'],tmpi,iCode);
-    if (iCode > 0) then tmpi := 0;
-    if (tmpi > 0) then
-    begin
-      UserSession.IncludeRatingValues := true;
-      UserSession.GetStringsValues(AStringList,'RatingValues',UserSession.RatingValues);
-    end;
-    Val(AStringList.Values['IncludeMorphologyValues'],tmpi,iCode);
-    if (iCode > 0) then tmpi := 0;
-    if (tmpi > 0) then
-    begin
-      UserSession.IncludeMorphologyValues := true;
-      UserSession.GetStringsValues(AStringList,'MorphologyValues',UserSession.MorphologyValues);
-    end;
-    Val(AStringList.Values['IncludeContOceanValues'],tmpi,iCode);
-    if (iCode > 0) then tmpi := 0;
-    if (tmpi > 0) then
-    begin
-      UserSession.IncludeContOceanValues := true;
-      UserSession.GetStringsValues(AStringList,'ContOceanValues',UserSession.ContOceanValues);
-    end;
-    Val(AStringList.Values['IncludeUsersWhoForValues'],tmpi,iCode);
-    if (iCode > 0) then tmpi := 0;
-    if (tmpi > 0) then
-    begin
-      UserSession.IncludeUsersWhoForValues := true;
-      UserSession.GetStringsValues(AStringList,'UsersWhoForValues',UserSession.UsersWhoForValues);
-    end;
-    Val(AStringList.Values['IncludeDepositValues'],tmpi,iCode);
-    if (iCode > 0) then tmpi := 0;
-    if (tmpi > 0) then
-    begin
-      UserSession.IncludeDepositValues := true;
-      UserSession.GetStringsValues(AStringList,'DepositValues',UserSession.DepositValues);
-    end;
-    Val(AStringList.Values['IncludeClanValues'],tmpi,iCode);
-    if (iCode > 0) then tmpi := 0;
-    if (tmpi > 0) then
-    begin
-      UserSession.IncludeClanValues := true;
-      UserSession.GetStringsValues(AStringList,'ClanValues',UserSession.ClanValues);
-    end;
-    Val(AStringList.Values['IncludeCommodityValues'],tmpi,iCode);
-    if (iCode > 0) then tmpi := 0;
-    if (tmpi > 0) then
-    begin
-      UserSession.IncludeCommodityValues := true;
-      UserSession.GetStringsValues(AStringList,'CommodityValues',UserSession.CommodityValues);
-    end;
-    Val(AStringList.Values['IncludeAgeConstraintValues'],tmpi,iCode);
-    if (iCode > 0) then tmpi := 0;
-    if (tmpi > 0) then
-    begin
-      UserSession.IncludeAgeConstraintValues := true;
-      UserSession.GetStringsValues(AStringList,'AgeConstraintValues',UserSession.AgeConstraintValues);
-    end;
-    Val(AStringList.Values['IncludeInc4ChtValues'],tmpi,iCode);
-    if (iCode > 0) then tmpi := 0;
-    if (tmpi > 0) then
-    begin
-      UserSession.IncludeInc4ChtValues := true;
-      UserSession.GetStringsValues(AStringList,'Inc4ChtValues',UserSession.Inc4ChtValues);
-    end;
-    Val(AStringList.Values['IncludeDepositStatusValues'],tmpi,iCode);
-    if (iCode > 0) then tmpi := 0;
-    if (tmpi > 0) then
-    begin
-      UserSession.IncludeDepositStatusValues := true;
-      UserSession.GetStringsValues(AStringList,'DepositStatusValues',UserSession.DepositStatusValues);
-    end;
-  finally
-    AStringList.Free;
-  end;
-end;
-
-
-procedure TUserSession.AfterLogin;
-begin
-  UserSession.WhereAmI := 'AfterLogin';
-  UserSession.ThisProgram := 'StratDB';
-  LoggedIn := TRUE;
-  UserSession.CanModify := false;
-  UserSession.CanInsert := false;
-  UserSession.CanDelete := false;
-  UserSession.IsDeveloper := true;        //bme  - should be false here
-  UserSession.CanValidate := false;
-  UserSession.CanExport := false;
-  UserSession.CanViewPlus := false;
-  UserSession.CanModifyPlus := false;
-  dmUser.SetDeveloperData(UserSession.ThisProgram+'  '+UserSession.WhereAmI);
-  IncrementNumUses(UserSession.ThisProgram);    //bme
-  UserSession.NumRecordsPerPage := 50;
-  CheckRights(UserSession.ThisProgram,UserSession.UserID,UserSession.UserPassword,
-              ValueForCanView,
-              ValueForCanModify,ValueForCanInsert,ValueForCanDelete,
-              ValueForCanValidate,ValueForCanExport,ValueForCanViewPlus,
-              ValueForCanModifyPlus,ValueForIsDeveloper);
-  dmStrat.qUsers.Close;
-  dmStrat.qUsers.ParamByName('USERID').AsString := UserSession.UserID;
-  dmStrat.cdsUsers.Close;
-  dmStrat.cdsUsers.Open;
-  if (dmStrat.cdsUsers.RecordCount < 1) then
-  begin
-    try
-      dmStrat.cdsUsers.Close;
-      dmStrat.cdsUsers.Open;
-      dmStrat.cdsUsers.Append;
-      dmStrat.cdsUsersUSERID.AsString := UserSession.UserID;
-      dmStrat.cdsUsers.Post;
-      dmStrat.cdsUsers.ApplyUpdates(0);
-    except
-      on E: Exception do
-      begin
-      end;
-    end;
-    dmStrat.cdsUsers.Close;
-  end;
-
-  dmStrat.qUsersWhoFor.Close;
-  dmStrat.qUsersWhoFor.ParamByName('USERID').AsString := UserSession.UserID;
-  dmStrat.cdsUsersWhoFor.Close;
-  dmStrat.cdsUsersWhoFor.Open;
-  if (dmStrat.cdsUsersWhoFor.RecordCount < 1) then
-  begin
-    try
-      dmStrat.cdsUsersWhoFor.Close;
-      dmStrat.cdsUsersWhoFor.Open;
-      dmStrat.cdsUsersWhoFor.Append;
-      dmStrat.cdsUsersWhoForUSERID.AsString := UserSession.UserID;
-      dmStrat.cdsUsersWhoForWHOFORID.AsString := ValueForPublished;
-      dmStrat.cdsUsersWhoFor.Post;
-      dmStrat.cdsUsersWhoFor.ApplyUpdates(0);
-    except
-      on E: Exception do
-      begin
-        WebApplication.ShowMessage('Not able to add UserWhoFor');
-      end;
-    end;
-    dmStrat.cdsUsersWhoFor.Close;
-  end;
-
-  UserSession.DataHaveChanged := true;
-  dmOpt.GetUserOptions;
-
-  UserSession.MapFileName := DefaultMapfolder+DefaultMapFileName;
-  UserSession.MapDBFName := DefaultMapfolder+DefaultMapDBFName;
-  UserSession.MapFieldName := 'WB_CNTRY';
-  UserSession.MapValueFieldName := 'CONTINENT';
-  UserSession.UseDBF := false;
-  UserSession.HORZSIZE := 1024; // horizontal screen size in pixels
-  UserSession.VERTSIZE := 768;  // vertical screen size in pixels
-
-  UserSession.NewContinentID := 'UND';
-  UserSession.NewAreaID := 'UND';
-  UserSession.NewUnit := 'UNDEFINED';
-  UserSession.NewReferenceID := 'not defined';
-
-  UserSession.ReferenceStartFrom := 'A';
-  UserSession.ReferenceEndWith := 'zz';
-  UserSession.UnitStartFrom := 'A';
-  UserSession.UnitEndWith := 'zz';
-
-  UserSession.Parameter2Chosen := 'SmNd';
-  UserSession.OrderByValue := '0';
-
-  UserSession.UsersWhoForValues.Clear;
-  UserSession.UsersWhoForValues.Add('PUBL');
-
-  UserSession.GetCookies;
-
-  TIWAppForm(WebApplication.ActiveForm).Release;
-  if ( LastVisitedForm.ClassNameIs(TISFLogin.ClassName) or
-       LastVisitedForm.ClassNameIs(TISFRegister.ClassName) )  then
-    TISFMain.Create(WebApplication).Show
-  else
-    LastVisitedForm.Create(WebApplication).Show;
-end;
-
-procedure TUserSession.NeedLogin(AForm: TIWAppFormClass);
-begin
-  //dmUser.SetDeveloperData('StratDB - NeedLogin');
-  LoggedIn := false;
-  LastVisitedForm := AForm;
-  TIWAppForm(WebApplication.ActiveForm).Release;
-  TISFLogin.Create(WebApplication).Show;
-end;
-
-
-
 initialization
   TIWServerController.SetServerControllerClass;
-
 end.
 
